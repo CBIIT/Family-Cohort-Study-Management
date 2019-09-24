@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="[Lookup] Genes/Syndromes" max_length="40" name="x_naci_family_coho_lookup_genes_syndromes" type="collection">
+        <element display="true" label="Label" max_length="500" name="label" type="string"/>
+        <element label="Value" max_length="500" name="value" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location,$http,spUtil) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	c.data.label = "Personal Cancer";
+	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},{label:"If Other, Please Specify", name: "please_specify"},
+										{label: "Age (in years) at Diagnosis",name: "age_in_years_at_diagnosis"},{label: "Date (mm/yyyy or yyyy) at Diagnosis",name: "date_at_diagnosis"}];
+	
+	c.openForm = function(){
+		$('#addFamilyCancerDiv').modal('show');
+	}
+	
+	c.cancelForm = function(){
+		$('#addFamilyCancerDiv').modal('hide');
+	};
+	
+	c.saveForm = function(){
+		var req = {
+		 method: 'POST',
+		 url: '/api/x_naci_family_coho/personalcancer/savePersonalCancer',
+		 headers: {
+			 'Content-Type': 'application/json'
+		 }
+		}
+		
+		req.data = {};
+		req.data.intake_form = "";
+
+		$http(req).then(function(resp){
+			var content = resp.data.result.content;
+			$('#addFamilyCancerDiv').modal('hide');
+		}, function(error_resp){
+			console.log(error_resp);
+		});
+	}
+	
+	c.deleteCancer = function(sys_id){
+		var req = {
+		 method: 'POST',
+		 url: '/api/x_naci_family_coho/personalcancer/deletePersonalCancer',
+		 headers: {
+			 'Content-Type': 'application/json'
+		 }
+		}
+		
+		req.data = {};
+		req.data.sys_id = sys_id;
+
+		$http(req).then(function(resp){
+			var content = resp.data.result.content;
+			$('#addFamilyCancerDiv').modal('hide');
+		}, function(error_resp){
+			console.log(error_resp);
+		});
+	}
+	
+	spUtil.recordWatch($scope, "x_naci_family_coho_mock_up_intake_patient_cancer", "", function(name, data) {  
+			spUtil.update($scope);
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#addFamilyCancerDiv div .panel-footer{
+  display:none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_intake_form_personal_cancer_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Intake Form Personal Cancer List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.widget_add = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake_patient_cancer",
+		"view": "Cancer"
+	});
+	
+	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+	gr.query();
+	data.records = [];
+	while(gr.next()){
+		var tmp = {};
+		tmp.sys_id = gr.sys_id.toString();
+		tmp.cancer_type = gr.cancer_type.toString();
+		tmp.please_specify = gr.please_specify.toString();
+		tmp.age_in_years_at_diagnosis = gr.age_in_years_at_diagnosis.toString();
+		tmp.date_at_diagnosis = gr.date_at_diagnosis.toString();
+		data.records.push(tmp);
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-16 15:06:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5b3f27efdbfff30054d8ff621f9619f2</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>FCSMS Intake Form Personal Cancer List</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_5b3f27efdbfff30054d8ff621f9619f2</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-16 18:14:07</sys_updated_on>
+        <template><![CDATA[<div id="container">
+
+  
+  <div style="display:flex;margin-bottom:5px;height:40px;">
+    <div class="col-md-6" style="display: flex;">
+      <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
+    </div>
+    <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
+      <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
+        ADD
+      </button>
+    </div>
+  </div>
+  <table class="table table-bordered table-hover">
+    <thead class="bg-primary">
+      <tr>
+        <th ng-repeat="col in c.data.columns"
+            ng-click="sort(col)">
+          {{ col.label }}
+        </th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="record in c.data.records">
+        <td ng-repeat="col in c.data.columns">
+          {{ record[col.name] || 'N/A' }}  
+        </td>
+        <td>
+          <button class="btn btn-primary" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="addFamilyCancerDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
+  <div class="modal-dialog modal-lg" style="width:600px;">
+    <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
+      <div class="modal-header">
+        <h4  class="modal-title">Add new Entry</h4>
+      </div>      
+      <div class="modal-body" style="padding-bottom:0px;">
+        <sp-widget widget="c.data.widget_add"></sp-widget>
+      </div>
+      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+        <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
+            Save
+          </button>  
+        <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
+            Cancel
+          </button>
+        </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

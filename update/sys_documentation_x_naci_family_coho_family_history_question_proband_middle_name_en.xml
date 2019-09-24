@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="proband_middle_name" label="Proband Middle Name" language="en" table="x_naci_family_coho_family_history_question">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>proband_middle_name</element>
+            <help/>
+            <hint/>
+            <label>Proband Middle Name</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <plural>Proband Middle Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 16:47:14</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>15f215dedb488c10b86770c08c96193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Proband Middle Name</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_family_history_question_proband_middle_name_en</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 16:47:14</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

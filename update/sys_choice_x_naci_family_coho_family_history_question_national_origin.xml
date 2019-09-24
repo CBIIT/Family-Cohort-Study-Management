@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="national_origin" table="x_naci_family_coho_family_history_question" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>England</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>10</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:23:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>04df1256dbcc8c10b86770c08c961979</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:23:22</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>England</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ireland</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>20</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:23:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8eef1ed2dbcc8c10b86770c08c961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:23:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Ireland</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Germany</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>30</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:24:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0c00e256dbcc8c10b86770c08c96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:24:07</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Germany</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>France</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>40</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:24:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9e106ed2dbcc8c10b86770c08c961962</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:24:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>France</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Italy</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>50</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:24:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7920a216dbcc8c10b86770c08c9619fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:24:40</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Italy</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Greece</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>60</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:24:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>89306ed2dbcc8c10b86770c08c961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:24:56</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Greece</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Eastern Europe (e.g., Poland, Russia, Hungary, Czechoslovakia, etc.)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>70</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:26:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8d40a6d2dbcc8c10b86770c08c9619cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:26:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Eastern Europe (e.g., Poland, Russia, Hungary, Czechoslovakia, etc.)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Scandinavia (e.g., Norway, Sweden, Denmark, Finland)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>80</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:27:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c0906e56dbcc8c10b86770c08c9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:27:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Scandinavia (e.g., Norway, Sweden, Denmark, Finland)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Spain, Portugal</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>90</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:27:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>07c06256dbcc8c10b86770c08c96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:27:41</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Spain, Portugal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other European Countries</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>100</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:28:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>39e0e216dbcc8c10b86770c08c96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:28:07</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other European Countries</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Africa</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>110</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:28:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>5bf06696dbcc8c10b86770c08c96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:28:20</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Africa</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Middle East</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>120</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:28:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0b01ae56dbcc8c10b86770c08c961935</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:28:39</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Middle East</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>India, Pakistan</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>130</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:29:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>14216256dbcc8c10b86770c08c96198f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:29:02</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>India, Pakistan</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>China</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>140</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:29:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f4316e56dbcc8c10b86770c08c9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:29:15</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>China</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Japan</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>150</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:29:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c041ee16dbcc8c10b86770c08c961993</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:29:30</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Japan</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other Asian countries or Pacific Islands</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>160</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:30:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>2d516616dbcc8c10b86770c08c961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:30:11</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other Asian countries or Pacific Islands</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Native American</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>170</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:30:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0271ae96dbcc8c10b86770c08c961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:30:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Native American</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Canada</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>180</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:30:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3b816a96dbcc8c10b86770c08c96192d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:30:54</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Canada</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mexico</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>190</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:31:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>50a16216dbcc8c10b86770c08c961918</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:31:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Mexico</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Puerto Rico</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>200</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:31:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e3a1aa96dbcc8c10b86770c08c961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:31:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Puerto Rico</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Central America</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>210</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:31:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b0c16a96dbcc8c10b86770c08c961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:31:47</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Central America</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>South America</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>220</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:32:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>01d1e2d6dbcc8c10b86770c08c9619e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:32:04</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>South America</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>national_origin</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other (specify)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sequence>230</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:32:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6ee1e2d6dbcc8c10b86770c08c9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:32:34</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>national_origin</element>
+            <name>x_naci_family_coho_family_history_question</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 22:23:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>05ef1ed2dbcc8c10b86770c08c961911</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>national_origin</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_family_history_question_national_origin</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-24 22:23:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Mock Up Referral" max_length="40" name="x_naci_family_coho_mock_up_referral" type="collection">
+        <element label="Referral Status" max_length="200" name="referral_status" type="string"/>
+        <element label="Referral Study" max_length="32" name="referral_study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
+        <index name="index">
+            <element name="referral_study"/>
+        </index>
+    </element>
+</database>

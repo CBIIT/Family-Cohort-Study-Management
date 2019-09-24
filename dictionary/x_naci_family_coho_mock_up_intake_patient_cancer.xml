@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Mock Up Intake Patient Cancer" max_length="40" name="x_naci_family_coho_mock_up_intake_patient_cancer" type="collection">
+        <element label="Age (in years) at Diagnosis " max_length="40" name="age_in_years_at_diagnosis" type="integer"/>
+        <element choice="1" display="true" label="Cancer Type" max_length="40" name="cancer_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Adrenocortical Carcinoma" value="Adrenocortical Carcinoma"/>
+                <element inactive_on_update="false" label="Brain" value="Brain"/>
+                <element inactive_on_update="false" label="Breast" value="Breast"/>
+                <element inactive_on_update="false" label="Choroid Plexus Carcinoma" value="Choroid Plexus Carcinoma"/>
+                <element inactive_on_update="false" label="Colon" value="Colon"/>
+                <element inactive_on_update="false" label="Leukemia" value="Leukemia"/>
+                <element inactive_on_update="false" label="Lung" value="Lung"/>
+                <element inactive_on_update="false" label="Lymphoma" value="Lymphoma"/>
+                <element inactive_on_update="false" label="Melanoma" value="Melanoma"/>
+                <element inactive_on_update="false" label="Osteosarcoma (bone)" value="Osteosarcoma (bone)"/>
+                <element inactive_on_update="false" label="Other" value="Other"/>
+                <element inactive_on_update="false" label="Ovarian" value="Ovarian"/>
+                <element inactive_on_update="false" label="Prostate" value="Prostate"/>
+                <element inactive_on_update="false" label="Sarcoma" value="Sarcoma"/>
+                <element inactive_on_update="false" label="Stomach" value="Stomach"/>
+                <element inactive_on_update="false" label="Unknown" value="Unknown"/>
+                <element inactive_on_update="false" label="Uterine/Endometrial" value="Uterine/Endometrial"/>
+            </choice>
+        </element>
+        <element label="Date at Diagnosis " max_length="100" name="date_at_diagnosis" type="string"/>
+        <element label="Intake Form" max_length="32" name="intake_form" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
+        <element label="Please Specify" max_length="100" name="please_specify" type="string"/>
+        <index name="index">
+            <element name="intake_form"/>
+        </index>
+    </element>
+</database>

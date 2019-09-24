@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,$location, $timeout, spModal) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	window.displayThankYou = function(){
+		
+		var obj = document.getElementById('thank_you');
+		if(obj.style.display == 'none'){
+			obj.style.display = 'block';
+		}
+	}
+	
+	setTimeout(function(){
+		var button_bar = $('#submit_div div.panel-footer');
+		button_bar.children().last().remove();
+		var button = button_bar.children().last();
+		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
+		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
+	}, 0);
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_iiq_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS IIQ Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.widget_0 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "Introduction"
+	});
+	data.widget_1 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "SectionA"
+	});
+	data.widget_2 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "Section B"
+	});
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-23 16:04:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>FCSMS IIQ Form</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-24 21:55:01</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
+	<uib-tabset>
+    <uib-tab index="0" heading="Introduction">
+      <div style="padding: 10px;">
+        <p>
+          Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
+        </p>
+        <p>
+          You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family’s cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
+          </p>
+        <p>
+          Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
+          </p>
+        <ul>
+          <li>
+            Sign a study consent form 
+          </li>
+          <li>
+            Provide information and complete questionnaires about your family history and your personal health history 
+          </li>
+          <li>
+            Grant permission for us to verify their cancer diagnoses 
+          </li>
+          <li>
+            Provide biologic samples (such as a blood sample or saliva sample) 
+          </li>
+          <li>
+            Allow us to contact family members, such as siblings, parents, aunts or uncles, to invite them to participate in the study 
+          </li>
+        </ul>
+        <p>
+          Please note that cancer treatment is not being offered as part of this protocol. 
+        </p>
+        <p>
+          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
+        </p>
+        <!--
+					<sp-widget widget="c.data.widget_0"></sp-widget>
+				-->
+      </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Demographic Information">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_1"></sp-widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="2" heading="Prior Medical History and Medication Use">
+      <div id="submit_div" style="padding: 10px;">
+        <sp-widget widget="c.data.widget_2"></sp-widget>
+        <widget id="fcsms_iiq_form_biopsy_list"></widget>
+      </div>
+    </uib-tab>
+  </uib-tabset>
+</div>]]></template>
+    </sp_widget>
+</record_update>

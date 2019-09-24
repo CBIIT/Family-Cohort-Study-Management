@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="tested_positive" table="x_naci_family_coho_mock_up_intake" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>tested_positive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 21:20:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0a914565dbf37f4054d8ff621f961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 21:20:35</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>tested_positive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:02:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>853b0525db377f4054d8ff621f9619ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:02:28</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>tested_positive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other genes/syndromes or Unsure</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:03:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>986b8125db377f4054d8ff621f961905</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:03:09</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other genes/syndromes or Unsure</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>tested_positive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:02:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>655b0d25db377f4054d8ff621f9619c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:02:57</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>tested_positive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TP53 (Li-Fraumeni syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:02:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>514b0925db377f4054d8ff621f961917</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:02:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>TP53 (Li-Fraumeni syndrome)</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>tested_positive</element>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 21:20:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8ba14165dbf37f4054d8ff621f9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>tested_positive</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_mock_up_intake_tested_positive</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 21:20:35</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Mock Up Intake Family Cancer" max_length="40" name="x_naci_family_coho_mock_up_intake_family_cancer" type="collection">
+        <element label="Age at Death" max_length="100" name="age_at_death" type="string"/>
+        <element label="Age (in years) at Diagnosis" max_length="100" name="age_at_diagnosis" type="string"/>
+        <element label="Cancer Specify" max_length="100" name="cancer_specify" type="string"/>
+        <element choice="1" label="Cancer Type" max_length="40" name="cancer_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Adrenocortical Carcinoma" value="Adrenocortical Carcinoma"/>
+            </choice>
+        </element>
+        <element label="Current Age (if living)" max_length="100" name="current_age" type="string"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element choice="1" label="Relationship" max_length="500" name="relationship" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Aunt (dad's sister)" value="Aunt (dad's sister)"/>
+                <element inactive_on_update="false" label="Aunt (mom's sister)" value="Aunt (mom's sister)"/>
+            </choice>
+        </element>
+        <element label="Relationship Specify" max_length="100" name="relationship_specify" type="string"/>
+    </element>
+</database>

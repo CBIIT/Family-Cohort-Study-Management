@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,$location, spModal) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	if(s.xpage){
+		if(s.xpage == 'review_intake_form'){
+			c.type = 'review_intake';
+		}
+		else if(s.xpage == 'review_s_consent'){
+			c.type = 'review_s_consent';
+		}
+		else if(s.xpage == 'review_fhq'){
+			c.type = 'review_fhq';
+		}
+		else{
+			c.type = 'review_iiq';
+		}
+	}
+	else{
+		c.type = 'review_iiq';
+	}
+	
+	c.goBack = function(){
+		s.id = null;
+		$location.search(s).replace();
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_enrollment_detail</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Enrollment Detail</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-16 23:00:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>80cb597fdbfb370054d8ff621f961957</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>FCSMS Enrollment Detail</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_80cb597fdbfb370054d8ff621f961957</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-17 15:10:29</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="container" style="width:100%;font-size: 22px;" ng-if="c.type == 'review_intake'">
+  <widget id="fcsms_intake_form"></widget>
+  <div class="container decision-input-section" style="display: flex;width:40%;margin-top: 10px;">
+    <div class="col-md-3" style="text-align:right;">Eligible Status:</div>
+    <div class="col-md-9">
+      <select class="form-control" ng-model="c.data.eligible" style="font-weigth:bold;">
+        <option value="Eligible">Eligible</option>
+        <option value="Not Eligible">Not Eligible</option>
+      </select>
+    </div>
+  </div>
+  <div class="decision-button-section" style="text-align: center;margin-top: 10px;">
+    <button class="btn btn-primary btn-font" ng-click="c.submitIntakeForm()" style="padding: 10px 50px;">
+      Submit
+    </button>
+  </div>
+</div>
+<div id="table-form" class="container" style="width:80%;font-size: 22px;" ng-if="c.type == 'review_s_consent'">
+  <widget id="fcsms_study_consent"></widget>
+</div>
+<div id="table-form" class="container" style="width:80%;font-size: 22px;" ng-if="c.type == 'review_fhq'">
+  <widget id="fcsms_fhq_accordion"></widget>
+</div>
+<div id="table-form" class="container" style="width:80%;font-size: 22px;" ng-if="c.type == 'review_iiq'">
+  <widget id="fcsms_IIQ_list"></widget>
+</div>]]></template>
+    </sp_widget>
+</record_update>

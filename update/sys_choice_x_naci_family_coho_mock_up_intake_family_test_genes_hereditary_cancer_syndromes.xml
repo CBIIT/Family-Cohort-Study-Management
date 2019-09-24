@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="genes_hereditary_cancer_syndromes" table="x_naci_family_coho_mock_up_intake_family_test" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genes_hereditary_cancer_syndromes</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:21:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6b1e403fdbf3370054d8ff621f9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:21:52</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genes_hereditary_cancer_syndromes</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:22:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>972e403fdbf3370054d8ff621f9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:22:02</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genes_hereditary_cancer_syndromes</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other genes/syndromes or Unsure</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:22:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>934e043fdbf3370054d8ff621f9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:22:37</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other genes/syndromes or Unsure</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genes_hereditary_cancer_syndromes</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:22:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b44ec03fdbf3370054d8ff621f9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:22:25</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genes_hereditary_cancer_syndromes</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TP53 (Li-Fraumeni syndrome)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:22:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b53e403fdbf3370054d8ff621f9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:22:14</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>TP53 (Li-Fraumeni syndrome)</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>genes_hereditary_cancer_syndromes</element>
+            <name>x_naci_family_coho_mock_up_intake_family_test</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-16 17:21:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a62e483bdbf3370054d8ff621f9619b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>genes_hereditary_cancer_syndromes</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_mock_up_intake_family_test_genes_hereditary_cancer_syndromes</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-16 17:21:52</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

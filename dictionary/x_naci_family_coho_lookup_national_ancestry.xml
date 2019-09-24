@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="[Lookup] National Ancestry" max_length="40" name="x_naci_family_coho_lookup_national_ancestry" type="collection">
+        <element display="true" label="Label" max_length="100" name="label" type="string"/>
+        <element label="Value" max_length="100" name="value" type="string"/>
+    </element>
+</database>

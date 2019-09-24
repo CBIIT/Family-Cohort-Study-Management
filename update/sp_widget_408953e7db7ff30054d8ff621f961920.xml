@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location, spUtil) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	c.data.records = [{"enrollment_id":"ER_0001001",
+										 "informant":"A Smith",
+										 "er_status": "Intake Form Submitted", 
+										 "es_status": "Waiting for Eligible Review",
+										 "communication": "Email",
+										 "intake":"1",
+										 "consent": "0",
+										 "fhq": "0",
+										 "iiq": "0"},
+										{"enrollment_id":"ER_0001002",
+										 "informant":"B Smith",
+										 "er_status": "Study Consent Submitted", 
+										 "es_status": "Eligible",
+										 "communication": "Mail",
+										 "intake":"1",
+										 "consent": "1",
+										 "fhq": "0",
+										 "iiq": "0"},
+										{"enrollment_id":"ER_0001003",
+										 "informant":"C Smith",
+										 "er_status": "FHQ Submitted", 
+										 "es_status": "Eligible",
+										 "communication": "Website",
+										 "intake":"1",
+										 "consent": "1",
+										 "fhq": "1",
+										 "iiq": "0"},
+										{"enrollment_id":"ER_0001004",
+										 "informant":"D Smith",
+										 "er_status": "FHQ/IIQ/MRR Submitted", 
+										 "es_status": "Eligible",
+										 "communication": "Website",
+										 "intake":"1",
+										 "consent": "1",
+										 "fhq": "1",
+										 "iiq": "1"}
+									 ];
+	
+
+	c.openForm = function(table){
+		s.id = table;
+		$location.search(s).replace();
+	}
+	
+	c.openForm_1 = function(){
+		$('#addDiv').modal('show');
+	}
+	
+	c.cancelForm = function(){
+		$('#addDiv').modal('hide');
+	};
+	
+	c.expandEnrollment = function(sys_id){
+		c.hidden[sys_id] = !c.hidden[sys_id];
+		var detail = $('#enrollment_expand_'+sys_id).length;
+		if(detail == 0){
+			var el = angular.element('<div id="enrollment_expand_'+sys_id+'" class="enrollment-row" style="width:100%;display:inline-block;padding:10px 30px;">Expanded!!!</div>');
+			$(el).insertAfter('#enrollment_'+sys_id);
+		}
+		else{
+			$('#enrollment_expand_'+sys_id).remove();
+		}
+		
+		
+    //$compile(el)($scope);
+	}
+	
+	
+	
+	c.reviewIntakeForm = function(page){
+		s.id = page;
+		s.xpage = "review_intake_form";
+		$location.search(s).replace();
+	}
+	
+	c.reviewStudyConsent = function(page){
+		s.id = page;
+		s.xpage = "review_s_consent";
+		$location.search(s).replace();
+	}
+	
+	c.reviewFHQ = function(page){
+		s.id = page;
+		s.xpage = "review_fhq";
+		$location.search(s).replace();
+	}
+	
+	c.reviewIIQ = function(page){
+		s.id = page;
+		s.xpage = "review_iiq";
+		$location.search(s).replace();
+	}
+	
+	c.updateEnrollment = function(page){
+		s.id = page;
+		s.xpage = "update";
+		$location.search(s).replace();
+	}
+	
+	c.followUp = function(page){
+		s.id = page;
+		$location.search(s).replace();
+	}
+	
+	
+	spUtil.get("widget-form", {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake_patient_cancer",
+		"view": "Cancer"
+	}).then(function(response) {
+			response.data.f.client_script.onLoad = function(){
+				console.log('please do something.');
+			};
+			c.catalogItemWidget = response;
+		console.log(response);
+		console.log('asdfasdfasdf');
+	}).then(function(){
+		var obj = document.getElementById('sp_formfield_date_at_diagnosis');
+		console.log(obj);
+	});
+	
+	
+	
+	
+	/*
+	
+	var widg = '<sp-widget widget="c.data.widget_add"></sp-widget>';
+	
+	var el = $compile(widg)($scope);
+	
+	console.log(el);
+	console.log('--------');
+	
+	$('#test-widge-loading').append(el, function(index, html){
+		console.log("start....");
+		console.log(html);
+	});
+	*/
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.enrollment-row {
+  border-bottom: 1px solid lightgray;
+}
+.enrollment-row:hover{
+  background-color:lightgray;
+}
+.enrollment_detail{
+  width:100%;
+  background-color:white;
+  border-top:1px solid lightgray;
+  height:auto;
+}
+.btn-font{
+  font-size: 16px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_table_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Table List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.widget_add = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake_patient_cancer",
+		"view": "Cancer"
+	});
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-16 13:31:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>408953e7db7ff30054d8ff621f961920</sys_id>
+        <sys_mod_count>368</sys_mod_count>
+        <sys_name>FCSMS Table List</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_408953e7db7ff30054d8ff621f961920</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-17 22:17:57</sys_updated_on>
+        <template><![CDATA[<div id="container" style="height: 400px; font-size:20px;margin-left: 30px;">
+  <h2 style="text-align:left;font-weight:bold;">Enrollment Activities</h2>
+  <div style="width: 100%;">
+    <div class="col-md-6">
+      <widget id="fcsms_report_enroll_received"></widget>
+    </div>
+    <div class="col-md-6">
+      <widget id="fcsms_report_enroll_total"></widget>
+    </div>
+  </div>
+  
+</div>
+<div id="container" style="font-size:20px;margin-left: 30px;">
+
+  <div style="display:flex;margin-bottom:5px;height:40px;">
+    <div class="col-md-6" style="display: flex;">
+      <label style="text-align:left;font-weight:bold;font-size:30px;">Enrollment List</label>
+    </div>
+    <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
+      <button class="btn btn-primary btn-font" ng-click="c.openForm('mock_up_intake_form')" style="padding: 5px 50px;position: absolute;right: 0px;">
+        ADD
+      </button>
+    </div>
+  </div>
+  
+  <div class="container" style="width:100%;display:flex;padding:10px 0px;background-color:#428bca;color:white;">
+    <div class="col-md-1">
+      Enrollment ID
+    </div>
+    <div class="col-md-2">
+      Informant/Proband
+    </div>
+    <div class="col-md-2">
+      Enrollment Status
+    </div>
+    <div class="col-md-2">
+      Eligible Status
+    </div>
+    <div class="col-md-1">
+      Communication
+    </div>
+    <div class="col-md-1">
+      Intake
+    </div>
+    <div class="col-md-1">
+      Study Consent
+    </div>
+    <div class="col-md-1">
+      FHQ
+    </div>
+    <div class="col-md-1">
+      IIQ
+    </div>
+  </div>
+  <div id="enrollment_{{record.enrollment_id}}" class="enrollment-row" style="width:100%;display:inline-block;padding:10px 0px;" ng-repeat="record in c.data.records">
+    	<div class="col-md-1">
+        {{ record['enrollment_id'] || 'N/A' }}  
+      </div>
+      <div class="col-md-2">
+        {{ record['informant'] || 'N/A' }}  
+      </div>
+      <div class="col-md-2">
+        {{ record['er_status'] || 'N/A' }}  
+      </div>
+      <div class="col-md-2">
+        {{ record['es_status'] || 'N/A' }}  
+      </div>
+      <div class="col-md-1">
+        {{ record['communication'] || 'N/A' }}  
+      </div>
+      <div class="col-md-1">
+        <a ng-click="c.reviewIntakeForm('mock_up_enrollment_detail')" ng-show="record['intake'] == '1'">View</a>  
+        </div>
+      <div class="col-md-1">
+        <a ng-click="c.reviewStudyConsent('mock_up_enrollment_detail')" ng-show="record['consent'] == '1'">View</a>
+      </div>
+      <div class="col-md-1">
+        <a ng-click="c.reviewFHQ('mock_up_enrollment_detail')" ng-show="record['fhq'] == '1'">View</a>
+        </div>
+      <div class="col-md-1">
+          <a ng-click="c.reviewIIQ('mock_up_enrollment_detail')" ng-show="record['iiq'] == '1'">View</a>  
+      </div>
+    <!--
+      <div class="col-md-2">
+        <button class="btn btn-primary btn-font" ng-show="record['er_status'] == 'Intake Form Submitted'" ng-click="c.reviewIntakeForm('mock_up_enrollment_detail')" style="padding: 5px 10px;">
+          Review Intake Form
+        </button>
+        <button class="btn btn-primary btn-font" ng-show="record['er_status'] == 'FHQ/IIQ/MRR Form Submitted'" ng-click="c.reviewFHQ('mock_up_enrollment_detail')" style="padding: 5px 10px;">
+          Review FHQ
+        </button>
+        <button class="btn btn-primary btn-font" ng-show="record['er_status'] !== 'Intake Form Submitted' && record['er_status'] !== 'FHQ/IIQ/MRR Form Submitted'"  ng-click="c.updateEnrollment('mock_up_enrollment_detail')" style="padding: 5px 10px;">
+          Update
+        </button>
+        <button class="btn btn-primary btn-font" ng-click="c.followUp('mock_up_enrollment_detail')" style="padding: 5px 10px;">
+          Follow-Up
+        </button>
+        
+      </div>
+-->
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div id="test-widge-loading">
+    <sp-widget widget="c.catalogItemWidget"></sp-widget>
+  </div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Family History Question" max_length="40" name="x_naci_family_coho_family_history_question" type="collection">
+        <element choice="3" default="Yes" label="Are you the best person to fill out the family history questionaire?" max_length="40" name="best_person_fill_out_form" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="No"/>
+            </choice>
+        </element>
+        <element label="When were you born? (Month/Day/Year)" max_length="20" name="birthday" type="string"/>
+        <element label="CIty" max_length="200" name="born_city" type="string"/>
+        <element label="County" max_length="100" name="born_county" type="string"/>
+        <element label="State" max_length="50" name="born_state" type="string"/>
+        <element label="Foreign Country" max_length="100" name="foreign_country" type="string"/>
+        <element choice="3" default="No" label="Do you consider yourself to be" max_length="40" name="ishispanic" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+            </choice>
+        </element>
+        <element label="What is your national origin or ancestry ? (Check no more than 4)" max_length="500" name="national_origin" reference="x_naci_family_coho_lookup_national_ancestry" type="glide_list"/>
+        <element label="Other national origin or ancestry " max_length="100" name="other_national_origin" type="string"/>
+        <element label="Proband Address" max_length="300" name="proband_address" type="string"/>
+        <element label="Proband Address 2" max_length="200" name="proband_address_2" type="string"/>
+        <element label="Proband City" max_length="100" name="proband_city" type="string"/>
+        <element label="Proband First Name" max_length="100" name="proband_first_name" type="string"/>
+        <element label="Proband Home Phone" max_length="50" name="proband_home_phone" type="string"/>
+        <element label="Proband Last Name" max_length="100" name="proband_last_name" type="string"/>
+        <element label="Proband Maiden Name" max_length="100" name="proband_maiden_name" type="string"/>
+        <element label="Proband Middle Name" max_length="50" name="proband_middle_name" type="string"/>
+        <element label="Proband Office Phone" max_length="50" name="proband_office_phone" type="string"/>
+        <element label="Proband State" max_length="50" name="proband_state" type="string"/>
+        <element label="Proband Zipcode" max_length="20" name="proband_zipcode" type="string"/>
+        <element label="Proxy Address" max_length="300" name="proxy_address" type="string"/>
+        <element label="Proxy Address 2" max_length="200" name="proxy_address_2" type="string"/>
+        <element label="Proxy City" max_length="100" name="proxy_city" type="string_full_utf8"/>
+        <element label="Proxy First Name" max_length="100" name="proxy_first_name" type="string"/>
+        <element label="Proxy Home Phone" max_length="50" name="proxy_home_phone" type="string"/>
+        <element label="Proxy Last Name" max_length="100" name="proxy_last_name" type="string"/>
+        <element label="Proxy Maiden Name" max_length="50" name="proxy_maiden_name" type="string"/>
+        <element label="Proxy Middle Name" max_length="50" name="proxy_middle_name" type="string"/>
+        <element label="Proxy Office Phone" max_length="50" name="proxy_office_phone" type="string"/>
+        <element label="Proxy State" max_length="50" name="proxy_state" type="string"/>
+        <element label="Proxy Zipcode" max_length="20" name="proxy_zipcode" type="string"/>
+        <element choice="1" label="What is your race?" max_length="20" name="race" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="American Indian or Alaska Native" sequence="10" value="American Indian or Alaska Native"/>
+                <element inactive_on_update="false" label="Asian" sequence="20" value="Asian"/>
+                <element inactive_on_update="false" label="Black or African American" sequence="30" value="Black or African American"/>
+                <element inactive_on_update="false" label="Native Hawaiian or Other Pacific Islander" sequence="40" value="Native Hawaiian or Other Pacific Islander"/>
+                <element inactive_on_update="false" label="White" sequence="50" value="White"/>
+            </choice>
+        </element>
+        <element choice="3" default="Male" label="Are you male or female?" max_length="10" name="sex" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Male" sequence="10" value="Male"/>
+                <element inactive_on_update="false" label="Female" sequence="20" value="Female"/>
+            </choice>
+        </element>
+        <element label="Time to Complete Form" max_length="50" name="time_to_complete_form" type="glide_date_time"/>
+        <element label="Year moved to U.S.A" max_length="10" name="year_moved_to_usa" type="string"/>
+    </element>
+</database>

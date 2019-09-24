@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,$location, $timeout, spModal) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+//	spModal.open(c.data.formOptions)
+	
+	
+	window.displayThankYou = function(){
+		
+		var obj = document.getElementById('thank_you');
+		if(obj.style.display == 'none'){
+			obj.style.display = 'block';
+		}
+	}
+	
+	setTimeout(function(){
+		var button_bar = $('#submit_div div.panel-footer');
+		button_bar.children().last().remove();
+		var button = button_bar.children().last();
+		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
+		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
+	}, 0);
+	
+	$scope.showCancerForm = function(){
+		
+	 spModal.open({"title": "Adding Cancer Record",
+			"widget": "widget-form",
+			"widgetInput": {
+				"sys_id": "-1",
+				"table": 'x_naci_family_coho_mock_up_intake_patient_cancer',
+				"view": "Cancer"
+		}});
+	};
+	
+	c.goBack = function(){
+		s.id = null;
+		$location.search(s).replace();
+	}
+	
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>div legend{
+	display:none;
+}
+div .alert{
+  display:none;
+}
+div .panel-heading{
+  display:none;
+}
+fieldset label{
+  font-weight: bold;
+}
+.form-group{
+  margin-bottom: 10px;
+}
+.panel-footer button.btn-default{
+  display:none;
+}
+#submit_div .panel-footer{
+	width:100%;
+  text-align:right;
+}
+.btn{
+  font-size: 22px;
+}
+.input-group-btn button{
+  padding: 0px 6px 1px 6px;
+}
+.select2-container-multi input{
+	height: 30px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_intake_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Intake Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	// data.form = $sp.getForm("x_naci_family_coho_mock_up_intake","-1");
+	data.widget_1 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS1"
+	});
+	data.widget_2 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS2"
+	});
+	data.widget_3 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS3"
+	});
+	data.widget_4 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS4"
+	});
+	data.widget_5 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS5"
+	});
+	data.widget_6 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS6"
+	});
+	
+	//jim add this section
+	/*data.formOptions = {
+		"title": "Adding Cancer Record",
+		"widget": "widget-form",
+		"widgetInput": {
+			"sys_id": "-1",
+			"table": 'x_naci_family_coho_mock_up_intake_patient_cancer',
+			"view": "Cancer"
+		}
+	};*/
+		
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-09 19:11:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
+        <sys_mod_count>221</sys_mod_count>
+        <sys_name>FCSMS Intake Form</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-17 21:57:26</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
+  <uib-tabset>
+    <uib-tab index="0" heading="Study Introduction">
+      <div style="padding: 10px;">
+        <p>
+          Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
+        </p>
+        <p>
+          You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family’s cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
+          </p>
+        <p>
+          Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
+          </p>
+        <ul>
+          <li>
+            Sign a study consent form 
+          </li>
+          <li>
+            Provide information and complete questionnaires about your family history and your personal health history 
+          </li>
+          <li>
+            Grant permission for us to verify their cancer diagnoses 
+          </li>
+          <li>
+            Provide biologic samples (such as a blood sample or saliva sample) 
+          </li>
+          <li>
+            Allow us to contact family members, such as siblings, parents, aunts or uncles, to invite them to participate in the study 
+          </li>
+        </ul>
+        <p>
+          Please note that cancer treatment is not being offered as part of this protocol. 
+        </p>
+        <p>
+          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
+        </p>
+        <sp-widget widget="c.data.widget_1"></sp-widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Personal Information">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_2"></sp-widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="2" heading="Personal Cancer History">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_3"></sp-widget>
+        <widget id="fcsms_intake_form_personal_cancer_list"></widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="3" heading="Family Cancer History">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_4"></sp-widget>
+        <widget id="fcsms_intake_form_family_cancer_list"></widget>
+        <!--
+					<widget id="fcsms_intake_form_family_test_list"></widget>
+        
+					<sp-widget widget="c.data.widget_list_4"></sp-widget>
+				-->
+      </div>
+    </uib-tab>
+    <uib-tab index="4" heading="Final Information">
+      <div style="padding: 10px;" id="submit_div">
+        <sp-widget widget="c.data.widget_5"></sp-widget>
+      </div>
+      
+      <div Style="display:none;padding: 10px;" id="thank_you">
+        <p>
+          Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+        </p>
+        <p>
+					Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+        </p>
+      </div>
+    </uib-tab>
+  </uib-tabset>
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>

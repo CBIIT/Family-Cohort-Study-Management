@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Mock Up Intake Family Test" max_length="40" name="x_naci_family_coho_mock_up_intake_family_test" type="collection">
+        <element choice="1" label="Genes/ Hereditary Cancer syndromes" max_length="40" name="genes_hereditary_cancer_syndromes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>
+                <element inactive_on_update="false" label="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)" value="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)"/>
+                <element inactive_on_update="false" label="Other genes/syndromes or Unsure" value="Other genes/syndromes or Unsure"/>
+                <element inactive_on_update="false" label="PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)" value="PTEN (PTEN Hamartoma Tumor syndrome, Cowden syndrome)"/>
+                <element inactive_on_update="false" label="TP53 (Li-Fraumeni syndrome)" value="TP53 (Li-Fraumeni syndrome)"/>
+            </choice>
+        </element>
+        <element choice="1" label="relationship" max_length="40" name="relationship" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Aunt (dad's sister)" value="Aunt (dad's sister)"/>
+                <element inactive_on_update="false" label="Aunt (mom's sister)" value="Aunt (mom's sister)"/>
+            </choice>
+        </element>
+        <element label="Relative Name" max_length="100" name="relative_name" type="string"/>
+    </element>
+</database>

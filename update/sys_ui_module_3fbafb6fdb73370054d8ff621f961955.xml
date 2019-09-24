@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Mock Up Intake Family Cancer">f7bafb6fdb73370054d8ff621f961953</application>
+        <filter/>
+        <name>Mock Up Intake Family Cancers</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_naci_family_coho.mock_up_intake_family</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-16 15:57:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3fbafb6fdb73370054d8ff621f961955</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mock Up Intake Family Cancers</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_module_3fbafb6fdb73370054d8ff621f961955</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-16 15:57:01</sys_updated_on>
+        <table>x_naci_family_coho_mock_up_intake_family_cancer</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

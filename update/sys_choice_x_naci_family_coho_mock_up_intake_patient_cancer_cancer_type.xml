@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="cancer_type" table="x_naci_family_coho_mock_up_intake_patient_cancer" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Adrenocortical Carcinoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:32:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>df02596ddb377f4054d8ff621f9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:32:21</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Adrenocortical Carcinoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brain</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:32:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0312596ddb377f4054d8ff621f96198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:32:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brain</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Breast</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:32:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>2622d52ddb377f4054d8ff621f961954</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:32:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Breast</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Choroid Plexus Carcinoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:33:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4d32596ddb377f4054d8ff621f96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:33:04</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Choroid Plexus Carcinoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Colon</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:33:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a942596ddb377f4054d8ff621f961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:33:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Colon</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leukemia</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:33:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4d529d6ddb377f4054d8ff621f9619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:33:35</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Leukemia</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lung</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:33:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4562192ddb377f4054d8ff621f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:33:44</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Lung</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lymphoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:34:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>df62196ddb377f4054d8ff621f96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:34:00</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Lymphoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Melanoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:34:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9b72512ddb377f4054d8ff621f96199c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:34:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Melanoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Osteosarcoma (bone)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:34:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d28291addb377f4054d8ff621f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:34:27</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Osteosarcoma (bone)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:36:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7cf299addb377f4054d8ff621f9619ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:36:20</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ovarian</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:34:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7d9291addb377f4054d8ff621f96195d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:34:41</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Ovarian</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Prostate</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:34:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>55a25d6ddb377f4054d8ff621f961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:34:55</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Prostate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:35:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>60b291addb377f4054d8ff621f961989</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:35:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Sarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Stomach</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:35:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f4c255addb377f4054d8ff621f9619fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:35:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Stomach</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unknown</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:35:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>64e2dd6ddb377f4054d8ff621f96194a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:36:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Unknown</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Uterine/Endometrial</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:35:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>70d295addb377f4054d8ff621f96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:35:43</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Uterine/Endometrial</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>cancer_type</element>
+            <name>x_naci_family_coho_mock_up_intake_patient_cancer</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 22:32:21</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>ee12196ddb377f4054d8ff621f961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cancer_type</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_mock_up_intake_patient_cancer_cancer_type</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-09 22:32:21</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

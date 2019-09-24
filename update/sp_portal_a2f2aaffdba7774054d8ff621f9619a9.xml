@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="fcsms_forms">49553bfddb4c8c1054d8ff621f96199f</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page display_value="nci_landing">d656f227dba25f00f59974131f961902</login_page>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-04 17:58:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a2f2aaffdba7774054d8ff621f9619a9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Family Cohort Study Management System</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_portal_a2f2aaffdba7774054d8ff621f9619a9</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-23 15:22:18</sys_updated_on>
+        <theme display_value="fcsms theme">8f370460dbf33b4054d8ff621f96192c</theme>
+        <title>Family Cohort Study Management System</title>
+        <url_suffix>fcsms</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=a2f2aaffdba7774054d8ff621f9619a9"/>
+</record_update>

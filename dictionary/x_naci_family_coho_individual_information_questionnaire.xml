@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
+        <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="FEMALE" value="FEMALE"/>
+                <element inactive_on_update="false" label="MALE" value="MALE"/>
+            </choice>
+        </element>
+        <element choice="1" label="A9. What is the highest level of school you have completed?" max_length="40" name="highest_level_of_school" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Currently in grade school" sequence="1" value="Currently in grade school"/>
+                <element inactive_on_update="false" label="Less than high school" sequence="2" value="Less than high school"/>
+                <element inactive_on_update="false" label="High school graduate or GED" sequence="3" value="High school graduate or GED"/>
+                <element inactive_on_update="false" label="Vocational/trade school" sequence="4" value="Vocational/trade school"/>
+                <element inactive_on_update="false" label="Some college" sequence="5" value="Some college"/>
+                <element inactive_on_update="false" label="College graduate" sequence="6" value="College graduate"/>
+                <element inactive_on_update="false" label="Some graduate school" sequence="7" value="Some graduate school"/>
+                <element inactive_on_update="false" label="Masters or doctoral degree" sequence="8" value="Masters or doctoral degree"/>
+            </choice>
+        </element>
+        <element label="Highest level of school specify" max_length="100" name="highest_level_of_school_specify" type="string"/>
+        <element choice="1" label="A4. Do you consider yourself to be Hispanic or Latino?" max_length="40" name="hispanic_or_latino" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NO" value="NO"/>
+                <element inactive_on_update="false" label="YES" value="YES"/>
+            </choice>
+        </element>
+        <element choice="1" label="A10. Which category best represents your total household income?" max_length="40" name="household_income" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Less than $10,000" sequence="1" value="Less than $10,000"/>
+                <element inactive_on_update="false" label="$10,000 to $19,999" sequence="2" value="$10,000 to $19,999"/>
+                <element inactive_on_update="false" label="$100,000 or more" sequence="3" value="$100,000 or more"/>
+                <element inactive_on_update="false" label="$20,000 to $29,999" sequence="4" value="$20,000 to $29,999"/>
+                <element inactive_on_update="false" label="$30,000 to $39,999" sequence="5" value="$30,000 to $39,999"/>
+                <element inactive_on_update="false" label="$40,000 to $49,999" sequence="6" value="$40,000 to $49,999"/>
+                <element inactive_on_update="false" label="$50,000 to $69,999" sequence="7" value="$50,000 to $69,999"/>
+                <element inactive_on_update="false" label="$70,000 to $99,999" sequence="8" value="$70,000 to $99,999"/>
+                <element inactive_on_update="false" label="Decline" sequence="9" value="Decline"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="10" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
+        <element choice="1" label="A6. Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="DON'T KNOW" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="NO" value="NO"/>
+                <element inactive_on_update="false" label="YES" value="YES"/>
+            </choice>
+        </element>
+        <element choice="1" label="A15. What is your current marital status?" max_length="40" name="marital_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Single, not married" sequence="1" value="Single, not married"/>
+                <element inactive_on_update="false" label="Married" sequence="2" value="Married"/>
+                <element inactive_on_update="false" label="Living together with a partner" sequence="3" value="Living together with a partner"/>
+                <element inactive_on_update="false" label="With a long-term partner, not living together" sequence="4" value="With a long-term partner, not living together"/>
+                <element inactive_on_update="false" label="Widowed" sequence="5" value="Widowed"/>
+                <element inactive_on_update="false" label="Separated" sequence="6" value="Separated"/>
+                <element inactive_on_update="false" label="Divorced" sequence="7" value="Divorced"/>
+                <element inactive_on_update="false" label="Decline" sequence="8" value="Decline"/>
+            </choice>
+        </element>
+        <element label="A13. What is your current (or most recent) occupation?" max_length="500" name="most_recent_occupation" type="string"/>
+        <element label="Name of person whose information is recorded in this questionnaire" max_length="100" name="name_of_proband" type="string"/>
+        <element choice="1" label="A7. What is your national origin or ancestry?" max_length="40" name="origin_or_ancestry" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="United Kingdom" sequence="1" value="United Kingdom"/>
+                <element inactive_on_update="false" label="Ireland" sequence="2" value="Ireland"/>
+                <element inactive_on_update="false" label="Germany" sequence="3" value="Germany"/>
+                <element inactive_on_update="false" label="France" sequence="4" value="France"/>
+                <element inactive_on_update="false" label="Italy" sequence="5" value="Italy"/>
+                <element inactive_on_update="false" label="Greece" sequence="6" value="Greece"/>
+                <element inactive_on_update="false" label="Eastern Europe (e.g., Poland, Russia, Hungary, Former Czechoslovakia)￼" sequence="7" value="Eastern Europe"/>
+                <element inactive_on_update="false" label="Scandinavia (e.g., Norway, Sweden, Denmark, Finland)￼" sequence="8" value="Scandinavia"/>
+                <element inactive_on_update="false" label="Spain, Portuga" sequence="9" value="Spain, Portuga"/>
+                <element inactive_on_update="false" label="Other European Countries" sequence="10" value="Other European Countries"/>
+                <element inactive_on_update="false" label="Africa" sequence="11" value="Africa"/>
+                <element inactive_on_update="false" label="Middle East" sequence="12" value="Middle East"/>
+                <element inactive_on_update="false" label="India, Pakistan" sequence="13" value="India, Pakistan"/>
+                <element inactive_on_update="false" label="China" sequence="14" value="China"/>
+                <element inactive_on_update="false" label="Japan" sequence="15" value="Japan"/>
+                <element inactive_on_update="false" label="Other Asian Countries or Pacific Islands" sequence="16" value="Other Asian Countries or Pacific Islands"/>
+                <element inactive_on_update="false" label="Native American" sequence="17" value="Native American"/>
+                <element inactive_on_update="false" label="Canada" sequence="18" value="Canada"/>
+                <element inactive_on_update="false" label="Mexico" sequence="19" value="Mexico"/>
+                <element inactive_on_update="false" label="Puerto Rico" sequence="20" value="Puerto Rico"/>
+                <element inactive_on_update="false" label="Central America" sequence="21" value="Central America"/>
+                <element inactive_on_update="false" label="South America" sequence="22" value="South America"/>
+                <element inactive_on_update="false" label="Other" sequence="23" value="Other"/>
+            </choice>
+        </element>
+        <element label="Origin or Ancestry specify" max_length="100" name="origin_or_ancestry_specify" type="string"/>
+        <element label="A3. What is your place of birth (town/city, state or province, country)?" max_length="1000" name="place_of_birth" type="string"/>
+        <element choice="1" label="A5. What is your race?" max_length="40" name="race" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="American Indian or Alaska Native" value="American Indian or Alaska Native"/>
+                <element inactive_on_update="false" label="Asian" value="Asian"/>
+                <element inactive_on_update="false" label="Black or African-American" value="Black or African-American"/>
+                <element inactive_on_update="false" label="Native Hawaiian or other Pacific Islander" value="Native Hawaiian or other Pacific Islander"/>
+                <element inactive_on_update="false" label="White" value="White"/>
+            </choice>
+        </element>
+        <element label="Your relationship to this person" max_length="100" name="relationship_to_this_person" type="string"/>
+        <element choice="1" label="A8. What religious group do you identify with?" max_length="40" name="religious_group" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Catholic" sequence="1" value="Catholic"/>
+                <element inactive_on_update="false" label="Protestant" sequence="2" value="Protestant"/>
+                <element inactive_on_update="false" label="Jewish" sequence="3" value="Jewish"/>
+                <element inactive_on_update="false" label="Eastern Orthodox" sequence="4" value="Eastern Orthodox"/>
+                <element inactive_on_update="false" label="Muslim" sequence="5" value="Muslim"/>
+                <element inactive_on_update="false" label="Hindu" sequence="6" value="Hindu"/>
+                <element inactive_on_update="false" label="Buddhist" sequence="7" value="Buddhist"/>
+                <element inactive_on_update="false" label="None" sequence="8" value="None"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="Other"/>
+                <element inactive_on_update="false" label="Decline" sequence="10" value="Decline"/>
+            </choice>
+        </element>
+        <element label="Religious group specify" max_length="100" name="religious_group_specify" type="string"/>
+        <element choice="1" label="A12. Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NO" value="NO"/>
+                <element inactive_on_update="false" label="YES" value="YES"/>
+            </choice>
+        </element>
+        <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
+    </element>
+</database>
