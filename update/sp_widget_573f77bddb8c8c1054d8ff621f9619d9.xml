@@ -6,17 +6,39 @@
   var c = this;
 	$scope.$on('spModel.fields.rendered', function() {
 		$timeout(function(){
+			renderAnnotation('.annotation.9b1e577edb0cc05054d8ff621f961988', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
+			renderAnnotation('.annotation.f31e577edb0cc05054d8ff621f9619ac', '<br/>', 'h3')
+			renderAnnotation('.annotation.f71e577edb0cc05054d8ff621f9619ac', '<br/>', 'h3')
+
+			renderAnnotation('.annotation.fb1e577edb0cc05054d8ff621f9619ac', 'What is the name and office address of the diagnosed this cancer?', 'h3')
+			renderAnnotation('.annotation.482e577edb0cc05054d8ff621f9619cd', 'What is the name and address of the hospital or health care facility where the diagnosis was made?', 'h3')
+
+			renderAnnotation('.annotation.0579fbb2dbccc05054d8ff621f96198d', 'What is the full name and birthday of your current or most recent spouse?', 'h3')
+			renderAnnotation('.annotation.e5793fb2dbccc05054d8ff621f961905', 'What is the full name and birthday of your first spouse?', 'h3')
+
+			
+			
+			/*
 		 var element = document.getElementById('.annotation.9b1e577edb0cc05054d8ff621f961988');
 		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name, office address, and office phone number of your regualr doctor?</label>';
+		 
 		 element = document.getElementById('.annotation.f31e577edb0cc05054d8ff621f9619ac');
-			
 		 element.innerHTML = '<br/>';
+		 
 		 element = document.getElementById('.annotation.f71e577edb0cc05054d8ff621f9619ac');
 		 element.innerHTML = '<br/>';
+		 
 		 element = document.getElementById('.annotation.fb1e577edb0cc05054d8ff621f9619ac');
 		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name and office address of the diagnosed this cancer?</label>';
+		 
 		 element = document.getElementById('.annotation.482e577edb0cc05054d8ff621f9619cd');
 		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name and address of the hospital or health care facility where the diagnosis was made?</label>';
+			
+		 element = document.getElementById('.annotation.0579fbb2dbccc05054d8ff621f96198d');
+		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the full name and birthday of your current or most recent spouse?</label>';
+		 element = document.getElementById('.annotation.e5793fb2dbccc05054d8ff621f961905');
+		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the full name and birthday of your first spouse?</label>';
+		 */
 		});
 	 });
 }]]></client_script>
@@ -53,6 +75,11 @@
 		"table": "x_naci_family_coho_family_history_question",
 		"view": "FHQ3"
 	});	
+	data.widget_4 = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_family_history_question",
+		"view": "FHQ4"
+	});	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -60,7 +87,7 @@
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>59</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -68,7 +95,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-26 16:17:19</sys_updated_on>
+        <sys_updated_on>2019-09-26 22:11:44</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
   <uib-tabset>
     <uib-tab index="0" heading="Informant/Proband Information">
@@ -81,11 +108,21 @@
         <sp-widget widget="c.data.widget_2"></sp-widget>
       </div>
     </uib-tab>
-    <uib-tab index="2" heading="Family Historic Questionaire">
+    <uib-tab index="2" heading="Family Historic Questionaire 1">
       <div style="padding: 10px;">
         <sp-widget widget="c.data.widget_3"></sp-widget>
       </div>
     </uib-tab>
+    <uib-tab index="3" heading="Family Historic Questionaire 2">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_4"></sp-widget>
+      </div>
+    </uib-tab>    
+    <uib-tab index="4" heading="Family Member Information">
+      <div style="padding: 10px;">
+        <widget id="family_members"></widget>
+      </div>
+    </uib-tab>     
   </uib-tabset>
 </div>]]></template>
     </sp_widget>

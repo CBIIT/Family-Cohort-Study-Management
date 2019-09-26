@@ -127,6 +127,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Family Study ID" max_length="20" name="fsid" type="string"/>
         <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
             <choice>
                 <element inactive_on_update="false" label="FEMALE" value="FEMALE"/>
@@ -265,6 +266,19 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element choice="1" label="Have you ever used other alternative therapy or treatment ? " max_length="40" name="other_alternative_therapy_or_treatment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Used this therapy or treatment in the past 12 months ?" max_length="40" name="other_alternative_therapy_or_treatment_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element label="Please specify this therapy or treatment" max_length="200" name="other_therapy_or_treatment_specify" type="string"/>
         <element label="A3. What is your place of birth (town/city, state or province, country)?" max_length="200" name="place_of_birth" type="string"/>
         <element choice="1" label="Have you ever used this practice: Acupuncture ?" max_length="40" name="practice_acupuncture" type="choice">
             <choice>
@@ -272,7 +286,154 @@
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
+        <element choice="1" label="Have you used this practice (Acupuncture) in the past 12 months ?" max_length="40" name="practice_acupuncture_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Biofeedback ?" max_length="40" name="practice_biofeedback" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Biofeedback) in the past 12 months ?" max_length="40" name="practice_biofeedback_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Counseling or psychotherapy ?" max_length="40" name="practice_counseling_or_psychotherapy" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Used this practice (Counseling or psychotherapy) in the past 12 months ?" max_length="40" name="practice_counseling_or_psychotherapy_past_12_months" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Energy healing ?" max_length="40" name="practice_energy_healing" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Energy healing) in the past 12 months ?" max_length="40" name="practice_energy_healing_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Homeopathic treatment or naturopathy ?" max_length="40" name="practice_homeopathic_treatment_or_naturopathy" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Homeopathic treatment) in the past 12 months ?" max_length="40" name="practice_homeopathic_treatment_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Hypnosis ?" max_length="40" name="practice_hypnosis" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Hypnosis) in the past 12 months ?" max_length="40" name="practice_hypnosis_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Imagery ?" max_length="40" name="practice_imagery" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Imagery) in the past 12 months ?" max_length="40" name="practice_imagery_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Massage therapy ?" max_length="40" name="practice_massage_therapy" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Massage therapy) in the past 12 months ?" max_length="40" name="practice_massage_therapy_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
         <element choice="1" label="Have you ever used this practice: Meditation ?" max_length="40" name="practice_meditation" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Meditation) in the past 12 months ?" max_length="40" name="practice_meditation_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Relaxation techniques ?" max_length="40" name="practice_relaxation_techniques" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Relaxation techniques) in the past 12 months ?" max_length="40" name="practice_relaxation_techniques_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Spiritual healing or prayer ?" max_length="40" name="practice_spiritual_healing_or_prayer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Spiritual healing or prayer) in the past 12 months?" max_length="40" name="practice_spiritual_healing_or_prayer_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Tai Chi or Qi Gong ?" max_length="40" name="practice_tai_chi_or_qi_gong" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Tai Chi or Qi Gong) in the past 12 months ?" max_length="40" name="practice_tai_chi_or_qi_gong_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Treatment by a chiropractor ?" max_length="40" name="practice_treatment_by_chiropractor" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Yoga ?" max_length="40" name="practice_yoga" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Yoga) in the past 12 months ?" max_length="40" name="practice_yoga_past_12_months" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -336,6 +497,12 @@
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you used this practice (Treatment by chiropractor) in the past 12 months ?" max_length="40" name="treatment_by_chiropractor_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
         <element choice="1" label="A12. Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">

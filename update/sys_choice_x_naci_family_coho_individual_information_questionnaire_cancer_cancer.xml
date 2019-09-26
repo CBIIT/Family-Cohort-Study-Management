@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="cancer" table="x_naci_family_coho_individual_information_questionnaire_cancer" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Adrenal gland (adrenocortical carcinoma)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:11:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>97e6cc07db00045054d8ff621f9619ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:11:06</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Adrenal gland (adrenocortical carcinoma)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Breast cancer, Left breast</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:11:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9d17cc07db00045054d8ff621f96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:11:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Breast cancer, Left breast</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Breast cancer, Right breast</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:11:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7c370007db00045054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:11:53</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Breast cancer, Right breast</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brain cancer</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>4</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:12:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>cd47cc07db00045054d8ff621f9619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:12:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brain cancer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bone cancer, Osteosarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>5</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:13:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>cd574447db00045054d8ff621f9619b3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:13:58</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Bone cancer, Osteosarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bone cancer, Chrondrosarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>6</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:14:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1cc7c407db00045054d8ff621f9619b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:14:22</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Bone cancer, Chrondrosarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bone cancer, Ewing's sarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>7</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:14:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>5ad78c47db00045054d8ff621f9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:14:49</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Bone cancer, Ewing's sarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft tissue sarcoma, Rhabdomyosarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>8</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:16:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>96280087db00045054d8ff621f9619ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:16:20</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Soft tissue sarcoma, Rhabdomyosarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft tissue sarcoma, Liposarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>9</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:16:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e1488487db00045054d8ff621f9619b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:16:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Soft tissue sarcoma, Liposarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft tissue sarcoma, Fibrosarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>10</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:16:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4658c487db00045054d8ff621f9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:16:58</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Soft tissue sarcoma, Fibrosarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft tissue sarcoma, Leiomyosarcoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>11</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:17:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b268c487db00045054d8ff621f9619bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:17:34</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Soft tissue sarcoma, Leiomyosarcoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft tissue sarcoma, Malignant Fibrous Histiocytoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>12</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:18:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>86984c07db00045054d8ff621f9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:18:10</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Soft tissue sarcoma, Malignant Fibrous Histiocytoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Colon or rectal cancer</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>13</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:18:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c3b800c7db00045054d8ff621f961911</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:18:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Colon or rectal cancer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lung or bronchus cancer, Left lung or bronchus</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>14</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:19:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e4d840c7db00045054d8ff621f961955</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:19:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Lung or bronchus cancer, Left lung or bronchus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lung or bronchus cancer, Right lung or bronchus</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>15</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:19:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>24f840c7db00045054d8ff621f96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:19:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Lung or bronchus cancer, Right lung or bronchus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leukemia (blood cancer), AML</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>16</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:22:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0e2948c7db00045054d8ff621f9619e7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:22:44</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Leukemia (blood cancer), AML</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leukemia (blood cancer), ALL</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>17</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:23:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>73b9c40bdb00045054d8ff621f9619ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:23:05</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Leukemia (blood cancer), ALL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leukemia (blood cancer), CML</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>18</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:23:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>20d9840bdb00045054d8ff621f961962</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:23:23</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Leukemia (blood cancer), CML</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leukemia (blood cancer), CLL</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>19</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:23:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>05e9c40bdb00045054d8ff621f96194c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:23:39</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Leukemia (blood cancer), CLL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Bladder (urinary)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>20</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:24:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>010a804bdb00045054d8ff621f961957</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:27:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Bladder (urinary)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Cervix</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>21</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:25:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>bf2ac80bdb00045054d8ff621f961931</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:27:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Cervix</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Choroid plexus carcinoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>22</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:25:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>464a804bdb00045054d8ff621f96198b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:27:27</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Choroid plexus carcinoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Esophagus</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>23</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:25:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4f5ac44bdb00045054d8ff621f96199d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:27:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Esophagus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Head,neck,throat</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>24</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:26:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>376a0c4bdb00045054d8ff621f96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:26:42</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Head,neck,throat</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Hodgkin's lymphoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>25</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:28:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f30b488bdb00045054d8ff621f961958</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:28:56</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Hodgkin's lymphoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Kidney</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>26</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:29:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>562b408bdb00045054d8ff621f961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:29:14</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Kidney</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Liver</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>27</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:29:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>504b4c8bdb00045054d8ff621f96193c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:29:41</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Liver</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Non-Hodgkin's lymphoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>28</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:30:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>955b8c8bdb00045054d8ff621f96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:30:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Non-Hodgkin's lymphoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Ovary</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>29</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:30:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>898bc0cbdb00045054d8ff621f9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:30:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Ovary</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Pancreas</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>30</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:31:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>029b84cbdb00045054d8ff621f961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:31:09</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Pancreas</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Prostate</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>31</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:31:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a6ab84cbdb00045054d8ff621f961979</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:31:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Prostate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Skin – basal or squamous cell carcinoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>32</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:31:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4fbbc4cbdb00045054d8ff621f96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:31:51</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Skin – basal or squamous cell carcinoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Skin – Melanoma</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>33</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:32:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e3db84cbdb00045054d8ff621f9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:32:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Skin – Melanoma</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Stomach (gastric)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>34</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>cefb40cbdb00045054d8ff621f96196c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:32:52</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Stomach (gastric)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Testicular</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>35</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:33:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f70c80cbdb00045054d8ff621f96198f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:33:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Testicular</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Thyroid</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>36</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>983cc00fdb00045054d8ff621f961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:33:47</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Thyroid</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cancer</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other: Uterus (endometrial)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sequence>37</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:34:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>314c040fdb00045054d8ff621f9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:34:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other: Uterus (endometrial)</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>cancer</element>
+            <name>x_naci_family_coho_individual_information_questionnaire_cancer</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 19:11:06</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>c417cc07db00045054d8ff621f96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cancer</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_cancer_cancer</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 19:11:06</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

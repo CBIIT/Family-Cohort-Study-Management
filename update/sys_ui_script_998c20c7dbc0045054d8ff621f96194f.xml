@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_naci_family_coho.common_functions</name>
+        <script><![CDATA[function renderAnnotation(id, title, className, bar) {
+	document.getElementById(id).innerHTML = '<br><label class="' + className + '">' + 
+		title + 
+		'</label>' + 
+		(bar ? '<hr style="margin-top: 0px"/>' : '');
+}
+]]></script>
+        <script_name>common_functions</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-26 21:56:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>998c20c7dbc0045054d8ff621f96194f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x_naci_family_coho.common_functions</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_script_998c20c7dbc0045054d8ff621f96194f</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-26 22:11:17</sys_updated_on>
+        <ui_type>10</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Individual Information Questionnaire Cancer" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_cancer" type="collection">
+        <element choice="1" label="Cancer" max_length="40" name="cancer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Adrenal gland (adrenocortical carcinoma)" sequence="1" value="Adrenal gland (adrenocortical carcinoma)"/>
+                <element inactive_on_update="false" label="Breast cancer, Left breast" sequence="2" value="Breast cancer, Left breast"/>
+                <element inactive_on_update="false" label="Breast cancer, Right breast" sequence="3" value="Breast cancer, Right breast"/>
+                <element inactive_on_update="false" label="Brain cancer" sequence="4" value="Brain cancer"/>
+                <element inactive_on_update="false" label="Bone cancer, Osteosarcoma" sequence="5" value="Bone cancer, Osteosarcoma"/>
+                <element inactive_on_update="false" label="Bone cancer, Chrondrosarcoma" sequence="6" value="Bone cancer, Chrondrosarcoma"/>
+                <element inactive_on_update="false" label="Bone cancer, Ewing's sarcoma" sequence="7" value="Bone cancer, Ewing's sarcoma"/>
+                <element inactive_on_update="false" label="Soft tissue sarcoma, Rhabdomyosarcoma" sequence="8" value="Soft tissue sarcoma, Rhabdomyosarcoma"/>
+                <element inactive_on_update="false" label="Soft tissue sarcoma, Liposarcoma" sequence="9" value="Soft tissue sarcoma, Liposarcoma"/>
+                <element inactive_on_update="false" label="Soft tissue sarcoma, Fibrosarcoma" sequence="10" value="Soft tissue sarcoma, Fibrosarcoma"/>
+                <element inactive_on_update="false" label="Soft tissue sarcoma, Leiomyosarcoma" sequence="11" value="Soft tissue sarcoma, Leiomyosarcoma"/>
+                <element inactive_on_update="false" label="Soft tissue sarcoma, Malignant Fibrous Histiocytoma" sequence="12" value="Soft tissue sarcoma, Malignant Fibrous Histiocytoma"/>
+                <element inactive_on_update="false" label="Colon or rectal cancer" sequence="13" value="Colon or rectal cancer"/>
+                <element inactive_on_update="false" label="Lung or bronchus cancer, Left lung or bronchus" sequence="14" value="Lung or bronchus cancer, Left lung or bronchus"/>
+                <element inactive_on_update="false" label="Lung or bronchus cancer, Right lung or bronchus" sequence="15" value="Lung or bronchus cancer, Right lung or bronchus"/>
+                <element inactive_on_update="false" label="Leukemia (blood cancer), AML" sequence="16" value="Leukemia (blood cancer), AML"/>
+                <element inactive_on_update="false" label="Leukemia (blood cancer), ALL" sequence="17" value="Leukemia (blood cancer), ALL"/>
+                <element inactive_on_update="false" label="Leukemia (blood cancer), CML" sequence="18" value="Leukemia (blood cancer), CML"/>
+                <element inactive_on_update="false" label="Leukemia (blood cancer), CLL" sequence="19" value="Leukemia (blood cancer), CLL"/>
+                <element inactive_on_update="false" label="Other: Bladder (urinary)" sequence="20" value="Other: Bladder (urinary)"/>
+                <element inactive_on_update="false" label="Other: Cervix" sequence="21" value="Other: Cervix"/>
+                <element inactive_on_update="false" label="Other: Choroid plexus carcinoma" sequence="22" value="Other: Choroid plexus carcinoma"/>
+                <element inactive_on_update="false" label="Other: Esophagus" sequence="23" value="Other: Esophagus"/>
+                <element inactive_on_update="false" label="Other: Head,neck,throat" sequence="24" value="Other: Head,neck,throat"/>
+                <element inactive_on_update="false" label="Other: Hodgkin's lymphoma" sequence="25" value="Other: Hodgkin's lymphoma"/>
+                <element inactive_on_update="false" label="Other: Kidney" sequence="26" value="Other: Kidney"/>
+                <element inactive_on_update="false" label="Other: Liver" sequence="27" value="Other: Liver"/>
+                <element inactive_on_update="false" label="Other: Non-Hodgkin's lymphoma" sequence="28" value="Other: Non-Hodgkin's lymphoma"/>
+                <element inactive_on_update="false" label="Other: Ovary" sequence="29" value="Other: Ovary"/>
+                <element inactive_on_update="false" label="Other: Pancreas" sequence="30" value="Other: Pancreas"/>
+                <element inactive_on_update="false" label="Other: Prostate" sequence="31" value="Other: Prostate"/>
+                <element inactive_on_update="false" label="Other: Skin – basal or squamous cell carcinoma" sequence="32" value="Other: Skin – basal or squamous cell carcinoma"/>
+                <element inactive_on_update="false" label="Other: Skin – Melanoma" sequence="33" value="Other: Skin – Melanoma"/>
+                <element inactive_on_update="false" label="Other: Stomach (gastric)" sequence="34" value="Other: Stomach (gastric)"/>
+                <element inactive_on_update="false" label="Other: Testicular" sequence="35" value="Other: Testicular"/>
+                <element inactive_on_update="false" label="Other: Thyroid" sequence="36" value="Other: Thyroid"/>
+                <element inactive_on_update="false" label="Other: Uterus (endometrial)" sequence="37" value="Other: Uterus (endometrial)"/>
+            </choice>
+        </element>
+        <element label="Date or age at diagnosis" max_length="200" name="date_or_age_at_diagnosis" type="string"/>
+        <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
+        <element label="Name and address of the facility where diagnosis was mad" max_length="500" name="name_and_address_diagnosis" type="string"/>
+        <element label="Name and address of the facility where treatment was received" max_length="500" name="name_and_address_treatment" type="string"/>
+        <element choice="1" label="Treatment(s) received" max_length="40" name="treatments_received" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Surgery" sequence="1" value="Surgery"/>
+                <element inactive_on_update="false" label="Chemotherapy" sequence="2" value="Chemotherapy"/>
+                <element inactive_on_update="false" label="Radiation therapy" sequence="3" value="Radiation therapy"/>
+                <element inactive_on_update="false" label="Hormone therapy" sequence="4" value="Hormone therapy"/>
+                <element inactive_on_update="false" label="None" sequence="5" value="None"/>
+                <element inactive_on_update="false" label="Lumpectomy" sequence="6" value="Lumpectomy"/>
+                <element inactive_on_update="false" label="Mastectomy" sequence="7" value="Mastectomy"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="iiq_form"/>
+        </index>
+    </element>
+</database>

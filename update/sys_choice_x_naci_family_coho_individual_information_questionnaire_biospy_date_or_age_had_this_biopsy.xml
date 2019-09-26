@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="date_or_age_had_this_biopsy" table="x_naci_family_coho_individual_information_questionnaire_biospy" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>date_or_age_had_this_biopsy</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DATE</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:45:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e2d0cc0fdbccc05054d8ff621f961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:45:00</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DATE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>date_or_age_had_this_biopsy</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AGE</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:45:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6a11480fdbccc05054d8ff621f96193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:45:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>AGE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>date_or_age_had_this_biopsy</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:45:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7d21800fdbccc05054d8ff621f9619a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:45:27</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>date_or_age_had_this_biopsy</element>
+            <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:45:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>7111440fdbccc05054d8ff621f9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>date_or_age_had_this_biopsy</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_biospy_date_or_age_had_this_biopsy</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:45:00</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

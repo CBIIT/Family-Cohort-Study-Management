@@ -25,6 +25,17 @@
         <element label="State" max_length="50" name="diagnosed_doctor_state" type="string"/>
         <element label="Zipcode" max_length="50" name="diagnosed_doctor_zipcode" type="string"/>
         <element label="When did the physician diagnose this cancer? (Year)" max_length="10" name="diagnose_cancer_year" type="string"/>
+        <element label="Date of Birth (Month/Day/Year)" max_length="20" name="first_spouse_date_of_birth" type="string"/>
+        <element label="First Name" max_length="100" name="first_spouse_first_name" type="string"/>
+        <element label="Last Name" max_length="100" name="first_spouse_last_name" type="string"/>
+        <element label="Maiden Name" max_length="50" name="first_spouse_maiden_name" type="string"/>
+        <element label="Middle Name" max_length="50" name="first_spouse_middle_name" type="string"/>
+        <element choice="1" label="Did you parent any children with this spouse?" max_length="20" name="first_spouse_parent_children" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="No"/>
+            </choice>
+        </element>
         <element label="Foreign Country" max_length="100" name="foreign_country" type="string"/>
         <element label="City" max_length="100" name="hospital_clinic_city" type="string"/>
         <element label="Hospital/Clinic Name" max_length="200" name="hospital_clinic_name" type="string"/>
@@ -49,6 +60,8 @@
                 <element inactive_on_update="false" label="Widowed" sequence="20" value="Widowed"/>
                 <element inactive_on_update="false" label="Separated" sequence="30" value="Separated"/>
                 <element inactive_on_update="false" label="Never married" sequence="40" value="Never married"/>
+                <element inactive_on_update="false" label="Divorced" sequence="50" value="Divorced"/>
+                <element inactive_on_update="false" label="Remarried" sequence="60" value="Remarried"/>
             </choice>
         </element>
         <element label="What is your national origin or ancestry ? (Check no more than 4)" max_length="500" name="national_origin" reference="x_naci_family_coho_lookup_national_ancestry" type="glide_list"/>
@@ -57,6 +70,12 @@
         <element label="How many other infants were born with you?" max_length="10" name="number_of_infants_born_with" type="string"/>
         <element label="Other national origin or ancestry " max_length="100" name="other_national_origin" type="string"/>
         <element label="If other, please specify" max_length="100" name="other_religion" type="string"/>
+        <element choice="3" default="Yes" label="With this spouse did you parent any children, including stillbirth and children?" max_length="10" name="parent_child" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="No"/>
+            </choice>
+        </element>
         <element label="Place it Began" max_length="200" name="place_began" type="string"/>
         <element label="Proband Address" max_length="300" name="proband_address" type="string"/>
         <element label="Proband Address 2" max_length="200" name="proband_address_2" type="string"/>
@@ -126,6 +145,11 @@
                 <element inactive_on_update="false" label="Female" sequence="20" value="Female"/>
             </choice>
         </element>
+        <element label="Date of Birth (Month/Day/Year)" max_length="50" name="spouse_date_of_birth" type="string"/>
+        <element label="First Name" max_length="100" name="spouse_first_name" type="string"/>
+        <element label="Last Name" max_length="100" name="spouse_last_name" type="string"/>
+        <element label="Maiden Name" max_length="50" name="spouse_maiden_name" type="string"/>
+        <element label="Middle Name" max_length="50" name="spouse_middle_name" type="string"/>
         <element label="Time to Complete Form" max_length="50" name="time_to_complete_form" type="glide_date_time"/>
         <element label="Year moved to U.S.A" max_length="10" name="year_moved_to_usa" type="string"/>
     </element>

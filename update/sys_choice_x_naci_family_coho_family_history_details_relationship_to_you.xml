@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="relationship_to_you" table="x_naci_family_coho_family_history_details" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>10</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:37:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6a4fbfbadbccc05054d8ff621f96193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:37:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Mother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Father</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>20</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:37:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>075f3bbadbccc05054d8ff621f961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:37:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sister</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>30</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:37:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ba6f7fbadbccc05054d8ff621f961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:37:56</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Sister</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>40</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:38:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>437ffbbadbccc05054d8ff621f961960</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:38:10</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Half-Brother (same mother)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>50</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:38:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ee8f37fadbccc05054d8ff621f96196c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:38:44</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Half-Brother (same mother)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Half-Brother (same father)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>60</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:39:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>cfaf77fadbccc05054d8ff621f9619e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:39:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Half-Brother (same father)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Half-Sister (same mother)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>70</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:39:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>48dfb3fadbccc05054d8ff621f961988</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:39:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Half-Sister (same mother)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Half-Sister (same father)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>80</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:40:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a6effbbadbccc05054d8ff621f9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:40:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Half-Sister (same father)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mother's Mother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>90</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:40:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>600008cbdbccc05054d8ff621f961915</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:40:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Mother's Mother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mother's Father</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>100</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:41:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b82000cbdbccc05054d8ff621f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:41:04</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Mother's Father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Father's Mother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>110</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:41:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>55300ccbdbccc05054d8ff621f961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:41:20</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Father's Mother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Father's Father</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>120</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:42:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>414088cbdbccc05054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:42:03</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Father's Father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>130</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:46:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a951884fdbccc05054d8ff621f96195e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:46:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>relationship_to_you</element>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 18:37:19</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d55fbfbadbccc05054d8ff621f961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>relationship_to_you</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_family_history_details_relationship_to_you</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 18:37:19</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
