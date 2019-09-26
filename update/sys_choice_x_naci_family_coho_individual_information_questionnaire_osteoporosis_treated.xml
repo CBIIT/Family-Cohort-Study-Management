@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="osteoporosis_treated" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>osteoporosis_treated</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>YES</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 14:55:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3b7c8736dbc8c05054d8ff621f96193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 14:55:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>YES</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>osteoporosis_treated</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NO</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 14:55:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ca8c8736dbc8c05054d8ff621f9619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 14:55:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>NO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>osteoporosis_treated</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 14:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>609cc3f2dbc8c05054d8ff621f9619c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 14:55:43</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>osteoporosis_treated</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-26 14:55:19</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>dd8c0336dbc8c05054d8ff621f961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>osteoporosis_treated</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_osteoporosis_treated</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-26 14:55:19</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,10 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
+        <element choice="1" label="is this condition (angina pectoris) currently being treated ?" max_length="40" name="angina_pectoris_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (Bone Fracture) currently being treated ?" max_length="40" name="bone_fracture_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (Coronary Artery Disease) currently being treated ?" max_length="40" name="coronary_artery_disease_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element choice="1" label="Is this condition (diabetes) currently being treated ?" max_length="40" name="diabetes_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Severe Heart Pain (angina pectoris) ?" max_length="40" name="diagnosed_with_angina_pectoris" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="B6. Have you ever been diagnosed with any cancer?" max_length="40" name="diagnosed_with_any_cancer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Bone Fracture ?" max_length="40" name="diagnosed_with_bone_fracture" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Chronic or Recurrent Infection ?" max_length="40" name="diagnosed_with_chronic_or_recurrent_infection" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Coronary Artery Disease ?" max_length="40" name="diagnosed_with_coronary_artery_disease" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with High Blood Sugar (diabetes) ?" max_length="40" name="diagnosed_with_diabetes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with High Cholesterol ?" max_length="40" name="diagnosed_with_high_cholesterol" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with High Blood Pressure (hypertension) ?" max_length="40" name="diagnosed_with_hypertension" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Heart Attack (myocardial infarction) ?" max_length="40" name="diagnosed_with_myocardial_infarction" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Mild bone thinning (osteopenia) ?" max_length="40" name="diagnosed_with_osteopenia" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Severe bone thinning (osteoporosis) ?" max_length="40" name="diagnosed_with_osteoporosis" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Severe forgetfulness or dementia ?" max_length="40" name="diagnosed_with_severe_forgetfulness_or_dementia" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Stroke ?" max_length="40" name="diagnosed_with_stroke" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever been diagnosed with Mini-stroke  (transient ischemic attack) ?" max_length="40" name="diagnosed_with_transient_ischemic_attack" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
             <choice>
                 <element inactive_on_update="false" label="FEMALE" value="FEMALE"/>
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
+            </choice>
+        </element>
+        <element choice="1" label="B12. Have you ever had any surgery other than for cancer treatment?" max_length="40" name="have_any_surgery" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="B1. Have you ever had a biopsy?" max_length="40" name="have_biopsy" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
         <element choice="1" label="A9. What is the highest level of school you have completed?" max_length="40" name="highest_level_of_school" type="choice">
@@ -20,6 +160,13 @@
             </choice>
         </element>
         <element label="Highest level of school specify" max_length="100" name="highest_level_of_school_specify" type="string"/>
+        <element choice="1" label="Is this condition (High Cholesterol) currently being treated ?" max_length="40" name="high_cholesterol_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="A4. Do you consider yourself to be Hispanic or Latino?" max_length="40" name="hispanic_or_latino" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NO" value="NO"/>
@@ -38,6 +185,13 @@
                 <element inactive_on_update="false" label="$70,000 to $99,999" sequence="8" value="$70,000 to $99,999"/>
                 <element inactive_on_update="false" label="Decline" sequence="9" value="Decline"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="10" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (hypertension) currently being treated ?" max_length="40" name="hypertension_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
         <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
@@ -60,7 +214,14 @@
                 <element inactive_on_update="false" label="Decline" sequence="8" value="Decline"/>
             </choice>
         </element>
-        <element label="A13. What is your current (or most recent) occupation?" max_length="500" name="most_recent_occupation" type="string"/>
+        <element label="A13. What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
+        <element choice="1" label="Is this condition (myocardial infarction) currently being treated ?" max_length="40" name="myocardial_infarction_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element label="Name of person whose information is recorded in this questionnaire" max_length="100" name="name_of_proband" type="string"/>
         <element choice="1" label="A7. What is your national origin or ancestry?" max_length="40" name="origin_or_ancestry" type="choice">
             <choice>
@@ -90,7 +251,33 @@
             </choice>
         </element>
         <element label="Origin or Ancestry specify" max_length="100" name="origin_or_ancestry_specify" type="string"/>
-        <element label="A3. What is your place of birth (town/city, state or province, country)?" max_length="1000" name="place_of_birth" type="string"/>
+        <element choice="1" label="Is this condition (osteopenia) currently being treated ?" max_length="40" name="osteopenia_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (osteoporosis) currently being treated ?" max_length="40" name="osteoporosis_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element label="A3. What is your place of birth (town/city, state or province, country)?" max_length="200" name="place_of_birth" type="string"/>
+        <element choice="1" label="Have you ever used this practice: Acupuncture ?" max_length="40" name="practice_acupuncture" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever used this practice: Meditation ?" max_length="40" name="practice_meditation" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
         <element choice="1" label="A5. What is your race?" max_length="40" name="race" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian or Alaska Native" value="American Indian or Alaska Native"/>
@@ -98,6 +285,13 @@
                 <element inactive_on_update="false" label="Black or African-American" value="Black or African-American"/>
                 <element inactive_on_update="false" label="Native Hawaiian or other Pacific Islander" value="Native Hawaiian or other Pacific Islander"/>
                 <element inactive_on_update="false" label="White" value="White"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (Chronic or Recurrent Infection) currently being treated ?" max_length="40" name="recurrent_infection_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
         <element label="Your relationship to this person" max_length="100" name="relationship_to_this_person" type="string"/>
@@ -116,6 +310,34 @@
             </choice>
         </element>
         <element label="Religious group specify" max_length="100" name="religious_group_specify" type="string"/>
+        <element choice="1" label="Is this condition (Severe forgetfulness or dementia) currently being treated ?" max_length="40" name="severe_forgetfulness_or_dementia_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (Stroke) currently being treated ?" max_length="40" name="stroke_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="B20.Are you currently taking or have you taken any prescription medication ?" max_length="40" name="taking_any_prescription_medication" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Is this condition (transient ischemic attack) currently being treated ?" max_length="40" name="transient_ischemic_attack_treated" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="A12. Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NO" value="NO"/>

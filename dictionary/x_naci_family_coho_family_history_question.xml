@@ -10,15 +10,54 @@
         <element label="CIty" max_length="200" name="born_city" type="string"/>
         <element label="County" max_length="100" name="born_county" type="string"/>
         <element label="State" max_length="50" name="born_state" type="string"/>
+        <element choice="1" default="No" label="Did a physician ever state that you had cancer? " max_length="10" name="cancer_diagnosis_by_physician" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+            </choice>
+        </element>
+        <element label="Type" max_length="100" name="cancer_type" type="string"/>
+        <element label="Street Address" max_length="300" name="diagnosed_doctor_address" type="string"/>
+        <element label="City" max_length="100" name="diagnosed_doctor_city" type="string"/>
+        <element label="First Name" max_length="100" name="diagnosed_doctor_first_name" type="string"/>
+        <element label="Last Name" max_length="100" name="diagnosed_doctor_last_name" type="string"/>
+        <element label="Middle Name" max_length="50" name="diagnosed_doctor_middle_name" type="string"/>
+        <element label="State" max_length="50" name="diagnosed_doctor_state" type="string"/>
+        <element label="Zipcode" max_length="50" name="diagnosed_doctor_zipcode" type="string"/>
+        <element label="When did the physician diagnose this cancer? (Year)" max_length="10" name="diagnose_cancer_year" type="string"/>
         <element label="Foreign Country" max_length="100" name="foreign_country" type="string"/>
+        <element label="City" max_length="100" name="hospital_clinic_city" type="string"/>
+        <element label="Hospital/Clinic Name" max_length="200" name="hospital_clinic_name" type="string"/>
+        <element label="State" max_length="50" name="hospital_clinic_state" type="string"/>
+        <element label="Street Address" max_length="200" name="hospital_clinic_street_address" type="string"/>
+        <element label="Zipcode" max_length="50" name="hospital_clinic_zipcode" type="string"/>
         <element choice="3" default="No" label="Do you consider yourself to be" max_length="40" name="ishispanic" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="10" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
             </choice>
         </element>
+        <element choice="3" default="No" label="Are you a twin or one of a multiple birth?" max_length="10" name="istwin" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Waht is your marital status?" max_length="20" name="marital_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Married or living as married" sequence="10" value="Married or living as married"/>
+                <element inactive_on_update="false" label="Widowed" sequence="20" value="Widowed"/>
+                <element inactive_on_update="false" label="Separated" sequence="30" value="Separated"/>
+                <element inactive_on_update="false" label="Never married" sequence="40" value="Never married"/>
+            </choice>
+        </element>
         <element label="What is your national origin or ancestry ? (Check no more than 4)" max_length="500" name="national_origin" reference="x_naci_family_coho_lookup_national_ancestry" type="glide_list"/>
+        <element label="Of those born with you, how many are of an identical relation with you?" max_length="10" name="number_identical_twin" type="string"/>
+        <element label="Of those born with you, how many are of a faternal relation with you? " max_length="10" name="number_of_fraternal" type="string"/>
+        <element label="How many other infants were born with you?" max_length="10" name="number_of_infants_born_with" type="string"/>
         <element label="Other national origin or ancestry " max_length="100" name="other_national_origin" type="string"/>
+        <element label="If other, please specify" max_length="100" name="other_religion" type="string"/>
+        <element label="Place it Began" max_length="200" name="place_began" type="string"/>
         <element label="Proband Address" max_length="300" name="proband_address" type="string"/>
         <element label="Proband Address 2" max_length="200" name="proband_address_2" type="string"/>
         <element label="Proband City" max_length="100" name="proband_city" type="string"/>
@@ -30,6 +69,7 @@
         <element label="Proband Office Phone" max_length="50" name="proband_office_phone" type="string"/>
         <element label="Proband State" max_length="50" name="proband_state" type="string"/>
         <element label="Proband Zipcode" max_length="20" name="proband_zipcode" type="string"/>
+        <element label="If Protestant, what denomination?" max_length="100" name="protestant_denomination" type="string"/>
         <element label="Proxy Address" max_length="300" name="proxy_address" type="string"/>
         <element label="Proxy Address 2" max_length="200" name="proxy_address_2" type="string"/>
         <element label="Proxy City" max_length="100" name="proxy_city" type="string_full_utf8"/>
@@ -48,6 +88,36 @@
                 <element inactive_on_update="false" label="Black or African American" sequence="30" value="Black or African American"/>
                 <element inactive_on_update="false" label="Native Hawaiian or Other Pacific Islander" sequence="40" value="Native Hawaiian or Other Pacific Islander"/>
                 <element inactive_on_update="false" label="White" sequence="50" value="White"/>
+            </choice>
+        </element>
+        <element label="Name" max_length="100" name="raised_by1" type="string"/>
+        <element label="Relationship" max_length="100" name="raised_by1_relationship" type="string"/>
+        <element label="Name" max_length="100" name="raised_by2" type="string"/>
+        <element label="Relationship" max_length="100" name="raised_by2_relationship" type="string"/>
+        <element choice="3" default="Yes" label="Were you raised by someone other than your parents?" max_length="10" name="raised_by_parent" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="No"/>
+            </choice>
+        </element>
+        <element label="Address" max_length="200" name="regular_doctor_address" type="string"/>
+        <element label="City" max_length="50" name="regular_doctor_city" type="string"/>
+        <element label="First Name" max_length="100" name="regular_doctor_first_name" type="string"/>
+        <element label="Middle Name" max_length="50" name="regular_doctor_middle_name" type="string"/>
+        <element label="Office Phone" max_length="20" name="regular_doctor_office_phone" type="string"/>
+        <element label="State" max_length="50" name="regular_doctor_state" type="string"/>
+        <element label="Zipcode" max_length="20" name="regular_doctor_zipcode" type="string"/>
+        <element label="Last Name" max_length="100" name="regular_dotor_last_name" type="string"/>
+        <element choice="1" label="In what religion were you raised? " max_length="50" name="religion" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="None" sequence="10" value="None"/>
+                <element inactive_on_update="false" label="Catholic" sequence="20" value="Catholic"/>
+                <element inactive_on_update="false" label="Jewish" sequence="30" value="Jewish"/>
+                <element inactive_on_update="false" label="Greek Orthodox" sequence="40" value="Greek Orthodox"/>
+                <element inactive_on_update="false" label="Mormon" sequence="50" value="Mormon"/>
+                <element inactive_on_update="false" label="Serventh Day Adventist" sequence="60" value="Serventh Day Adventist"/>
+                <element inactive_on_update="false" label="Christian Scientist" sequence="70" value="Christian Scientist"/>
+                <element inactive_on_update="false" label="Other" sequence="80" value="Other"/>
             </choice>
         </element>
         <element choice="3" default="Male" label="Are you male or female?" max_length="10" name="sex" type="choice">
