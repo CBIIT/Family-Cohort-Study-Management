@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="relatives_test_positive" label="Biological relatives test positive for one of those genes/syndrome?" language="en" table="x_naci_family_coho_mock_up_intake">
+    <sys_documentation element="relatives_test_positive" label="Did any of your biological relatives test positive for those genes/syndromes?" language="en" table="x_naci_family_coho_mock_up_intake">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>relatives_test_positive</element>
             <help/>
             <hint/>
-            <label>Biological relatives test positive for one of those genes/syndrome?</label>
+            <label>Did any of your biological relatives test positive for those genes/syndromes?</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <plural>Biological relatives test positive for one of those genes/syndrome?s</plural>
+            <plural>Did any of your biological relatives test positive for those genes/syndromes?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 21:34:19</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>ccd48169dbf37f4054d8ff621f961924</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>Biological relatives test positive for one of those genes/syndrome?</sys_name>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Did any of your biological relatives test positive for those genes/syndromes?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_mock_up_intake_relatives_test_positive_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 17:59:27</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 21:57:21</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

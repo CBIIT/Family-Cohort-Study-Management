@@ -4,41 +4,42 @@
         <client_script><![CDATA[function($scope, $timeout) {
   /* widget controller */
   var c = this;
-	$scope.$on('spModel.fields.rendered', function() {
+	c.forms = {};
+	c.sections = [];	
+//	$scope.logForms = function() {
+//		console.log(c.forms);
+//		var familyHistoryForm = c.forms.FHQ3;
+//		var physicianDiagnosis = familyHistoryForm.getValue('cancer_diagnosis_by_physician')
+//		console.log('got value', c.sections);
+//	}
+//	
+//	$scope.validate = function() {
+//		// check national origin (less than 4)
+//		var value = c.forms.FHQ2.getValue('national_origin');
+//		if (value.split(',').length > 4) {
+//			alert('not valid')
+//		}
+//	}
+	
+	$scope.$on('spModel.fields.rendered', function(event) {
 		$timeout(function(){
-			renderAnnotation('.annotation.9b1e577edb0cc05054d8ff621f961988', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
-			renderAnnotation('.annotation.f31e577edb0cc05054d8ff621f9619ac', '<br/>', 'h3')
-			renderAnnotation('.annotation.f71e577edb0cc05054d8ff621f9619ac', '<br/>', 'h3')
-
-			renderAnnotation('.annotation.fb1e577edb0cc05054d8ff621f9619ac', 'What is the name and office address of the diagnosed this cancer?', 'h3')
-			renderAnnotation('.annotation.482e577edb0cc05054d8ff621f9619cd', 'What is the name and address of the hospital or health care facility where the diagnosis was made?', 'h3')
-
-			renderAnnotation('.annotation.0579fbb2dbccc05054d8ff621f96198d', 'What is the full name and birthday of your current or most recent spouse?', 'h3')
-			renderAnnotation('.annotation.e5793fb2dbccc05054d8ff621f961905', 'What is the full name and birthday of your first spouse?', 'h3')
-
+//			var g_form = event.targetScope.getGlideForm();
+//			c.sections = g_form.getSections();
+//			console.log(event.targetScope)
+//			var viewName = event.targetScope.formModel.view_title;
+//			var glideForm = event.targetScope.getGlideForm();
+//			c.forms[viewName] = glideForm;
 			
-			
-			/*
-		 var element = document.getElementById('.annotation.9b1e577edb0cc05054d8ff621f961988');
-		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name, office address, and office phone number of your regualr doctor?</label>';
-		 
-		 element = document.getElementById('.annotation.f31e577edb0cc05054d8ff621f9619ac');
-		 element.innerHTML = '<br/>';
-		 
-		 element = document.getElementById('.annotation.f71e577edb0cc05054d8ff621f9619ac');
-		 element.innerHTML = '<br/>';
-		 
-		 element = document.getElementById('.annotation.fb1e577edb0cc05054d8ff621f9619ac');
-		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name and office address of the diagnosed this cancer?</label>';
-		 
-		 element = document.getElementById('.annotation.482e577edb0cc05054d8ff621f9619cd');
-		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the name and address of the hospital or health care facility where the diagnosis was made?</label>';
-			
-		 element = document.getElementById('.annotation.0579fbb2dbccc05054d8ff621f96198d');
-		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the full name and birthday of your current or most recent spouse?</label>';
-		 element = document.getElementById('.annotation.e5793fb2dbccc05054d8ff621f961905');
-		 element.innerHTML = '<br/><label class="field-label ng-binding ng-scope">What is the full name and birthday of your first spouse?</label>';
-		 */
+			renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
+			renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '<br/>', 'h3')
+			//renderAnnotation('.annotation.e1e54193db40c050b86770c08c9619f9', '<br/>', 'h3')
+
+			//renderAnnotation('.annotation.e5e54193db40c050b86770c08c9619f9', 'What is the name and office address of the diagnosed this cancer?', 'h3')
+			//renderAnnotation('.annotation.c6e58193db40c050b86770c08c96196a', 'What is the name and address of the hospital or health care facility where the diagnosis was made?', 'h3')
+
+			//renderAnnotation('.annotation.0579fbb2dbccc05054d8ff621f96198d', 'What is the full name and birthday of your current or most recent spouse?', 'h3')
+			//renderAnnotation('.annotation.e5793fb2dbccc05054d8ff621f961905', 'What is the full name and birthday of your first spouse?', 'h3')
+
 		});
 	 });
 }]]></client_script>
@@ -87,7 +88,7 @@
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -95,7 +96,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-26 22:11:44</sys_updated_on>
+        <sys_updated_on>2019-09-27 21:53:54</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
   <uib-tabset>
     <uib-tab index="0" heading="Informant/Proband Information">
@@ -124,6 +125,13 @@
       </div>
     </uib-tab>     
   </uib-tabset>
+  
+ <!-- <button ng-click="logForms()">
+    Log Forms
+  </button>
+  <button ng-click="validate()">
+    Validate
+  </button>  -->
 </div>]]></template>
     </sp_widget>
 </record_update>

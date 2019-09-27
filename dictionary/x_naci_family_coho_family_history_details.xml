@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Family History Details " max_length="40" name="x_naci_family_coho_family_history_details" type="collection">
+    <element label="Family History Details" max_length="40" name="x_naci_family_coho_family_history_details" type="collection">
         <element label="Cause" max_length="200" name="cause_of_death" type="string"/>
         <element label="City" max_length="50" name="city" type="string"/>
         <element label="City D" max_length="50" name="city_of_death" type="string"/>
@@ -29,7 +29,7 @@
         <element label="Name of Hospital" max_length="100" name="name_of_hospital" type="string"/>
         <element label="How many children did this person have?" max_length="10" name="number_children" type="string"/>
         <element label="Other Relationship" max_length="100" name="other_relationship" type="string"/>
-        <element choice="1" label="May we have your permission to contact this relative?" max_length="10" name="permission_to_contact" type="choice">
+        <element choice="3" default="Yes" label="May we have your permission to contact this relative?" max_length="10" name="permission_to_contact" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
                 <element inactive_on_update="false" label="No" sequence="20" value="No"/>

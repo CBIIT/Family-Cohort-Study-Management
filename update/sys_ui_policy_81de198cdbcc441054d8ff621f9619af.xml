@@ -15,14 +15,14 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
- g_form.showFieldMsg('tested', 'Description will be put in here', 'info', true);
+ //g_form.showFieldMsg('tested', 'Description will be put in here', 'info', true);
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 	//g_form.setLabelOf('tested', g_form.getLabelOf('tested') + '<i class="glyphicon glyphicon-question-sign" style="font-size: 20px; margin: 5px; color: steelblue;"></i>');
-	g_form.addDecoration('tested', 'icon-star', 'test');
-	console.log(g_form.getControl('tested'));
+	//g_form.addDecoration('tested', 'icon-star', 'test');
+	//console.log(g_form.getControl('tested'));
 	//$('.field-label').append('<i class="glyphicon glyphicon-question-sign"></i>');
-	g_form.showFieldMsg('tested', 'Here is the help message Here is the help message Here is the help message Here is the help message  Here is the help message', 'info', true);
+	//g_form.showFieldMsg('tested', 'Here is the help message Here is the help message Here is the help message Here is the help message  Here is the help message', 'info', true);
 }]]></script_true>
         <set_values/>
         <short_description>show field message</short_description>
@@ -32,7 +32,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>81de198cdbcc441054d8ff621f9619af</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>show field message</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -41,7 +41,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_81de198cdbcc441054d8ff621f9619af</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-17 19:59:50</sys_updated_on>
+        <sys_updated_on>2019-09-27 20:49:58</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <ui_type>10</ui_type>
         <view/>

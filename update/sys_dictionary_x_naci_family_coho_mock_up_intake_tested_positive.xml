@@ -17,7 +17,7 @@
         <column_label>For which of the following genes or syndromes did you test positive?</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-09 21:20:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c7710d25dbf37f4054d8ff621f9619a7</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>For which of the following genes or syndromes did you test positive?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_mock_up_intake_tested_positive</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-10 13:53:53</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-27 20:48:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

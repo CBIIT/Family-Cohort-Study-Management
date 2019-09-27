@@ -48,7 +48,7 @@
             </choice>
         </element>
         <element label="Email Address" max_length="100" name="email_address" type="string"/>
-        <element choice="1" label="Are you filling this questionnaire out for someone else?" mandatory="true" max_length="40" name="filling_for_someone" type="choice">
+        <element choice="3" default="No" label="Are you filling this questionnaire out for someone else?" mandatory="true" max_length="40" name="filling_for_someone" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
@@ -73,7 +73,7 @@
             </choice>
         </element>
         <element label="Please Specify" max_length="500" name="hear_please_specify" type="string"/>
-        <element choice="3" label="Are you the legal guardian of this person?" mandatory="true" max_length="100" name="legal_guardian" type="choice">
+        <element choice="3" default="No" label="Are you the legal guardian of this person?" max_length="100" name="legal_guardian" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
@@ -105,22 +105,22 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element label="What is your relationship to this person?" mandatory="true" max_length="200" name="relationship" type="string"/>
-        <element choice="3" default="No" label="Biological relatives ever had genetic testing for an inherited cancer syndrome?" max_length="40" name="relatives_had_genetic_testing" type="choice">
+        <element label="What is your relationship to this person?" max_length="200" name="relationship" type="string"/>
+        <element choice="3" default="No" label="Have your relatives been genetically tested for inherited cancer syndromes?" max_length="40" name="relatives_had_genetic_testing" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element choice="3" default="No" label="Biological relatives test positive for one of those genes/syndrome?" max_length="40" name="relatives_test_positive" type="choice">
+        <element choice="3" default="No" label="Did any of your biological relatives test positive for those genes/syndromes?" max_length="40" name="relatives_test_positive" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element choice="1" label="Which of the following genes or syndromes do you believe you have had testing?" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
+        <element choice="1" label="For which of the following genes or syndromes do you believe you have had testin" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>
                 <element inactive_on_update="false" label="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)" value="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)"/>
@@ -129,7 +129,7 @@
                 <element inactive_on_update="false" label="TP53 (Li-Fraumeni syndrome)" value="TP53 (Li-Fraumeni syndrome)"/>
             </choice>
         </element>
-        <element choice="3" label="For which of the following genes or syndromes did you test positive?" max_length="40" name="tested_positive" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
+        <element choice="3" default="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" label="For which of the following genes or syndromes did you test positive?" max_length="40" name="tested_positive" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>
                 <element inactive_on_update="false" label="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)" value="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)"/>
@@ -138,7 +138,7 @@
                 <element inactive_on_update="false" label="TP53 (Li-Fraumeni syndrome)" value="TP53 (Li-Fraumeni syndrome)"/>
             </choice>
         </element>
-        <element choice="1" label="Did you test positive for one of those genes/syndromes?" max_length="40" name="test_positive" type="choice">
+        <element choice="3" default="No" label="Did you test positive for one of those genes/syndromes?" max_length="40" name="test_positive" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>

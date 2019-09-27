@@ -485,7 +485,14 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="B20.Are you currently taking or have you taken any prescription medication ?" max_length="40" name="taking_any_prescription_medication" type="choice">
+        <element choice="1" label="B20b. Have you taken any prescription medications for more than 6 months?" max_length="40" name="take_more_than_6_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="B20a. Are you currently taking or have you taken any prescription medication ?" max_length="40" name="taking_any_prescription_medication" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>

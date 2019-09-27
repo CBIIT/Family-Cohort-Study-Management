@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="take_per_day" table="x_naci_family_coho_individual_information_questionnaire_prescription_medications" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>take_per_day</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pills or capsules</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_prescription_medications</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:00:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1bd4605bdb8c8050b86770c08c9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:00:39</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Pills or capsules</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>take_per_day</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Teaspoons</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_prescription_medications</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:00:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0115641bdb8c8050b86770c08c9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:00:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Teaspoons</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>take_per_day</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_prescription_medications</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:01:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7b15605bdb8c8050b86770c08c961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:01:06</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>take_per_day</element>
+            <name>x_naci_family_coho_individual_information_questionnaire_prescription_medications</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:00:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>9015641bdb8c8050b86770c08c9619a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>take_per_day</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_prescription_medications_take_per_day</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:00:39</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

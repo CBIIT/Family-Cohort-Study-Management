@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="relatives_had_genetic_testing" label="Biological relatives ever had genetic testing for an inherited cancer syndrome?" language="en" table="x_naci_family_coho_mock_up_intake">
+    <sys_documentation element="relatives_had_genetic_testing" label="Have your relatives been genetically tested for inherited cancer syndromes?" language="en" table="x_naci_family_coho_mock_up_intake">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>relatives_had_genetic_testing</element>
             <help/>
             <hint/>
-            <label>Biological relatives ever had genetic testing for an inherited cancer syndrome?</label>
+            <label>Have your relatives been genetically tested for inherited cancer syndromes?</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <plural>Biological relatives ever had genetic testing for an inherited cancer syndrome?s</plural>
+            <plural>Have your relatives been genetically tested for inherited cancer syndromes?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 21:32:15</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>42540929dbf37f4054d8ff621f9619f6</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>Biological relatives ever had genetic testing for an inherited cancer syndrome?</sys_name>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Have your relatives been genetically tested for inherited cancer syndromes?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_mock_up_intake_relatives_had_genetic_testing_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 17:59:04</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 21:57:21</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

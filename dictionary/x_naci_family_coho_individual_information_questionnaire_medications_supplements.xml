@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Individual Information Questionnaire Medications Supplements" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_medications_supplements" type="collection">
+        <element label="Dose" max_length="200" name="dose_of_medications_or_supplements" type="string"/>
+        <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
+        <element label="Name of this Medications or Supplements" max_length="200" name="name_of_medications_or_supplements" type="string"/>
+        <element label="Number" max_length="200" name="number_of_months_or_years" type="string"/>
+        <element label="Number" max_length="100" name="number_of_supplements" type="string"/>
+        <element choice="1" label="How many did/do you usually take per week?" max_length="40" name="take_per_week" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pills or capsules" sequence="1" value="Pills or capsules"/>
+                <element inactive_on_update="false" label="Teaspoons" sequence="2" value="Teaspoons"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="how long altogether did you take this product?" max_length="40" name="take_this_product" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Months" sequence="1" value="Months"/>
+                <element inactive_on_update="false" label="Years" sequence="2" value="Years"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Type of Medications or Supplements" max_length="40" name="type_of_medications_or_supplements" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Multivitamin" sequence="1" value="Multivitamin"/>
+                <element inactive_on_update="false" label="Other vitamin" sequence="2" value="Other vitamin"/>
+                <element inactive_on_update="false" label="Folic acid" sequence="3" value="Folic acid"/>
+                <element inactive_on_update="false" label="Calcium" sequence="4" value="Calcium"/>
+                <element inactive_on_update="false" label="Herbal preparations" sequence="5" value="Herbal preparations"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="Other"/>
+            </choice>
+        </element>
+        <element choice="1" label="Used over past 12 months?" max_length="40" name="used_over_past_12_months" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="iiq_form"/>
+        </index>
+    </element>
+</database>

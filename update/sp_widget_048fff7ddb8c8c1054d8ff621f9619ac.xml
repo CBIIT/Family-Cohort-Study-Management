@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$location, $timeout, spModal) {
+        <client_script><![CDATA[function($scope,$location, $timeout, spModal, spUtil) {
   /* widget controller */
   var c = this;
 	var s = $location.search();
+	
+	c.biopsyDisplay = false;
 	
 	window.displayThankYou = function(){
 		
@@ -22,6 +24,85 @@
 		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
 	}, 0);
 	
+	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
+		console.log(e.targetScope);
+		if(e.targetScope.formModel.view == "SectionB"){
+			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
+				console.log("value Changed");
+				console.log(obj);
+				if(obj & obj.newValue == 'NO'){
+					c.biopsyDisplay = true;
+				}
+			});
+		}
+	});
+	
+	/*
+	var myVar = setInterval(myTimer, 1000);
+	
+	function myTimer() {
+		var d = document.getElementById('have_biopsy');
+		
+		if(d){
+			console.log("name of proband created!");
+			
+			myStopFunction();
+		}
+	}
+
+	function myStopFunction() {
+		clearInterval(myVar);
+	}
+	
+	
+	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
+		console.log("Form genereated!!!");
+		console.log(e);
+		if(e.targetScope.formModel.view == "SectionB"){
+			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
+				console.log("value Changed");
+				console.log(ev);
+				console.log(obj);
+				console.log("1");
+			});
+		}
+	});
+	
+	
+	$scope.$on('field.change.have_biopsy', function(e, obj) {
+		console.log("value Changed");
+		console.log(e);
+	});
+	
+	
+	
+	
+	spUtil.get("widget-form", {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "Introduction"
+	}).then(function(response) {
+			response.data.f.client_script.onLoad = function(){
+				console.log('please do something.');
+			};
+			c.testWidget = response;
+		console.log(response);
+		console.log('asdfasdfasdf');
+	}).then(function(){
+		
+		$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
+			console.log("Form genereated!!!");
+			console.log(e);
+			if(e.targetScope.formModel.view == "Introduction"){
+				var obj = document.getElementById('name_of_proband');
+				console.log(obj);
+			}
+		});
+		
+		//var obj = document.getElementById('sp_formfield_date_at_diagnosis');
+		//console.log(obj);
+	});
+	*/
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -64,7 +145,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>85</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -72,42 +153,23 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-25 19:00:23</sys_updated_on>
-        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
+        <sys_updated_on>2019-09-27 22:39:44</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
 	<uib-tabset>
     <uib-tab index="0" heading="Introduction">
       <div style="padding: 10px;">
+        <h3 style="text-align:center;">
+           NATIONAL CANCER INSTITUTE
+        <br>
+					LI-FRAUMENI SYNDROME STUDY 
+				<br>
+          INDIVIDUAL INFORMATION QUESTIONNAIRE 
+        </h3>
         <p>
-          Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
-        </p>
+        	We appreciate your willingness to participate in the Li-Fraumeni Syndrome Study. As part of this project, we would like to gather some information about your medical history. We will ask you to provide some specific information about aspects of your health that might relate to your own risk of cancer, as well as information about screening tests and procedures you may have had. If you are younger than 18 years old, please have an adult help you to make sure that your answers are complete.  
+        </p>	
         <p>
-          You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family’s cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
-          </p>
-        <p>
-          Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
-          </p>
-        <ul>
-          <li>
-            Sign a study consent form 
-          </li>
-          <li>
-            Provide information and complete questionnaires about your family history and your personal health history 
-          </li>
-          <li>
-            Grant permission for us to verify their cancer diagnoses 
-          </li>
-          <li>
-            Provide biologic samples (such as a blood sample or saliva sample) 
-          </li>
-          <li>
-            Allow us to contact family members, such as siblings, parents, aunts or uncles, to invite them to participate in the study 
-          </li>
-        </ul>
-        <p>
-          Please note that cancer treatment is not being offered as part of this protocol. 
-        </p>
-        <p>
-          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
+          Completing the questions that follow takes about 45 minutes. Completing this questionnaire is voluntary. Your answers to these questions will help in our research effort. Since answering these questions might involve thinking about how Li-Fraumeni Syndrome has affected yourself and your family, it is possible that it might cause you to feel sad. You will have an opportunity to discuss these feelings with our clinic staff at the time of your visit. If you need to contact us, please call 1-800-518-8474.  
         </p>
         <!--
 					<sp-widget widget="c.data.widget_0"></sp-widget>

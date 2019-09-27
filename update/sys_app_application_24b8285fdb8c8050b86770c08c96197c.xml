@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Individual Information Questionnaire Med</name>
+        <order>100</order>
+        <roles>x_naci_family_coho.individual_information_questionnaire_medications_supplements_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-09-27 16:16:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>24b8285fdb8c8050b86770c08c96197c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Individual Information Questionnaire Med</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_app_application_24b8285fdb8c8050b86770c08c96197c</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-09-27 16:16:31</sys_updated_on>
+        <title>Individual Information Questionnaire Med</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

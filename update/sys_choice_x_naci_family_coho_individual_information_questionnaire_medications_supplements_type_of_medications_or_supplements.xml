@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type_of_medications_or_supplements" table="x_naci_family_coho_individual_information_questionnaire_medications_supplements" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Multivitamin</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:39:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3cedec17dbcc8050b86770c08c96192d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:39:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Multivitamin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other vitamin</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:39:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1fedec17dbcc8050b86770c08c961935</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:39:34</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other vitamin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Folic acid</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:40:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d30ee057dbcc8050b86770c08c96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:40:04</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Folic acid</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Calcium</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>4</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:40:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1f1e2057dbcc8050b86770c08c96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:40:20</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Calcium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Herbal preparations</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>5</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:39:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7bcd6c17dbcc8050b86770c08c9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:39:09</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Herbal preparations</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type_of_medications_or_supplements</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sequence>6</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:40:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>143e6457dbcc8050b86770c08c961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:40:45</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type_of_medications_or_supplements</element>
+            <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 16:39:09</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>ccedec17dbcc8050b86770c08c96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>type_of_medications_or_supplements</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_medications_supplements_type_of_medications_or_supplements</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 16:39:09</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

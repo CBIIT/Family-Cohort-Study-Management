@@ -4,55 +4,41 @@
             <element>have_biopsy</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:58:33</sys_created_on>
-            <sys_id>329abaa2dbc4805054d8ff621f961957</sys_id>
+            <sys_created_on>2019-09-27 18:41:45</sys_created_on>
+            <sys_id>8cf98dd7db40c050b86770c08c9619c7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="941af262dbc4805054d8ff621f9619b8">501af262dbc4805054d8ff621f9619bc</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:58:33</sys_updated_on>
+            <sys_updated_on>2019-09-27 18:41:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>diagnosed_with_any_cancer</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 18:41:45</sys_created_on>
+            <sys_id>14f98dd7db40c050b86770c08c9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="941af262dbc4805054d8ff621f9619b8">501af262dbc4805054d8ff621f9619bc</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 18:41:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>have_any_surgery</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:58:34</sys_created_on>
-            <sys_id>b69abaa2dbc4805054d8ff621f961957</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="941af262dbc4805054d8ff621f9619b8">501af262dbc4805054d8ff621f9619bc</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:58:34</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:58:34</sys_created_on>
-            <sys_id>3e9abaa2dbc4805054d8ff621f961957</sys_id>
+            <sys_created_on>2019-09-27 18:41:45</sys_created_on>
+            <sys_id>98f98dd7db40c050b86770c08c9619c8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="941af262dbc4805054d8ff621f9619b8">501af262dbc4805054d8ff621f9619bc</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:58:34</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>diagnosed_with_any_cancer</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:58:34</sys_created_on>
-            <sys_id>b29abaa2dbc4805054d8ff621f961958</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="941af262dbc4805054d8ff621f9619b8">501af262dbc4805054d8ff621f9619bc</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:58:34</sys_updated_on>
+            <sys_updated_on>2019-09-27 18:41:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

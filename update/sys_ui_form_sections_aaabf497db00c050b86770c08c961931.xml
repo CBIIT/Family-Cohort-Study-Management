@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="aaabf497db00c050b86770c08c961931" sys_domain="global" table="x_naci_family_coho_family_history_question" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>22abf497db00c050b86770c08c961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a07d4adedb4c8c10b86770c08c9619d7</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:23</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>26abf497db00c050b86770c08c96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="a" display_value="a" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a6abf497db00c050b86770c08c96192d</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:23</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>feabf497db00c050b86770c08c96195d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="b" display_value="b" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a6abf497db00c050b86770c08c96192e</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>beabf497db00c050b86770c08c961961</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="c" display_value="c" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a2abf497db00c050b86770c08c96192f</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>baabf497db00c050b86770c08c961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="d" display_value="d" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aeabf497db00c050b86770c08c96192f</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>76abf497db00c050b86770c08c961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961931</sys_ui_form>
+            <sys_ui_section caption="e" display_value="e" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">aaabf497db00c050b86770c08c961930</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_naci_family_coho_family_history_question</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-27 17:39:23</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>aaabf497db00c050b86770c08c961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_family_history_question</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_form_sections_aaabf497db00c050b86770c08c961931</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-27 17:39:23</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

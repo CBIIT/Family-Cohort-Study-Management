@@ -3,25 +3,25 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 16:12:11</sys_created_on>
-            <sys_id>9b1e577edb0cc05054d8ff621f961988</sys_id>
+            <sys_created_on>2019-09-27 18:24:06</sys_created_on>
+            <sys_id>29e54193db40c050b86770c08c9619d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 16:12:11</sys_updated_on>
+            <sys_updated_on>2019-09-27 18:24:06</sys_updated_on>
             <text>TEST</text>
             <type display_value="Text">863e446c0fd30000b12e6903cfe012ce</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>9b1e577edb0cc05054d8ff621f961988</element>
+            <element>29e54193db40c050b86770c08c9619d5</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 16:12:11</sys_created_on>
-            <sys_id>5f1e577edb0cc05054d8ff621f961988</sys_id>
+            <sys_created_on>2019-09-27 18:24:06</sys_created_on>
+            <sys_id>e9e54193db40c050b86770c08c9619d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_question" sys_domain="global" view="090c87eadb040050b86770c08c9619d1">fc84d7bedbc8c05054d8ff621f9619a7</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 16:12:11</sys_updated_on>
+            <sys_updated_on>2019-09-27 18:24:06</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>

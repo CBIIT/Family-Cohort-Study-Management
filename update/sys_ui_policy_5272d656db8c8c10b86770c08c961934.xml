@@ -15,48 +15,68 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-	g_form.setDisplay('proband_last_name', true);
-	g_form.setDisplay('proband_first_name', true);
-	g_form.setDisplay('proband_middle_name', true);
-	g_form.setDisplay('proband_maiden_name', true);
-	g_form.setDisplay('proband_address', true);
-	g_form.setDisplay('proband_city', true);
-	g_form.setDisplay('proband_state', true);
-	g_form.setDisplay('proband_zipcode', true);
-	g_form.setDisplay('proband_home_phone', true);
-	g_form.setDisplay('proband_office_phone', true);
-	g_form.setDisplay('proxy_last_name', false);
-	g_form.setDisplay('proxy_first_name', false);
-	g_form.setDisplay('proxy_middle_name', false);
-	g_form.setDisplay('proxy_maiden_name', false);
-	g_form.setDisplay('proxy_address', false);
-	g_form.setDisplay('proxy_city', false);
-	g_form.setDisplay('proxy_state', false);
-	g_form.setDisplay('proxy_zipcode', false);
-	g_form.setDisplay('proxy_home_phone', false);
-	g_form.setDisplay('proxy_office_phone', false);
+	var fields = {
+		'proband_last_name': true,
+		'proband_first_name': true,
+		'proband_middle_name': true,
+		'proband_maiden_name': true,
+		'proband_address': true,
+		'proband_city': true,
+		'proband_state': true,
+		'proband_zipcode': true,
+		'proband_home_phone': true,
+		'proband_office_phone': true,
+		'proxy_last_name': false,
+		'proxy_first_name': false,
+		'proxy_middle_name': false,
+		'proxy_maiden_name': false,
+		'proxy_address': false,
+		'proxy_city': false,
+		'proxy_state': false,
+		'proxy_zipcode': false,
+		'proxy_home_phone': false,
+		'proxy_office_phone': false,
+	};
+	
+	for (var key in fields) {
+		g_form.setDisplay(key, fields[key]);
+		g_form.setValue(key, null);
+	}
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-	g_form.setDisplay('proband_last_name', false);
-	g_form.setDisplay('proband_first_name', false);
-	g_form.setDisplay('proband_middle_name', false);
-	g_form.setDisplay('proband_maiden_name', false);
-	g_form.setDisplay('proband_address', false);
-	g_form.setDisplay('proband_city', false);
-	g_form.setDisplay('proband_state', false);
-	g_form.setDisplay('proband_zipcode', false);
-	g_form.setDisplay('proband_home_phone', false);
-	g_form.setDisplay('proband_office_phone', false);
-	g_form.setDisplay('proxy_last_name', true);
-	g_form.setDisplay('proxy_first_name', true);
-	g_form.setDisplay('proxy_middle_name', true);
-	g_form.setDisplay('proxy_maiden_name', true);
-	g_form.setDisplay('proxy_address', true);
-	g_form.setDisplay('proxy_city', true);
-	g_form.setDisplay('proxy_state', true);
-	g_form.setDisplay('proxy_zipcode', true);
-	g_form.setDisplay('proxy_home_phone', true);
-	g_form.setDisplay('proxy_office_phone', true);
+	var falseFields = [
+		'proband_last_name',
+		'proband_first_name',
+		'proband_middle_name',
+		'proband_maiden_name',
+		'proband_address',
+		'proband_city',
+		'proband_state',
+		'proband_zipcode',
+		'proband_home_phone',
+		'proband_office_phone',
+	];
+	
+	var trueFields = [
+		'proxy_last_name',
+		'proxy_first_name',
+		'proxy_middle_name',
+		'proxy_maiden_name',
+		'proxy_address',
+		'proxy_city',
+		'proxy_state',
+		'proxy_zipcode',
+		'proxy_home_phone',
+		'proxy_office_phone',
+	];
+	falseFields.forEach(function(field){
+		g_form.setDisplay(field, false);
+		g_form.setValue(field, null);
+	});
+	trueFields.forEach(function(field){
+		g_form.setDisplay(field, true);
+		g_form.setValue(field, null);
+	});
 }]]></script_true>
         <set_values/>
         <short_description>Determine when to show Proband information or Proxy information</short_description>
@@ -66,7 +86,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5272d656db8c8c10b86770c08c961934</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Determine when to show Proband information or Proxy information</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -75,7 +95,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_5272d656db8c8c10b86770c08c961934</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-24 21:32:35</sys_updated_on>
+        <sys_updated_on>2019-09-27 19:20:57</sys_updated_on>
         <table>x_naci_family_coho_family_history_question</table>
         <ui_type>10</ui_type>
         <view/>

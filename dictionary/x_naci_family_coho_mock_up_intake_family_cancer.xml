@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Mock Up Intake Family Cancer" max_length="40" name="x_naci_family_coho_mock_up_intake_family_cancer" type="collection">
-        <element label="Age at Death" max_length="100" name="age_at_death" type="string"/>
-        <element label="Age (in years) at Diagnosis" max_length="100" name="age_at_diagnosis" type="string"/>
+        <element label="How old was this person when they died (if deceased)?" max_length="100" name="age_at_death" type="string"/>
+        <element label="How old was this person when they were diagnosed?" max_length="100" name="age_at_diagnosis" type="string"/>
         <element label="Cancer Specify" max_length="100" name="cancer_specify" type="string"/>
         <element choice="1" label="Cancer Type" max_length="40" name="cancer_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Adrenocortical Carcinoma" value="Adrenocortical Carcinoma"/>
+                <element inactive_on_update="false" label="Adrenocortical Carcinoma" sequence="10" value="Adrenocortical Carcinoma"/>
+                <element inactive_on_update="false" label="Brain" sequence="20" value="Brain"/>
+                <element inactive_on_update="false" label="Breast" sequence="30" value="Breast"/>
+                <element inactive_on_update="false" label="Choroid Plexus Carcinoma" sequence="40" value="Choroid Plexus Carcinoma"/>
+                <element inactive_on_update="false" label="Colon" sequence="50" value="Colon"/>
+                <element inactive_on_update="false" label="Leukemia" sequence="60" value="Leukemia"/>
+                <element inactive_on_update="false" label="Lung" sequence="70" value="Lung"/>
+                <element inactive_on_update="false" label="Lymphoma" sequence="80" value="Lymphoma"/>
+                <element inactive_on_update="false" label="Melanoma" sequence="90" value="Melanoma"/>
+                <element inactive_on_update="false" label="Osteosarcoma (bone)" sequence="100" value="Osteosarcoma (bone)"/>
+                <element inactive_on_update="false" label="Ovarian" sequence="110" value="Ovarian"/>
+                <element inactive_on_update="false" label="Prostate" sequence="120" value="Prostate"/>
+                <element inactive_on_update="false" label="Sarcoma" sequence="130" value="Sarcoma"/>
+                <element inactive_on_update="false" label="Stomach" sequence="140" value="Stomach"/>
+                <element inactive_on_update="false" label="Uterine/Endometrial" sequence="150" value="Uterine/Endometrial"/>
+                <element inactive_on_update="false" label="UNKNOWN" sequence="160" value="UNKNOWN"/>
+                <element inactive_on_update="false" label="Other" sequence="170" value="Other"/>
             </choice>
         </element>
-        <element label="Current Age (if living)" max_length="100" name="current_age" type="string"/>
-        <element label="Name" max_length="100" name="name" type="string"/>
-        <element choice="1" label="Relationship" max_length="500" name="relationship" type="choice">
+        <element label="How old is this person now (if living)?" max_length="100" name="current_age" type="string"/>
+        <element label="What is the person's name?" max_length="100" name="name" type="string"/>
+        <element choice="1" label="How is this person related to you?" max_length="500" name="relationship" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Aunt (dad's sister)" value="Aunt (dad's sister)"/>
-                <element inactive_on_update="false" label="Aunt (mom's sister)" value="Aunt (mom's sister)"/>
+                <element inactive_on_update="false" label="Aunt (mom's sister)" sequence="10" value="Aunt (mom's sister)"/>
+                <element inactive_on_update="false" label="Aunt (dad's sister)" sequence="20" value="Aunt (dad's sister)"/>
+                <element inactive_on_update="false" label="Brother (full)" sequence="30" value="Brother (full)"/>
+                <element inactive_on_update="false" label="Brother (half – mom)" sequence="40" value="Brother (half – mom)"/>
+                <element inactive_on_update="false" label="Brother (half – dad)" sequence="50" value="Brother (half – dad)"/>
+                <element inactive_on_update="false" label="Cousin (mom’s side)" sequence="60" value="Cousin (mom’s side)"/>
+                <element inactive_on_update="false" label="Cousin (dad’s side)" sequence="70" value="Cousin (dad’s side)"/>
+                <element inactive_on_update="false" label="Daughter" sequence="80" value="Daughter"/>
+                <element inactive_on_update="false" label="Father" sequence="90" value="Father"/>
+                <element inactive_on_update="false" label="Granddaughter" sequence="100" value="Granddaughter"/>
+                <element inactive_on_update="false" label="Grandfather (mom’s dad)" sequence="110" value="Grandfather (mom’s dad)"/>
+                <element inactive_on_update="false" label="Grandfather (dad’s dad)" sequence="120" value="Grandfather (dad’s dad)"/>
+                <element inactive_on_update="false" label="Grandmother (mom’s mom)" sequence="130" value="Grandmother (mom’s mom)"/>
+                <element inactive_on_update="false" label="Grandmother (dad’s mom)" sequence="140" value="Grandmother (dad’s mom)"/>
+                <element inactive_on_update="false" label="Grandson" sequence="150" value="Grandson"/>
+                <element inactive_on_update="false" label="Mother" sequence="160" value="Mother"/>
+                <element inactive_on_update="false" label="Sister (full)" sequence="170" value="Sister (full)"/>
+                <element inactive_on_update="false" label="Sister (half – mom)" sequence="180" value="Sister (half – mom)"/>
+                <element inactive_on_update="false" label="Sister (half – dad)" sequence="190" value="Sister (half – dad)"/>
+                <element inactive_on_update="false" label="Son" sequence="200" value="Son"/>
+                <element inactive_on_update="false" label="Uncle (mom's brother)" sequence="210" value="Uncle (mom's brother)"/>
+                <element inactive_on_update="false" label="Uncle (dad’s brother)" sequence="220" value="Uncle (dad’s brother)"/>
+                <element inactive_on_update="false" label="Other" sequence="230" value="Other"/>
             </choice>
         </element>
         <element label="Relationship Specify" max_length="100" name="relationship_specify" type="string"/>
