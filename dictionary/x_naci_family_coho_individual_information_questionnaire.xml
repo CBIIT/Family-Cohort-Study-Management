@@ -14,6 +14,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Comment" max_length="8000" name="comment" type="html"/>
         <element choice="1" label="Is this condition (Coronary Artery Disease) currently being treated ?" max_length="40" name="coronary_artery_disease_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -21,6 +22,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Please indicate the date you completed this questionnaire" max_length="40" name="date_completed_questionnaire" type="glide_date"/>
         <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
         <element choice="1" label="Is this condition (diabetes) currently being treated ?" max_length="40" name="diabetes_treated" type="choice">
             <choice>
@@ -127,6 +129,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Enrollment" max_length="32" name="enrollment" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="Family Study ID" max_length="20" name="fsid" type="string"/>
         <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
             <choice>
@@ -195,7 +198,22 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element choice="1" label="IIQ Status" max_length="40" name="iiq_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Waiting for IIQ -- First Follow Up" sequence="1" value="Waiting for IIQ -- First Follow Up"/>
+                <element inactive_on_update="false" label="Waiting for IIQ -- Second Follow Up" sequence="2" value="Waiting for IIQ -- Second Follow Up"/>
+                <element inactive_on_update="false" label="Waiting for IIQ -- No Response" sequence="3" value="Waiting for IIQ -- No Response"/>
+                <element inactive_on_update="false" label="IIQ Submitted" sequence="4" value="IIQ Submitted"/>
+            </choice>
+        </element>
         <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
+        <element choice="1" label="Individual Type" max_length="40" name="individual_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Proband" sequence="1" value="Proband"/>
+                <element inactive_on_update="false" label="Family Member" sequence="2" value="Family Member"/>
+            </choice>
+        </element>
+        <element label="Internal Comment" max_length="8000" name="internal_comment" type="html"/>
         <element choice="1" label="A6. Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DON'T KNOW" value="DON'T KNOW"/>
@@ -203,6 +221,7 @@
                 <element inactive_on_update="false" label="YES" value="YES"/>
             </choice>
         </element>
+        <element label="Last Update" max_length="100" name="last_update" type="string"/>
         <element choice="1" label="A15. What is your current marital status?" max_length="40" name="marital_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Single, not married" sequence="1" value="Single, not married"/>
@@ -519,5 +538,8 @@
             </choice>
         </element>
         <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
+        <index name="index">
+            <element name="enrollment"/>
+        </index>
     </element>
 </database>

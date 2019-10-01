@@ -6,8 +6,7 @@
   var c = this;
 	var s = $location.search();
 //	spModal.open(c.data.formOptions)
-	
-	
+	window.show_cancer = null;
 	window.displayThankYou = function(){
 		
 		var obj = document.getElementById('thank_you');
@@ -42,7 +41,38 @@
 		$location.search(s).replace();
 	}
 	
-
+	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
+		var g_form = e.targetScope.getGlideForm();	
+			if(e.targetScope.formModel.view == "LFS3"){
+				if(g_form.getValue('diagnosed_with_cancer') == 'Yes'){
+					window.setShowCancer(true);
+				}else{
+					window.setShowCancer(false);
+				}
+			
+				e.targetScope.$on('field.change.diagnosed_with_cancer', function(ev, obj) {
+					if(obj.newValue == 'Yes'){
+						window.setShowCancer(true);
+					}else{
+						window.setShowCancer(false);
+					}
+				});
+			}
+		if (e.targetScope.formModel.view == "LFS4"){
+				if(g_form.getValue('biological_relatives_diagnosed') == 'Yes'){
+					window.setShowFamilyCancer(true);
+				}else{
+					window.setShowFamilyCancer(false);
+				}
+				e.targetScope.$on('field.change.biological_relatives_diagnosed', function(ev, obj) {
+					if(obj.newValue == 'Yes'){
+						window.setShowFamilyCancer(true);
+					}else{
+						window.setShowFamilyCancer(false);
+					}
+				});
+		}
+	});
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>div legend{
@@ -93,33 +123,39 @@ fieldset label{
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
 	// data.form = $sp.getForm("x_naci_family_coho_mock_up_intake","-1");
+	var str = gs.action.getGlideURI();
+	var sys_id = str.get('sys_id');
+	data.id = sys_id;
+	if(sys_id == null){
+		sys_id = "-1";
+	}
 	data.widget_1 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS1"
 	});
 	data.widget_2 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS2"
 	});
 	data.widget_3 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS3"
 	});
 	data.widget_4 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS4"
 	});
 	data.widget_5 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS5"
 	});
 	data.widget_6 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS6"
 	});
@@ -142,7 +178,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>223</sys_mod_count>
+        <sys_mod_count>262</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -150,7 +186,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 21:42:08</sys_updated_on>
+        <sys_updated_on>2019-10-01 21:10:52</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
   <uib-tabset>
     <uib-tab index="0" heading="Study Introduction">
@@ -227,7 +263,7 @@ fieldset label{
       </div>
     </uib-tab>
   </uib-tabset>
-  
+  <input type="hidden" id="sys_id"/>
 </div>]]></template>
     </sp_widget>
 </record_update>

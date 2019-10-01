@@ -7,6 +7,8 @@
 	var s = $location.search();
 	
 	c.biopsyDisplay = false;
+	c.cancerDisplay = false;
+	c.showWidget = false;
 	
 	window.displayThankYou = function(){
 		
@@ -16,6 +18,7 @@
 		}
 	}
 	
+	/*
 	setTimeout(function(){
 		var button_bar = $('#submit_div div.panel-footer');
 		button_bar.children().last().remove();
@@ -24,18 +27,87 @@
 		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
 	}, 0);
 	
+	*/
+	
+	c.showView = function(idx){
+		c.show_view_index = idx;
+		if(idx != 1){
+			var view = "SignatureAndSubmit";
+			if(idx == 2){
+				view = "SectionA";
+				c.showWidget = true;
+			}
+			else if(idx == 3){
+				view = "SectionB1";
+				c.showWidget = true;
+			}
+			else if(idx == 4){
+				view = "SectionB2";
+				c.showWidget = true;
+			}
+			else if(idx == 5){
+				view = "SectionB3";
+				c.showWidget = true;
+			}
+			else if(idx == 6){
+				view = "SectionB4";
+				c.showWidget = true;
+			}
+			else if(idx == 7){
+				view = "SignatureAndSubmit";
+				c.showWidget = true;
+			}
+			
+			spUtil.get("widget-form", {
+				"sys_id": c.data.sys_id,
+				"table": "x_naci_family_coho_individual_information_questionnaire",
+				"view": view
+			}).then(function(response) {
+				c.widget = response;
+				
+			})
+		}
+	}
+	
+	spUtil.get("widget-form", {
+				"sys_id": c.data.sys_id,
+				"table": "x_naci_family_coho_individual_information_questionnaire",
+				"view": "SectionB2"
+			}).then(function(response) {
+				c.data.widget = response;
+			})
+	
+	/*
+	
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		console.log(e.targetScope);
-		if(e.targetScope.formModel.view == "SectionB"){
+		if(e.targetScope.formModel.view == "SectionB1"){
 			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
 				console.log("value Changed");
 				console.log(obj);
-				if(obj & obj.newValue == 'NO'){
+				console.log();
+				if(obj.newValue == 'YES'){
 					c.biopsyDisplay = true;
+				}
+				else{
+					c.biopsyDisplay = false;
+				}
+			});
+			e.targetScope.$on('field.change.diagnosed_with_any_cancer', function(ev, obj) {
+				console.log("value Changed");
+				console.log(obj);
+				console.log();
+				if(obj.newValue == 'YES'){
+					c.cancerDisplay = true;
+				}
+				else{
+					c.cancerDisplay = false;
 				}
 			});
 		}
 	});
+	
+	*/
 	
 	/*
 	var myVar = setInterval(myTimer, 1000);
@@ -122,22 +194,41 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	var str = gs.action.getGlideURI();
+	var sys_id = str.get('sys_id');
+	data.sys_id = sys_id;
+	/*
 	data.widget_0 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_individual_information_questionnaire",
 		"view": "Introduction"
 	});
 	data.widget_1 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_individual_information_questionnaire",
 		"view": "SectionA"
 	});
 	data.widget_2 = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
+		"sys_id": sys_id,
 		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionB"
+		"view": "SectionB1"
 	});
-	
+	data.widget_3 = $sp.getWidget('widget-form', {
+		"sys_id": sys_id,
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "SectionB2"
+	});
+	data.widget_4 = $sp.getWidget('widget-form', {
+		"sys_id": sys_id,
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "SectionB3"
+	});
+	data.widget_5 = $sp.getWidget('widget-form', {
+		"sys_id": sys_id,
+		"table": "x_naci_family_coho_individual_information_questionnaire",
+		"view": "SectionB4"
+	});
+	*/
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -145,7 +236,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>85</sys_mod_count>
+        <sys_mod_count>163</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -153,11 +244,21 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 22:39:44</sys_updated_on>
+        <sys_updated_on>2019-10-01 22:19:51</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
-	<uib-tabset>
-    <uib-tab index="0" heading="Introduction">
-      <div style="padding: 10px;">
+  <div class="left-side-menu">
+    <ul>
+      <li ng-click="c.showView(1)">Introduction</li>
+      <li ng-click="c.showView(2)">Demographic Information</li>
+      <li ng-click="c.showView(3)">Biopsy(ies) and Cancer(s)</li>
+      <li ng-click="c.showView(4)">Surgery(ies) and Medical Conditions</li>
+      <li ng-click="c.showView(5)">Medications and Supplements</li>
+      <li ng-click="c.showView(6)">Health Practices</li>
+      <li ng-click="c.showView(7)">Signature and Submit</li>
+    </ul>
+  </div>
+  <div class="right-side-content">
+    	<div style="padding: 10px;" ng-show="c.show_view_index == 1">
         <h3 style="text-align:center;">
            NATIONAL CANCER INSTITUTE
         <br>
@@ -175,19 +276,48 @@
 					<sp-widget widget="c.data.widget_0"></sp-widget>
 				-->
       </div>
+    	<div style="padding: 10px;" id="form_widget_content" ng-show="c.showWidget">
+        <sp-widget widget="c.data.widget"></sp-widget>
+      </div>
+  </div>
+  <!--
+	<uib-tabset>
+    <uib-tab index="0" heading="Introduction">
+      
     </uib-tab>
     <uib-tab index="1" heading="Demographic Information">
       <div style="padding: 10px;">
         <sp-widget widget="c.data.widget_1"></sp-widget>
       </div>
     </uib-tab>
-    <uib-tab index="2" heading="Prior Medical History and Medication Use">
-      <div id="submit_div" style="padding: 10px;">
+    <uib-tab index="2" heading="Biopsy(ies) and Cancer(s)">
+      <div style="padding: 10px;">
         <sp-widget widget="c.data.widget_2"></sp-widget>
-        <widget id="fcsms_iiq_form_biopsy_list"></widget>
+        <div ng-show="c.biopsyDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_biopsy_list"></widget>
+        </div>
+        <div ng-show="c.cancerDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_cancer_list"></widget>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="3" heading="Surgery(ies) and Medical Conditions">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_3"></sp-widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="4" heading="Medications and Supplements">
+      <div style="padding: 10px;">
+        <sp-widget widget="c.data.widget_4"></sp-widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="4" heading="Health Practices">
+      <div id="submit_div" style="padding: 10px;">
+        <sp-widget widget="c.data.widget_5"></sp-widget>
       </div>
     </uib-tab>
   </uib-tabset>
+-->
 </div>]]></template>
     </sp_widget>
 </record_update>

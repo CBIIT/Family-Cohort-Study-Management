@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $location) {
+        <client_script><![CDATA[function($scope, $timeout, $location, spUtil, spModal) {
   /* widget controller */
   var c = this;
 	var s = $location.search();
+
+ window.setShowFamilyCancer = function(show){
+	 $scope.showCancer = show;
+ }
+ 
+	$scope.$on('spModel.fields.rendered', function(e) {
+		if (e.targetScope.formModel.view == 'Cancer')
+			c.g_form = e.targetScope.getGlideForm();	
+		  
+		  $timeout(function() {
+				$('#addDiv .panel-footer').hide()
+			});
+	});
+
+	c.submit = function() {
+		console.log(c.g_form);
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			record[field] = c.g_form.getValue(field);
+		})
+		$scope.server.get({
+			action: 'add',
+			record: record
+		}).then(function() {
+			c.cancelForm();
+		})
+		console.log(record);
+	}
 	
 	c.data.label = "Family Cancer";
 	
@@ -12,12 +41,6 @@
 										{label: "Age (in years) at Diagnosis",name: "age_at_diagnosis"},{label: "Relationship",name: "relationship"},
 										{label:"If Other, Please Specify", name: "relationship_specify"},{label:"Name", name: "name"},
 										{label:"Current Age (If living)", name: "current_age"},{label:"Age at Death", name: "age_at_death"}];
-	c.data.records = [{"cancer_type":"Brain","cancer_specify":"", "age_at_diagnosis": "10", "relationship": "","relationship_specify":"","name":"","current_age":"","age_at_death":""}
-									 ];
-
-	
-	
-	
 	
 	c.openForm = function(){
 		$('#addDiv').modal('show');
@@ -26,10 +49,25 @@
 	c.cancelForm = function(){
 		$('#addDiv').modal('hide');
 	};
-	
-	c.deleteCancer = function(){
-		
+
+	c.deleteCancer = function(id){
+		spModal.confirm("<div style='text-align: center'><center><b>Are you sure you want to delete this record?</b><center></div>").then(function(confirmed){
+			if(confirmed){
+				$scope.server.get({
+					action: 'delete',
+					id: id
+				}).then(function() {
+				});	
+			}
+		})
+
+
 	}
+
+	spUtil.recordWatch($scope, "x_naci_family_coho_mock_up_intake_family_cancer", "", function(name, data) {  
+			spUtil.update($scope);
+	});
+
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -54,6 +92,49 @@
 		"table": "x_naci_family_coho_mock_up_intake_family_cancer",
 		"view": "Cancer"
 	});
+	
+	data.records = [];
+	
+	if (input) {
+		if (input.action == 'add') {
+			var record = input.record;
+			var gr1 = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+			gr1.newRecord();
+			for (var key in record) {
+				gr1.setValue(key, record[key]);
+			}
+			gr1.insert();
+		}
+		else if (input.action == 'delete') {
+			var id = input.id;
+			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+			    gr2.get(id);
+			    gr2.deleteRecord();
+		}  
+		
+	}
+	
+	
+	
+	
+	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+	    gr.orderByDesc('sys_created_on');
+	    gr.query();
+	while(gr.next()){
+		item = {};
+		item.sys_id = gr.sys_id.toString();
+		item.cancer_type = gr.getDisplayValue('cancer_type');
+		item.cancer_specify = gr.getDisplayValue('cancer_specify');
+		item.age_at_diagnosis = gr.getDisplayValue('age_at_diagnosis');
+		item.relationship = gr.getDisplayValue('relationship');
+		item.relationship_specify = gr.getDisplayValue('relationship_specify');
+		item.name = gr.getDisplayValue('name');
+		item.current_age = gr.getDisplayValue('current_age');
+		item.age_at_death = gr.getDisplayValue('age_at_death');
+		data.records.push(item);
+	}
+	
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -61,7 +142,7 @@
         <sys_created_on>2019-09-16 16:43:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d155403fdbb3370054d8ff621f961912</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>FCSMS Intake Form Family Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -69,17 +150,16 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_d155403fdbb3370054d8ff621f961912</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 21:47:12</sys_updated_on>
-        <template><![CDATA[<div id="container">
-
-  
+        <sys_updated_on>2019-10-01 21:41:48</sys_updated_on>
+        <template><![CDATA[
+<div id="family_cancer" ng-show="showCancer">
   <div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
     <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
       <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
-        ADD
+        New Family Cancer Information
       </button>
     </div>
   </div>
@@ -99,7 +179,7 @@
           {{ record[col.name] || 'N/A' }}  
         </td>
         <td>
-          <button class="btn btn-primary" ng-click="c.deleteCancer()" style="padding: 5px 30px;">
+          <button class="btn btn-primary" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
             Delete
           </button>
         </td>
@@ -118,7 +198,10 @@
         <sp-widget widget="c.data.widget_add"></sp-widget>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
-          <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
+          <button type="button" class="table-button btn btn-primary m-r" ng-click="c.submit()">
+            Save
+          </button>
+          <button type="button" class="table-button btn btn-danger" ng-click="c.cancelForm()">
             Cancel
           </button>
         </div>

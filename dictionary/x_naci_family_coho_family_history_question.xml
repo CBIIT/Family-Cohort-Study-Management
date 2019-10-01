@@ -25,6 +25,7 @@
         <element label="State" max_length="50" name="diagnosed_doctor_state" type="string"/>
         <element label="Zipcode" max_length="50" name="diagnosed_doctor_zipcode" type="string"/>
         <element label="When did the physician diagnose this cancer? (Year)" max_length="10" name="diagnose_cancer_year" type="string"/>
+        <element label="Enrollment" max_length="32" name="enrollment" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="First Spouse's Date of Birth (Month/Day/Year)" max_length="20" name="first_spouse_date_of_birth" type="string"/>
         <element label="First Spouse's First Name" max_length="100" name="first_spouse_first_name" type="string"/>
         <element label="First Spouse's Last Name" max_length="100" name="first_spouse_last_name" type="string"/>
@@ -152,5 +153,8 @@
         <element label="Most Recent Spouse's Middle Name" max_length="50" name="spouse_middle_name" type="string"/>
         <element label="Time to Complete Form" max_length="50" name="time_to_complete_form" type="glide_date_time"/>
         <element label="Year moved to U.S.A" max_length="10" name="year_moved_to_usa" type="string"/>
+        <index name="index">
+            <element name="enrollment"/>
+        </index>
     </element>
 </database>

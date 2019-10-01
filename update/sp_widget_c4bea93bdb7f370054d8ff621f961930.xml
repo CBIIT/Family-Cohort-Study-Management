@@ -8,46 +8,15 @@
 	
 	c.data.label = "IIQ List";
 	c.data.columns = [{label:"Name", name: "name"},{label:"Individual Type", name: "type"},
-										{label:"IIQ Status", name: "iiq_status"},{label: "Last Update",name: "last_update"},{label: "Communication",name: "communication"}];
-	
-	c.data.records = [
-		{name:"E Smith",
-		type: "Proband",
-		iiq_status: "IIQ Submitted",
-		last_update: "09/10/2019",
-		communication:"Email"},
-		{name:"F Smith",
-		type: "Family Member",
-		iiq_status: "Waiting for Consent",
-		last_update: "09/10/2019",
-		communication:"Website"},
-		{name:"G Smith",
-		type: "Family Member",
-		iiq_status: "Waiting for IIQ -- First Follow up",
-		last_update: "08/10/2019",
-		communication:"Website"},
-		{name:"G Smith",
-		type: "Family Member",
-		iiq_status: "IIQ Submitted",
-		last_update: "08/10/2019",
-		communication:"Website"}
-	];
-	
-	c.openForm = function(){
-		$('#addIIQDiv').modal('show');
-	}
+										{label:"IIQ Status", name: "iiq_status"},
+										{label: "Last Update",name: "last_update"}];
 	
 	c.reviewIIQ = function(sys_id){
-		
+		s.id = 'fcsms_iiq';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
 	}
 	
-	c.followUpIIQ = function(sys_id){
-		
-	}
-	
-	c.cancelForm = function(){
-		$('#addIIQDiv').modal('hide');
-	}
 	
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -71,14 +40,33 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.records = [];
+	var str = gs.action.getGlideURI();
+	var enrollment_sys_id = str.get('sys_id');
+	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire');
+	gr.addQuery('enrollment',enrollment_sys_id);
+	gr.query();
+	while(gr.next()){
+		var tmp = {};
+		tmp.sys_id = gr.sys_id.toString();
+		tmp.name = gr.name_of_proband.toString();
+		tmp.type = gr.individual_type.toString();
+		tmp.iiq_status = gr.iiq_status.toString();
+		tmp.last_update = gr.last_update.toString();
+		data.records.push(tmp);
+	}
+	
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-17 00:23:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4bea93bdb7f370054d8ff621f961930</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>FCSMS IIQ List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -86,8 +74,8 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_c4bea93bdb7f370054d8ff621f961930</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-17 15:58:19</sys_updated_on>
-        <template><![CDATA[<div id="container">
+        <sys_updated_on>2019-10-01 20:39:23</sys_updated_on>
+        <template><![CDATA[<div class="container" style="width:80%;font-size: 20px;">
 
   
   <div style="display:flex;margin-bottom:5px;height:40px;">
@@ -120,37 +108,18 @@
           <button class="btn btn-primary btn-font" ng-click="c.reviewIIQ(record.sys_id)" style="padding: 5px 30px;">
             View
           </button>
+          <!--
           <button class="btn btn-primary btn-font" ng-click="c.followUpIIQ(record.sys_id)" style="padding: 5px 30px;" ng-show="record['iiq_status'] !== 'Waiting for Consent'">
             Consent
           </button>
           <button class="btn btn-primary btn-font" ng-click="c.followUpIIQ(record.sys_id)" style="padding: 5px 30px;">
             Follow Up
           </button>
+					-->
         </td>
       </tr>
     </tbody>
   </table>
-</div>
-
-<div id="addIIQDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
-  <div class="modal-dialog modal-lg" style="width:600px;">
-    <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
-      <div class="modal-header">
-        <h4  class="modal-title">Add new Entry</h4>
-      </div>      
-      <div class="modal-body" style="padding-bottom:0px;">
-        <sp-widget widget="c.data.widget_add"></sp-widget>
-      </div>
-      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
-        <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
-            Save
-          </button>  
-        <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
-            Cancel
-          </button>
-        </div>
-    </div>
-  </div>
 </div>]]></template>
     </sp_widget>
 </record_update>

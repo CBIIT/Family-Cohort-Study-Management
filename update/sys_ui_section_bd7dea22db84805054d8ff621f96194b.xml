@@ -1,170 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="New Section" section_id="bd7dea22db84805054d8ff621f96194b" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionA">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>hispanic_or_latino</element>
+            <element>religious_group</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>a67dae22db84805054d8ff621f9619c1</sys_id>
+            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
+            <sys_id>536fd898db50c450b86770c08c96191e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>jewish_descent</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>2e7dae22db84805054d8ff621f9619c1</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>religious_group</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>a27dae22db84805054d8ff621f9619c2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>highest_level_of_school</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>2a7dae22db84805054d8ff621f9619c2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>household_income</element>
-            <position>4</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>ae7dae22db84805054d8ff621f9619c2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>worked_more_than_a_year</element>
-            <position>5</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>267dae22db84805054d8ff621f9619c3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
+            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
+            <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>aa7dae22db84805054d8ff621f9619c3</sys_id>
+            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
+            <sys_id>d76fd898db50c450b86770c08c96191e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
+            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>race</element>
-            <position>7</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>227dae22db84805054d8ff621f9619c4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>origin_or_ancestry</element>
-            <position>8</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>a67dae22db84805054d8ff621f9619c4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>religious_group_specify</element>
-            <position>9</position>
+            <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>2e7dae22db84805054d8ff621f9619c4</sys_id>
+            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
+            <sys_id>5f6fd898db50c450b86770c08c96191e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>highest_level_of_school_specify</element>
-            <position>10</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>a27dae22db84805054d8ff621f9619c5</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>income_support_count</element>
-            <position>11</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-25 18:01:12</sys_created_on>
-            <sys_id>2a7dae22db84805054d8ff621f9619c5</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">bd7dea22db84805054d8ff621f96194b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-25 18:01:12</sys_updated_on>
+            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

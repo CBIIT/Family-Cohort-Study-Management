@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Mock Up Intake Family Test" max_length="40" name="x_naci_family_coho_mock_up_intake_family_test" type="collection">
+    <element label="FCSMS Intake Form Family Test" max_length="40" name="x_naci_family_coho_mock_up_intake_family_test" type="collection">
         <element choice="1" label="Genes/ Hereditary Cancer syndromes" max_length="40" name="genes_hereditary_cancer_syndromes" type="choice">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>

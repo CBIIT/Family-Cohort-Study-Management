@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="eligible_status" table="x_naci_family_coho_mock_up_intake" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>eligible_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Waiting for Eligible Review</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-30 22:41:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>878d9114db94c450b86770c08c9619fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-30 22:41:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Waiting for Eligible Review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>eligible_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Eligible</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-30 22:41:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8cad15d0db94c450b86770c08c9619b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-30 22:41:52</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Eligible</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>eligible_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Eligible</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-30 22:42:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b7ad59d0db94c450b86770c08c96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-30 22:42:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Not Eligible</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>eligible_status</element>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-30 22:41:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>5f9d9114db94c450b86770c08c9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>eligible_status</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_mock_up_intake_eligible_status</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-09-30 22:41:38</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
