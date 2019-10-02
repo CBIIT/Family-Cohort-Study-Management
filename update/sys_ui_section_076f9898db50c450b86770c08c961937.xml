@@ -1,86 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="New Section" section_id="076f9898db50c450b86770c08c961937" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionA">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>highest_level_of_school</element>
+            <element>household_income</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>ef6fd898db50c450b86770c08c961924</sys_id>
+            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
+            <sys_id>3cc14b70dbd08850b86770c08c96191f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>household_income</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>676fd898db50c450b86770c08c961925</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
+            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>worked_more_than_a_year</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>eb6fd898db50c450b86770c08c961925</sys_id>
+            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
+            <sys_id>b0c14b70dbd08850b86770c08c961920</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
+            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>636fd898db50c450b86770c08c961926</sys_id>
+            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
+            <sys_id>38c14b70dbd08850b86770c08c961920</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
+            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>highest_level_of_school_specify</element>
-            <position>4</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>e76fd898db50c450b86770c08c961926</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>income_support_count</element>
-            <position>5</position>
+            <position>3</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:57</sys_created_on>
-            <sys_id>6f6fd898db50c450b86770c08c961926</sys_id>
+            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
+            <sys_id>bcc14b70dbd08850b86770c08c961920</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:57</sys_updated_on>
+            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

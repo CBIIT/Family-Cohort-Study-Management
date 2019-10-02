@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire Cancer" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_cancer" type="collection">
+        <element label="Age" max_length="100" name="age" type="string"/>
         <element choice="1" label="Cancer" max_length="40" name="cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Adrenal gland (adrenocortical carcinoma)" sequence="1" value="Adrenal gland (adrenocortical carcinoma)"/>
@@ -41,9 +42,16 @@
                 <element inactive_on_update="false" label="Other: Uterus (endometrial)" sequence="37" value="Other: Uterus (endometrial)"/>
             </choice>
         </element>
-        <element label="Date or age at diagnosis" max_length="200" name="date_or_age_at_diagnosis" type="string"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <element choice="1" label="Date or age at diagnosis" max_length="200" name="date_or_age_at_diagnosis" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="DATE" sequence="1" value="DATE"/>
+                <element inactive_on_update="false" label="AGE" sequence="2" value="AGE"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
-        <element label="Name and address of the facility where diagnosis was mad" max_length="500" name="name_and_address_diagnosis" type="string"/>
+        <element label="Name and address of the facility where diagnosis was made" max_length="500" name="name_and_address_diagnosis" type="string"/>
         <element label="Name and address of the facility where treatment was received" max_length="500" name="name_and_address_treatment" type="string"/>
         <element choice="1" label="Treatment(s) received" max_length="40" name="treatments_received" type="choice">
             <choice>

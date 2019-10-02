@@ -16,11 +16,9 @@
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
 	g_form.setDisplay('relatives_test_positive', false);
-	g_form.clearValue('relatives_test_positive');
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 	g_form.setDisplay('relatives_test_positive', true);
-	g_form.clearValue('relatives_test_positive');
 }]]></script_true>
         <set_values/>
         <short_description>Control for inherited cancer syndromes?</short_description>
@@ -30,7 +28,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>121a7dd3db44c050b86770c08c9619bf</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Control for inherited cancer syndromes?</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -39,7 +37,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_121a7dd3db44c050b86770c08c9619bf</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 22:18:17</sys_updated_on>
+        <sys_updated_on>2019-10-02 21:36:09</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <ui_type>10</ui_type>
         <view/>

@@ -70,6 +70,30 @@ button:focus {&#13;
     -moz-transition: all 0.3s linear;&#13;
     transition: all 0.3s linear;&#13;
 }&#13;
+&#13;
+.left-side-menu ul{&#13;
+  padding: 0px;&#13;
+  list-style-type: none;&#13;
+  border:1px solid lightgray;&#13;
+  border-radius: 5px;&#13;
+}&#13;
+&#13;
+.left-side-menu ul li{&#13;
+  display:flex;&#13;
+  padding:10px;&#13;
+}&#13;
+&#13;
+.left-side-menu ul li.active{&#13;
+  background: lightgray;&#13;
+  font-weight: bold;&#13;
+}&#13;
+&#13;
+.left-side-menu ul li:hover{&#13;
+  background: lightgray;&#13;
+}&#13;
+.field-label{&#13;
+  /* height: 56px; */&#13;
+}&#13;
 /* Hide arrow */&#13;
 .tooltipClass .tooltip-arrow {&#13;
   display: none;&#13;
@@ -1006,7 +1030,7 @@ md-chips-wrap {&#13;
         <sys_created_on>2019-09-06 14:37:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1158cca0dbf33b4054d8ff621f96193c</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>fcsms css</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -1014,6 +1038,6 @@ md-chips-wrap {&#13;
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_css_1158cca0dbf33b4054d8ff621f96193c</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-30 15:57:30</sys_updated_on>
+        <sys_updated_on>2019-10-02 17:11:26</sys_updated_on>
     </sp_css>
 </record_update>

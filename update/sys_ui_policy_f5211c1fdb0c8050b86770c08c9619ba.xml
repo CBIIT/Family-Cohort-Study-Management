@@ -15,11 +15,9 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-	g_form.setValue('other_religion', null);
 	g_form.setDisplay('other_religion', false);
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-	g_form.setValue('other_religion', null);
 	g_form.setDisplay('other_religion', true);
 }]]></script_true>
         <set_values/>
@@ -30,7 +28,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>f5211c1fdb0c8050b86770c08c9619ba</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Control Religion Field</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -39,7 +37,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_f5211c1fdb0c8050b86770c08c9619ba</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 19:13:01</sys_updated_on>
+        <sys_updated_on>2019-10-02 21:38:00</sys_updated_on>
         <table>x_naci_family_coho_family_history_question</table>
         <ui_type>10</ui_type>
         <view/>

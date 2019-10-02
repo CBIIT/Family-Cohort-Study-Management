@@ -22,6 +22,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Country" max_length="100" name="country" type="string"/>
         <element label="Please indicate the date you completed this questionnaire" max_length="40" name="date_completed_questionnaire" type="glide_date"/>
         <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
         <element choice="1" label="Is this condition (diabetes) currently being treated ?" max_length="40" name="diabetes_treated" type="choice">
@@ -163,7 +164,7 @@
                 <element inactive_on_update="false" label="Masters or doctoral degree" sequence="8" value="Masters or doctoral degree"/>
             </choice>
         </element>
-        <element label="Highest level of school specify" max_length="100" name="highest_level_of_school_specify" type="string"/>
+        <element label="Grade" max_length="100" name="highest_level_of_school_specify" type="string"/>
         <element choice="1" label="Is this condition (High Cholesterol) currently being treated ?" max_length="40" name="high_cholesterol_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -298,7 +299,7 @@
             </choice>
         </element>
         <element label="Please specify this therapy or treatment" max_length="200" name="other_therapy_or_treatment_specify" type="string"/>
-        <element label="A3. What is your place of birth (town/city, state or province, country)?" max_length="200" name="place_of_birth" type="string"/>
+        <element label="What is your place of birth (town/city)?" max_length="200" name="place_of_birth" type="string"/>
         <element choice="1" label="Have you ever used this practice: Acupuncture ?" max_length="40" name="practice_acupuncture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -497,6 +498,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="State or Province" max_length="200" name="state_or_province" type="string"/>
         <element choice="1" label="Is this condition (Stroke) currently being treated ?" max_length="40" name="stroke_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -533,8 +535,8 @@
         </element>
         <element choice="1" label="A12. Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">
             <choice>
-                <element inactive_on_update="false" label="NO" value="NO"/>
-                <element inactive_on_update="false" label="YES" value="YES"/>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
         <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>

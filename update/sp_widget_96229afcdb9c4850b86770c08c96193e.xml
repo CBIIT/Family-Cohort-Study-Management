@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location,$http,spUtil, spModal, $timeout) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	window.setShowAnother = function(showCancer) {
+		$scope.show_another = showCancer;
+	}
+		
+	$scope.$on('spModel.fields.rendered', function(e) {
+		if (e.targetScope.formModel.view == 'Another')
+			c.g_form = e.targetScope.getGlideForm();	
+		
+	});
+	
+	c.data.label = "Participation";
+	c.data.columns = [{label:"Study Name", name: "study_name"},{label:"Relative Involved", name: "relative_involved"},
+										{label: "Study Contact Person",name: "study_contact_person"},{label: "Study Phone Number",name: "study_phone_number"},
+									 {label: "Dates of Participation", name:"dates_of_participation"}];
+	
+	c.openForm = function(){
+		$('#addAnotherDiv').modal('show');
+	}
+	
+	c.cancelForm = function(){
+		$('#addAnotherDiv').modal('hide');
+	};
+	
+	c.saveForm = function(){
+		console.log(c.g_form);
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			record[field] = c.g_form.getValue(field);
+		})
+		$scope.server.get({
+			action: 'add',
+			record: record
+		}).then(function(){
+			 c.cancelForm();
+		});
+	}
+	
+	c.deleteCancer = function(sys_id){
+		spModal.confirm("<div style='text-align: center'><center><b>Are you sure you want to delete this record?</b><center></div>").then(function(confirmed){
+			if(confirmed){
+				$scope.server.get({
+					action: 'delete',
+					id: sys_id
+				})	
+			}
+		})
+	}
+	
+	spUtil.recordWatch($scope, "x_naci_family_coho_intake_participate_another_study", "", function(name, data) {  
+			spUtil.update($scope);
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#addAnotherDiv div .panel-footer{
+  display:none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_participate_another_org</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Participate Another Org</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.widget_add = $sp.getWidget('widget-form', {
+		"sys_id": "-1",
+		"table": "x_naci_family_coho_intake_participate_another_study",
+		"view": "Another"
+	});
+	if(input){
+		if(input.action == 'add'){
+			var record = input.record;
+			var gr1 = new GlideRecord('x_naci_family_coho_intake_participate_another_study');
+			gr1.newRecord();
+			for (var key in record) {
+				gr1.setValue(key, record[key]);
+			}
+			gr1.insert();
+		}
+		else if(input.action == 'delete'){
+			var id = input.id;
+			var gr2 = new GlideRecord('x_naci_family_coho_intake_participate_another_study');
+			gr2.get(id);
+			gr2.deleteRecord();
+		}
+	}
+	
+	var gr = new GlideRecord('x_naci_family_coho_intake_participate_another_study');
+	gr.query();
+	data.records = [];
+	while(gr.next()){
+		var tmp = {};
+		tmp.sys_id = gr.sys_id.toString();
+		tmp.study_name = gr.study_name.toString();
+		tmp.relative_involved = gr.relative_involved.toString();
+		tmp.study_contact_person = gr.study_contact_person.toString();
+		tmp.study_phone_number = gr.study_phone_number.toString();
+		tmp.dates_of_participation = gr.dates_of_participation.toString();
+		data.records.push(tmp);
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-02 15:48:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>96229afcdb9c4850b86770c08c96193e</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>FCSMS Participate Another Org</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_96229afcdb9c4850b86770c08c96193e</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-02 22:51:02</sys_updated_on>
+        <template><![CDATA[<div id="another" ng-show='show_another'>
+
+  
+  <div style="display:flex;margin-bottom:5px;height:40px;">
+    <div class="col-md-6" style="display: flex;">
+      <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
+    </div>
+    <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
+      <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
+        ADD
+      </button>
+    </div>
+  </div>
+  <table class="table table-bordered table-hover">
+    <thead class="bg-primary">
+      <tr>
+        <th ng-repeat="col in c.data.columns"
+            ng-click="sort(col)">
+          {{ col.label }}
+        </th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="record in c.data.records">
+        <td ng-repeat="col in c.data.columns">
+          {{ record[col.name] || 'N/A' }}  
+        </td>
+        <td>
+          <button class="btn btn-primary" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="addAnotherDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
+  <div class="modal-dialog modal-lg" style="width:1400px;">
+    <div class="modal-content" style="min-height:600px; overflow-y:hidden; overflow-x: hidden;">
+      <div class="modal-header">
+        <h4  class="modal-title">Add new Entry</h4>
+      </div>      
+      <div class="modal-body" style="padding-bottom:0px;">
+        <sp-widget widget="c.data.widget_add"></sp-widget>
+      </div>
+      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+        <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
+            Save
+          </button>  
+        <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
+            Cancel
+          </button>
+        </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

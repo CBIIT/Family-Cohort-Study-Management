@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Intake participate another study" max_length="40" name="x_naci_family_coho_intake_participate_another_study" type="collection">
+        <element label="Dates of Participation" max_length="50" name="dates_of_participation" type="glide_date"/>
+        <element label="Relative Involved" max_length="200" name="relative_involved" type="string"/>
+        <element label="Study Contact Person" max_length="200" name="study_contact_person" type="string"/>
+        <element label="Study Name" max_length="200" name="study_name" type="string"/>
+        <element label="Study Phone Number" max_length="50" name="study_phone_number" type="string"/>
+    </element>
+</database>

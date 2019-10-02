@@ -8,7 +8,12 @@
 	
 	c.biopsyDisplay = false;
 	c.cancerDisplay = false;
+	c.surgeryDisplay = false;
+	c.medicationDisplay = false;
 	c.showWidget = false;
+	
+	c.show_view_index = 1;
+	
 	
 	window.displayThankYou = function(){
 		
@@ -32,60 +37,91 @@
 	c.showView = function(idx){
 		c.show_view_index = idx;
 		if(idx != 1){
-			var view = "SignatureAndSubmit";
 			if(idx == 2){
-				view = "SectionA";
-				c.showWidget = true;
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionA'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_2 = response;
+				})
 			}
 			else if(idx == 3){
-				view = "SectionB1";
-				c.showWidget = true;
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB1'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_3 = response;
+				})
 			}
 			else if(idx == 4){
-				view = "SectionB2";
-				c.showWidget = true;
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB2'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_4 = response;
+				})
 			}
 			else if(idx == 5){
-				view = "SectionB3";
-				c.showWidget = true;
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB3'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_5 = response;
+				})
 			}
 			else if(idx == 6){
-				view = "SectionB4";
-				c.showWidget = true;
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB4'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_6 = response;
+				})
 			}
-			else if(idx == 7){
-				view = "SignatureAndSubmit";
-				c.showWidget = true;
+			else{
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SignatureAndSubmit'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_7 = response;
+				})
 			}
 			
-			spUtil.get("widget-form", {
-				"sys_id": c.data.sys_id,
-				"table": "x_naci_family_coho_individual_information_questionnaire",
-				"view": view
-			}).then(function(response) {
-				c.widget = response;
-				
-			})
+			
 		}
 	}
 	
-	spUtil.get("widget-form", {
-				"sys_id": c.data.sys_id,
-				"table": "x_naci_family_coho_individual_information_questionnaire",
-				"view": "SectionB2"
-			}).then(function(response) {
-				c.data.widget = response;
-			})
-	
-	/*
-	
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
-		console.log(e.targetScope);
+		var g_form = null;
 		if(e.targetScope.formModel.view == "SectionB1"){
+			g_form = e.targetScope.getGlideForm();	
+			var have_biopsy = g_form.getValue('have_biopsy');
+			if(have_biopsy == 'YES'){
+				c.biopsyDisplay = true;
+			}
+			else{
+				c.biopsyDisplay = false;
+			}
+			var diagnosed_with_any_cancer = g_form.getValue('diagnosed_with_any_cancer');
+			if(diagnosed_with_any_cancer == 'YES'){
+				c.cancerDisplay = true;
+			}
+			else{
+				c.cancerDisplay = false;
+			}
+			
 			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
-				console.log("value Changed");
-				console.log(obj);
-				console.log();
 				if(obj.newValue == 'YES'){
 					c.biopsyDisplay = true;
 				}
@@ -94,9 +130,6 @@
 				}
 			});
 			e.targetScope.$on('field.change.diagnosed_with_any_cancer', function(ev, obj) {
-				console.log("value Changed");
-				console.log(obj);
-				console.log();
 				if(obj.newValue == 'YES'){
 					c.cancerDisplay = true;
 				}
@@ -105,76 +138,60 @@
 				}
 			});
 		}
-	});
-	
-	*/
-	
-	/*
-	var myVar = setInterval(myTimer, 1000);
-	
-	function myTimer() {
-		var d = document.getElementById('have_biopsy');
-		
-		if(d){
-			console.log("name of proband created!");
+		else if(e.targetScope.formModel.view == "SectionB2"){
 			
-			myStopFunction();
-		}
-	}
-
-	function myStopFunction() {
-		clearInterval(myVar);
-	}
-	
-	
-	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
-		console.log("Form genereated!!!");
-		console.log(e);
-		if(e.targetScope.formModel.view == "SectionB"){
-			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
-				console.log("value Changed");
-				console.log(ev);
-				console.log(obj);
-				console.log("1");
+			g_form = e.targetScope.getGlideForm();	
+			var have_any_surgery = g_form.getValue('have_any_surgery');
+			if(have_any_surgery == 'YES'){
+				c.surgeryDisplay = true;
+			}
+			else{
+				c.surgeryDisplay = false;
+			}
+			
+			e.targetScope.$on('field.change.have_any_surgery', function(ev, obj) {
+				if(obj.newValue == 'YES'){
+					c.surgeryDisplay = true;
+				}
+				else{
+					c.surgeryDisplay = false;
+				}
 			});
 		}
-	});
-	
-	
-	$scope.$on('field.change.have_biopsy', function(e, obj) {
-		console.log("value Changed");
-		console.log(e);
-	});
-	
-	
-	
-	
-	spUtil.get("widget-form", {
-		"sys_id": "-1",
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "Introduction"
-	}).then(function(response) {
-			response.data.f.client_script.onLoad = function(){
-				console.log('please do something.');
-			};
-			c.testWidget = response;
-		console.log(response);
-		console.log('asdfasdfasdf');
-	}).then(function(){
-		
-		$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
-			console.log("Form genereated!!!");
-			console.log(e);
-			if(e.targetScope.formModel.view == "Introduction"){
-				var obj = document.getElementById('name_of_proband');
-				console.log(obj);
+		else if(e.targetScope.formModel.view == "SectionB3"){
+			
+			g_form = e.targetScope.getGlideForm();	
+			var take_more_than_6_months = g_form.getValue('take_more_than_6_months');
+			var taking_any_prescription_medication = g_form.getValue('taking_any_prescription_medication');
+			if(take_more_than_6_months == 'YES' || taking_any_prescription_medication == 'YES'){
+				c.medicationDisplay = true;
 			}
-		});
-		
-		//var obj = document.getElementById('sp_formfield_date_at_diagnosis');
-		//console.log(obj);
+			else{
+				c.medicationDisplay = false;
+			}
+			
+			e.targetScope.$on('field.change.take_more_than_6_months', function(ev, obj) {
+				if(obj.newValue == 'YES'){
+					c.medicationDisplay = true;
+				}
+				else{
+					c.medicationDisplay = false || c.medicationDisplay;
+				}
+			});
+			
+			e.targetScope.$on('field.change.taking_any_prescription_medication', function(ev, obj) {
+				if(obj.newValue == 'YES'){
+					c.medicationDisplay = true;
+				}
+				else{
+					c.medicationDisplay = false || c.medicationDisplay;
+				}
+			});
+		}
+		else if(e.targetScope.formModel.view == "SectionB4"){
+			
+		}
 	});
-	*/
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -197,38 +214,6 @@
 	var str = gs.action.getGlideURI();
 	var sys_id = str.get('sys_id');
 	data.sys_id = sys_id;
-	/*
-	data.widget_0 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "Introduction"
-	});
-	data.widget_1 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionA"
-	});
-	data.widget_2 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionB1"
-	});
-	data.widget_3 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionB2"
-	});
-	data.widget_4 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionB3"
-	});
-	data.widget_5 = $sp.getWidget('widget-form', {
-		"sys_id": sys_id,
-		"table": "x_naci_family_coho_individual_information_questionnaire",
-		"view": "SectionB4"
-	});
-	*/
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -236,7 +221,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>163</sys_mod_count>
+        <sys_mod_count>227</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -244,21 +229,21 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-01 22:19:51</sys_updated_on>
-        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
-  <div class="left-side-menu">
+        <sys_updated_on>2019-10-02 22:32:59</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 18px;">
+  <div class="left-side-menu col-md-3">
     <ul>
-      <li ng-click="c.showView(1)">Introduction</li>
-      <li ng-click="c.showView(2)">Demographic Information</li>
-      <li ng-click="c.showView(3)">Biopsy(ies) and Cancer(s)</li>
-      <li ng-click="c.showView(4)">Surgery(ies) and Medical Conditions</li>
-      <li ng-click="c.showView(5)">Medications and Supplements</li>
-      <li ng-click="c.showView(6)">Health Practices</li>
-      <li ng-click="c.showView(7)">Signature and Submit</li>
+      <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)">Introduction</li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2)">Demographic Information</li>
+      <li ng-class="{'active': c.show_view_index == 3}" ng-click="c.showView(3)">Biopsy(ies) & Cancer(s)</li>
+      <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)">Surgery(ies) & Medical Conditions</li>
+      <li ng-class="{'active': c.show_view_index == 5}" ng-click="c.showView(5)">Medications & Supplements</li>
+      <li ng-class="{'active': c.show_view_index == 6}" ng-click="c.showView(6)">Health Practices</li>
+      <li ng-class="{'active': c.show_view_index == 7}" ng-click="c.showView(7)">Signature & Submit</li>
     </ul>
   </div>
-  <div class="right-side-content">
-    	<div style="padding: 10px;" ng-show="c.show_view_index == 1">
+  <div class="right-side-content col-md-9">
+    	<div style="padding: 10px;border: 1px solid lightgray; border-radius: 5px;" ng-show="c.show_view_index == 1">
         <h3 style="text-align:center;">
            NATIONAL CANCER INSTITUTE
         <br>
@@ -276,8 +261,40 @@
 					<sp-widget widget="c.data.widget_0"></sp-widget>
 				-->
       </div>
-    	<div style="padding: 10px;" id="form_widget_content" ng-show="c.showWidget">
-        <sp-widget widget="c.data.widget"></sp-widget>
+    	<div style="" id="form_widget_content" ng-show="c.show_view_index == 2">
+        <sp-widget widget="c.widget_2"></sp-widget>
+      </div>
+    
+			<div style="" id="form_widget_content" ng-show="c.show_view_index == 3">
+        <sp-widget widget="c.widget_3"></sp-widget>
+        <div ng-show="c.biopsyDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_biopsy_list"></widget>
+        </div>
+        <div ng-show="c.cancerDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_cancer_list"></widget>
+        </div>
+      </div>
+    	<div style="" id="form_widget_content" ng-show="c.show_view_index == 4">
+        <sp-widget widget="c.widget_4"></sp-widget>
+        <div ng-show="c.surgeryDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_surgery_list"></widget>
+        </div>
+      </div>
+    	<div style="" id="form_widget_content" ng-show="c.show_view_index == 5">
+        <sp-widget widget="c.widget_5"></sp-widget>
+        <div ng-show="c.medicationDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_medication_list"></widget>
+        </div>
+        <div class="div-inset-list">
+          <widget id="fcsms_iiq_form_medication_supplement_list"></widget>
+        </div>
+      </div>
+    
+    	<div style="" id="form_widget_content" ng-show="c.show_view_index == 6">
+        <sp-widget widget="c.widget_6"></sp-widget>
+      </div>
+    	<div id="submit_div" style="" id="form_widget_content" ng-show="c.show_view_index == 7">
+        <sp-widget widget="c.widget_7"></sp-widget>
       </div>
   </div>
   <!--

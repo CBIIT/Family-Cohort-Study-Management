@@ -2,19 +2,20 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope,$location, $timeout, spModal) {
-  /* widget controller */
-  var c = this;
+	/* widget controller */
+	var c = this;
+	c.forms = {};
 	var s = $location.search();
-//	spModal.open(c.data.formOptions)
+	//	spModal.open(c.data.formOptions)
 	window.show_cancer = null;
 	window.displayThankYou = function(){
-		
+
 		var obj = document.getElementById('thank_you');
 		if(obj.style.display == 'none'){
 			obj.style.display = 'block';
 		}
 	}
-	
+
 	setTimeout(function(){
 		var button_bar = $('#submit_div div.panel-footer');
 		button_bar.children().last().remove();
@@ -22,56 +23,99 @@
 		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
 		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
 	}, 0);
-	
-	$scope.showCancerForm = function(){
-		
-	 spModal.open({backdrop: 'static',
-			"title": "Adding Cancer Record",
-			 size: 'lg',
-			"widget": "widget-form",
-			"widgetInput": {
-				"sys_id": "-1",
-				"table": 'x_naci_family_coho_mock_up_intake_patient_cancer',
-				"view": "Cancer"
-		}});
-	};
-	
+
 	c.goBack = function(){
 		s.id = null;
 		$location.search(s).replace();
 	}
+
+	$scope.saveForm = function(form){
+		
+		var record = getFormValues(form);
+		$scope.server.get({
+			action: 'update',
+			record: record,
+			sys_id: c.data.id
+		}).then(function(){
+			spModal.open({
+				title: "Message",
+				message: "Record has been updated successfully"
+			})
+		});	
+	}
 	
+	
+	function getFormValues(gForm) {
+		var fields = gForm.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			record[field] = gForm.getValue(field);
+		})
+		return record;		
+	}
+
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
-		var g_form = e.targetScope.getGlideForm();	
-			if(e.targetScope.formModel.view == "LFS3"){
-				if(g_form.getValue('diagnosed_with_cancer') == 'Yes'){
+		var g_form = e.targetScope.getGlideForm()
+		var view = e.targetScope.formModel.view;
+		c.forms[view] = g_form;
+		
+		if(view == "LFS3"){
+			if(g_form.getValue('diagnosed_with_cancer') == 'Yes'){
+				window.setShowCancer(true);
+			}else{
+				window.setShowCancer(false);
+			}
+
+			e.targetScope.$on('field.change.diagnosed_with_cancer', function(ev, obj) {
+				if(obj.newValue == 'Yes'){
 					window.setShowCancer(true);
 				}else{
 					window.setShowCancer(false);
 				}
-			
-				e.targetScope.$on('field.change.diagnosed_with_cancer', function(ev, obj) {
-					if(obj.newValue == 'Yes'){
-						window.setShowCancer(true);
-					}else{
-						window.setShowCancer(false);
-					}
-				});
+			});
+		}
+		if (view == "LFS4"){
+			if(g_form.getValue('biological_relatives_diagnosed') == 'Yes'){
+				window.setShowFamilyCancer(true);
+			}else{
+				window.setShowFamilyCancer(false);
 			}
-		if (e.targetScope.formModel.view == "LFS4"){
-				if(g_form.getValue('biological_relatives_diagnosed') == 'Yes'){
+			e.targetScope.$on('field.change.biological_relatives_diagnosed', function(ev, obj) {
+				if(obj.newValue == 'Yes'){
 					window.setShowFamilyCancer(true);
 				}else{
 					window.setShowFamilyCancer(false);
 				}
-				e.targetScope.$on('field.change.biological_relatives_diagnosed', function(ev, obj) {
-					if(obj.newValue == 'Yes'){
-						window.setShowFamilyCancer(true);
-					}else{
-						window.setShowFamilyCancer(false);
-					}
-				});
+			}); 
 		}
+		if (view == "LFS5"){
+			if(g_form.getValue('participated_through_another_institution') == 'Yes'){
+				window.setShowAnother(true);
+			}else{
+				window.setShowAnother(false);
+			}
+			e.targetScope.$on('field.change.participated_through_another_institution', function(ev, obj) {
+				if(obj.newValue == 'Yes'){
+					window.setShowAnother(true);
+				}else{
+					window.setShowAnother(false);
+				}
+			});
+
+			if(g_form.getValue('received_cancer_care') == 'Yes'){
+				window.setShowFollowUp(true);
+			}else{
+				window.setShowFollowUp(false);
+			}
+			e.targetScope.$on('field.change.received_cancer_care', function(ev, obj) {
+				if(obj.newValue == 'Yes'){
+					window.setShowFollowUp(true);
+				}else{
+					window.setShowFollowUp(false);
+				}
+			});			
+		}
+
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -105,6 +149,22 @@ fieldset label{
 }
 .select2-container-multi input{
 	height: 30px;
+}
+
+#widget_1 div .panel-footer{
+  display:none;
+}
+#widget_2 div .panel-footer{
+  display:none;
+}
+#widget_3 div .panel-footer{
+  display:none;
+}
+#widget_4 div .panel-footer{
+  display:none;
+}
+#submit_div div .panel-footer{
+  display:none;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -120,8 +180,8 @@ fieldset label{
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 	// data.form = $sp.getForm("x_naci_family_coho_mock_up_intake","-1");
 	var str = gs.action.getGlideURI();
 	var sys_id = str.get('sys_id');
@@ -129,6 +189,25 @@ fieldset label{
 	if(sys_id == null){
 		sys_id = "-1";
 	}
+
+	if(input){
+		if(input.action == 'update'){
+			var record = input.record;
+			var gr1 = new GlideRecord('x_naci_family_coho_mock_up_intake');
+			gr1.get(input.sys_id);
+			for (var key in record) {
+				var value = record[key];
+				if (key === 'birthday') {
+					value = parseStringToDate(value);
+				}
+				gr1.setValue(key, value);
+			}
+			gr1.updateMultiple();
+		}
+		return true;
+	}
+
+
 	data.widget_1 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
@@ -159,18 +238,16 @@ fieldset label{
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS6"
 	});
-	
-	//jim add this section
-	/*data.formOptions = {
-		"title": "Adding Cancer Record",
-		"widget": "widget-form",
-		"widgetInput": {
-			"sys_id": "-1",
-			"table": 'x_naci_family_coho_mock_up_intake_patient_cancer',
-			"view": "Cancer"
-		}
-	};*/
-		
+
+	function parseStringToDate(str){
+		var monthSymbol = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr':'04', 'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09', 'Oct': '10', 'Nov':'11', 'Dec':'12'};
+		var temp = str.split(" ");
+		var month = monthSymbol[temp[0].trim()];
+		var temmp = temp[1].split(',');
+		var day = temmp[0].trim();
+		var year = temp[2].trim();
+		return new GlideDateTime(year+"-"+month+"-"+day+" 00:00:00");
+	}
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -178,7 +255,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>262</sys_mod_count>
+        <sys_mod_count>363</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -186,7 +263,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-01 21:10:52</sys_updated_on>
+        <sys_updated_on>2019-10-02 23:09:32</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
   <uib-tabset>
     <uib-tab index="0" heading="Study Introduction">
@@ -223,23 +300,37 @@ fieldset label{
         <p>
           If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
         </p>
-        <sp-widget widget="c.data.widget_1"></sp-widget>
+        <div id="widget_1" class="clearfix">
+        	<sp-widget widget="c.data.widget_1"></sp-widget>
+          <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS1)">
+            SAVE
+          </button>
+        </div>
       </div>
     </uib-tab>
     <uib-tab index="1" heading="Personal Information">
-      <div style="padding: 10px;">
+      <div id="widget_2" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_2"></sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS2)">
+            SAVE
+          </button>
       </div>
     </uib-tab>
     <uib-tab index="2" heading="Personal Cancer History">
-      <div style="padding: 10px;">
+      <div id="widget_3" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_3"></sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS3)">
+            SAVE
+         </button> 
         <widget id="fcsms_intake_form_personal_cancer_list"></widget>
       </div>
     </uib-tab>
     <uib-tab index="3" heading="Family Cancer History">
-      <div style="padding: 10px;">
+      <div id="widget_4" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_4"></sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS4)">
+            SAVE
+         </button>   
         <widget id="fcsms_intake_form_family_cancer_list"></widget>
         <!--
 					<widget id="fcsms_intake_form_family_test_list"></widget>
@@ -249,8 +340,13 @@ fieldset label{
       </div>
     </uib-tab>
     <uib-tab index="4" heading="Final Information">
-      <div style="padding: 10px;" id="submit_div">
+      <div style="padding: 10px;" id="submit_div" class="clearfix">
         <sp-widget widget="c.data.widget_5"></sp-widget>
+         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS5)">
+            SAVE
+          </button>
+        <widget id="fcsms_participate_another_org"></widget>
+        <widget id="fcsms_cancer_follow_up"></widget>
       </div>
       
       <div Style="display:none;padding: 10px;" id="thank_you">
