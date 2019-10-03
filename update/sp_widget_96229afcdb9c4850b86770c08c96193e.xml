@@ -4,7 +4,6 @@
         <client_script><![CDATA[function($scope, $location,$http,spUtil, spModal, $timeout) {
   /* widget controller */
   var c = this;
-	var s = $location.search();
 	
 	window.setShowAnother = function(showCancer) {
 		$scope.show_another = showCancer;
@@ -20,9 +19,16 @@
 	c.data.columns = [{label:"Study Name", name: "study_name"},{label:"Relative Involved", name: "relative_involved"},
 										{label: "Study Contact Person",name: "study_contact_person"},{label: "Study Phone Number",name: "study_phone_number"},
 									 {label: "Dates of Participation", name:"dates_of_participation"}];
-	
-	c.openForm = function(){
-		$('#addAnotherDiv').modal('show');
+
+  c.openForm = function(){
+		spUtil.get('widget-form', {
+			"sys_id": "-1",
+			"table": "x_naci_family_coho_intake_participate_another_study",
+			"view": "Another"
+		}).then(function(widget) {
+			c.data.widget_add = widget;
+			$('#addAnotherDiv').modal('show');
+		})
 	}
 	
 	c.cancelForm = function(){
@@ -80,11 +86,6 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-	data.widget_add = $sp.getWidget('widget-form', {
-		"sys_id": "-1",
-		"table": "x_naci_family_coho_intake_participate_another_study",
-		"view": "Another"
-	});
 	if(input){
 		if(input.action == 'add'){
 			var record = input.record;
@@ -123,7 +124,7 @@
         <sys_created_on>2019-10-02 15:48:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>96229afcdb9c4850b86770c08c96193e</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>FCSMS Participate Another Org</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -131,8 +132,8 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_96229afcdb9c4850b86770c08c96193e</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-02 22:51:02</sys_updated_on>
-        <template><![CDATA[<div id="another" ng-show='show_another'>
+        <sys_updated_on>2019-10-03 22:21:21</sys_updated_on>
+        <template><![CDATA[<div id="another" ng-show='show_another' style="padding: 10px 10px; border-style: ridge;">
 
   
   <div style="display:flex;margin-bottom:5px;height:40px;">
@@ -141,7 +142,7 @@
     </div>
     <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
       <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
-        ADD
+        New Participation Information
       </button>
     </div>
   </div>
@@ -172,7 +173,7 @@
 
 <div id="addAnotherDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
   <div class="modal-dialog modal-lg" style="width:1400px;">
-    <div class="modal-content" style="min-height:600px; overflow-y:hidden; overflow-x: hidden;">
+    <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
         <h4  class="modal-title">Add new Entry</h4>
       </div>      

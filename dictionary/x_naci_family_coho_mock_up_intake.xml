@@ -97,6 +97,7 @@
             </choice>
         </element>
         <element label="Please Specify" max_length="500" name="hear_please_specify" type="string"/>
+        <element label="Internal Comments" max_length="5000" name="internal_comments" type="html"/>
         <element choice="3" default="No" label="Are you the legal guardian of this person?" max_length="100" name="legal_guardian" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>

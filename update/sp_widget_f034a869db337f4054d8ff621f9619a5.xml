@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$location, $timeout, spModal) {
+        <client_script><![CDATA[function($scope,$location, $timeout, $uibModal, spUtil, spModal) {
 	/* widget controller */
 	var c = this;
 	c.forms = {};
@@ -30,6 +30,10 @@
 	}
 
 	$scope.saveForm = function(form){
+		var modal = $uibModal.open({
+			template: $('#saving-data-modal')[0].innerHTML,
+			size: 'sm'
+		});
 		
 		var record = getFormValues(form);
 		$scope.server.get({
@@ -37,11 +41,29 @@
 			record: record,
 			sys_id: c.data.id
 		}).then(function(){
+			$('#loading').hide();
+			modal.close();
 			spModal.open({
 				title: "Message",
-				message: "Record has been updated successfully"
+				message: "<center><b>Record has been updated successfully</b><center>",
+				buttons: [{label: 'OK', primary: true}]
 			})
 		});	
+	}
+	
+	$scope.loadTab = function(index) {
+		var widgetName = 'widget_' + index;
+		var view = 'LFS' + index;
+
+		if (!c.data[widgetName]) {
+			spUtil.get('widget-form', {
+				sys_id: c.data.id,
+				table: "x_naci_family_coho_mock_up_intake",
+				view: view
+			}).then(function(widget) {
+				c.data[widgetName] = widget;
+			})
+		}
 	}
 	
 	
@@ -86,7 +108,21 @@
 				}else{
 					window.setShowFamilyCancer(false);
 				}
-			}); 
+			});
+		}
+		if(view == "LFS41"){
+			if(g_form.getValue('relatives_test_positive') == 'Yes'){
+				window.setShowTest(true);
+			}else{
+				window.setShowTest(false);
+			}		
+			e.targetScope.$on('field.change.relatives_test_positive', function(ev, obj) {
+				if(obj.newValue == 'Yes'){
+					window.setShowTest(true);
+				}else{
+					window.setShowTest(false);
+				}
+			});
 		}
 		if (view == "LFS5"){
 			if(g_form.getValue('participated_through_another_institution') == 'Yes'){
@@ -165,6 +201,13 @@ fieldset label{
 }
 #submit_div div .panel-footer{
   display:none;
+}
+#widget_41 .panel-footer {
+  display:none;
+}
+.tab-pane {
+  padding: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -204,15 +247,13 @@ fieldset label{
 			}
 			gr1.updateMultiple();
 		}
-		return true;
 	}
-
-
 	data.widget_1 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS1"
 	});
+	/*
 	data.widget_2 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
@@ -228,6 +269,11 @@ fieldset label{
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS4"
 	});
+	data.widget_41 = $sp.getWidget('widget-form', {
+		"sys_id": sys_id,
+		"table": "x_naci_family_coho_mock_up_intake",
+		"view": "LFS41"
+	});
 	data.widget_5 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_mock_up_intake",
@@ -238,7 +284,7 @@ fieldset label{
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS6"
 	});
-
+*/
 	function parseStringToDate(str){
 		var monthSymbol = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr':'04', 'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09', 'Oct': '10', 'Nov':'11', 'Dec':'12'};
 		var temp = str.split(" ");
@@ -255,7 +301,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>363</sys_mod_count>
+        <sys_mod_count>446</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -263,7 +309,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-02 23:09:32</sys_updated_on>
+        <sys_updated_on>2019-10-03 21:57:05</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
   <uib-tabset>
     <uib-tab index="0" heading="Study Introduction">
@@ -302,53 +348,79 @@ fieldset label{
         </p>
         <div id="widget_1" class="clearfix">
         	<sp-widget widget="c.data.widget_1"></sp-widget>
-          <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS1)">
+          <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS1)" style="width:100px">
             SAVE
           </button>
         </div>
       </div>
     </uib-tab>
-    <uib-tab index="1" heading="Personal Information">
+    <uib-tab index="1" heading="Personal Information" ng-click="loadTab(2)">
       <div id="widget_2" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_2"></sp-widget>
-        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS2)">
+        <sp-widget widget="c.data.widget_2">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS2)" style="width:100px">
             SAVE
           </button>
       </div>
     </uib-tab>
-    <uib-tab index="2" heading="Personal Cancer History">
+    <uib-tab index="2" heading="Personal Cancer History" ng-click="loadTab(3)">
       <div id="widget_3" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_3"></sp-widget>
-        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS3)">
+        <sp-widget widget="c.data.widget_3">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS3)" style="width:100px;">
             SAVE
          </button> 
-        <widget id="fcsms_intake_form_personal_cancer_list"></widget>
+      </div>
+      <div>
+         <widget id="fcsms_intake_form_personal_cancer_list"></widget>
       </div>
     </uib-tab>
-    <uib-tab index="3" heading="Family Cancer History">
+    <uib-tab index="3" heading="Family Cancer History 1" ng-click="loadTab(4)">
       <div id="widget_4" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_4"></sp-widget>
-        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS4)">
+        <sp-widget widget="c.data.widget_4">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS4)" style="width:100px">
             SAVE
          </button>   
-        <widget id="fcsms_intake_form_family_cancer_list"></widget>
-        <!--
-					<widget id="fcsms_intake_form_family_test_list"></widget>
-        
-					<sp-widget widget="c.data.widget_list_4"></sp-widget>
-				-->
+      </div>
+      <div>
+         <widget id="fcsms_intake_form_family_cancer_list"></widget>
       </div>
     </uib-tab>
-    <uib-tab index="4" heading="Final Information">
+    <uib-tab index="5" heading="Family Cancer History 2" ng-click="loadTab(41)">
+    	<div id="widget_41" style="padding: 10px;" class="clearfix">
+        <sp-widget widget="c.data.widget_41">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+				</sp-widget>
+          <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS41)" style="width:100px">
+            SAVE
+         </button>         
+      </div>
+       <div>
+         <widget id="fcsms_intake_test_positive_for_gene"></widget>
+      </div>
+    </uib-tab>
+    <uib-tab index="5" heading="Final Information" ng-click="loadTab(5)">
       <div style="padding: 10px;" id="submit_div" class="clearfix">
-        <sp-widget widget="c.data.widget_5"></sp-widget>
-         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS5)">
+        <sp-widget widget="c.data.widget_5">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS5)" style="width:100px">
             SAVE
           </button>
-        <widget id="fcsms_participate_another_org"></widget>
-        <widget id="fcsms_cancer_follow_up"></widget>
       </div>
-      
+      <div>
+        <widget id="fcsms_participate_another_org"></widget>
+        <widget id="fcsms_cancer_follow_up"></widget>        
+      </div>
       <div Style="display:none;padding: 10px;" id="thank_you">
         <p>
           Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
@@ -360,6 +432,14 @@ fieldset label{
     </uib-tab>
   </uib-tabset>
   <input type="hidden" id="sys_id"/>
+ 
+  
+  <div id="saving-data-modal" style="display: none">
+    <div class="modal-body text-center">
+      <h3>Please Wait</h3>
+      <i class="fa fa-cog fa-spin fa-10x fa-fw" style="font-size: 40px"></i>
+    </div>
+  </div>
 </div>]]></template>
     </sp_widget>
 </record_update>

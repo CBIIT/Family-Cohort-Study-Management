@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="FCSMS Intake Form Gene Test" max_length="40" name="x_naci_family_coho_fcsms_intake_form_gene_test" type="collection">
+        <element choice="1" label="Relationship" max_length="50" name="relationship" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Aunt (mom’s sister)" sequence="10" value="Aunt (mom’s sister)"/>
+            </choice>
+        </element>
+        <element label="Relative Name" max_length="200" name="relative_name" type="string"/>
+    </element>
+</database>

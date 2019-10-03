@@ -1,42 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $location,$http,spUtil, spModal, $timeout) {
+        <client_script><![CDATA[function($scope, $timeout, $location, spUtil, spModal) {
   /* widget controller */
   var c = this;
-	
-	window.setShowFollowUp = function(showFollowup) {
-		$scope.show_followup = showFollowup;
-	}
-		
+
+ window.setShowTest = function(show){
+	 $scope.showTest = show;
+ }
+ 
 	$scope.$on('spModel.fields.rendered', function(e) {
-		if (e.targetScope.formModel.view == 'CancerCare')
+		if (e.targetScope.formModel.view == 'CancerTest')
 			c.g_form = e.targetScope.getGlideForm();	
-		
 	});
-	
-	c.data.label = "Cancer Care or Follow Up";
-	c.data.columns = [{label:"Person Receiving Care or Following up", name: "person_receiving_care_or_following_up"},{label: "Physician Name", name: "physician_name"},
-										{label: "Institution",name: "institution"}];
-	
-	c.openForm = function(){
-		spUtil.get('widget-form', {
-			"sys_id": "-1",
-			"table": "x_naci_family_coho_intake_cancer_care",
-			"view": "CancerCare"
-		}).then(function(widget) {
-			c.data.widget_add = widget;
-			$('#addFollowUpDiv').modal('show');
-		})
-	}
-	
-	c.cancelForm = function(){
-		$('#addFollowUpDiv').modal('hide');
-	};
-	
-	c.saveForm = function(){
+
+	c.submit = function() {
+		console.log(c.g_form);
 		var fields = c.g_form.getFieldNames();
-		console.log(fields);
 		var record = {};
 		fields.forEach(function(field) {
 			record[field] = c.g_form.getValue(field);
@@ -47,26 +27,46 @@
 		}).then(function(){
 			 c.cancelForm();
 		});
+		console.log(record);
 	}
 	
-	c.deleteCancerCare = function(sys_id){
+	c.data.label = "Test Positive for Relatives";
+	
+	c.data.columns = [{label:"Relative Name", name: "relative_name"},{label:"Relationship", name: "relationship"}];
+	
+	c.openForm = function(){
+		spUtil.get('widget-form', {
+			"sys_id": '-1',
+			"table": "x_naci_family_coho_fcsms_intake_form_gene_test",
+			"view": "Gene"
+		}).then(function(widget) {
+			c.data.widget_add = widget;
+			$('#addGeneDiv').modal('show');
+		})
+	}
+	
+	c.cancelForm = function(){
+		$('#addGeneDiv').modal('hide');
+	};
+
+	c.deleteCancer = function(id){
 		spModal.confirm("<div style='text-align: center'><center><b>Are you sure you want to delete this record?</b><center></div>").then(function(confirmed){
 			if(confirmed){
 				$scope.server.get({
 					action: 'delete',
-					id: sys_id
-				})
+					id: id
+				})	
 			}
 		})
 	}
-	
-	spUtil.recordWatch($scope, "x_naci_family_coho_intake_cancer_care", "", function(name, data) {  
+
+	spUtil.recordWatch($scope, "x_naci_family_coho_fcsms_intake_form_gene_test", "", function(name, data) {  
 			spUtil.update($scope);
 	});
-	
+
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>#addFollowUpDiv div .panel-footer{
+        <css>#test_positive .panel-footer {
   display:none;
 }</css>
         <data_table>sp_instance</data_table>
@@ -75,72 +75,73 @@
         <docs/>
         <field_list/>
         <has_preview>false</has_preview>
-        <id>fcsms_cancer_follow_up</id>
+        <id>fcsms_intake_test_positive_for_gene</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>FCSMS Cancer Follow Up</name>
+        <name>FCSMS Intake Test Positive for Gene</name>
         <option_schema/>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-
-	if(input){
-		if(input.action == 'add'){
+	
+	data.records = [];
+	
+if (input) {
+		if (input.action == 'add') {
 			var record = input.record;
-			var gr1 = new GlideRecord('x_naci_family_coho_intake_cancer_care');
+			var gr1 = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
 			gr1.newRecord();
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
 			gr1.insert();
 		}
-		else if(input.action == 'delete'){
+		else if (input.action == 'delete') {
 			var id = input.id;
-			var gr2 = new GlideRecord('x_naci_family_coho_intake_cancer_care');
-			gr2.get(id);
-			gr2.deleteRecord();
-		}
+			var gr2 = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
+			    gr2.get(id);
+			    gr2.deleteRecord();
+		}  
 	}
 	
-	var gr = new GlideRecord('x_naci_family_coho_intake_cancer_care');
-	gr.query();
-	data.records = [];
+	
+	var gr = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
+	    gr.orderByDesc('sys_created_on');
+	    gr.query();
 	while(gr.next()){
-		var tmp = {};
-		tmp.sys_id = gr.sys_id.toString();
-		tmp.person_receiving_care_or_following_up = gr.person_receiving_care_or_following_up.toString();
-		tmp.physician_name = gr.physician_name.toString();
-		tmp.institution = gr.institution.toString();
-		data.records.push(tmp);
+		item = {};
+		item.sys_id = gr.sys_id.toString();
+		item.relative_name = gr.getDisplayValue('relative_name');
+		item.relationship = gr.getDisplayValue('relationship');
+		data.records.push(item);
 	}
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>zhoujim@nih.gov</sys_created_by>
-        <sys_created_on>2019-10-02 17:09:47</sys_created_on>
+        <sys_created_on>2019-10-03 17:16:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>69d4ee70db108850b86770c08c961922</sys_id>
-        <sys_mod_count>35</sys_mod_count>
-        <sys_name>FCSMS Cancer Follow Up</sys_name>
+        <sys_id>5bffa70ddbd48c5054d8ff621f961942</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name>FCSMS Intake Test Positive for Gene</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sp_widget_69d4ee70db108850b86770c08c961922</sys_update_name>
+        <sys_update_name>sp_widget_5bffa70ddbd48c5054d8ff621f961942</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-03 22:21:37</sys_updated_on>
-        <template><![CDATA[<div id="followup" ng-show='show_followup' style="padding: 10px 10px; border-style: ridge;">
-
-  
+        <sys_updated_on>2019-10-03 22:19:39</sys_updated_on>
+        <template><![CDATA[<div id="test_positive" ng-show="showTest" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
     <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
       <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
-        New Cancer Care Information
+        New Family Relative Information
       </button>
     </div>
   </div>
@@ -160,7 +161,7 @@
           {{ record[col.name] || 'N/A' }}  
         </td>
         <td>
-          <button class="btn btn-primary" ng-click="c.deleteCancerCare(record.sys_id)" style="padding: 5px 30px;">
+          <button class="btn btn-primary" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
             Delete
           </button>
         </td>
@@ -169,7 +170,7 @@
   </table>
 </div>
 
-<div id="addFollowUpDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
+<div id="addGeneDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
   <div class="modal-dialog modal-lg" style="width:1400px;">
     <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
@@ -179,15 +180,17 @@
         <sp-widget widget="c.data.widget_add"></sp-widget>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
-        <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
+          <button type="button" class="table-button btn btn-primary m-r" ng-click="c.submit()">
             Save
-          </button>  
-        <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
+          </button>
+          <button type="button" class="table-button btn btn-danger" ng-click="c.cancelForm()">
             Cancel
           </button>
         </div>
     </div>
   </div>
-</div>]]></template>
+</div>
+
+]]></template>
     </sp_widget>
 </record_update>

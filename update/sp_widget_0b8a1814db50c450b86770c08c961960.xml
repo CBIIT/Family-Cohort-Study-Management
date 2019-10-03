@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $location) {
+        <client_script><![CDATA[function($scope, $location, spUtil, spModal) {
   /* widget controller */
   var c = this;
 	var s = $location.search();
@@ -9,7 +9,7 @@
 	c.data.label = "Cancer";
 	
 	c.data.columns = [{label:"Cancer", name: "cancer", width:'20%'},
-										{label:"date_or_age_at_diagnosis", name: "date_or_age_at_diagnosis", width:'20%'},
+										{label:"Date or age at diagnosis", name: "date_or_age_at_diagnosis", width:'20%'},
 										{label: "Name and address of the facility where diagnosis was made",name: "name_and_address_diagnosis", width:'20%'},
 										{label:"Treatment(s) received", name: "treatments_received", width:'20%'},
 										{label: "Name and address of the facility where treatment was received",name: "name_and_address_treatment", width:'20%'}];
@@ -142,7 +142,7 @@
         <sys_created_on>2019-09-30 17:48:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0b8a1814db50c450b86770c08c961960</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>FCSMS IIQ Form Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -150,7 +150,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0b8a1814db50c450b86770c08c961960</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-02 23:10:30</sys_updated_on>
+        <sys_updated_on>2019-10-02 23:14:37</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">

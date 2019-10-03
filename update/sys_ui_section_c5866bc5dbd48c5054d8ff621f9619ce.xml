@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Page 41 - Family Cancer History" section_id="c5866bc5dbd48c5054d8ff621f9619ce" sys_domain="global" table="x_naci_family_coho_mock_up_intake" version="3" view="LFS41">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relatives_had_genetic_testing</element>
+            <position>0</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-03 16:36:17</sys_created_on>
+            <sys_id>60c6efc5dbd48c5054d8ff621f96199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Page 41 - Family Cancer History" display_value="Page 41 - Family Cancer History" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="c1866bc5dbd48c5054d8ff621f961935">c5866bc5dbd48c5054d8ff621f9619ce</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-03 16:36:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relatives_test_positive</element>
+            <position>1</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-03 16:36:17</sys_created_on>
+            <sys_id>e4c6efc5dbd48c5054d8ff621f96199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Page 41 - Family Cancer History" display_value="Page 41 - Family Cancer History" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="c1866bc5dbd48c5054d8ff621f961935">c5866bc5dbd48c5054d8ff621f9619ce</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-03 16:36:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Page 41 - Family Cancer History</caption>
+            <header>false</header>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-03 16:35:13</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>c5866bc5dbd48c5054d8ff621f9619ce</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Page 41 - Family Cancer History</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_c5866bc5dbd48c5054d8ff621f9619ce</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-03 16:36:16</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="LFS41" name="LFS41">c1866bc5dbd48c5054d8ff621f961935</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

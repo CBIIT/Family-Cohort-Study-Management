@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>LFS41</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-03 16:35:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c1866bc5dbd48c5054d8ff621f961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LFS41</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_view_c1866bc5dbd48c5054d8ff621f961935</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-03 16:35:13</sys_updated_on>
+        <title>LFS41</title>
+        <user/>
+    </sys_ui_view>
+</record_update>
