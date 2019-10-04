@@ -1,50 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $timeout) {
+        <client_script><![CDATA[function($scope, $timeout, spUtil) {
   /* widget controller */
   var c = this;
 	c.forms = {};
 	c.sections = [];	
-//	$scope.logForms = function() {
-//		console.log(c.forms);
-//		var familyHistoryForm = c.forms.FHQ3;
-//		var physicianDiagnosis = familyHistoryForm.getValue('cancer_diagnosis_by_physician')
-//		console.log('got value', c.sections);
-//	}
-//	
-//	$scope.validate = function() {
-//		// check national origin (less than 4)
-//		var value = c.forms.FHQ2.getValue('national_origin');
-//		if (value.split(',').length > 4) {
-//			alert('not valid')
-//		}
-//	}
 	
 	$scope.$on('spModel.fields.rendered', function(event) {
 		$timeout(function(){
-//			var g_form = event.targetScope.getGlideForm();
-//			c.sections = g_form.getSections();
-//			console.log(event.targetScope)
-//			var viewName = event.targetScope.formModel.view_title;
-//			var glideForm = event.targetScope.getGlideForm();
-//			c.forms[viewName] = glideForm;
-			
-			renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
-			renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '<br/>', 'h3')
-			//renderAnnotation('.annotation.e1e54193db40c050b86770c08c9619f9', '<br/>', 'h3')
-
-			//renderAnnotation('.annotation.e5e54193db40c050b86770c08c9619f9', 'What is the name and office address of the diagnosed this cancer?', 'h3')
-			//renderAnnotation('.annotation.c6e58193db40c050b86770c08c96196a', 'What is the name and address of the hospital or health care facility where the diagnosis was made?', 'h3')
-
-			//renderAnnotation('.annotation.0579fbb2dbccc05054d8ff621f96198d', 'What is the full name and birthday of your current or most recent spouse?', 'h3')
-			//renderAnnotation('.annotation.e5793fb2dbccc05054d8ff621f961905', 'What is the full name and birthday of your first spouse?', 'h3')
-
+			renderAnnotation('.annotation.aafddc21db1c0c50b86770c08c961915', '','h3', true);
+			//renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
+			//renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '<br/>', 'h3')
 		});
 	 });
+	
+	$scope.loadForm = function(index){
+		var widgetName = 'widget_' + index;
+		var view = 'FHQ' + index;
+		if (!c.data[widgetName] && index != 5) {
+			spUtil.get('widget-form', {
+				sys_id: c.data.id,
+				table: "x_naci_family_coho_family_history_question",
+				view: view
+			}).then(function(widget) {
+				c.data[widgetName] = widget;
+				if(index == 3){
+					$scope.$on('spModel.fields.rendered', function(event) {
+						$timeout(function(){
+							renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3');
+						});
+					});
+					$scope.$on('spModel.fields.rendered', function(event) {
+						$timeout(function(){
+							renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '', 'h3');
+						});
+					});					
+				}
+/*				if(index == 4){
+					$scope.$on('spModel.fields.rendered', function(event) {
+						$timeout(function(){
+							renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '555<br/>', 'h3');
+						});
+					});
+				} */
+			})
+		}
+
+	}
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>hr {
+  border-bottom: 1px solid lightgrey;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -68,12 +76,13 @@
 	gr.query();
 	gr.next();
 	var sys_id = gr.sys_id.toString();
+	data.id = sys_id;
 	data.widget_1 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_family_history_question",
 		"view": "FHQ1"
 	});
-	data.widget_2 = $sp.getWidget('widget-form', {
+/*	data.widget_2 = $sp.getWidget('widget-form', {
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_family_history_question",
 		"view": "FHQ2"
@@ -87,7 +96,7 @@
 		"sys_id": sys_id,
 		"table": "x_naci_family_coho_family_history_question",
 		"view": "FHQ4"
-	});	
+	});	*/
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -95,40 +104,55 @@
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>96</sys_mod_count>
+        <sys_mod_count>127</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-01 15:35:41</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-04 15:53:59</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
   <uib-tabset>
     <uib-tab index="0" heading="Informant/Proband Information">
       <div style="padding: 10px;">
-        <sp-widget widget="c.data.widget_1"></sp-widget>
+        <sp-widget widget="c.data.widget_1">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
     </uib-tab>
-    <uib-tab index="1" heading="Demographic Information">
+    <uib-tab index="1" heading="Demographic Information" ng-click='loadForm(2)'>
       <div style="padding: 10px;">
-        <sp-widget widget="c.data.widget_2"></sp-widget>
+        <sp-widget widget="c.data.widget_2">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
     </uib-tab>
-    <uib-tab index="2" heading="Family Historic Questionaire 1">
+    <uib-tab index="2" heading="Family Historic Questionaire 1" ng-click='loadForm(3)'>
       <div style="padding: 10px;">
-        <sp-widget widget="c.data.widget_3"></sp-widget>
+        <sp-widget widget="c.data.widget_3">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
     </uib-tab>
-    <uib-tab index="3" heading="Family Historic Questionaire 2">
+    <uib-tab index="3" heading="Family Historic Questionaire 2" ng-click='loadForm(4)'>
       <div style="padding: 10px;">
-        <sp-widget widget="c.data.widget_4"></sp-widget>
+        <sp-widget widget="c.data.widget_4">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
     </uib-tab>    
-    <uib-tab index="4" heading="Family Member Information">
+    <uib-tab index="4" heading="Family Member Information" ng-click='loadForm(5)'>
       <div style="padding: 10px;">
-        <widget id="family_members"></widget>
+        <widget id="family_members">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </widget>
       </div>
     </uib-tab>     
   </uib-tabset>

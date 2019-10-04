@@ -15,13 +15,14 @@
 			c.g_form = e.targetScope.getGlideForm();	
 		  
 		  $timeout(function() {
+				$('input[name="date_diagnosis"]').prop('readonly', true);
 				$('#addFamilyCancerDiv .panel-footer').hide();
 			});
 	});
 	
 	c.data.label = "Personal Cancer";
 	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},{label:"If Other, Please Specify", name: "please_specify"},
-										{label: "Age (in years) at Diagnosis",name: "age_in_years_at_diagnosis"},{label: "Date (mm/yyyy or yyyy) at Diagnosis",name: "date_at_diagnosis"}];
+										{label: "Age (in years) at Diagnosis",name: "age_in_years_at_diagnosis"},{label: "Date at Diagnosis",name: "date_diagnosis"}];
 
 	c.openForm = function(){
 		$('#addFamilyCancerDiv').modal('show');
@@ -37,19 +38,27 @@
 	c.cancelForm = function(){
 		$('#addFamilyCancerDiv').modal('hide');
 	};
-	
+
 	c.saveForm = function(){
 		console.log(c.g_form);
 		var fields = c.g_form.getFieldNames();
 		var record = {};
 		fields.forEach(function(field) {
-			record[field] = c.g_form.getValue(field);
+			var f = c.g_form.getField(field);
+			if(f.type == 'glide_date'){
+				var dt_str = c.g_form.getValue(field);
+				var d = new Date(dt_str);
+				record[field] = d;
+			}
+			else{
+				record[field] = c.g_form.getValue(field);
+			}			
 		})
 		$scope.server.get({
 			action: 'add',
 			record: record
 		}).then(function(){
-			 c.cancelForm();
+			c.cancelForm();
 		});
 	}
 	
@@ -89,6 +98,11 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	var str = gs.action.getGlideURI();
+	var sys_id = str.get('sys_id');
+	data.id = sys_id;
+	
+	
 	if(input){
 		if(input.action == 'add'){
 			var record = input.record;
@@ -97,6 +111,7 @@
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
+			gr1.intake_form = data.id;
 			gr1.insert();
 		}
 		else if(input.action == 'delete'){
@@ -108,6 +123,8 @@
 	}
 	
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+	gr.addQuery('intake_form', data.id);
+	gr.orderByDesc('sys_created_on');
 	gr.query();
 	data.records = [];
 	while(gr.next()){
@@ -116,7 +133,7 @@
 		tmp.cancer_type = gr.cancer_type.toString();
 		tmp.please_specify = gr.please_specify.toString();
 		tmp.age_in_years_at_diagnosis = gr.age_in_years_at_diagnosis.toString();
-		tmp.date_at_diagnosis = gr.date_at_diagnosis.toString();
+		tmp.date_diagnosis = gr.date_diagnosis.toString();
 		data.records.push(tmp);
 	}
 })();]]></script>
@@ -126,7 +143,7 @@
         <sys_created_on>2019-09-16 15:06:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5b3f27efdbfff30054d8ff621f9619f2</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>109</sys_mod_count>
         <sys_name>FCSMS Intake Form Personal Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -134,7 +151,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_5b3f27efdbfff30054d8ff621f9619f2</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-03 22:20:49</sys_updated_on>
+        <sys_updated_on>2019-10-04 21:30:00</sys_updated_on>
         <template><![CDATA[<div id="container" ng-show='show_person_cancer' style="padding: 10px 10px; border-style: ridge;">
 
   
@@ -175,11 +192,12 @@
 
 <div id="addFamilyCancerDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
   <div class="modal-dialog modal-lg" style="width:1400px;">
-    <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
+    <div class="modal-content" style="min-height:400px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
-        <h4  class="modal-title">Add new Entry</h4>
+        <h4  class="modal-title"><b>Add new Entry</b></h4>
       </div>      
       <div class="modal-body" style="padding-bottom:0px;">
+        <div style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
         <sp-widget widget="c.data.widget_add">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
@@ -189,7 +207,7 @@
         <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
             Save
           </button>  
-        <button type="button" class="table-button btn btn-primary" ng-click="c.cancelForm()">
+        <button type="button" class="table-button btn btn-danger" ng-click="c.cancelForm()">
             Cancel
           </button>
         </div>

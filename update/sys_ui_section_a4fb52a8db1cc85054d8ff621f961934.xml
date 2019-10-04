@@ -4,13 +4,13 @@
             <element>age_in_years_at_diagnosis</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-01 21:52:28</sys_created_on>
-            <sys_id>bcfb52a8db1cc85054d8ff621f9619aa</sys_id>
+            <sys_created_on>2019-10-04 14:07:08</sys_created_on>
+            <sys_id>ad3e4c29db980c50b86770c08c961951</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">a4fb52a8db1cc85054d8ff621f961934</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-01 21:52:28</sys_updated_on>
+            <sys_updated_on>2019-10-04 14:07:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,27 +18,27 @@
             <element>.split</element>
             <position>1</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-01 21:52:28</sys_created_on>
-            <sys_id>30fb52a8db1cc85054d8ff621f9619dd</sys_id>
+            <sys_created_on>2019-10-04 14:07:08</sys_created_on>
+            <sys_id>253e4c29db980c50b86770c08c961952</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">a4fb52a8db1cc85054d8ff621f961934</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-01 21:52:28</sys_updated_on>
+            <sys_updated_on>2019-10-04 14:07:08</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>date_at_diagnosis</element>
+            <element>date_diagnosis</element>
             <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-01 21:52:28</sys_created_on>
-            <sys_id>b4fb52a8db1cc85054d8ff621f9619dd</sys_id>
+            <sys_created_on>2019-10-04 14:07:08</sys_created_on>
+            <sys_id>a93e4c29db980c50b86770c08c961952</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">a4fb52a8db1cc85054d8ff621f961934</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-01 21:52:28</sys_updated_on>
+            <sys_updated_on>2019-10-04 14:07:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

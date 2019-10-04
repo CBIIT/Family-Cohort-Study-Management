@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $location,spModal, spUtil) {
+        <client_script><![CDATA[function($scope, $location, spUtil, spModal) {
   /* widget controller */
   var c = this;
 	var s = $location.search();
 	
-	c.data.label = "Biospy";
+	c.data.label = "Surgery";
 	
-	c.data.columns = [{label:"Where on your body or in what organ was the biopsy performed ? ", name: "where_biopsy_performed", width:'20%'},
-										{label:"Do you know when you had this biopsy ?", name: "date_or_age_had_this_biopsy", width:'20%'},
-										{label: "What was the reason or symptom for which you had this biopsy ?",name: "reason_or_symptom_had_this_biopsy", width:'20%'},
-										{label: "Please provide name and address of the facility where the biopsy was performed",name: "name_and_address_of_the_facility_biopsy_was_performed", width:'25%'}];
-	
+	c.data.columns = [{label:"Cancer", name: "cancer", width:'20%'},
+										{label:"Date or age at diagnosis", name: "date_or_age_at_diagnosis", width:'20%'},
+										{label: "Name and address of the facility where diagnosis was made",name: "name_and_address_diagnosis", width:'20%'},
+										{label:"Treatment(s) received", name: "treatments_received", width:'20%'},
+										{label: "Name and address of the facility where treatment was received",name: "name_and_address_treatment", width:'20%'}];
+
+
 	c.openForm = function(){
 		spUtil.get("widget-form", {
 			"sys_id": "-1",
-			"table": "x_naci_family_coho_individual_information_questionnaire_biospy",
-			"view": 'Biospy'
+			"table": "x_naci_family_coho_individual_information_questionnaire_cancer",
+			"view": 'Cancer'
 		}).then(function(response) {
 			response.data.hideRelatedLists = true;
 			c.data.widget_add = response;
 		})
-		$('#Biospy_addDiv').modal('show');
-	};
+		$('#Cancer_addDiv').modal('show');
+	}
 	
 	c.cancelForm = function(){
-		$('#Biospy_addDiv').modal('hide');
+		$('#Cancer_addDiv').modal('hide');
 	};
 	
 	$scope.$on('spModel.fields.rendered', function(e) {
-		if (e.targetScope.formModel.view == 'Biospy')
+		if (e.targetScope.formModel.view == 'Cancer')
 			c.g_form = e.targetScope.getGlideForm();	
 		
 	});
@@ -64,7 +66,7 @@
 		});	
 	}
 	
-	c.deleteBiopsy = function(sys_id){
+	c.deleteCancer = function(sys_id){
 		spModal.confirm("<div><center><b>Are you sure you want to delete this record?</b></center></div>").then(function(confirmed){
 			if(confirmed){
 				$scope.server.get({
@@ -75,52 +77,47 @@
 		})
 	};
 	
-	spUtil.recordWatch($scope, "x_naci_family_coho_individual_information_questionnaire_biospy", "", function(name, data) {  
+	spUtil.recordWatch($scope, "x_naci_family_coho_individual_information_questionnaire_cancer", "", function(name, data) {  
 			spUtil.update($scope);
 	});
-}
-
-
-
-
-
-]]></client_script>
+}]]></client_script>
         <controller_as>c</controller_as>
-        <css>#Biospy_addDiv .panel-footer{
+        <css>#Surgery_addDiv .panel-footer{
   display: none;
-} </css>
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
         <docs/>
         <field_list/>
         <has_preview>false</has_preview>
-        <id>fcsms_iiq_form_biopsy_list</id>
+        <id>fcsms_iiq_form_surgery_list</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>FCSMS IIQ Form Biopsy List</name>
+        <name>FCSMS IIQ Form Surgery List</name>
         <option_schema/>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	
+	
 	var str = gs.action.getGlideURI();
 	var sys_id = str.get('sys_id');
-	data.sys_id = sys_id;
 	
 	/*
 	data.widget_add = $sp.getWidget('widget-form', {
 		"sys_id": "-1",
-		"table": "x_naci_family_coho_individual_information_questionnaire_biospy",
-		"view": "Biospy"
+		"table": "x_naci_family_coho_individual_information_questionnaire_cancer",
+		"view": "Cancer"
 	});
 	*/
 	
 	if(input){
 		if(input.action == 'add'){
 			var record = input.record;
-			var gr1 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_biospy');
+			var gr1 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
 			gr1.newRecord();
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
@@ -130,7 +127,7 @@
 		}
 		else if(input.action == 'delete'){
 			var id = input.id;
-			var gr2 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_biospy');
+			var gr2 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
 			gr2.get(id);
 			gr2.deleteRecord();
 		}
@@ -139,40 +136,42 @@
 	
 	
 	data.records = [];
-	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_biospy');
+	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
 	gr.addQuery('iiq_form',sys_id);
 	gr.query();
 	while(gr.next()){
 		var tmp = {};
 		tmp.sys_id = gr.sys_id.toString();
-		tmp.where_biopsy_performed = gr.where_biopsy_performed.toString();
-		tmp.date_or_age_had_this_biopsy = gr.date_or_age_had_this_biopsy.toString();
-		if(tmp.date_or_age_had_this_biopsy == 'DATE'){
-			tmp.date_or_age_had_this_biopsy += ': ' + gr.date_had_this_biopsy.toString();
+		tmp.cancer = gr.cancer.toString();
+		tmp.date_or_age_at_diagnosis = gr.date_or_age_at_diagnosis.toString();
+		if(tmp.date_or_age_at_diagnosis == 'DATE'){
+			tmp.date_or_age_at_diagnosis += ': ' + gr.date.toString();
 		}
-		else if(tmp.date_or_age_had_this_biopsy == 'AGE'){
-			tmp.date_or_age_had_this_biopsy += ': ' + gr.age_had_this_biopsy.toString();
+		else if(tmp.date_or_age_at_diagnosis == 'AGE'){
+			tmp.date_or_age_at_diagnosis += ': ' + gr.age.toString();
 		}
-		tmp.reason_or_symptom_had_this_biopsy = gr.reason_or_symptom_had_this_biopsy.toString();
-		tmp.name_and_address_of_the_facility_biopsy_was_performed = gr.name_and_address_of_the_facility_biopsy_was_performed.toString();
+		tmp.name_and_address_diagnosis = gr.name_and_address_diagnosis.toString();
+		tmp.treatments_received = gr.treatments_received.toString();
+		tmp.name_and_address_treatment = gr.name_and_address_treatment.toString();
 		data.records.push(tmp);
 	}
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>yuw5@nih.gov</sys_created_by>
-        <sys_created_on>2019-09-27 22:41:45</sys_created_on>
+        <sys_created_on>2019-10-04 21:31:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>abd046dbdb44c050b86770c08c961950</sys_id>
-        <sys_mod_count>61</sys_mod_count>
-        <sys_name>FCSMS IIQ Form Biopsy List</sys_name>
+        <sys_id>a1e3f921dbd04c50b86770c08c961984</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>FCSMS IIQ Form Surgery List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sp_widget_abd046dbdb44c050b86770c08c961950</sys_update_name>
+        <sys_update_name>sp_widget_a1e3f921dbd04c50b86770c08c961984</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 21:01:25</sys_updated_on>
+        <sys_updated_on>2019-10-04 21:35:05</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
@@ -180,7 +179,7 @@
     </div>
     <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
       <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;font-size:18px;">
-        ADD new Biopsy
+        ADD new Surgery
       </button>
     </div>
   </div>
@@ -199,7 +198,7 @@
           {{ record[col.name] || 'N/A' }}  
         </td>
         <td>
-          <button class="btn btn-primary" ng-click="c.deleteBiopsy(record.sys_id)" style="padding: 5px 30px;">
+          <button class="btn btn-primary" ng-click="c.deleteSurgery(record.sys_id)" style="padding: 5px 30px;">
             Delete
           </button>
         </td>
@@ -208,13 +207,13 @@
   </table>
 </div>
 
-<div id="Biospy_addDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
+<div id="Surgery_addDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
   <div class="modal-dialog modal-lg" style="width:1000px;">
     <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
-        <h4  class="modal-title">Add new Biopsy</h4>
+        <h4  class="modal-title">Add new Surgery</h4>
       </div>      
-      <div class="modal-body">
+      <div class="modal-body" style="padding-bottom:0px;">
         <sp-widget widget="c.data.widget_add"></sp-widget>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">

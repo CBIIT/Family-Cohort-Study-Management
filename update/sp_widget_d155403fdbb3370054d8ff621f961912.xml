@@ -5,22 +5,19 @@
   /* widget controller */
   var c = this;
 	var s = $location.search();
-
- window.setShowFamilyCancer = function(show){
-	 $scope.showCancer = show;
- }
- 
+	window.setShowFamilyCancer = function(show){
+		$scope.showCancer = show;
+	}
 	$scope.$on('spModel.fields.rendered', function(e) {
 		if (e.targetScope.formModel.view == 'Cancer')
 			c.g_form = e.targetScope.getGlideForm();	
 		  
 		  $timeout(function() {
-				$('#addDiv .panel-footer').hide()
+				$('#addDiv .panel-footer').hide();
+				intake_id = $('#intake_id').val();
 			});
 	});
-
 	c.submit = function() {
-		console.log(c.g_form);
 		var fields = c.g_form.getFieldNames();
 		var record = {};
 		fields.forEach(function(field) {
@@ -43,13 +40,13 @@
 										{label:"Current Age (If living)", name: "current_age"},{label:"Age at Death", name: "age_at_death"}];
 	
 	c.openForm = function(){
+		$('#addFamilyDiv').modal('show');
 		spUtil.get('widget-form', {
 			"sys_id": "-1",
 			"table": "x_naci_family_coho_mock_up_intake_family_cancer",
 			"view": "Cancer"
 		}).then(function(widget) {
 			c.data.widget_add = widget;
-			$('#addFamilyDiv').modal('show');
 		})
 	}
 	
@@ -76,7 +73,9 @@
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>#addFamilyDiv div .panel-footer{
+  display:none;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -98,7 +97,9 @@
 		"table": "x_naci_family_coho_mock_up_intake_family_cancer",
 		"view": "Cancer"
 	});*/
-	
+	var str = gs.action.getGlideURI();
+	var sys_id = str.get('sys_id');
+	data.id = sys_id;
 	data.records = [];
 	
 	if (input) {
@@ -109,6 +110,7 @@
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
+			gr1.intake_form_id = data.id;
 			gr1.insert();
 		}
 		else if (input.action == 'delete') {
@@ -121,6 +123,7 @@
 	
 	
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+	    gr.addQuery('intake_form_id', data.id);
 	    gr.orderByDesc('sys_created_on');
 	    gr.query();
 	while(gr.next()){
@@ -145,7 +148,7 @@
         <sys_created_on>2019-09-16 16:43:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d155403fdbb3370054d8ff621f961912</sys_id>
-        <sys_mod_count>99</sys_mod_count>
+        <sys_mod_count>119</sys_mod_count>
         <sys_name>FCSMS Intake Form Family Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -153,7 +156,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_d155403fdbb3370054d8ff621f961912</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-03 22:18:56</sys_updated_on>
+        <sys_updated_on>2019-10-04 19:33:36</sys_updated_on>
         <template><![CDATA[
 <div id="family_cancer" ng-show="showCancer" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">
@@ -195,10 +198,15 @@
   <div class="modal-dialog modal-lg" style="width:1400px;">
     <div class="modal-content" style="min-height:600px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
-        <h4  class="modal-title">Add new Entry</h4>
+        <h4  class="modal-title"><b>Add new Entry</b></h4>
       </div>      
-      <div class="modal-body" style="padding-bottom:0px;">
-        <sp-widget widget="c.data.widget_add"></sp-widget>
+      <div class="modal-body" style="padding-bottom:0px; ">
+        <div style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
+          <sp-widget widget="c.data.widget_add">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
           <button type="button" class="table-button btn btn-primary m-r" ng-click="c.submit()">

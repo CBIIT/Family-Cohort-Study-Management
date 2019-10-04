@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Intake Cancer Care" max_length="40" name="x_naci_family_coho_intake_cancer_care" type="collection">
         <element label="Institution" max_length="200" name="institution" type="string"/>
+        <element label="Intake  Form ID" max_length="32" name="intake_form_id" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="Person Receiving Care or Following up" max_length="200" name="person_receiving_care_or_following_up" type="string"/>
         <element label="Physician Name" max_length="200" name="physician_name" type="string"/>
+        <index name="index">
+            <element name="intake_form_id"/>
+        </index>
     </element>
 </database>

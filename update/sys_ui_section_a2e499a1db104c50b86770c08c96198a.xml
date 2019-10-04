@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="New Section" section_id="a2e499a1db104c50b86770c08c96198a" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire_biospy" version="3" view="Biospy">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_or_age_had_this_biopsy</element>
+            <position>0</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>b6e499a1db104c50b86770c08c9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>3ee499a1db104c50b86770c08c9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_had_this_biopsy</element>
+            <position>2</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>b2e499a1db104c50b86770c08c9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_had_this_biopsy</element>
+            <position>3</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>3ae499a1db104c50b86770c08c9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>bee499a1db104c50b86770c08c9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>5</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>36e499a1db104c50b86770c08c9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reason_or_symptom_had_this_biopsy</element>
+            <position>6</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>bae499a1db104c50b86770c08c9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>32e499a1db104c50b86770c08c9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_and_address_of_the_facility_biopsy_was_performed</element>
+            <position>8</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:03</sys_created_on>
+            <sys_id>b6e499a1db104c50b86770c08c9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_biospy" sys_domain="global" view="ef5ed7f8db548850b86770c08c961969">a2e499a1db104c50b86770c08c96198a</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>New Section</caption>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 19:16:02</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>a2e499a1db104c50b86770c08c96198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>New Section</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_a2e499a1db104c50b86770c08c96198a</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 19:16:02</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Biospy" name="Biospy">ef5ed7f8db548850b86770c08c961969</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

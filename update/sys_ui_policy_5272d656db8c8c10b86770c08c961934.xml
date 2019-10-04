@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_naci_family_coho_family_history_question">best_person_fill_out_form=No^EQ<item endquery="false" field="best_person_fill_out_form" goto="false" newquery="false" operator="=" or="false" value="No"/>
+        <conditions table="x_naci_family_coho_family_history_question">best_person_fill_out_form=Yes^EQ<item endquery="false" field="best_person_fill_out_form" goto="false" newquery="false" operator="=" or="false" value="Yes"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -26,6 +26,33 @@
 		'proband_zipcode': true,
 		'proband_home_phone': true,
 		'proband_office_phone': true,
+		'proxy_last_name': true,
+		'proxy_first_name': true,
+		'proxy_middle_name': true,
+		'proxy_maiden_name': true,
+		'proxy_address': true,
+		'proxy_city': true,
+		'proxy_state': true,
+		'proxy_zipcode': true,
+		'proxy_home_phone': true,
+		'proxy_office_phone': true,
+	};
+	for (var key in fields) {
+		g_form.setDisplay(key, fields[key]);
+	}
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var fields = {
+		'proband_last_name': true,
+		'proband_first_name': true,
+		'proband_middle_name': true,
+		'proband_maiden_name': true,
+		'proband_address': true,
+		'proband_city': true,
+		'proband_state': true,
+		'proband_zipcode': true,
+		'proband_home_phone': true,
+		'proband_office_phone': true,
 		'proxy_last_name': false,
 		'proxy_first_name': false,
 		'proxy_middle_name': false,
@@ -37,44 +64,9 @@
 		'proxy_home_phone': false,
 		'proxy_office_phone': false,
 	};
-	
 	for (var key in fields) {
 		g_form.setDisplay(key, fields[key]);
-		g_form.setValue(key, null);
 	}
-}]]></script_false>
-        <script_true><![CDATA[function onCondition() {
-	var falseFields = [
-		'proband_last_name',
-		'proband_first_name',
-		'proband_middle_name',
-		'proband_maiden_name',
-		'proband_address',
-		'proband_city',
-		'proband_state',
-		'proband_zipcode',
-		'proband_home_phone',
-		'proband_office_phone',
-	];
-	
-	var trueFields = [
-		'proxy_last_name',
-		'proxy_first_name',
-		'proxy_middle_name',
-		'proxy_maiden_name',
-		'proxy_address',
-		'proxy_city',
-		'proxy_state',
-		'proxy_zipcode',
-		'proxy_home_phone',
-		'proxy_office_phone',
-	];
-	falseFields.forEach(function(field){
-		g_form.setDisplay(field, false);
-	});
-	trueFields.forEach(function(field){
-		g_form.setDisplay(field, true);
-	});
 }]]></script_true>
         <set_values/>
         <short_description>Determine when to show Proband information or Proxy information</short_description>
@@ -84,7 +76,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5272d656db8c8c10b86770c08c961934</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Determine when to show Proband information or Proxy information</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -93,7 +85,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_5272d656db8c8c10b86770c08c961934</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-02 21:38:48</sys_updated_on>
+        <sys_updated_on>2019-10-04 15:11:09</sys_updated_on>
         <table>x_naci_family_coho_family_history_question</table>
         <ui_type>10</ui_type>
         <view/>

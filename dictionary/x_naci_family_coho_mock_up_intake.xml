@@ -63,7 +63,7 @@
             </choice>
         </element>
         <element label="Email Address" max_length="100" name="email_address" type="string"/>
-        <element choice="1" display="true" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
+        <element choice="1" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Intake Form Submitted" sequence="1" value="Intake Form Submitted"/>
                 <element inactive_on_update="false" label="Study Consent Submitted" sequence="2" value="Study Consent Submitted"/>
@@ -105,7 +105,7 @@
             </choice>
         </element>
         <element label="Name" max_length="100" name="name" type="string"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
         <element choice="3" default="No" label="Participated through another institution, university, or government agency?" max_length="40" name="participated_through_another_institution" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>

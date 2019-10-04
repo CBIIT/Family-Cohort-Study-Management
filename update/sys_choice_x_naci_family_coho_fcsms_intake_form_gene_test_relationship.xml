@@ -19,6 +19,424 @@
             <u_dependent_value_2/>
             <value>Aunt (mom’s sister)</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aunt (dad’s sister)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>20</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:32:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>94e3d821dbd80c50b86770c08c961949</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:32:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Aunt (dad’s sister)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brother (full)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>30</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:32:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e4f39421dbd80c50b86770c08c9619a8</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:32:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brother (full)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brother (half – mom)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>40</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:32:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6c04d461dbd80c50b86770c08c9619a6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:32:55</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brother (half – mom)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brother (half – dad)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>50</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:33:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>75149421dbd80c50b86770c08c9619a9</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:33:10</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brother (half – dad)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cousin (mom’s side)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>60</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:33:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d1249c61dbd80c50b86770c08c96190e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:33:23</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Cousin (mom’s side)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cousin (dad’s side)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>70</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:33:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>743450a1dbd80c50b86770c08c961942</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:33:41</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Cousin (dad’s side)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Daughter</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>80</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:33:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e4441c61dbd80c50b86770c08c961990</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:33:52</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Daughter</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Father</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>90</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:33:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>774414a1dbd80c50b86770c08c961981</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:34:03</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Granddaughter</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>100</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:34:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a25454a1dbd80c50b86770c08c961937</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:34:15</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Granddaughter</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandfather (mom’s dad)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>110</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:34:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>65641c61dbd80c50b86770c08c961979</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:34:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Grandfather (mom’s dad)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandfather (dad’s dad)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>120</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:34:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>857454a1dbd80c50b86770c08c9619be</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:34:53</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Grandfather (dad’s dad)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandmother (mom’s mom)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>130</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:35:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d68494a1dbd80c50b86770c08c9619b2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:35:10</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Grandmother (mom’s mom)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandmother (dad’s mom)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>140</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:35:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6e9414a1dbd80c50b86770c08c961954</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:35:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Grandmother (dad’s mom)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandson</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>150</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:35:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>12a4d4a1dbd80c50b86770c08c961965</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:35:36</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Grandson</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>160</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:35:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>95b414a1dbd80c50b86770c08c961989</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:35:49</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Mother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sister (full)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>170</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:35:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>54c49ca1dbd80c50b86770c08c961911</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:36:05</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Sister (full)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sister (half – mom)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>180</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:36:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7fc418a1dbd80c50b86770c08c96191a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:36:27</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Sister (half – mom)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sister (half – dad)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>190</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:36:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>78e414a1dbd80c50b86770c08c961958</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:36:49</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Sister (half – dad)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Son</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>200</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:36:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>5df410e1dbd80c50b86770c08c96199a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:37:03</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Son</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Uncle (mom’s brother)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>210</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:37:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>120590e1dbd80c50b86770c08c9619b7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:37:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Uncle (mom’s brother)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Uncle (dad’s brother)</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>220</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:37:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7d155ca1dbd80c50b86770c08c961924</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:37:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Uncle (dad’s brother)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>
+            <sequence>230</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-04 14:37:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8d2510e1dbd80c50b86770c08c96195e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-04 14:37:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>relationship</element>
             <name>x_naci_family_coho_fcsms_intake_form_gene_test</name>

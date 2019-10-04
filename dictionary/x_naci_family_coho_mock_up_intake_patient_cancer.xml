@@ -22,7 +22,7 @@
                 <element inactive_on_update="false" label="Uterine/Endometrial" value="Uterine/Endometrial"/>
             </choice>
         </element>
-        <element label="Date at Diagnosis " max_length="100" name="date_at_diagnosis" type="string"/>
+        <element label="Date at Diagnosis " max_length="50" name="date_diagnosis" type="glide_date"/>
         <element label="Intake Form" max_length="32" name="intake_form" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="Please Specify" max_length="100" name="please_specify" type="string"/>
         <index name="index">

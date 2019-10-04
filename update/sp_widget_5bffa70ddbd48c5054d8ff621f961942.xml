@@ -10,7 +10,7 @@
  }
  
 	$scope.$on('spModel.fields.rendered', function(e) {
-		if (e.targetScope.formModel.view == 'CancerTest')
+		if (e.targetScope.formModel.view == 'Gene')
 			c.g_form = e.targetScope.getGlideForm();	
 	});
 
@@ -32,16 +32,17 @@
 	
 	c.data.label = "Test Positive for Relatives";
 	
-	c.data.columns = [{label:"Relative Name", name: "relative_name"},{label:"Relationship", name: "relationship"}];
+	c.data.columns = [{label:"Relative Name", name: "relative_name"},{label:"Relationship", name: "relationship"},{label:"Genes/ Hereditary Cancer syndromes", name: "genes_hereditary_cancer_syndromes"}];
 	
 	c.openForm = function(){
+		$('#addGeneDiv').modal('show');
 		spUtil.get('widget-form', {
 			"sys_id": '-1',
 			"table": "x_naci_family_coho_fcsms_intake_form_gene_test",
 			"view": "Gene"
 		}).then(function(widget) {
 			c.data.widget_add = widget;
-			$('#addGeneDiv').modal('show');
+
 		})
 	}
 	
@@ -66,7 +67,7 @@
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>#test_positive .panel-footer {
+        <css>#addGeneDiv .panel-footer {
   display:none;
 }</css>
         <data_table>sp_instance</data_table>
@@ -85,10 +86,12 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-	
+	var str = gs.action.getGlideURI();
+	var sys_id = str.get('sys_id');
+	data.id = sys_id;
 	data.records = [];
-	
-if (input) {
+
+	if (input) {
 		if (input.action == 'add') {
 			var record = input.record;
 			var gr1 = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
@@ -96,28 +99,31 @@ if (input) {
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
+			gr1.intake_form_id = data.id;
 			gr1.insert();
 		}
 		else if (input.action == 'delete') {
 			var id = input.id;
 			var gr2 = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
-			    gr2.get(id);
-			    gr2.deleteRecord();
+			gr2.get(id);
+			gr2.deleteRecord();
 		}  
 	}
-	
-	
+
+
 	var gr = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
-	    gr.orderByDesc('sys_created_on');
-	    gr.query();
+	gr.addQuery('intake_form_id', data.id);
+	gr.orderByDesc('sys_created_on');
+	gr.query();
 	while(gr.next()){
 		item = {};
 		item.sys_id = gr.sys_id.toString();
 		item.relative_name = gr.getDisplayValue('relative_name');
 		item.relationship = gr.getDisplayValue('relationship');
+		item.genes_hereditary_cancer_syndromes = gr.getDisplayValue('genes_hereditary_cancer_syndromes');
 		data.records.push(item);
 	}
-	
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -125,7 +131,7 @@ if (input) {
         <sys_created_on>2019-10-03 17:16:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5bffa70ddbd48c5054d8ff621f961942</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>FCSMS Intake Test Positive for Gene</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -133,7 +139,7 @@ if (input) {
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_5bffa70ddbd48c5054d8ff621f961942</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-03 22:19:39</sys_updated_on>
+        <sys_updated_on>2019-10-04 19:42:24</sys_updated_on>
         <template><![CDATA[<div id="test_positive" ng-show="showTest" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
@@ -174,10 +180,15 @@ if (input) {
   <div class="modal-dialog modal-lg" style="width:1400px;">
     <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
-        <h4  class="modal-title">Add new Entry</h4>
+        <h4  class="modal-title"><b>Add new Entry</b></h4>
       </div>      
       <div class="modal-body" style="padding-bottom:0px;">
-        <sp-widget widget="c.data.widget_add"></sp-widget>
+        <div style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
+          <sp-widget widget="c.data.widget_add">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>  
+        </div>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
           <button type="button" class="table-button btn btn-primary m-r" ng-click="c.submit()">

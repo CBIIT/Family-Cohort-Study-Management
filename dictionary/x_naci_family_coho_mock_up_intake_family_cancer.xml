@@ -25,6 +25,7 @@
             </choice>
         </element>
         <element label="How old is this person now (if living)?" max_length="100" name="current_age" type="string"/>
+        <element label="Intake Form ID" max_length="32" name="intake_form_id" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="What is the person's name?" max_length="100" name="name" type="string"/>
         <element choice="1" label="How is this person related to you?" max_length="500" name="relationship" type="choice">
             <choice>
@@ -54,5 +55,8 @@
             </choice>
         </element>
         <element label="Relationship Specify" max_length="100" name="relationship_specify" type="string"/>
+        <index name="index">
+            <element name="intake_form_id"/>
+        </index>
     </element>
 </database>
