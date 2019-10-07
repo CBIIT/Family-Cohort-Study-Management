@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="773ca3d2db14c010b86770c08c96190f" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:12:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>884ca3d2db14c010b86770c08c961911</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="Information about your health practices" display_value="Information about your health practices" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">4495b304db9c8450b86770c08c96196c</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:12:40</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a4bcebd2db14c010b86770c08c961929</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">a0bcabd2db14c010b86770c08c9619af</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e0bcebd2db14c010b86770c08c96192e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">6cbcabd2db14c010b86770c08c9619af</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>2cbcebd2db14c010b86770c08c96193f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">28bcabd2db14c010b86770c08c9619b0</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>24bcebd2db14c010b86770c08c961945</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">e0bcabd2db14c010b86770c08c9619b1</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>68bcebd2db14c010b86770c08c961957</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">acbcabd2db14c010b86770c08c9619b1</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6cbcebd2db14c010b86770c08c96195d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">68bcabd2db14c010b86770c08c9619b2</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>7</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e4bcebd2db14c010b86770c08c961964</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">24bcabd2db14c010b86770c08c9619b3</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>8</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e4bcebd2db14c010b86770c08c96196b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">acbcebd2db14c010b86770c08c961923</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>9</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>34bcebd2db14c010b86770c08c96197f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">68bcebd2db14c010b86770c08c961924</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>10</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>30bcebd2db14c010b86770c08c961987</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">24bcebd2db14c010b86770c08c961925</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>11</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:14:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b0bcebd2db14c010b86770c08c96198f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">ecbcebd2db14c010b86770c08c961925</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>12</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:12:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>884ca3d2db14c010b86770c08c961912</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">b33c63d2db14c010b86770c08c961939</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>13</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:12:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>444ca3d2db14c010b86770c08c961916</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">bb3ca3d2db14c010b86770c08c96190d</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>14</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:12:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>444ca3d2db14c010b86770c08c961971</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190f</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190e</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:14:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-07 14:12:40</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>773ca3d2db14c010b86770c08c96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_individual_information_questionnaire</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_form_sections_773ca3d2db14c010b86770c08c96190f</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-07 14:12:40</sys_updated_on>
+            <sys_user/>
+            <view display_value="SectionB4" name="SectionB4">4095b304db9c8450b86770c08c961969</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

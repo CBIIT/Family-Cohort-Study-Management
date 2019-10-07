@@ -45,10 +45,12 @@
 	}
 	
 	c.saveForm = function(cb){
+		/*
 		var modal = $uibModal.open({
 			template: $('#saving-data-modal')[0].innerHTML,
 			size: 'sm'
 		});
+		*/
 		
 		var record = c.getFormValues();
 		$scope.server.get({
@@ -56,8 +58,8 @@
 			record: record,
 			sys_id: c.data.sys_id
 		}).then(function(){
-			$('#loading').hide();
-			modal.close();
+			//$('#loading').hide();
+			//modal.close();
 			spModal.open({
 				title: "Message",
 				message: "<center>Record has been saved successfully.</center>",
@@ -101,6 +103,10 @@
 			else if(idx == 3){
 				c.current_form_idx = 'SectionB1';
 				if(!c.widget_3){
+					
+					$timeout(function(){
+						$('input[name="birthday"]').prop('readonly',true);		
+					});
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
@@ -125,7 +131,7 @@
 				}
 			}
 			else if(idx == 5){
-				c.current_form_idx = 'SectionB2';
+				c.current_form_idx = 'SectionB3';
 				if(!c.widget_5){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
@@ -256,20 +262,24 @@
 			}
 			
 			e.targetScope.$on('field.change.take_more_than_6_months', function(ev, obj) {
-				if(obj.newValue == 'YES'){
+				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
+				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
+				if(v1 == 'YES' || v2 == 'YES'){
 					c.medicationDisplay = true;
 				}
 				else{
-					c.medicationDisplay = false || c.medicationDisplay;
+					c.medicationDisplay = false;
 				}
 			});
 			
 			e.targetScope.$on('field.change.taking_any_prescription_medication', function(ev, obj) {
-				if(obj.newValue == 'YES'){
+				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
+				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
+				if(v1 == 'YES' || v2 == 'YES'){
 					c.medicationDisplay = true;
 				}
 				else{
-					c.medicationDisplay = false || c.medicationDisplay;
+					c.medicationDisplay = false;
 				}
 			});
 		}
@@ -322,7 +332,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>332</sys_mod_count>
+        <sys_mod_count>338</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -330,7 +340,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 19:13:25</sys_updated_on>
+        <sys_updated_on>2019-10-07 21:46:40</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 18px;">
   <!--
   <div class="top-progress-bar">
@@ -410,7 +420,7 @@
           <widget id="fcsms_iiq_form_medication_list"></widget>
         </div>
         <div class="div-inset-list">
-          <widget id="fcsms_iiq_form_medication_supplement_list"></widget>
+          <widget id="fcsms_iiq_form_supplement_list"></widget>
         </div>
       </div>
     

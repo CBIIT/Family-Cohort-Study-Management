@@ -8,31 +8,30 @@
 	
 	c.data.label = "Surgery";
 	
-	c.data.columns = [{label:"Cancer", name: "cancer", width:'20%'},
-										{label:"Date or age at diagnosis", name: "date_or_age_at_diagnosis", width:'20%'},
-										{label: "Name and address of the facility where diagnosis was made",name: "name_and_address_diagnosis", width:'20%'},
-										{label:"Treatment(s) received", name: "treatments_received", width:'20%'},
-										{label: "Name and address of the facility where treatment was received",name: "name_and_address_treatment", width:'20%'}];
+	c.data.columns = [{label:"What type of surgery (name) did you have?", name: "type_of_surgery", width:'20%'},
+										{label:"Date or age when you had this surgery?", name: "type_when_surgery", width:'20%'},
+										{label: "What was the reason you had this surgery?",name: "reason_surgery", width:'20%'},
+										{label:"Provide the name and address of the facility where the surgery was performed.", name: "name_address_surgery", width:'20%'}];
 
 
 	c.openForm = function(){
 		spUtil.get("widget-form", {
 			"sys_id": "-1",
-			"table": "x_naci_family_coho_individual_information_questionnaire_cancer",
-			"view": 'Cancer'
+			"table": "x_naci_family_coho_individual_information_questionnaire_surgery",
+			"view": 'Surgery'
 		}).then(function(response) {
 			response.data.hideRelatedLists = true;
 			c.data.widget_add = response;
 		})
-		$('#Cancer_addDiv').modal('show');
+		$('#Surgery_addDiv').modal('show');
 	}
 	
 	c.cancelForm = function(){
-		$('#Cancer_addDiv').modal('hide');
+		$('#Surgery_addDiv').modal('hide');
 	};
 	
 	$scope.$on('spModel.fields.rendered', function(e) {
-		if (e.targetScope.formModel.view == 'Cancer')
+		if (e.targetScope.formModel.view == 'Surgery')
 			c.g_form = e.targetScope.getGlideForm();	
 		
 	});
@@ -66,7 +65,7 @@
 		});	
 	}
 	
-	c.deleteCancer = function(sys_id){
+	c.deleteSurgery = function(sys_id){
 		spModal.confirm("<div><center><b>Are you sure you want to delete this record?</b></center></div>").then(function(confirmed){
 			if(confirmed){
 				$scope.server.get({
@@ -77,7 +76,7 @@
 		})
 	};
 	
-	spUtil.recordWatch($scope, "x_naci_family_coho_individual_information_questionnaire_cancer", "", function(name, data) {  
+	spUtil.recordWatch($scope, "x_naci_family_coho_individual_information_questionnaire_surgery", "", function(name, data) {  
 			spUtil.update($scope);
 	});
 }]]></client_script>
@@ -117,7 +116,7 @@
 	if(input){
 		if(input.action == 'add'){
 			var record = input.record;
-			var gr1 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
+			var gr1 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_surgery');
 			gr1.newRecord();
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
@@ -127,7 +126,7 @@
 		}
 		else if(input.action == 'delete'){
 			var id = input.id;
-			var gr2 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
+			var gr2 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_surgery');
 			gr2.get(id);
 			gr2.deleteRecord();
 		}
@@ -136,23 +135,22 @@
 	
 	
 	data.records = [];
-	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
+	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_surgery');
 	gr.addQuery('iiq_form',sys_id);
 	gr.query();
 	while(gr.next()){
 		var tmp = {};
 		tmp.sys_id = gr.sys_id.toString();
-		tmp.cancer = gr.cancer.toString();
-		tmp.date_or_age_at_diagnosis = gr.date_or_age_at_diagnosis.toString();
-		if(tmp.date_or_age_at_diagnosis == 'DATE'){
-			tmp.date_or_age_at_diagnosis += ': ' + gr.date.toString();
+		tmp.type_of_surgery = gr.type_of_surgery.toString();
+		tmp.type_when_surgery = gr.type_when_surgery.toString();
+		if(tmp.type_when_surgery == 'DATE'){
+			tmp.type_when_surgery += ': ' + gr.date_surgery.toString();
 		}
-		else if(tmp.date_or_age_at_diagnosis == 'AGE'){
-			tmp.date_or_age_at_diagnosis += ': ' + gr.age.toString();
+		else if(tmp.type_when_surgery == 'AGE'){
+			tmp.type_when_surgery += ': ' + gr.age_surgery.toString();
 		}
-		tmp.name_and_address_diagnosis = gr.name_and_address_diagnosis.toString();
-		tmp.treatments_received = gr.treatments_received.toString();
-		tmp.name_and_address_treatment = gr.name_and_address_treatment.toString();
+		tmp.reason_surgery = gr.reason_surgery.toString();
+		tmp.name_address_surgery = gr.name_address_surgery.toString();
 		data.records.push(tmp);
 	}
 	
@@ -163,7 +161,7 @@
         <sys_created_on>2019-10-04 21:31:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1e3f921dbd04c50b86770c08c961984</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>FCSMS IIQ Form Surgery List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -171,7 +169,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_a1e3f921dbd04c50b86770c08c961984</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 21:35:05</sys_updated_on>
+        <sys_updated_on>2019-10-04 21:58:55</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
@@ -208,13 +206,16 @@
 </div>
 
 <div id="Surgery_addDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
-  <div class="modal-dialog modal-lg" style="width:1000px;">
+  <div class="modal-dialog modal-lg" style="width:1200px;">
     <div class="modal-content" style="min-height:500px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
         <h4  class="modal-title">Add new Surgery</h4>
       </div>      
-      <div class="modal-body" style="padding-bottom:0px;">
-        <sp-widget widget="c.data.widget_add"></sp-widget>
+      <div class="modal-body">
+        <sp-widget widget="c.data.widget_add">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
         <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">

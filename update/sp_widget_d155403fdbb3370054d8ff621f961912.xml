@@ -5,6 +5,17 @@
   /* widget controller */
   var c = this;
 	var s = $location.search();
+	
+	$scope.pagination = [5, 10, 15, 20, 25];
+	$scope.sortKey = null;
+	$scope.reverse = false;	
+	$scope.sort = function(keyname){
+    /*console.log($scope.sortKey);*/
+		/*console.log();*/
+		$scope.sortKey = keyname;   //set the sortKey to the param passed
+		$scope.reverse = !$scope.reverse; //if true make it false and vice versa
+	}
+	
 	window.setShowFamilyCancer = function(show){
 		$scope.showCancer = show;
 	}
@@ -148,7 +159,7 @@
         <sys_created_on>2019-09-16 16:43:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d155403fdbb3370054d8ff621f961912</sys_id>
-        <sys_mod_count>119</sys_mod_count>
+        <sys_mod_count>131</sys_mod_count>
         <sys_name>FCSMS Intake Form Family Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -156,31 +167,43 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_d155403fdbb3370054d8ff621f961912</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 19:33:36</sys_updated_on>
+        <sys_updated_on>2019-10-07 21:30:06</sys_updated_on>
         <template><![CDATA[
 <div id="family_cancer" ng-show="showCancer" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
-    <div class="col-md-6" style="display: flex;width: 100%;position: relative;">
-      <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
+  </div>
+  <div class="d-flex">
+    <div class="col-md-6 d-flex">
+      <label class="pr-3 pt-2">Search:</label> 
+      <input type="text" 
+             class="form-control" 
+             placeholder="{{c.data.label}} Records" 
+             aria-describedby="search record"
+             ng-model="search" 
+             style="width: 300px;"/>  
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 20px;position: absolute;right: 0px;">
         New Family Cancer Information
       </button>
     </div>
   </div>
-  <table class="table table-bordered table-hover">
+  <table class="table table-bordered table-hover mt-3">
     <thead class="bg-primary">
       <tr>
         <th ng-repeat="col in c.data.columns"
-            ng-click="sort(col)">
+            ng-click="sort(col.name)">
           {{ col.label }}
+          <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
         </th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="record in c.data.records">
+      <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
         <td ng-repeat="col in c.data.columns">
           {{ record[col.name] || 'N/A' }}  
         </td>
@@ -192,6 +215,21 @@
       </tr>
     </tbody>
   </table>
+   <div style="display:flex;">
+    <span style="margin-right:auto">Total: {{ c.data.records.length }}</span>
+    <div style="margin-left:auto">
+      <label class="">Results per Page:</label> 
+      <select class="from-control"
+              ng-init="pageSize = pagination[0]"
+              ng-options="num for num in pagination"
+              ng-model="pageSize">
+      </select>
+    </div>
+    <div style="margin-left: 1.25rem">
+      <dir-pagination-controls></dir-pagination-controls>
+    </div>
+  </div> 
+  
 </div>
 
 <div id="addFamilyDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
