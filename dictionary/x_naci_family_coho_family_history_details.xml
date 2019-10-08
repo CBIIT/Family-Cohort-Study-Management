@@ -2,7 +2,7 @@
     <element label="Family History Details" max_length="40" name="x_naci_family_coho_family_history_details" type="collection">
         <element label="Cause" max_length="200" name="cause_of_death" type="string"/>
         <element label="City" max_length="50" name="city" type="string"/>
-        <element label="City D" max_length="50" name="city_of_death" type="string"/>
+        <element label="City" max_length="50" name="city_of_death" type="string"/>
         <element label="County" max_length="50" name="county_of_death" type="string"/>
         <element label="Date of Birth (Month/Day/Year)" max_length="20" name="date_of_birth_month_day_year" type="string"/>
         <element label="Date of Death (Month/Day/Year)" max_length="20" name="date_of_death" type="string"/>
@@ -21,8 +21,8 @@
             </choice>
         </element>
         <element label="Hospital where diagnosed" max_length="100" name="hospital_diagnosed" type="string"/>
-        <element label="City h" max_length="50" name="hospital_diagnosed_city" type="string"/>
-        <element label="State H" max_length="50" name="hospital_diagnosed_state" type="string"/>
+        <element label="City" max_length="50" name="hospital_diagnosed_city" type="string"/>
+        <element label="State" max_length="50" name="hospital_diagnosed_state" type="string"/>
         <element label="Last Name" max_length="100" name="last_name" type="string"/>
         <element label="Maiden Name" max_length="50" name="maiden_name" type="string"/>
         <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
