@@ -6,6 +6,7 @@
 	var c = this;
 	$('#intake_id').val(c.data.id);
 	c.forms = {};
+	c.show_view_index = 1;
 	var s = $location.search();
 	//	spModal.open(c.data.formOptions)
 	window.show_cancer = null;
@@ -42,6 +43,7 @@
 			record: record,
 			sys_id: c.data.id
 		}).then(function(){
+			form.$private.userState.clearModifiedFields();
 			$('#loading').hide();
 			modal.close();
 			spModal.open({
@@ -58,6 +60,7 @@
 	}
 	
 	$scope.loadTab = function(index) {
+		c.show_view_index = index;
 		var widgetName = 'widget_' + index;
 		var view = 'LFS' + index;
 
@@ -252,6 +255,30 @@ fieldset label{
 .tab-pane {
   padding: 15px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.div_shadow {
+ border-radius: 4px; 
+  margin: 5px 15px 15px; 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin-nt-10 {
+  margin: 0 10px 10px;
+}
+
+.right-side-content &gt; div {
+  padding-bottom: 10px;
+}
+.menu_header{
+	background-color: #193670;
+  color:white;
+  font-size: 15px;
+}
+.menu {
+  background-color:#FAFEFF;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -300,28 +327,39 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>507</sys_mod_count>
+        <sys_mod_count>591</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-07 20:17:27</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-10 21:42:07</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
-  <uib-tabset>
-    <uib-tab index="0" heading="Study Introduction">
+  <div class="left-side-menu col-md-3">
+    <ul class="div_shadow margin-0 menu">
+      <li class="menu_header"><b>Intake Questionaire</b></li>
+      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><a href="#">Study Introduction</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><a href="#">Personal Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><a href="#">Personal Cancer History</a></li>
+      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><a href="#">Family Memebers' Cancer History</a></li>
+      <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><a href="#">Family Members' Genetic Tests</a></li>
+      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><a href="#">Final Information</a></li>
+    </ul>
+  </div>
+  <div class="right-side-content col-md-9">
+    <div ng-show="c.show_view_index == 1" class="div_shadow">
       <div style="padding: 10px;">
         <p>
           Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
         </p>
         <p>
           You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family’s cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
-          </p>
+        </p>
         <p>
           Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
-          </p>
+        </p>
         <ul>
           <li>
             Sign a study consent form 
@@ -346,67 +384,67 @@ fieldset label{
           If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
         </p>
         <div id="widget_1" class="clearfix">
-        	<sp-widget widget="c.data.widget_1"></sp-widget>
+          <sp-widget widget="c.data.widget_1"></sp-widget>
           <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS1)" style="width:100px">
             SAVE
           </button>
         </div>
       </div>
-    </uib-tab>
-    <uib-tab index="1" heading="Personal Information" ng-click="loadTab(2)">
+    </div>
+    <div ng-show="c.show_view_index == 2" class="div_shadow">
       <div id="widget_2" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_2">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS2)" style="width:100px">
-            SAVE
-          </button>
+          SAVE
+        </button>
       </div>
-    </uib-tab>
-    <uib-tab index="2" heading="Personal Cancer History" ng-click="loadTab(3)">
+    </div>
+    <div ng-show="c.show_view_index == 3" class="div_shadow">
       <div id="widget_3" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_3">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS3)" style="width:100px;">
-            SAVE
-         </button> 
+          SAVE
+        </button> 
       </div>
-      <div>
-         <widget id="fcsms_intake_form_personal_cancer_list"></widget>
-      </div>
-    </uib-tab>
-    <uib-tab index="3" heading="Family Memebers' Cancer History" ng-click="loadTab(4)">
+      <div class="margin-nt-10">
+        <widget id="fcsms_intake_form_personal_cancer_list"></widget>
+      </div>     
+    </div>
+    <div ng-show="c.show_view_index == 4" class="div_shadow">
       <div id="widget_4" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_4">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS4)" style="width:100px">
-            SAVE
-         </button>   
+          SAVE
+        </button>   
       </div>
-      <div>
-         <widget id="fcsms_intake_form_family_cancer_list"></widget>
-      </div>
-    </uib-tab>
-    <uib-tab index="5" heading="Family Members' Genetic Tests" ng-click="loadTab(41)">
-    	<div id="widget_41" style="padding: 10px;" class="clearfix">
+      <div class="margin-nt-10">
+        <widget id="fcsms_intake_form_family_cancer_list"></widget>
+      </div>    
+    </div>    
+    <div ng-show="c.show_view_index == 41" class="div_shadow">
+      <div id="widget_41" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_41">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
-				</sp-widget>
-          <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS41)" style="width:100px">
-            SAVE
-         </button>         
+        </sp-widget>
+        <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.LFS41)" style="width:100px">
+          SAVE
+        </button>         
       </div>
-       <div>
-         <widget id="fcsms_intake_test_positive_for_gene"></widget>
-      </div>
-    </uib-tab>
-    <uib-tab index="5" heading="Final Information" ng-click="loadTab(5)">
+      <div class="margin-nt-10">
+        <widget id="fcsms_intake_test_positive_for_gene"></widget>
+      </div>     
+    </div>    
+    <div ng-show="c.show_view_index == 5" class="div_shadow">
       <div style="padding: 10px;" id="submit_div" class="clearfix">
         <sp-widget widget="c.data.widget_5">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
@@ -420,9 +458,9 @@ fieldset label{
             SUBMIT
           </button>
         </div>
-          
+
       </div>
-      <div>
+      <div class="margin-nt-10">
         <widget id="fcsms_participate_another_org"></widget>
         <widget id="fcsms_cancer_follow_up"></widget>        
       </div>
@@ -431,14 +469,12 @@ fieldset label{
           Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
         </p>
         <p>
-					Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
         </p>
-      </div>
-    </uib-tab>
-  </uib-tabset>
+      </div>     
+    </div>    
+  </div>
   <input type="hidden" id="intake_id"/>
- 
-  
   <div id="saving-data-modal" style="display: none">
     <div class="modal-body text-center">
       <h3>Please Wait</h3>

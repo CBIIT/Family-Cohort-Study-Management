@@ -2,9 +2,13 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope,$location, $window, spModal) {
-  /* widget controller */
-  var c = this;
-	
+	/* widget controller */
+	var c = this;
+	c.redirect = function(){
+		//alert('Chris Martin Testing');
+		
+		$location.url("/fcsms");
+	}
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -28,21 +32,32 @@
         <sys_created_on>2019-09-16 23:10:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>720ed9b3db3f370054d8ff621f9619f0</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>FCSMS Navigation</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_720ed9b3db3f370054d8ff621f9619f0</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 19:33:12</sys_updated_on>
-        <template><![CDATA[<div class="container" style="margin-bottom:10px;width:80%;font-size:22px;">
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-10 15:18:14</sys_updated_on>
+        <template><![CDATA[
+<div class="container" style="margin-bottom:10px;width:80%;font-size:22px;">
   <a onclick="location.href = '/fcsms'"
      style="background-color:white;">
     <i class="fa fa-arrow-left"></i> 
     Back to Enrollment List
   </a>
-</div>]]></template>
+</div>
+
+<!--
+<div class="container" style="margin-bottom:10px;width:80%;font-size:22px;">
+  <a ng-click="c.redirect()"
+     style="background-color:white;">
+    <i class="fa fa-arrow-left"></i> 
+    Back to Enrollment List
+  </a>
+</div>
+-->]]></template>
     </sp_widget>
 </record_update>

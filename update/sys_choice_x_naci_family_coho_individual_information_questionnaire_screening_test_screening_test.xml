@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="screening_test" table="x_naci_family_coho_individual_information_questionnaire_screening_test" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Breast Cancer Screening - Mammogram</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:22:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ada1274fdb9c841054d8ff621f9619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:22:22</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Breast Cancer Screening - Mammogram</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint>Magnetic resonance imaging (MRI) of the breasts</hint>
+            <inactive>false</inactive>
+            <label>Breast Cancer Screening - MRI</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:24:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>36c1630fdb9c841054d8ff621f961902</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:24:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Breast Cancer Screening - MRI</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint>the glands that sit on top of your kidneys</hint>
+            <inactive>false</inactive>
+            <label>Ultrasound of the adrenal glands</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:24:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0b226f4fdb9c841054d8ff621f961980</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:24:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Ultrasound of the adrenal glands</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint>a procedure used to look for cancer of the colon or rectum</hint>
+            <inactive>false</inactive>
+            <label>Colonoscopy</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>4</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:24:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>79426f4fdb9c841054d8ff621f961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:24:56</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Colonoscopy</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brain Cancer - MRI</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>5</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:26:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3e82234fdb9c841054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:26:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brain Cancer - MRI</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint>(CT) of the brain done to look for brain cancer</hint>
+            <inactive>false</inactive>
+            <label>Brain Cancer - Computed tomography</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>6</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:27:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>bfa2638fdb9c841054d8ff621f961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:27:03</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Brain Cancer - Computed tomography</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint>special MRI of the entire body, not just one body section</hint>
+            <inactive>false</inactive>
+            <label>Whole-body  (or total body) - MRI</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>7</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:29:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ecf2638fdb9c841054d8ff621f961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:29:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Whole-body  (or total body) - MRI</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>screening_test</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sequence>8</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:29:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f963ef4fdb9c841054d8ff621f9619b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:29:57</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>screening_test</element>
+            <name>x_naci_family_coho_individual_information_questionnaire_screening_test</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-09 21:22:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>c2c1e34fdb9c841054d8ff621f96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>screening_test</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_screening_test_screening_test</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:22:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

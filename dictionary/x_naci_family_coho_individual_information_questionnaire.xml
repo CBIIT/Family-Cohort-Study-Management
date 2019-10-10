@@ -138,6 +138,13 @@
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
             </choice>
         </element>
+        <element choice="1" label="C. Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="B12. Have you ever had any surgery other than for cancer treatment?" max_length="40" name="have_any_surgery" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>

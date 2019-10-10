@@ -6,13 +6,12 @@
   var c = this;
 	var s = $location.search();
 	
-	c.form_section_finished = 1;
-	c.form_section_total = 6;
 	
 	c.biopsyDisplay = false;
 	c.cancerDisplay = false;
 	c.surgeryDisplay = false;
 	c.medicationDisplay = false;
+	c.screeningDisplay = false;
 	c.showWidget = false;
 	
 	c.show_view_index = 1;
@@ -58,8 +57,8 @@
 			record: record,
 			sys_id: c.data.sys_id
 		}).then(function(){
-			//$('#loading').hide();
-			//modal.close();
+			var g_form = c.g_forms[c.current_form_idx];
+			g_form.$private.userState.clearModifiedFields();
 			spModal.open({
 				title: "Message",
 				message: "<center>Record has been saved successfully.</center>",
@@ -92,7 +91,7 @@
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionAOneColumn'
+						"view": 'SectionA'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
 						c.widget_2 = response;
@@ -153,16 +152,29 @@
 					})
 				}
 			}
+			else if(idx == 7){
+				c.current_form_idx = 'SectionC';
+				if(!c.widget_7){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionC'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_7 = response;
+					})
+				}
+			}
 			else{
 				c.current_form_idx = 'SignatureAndSubmit';
-				if(!c.widget_7){
+				if(!c.widget_8){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SignatureAndSubmit'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_7 = response;
+						c.widget_8 = response;
 					})
 				}
 			}
@@ -173,7 +185,7 @@
 	
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		var g_form = null;
-		if(['SectionA','SectionB1','SectionB2','SectionB3', 'SectionB4', 'SignatureAndSubmit'].indexOf(e.targetScope.formModel.view) !== -1){
+		if(['SectionA','SectionB1','SectionB2','SectionB3', 'SectionB4', 'SectionC', 'SignatureAndSubmit'].indexOf(e.targetScope.formModel.view) !== -1){
 			var button_bar = $('.right-side-content #form_widget_'+c.show_view_index+' div.panel-footer');
 			button_bar.html("");
 			var html = '';
@@ -283,13 +295,34 @@
 		else if(e.targetScope.formModel.view == "SectionB4"){
 			c.g_forms['SectionB4'] = e.targetScope.getGlideForm();
 		}
+		else if(e.targetScope.formModel.view == "SectionC"){
+			c.g_forms['SectionC'] = e.targetScope.getGlideForm();
+			g_form = e.targetScope.getGlideForm();
+			var had_screening_for_cancer = g_form.getValue('had_screening_for_cancer');
+			if(had_screening_for_cancer == 'YES'){
+				c.screeningDisplay = true;
+			}
+			else{
+				c.screeningDisplay = false;
+			}
+			
+			e.targetScope.$on('field.change.had_screening_for_cancer', function(ev, obj) {
+				var v1 = c.g_forms['SectionC'].getValue('had_screening_for_cancer');
+				if(v1 == 'YES'){
+					c.screeningDisplay = true;
+				}
+				else{
+					c.screeningDisplay = false;
+				}
+			});
+		}
 		else{
 			c.g_forms['SignatureAndSubmit'] = e.targetScope.getGlideForm();
 		}
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>#sp_formfield_date_of_birth,#sp_formfield_date_had_this_biopsy,#sp_formfield_date,#sp_formfield_date_surgery,#sp_formfield_date_completed_questionnaire{
+        <css>#sp_formfield_date_of_birth,#sp_formfield_date_had_this_biopsy,#sp_formfield_date,#sp_formfield_date_surgery,#sp_formfield_date_completed_questionnaire,#sp_formfield_date_last_screening_test{
   pointer-events:none;
   background-color: lightgray;
 }
@@ -335,7 +368,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>355</sys_mod_count>
+        <sys_mod_count>391</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -343,24 +376,18 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-08 20:29:59</sys_updated_on>
+        <sys_updated_on>2019-10-10 19:29:31</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 18px;">
-  <!--
-  <div class="top-progress-bar">
-    <uib-progressbar max="c.form_section_total" value="c.form_section_finished" type="success">
-      <span style="color:white; white-space:nowrap;">{{c.form_section_finished}} / {{c.form_section_total}}</span>
-    </uib-progressbar>
-  </div>
-	-->
   <div class="left-side-menu col-md-3">
     <ul>
-      <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2)"><i class="fa fa-check-circle" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="c.showView(3)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Biopsy(ies) & Cancer(s)</a></li>
       <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Surgery(ies) & Medical Conditions</a></li>
       <li ng-class="{'active': c.show_view_index == 5}" ng-click="c.showView(5)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Medications & Supplements</a></li>
       <li ng-class="{'active': c.show_view_index == 6}" ng-click="c.showView(6)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Health Practices</a></li>
-      <li ng-class="{'active': c.show_view_index == 7}" ng-click="c.showView(7)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
+      <li ng-class="{'active': c.show_view_index == 7}" ng-click="c.showView(7)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Screening Tests</a></li>
+      <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
     </ul>
   </div>
   <div class="right-side-content col-md-9">
@@ -433,8 +460,18 @@
           Loading...
         </sp-widget>
       </div>
+    
     	<div style="" id="form_widget_7" ng-show="c.show_view_index == 7">
         <sp-widget widget="c.widget_7">
+        	<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+        <div ng-show="c.screeningDisplay" class="div-inset-list">
+          <widget id="fcsms_iiq_form_screening_test_list"></widget>
+        </div>
+      </div>
+    	<div style="" id="form_widget_8" ng-show="c.show_view_index == 8">
+        <sp-widget widget="c.widget_8">
         	<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>

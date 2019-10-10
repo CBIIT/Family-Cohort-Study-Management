@@ -7,6 +7,7 @@
 	c.forms = {};
 	c.sections = [];	
 	c.forms = {};
+	c.show_view_index = 1;
 	
 	$scope.$on('spModel.fields.rendered', function(event) {
 	  var g_form = event.targetScope.getGlideForm()
@@ -25,6 +26,7 @@
 	 });
 	
 	$scope.loadForm = function(index){
+		c.show_view_index = index;
 		var widgetName = 'widget_' + index;
 		var view = 'FHQ' + index;
 		if (!c.data[widgetName] && index != 5) {
@@ -111,7 +113,22 @@
   padding: 15px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
-</css>
+.div_shadow {
+ border-radius: 4px; 
+  margin: 5px 15px 15px; 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin-nt-10 {
+  margin: 0 10px 10px;
+}
+
+.right-side-content &gt; div {
+  padding-bottom: 10px;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -162,7 +179,7 @@
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>157</sys_mod_count>
+        <sys_mod_count>169</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -170,21 +187,30 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-08 17:19:37</sys_updated_on>
+        <sys_updated_on>2019-10-10 19:31:24</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
-  <uib-tabset>
-    <uib-tab index="0" heading="Informant/Proband Information">
+  <div class="left-side-menu col-md-3">
+    <ul class="div_shadow">
+      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadForm(1)">Informant/Proband Information</li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadForm(2)">Demographic Information</li>
+      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadForm(3)">Family Historic Questionaire 1</li>
+      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadForm(4)">Family Historic Questionaire 2</li>
+      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadForm(5)">Family Member Information</li>
+    </ul>   
+  </div>
+  <div class="right-side-content col-md-9">
+    <div ng-show="c.show_view_index == 1" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_1">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.FHQ1)" style="width:100px">
-            SAVE
+          SAVE
         </button>
       </div>
-    </uib-tab>
-    <uib-tab index="1" heading="Demographic Information" ng-click='loadForm(2)'>
+    </div>
+    <div ng-show="c.show_view_index == 2" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_2">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
@@ -193,42 +219,42 @@
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.FHQ2)" style="width:100px">
           SAVE
         </button>
-      </div>
-    </uib-tab>
-    <uib-tab index="2" heading="Family Historic Questionaire 1" ng-click='loadForm(3)'>
+      </div>      
+    </div>
+    <div ng-show="c.show_view_index == 3" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_3">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.FHQ3)" style="width:100px">
-            SAVE
+          SAVE
         </button>
-      </div>
-    </uib-tab>
-    <uib-tab index="3" heading="Family Historic Questionaire 2" ng-click='loadForm(4)'>
+      </div>      
+    </div>
+    <div ng-show="c.show_view_index == 4" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_4">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
         <button class="btn btn-primary pull-right" ng-click="saveForm(c.forms.FHQ4)" style="width:100px">
-            SAVE
+          SAVE
         </button>        
-      </div>
-    </uib-tab>    
-    <uib-tab index="4" heading="Family Member Information" ng-click='loadForm(5)'>
+      </div>      
+    </div>
+    <div ng-show="c.show_view_index == 5" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <widget id="family_members">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </widget>
-  			<button class="btn btn-success pull-right" ng-click="submitForm()" style="width:100px; margin-top: 3px;">
-            SUBMIT
+        <button class="btn btn-success pull-right" ng-click="submitForm()" style="width:100px; margin-top: 3px;">
+          SUBMIT
         </button>
       </div>
-    </uib-tab>     
-  </uib-tabset>
+    </div>
+  </div>
 </div>
 
 <div id="saving-data-modal" style="display: none">

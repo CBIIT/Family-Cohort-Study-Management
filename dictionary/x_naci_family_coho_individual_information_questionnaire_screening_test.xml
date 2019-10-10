@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Individual Information Questionnaire Screening Test" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_screening_test" type="collection">
+        <element label="Age" max_length="100" name="age" type="string"/>
+        <element choice="1" label="How old were you when you first had this screening test?" max_length="40" name="age_had_screening_test" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element label="Age" max_length="100" name="age_last_screening_test" type="string"/>
+        <element label="Date" max_length="40" name="date_last_screening_test" type="glide_date"/>
+        <element label="Number" max_length="100" name="estimated_number" type="string"/>
+        <element choice="1" label="Estimated total number of this screening test you have had ?" max_length="40" name="estimated_total_screening_test" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NUMBER" sequence="1" value="NUMBER"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="Have you ever had this screening test ?" max_length="40" name="had_this_screening_test" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
+        <element choice="1" label="When  did you last have this screening test?" max_length="40" name="last_have_this_screening_test" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="DATE" sequence="1" value="DATE"/>
+                <element inactive_on_update="false" label="AGE" sequence="2" value="AGE"/>
+                <element inactive_on_update="false" label="I have had only one of this screening test" sequence="3" value="I have had only one of this screening test"/>
+                <element inactive_on_update="false" label="Not sure" sequence="4" value="Not sure"/>
+            </choice>
+        </element>
+        <element label="Other Screening Test Specify" max_length="200" name="other_screening_test_specify" type="string"/>
+        <element choice="1" label="Screening Test" max_length="40" name="screening_test" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Breast Cancer Screening - Mammogram" sequence="1" value="Breast Cancer Screening - Mammogram"/>
+                <element hint="Magnetic resonance imaging (MRI) of the breasts" inactive_on_update="false" label="Breast Cancer Screening - MRI" sequence="2" value="Breast Cancer Screening - MRI"/>
+                <element hint="the glands that sit on top of your kidneys" inactive_on_update="false" label="Ultrasound of the adrenal glands" sequence="3" value="Ultrasound of the adrenal glands"/>
+                <element hint="a procedure used to look for cancer of the colon or rectum" inactive_on_update="false" label="Colonoscopy" sequence="4" value="Colonoscopy"/>
+                <element inactive_on_update="false" label="Brain Cancer - MRI" sequence="5" value="Brain Cancer - MRI"/>
+                <element hint="(CT) of the brain done to look for brain cancer" inactive_on_update="false" label="Brain Cancer - Computed tomography" sequence="6" value="Brain Cancer - Computed tomography"/>
+                <element hint="special MRI of the entire body, not just one body section" inactive_on_update="false" label="Whole-body  (or total body) - MRI" sequence="7" value="Whole-body  (or total body) - MRI"/>
+                <element inactive_on_update="false" label="Other" sequence="8" value="Other"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="iiq_form"/>
+        </index>
+    </element>
+</database>

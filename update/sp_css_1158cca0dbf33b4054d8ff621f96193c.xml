@@ -126,6 +126,9 @@ button:focus {&#13;
 .spModal_content{&#13;
   text-align: center;&#13;
 }&#13;
+.fa-check-circle-green{&#13;
+  color: green;&#13;
+}&#13;
 /* header */&#13;
 #crs-kd-logo{&#13;
   position:relative;&#13;
@@ -1064,14 +1067,14 @@ hr{&#13;
         <sys_created_on>2019-09-06 14:37:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1158cca0dbf33b4054d8ff621f96193c</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>fcsms css</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_css_1158cca0dbf33b4054d8ff621f96193c</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-08 16:31:23</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-09 15:23:15</sys_updated_on>
     </sp_css>
 </record_update>
