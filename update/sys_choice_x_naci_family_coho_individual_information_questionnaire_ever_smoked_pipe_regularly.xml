@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="ever_smoked_pipe_regularly" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ever_smoked_pipe_regularly</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>YES, Total amount of months combined</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 16:36:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c1b9598ddba8cc1054d8ff621f961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 16:36:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>YES, Total amount of months combined</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ever_smoked_pipe_regularly</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>YES, Total amount of years combined</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 16:39:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7d8a1d4ddba8cc1054d8ff621f9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 16:39:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>YES, Total amount of years combined</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ever_smoked_pipe_regularly</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NO</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>3</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e69a5dcddba8cc1054d8ff621f9619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 16:39:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>NO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ever_smoked_pipe_regularly</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>4</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 16:40:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>65aadd8ddba8cc1054d8ff621f96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 16:40:04</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>ever_smoked_pipe_regularly</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 16:36:12</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>e0d9598ddba8cc1054d8ff621f96193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ever_smoked_pipe_regularly</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_ever_smoked_pipe_regularly</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 16:36:12</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

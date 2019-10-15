@@ -6,7 +6,46 @@
   var c = this;
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.menu_background {&#13;
+  background-color: #609db5;&#13;
+}&#13;
+&#13;
+#crs-kd-nav {&#13;
+  background-color: #609db5;&#13;
+}&#13;
+&#13;
+.dropdown:hover {&#13;
+  background-color: white;&#13;
+  color: black;&#13;
+}&#13;
+&#13;
+.nav &gt; li &gt; a {&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+.nav &gt; li &gt; a:hover {&#13;
+  color: steelblue;&#13;
+}&#13;
+&#13;
+&#13;
+.dropdown:hover {&#13;
+  background-color: #609db5;&#13;
+}&#13;
+&#13;
+.dropdown .dropdown-toggle {&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+.dropdown .dropdown-toggle:hover {&#13;
+  background-color: white;&#13;
+  color: steelblue;&#13;
+}&#13;
+&#13;
+.dropdown-toggle {&#13;
+    border: 1px solid white;&#13;
+    padding: 10px 25px;&#13;
+    border-radius: 40px;&#13;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -33,15 +72,15 @@
         <sys_created_on>2019-09-06 14:28:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d768ca8dbb33b4054d8ff621f961959</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>fcsms header</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_header_footer_3d768ca8dbb33b4054d8ff621f961959</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-06 16:12:04</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-15 14:24:27</sys_updated_on>
         <template><![CDATA[<div id="crs-kd-header">
 	<div id="crs-kd-logo">
     <div class="container logo" style="width:80%;padding: 10px 0px">
@@ -50,7 +89,18 @@
   </div>
   <div id="crs-kd-nav">
     <div class="container details" style="width:80%;padding-left:40px;"> 
-      Family Cohort Study Management System
+      <!--<nav class="navbar navbar-inverse"> -->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">&nbsp;</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Resource</a></li>
+            <li><a href="#">Registry</a></li>
+          </ul>
       <div class="userInfo-block">
         <div uib-dropdown>
           <button class="login-menu" id="single-button" uib-dropdown-toggle>
@@ -61,7 +111,10 @@
             <li role="menuitem"><a href="/fcsms?user_type=i_user">Study Team</a></li>
           </ul>
         </div>
-      </div>
+      </div> 
+        </div>
+      <!--</nav> -->
+
     </div>
     
   </div>

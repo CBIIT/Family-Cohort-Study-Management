@@ -5,95 +5,19 @@
             <element>biological_mother_s_ethnicity</element>
             <hint/>
             <inactive>false</inactive>
-            <label>American Indian/Alaskan Native</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 22:00:05</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>17aa85a1db377f4054d8ff621f9619a9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 22:00:05</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>American Indian/Alaskan Native</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>biological_mother_s_ethnicity</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Asian</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:59:31</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>938a85a1db377f4054d8ff621f9619ec</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:59:31</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Asian</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>biological_mother_s_ethnicity</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Black/African American</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:59:51</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>7b9a09a1db377f4054d8ff621f9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:59:51</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Black/African American</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>biological_mother_s_ethnicity</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Hispanic/Latino</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 20:19:45</sys_created_on>
+            <sequence>10</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 21:24:38</sys_created_on>
             <sys_domain>global</sys_domain>
-            <sys_id>d3b3f065dbb37f4054d8ff621f9619b3</sys_id>
+            <sys_id>75cb5e8ddb20005054d8ff621f961950</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 20:19:45</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 21:24:38</sys_updated_on>
             <u_dependent_value_2/>
             <value>Hispanic/Latino</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>biological_mother_s_ethnicity</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Native Hawaiian/Other Pacific Islander</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 22:00:19</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>eabac1e1db377f4054d8ff621f961990</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 22:00:19</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Native Hawaiian/Other Pacific Islander</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -103,16 +27,35 @@
             <label>Not Hispanic/Latino</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 20:19:32</sys_created_on>
+            <sequence>20</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 21:25:07</sys_created_on>
             <sys_domain>global</sys_domain>
-            <sys_id>80b33465dbb37f4054d8ff621f961924</sys_id>
+            <sys_id>e9ebde4ddb20005054d8ff621f961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 20:19:32</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 21:25:07</sys_updated_on>
             <u_dependent_value_2/>
             <value>Not Hispanic/Latino</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>biological_mother_s_ethnicity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unknown</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>30</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 21:25:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8efb9e0ddb20005054d8ff621f961916</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 21:25:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Unknown</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>biological_mother_s_ethnicity</element>

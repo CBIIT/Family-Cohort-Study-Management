@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_naci_family_coho_individual_information_questionnaire">ever_smoked_pipe_regularly=YES, Total amount of years combined^EQ<item endquery="false" field="ever_smoked_pipe_regularly" goto="false" newquery="false" operator="=" or="false" value="YES, Total amount of years combined"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.setDisplay('pipe_total_amount_of_years', false);
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	g_form.setDisplay('pipe_total_amount_of_years', true);
+}]]></script_true>
+        <set_values/>
+        <short_description>IIQ - SectionD - Control smoked pipe regularly (years)</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-15 20:26:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>312ecec9dbe4cc10b86770c08c96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IIQ - SectionD - Control smoked pipe regularly (years)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_policy_312ecec9dbe4cc10b86770c08c96196c</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-15 20:26:00</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

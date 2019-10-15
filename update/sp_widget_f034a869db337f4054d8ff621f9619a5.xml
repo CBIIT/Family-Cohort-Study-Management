@@ -32,16 +32,38 @@
 	}
 
 	$scope.saveForm = function(form){
+		var index; 
+		switch(form){
+			case c.forms.LFS1:
+				index = 1;
+				break;
+			case c.forms.LFS2:
+				index = 2;
+				break;
+			case c.forms.LFS3:
+				index = 3;
+				break;
+			case c.forms.LFS4:
+				index = 4; 
+				break;
+			case c.forms.LFS41:
+				index = 5;
+				break;
+			case c.forms.LFS1:
+				index = 6;
+				break;
+		}
 		var modal = $uibModal.open({
 			template: $('#saving-data-modal')[0].innerHTML,
 			size: 'sm'
 		});
-		
+
 		var record = getFormValues(form);
 		$scope.server.get({
 			action: 'update',
 			record: record,
-			sys_id: c.data.id
+			sys_id: c.data.id,
+			index: index
 		}).then(function(){
 			form.$private.userState.clearModifiedFields();
 			$('#loading').hide();
@@ -53,12 +75,12 @@
 			})
 		});	
 	}
-	
+
 	$scope.submitForm = function(form){
 		$scope.saveForm(form);
 		$('#thank_you').show();
 	}
-	
+
 	$scope.loadTab = function(index) {
 		c.show_view_index = index;
 		var widgetName = 'widget_' + index;
@@ -75,8 +97,8 @@
 			})
 		}
 	}
-	
-	
+
+
 	function getFormValues(gForm) {
 		var fields = gForm.getFieldNames();
 		var record = {};
@@ -102,9 +124,11 @@
 			$timeout(function(){
 				$('input[name="birthday"]').prop('readonly',true);		
 			});
-	   
+
 		}
 		if(view == "LFS3"){
+			g_form.showFieldMsg('tested_positive', 'Select all that apply', 'info')
+
 			if(g_form.getValue('diagnosed_with_cancer') == 'Yes'){
 				window.setShowCancer(true);
 			}else{
@@ -120,6 +144,9 @@
 			});
 		}
 		if (view == "LFS4"){
+			$timeout(function(){
+				$('[for="sp_formfield_biological_relatives_diagnosed"]')[0].innerText += ' (Please include only biological relatives)';
+			});
 			if(g_form.getValue('biological_relatives_diagnosed') == 'Yes'){
 				window.setShowFamilyCancer(true);
 			}else{
@@ -136,7 +163,7 @@
 		if(view == "LFS41"){
 			if(g_form.getValue('relatives_had_genetic_testing') == 'No'){
 				window.setShowTest(false);
-      }else{
+			}else{
 				if(g_form.getValue('relatives_test_positive') == 'Yes'){
 					window.setShowTest(true);
 				}else{
@@ -198,8 +225,11 @@
 				}
 			});			
 		}
-
 	});
+	
+	//spUtil.recordWatch($scope, 'x_naci_family_coho_mock_up_intake', '', function(response){
+	//	spUtil.update($scope);
+	//});
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>div legend{
@@ -312,6 +342,7 @@ fieldset label{
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
+			gr1.saved_section = input.index;
 			gr1.updateMultiple();
 		}
 	}
@@ -320,6 +351,10 @@ fieldset label{
 		"table": "x_naci_family_coho_mock_up_intake",
 		"view": "LFS1"
 	});
+	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake');
+	gr.get(sys_id);
+	data.saved_section = +gr.getValue('saved_section') || 0;
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -327,7 +362,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>591</sys_mod_count>
+        <sys_mod_count>612</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -335,17 +370,17 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-10 21:42:07</sys_updated_on>
+        <sys_updated_on>2019-10-15 22:24:14</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
   <div class="left-side-menu col-md-3">
     <ul class="div_shadow margin-0 menu">
       <li class="menu_header"><b>Intake Questionaire</b></li>
-      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><a href="#">Study Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><a href="#">Personal Information</a></li>
-      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><a href="#">Personal Cancer History</a></li>
-      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><a href="#">Family Memebers' Cancer History</a></li>
-      <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><a href="#">Family Members' Genetic Tests</a></li>
-      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><a href="#">Final Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 1, 'fa-circle-o': c.data.saved_section < 1} " aria-hidden="true"></i> <a href="#">Study Introduction</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 2, 'fa-circle-o': c.data.saved_section < 2} " aria-hidden="true"></i><a href="#">Personal Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 3, 'fa-circle-o': c.data.saved_section < 3} " aria-hidden="true"></i><a href="#">Personal Cancer History</a></li>
+      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 4, 'fa-circle-o': c.data.saved_section < 4} " aria-hidden="true"></i><a href="#">Family Memebers' Cancer History</a></li>
+      <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 5, 'fa-circle-o': c.data.saved_section < 5} " aria-hidden="true"></i><a href="#">Family Members' Genetic Tests</a></li>
+      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.saved_section >= 6, 'fa-circle-o': c.data.saved_section < 6} " aria-hidden="true"></i><a href="#">Final Information</a></li>
     </ul>
   </div>
   <div class="right-side-content col-md-9">
@@ -381,7 +416,7 @@ fieldset label{
           Please note that cancer treatment is not being offered as part of this protocol. 
         </p>
         <p>
-          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Janet Bracci at ###-###-####. 
+          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Stephanie Steinbart at ###-###-####. 
         </p>
         <div id="widget_1" class="clearfix">
           <sp-widget widget="c.data.widget_1"></sp-widget>
@@ -403,6 +438,9 @@ fieldset label{
       </div>
     </div>
     <div ng-show="c.show_view_index == 3" class="div_shadow">
+      <p style="padding: 10px 15px">
+        To determine eligibility, we need to collect information about cancer diagnoses and genetic testing.  If you are filling this form out for someone else, please remember that “you” refers to the potential research subject. 
+      </p>
       <div id="widget_3" style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_3">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>

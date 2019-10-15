@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Individual Information Questionnaire Breast Removal" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_breast_removal" type="collection">
+        <element label="Age when you had your breast removed?" max_length="2" name="age_when_you_had_your_breast_removed" type="string"/>
+        <element label="Date you had your breast removed?" max_length="40" name="date_you_had_your_breast_removed" type="glide_date"/>
+        <element label="Don't Know" max_length="40" name="dont_know" type="boolean"/>
+        <element choice="1" label="Indicate which side" max_length="40" name="indicate_which_side" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Left" sequence="10" value="left"/>
+                <element inactive_on_update="false" label="Right" sequence="20" value="right"/>
+                <element inactive_on_update="false" label="Both" sequence="30" value="both"/>
+            </choice>
+        </element>
+    </element>
+</database>

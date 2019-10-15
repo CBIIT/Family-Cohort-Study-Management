@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness" label="How often in the past 7 days have you felt feelings of worthlessness" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness</element>
+            <help/>
+            <hint/>
+            <label>How often in the past 7 days have you felt feelings of worthlessness</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <plural>How often in the past 7 days have you felt feelings of worthlessness</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 18:29:42</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>43c3f501db64cc10b86770c08c9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>How often in the past 7 days have you felt feelings of worthlessness</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 18:29:42</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

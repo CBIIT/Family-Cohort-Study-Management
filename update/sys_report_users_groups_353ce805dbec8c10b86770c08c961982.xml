@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="Enrollment List">bd3ce805dbec8c10b86770c08c961981</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-15 13:16:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>353ce805dbec8c10b86770c08c961982</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bd3ce805dbec8c10b86770c08c961981</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_report_users_groups_353ce805dbec8c10b86770c08c961982</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-15 13:16:58</sys_updated_on>
+        <user_id display_value="Chris Martin">1e8aa85fdbcc8c50561276708c961972</user_id>
+    </sys_report_users_groups>
+</record_update>

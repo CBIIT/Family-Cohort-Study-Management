@@ -64,15 +64,15 @@
 	});
 }]]></script_true>
         <set_values/>
-        <short_description>Control diagnosed cancer field</short_description>
+        <short_description>FHQ Control diagnosed cancer field</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>zhoujim@nih.gov</sys_created_by>
         <sys_created_on>2019-09-27 14:48:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>9432dc5fdb0c8050b86770c08c961981</sys_id>
-        <sys_mod_count>15</sys_mod_count>
-        <sys_name>Control diagnosed cancer field</sys_name>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>FHQ Control diagnosed cancer field</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_9432dc5fdb0c8050b86770c08c961981</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 19:06:10</sys_updated_on>
+        <sys_updated_on>2019-10-15 19:14:22</sys_updated_on>
         <table>x_naci_family_coho_family_history_question</table>
         <ui_type>10</ui_type>
         <view/>

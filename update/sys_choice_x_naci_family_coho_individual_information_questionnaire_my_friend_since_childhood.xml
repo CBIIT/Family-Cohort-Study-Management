@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="my_friend_since_childhood" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>my_friend_since_childhood</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>None</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 20:25:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6c4ecec9dbe4cc10b86770c08c961941</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 20:25:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>none</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>my_friend_since_childhood</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Some</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 20:25:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b94ecec9dbe4cc10b86770c08c9619e2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 20:25:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>some</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>my_friend_since_childhood</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>A lot</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 20:25:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e74e020ddbe4cc10b86770c08c961983</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 20:25:44</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>a_lot</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>my_friend_since_childhood</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>There is no such person</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>40</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 20:25:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>095ecec9dbe4cc10b86770c08c9619e3</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 20:25:55</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>no_such_person</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>my_friend_since_childhood</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 20:25:24</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>b54e820ddbe4cc10b86770c08c9619e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>my_friend_since_childhood</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_my_friend_since_childhood</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 20:25:24</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

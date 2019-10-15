@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="ive_been_criticizing_myself" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ive_been_criticizing_myself</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I haven't been doing it at all</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:41:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d214c649dba4cc10b86770c08c9619c6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:41:05</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ive_been_criticizing_myself</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I have been doing it a little bit</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:41:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>80240a49dba4cc10b86770c08c961931</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:41:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ive_been_criticizing_myself</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I have been doing this a medium amount</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:41:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4224c649dba4cc10b86770c08c9619c7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:41:23</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ive_been_criticizing_myself</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I have been doing this a lot</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>40</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:41:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>94340649dba4cc10b86770c08c9619dc</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:41:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>ive_been_criticizing_myself</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:41:03</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>0c240649dba4cc10b86770c08c96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ive_been_criticizing_myself</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_ive_been_criticizing_myself</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:41:03</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

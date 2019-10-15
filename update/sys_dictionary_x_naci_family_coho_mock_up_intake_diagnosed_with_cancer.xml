@@ -14,7 +14,7 @@
         <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Have you ever been diagnosed with cancer?</column_label>
+        <column_label>Have Research Subject ever been diagnosed with cancer?</column_label>
         <comments/>
         <create_roles/>
         <default_value>No</default_value>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-06 17:55:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>98a5b8a0db3b3b4054d8ff621f96190d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Have you ever been diagnosed with cancer?</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Have Research Subject ever been diagnosed with cancer?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_mock_up_intake_diagnosed_with_cancer</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-10 13:49:27</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-15 21:46:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

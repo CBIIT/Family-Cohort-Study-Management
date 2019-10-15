@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="indicate_which_side" label="Indicate which side" language="en" table="x_naci_family_coho_individual_information_questionnaire_breast_removal">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>indicate_which_side</element>
+            <help/>
+            <hint/>
+            <label>Indicate which side</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_breast_removal</name>
+            <plural>Indicate which sides</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 16:34:30</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a81330f3db584810b86770c08c961912</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Indicate which side</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_breast_removal_indicate_which_side_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 16:34:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

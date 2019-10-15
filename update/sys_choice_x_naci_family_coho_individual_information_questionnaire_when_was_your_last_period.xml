@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="when_was_your_last_period" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>when_was_your_last_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Age</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:30:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c6a618ffdb944810b86770c08c9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:30:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>age</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>when_was_your_last_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Date</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:30:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>44c65c7fdb944810b86770c08c96197f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:30:46</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>date</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>when_was_your_last_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:31:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f8d690bfdb944810b86770c08c96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:31:05</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>dont_know</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>when_was_your_last_period</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:30:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>c6b6d4bfdb944810b86770c08c96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>when_was_your_last_period</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_when_was_your_last_period</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:30:38</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

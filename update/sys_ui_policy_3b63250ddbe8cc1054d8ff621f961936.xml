@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_naci_family_coho_individual_information_questionnaire">have_smoked_cigarettes=YES^EQ<item endquery="false" field="have_smoked_cigarettes" goto="false" newquery="false" operator="=" or="false" value="YES"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.setDisplay('age_start_smoking', false);
+	g_form.setDisplay('cigarettes_smoke', false);
+	g_form.setDisplay('still_smoke_cigarettes_regularly', false);
+	//g_form.setDisplay('age_most_recently_stop_smoking', false);
+	g_form.setValue('age_start_smoking','');
+	g_form.setValue('cigarettes_smoke','');
+	g_form.setValue('still_smoke_cigarettes_regularly','YES');
+	//g_form.setValue('age_most_recently_stop_smoking','');
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	g_form.setDisplay('age_start_smoking', true);
+	g_form.setDisplay('cigarettes_smoke', true);
+	g_form.setDisplay('still_smoke_cigarettes_regularly', true);
+	//g_form.setDisplay('age_most_recently_stop_smoking', true);
+	g_form.setValue('age_start_smoking','');
+	g_form.setValue('cigarettes_smoke','');
+	g_form.setValue('still_smoke_cigarettes_regularly','YES');
+	//g_form.setValue('age_most_recently_stop_smoking','');
+}]]></script_true>
+        <set_values/>
+        <short_description>IIQ - SectionD - Control smoked cigarettes regularly</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-15 17:22:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3b63250ddbe8cc1054d8ff621f961936</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>IIQ - SectionD - Control smoked cigarettes regularly</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_policy_3b63250ddbe8cc1054d8ff621f961936</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-15 20:43:40</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

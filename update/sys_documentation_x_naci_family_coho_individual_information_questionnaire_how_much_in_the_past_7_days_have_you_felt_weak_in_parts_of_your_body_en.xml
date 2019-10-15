@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body" label="How much in the past 7 days have you felt weak in parts of your body" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body</element>
+            <help/>
+            <hint/>
+            <label>How much in the past 7 days have you felt weak in parts of your body</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <plural>How much in the past 7 days have you felt weak in parts of your bodies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 18:43:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>def63505db64cc10b86770c08c9619a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>How much in the past 7 days have you felt weak in parts of your body</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 18:43:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

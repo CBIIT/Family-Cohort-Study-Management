@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="FCSMS Intake Form" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
-        <element choice="3" label="Biological Father's Ethnicity" max_length="40" name="biological_father_s_ethnicity" type="choice">
+        <element choice="3" default="American Indian/Alaskan Native" label="Biological Father's Ethnicity" max_length="40" name="biological_father_s_ethnicity" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian/Alaskan Native" value="American Indian/Alaskan Native"/>
                 <element inactive_on_update="false" label="Asian" value="Asian"/>
@@ -11,16 +11,15 @@
                 <element inactive_on_update="false" label="Unknown" value="Unknown"/>
             </choice>
         </element>
+        <element label="Biological Father's Race" max_length="100" name="biological_father_s_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
         <element choice="3" label="Biological Mother's Ethnicity" max_length="40" name="biological_mother_s_ethnicity" type="choice">
             <choice>
-                <element inactive_on_update="false" label="American Indian/Alaskan Native" value="American Indian/Alaskan Native"/>
-                <element inactive_on_update="false" label="Asian" value="Asian"/>
-                <element inactive_on_update="false" label="Black/African American" value="Black/African American"/>
-                <element inactive_on_update="false" label="Hispanic/Latino" value="Hispanic/Latino"/>
-                <element inactive_on_update="false" label="Native Hawaiian/Other Pacific Islander" value="Native Hawaiian/Other Pacific Islander"/>
-                <element inactive_on_update="false" label="Not Hispanic/Latino" value="Not Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Hispanic/Latino" sequence="10" value="Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="20" value="Not Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Unknown" sequence="30" value="Unknown"/>
             </choice>
         </element>
+        <element label="Biological Mother's Race" max_length="100" name="biological_mother_s_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
         <element choice="3" default="Yes" label="Have any of your biological relatives been diagnosed with cancer?" max_length="100" name="biological_relatives_diagnosed" type="choice">
             <choice>
                 <element inactive_on_update="false" label="I have no information on my biological relatives" value="I have no information on my biological relatives"/>
@@ -48,8 +47,8 @@
                 <element inactive_on_update="false" label="Mail" sequence="4" value="Mail"/>
             </choice>
         </element>
-        <element label="Confirm Email Address" max_length="200" name="confirm_email_address" type="string"/>
-        <element choice="3" default="No" label="Have you ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
+        <element label="Confirm Contact Email Address" max_length="200" name="confirm_email_address" type="string"/>
+        <element choice="3" default="No" label="Have Research Subject ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="0" value="Yes"/>
@@ -62,7 +61,7 @@
                 <element inactive_on_update="false" label="Not Eligible" sequence="3" value="Not Eligible"/>
             </choice>
         </element>
-        <element label="Email Address" max_length="100" name="email_address" type="string"/>
+        <element label="Contact Email Address" max_length="100" name="email_address" type="string"/>
         <element choice="1" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Intake Form Submitted" sequence="1" value="Intake Form Submitted"/>
@@ -72,6 +71,7 @@
             </choice>
         </element>
         <element label="Family ID" max_length="100" name="family_id" type="string"/>
+        <element label="What is the name of the person you are filled this out for" max_length="100" name="filled_for" type="string"/>
         <element choice="3" default="No" label="Are you filling this questionnaire out for someone else?" mandatory="true" max_length="40" name="filling_for_someone" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
@@ -104,8 +104,9 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Research Subject Name" max_length="100" name="name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="I am the person's" max_length="100" name="other_relationship" type="string"/>
         <element choice="3" default="No" label="Participated through another institution, university, or government agency?" max_length="40" name="participated_through_another_institution" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
@@ -113,15 +114,13 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element label="Phone Number" max_length="100" name="phone_number" type="string"/>
-        <element choice="3" label="Race/Ethnicity" max_length="40" name="race_ethnicity" type="choice">
+        <element label="Participant Race" max_length="100" name="participate_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
+        <element label="Contact Phone Number" max_length="100" name="phone_number" type="string"/>
+        <element choice="3" default="unknown" label="Ethnicity" max_length="40" name="race_ethnicity" type="choice">
             <choice>
-                <element inactive="true" inactive_on_update="true" label="American Indian/Alaskan Native" sequence="0" value="American Indian/Alaskan Native"/>
-                <element inactive_on_update="false" label="Asian" sequence="0" value="Asian"/>
-                <element inactive_on_update="false" label="Black/African American" sequence="1" value="Black/African American"/>
-                <element inactive="true" inactive_on_update="true" label="Native Hawaiian/Other Pacific Islander" sequence="1" value="Native Hawaiian/Other Pacific Islander"/>
-                <element inactive_on_update="false" label="Hispanic/Latino" sequence="2" value="Hispanic/Latino"/>
-                <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="3" value="Not Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Hispanic/Latino" sequence="10" value="Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="20" value="Not Hispanic/Latino"/>
+                <element inactive_on_update="false" label="unknown" sequence="30" value="unknown"/>
             </choice>
         </element>
         <element choice="3" default="No" label="Are you or any of your relatives currently receiving cancer care or follow-up?" max_length="40" name="received_cancer_care" type="choice">
@@ -131,7 +130,18 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element label="What is your relationship to this person?" max_length="200" name="relationship" type="string"/>
+        <element choice="3" default="I am the person's parent" label="What is your relationship to this person?" max_length="200" name="relationship" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="I am the person's parent" sequence="10" value="I am the person's parent"/>
+                <element inactive_on_update="false" label="I am the person's sibling" sequence="20" value="I am the person's sibling"/>
+                <element inactive_on_update="false" label="I am the person's child" sequence="30" value="I am the person's child"/>
+                <element inactive_on_update="false" label="I am the person's cousin" sequence="40" value="I am the person's cousin"/>
+                <element inactive_on_update="false" label="I am the person's aunt/uncl" sequence="50" value="I am the person's aunt/uncl"/>
+                <element inactive_on_update="false" label="I am the person's spouse/long term partner" sequence="50" value="I am the person's spouse/long term partner"/>
+                <element inactive_on_update="false" label="I am this person's grandparent" sequence="60" value="I am this person's grandparent"/>
+                <element inactive_on_update="false" label="Other" sequence="70" value="Other"/>
+            </choice>
+        </element>
         <element choice="3" default="No" label="Have your relatives been genetically tested for inherited cancer syndromes?" max_length="40" name="relatives_had_genetic_testing" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
@@ -146,6 +156,7 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
+        <element label="Saved Section" max_length="20" name="saved_section" type="string"/>
         <element label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
         <element choice="1" label="For which of the following genes or syndromes do you believe you have had testin" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
@@ -172,6 +183,7 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
+        <element label="What is your name" max_length="100" name="your_name" type="string"/>
         <index name="index">
             <element name="study"/>
         </index>

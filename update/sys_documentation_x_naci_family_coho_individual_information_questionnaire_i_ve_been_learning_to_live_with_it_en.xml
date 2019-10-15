@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="i_ve_been_learning_to_live_with_it" label="I've been learning to live with it" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>i_ve_been_learning_to_live_with_it</element>
+            <help/>
+            <hint/>
+            <label>I've been learning to live with it</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <plural>I've been learning to live with its</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:59:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>c948c241dbe4cc10b86770c08c961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>I've been learning to live with it</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_i_ve_been_learning_to_live_with_it_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:59:08</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

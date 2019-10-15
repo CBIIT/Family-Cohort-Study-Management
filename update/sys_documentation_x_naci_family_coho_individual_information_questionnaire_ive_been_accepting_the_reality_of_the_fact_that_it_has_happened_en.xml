@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="ive_been_accepting_the_reality_of_the_fact_that_it_has_happened" label="I've been accepting the reality of the fact that it has happened" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>ive_been_accepting_the_reality_of_the_fact_that_it_has_happened</element>
+            <help/>
+            <hint/>
+            <label>I've been accepting the reality of the fact that it has happened</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <plural>I've been accepting the reality of the fact that it has happened</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-15 19:54:12</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>b827ca4ddba4cc10b86770c08c9619cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>I've been accepting the reality of the fact that it has happened</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_ive_been_accepting_the_reality_of_the_fact_that_it_has_happened_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-15 19:54:12</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="last_regular_period" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>last_regular_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Within the past 6 months</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:22:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>44e4947fdb944810b86770c08c96191f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:22:55</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>past_6_months</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>last_regular_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Between 6 months and one year ago</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:23:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a415d83fdb944810b86770c08c9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:23:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>six_months_to_one_year</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>last_regular_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>More than one year ago</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:23:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b625d47fdb944810b86770c08c96196e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:23:51</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>more_than_one_year_ago</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>last_regular_period</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>40</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:24:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6e35d47fdb944810b86770c08c961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:24:07</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>dont_know</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>last_regular_period</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 14:22:55</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>3cf498bbdb944810b86770c08c9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>last_regular_period</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_last_regular_period</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-11 14:22:55</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
