@@ -78,29 +78,10 @@
             </choice>
         </element>
         <element label="Place it Began" max_length="200" name="place_began" type="string"/>
-        <element label="Proband Address" max_length="300" name="proband_address" type="string"/>
-        <element label="Proband Address 2" max_length="200" name="proband_address_2" type="string"/>
-        <element label="Proband City" max_length="100" name="proband_city" type="string"/>
-        <element label="Proband First Name" max_length="100" name="proband_first_name" type="string"/>
-        <element label="Proband Home Phone" max_length="50" name="proband_home_phone" type="string"/>
-        <element label="Proband Last Name" max_length="100" name="proband_last_name" type="string"/>
-        <element label="Proband Maiden Name" max_length="100" name="proband_maiden_name" type="string"/>
-        <element label="Proband Middle Name" max_length="50" name="proband_middle_name" type="string"/>
-        <element label="Proband Office Phone" max_length="50" name="proband_office_phone" type="string"/>
-        <element label="Proband State" max_length="50" name="proband_state" type="string"/>
-        <element label="Proband Zipcode" max_length="20" name="proband_zipcode" type="string"/>
+        <element label="What is the best email to reach them" max_length="200" name="proband_email" type="string"/>
+        <element label="What is the best phone number to reach them" max_length="50" name="proband_phone" type="string"/>
         <element label="If Protestant, what denomination?" max_length="100" name="protestant_denomination" type="string"/>
-        <element label="Proxy Address" max_length="300" name="proxy_address" type="string"/>
-        <element label="Proxy Address 2" max_length="200" name="proxy_address_2" type="string"/>
-        <element label="Proxy City" max_length="100" name="proxy_city" type="string_full_utf8"/>
-        <element label="Proxy First Name" max_length="100" name="proxy_first_name" type="string"/>
-        <element label="Proxy Home Phone" max_length="50" name="proxy_home_phone" type="string"/>
-        <element label="Proxy Last Name" max_length="100" name="proxy_last_name" type="string"/>
-        <element label="Proxy Maiden Name" max_length="50" name="proxy_maiden_name" type="string"/>
-        <element label="Proxy Middle Name" max_length="50" name="proxy_middle_name" type="string"/>
-        <element label="Proxy Office Phone" max_length="50" name="proxy_office_phone" type="string"/>
-        <element label="Proxy State" max_length="50" name="proxy_state" type="string"/>
-        <element label="Proxy Zipcode" max_length="20" name="proxy_zipcode" type="string"/>
+        <element label="Your Name" max_length="100" name="proxy_name" type="string"/>
         <element choice="1" label="What is your race?" max_length="20" name="race" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian or Alaska Native" sequence="10" value="American Indian or Alaska Native"/>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="age_most_recently_stop_drinking" label="E8.At what age did you most recently stop drinking one alcoholic drink per week?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>age_most_recently_stop_drinking</element>
+            <help/>
+            <hint/>
+            <label>E8.At what age did you most recently stop drinking one alcoholic drink per week?</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <plural>E8.At what age did you most recently stop drinking one alcoholic drink per week?</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 15:18:56</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>66b1d61ddba80010b86770c08c961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>E8.At what age did you most recently stop drinking one alcoholic drink per week?</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_age_most_recently_stop_drinking_en</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 15:18:56</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

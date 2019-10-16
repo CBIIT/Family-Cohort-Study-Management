@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
+        <element choice="1" label="E8.At what age did you most recently stop drinking one alcoholic drink per week?" max_length="40" name="age_most_recently_stop_drinking" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="D5. what age did you most recently stop smoking at least one cigarette per day ?" max_length="40" name="age_most_recently_stop_smoking" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
@@ -7,6 +13,8 @@
             </choice>
         </element>
         <element label="Age_Specify" max_length="100" name="age_most_recently_stop_smoking_specify" type="string"/>
+        <element label="Age" max_length="100" name="age_number_most_recently_stop_drinking" type="string"/>
+        <element label="Age" max_length="100" name="age_start_drink_specify" type="string"/>
         <element choice="1" label="D2.At what age did you first start smoking regularly?" max_length="40" name="age_start_smoking" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
@@ -36,7 +44,7 @@
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
             </choice>
         </element>
-        <element label="How old?" max_length="2" name="birth_control_how_old" type="string"/>
+        <element label="How old were you when you started taking birth control pills?" max_length="2" name="birth_control_how_old" type="string"/>
         <element label="Birth control or medications" max_length="40" name="birth_control_or_medications" type="boolean"/>
         <element choice="1" label="Is this condition (Bone Fracture) currently being treated ?" max_length="40" name="bone_fracture_treated" type="choice">
             <choice>
@@ -64,6 +72,12 @@
             </choice>
         </element>
         <element label="Country" max_length="100" name="country" type="string"/>
+        <element choice="3" default="NO" label="E5.Do you currently drink at least one alcoholic drink once a week?" max_length="40" name="currently_drink_at_least_one_alcoholic_drink" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+            </choice>
+        </element>
         <element label="Please indicate the date you completed this questionnaire" max_length="40" name="date_completed_questionnaire" type="glide_date"/>
         <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
         <element label="Date when you had your first period" max_length="40" name="date_when_you_had_your_first_period" type="glide_date"/>
@@ -190,6 +204,12 @@
                 <element inactive_on_update="false" label="No" sequence="20" value="no"/>
             </choice>
         </element>
+        <element choice="1" label="E2. on the days you drank alcohol, how many drinks did you have? " max_length="40" name="drinks_you_have" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Average Number of drinks per day" sequence="1" value="Average Number of drinks per day"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element label="Enrollment" max_length="32" name="enrollment" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element choice="1" label="D8.Have you ever chewed tobacco regularly ?" max_length="40" name="ever_chewed_tobacco_regularly" type="choice">
             <choice>
@@ -234,6 +254,13 @@
             <choice>
                 <element inactive_on_update="false" label="FEMALE" value="FEMALE"/>
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
+            </choice>
+        </element>
+        <element choice="3" default="YES" label="E3.Have you ever had one or more alcoholic drinks per week for 6 months or more?" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
         <element choice="1" label="C. Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
@@ -437,6 +464,24 @@
                 <element inactive_on_update="false" label="Several times a day" sequence="40" value="several_times_a_day"/>
             </choice>
         </element>
+        <element choice="1" label="E1. how often did you have at least one alcoholic drink? " max_length="40" name="how_often_have_alcoholic_drink" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Never" sequence="1" value="Never"/>
+                <element inactive_on_update="false" label="Less than 4 times a month" sequence="2" value="Less than 4 times a month"/>
+                <element inactive_on_update="false" label="Once a week" sequence="3" value="Once a week"/>
+                <element inactive_on_update="false" label="203 days per week" sequence="4" value="203 days per week"/>
+                <element inactive_on_update="false" label="4-7 days per week" sequence="5" value="4-7 days per week"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="6" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="E6.How often do you have at least one alcoholic drink since you started drinking" max_length="40" name="how_often_have_at_least_one_alcoholic_drink" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="About once a week" sequence="1" value="About once a week"/>
+                <element inactive_on_update="false" label="2-3 days per week" sequence="2" value="2-3 days per week"/>
+                <element inactive_on_update="false" label="4-7 days per week" sequence="3" value="4-7 days per week"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="4" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="How often have thoughts about your chances of getting cancer affected your mood?" max_length="40" name="how_often_have_thoughts_about_your_chances_of_getting_cancer_affected_your_mood" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all or rarely" sequence="10" value="not_at_all"/>
@@ -617,11 +662,19 @@
         </element>
         <element label="How old were you when you first became pregnant?" max_length="4" name="how_old_were_you_when_you_first_became_pregnant" type="string"/>
         <element label="How old were you when you first consulted a doctor for fertility problems?" max_length="2" name="how_old_were_you_when_you_first_consulted_a_doctor_for_fertility_problems" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="How old when you had your first menstrual period" max_length="40" name="how_old_when_you_hard_your_first_menstrual_period" type="string"/>
         <element choice="1" label="Is this condition (hypertension) currently being treated ?" max_length="40" name="hypertension_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
+        <element choice="1" label="If you have not had a period in 6 months or more, when was your last period?" max_length="40" name="if_you_have_not_had_a_period_in_6_months_or_more_when_was_your_last_period" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Date" sequence="10" value="date"/>
+                <element inactive_on_update="false" label="Age" sequence="20" value="age"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
         <element choice="1" label="IIQ Status" max_length="40" name="iiq_status" type="choice">
@@ -893,10 +946,12 @@
         <element choice="1" label="How old were you when you had your first menstrual period?" max_length="40" name="knowledge_first_menstrual_period" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Age" sequence="10" value="age"/>
-                <element inactive_on_update="false" label="Date" sequence="20" value="date"/>
+                <element inactive_on_update="false" label="Never had menstrual period" sequence="20" value="never_had"/>
                 <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
             </choice>
         </element>
+        <element label="Age" max_length="3" name="last_period_age" type="string"/>
+        <element label="Date" max_length="40" name="last_period_date" type="glide_date"/>
         <element choice="1" label="Last regular menstrual period (Please do not include occastional spotting)?" max_length="40" name="last_regular_period" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Within the past 6 months" sequence="10" value="past_6_months"/>
@@ -936,10 +991,10 @@
         </element>
         <element choice="1" label="My child(ren)" max_length="40" name="my_children" type="choice">
             <choice>
-                <element inactive_on_update="false" label="There is no such person" value="no_such_person"/>
                 <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
+                <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
             </choice>
         </element>
         <element choice="1" label="My co-worker(s)" max_length="40" name="my_co_workers" type="choice">
@@ -1072,6 +1127,14 @@
             </choice>
         </element>
         <element label="Other" max_length="100" name="non_family_member_other_description" type="string"/>
+        <element label="Number of Drinks" max_length="100" name="number_of_drinks" type="string"/>
+        <element label="Number of drinks" max_length="100" name="number_of_drinks_days_drink_alcohol" type="string"/>
+        <element choice="1" label="E7.On the days you drink alcohol, how many drinks do you have on average?" max_length="40" name="on_the_days_drinks_have_on_average" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NUMBER" sequence="1" value="NUMBER"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <element choice="1" label="A7. What is your national origin or ancestry?" max_length="40" name="origin_or_ancestry" type="choice">
             <choice>
                 <element inactive_on_update="false" label="United Kingdom" sequence="1" value="United Kingdom"/>
@@ -1114,6 +1177,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Other" max_length="40" name="other" type="boolean"/>
         <element choice="1" label="Have you ever used other alternative therapy or treatment ? " max_length="40" name="other_alternative_therapy_or_treatment" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1126,6 +1190,7 @@
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Other (Specify)" max_length="40" name="other_specify" type="string"/>
         <element label="Please specify this therapy or treatment" max_length="200" name="other_therapy_or_treatment_specify" type="string"/>
         <element label="Total amount of Months" max_length="100" name="pipe_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="pipe_total_amount_of_years" type="string"/>
@@ -1433,6 +1498,12 @@
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
+            </choice>
+        </element>
+        <element choice="1" label="E4.At what age did this start?" max_length="40" name="what_age_start_drink" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
         <element label="What was your age when you had a hysterectomy?" max_length="2" name="what_was_your_age_when_you_had_a_hysterectomy" type="string"/>

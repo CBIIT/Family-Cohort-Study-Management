@@ -24,19 +24,19 @@
             <element>knowledge_first_menstrual_period</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Date</label>
+            <label>Never had menstrual period</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <sequence>20</sequence>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-11 14:17:55</sys_created_on>
+            <sys_created_on>2019-10-16 15:42:18</sys_created_on>
             <sys_domain>global</sys_domain>
-            <sys_id>7bc3dcbbdb944810b86770c08c9619ef</sys_id>
+            <sys_id>85075655dbe80010b86770c08c96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-11 14:17:55</sys_updated_on>
+            <sys_updated_on>2019-10-16 15:42:18</sys_updated_on>
             <u_dependent_value_2/>
-            <value>date</value>
+            <value>never_had</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

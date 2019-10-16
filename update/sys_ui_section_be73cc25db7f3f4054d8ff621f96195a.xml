@@ -1,198 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="be73cc25db7f3f4054d8ff621f96195a" sys_domain="global" table="x_naci_family_coho_mock_up_intake" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>family_study_id</element>
-            <position>0</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:47:55</sys_created_on>
-            <sys_id>9b0f9994db94c450b86770c08c9619b4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:47:55</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>eligible_status</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:47:55</sys_created_on>
-            <sys_id>130f9994db94c450b86770c08c9619b5</sys_id>
+            <position>0</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>fb722f5ddb60401054d8ff621f961965</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:47:55</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>enrollment_status</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:47:55</sys_created_on>
-            <sys_id>970f9994db94c450b86770c08c9619b5</sys_id>
+            <position>1</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>b7722f5ddb60401054d8ff621f961966</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:47:55</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>study</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:47:55</sys_created_on>
-            <sys_id>1f0f9994db94c450b86770c08c9619b5</sys_id>
+            <position>2</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>3f722f5ddb60401054d8ff621f961966</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:47:55</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>communication_type</element>
-            <position>4</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:48:49</sys_created_on>
-            <sys_id>e04fdd94db94c450b86770c08c961923</sys_id>
+            <position>3</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>b3722f5ddb60401054d8ff621f961967</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:48:49</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>family_id</element>
-            <position>5</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 22:54:05</sys_created_on>
-            <sys_id>f570a118db94c450b86770c08c961941</sys_id>
+            <position>4</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>3b722f5ddb60401054d8ff621f961967</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:54:05</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>filling_for_someone</element>
+            <position>5</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>bf722f5ddb60401054d8ff621f961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>internal_comments</element>
             <position>6</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-03 13:59:34</sys_created_on>
-            <sys_id>c9e28b4ddb148c5054d8ff621f961918</sys_id>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>37722f5ddb60401054d8ff621f961968</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-03 13:59:34</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>filled_for</element>
             <position>7</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 18:58:14</sys_created_on>
-            <sys_id>495a31c1dbaccc1054d8ff621f9619e5</sys_id>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>bb722f5ddb60401054d8ff621f961968</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 18:58:14</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>your_name</element>
             <position>8</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 18:58:49</sys_created_on>
-            <sys_id>3d7afdc1dbaccc1054d8ff621f961902</sys_id>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>33722f5ddb60401054d8ff621f961969</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 18:58:49</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>other_relationship</element>
             <position>9</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 18:59:35</sys_created_on>
-            <sys_id>30aafdc1dbaccc1054d8ff621f961915</sys_id>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>b7722f5ddb60401054d8ff621f961969</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 18:59:35</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>participate_race</element>
             <position>10</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 21:15:35</sys_created_on>
-            <sys_id>8dc91a89db20005054d8ff621f9619ad</sys_id>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>3f722f5ddb60401054d8ff621f961969</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 21:15:35</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>received_cancer_care</element>
+            <position>11</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>b3722f5ddb60401054d8ff621f96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legal_guardian</element>
+            <position>12</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>3b722f5ddb60401054d8ff621f96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_mother_s_race</element>
-            <position>11</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 21:27:43</sys_created_on>
-            <sys_id>b68c5ecddb20005054d8ff621f96192e</sys_id>
+            <position>13</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>bf722f5ddb60401054d8ff621f96196a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 21:27:43</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_father_s_race</element>
-            <position>12</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 21:28:36</sys_created_on>
-            <sys_id>bfbc5201db60005054d8ff621f961968</sys_id>
+            <position>14</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>37722f5ddb60401054d8ff621f96196b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 21:28:36</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>saved_section</element>
-            <position>13</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 21:55:20</sys_created_on>
-            <sys_id>1fd2aa09db60005054d8ff621f96198d</sys_id>
+            <position>15</position>
+            <sys_created_by>wuye@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 21:11:51</sys_created_on>
+            <sys_id>bb722f5ddb60401054d8ff621f96196b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="Default view">be73cc25db7f3f4054d8ff621f96195a</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 21:55:20</sys_updated_on>
+            <sys_updated_by>wuye@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 21:11:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

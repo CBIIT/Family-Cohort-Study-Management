@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="birth_control_how_old" label="How old?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+    <sys_documentation element="birth_control_how_old" label="How old were you when you started taking birth control pills?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>birth_control_how_old</element>
             <help/>
             <hint/>
-            <label>How old?</label>
+            <label>How old were you when you started taking birth control pills?</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <plural>How old?s</plural>
+            <plural>How old were you when you started taking birth control pills?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
             <sys_created_on>2019-10-11 15:11:43</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>7f102c3fdbd44810b86770c08c9619ed</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>How old?</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>How old were you when you started taking birth control pills?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_birth_control_how_old_en</sys_update_name>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-11 15:11:43</sys_updated_on>
+            <sys_updated_on>2019-10-16 14:26:24</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="on_the_days_drinks_have_on_average" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>on_the_days_drinks_have_on_average</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NUMBER</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>1</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 15:16:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9121dad9dba80010b86770c08c9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 15:16:39</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>NUMBER</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>on_the_days_drinks_have_on_average</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>2</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 15:16:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3d311ed9dba80010b86770c08c9619b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 15:16:55</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>on_the_days_drinks_have_on_average</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 15:16:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8531d699dba80010b86770c08c96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>on_the_days_drinks_have_on_average</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_on_the_days_drinks_have_on_average</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 15:16:39</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

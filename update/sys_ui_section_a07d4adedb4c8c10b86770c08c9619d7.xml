@@ -112,6 +112,48 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>proxy_name</element>
+            <position>8</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 17:32:56</sys_created_on>
+            <sys_id>1d60b255db6c0010b86770c08c9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a07d4adedb4c8c10b86770c08c9619d7</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 17:32:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>proband_email</element>
+            <position>9</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 17:34:32</sys_created_on>
+            <sys_id>f4c0be55db6c0010b86770c08c9619c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a07d4adedb4c8c10b86770c08c9619d7</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 17:34:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>proband_phone</element>
+            <position>10</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-16 17:35:16</sys_created_on>
+            <sys_id>2be0f295db6c0010b86770c08c961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="Default view">a07d4adedb4c8c10b86770c08c9619d7</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-16 17:35:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

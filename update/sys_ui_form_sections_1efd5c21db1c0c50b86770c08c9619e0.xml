@@ -13,19 +13,6 @@
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-04 15:16:00</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 15:16:00</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>9efd5c21db1c0c50b86770c08c9619e3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_history_question" name="x_naci_family_coho_family_history_question" sys_domain="global" view="01bd8ededb4c8c10b86770c08c9619fe">1efd5c21db1c0c50b86770c08c9619e0</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_question" sys_domain="global" view="01bd8ededb4c8c10b86770c08c9619fe">5afd5c21db1c0c50b86770c08c9619df</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 15:16:00</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_naci_family_coho_family_history_question</name>
             <roles/>
