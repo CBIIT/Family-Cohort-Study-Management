@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Help Text for the following fields&#13;
+&#13;
+What is the reason  you have not had a menstural period for 6 months&#13;
+What was the diagnosis of the fertility problem&#13;
+Rate your chances of getting cancer again</description>
+        <field>a_cancer_survivor</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Help text for fields</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	//Type appropriate comment here, and begin script below
+	g_form.showFieldMsg('what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more', 'Please select all that apply', 'info');
+	g_form.showFieldMsg('what_was_the_diagnosis_of_the_problem', 'Please select all that apply', 'info');
+	g_form.showFieldMsg('please_rate_what_you_believe_your_chance_of_getting_cancer_in_your_lifetime', '0 indicates no chance of getting cancer; 5 indicates equal chances of getting and not getting cancer; 10 indicates that you will definitely get cancer', 'info');
+
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 14:15:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>c93c0baddb208010b86770c08c96197d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Help text for fields</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_c93c0baddb208010b86770c08c96197d</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 19:02:58</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

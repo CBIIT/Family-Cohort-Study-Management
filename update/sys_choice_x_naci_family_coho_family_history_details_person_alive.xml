@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="person_alive" table="x_naci_family_coho_family_history_details" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>person_alive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Yes</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>10</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 20:42:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>63fee94adbecc010b86770c08c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 20:42:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Yes</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>person_alive</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>20</sequence>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 20:42:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7a0fa94adbecc010b86770c08c96198f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 20:43:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>No</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>person_alive</element>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 20:42:48</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>020f254adbecc010b86770c08c96199b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>person_alive</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_family_history_details_person_alive</sys_update_name>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 20:42:48</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

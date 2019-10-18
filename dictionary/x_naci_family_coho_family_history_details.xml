@@ -10,10 +10,10 @@
         <element label="County" max_length="100" name="death_hospital_county" type="string"/>
         <element label="State dea" max_length="100" name="death_hospital_state" type="string"/>
         <element label="Physician" max_length="100" name="death_physician" type="string"/>
-        <element label="Family Historic Qustion ID" max_length="50" name="family_historic_qustion_id" type="string"/>
+        <element label="Family Historic Qustion ID" max_length="50" name="family_historic_qustion_id" reference="x_naci_family_coho_family_history_question" type="reference"/>
         <element label="Family ID" max_length="50" name="family_id" type="string"/>
         <element label="First Name" max_length="100" name="first_name" type="string"/>
-        <element choice="1" label="Did this person ever have cancer, a tumor or a growth?" max_length="20" name="has_cancer" type="choice">
+        <element choice="3" default="No" label="Did this person ever have cancer, a tumor or a growth?" max_length="20" name="has_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
                 <element inactive_on_update="false" label="No" sequence="20" value="No"/>
@@ -30,6 +30,12 @@
         <element label="How many children did this person have?" max_length="10" name="number_children" type="string"/>
         <element label="Other Relationship" max_length="100" name="other_relationship" type="string"/>
         <element choice="3" default="Yes" label="May we have your permission to contact this relative?" max_length="10" name="permission_to_contact" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="No"/>
+            </choice>
+        </element>
+        <element choice="3" default="Yes" label="Is this person alive" max_length="10" name="person_alive" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
                 <element inactive_on_update="false" label="No" sequence="20" value="No"/>

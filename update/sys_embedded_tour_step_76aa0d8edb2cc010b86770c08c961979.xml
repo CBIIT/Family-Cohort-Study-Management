@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>true</action>
+        <action_event>click</action_event>
+        <action_target/>
+        <action_target_ref/>
+        <active>true</active>
+        <content><![CDATA[Welcome to your first FCSMS intake form! Don&#39;t worry, this tour will guide you through the process step-by-step.]]></content>
+        <guide display_value="Family Cohort Guide">075a0d8edb2cc010b86770c08c961956</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name>Introduction</name>
+        <options/>
+        <order>0</order>
+        <placement>bottom</placement>
+        <step_type>intro</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-18 18:03:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>76aa0d8edb2cc010b86770c08c961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Introduction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_76aa0d8edb2cc010b86770c08c961979</sys_update_name>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-18 18:03:56</sys_updated_on>
+        <target/>
+        <target_ref/>
+        <title><![CDATA[FCSMS Intake Form Overview]]></title>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window/>
+    </sys_embedded_tour_step>
+</record_update>

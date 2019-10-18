@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>a_cancer_survivor</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Form Message for Personal Support</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	//g_form.addInfoMessage('The following question is about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please circle the number of the response that best describes the support of this person or group, or check the box if there is no such person. For the purposes of this question, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you are at the doctors office).');
+	
+	g_form.addInfoMessage('test');
+	     
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 19:30:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>20d4d075dbe48010b86770c08c9619c0</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Form Message for Personal Support</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_20d4d075dbe48010b86770c08c9619c0</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 20:04:48</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionH3</view>
+    </sys_script_client>
+</record_update>

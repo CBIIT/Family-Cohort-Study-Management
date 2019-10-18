@@ -5,25 +5,6 @@
             <element>medication_name</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Progestin or Progesterone Alone</label>
-            <language>en</language>
-            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
-            <sequence/>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-11 16:54:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>7697f43fdb584810b86770c08c9619fa</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-11 16:55:06</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>progestin_progesterone_alone</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>medication_name</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Estrogen Alone</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
@@ -37,6 +18,101 @@
             <sys_updated_on>2019-10-11 16:55:11</sys_updated_on>
             <u_dependent_value_2/>
             <value>estrogen</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>medication_name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Progestin or Progesterone Alone</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-11 16:54:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7697f43fdb584810b86770c08c9619fa</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 17:57:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>progestin_progesterone_alone</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>medication_name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Both Estrogen and Progesterone in the same pill</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 17:58:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8aafb329db648010b86770c08c961900</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 17:58:19</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>estrogen_and_progesterone</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>medication_name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hormone Patch</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
+            <sequence>40</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 17:58:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>34cff329db648010b86770c08c961983</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 17:58:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>hormone_patch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>medication_name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vaginal creams, gels, suppositories containg hormones</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
+            <sequence>50</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 17:58:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>dddff7e5db648010b86770c08c9619df</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 17:59:09</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>vaginal_creams_gels</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>medication_name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vaginal hormone ring</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire_female_hormones</name>
+            <sequence>60</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 17:59:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c8ff3729db648010b86770c08c9619f3</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 17:59:23</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>vaginal_hormone_ring</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>medication_name</element>

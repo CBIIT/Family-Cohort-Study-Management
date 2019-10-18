@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="FCSMS Intake Form" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
+    <element audit="true" label="FCSMS Intake Form" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
         <element choice="3" default="American Indian/Alaskan Native" label="Biological Father's Ethnicity" max_length="40" name="biological_father_s_ethnicity" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian/Alaskan Native" value="American Indian/Alaskan Native"/>
@@ -39,6 +39,7 @@
             <choice/>
         </element>
         <element label="Comments" max_length="5000" name="comments" type="html"/>
+        <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element choice="1" label="Communication Type" max_length="40" name="communication_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Website" sequence="1" value="Website"/>
@@ -48,7 +49,7 @@
             </choice>
         </element>
         <element label="Confirm Contact Email Address" max_length="200" name="confirm_email_address" type="string"/>
-        <element choice="3" default="No" label="Have Research Subject ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
+        <element choice="3" default="No" label="Has Research Subject ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="0" value="Yes"/>

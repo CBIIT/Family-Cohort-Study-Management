@@ -32,7 +32,7 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="Integer">integer</internal_type>
         <mandatory>false</mandatory>
         <max_length>2</max_length>
         <name>x_naci_family_coho_individual_information_questionnaire</name>
@@ -55,7 +55,7 @@
         <sys_created_on>2019-10-11 15:46:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6bf72c77db184810b86770c08c9619c7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>What was your age when you had a hysterectomy?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_what_was_your_age_when_you_had_a_hysterectomy</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-11 15:48:11</sys_updated_on>
+        <sys_updated_on>2019-10-18 15:46:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_naci_family_coho_family_history_details">has_cancer=Yes^EQ<item endquery="false" field="has_cancer" goto="false" newquery="false" operator="=" or="false" value="Yes"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.setDisplay("type_or_site", false);
+	g_form.setDisplay("hospital_diagnosed", false);
+	g_form.setDisplay("hospital_diagnosed_city", false);
+	g_form.setDisplay("hospital_diagnosed_state", false);
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	g_form.setDisplay("type_or_site", true);
+	g_form.setDisplay("hospital_diagnosed", true);
+	g_form.setDisplay("hospital_diagnosed_city", true);
+	g_form.setDisplay("hospital_diagnosed_state", true);
+}]]></script_true>
+        <set_values/>
+        <short_description>Family History Detail  Cancer Status</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-18 20:40:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>f97da9c6dbecc010b86770c08c96191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Family History Detail  Cancer Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_policy_f97da9c6dbecc010b86770c08c96191e</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-18 20:40:53</sys_updated_on>
+        <table>x_naci_family_coho_family_history_details</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

@@ -14,7 +14,7 @@
 		var view = event.targetScope.formModel.view;
 		c.forms[view] = g_form;
 		$timeout(function(){
-			renderAnnotation('.annotation.aafddc21db1c0c50b86770c08c961915', '','h3', true);
+			//renderAnnotation('.annotation.aafddc21db1c0c50b86770c08c961915', '','h3', true);
 			//renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
 			//renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '<br/>', 'h3')
 		});
@@ -37,6 +37,11 @@
 				$('input[name="birthday"]').prop('readonly',true);		
 			});
 		}
+		/*if(view == 'FHQ4'){
+			$timeout(function(){
+				//$('[for="sp_formfield_marital_status"]')[0].innerText += ' If you parented children with a person to whom you were not married, consider that person as a spouse.';
+			});
+		}*/
 	 });
 	
 	$scope.loadForm = function(index){
@@ -50,6 +55,7 @@
 				view: view
 			}).then(function(widget) {
 				c.data[widgetName] = widget;
+				console.log(c.data);
 				if(index == 3){
 					$scope.$on('spModel.fields.rendered', function(event) {
 						$timeout(function(){
@@ -95,8 +101,8 @@
 		});			
 	}
 	
-	$scope.submitForm = function(){
-		alert("Submit Form");
+	$scope.submitForm = function(form){
+		$scope.saveForm(form);
 	}
 	
 	function getFormValues(gForm) {
@@ -193,7 +199,7 @@
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>177</sys_mod_count>
+        <sys_mod_count>197</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -201,7 +207,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 17:53:01</sys_updated_on>
+        <sys_updated_on>2019-10-18 22:03:47</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
   <div class="left-side-menu col-md-3">
     <ul class="div_shadow">
@@ -210,6 +216,7 @@
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadForm(3)">Family Historic Questionaire 1</li>
       <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadForm(4)">Family Historic Questionaire 2</li>
       <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadForm(5)">Family Member Information</li>
+      <li ng-class="{'active': c.show_view_index == 6}" ng-click="loadForm(6)">Final Information</li>
     </ul>   
   </div>
   <div class="right-side-content col-md-9">
@@ -266,9 +273,22 @@
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </widget>
-        <button class="btn btn-success pull-right" ng-click="submitForm()" style="width:100px; margin-top: 3px;">
-          SUBMIT
-        </button>
+      </div>
+    </div>
+    <div ng-show="c.show_view_index == 6" class="div_shadow">
+      <div style="padding: 10px 10px;" class="clearfix">
+        <sp-widget widget="c.data.widget_6">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
+        <div class="text-right">
+          <button class="btn btn-primary" ng-click="saveForm(c.forms.FHQ6)" style="width:100px; margin-right: 10px;">
+            SAVE
+          </button>     
+          <button class="btn btn-success" ng-click="submitForm(c.forms.FHQ6)" style="width:100px;">
+            SUBMIT
+          </button>
+        </div>
       </div>
     </div>
   </div>

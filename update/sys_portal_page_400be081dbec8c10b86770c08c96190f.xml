@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-10-16 22:10:34">
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-10-18 22:04:42">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout/>
         <order/>
@@ -29,137 +29,79 @@
                 <dropzone/>
                 <offset/>
                 <page display_value="PA New Tab">400be081dbec8c10b86770c08c96190f</page>
-                <summary>Create New Family Cohort Referral Record</summary>
-                <sys_created_by>martincp@nih.gov</sys_created_by>
-                <sys_created_on>2019-10-16 19:30:53</sys_created_on>
-                <sys_id>456b4b1ddbec0010b86770c08c961936</sys_id>
+                <summary>Enrollment Trend by Study</summary>
+                <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                <sys_id>85672365dbe08010b86770c08c96197e</sys_id>
                 <sys_mod_count>1</sys_mod_count>
-                <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                <sys_updated_on>2019-10-16 19:30:53</sys_updated_on>
+                <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
                 <related_items_node>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>type</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:53">456b4b1ddbec0010b86770c08c961936</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:53</sys_created_on>
-                        <sys_id>056b435ddbec0010b86770c08c961986</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:53</sys_updated_on>
-                        <value>content_block_programmatic</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:53">456b4b1ddbec0010b86770c08c961936</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:53</sys_created_on>
-                        <sys_id>416b4b1ddbec0010b86770c08c961937</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:53</sys_updated_on>
-                        <value>Create New Family Cohort Referral Record</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:53">456b4b1ddbec0010b86770c08c961936</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:53</sys_created_on>
-                        <sys_id>496b4b1ddbec0010b86770c08c961936</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:53</sys_updated_on>
-                        <value>b1b93695dbac0010b86770c08c961996</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:53">456b4b1ddbec0010b86770c08c961936</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:53</sys_created_on>
-                        <sys_id>8d6b4b1ddbec0010b86770c08c961936</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:53</sys_updated_on>
-                        <value>com.glide.cms.RenderBlock</value>
-                    </sys_portal_preferences>
-                </related_items_node>
-            </sys_portal>
-            <sys_portal action="INSERT_OR_UPDATE">
-                <dropzone/>
-                <offset/>
-                <page display_value="PA New Tab">400be081dbec8c10b86770c08c96190f</page>
-                <summary>Desired Types of Communication</summary>
-                <sys_created_by>martincp@nih.gov</sys_created_by>
-                <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                <sys_id>513bc71ddbec0010b86770c08c961945</sys_id>
-                <sys_mod_count>1</sys_mod_count>
-                <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                <related_items_node>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>113b0f1ddbec0010b86770c08c9619ab</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                        <value>report_widget_description</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>593b0f1ddbec0010b86770c08c9619ab</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                        <value>Desired Types of Communication</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>5d3b0f1ddbec0010b86770c08c9619aa</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>953b0f1ddbec0010b86770c08c9619ab</sys_id>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>01672365dbe08010b86770c08c961980</sys_id>
                         <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                        <value>bar</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>993bc71ddbec0010b86770c08c961945</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
-                        <value>432bcb1ddbec0010b86770c08c9619db</value>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
+                        <value>area</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created Oct 16, 2019 15:30:05">513bc71ddbec0010b86770c08c961945</portal_section>
-                        <sys_created_by>martincp@nih.gov</sys_created_by>
-                        <sys_created_on>2019-10-16 19:30:05</sys_created_on>
-                        <sys_id>d13b0f1ddbec0010b86770c08c9619ab</sys_id>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>4d672365dbe08010b86770c08c96197f</sys_id>
                         <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-                        <sys_updated_on>2019-10-16 19:30:05</sys_updated_on>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
                         <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>89672365dbe08010b86770c08c96197f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>8d672365dbe08010b86770c08c96197e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
+                        <value>36476f65dbe08010b86770c08c961937</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>c1672365dbe08010b86770c08c961980</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
+                        <value>Enrollment Trend by Study</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created Oct 17, 2019 12:11:42">85672365dbe08010b86770c08c96197e</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:11:42</sys_created_on>
+                        <sys_id>c5672365dbe08010b86770c08c96197f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:11:42</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -342,6 +284,53 @@
                         <sys_updated_by>martincp@nih.gov</sys_updated_by>
                         <sys_updated_on>2019-10-15 13:23:13</sys_updated_on>
                         <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA New Tab">400be081dbec8c10b86770c08c96190f</page>
+                <summary>Family Cohort</summary>
+                <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                <sys_created_on>2019-10-17 15:55:34</sys_created_on>
+                <sys_id>b8b32feddba08010b86770c08c9619be</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                <sys_updated_on>2019-10-17 15:55:34</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created Oct 17, 2019 11:55:34">b8b32feddba08010b86770c08c9619be</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 15:55:34</sys_created_on>
+                        <sys_id>70b36321dbe08010b86770c08c9619a8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 15:55:34</sys_updated_on>
+                        <value>Family Cohort</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created Oct 17, 2019 11:55:34">b8b32feddba08010b86770c08c9619be</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 15:55:34</sys_created_on>
+                        <sys_id>b0b32feddba08010b86770c08c9619bf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 15:55:34</sys_updated_on>
+                        <value>bd2367eddba08010b86770c08c961969</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created Oct 17, 2019 11:55:34">b8b32feddba08010b86770c08c9619be</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 15:55:34</sys_created_on>
+                        <sys_id>f8b32feddba08010b86770c08c9619bf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 15:55:34</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderMenus</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -561,6 +550,94 @@
                 <sys_updated_by>martincp@nih.gov</sys_updated_by>
                 <sys_updated_on>2019-10-15 14:02:25</sys_updated_on>
                 <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>12a52ba1dbe08010b86770c08c961983</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>12a52ba1dbe08010b86770c08c961984</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>16a52ba1dbe08010b86770c08c961983</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>16a52ba1dbe08010b86770c08c961984</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>1aa52ba1dbe08010b86770c08c961982</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>1aa52ba1dbe08010b86770c08c961983</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>1aa52ba1dbe08010b86770c08c961984</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:08</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>
+                        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+                        <sys_created_on>2019-10-17 16:04:08</sys_created_on>
+                        <sys_id>1ea52ba1dbe08010b86770c08c961983</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+                        <sys_updated_on>2019-10-17 16:04:21</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
                         <portal_section display_value="Created Oct 15, 2019 10:02:25">eb96f8cddbec8c10b86770c08c961992</portal_section>

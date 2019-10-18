@@ -3,6 +3,7 @@
         <element label="Age removal occurred" max_length="2" name="age_removal_occurred" type="string"/>
         <element label="Date removal occurred" max_length="40" name="date_removal_occurred" type="glide_date"/>
         <element label="Don't Know" max_length="40" name="dont_know" type="boolean"/>
+        <element label="IIQ form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element choice="1" label="Indicate which side" max_length="40" name="indicate_which_side" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Left" sequence="10" value="left"/>
@@ -16,5 +17,8 @@
                 <element inactive_on_update="false" label="Fallopian tubes" sequence="20" value="fallopian_tubes"/>
             </choice>
         </element>
+        <index name="index">
+            <element name="iiq_form"/>
+        </index>
     </element>
 </database>

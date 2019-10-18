@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="9076c431dba48010b86770c08c9619c2" sys_domain="global" table="x_naci_family_coho_mock_up_intake" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 18:27:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9c76c431dba48010b86770c08c9619c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">704580fddb648010b86770c08c961919</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 18:27:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 13:33:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>56dc0882db28c010b86770c08c96198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="Personal Cancer History" display_value="Personal Cancer History" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9adcc442db28c010b86770c08c9619a0</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 13:33:50</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 13:36:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7e6dc0c2db28c010b86770c08c9619c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="Family Members' Cancer History" display_value="Family Members' Cancer History" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">766d0082db28c010b86770c08c9619f3</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 13:36:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 13:37:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ddad08c2db28c010b86770c08c961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="Family Members' Genetic Tests" display_value="Family Members' Genetic Tests" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">15ad8482db28c010b86770c08c96194b</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 13:37:19</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 13:38:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>fcedc0c2db28c010b86770c08c9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="Final Information" display_value="Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">b4edc0c2db28c010b86770c08c9619cb</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 13:38:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 13:40:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>cb7e8806db28c010b86770c08c961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_mock_up_intake" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">9076c431dba48010b86770c08c9619c2</sys_ui_form>
+            <sys_ui_section caption="Comments" display_value="Comments" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="384580fddb648010b86770c08c961913">cf7e8806db28c010b86770c08c961974</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 13:40:59</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-17 18:27:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>9076c431dba48010b86770c08c9619c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_mock_up_intake</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_form_sections_9076c431dba48010b86770c08c9619c2</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-17 18:27:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

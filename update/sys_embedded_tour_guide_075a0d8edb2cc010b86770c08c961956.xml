@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_guide">
+    <sys_embedded_tour_guide action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_parameters/>
+        <autolaunch_order>1</autolaunch_order>
+        <context>x_naci_family_coho_mock_up_intake</context>
+        <description/>
+        <has_concl>false</has_concl>
+        <has_intro>true</has_intro>
+        <name>Family Cohort Guide</name>
+        <options/>
+        <roles/>
+        <sp_page/>
+        <sp_portal/>
+        <status>published</status>
+        <sys_class_name>sys_embedded_tour_guide</sys_class_name>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-18 18:02:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>075a0d8edb2cc010b86770c08c961956</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Family Cohort Guide</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_embedded_tour_guide_075a0d8edb2cc010b86770c08c961956</sys_update_name>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-18 18:10:05</sys_updated_on>
+        <type>platform</type>
+    </sys_embedded_tour_guide>
+</record_update>

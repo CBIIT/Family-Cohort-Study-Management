@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire Female Hormones" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_female_hormones" type="collection">
+        <element label="Date First Started" max_length="40" name="date_started" type="glide_date"/>
+        <element label="Date Last Stopped" max_length="40" name="date_stopped" type="glide_date"/>
+        <element label="Dose" max_length="40" name="dose" type="string"/>
+        <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element choice="1" label="Medication Name" max_length="40" name="medication_name" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Progestin or Progesterone Alone" value="progestin_progesterone_alone"/>
                 <element inactive_on_update="false" label="Estrogen Alone" sequence="10" value="estrogen"/>
+                <element inactive_on_update="false" label="Progestin or Progesterone Alone" sequence="20" value="progestin_progesterone_alone"/>
+                <element inactive_on_update="false" label="Both Estrogen and Progesterone in the same pill" sequence="30" value="estrogen_and_progesterone"/>
+                <element inactive_on_update="false" label="Hormone Patch" sequence="40" value="hormone_patch"/>
+                <element inactive_on_update="false" label="Vaginal creams, gels, suppositories containg hormones" sequence="50" value="vaginal_creams_gels"/>
+                <element inactive_on_update="false" label="Vaginal hormone ring" sequence="60" value="vaginal_hormone_ring"/>
             </choice>
         </element>
+        <element label="Total number of years taken/worn" max_length="3" name="total_number_of_years" type="string"/>
+        <index name="index">
+            <element name="iiq_form"/>
+        </index>
     </element>
 </database>

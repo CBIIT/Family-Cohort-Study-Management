@@ -44,8 +44,10 @@
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
             </choice>
         </element>
-        <element label="How old were you when you started taking birth control pills?" max_length="2" name="birth_control_how_old" type="string"/>
+        <element label="How old were you when you started taking birth control pills?" max_length="2" name="birth_control_how_old" type="integer"/>
         <element label="Birth control or medications" max_length="40" name="birth_control_or_medications" type="boolean"/>
+        <element label="Grams" max_length="100" name="birth_grams" type="string"/>
+        <element label="Pounds" max_length="100" name="birth_pounds" type="string"/>
         <element choice="1" label="Is this condition (Bone Fracture) currently being treated ?" max_length="40" name="bone_fracture_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -54,6 +56,7 @@
             </choice>
         </element>
         <element label="Breastfeeding" max_length="40" name="breastfeeding" type="boolean"/>
+        <element label="Centimeters" max_length="100" name="centimeters" type="string"/>
         <element label="Total amount of Months" max_length="100" name="chewed_tobacco_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="chewed_tobacco_total_amount_of_years" type="string"/>
         <element label="Cigarettes Nubmer" max_length="100" name="cigarettes_nubmer" type="string"/>
@@ -242,6 +245,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="4" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Feet" max_length="100" name="feet" type="string"/>
         <element label="Blocked fallopian tubes" max_length="40" name="fertility_diagnosis_blocked_fallopian_tubes" type="boolean"/>
         <element label="Female hormone problem" max_length="40" name="fertility_diagnosis_female_hormone_problem" type="boolean"/>
         <element label="Male Problem" max_length="40" name="fertility_diagnosis_male_problem" type="boolean"/>
@@ -373,9 +377,9 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="10" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element label="How many live-born children have you had?" max_length="4" name="how_many_live_born_children_have_you_had" type="string"/>
-        <element label="How many times have you been pregnant?" max_length="4" name="how_many_times_have_you_been_pregnant" type="string"/>
-        <element choice="1" label="How much in the past 7 days have you been feeling lonely?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_lonely" type="choice">
+        <element label="How many live-born children have you had?" max_length="4" name="how_many_live_born_children_have_you_had" type="integer"/>
+        <element label="How many times have you been pregnant?" max_length="4" name="how_many_times_have_you_been_pregnant" type="integer"/>
+        <element choice="1" label="How often in the past 7 days have you been feeling lonely?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_lonely" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -384,7 +388,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you been feeling no interest in things" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things" type="choice">
+        <element choice="1" label="How often in the past 7 days have you been feeling no interest in things" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -393,7 +397,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you been feeling tense or keyed up?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up" type="choice">
+        <element choice="1" label="How often in the past 7 days have you been feeling tense or keyed up?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -402,7 +406,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you felt nausea or an upset stomach" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nausea_or_an_upset_stomach" type="choice">
+        <element choice="1" label="How often in the past 7 days have you felt nausea or an upset stomach" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nausea_or_an_upset_stomach" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -411,7 +415,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you felt nervouness or shakiness inside" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nervouness_or_shakiness_inside" type="choice">
+        <element choice="1" label="How often in the past 7 days have you felt nervouness or shakiness inside" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nervouness_or_shakiness_inside" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -420,7 +424,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you felt so restless you couldn't sit still" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_so_restless_you_couldn_t_sit_still" type="choice">
+        <element choice="1" label="How often in the past 7 days have you felt so restless you couldn't sit still" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_so_restless_you_couldn_t_sit_still" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -429,7 +433,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you felt weak in parts of your body" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body" type="choice">
+        <element choice="1" label="How often in the past 7 days have you felt weak in parts of your body" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -438,7 +442,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you had pains in the heart or chest" max_length="40" name="how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest" type="choice">
+        <element choice="1" label="How often in the past 7 days have you had pains in the heart or chest" max_length="40" name="how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -447,7 +451,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How much in the past 7 days have you had thoughts of ending your life" max_length="40" name="how_much_in_the_past_7_days_have_you_had_thoughts_of_ending_your_life" type="choice">
+        <element choice="1" label="How often in the past 7 days have you had thoughts of ending your life" max_length="40" name="how_much_in_the_past_7_days_have_you_had_thoughts_of_ending_your_life" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -660,9 +664,9 @@
                 <element inactive_on_update="false" label="Extrmely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element label="How old were you when you first became pregnant?" max_length="4" name="how_old_were_you_when_you_first_became_pregnant" type="string"/>
+        <element label="How old were you when you first became pregnant?" max_length="4" name="how_old_were_you_when_you_first_became_pregnant" type="integer"/>
         <element label="How old were you when you first consulted a doctor for fertility problems?" max_length="2" name="how_old_were_you_when_you_first_consulted_a_doctor_for_fertility_problems" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="How old when you had your first menstrual period" max_length="40" name="how_old_when_you_hard_your_first_menstrual_period" type="string"/>
+        <element attributes="edge_encryption_enabled=true;max_length=3" label="How old when you had your first menstrual period" max_length="40" name="how_old_when_you_hard_your_first_menstrual_period" type="integer"/>
         <element choice="1" label="Is this condition (hypertension) currently being treated ?" max_length="40" name="hypertension_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -685,6 +689,7 @@
                 <element inactive_on_update="false" label="IIQ Submitted" sequence="4" value="IIQ Submitted"/>
             </choice>
         </element>
+        <element label="Inches" max_length="100" name="inches" type="string"/>
         <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
         <element choice="1" label="Individual Type" max_length="40" name="individual_type" type="choice">
             <choice>
@@ -943,6 +948,11 @@
                 <element inactive_on_update="false" label="YES" value="YES"/>
             </choice>
         </element>
+        <element label="Kilograms" max_length="100" name="kilograms" type="string"/>
+        <element label="Kilograms" max_length="100" name="kilograms_at_18" type="string"/>
+        <element label="Kilograms" max_length="100" name="kilograms_at_30" type="string"/>
+        <element label="Kilograms" max_length="100" name="kilograms_at_40" type="string"/>
+        <element label="Kilograms" max_length="100" name="kilograms_most_weighed" type="string"/>
         <element choice="1" label="How old were you when you had your first menstrual period?" max_length="40" name="knowledge_first_menstrual_period" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Age" sequence="10" value="age"/>
@@ -974,6 +984,13 @@
             </choice>
         </element>
         <element label="A13. What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
+        <element label="And at what age ?" max_length="100" name="most_weighed_at_what_age" type="string"/>
+        <element choice="1" label="F7.What is the most you have ever weighed (excluding pregnancy(ies))?" max_length="40" name="most_you_have_ever_weighed" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
+                <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
+            </choice>
+        </element>
         <element choice="1" label="Is this condition (myocardial infarction) currently being treated ?" max_length="40" name="myocardial_infarction_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1192,6 +1209,7 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Other (Specify)" max_length="40" name="other_specify" type="string"/>
         <element label="Please specify this therapy or treatment" max_length="200" name="other_therapy_or_treatment_specify" type="string"/>
+        <element label="Ounces" max_length="100" name="ounces" type="string"/>
         <element label="Total amount of Months" max_length="100" name="pipe_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="pipe_total_amount_of_years" type="string"/>
         <element label="A3. What is your place of birth (town/city)?" max_length="200" name="place_of_birth" type="string"/>
@@ -1210,6 +1228,11 @@
                 <element inactive_on_update="false" label="10" sequence="110" value="10"/>
             </choice>
         </element>
+        <element label="Pounds" max_length="100" name="pounds" type="string"/>
+        <element label="Pounds" max_length="100" name="pounds_at_18" type="string"/>
+        <element label="Pounds" max_length="100" name="pounds_at_30" type="string"/>
+        <element label="Pounds" max_length="100" name="pounds_at_40" type="string"/>
+        <element label="Pounds" max_length="100" name="pounds_most_weighed" type="string"/>
         <element choice="1" label="Have you ever used this practice: Acupuncture ?" max_length="40" name="practice_acupuncture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1459,7 +1482,7 @@
         </element>
         <element label="Total Amount of Months" max_length="100" name="total_amount_of_months" type="string"/>
         <element label="Total Amount of Years" max_length="100" name="total_amount_of_years" type="string"/>
-        <element label="How many months, total for all of your children combined did you breast feed?" max_length="3" name="total_months_breasfed" type="string"/>
+        <element label="How many months, total for all of your children combined did you breast feed?" max_length="3" name="total_months_breasfed" type="integer"/>
         <element choice="1" label="Is this condition (transient ischemic attack) currently being treated ?" max_length="40" name="transient_ischemic_attack_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1486,11 +1509,35 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element label="How old were you when you had the tubal ligation?" max_length="2" name="tubal_ligation_age" type="string"/>
+        <element label="How old were you when you had the tubal ligation?" max_length="2" name="tubal_ligation_age" type="integer"/>
         <element choice="1" label="Do you recall how old you were when you had the tubal ligation?" max_length="40" name="tubal_ligation_recall" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="F4. About how much did you weigh at age 18?" max_length="40" name="weigh_at_age_18" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
+                <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="Not yet 18 years old" sequence="4" value="Not yet 18 years old"/>
+            </choice>
+        </element>
+        <element choice="1" label="F5.About how much did you weigh at age 30?" max_length="40" name="weigh_at_age_30" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
+                <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="Not yet 30 years old" sequence="4" value="Not yet 30 years old"/>
+            </choice>
+        </element>
+        <element choice="1" label="F6.About how much did you weigh at age 40?" max_length="40" name="weigh_at_age_40" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
+                <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="Not yet 40 years old" sequence="4" value="Not yet 40 years old"/>
             </choice>
         </element>
         <element choice="1" label="Were you ever prescribed female hormones around the time of menopause?" max_length="40" name="were_you_ever_prescribed_female_hormones_around_the_time_of_menopause" type="choice">
@@ -1506,7 +1553,9 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element label="What was your age when you had a hysterectomy?" max_length="2" name="what_was_your_age_when_you_had_a_hysterectomy" type="string"/>
+        <element attributes="glide_list" label="What is the reason you have not had a menstrual period for 6 months or more?" max_length="4000" name="what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more" reference="x_naci_family_coho_individual_information_questionnaire_reason_for_no_period" type="glide_list"/>
+        <element attributes="glide_list" label="What was the diagnosis of the problem?" max_length="4000" name="what_was_the_diagnosis_of_the_problem" reference="x_naci_family_coho_individual_information_questionnaire_reasons_for_infertility" type="glide_list"/>
+        <element label="What was your age when you had a hysterectomy?" max_length="2" name="what_was_your_age_when_you_had_a_hysterectomy" type="integer"/>
         <element choice="1" label="When was your last period?" max_length="40" name="when_was_your_last_period" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Age" sequence="10" value="age"/>
@@ -1521,6 +1570,25 @@
             </choice>
         </element>
         <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
+        <element choice="3" default="FEETINCHES" label="F1.What is your current height?" max_length="40" name="your_current_height" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="FEETINCHES" sequence="1" value="FEETINCHES"/>
+                <element inactive_on_update="false" label="CENTIMETERS" sequence="2" value="CENTIMETERS"/>
+            </choice>
+        </element>
+        <element choice="1" label="F2.What is your current weight?" max_length="40" name="your_current_weight" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
+                <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
+            </choice>
+        </element>
+        <element choice="1" label="F3.What was your weight at birth?" max_length="40" name="your_weight_at_birth" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="POUND-OUNCES" sequence="1" value="POUND-OUNCES"/>
+                <element inactive_on_update="false" label="GRAMS" sequence="2" value="GRAMS"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+            </choice>
+        </element>
         <index name="index">
             <element name="enrollment"/>
         </index>

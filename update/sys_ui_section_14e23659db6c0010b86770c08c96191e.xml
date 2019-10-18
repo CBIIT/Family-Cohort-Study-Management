@@ -1,401 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="14e23659db6c0010b86770c08c96191e" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="sectionh3">
-        <sys_ui_annotation action="INSERT_OR_UPDATE">
-            <is_plain_text>true</is_plain_text>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>9f343ed9db6c0010b86770c08c96196f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <text>The following question is about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please circle the number of the response that best describes the support of this person or group, or check the box if there is no such person.&#13;
-&#13;
-For the purposes of this question, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you're at the doctor's office).</text>
-            <type display_value="Text">863e446c0fd30000b12e6903cfe012ce</type>
-        </sys_ui_annotation>
-        <sys_ui_annotation action="INSERT_OR_UPDATE">
-            <is_plain_text>true</is_plain_text>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>93343ed9db6c0010b86770c08c961970</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <text>Family Members</text>
-            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
-        </sys_ui_annotation>
-        <sys_ui_annotation action="INSERT_OR_UPDATE">
-            <is_plain_text>true</is_plain_text>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>97343ed9db6c0010b86770c08c961970</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <text>Non-Family Members</text>
-            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
-        </sys_ui_annotation>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>9f343ed9db6c0010b86770c08c96196f</element>
-            <position>0</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5b343ed9db6c0010b86770c08c961970</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <sys_user/>
-            <type>annotation</type>
-        </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>1</position>
+            <position>0</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>df343ed9db6c0010b86770c08c961970</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>07ec5c31db288010b86770c08c961924</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>93343ed9db6c0010b86770c08c961970</element>
-            <position>2</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>57343ed9db6c0010b86770c08c961971</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <sys_user/>
-            <type>annotation</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_spouse_or_significant_other</element>
-            <position>3</position>
+            <position>1</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>db343ed9db6c0010b86770c08c961971</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8fec5c31db288010b86770c08c961924</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_children</element>
-            <position>4</position>
+            <position>2</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>53343ed9db6c0010b86770c08c961972</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>07ec5c31db288010b86770c08c961925</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_grandchildren</element>
-            <position>5</position>
+            <position>3</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d7343ed9db6c0010b86770c08c961972</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8bec5c31db288010b86770c08c961925</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_parents</element>
-            <position>6</position>
+            <position>4</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5f343ed9db6c0010b86770c08c961972</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>03ec5c31db288010b86770c08c961926</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_grandparents</element>
-            <position>7</position>
+            <position>5</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d3343ed9db6c0010b86770c08c961973</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>87ec5c31db288010b86770c08c961926</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_sisters</element>
-            <position>8</position>
+            <position>6</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5b343ed9db6c0010b86770c08c961973</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>0fec5c31db288010b86770c08c961926</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_brothers</element>
-            <position>9</position>
+            <position>7</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>df343ed9db6c0010b86770c08c961973</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>83ec5c31db288010b86770c08c961927</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_other_blood_relatives</element>
-            <position>10</position>
+            <position>8</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>57343ed9db6c0010b86770c08c961974</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>0bec5c31db288010b86770c08c961927</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_relatives_by_marriage_for_example_in_laws_ex_spouse</element>
-            <position>11</position>
+            <position>9</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>db343ed9db6c0010b86770c08c961974</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8fec5c31db288010b86770c08c961927</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>12</position>
+            <position>10</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>53343ed9db6c0010b86770c08c961975</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>07ec5c31db288010b86770c08c961928</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>97343ed9db6c0010b86770c08c961970</element>
-            <position>13</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d7343ed9db6c0010b86770c08c961975</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
-            <sys_user/>
-            <type>annotation</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_friend_since_childhood</element>
-            <position>14</position>
+            <position>11</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5f343ed9db6c0010b86770c08c961975</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8bec5c31db288010b86770c08c961928</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_other_friends</element>
-            <position>15</position>
+            <position>12</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d3343ed9db6c0010b86770c08c961976</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>03ec5c31db288010b86770c08c961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_co_workers</element>
-            <position>16</position>
+            <position>13</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5b343ed9db6c0010b86770c08c961976</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>87ec5c31db288010b86770c08c961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_spiritual_advisor</element>
-            <position>17</position>
+            <position>14</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>df343ed9db6c0010b86770c08c961976</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>0fec5c31db288010b86770c08c961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_religious_community</element>
-            <position>18</position>
+            <position>15</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>57343ed9db6c0010b86770c08c961977</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>83ec5c31db288010b86770c08c96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_neighbors</element>
-            <position>19</position>
+            <position>16</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>db343ed9db6c0010b86770c08c961977</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>0bec5c31db288010b86770c08c96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>a_cancer_survivor</element>
-            <position>20</position>
+            <position>17</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>53343ed9db6c0010b86770c08c961978</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8fec5c31db288010b86770c08c96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>someone_else_who_is_currently_getting_treatment_for_cancer</element>
-            <position>21</position>
+            <position>18</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d7343ed9db6c0010b86770c08c961978</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>07ec5c31db288010b86770c08c96192b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_doctors</element>
-            <position>22</position>
+            <position>19</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5f343ed9db6c0010b86770c08c961978</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>8bec5c31db288010b86770c08c96192b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>my_therapist_or_counselor</element>
-            <position>23</position>
+            <position>20</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>d3343ed9db6c0010b86770c08c961979</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>03ec5c31db288010b86770c08c96192c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>non_family_member_other_description</element>
-            <position>24</position>
+            <position>21</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>5b343ed9db6c0010b86770c08c961979</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>87ec5c31db288010b86770c08c96192c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>25</position>
+            <position>22</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 17:49:44</sys_created_on>
-            <sys_id>df343ed9db6c0010b86770c08c961979</sys_id>
+            <sys_created_on>2019-10-17 20:05:35</sys_created_on>
+            <sys_id>0fec5c31db288010b86770c08c96192c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="18e23659db6c0010b86770c08c961916">14e23659db6c0010b86770c08c96191e</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 17:49:44</sys_updated_on>
+            <sys_updated_on>2019-10-17 20:05:35</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

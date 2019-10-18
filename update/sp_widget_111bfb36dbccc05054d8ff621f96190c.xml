@@ -5,22 +5,50 @@
   /* widget controller */
   var c = this;
 	
+	$scope.pagination = [5, 10, 15, 20, 25];
+	$scope.sortKey = null;
+	$scope.reverse = false;	
+	$scope.sort = function(keyname){
+    /*console.log($scope.sortKey);*/
+		/*console.log();*/
+		$scope.sortKey = keyname;   //set the sortKey to the param passed
+		$scope.reverse = !$scope.reverse; //if true make it false and vice versa
+	}
+	
+	
+	
 	$rootScope.$on('spModel.fields.rendered', function(event){
 		var formLabel = event.targetScope.formModel.label
 		if (!/Family History Details/.test(formLabel))
 				return;
-	  if (e.targetScope.formModel.view == 'FHG')
-			c.g_form = e.targetScope.getGlideForm();			
+	  if (event.targetScope.formModel.view == 'FHD')
+			c.g_form = event.targetScope.getGlideForm();
 		
-		$timeout(function(){
+		/*$timeout(function(){
 			$('<h4 class="mb-0"><b>Answer only if person is dead<b></h4><hr/>').insertBefore($('#date_of_death').closest('.row'))
-		});
+		});*/
 	});
-	
+	c.id = '';
 	c.openForm = function(){
 		$('#addFamilyMemberDiv').modal('show');
+		$('#save').show();
+		$('#update').hide();
 		spUtil.get('widget-form', {
 			"sys_id": "-1",
+			"table": "x_naci_family_coho_family_history_details",
+			"view": "FHD"
+		}).then(function(widget) {
+			c.data.widget_add = widget;
+		})
+	}
+	
+	c.view = function(id){
+		c.id = id;
+		$('#addFamilyMemberDiv').modal('show');
+	  $('#save').hide();
+		$('#update').show();
+		spUtil.get('widget-form', {
+			"sys_id": id,
 			"table": "x_naci_family_coho_family_history_details",
 			"view": "FHD"
 		}).then(function(widget) {
@@ -54,8 +82,49 @@
 		});
 	}
 	
+	c.updateForm = function(){
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			var f = c.g_form.getField(field);
+			if(f.type == 'glide_date'){
+				var dt_str = c.g_form.getValue(field);
+				var d = new Date(dt_str);
+				record[field] = d;
+			}
+			else{
+				record[field] = c.g_form.getValue(field);
+			}			
+		})
+		$scope.server.get({
+			action: 'update',
+			record: record,
+			id: c.id
+		}).then(function(){
+			c.cancelForm();
+		});
+	}
+	
+	c.deleteCancer = function(sys_id){
+		spModal.confirm("<div><center><b>Are you sure you want to delete this record?</b></center></div>").then(function(confirmed){
+			if(confirmed){
+				$scope.server.get({
+					action: 'delete',
+					id: sys_id
+				})
+			}
+		})
+	};
+	
+	c.data.columns = [{label:"First Name", name: "first_name", width:'14%'},
+										{label:"Last Name", name: "last_name", width:'14%'},
+										{label: "Relationship",name: "relationship_to_you", width:'14%'},
+										{label:"Has Cancer", name: "has_cancer", width:'14%'},
+										{label: "Number of Children",name: "number_children", width:'14%'},
+									  {label: "Permission to Contact",name: "permission_to_contact", width:'14%'}];
+	
 	spUtil.recordWatch($scope, 'x_naci_family_coho_family_history_details', '', function(response){
-		 update($scope);
+		 spUtil.update($scope);
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -79,8 +148,14 @@
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
 	var str = gs.action.getGlideURI();
-	var sys_id = str.get('sys_id');
+	var enrollment_sys_id = str.get('sys_id');
+	var gr = new GlideRecord('x_naci_family_coho_family_history_question');
+	gr.addQuery('enrollment',enrollment_sys_id);
+	gr.query();
+	gr.next();
+	var sys_id = gr.sys_id.toString();
 	data.id = sys_id;
+	
 	if(input){
 		if(input.action == 'add'){
 			var record = input.record;
@@ -89,29 +164,38 @@
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
 			}
-			gr1.intake_form = data.id;
+			gr1.family_historic_qustion_id = data.id;
 			gr1.insert();
-		}
-		else if(input.action == 'delete'){
+		}else if(input.action == 'update'){
+			var record1 = input.record;
+			var gr3 = new GlideRecord('x_naci_family_coho_family_history_details');
+			gr3.get(input.id);
+			for (var key1 in record1) {
+				gr3.setValue(key1, record1[key1]);
+			}
+			gr3.update();			
+		}	else if(input.action == 'delete'){
 			var id = input.id;
-			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+			var gr2 = new GlideRecord('x_naci_family_coho_family_history_details');
 			gr2.get(id);
 			gr2.deleteRecord();
 		}
 	}
 	
-	var gr = new GlideRecord('x_naci_family_coho_family_history_details');
-	gr.addQuery('intake_form', data.id);
-	gr.orderByDesc('sys_created_on');
-	gr.query();
+	var gr4 = new GlideRecord('x_naci_family_coho_family_history_details');
+	gr4.addQuery('family_historic_qustion_id', data.id);
+	gr4.orderByDesc('sys_created_on');
+	gr4.query();
 	data.records = [];
-	while(gr.next()){
+	while(gr4.next()){
 		var tmp = {};
-		tmp.sys_id = gr.sys_id.toString();
-		tmp.cancer_type = gr.cancer_type.toString();
-		tmp.please_specify = gr.please_specify.toString();
-		tmp.age_in_years_at_diagnosis = gr.age_in_years_at_diagnosis.toString();
-		tmp.date_diagnosis = gr.date_diagnosis.toString();
+		tmp.sys_id = gr4.sys_id.toString();
+		tmp.first_name = gr4.first_name.toString();
+		tmp.last_name = gr4.last_name.toString();
+		tmp.relationship_to_you = gr4.relationship_to_you.toString();
+		tmp.has_cancer = gr4.has_cancer.toString();
+		tmp.number_children = gr4.number_children.toString();
+		tmp.permission_to_contact = gr4.permission_to_contact.toString();
 		data.records.push(tmp);
 	}
 })();]]></script>
@@ -121,7 +205,7 @@
         <sys_created_on>2019-09-26 18:18:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>111bfb36dbccc05054d8ff621f96190c</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>Family Members</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -129,12 +213,65 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_111bfb36dbccc05054d8ff621f96190c</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-08 17:24:57</sys_updated_on>
+        <sys_updated_on>2019-10-18 22:02:01</sys_updated_on>
         <template><![CDATA[<div id="family_member">
-  <div class="text-right">
-		<button class="btn btn-primary mb-3" ng-click="c.openForm()">
-      Add Family Member
-    </button>
+    <div class="d-flex">
+    <div class="col-md-6 d-flex">
+      <label class="pr-3 pt-2">Search:</label> 
+      <input type="text" 
+             class="form-control" 
+             placeholder="{{c.data.label}} Records" 
+             aria-describedby="search record"
+             ng-model="search" 
+             style="width: 300px;"/>  
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" ng-click="c.openForm()" style="padding: 5px 20px;position: absolute;right: 0px; margin-right:5px;">
+        Add Family Member
+      </button>
+    </div>
+  </div>
+  <div class="row" style="margin: 3px 3px" ng-show="c.data.records.length > 0">
+    <table class="table table-bordered table-hover">
+      <thead class="bg-primary" style="font-size:15px;">
+        <tr>
+          <th ng-repeat="col in c.data.columns" width="{{col.width}}"  ng-click="sort(col.name)">
+            {{ col.label }}
+            <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th style="vertical-align: middle;text-align: center;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
+          <td ng-repeat="col in c.data.columns">
+            {{ record[col.name] || 'N/A' }}  
+          </td>
+          <td>
+            <button class="btn btn-primary" ng-click="c.view(record.sys_id)" style="padding: 5px 30px; font-size:17px;">
+              View
+            </button>
+            <button class="btn btn-primary" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px; font-size:17px;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="display:flex;">
+      <span style="margin-right:auto">Total: {{ c.data.records.length }}</span>
+      <div style="margin-left:auto">
+        <label class="">Results per Page:</label> 
+        <select class="from-control"
+                ng-init="pageSize = pagination[0]"
+                ng-options="num for num in pagination"
+                ng-model="pageSize">
+        </select>
+      </div>
+      <div style="margin-left: 1.25rem">
+        <dir-pagination-controls></dir-pagination-controls>
+      </div>
+    </div>  
   </div>
 </div>
 
@@ -142,7 +279,7 @@
   <div class="modal-dialog modal-lg" style="width:1400px;">
     <div class="modal-content" style="min-height:400px; overflow-y:hidden; overflow-x: hidden;">
       <div class="modal-header">
-        <h4  class="modal-title"><b>Add new Entry</b></h4>
+        <h4  class="modal-title"><b>Family Memeber</b></h4>
       </div>      
       <div class="modal-body" style="padding-bottom:0px;">
         <div style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
@@ -152,8 +289,11 @@
           </sp-widget>
         </div>
         <div class="form-section mb-3" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
-          <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
+          <button type="button" id="save" class="table-button btn btn-primary" ng-click="c.saveForm()">
             Save
+          </button>  
+          <button type="button" id="update" class="table-button btn btn-primary" ng-click="c.updateForm()">
+            Update
           </button>  
           <button type="button" class="table-button btn btn-danger" ng-click="c.cancelForm()">
             Cancel
@@ -161,6 +301,7 @@
         </div>
       </div>
     </div>
-  </div>]]></template>
+  </div>
+</div>]]></template>
     </sp_widget>
 </record_update>

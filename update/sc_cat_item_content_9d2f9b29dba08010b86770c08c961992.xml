@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_content">
+    <sc_cat_item_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Enrollment">57e06fe9dba08010b86770c08c9619a7</category>
+        <content_type>external</content_type>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon>be90e3e9dba08010b86770c08c96193d</icon>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <kb_article/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <module/>
+        <name>Create Enrollment</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("/x_naci_family_coho_mock_up_intake.do?sys_id=-1&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles>snc_internal</roles>
+        <sc_catalogs>4aeed329dba08010b86770c08c9619fc</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description/>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_content</sys_class_name>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:41:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9d2f9b29dba08010b86770c08c961992</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Create Enrollment</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sc_cat_item_content_9d2f9b29dba08010b86770c08c961992</sys_update_name>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 15:48:46</sys_updated_on>
+        <target>internal</target>
+        <template/>
+        <type>item</type>
+        <u_approval_required>false</u_approval_required>
+        <u_cms_description/>
+        <u_linux_os>false</u_linux_os>
+        <u_mac_os>false</u_mac_os>
+        <u_non_standard_delivery_date>false</u_non_standard_delivery_date>
+        <u_solaris_os>false</u_solaris_os>
+        <u_training>false</u_training>
+        <u_trp_item>false</u_trp_item>
+        <u_unix_os>false</u_unix_os>
+        <u_windows_os>false</u_windows_os>
+        <url>/x_naci_family_coho_mock_up_intake.do?sys_id=-1</url>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=9d2f9b29dba08010b86770c08c961992"/>
+    <fx_price action="delete_multiple" query="id=9d2f9b29dba08010b86770c08c961992"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>9d2f9b29dba08010b86770c08c961992</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:41:49</sys_created_on>
+        <sys_id>d38067a9dba08010b86770c08c961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 15:41:49</sys_updated_on>
+        <table>sc_cat_item_content</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>9d2f9b29dba08010b86770c08c961992</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:41:51</sys_created_on>
+        <sys_id>7b8067a9dba08010b86770c08c96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 15:41:51</sys_updated_on>
+        <table>sc_cat_item_content</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#76bdf6</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>icon</file_name>
+        <image_height>128</image_height>
+        <image_width>128</image_width>
+        <size_bytes>3434</size_bytes>
+        <size_compressed>3445</size_compressed>
+        <state>available</state>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:42:03</sys_created_on>
+        <sys_id>be90e3e9dba08010b86770c08c96193d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2019-10-17 15:42:04</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item_content</table_name>
+        <table_sys_id>9d2f9b29dba08010b86770c08c961992</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="be90e3e9dba08010b86770c08c96193d">be90e3e9dba08010b86770c08c96193d</sys_attachment>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:42:03</sys_created_on>
+        <sys_id>fe90e3e9dba08010b86770c08c96193d</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>4580</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="be90e3e9dba08010b86770c08c96193d">be90e3e9dba08010b86770c08c96193d</sys_attachment>
+        <sys_created_by>lawlorap@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-17 15:42:03</sys_created_on>
+        <sys_id>7290e3e9dba08010b86770c08c96193e</sys_id>
+    </sys_attachment_doc>
+</record_update>

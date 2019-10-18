@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
         <grid_canvas display_value="PA New Tab">040be081dbec8c10b86770c08c961910</grid_canvas>
-        <height>10</height>
+        <height>6</height>
         <portal_widget display_value="Created Oct 16, 2019 15:13:45">ca774bd5dbec0010b86770c08c961952</portal_widget>
-        <posx>8</posx>
+        <posx>6</posx>
         <posy>0</posy>
         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
         <sys_created_on>2019-10-16 19:13:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8e774bd5dbec0010b86770c08c961954</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>040be081dbec8c10b86770c08c961910</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_grid_canvas_pane_8e774bd5dbec0010b86770c08c961954</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 19:30:58</sys_updated_on>
-        <width>4</width>
+        <sys_updated_by>lawlorap@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-17 16:11:47</sys_updated_on>
+        <width>3</width>
     </sys_grid_canvas_pane>
 </record_update>

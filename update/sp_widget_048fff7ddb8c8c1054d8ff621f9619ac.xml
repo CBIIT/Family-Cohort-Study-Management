@@ -2,30 +2,33 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope,$location, $timeout, spModal, spUtil, $uibModal) {
-  /* widget controller */
-  var c = this;
+	/* widget controller */
+	var c = this;
 	var s = $location.search();
-	
-	
+
+
 	c.biopsyDisplay = false;
 	c.cancerDisplay = false;
 	c.surgeryDisplay = false;
 	c.medicationDisplay = false;
 	c.screeningDisplay = false;
 	c.showWidget = false;
-	
+	c.reproDisplay = false;
+	c.breastDisplay = false;
+	c.hormoneDisplay = false;
+
 	c.show_view_index = 1;
-	
+
 	c.g_forms = {};
-	
+
 	c.current_form_idx = 'Introduction';
-	
+
 	$scope.data.hideRelatedLists = true;
 	
 	c.startForm = function(){
 		c.showView(2);
 	}
-	
+
 	c.getFormValues = function() {
 		var g_form = c.g_forms[c.current_form_idx];
 		var fields = g_form.getFieldNames();
@@ -40,11 +43,11 @@
 			else{
 				record[field] = g_form.getValue(field);
 			}
-			
+
 		})
 		return record;		
 	}
-	
+
 	c.saveForm = function(cb){
 		var record = c.getFormValues();
 		$scope.server.get({
@@ -64,21 +67,33 @@
 			}
 		});	
 	}
-	
+
 	c.submitForm = function(){
 		c.saveForm(function(){
 			//$('#thank_you').show();
 		});
 	}
-	
+
 	c.saveAndNextForm = function(){
 		c.saveForm(function(){
 			c.showView(c.show_view_index + 1);
 		});
 	};
-	
+
 	c.showView = function(idx){
+
+		c.biopsyDisplay = false;
+		c.cancerDisplay = false;
+		c.surgeryDisplay = false;
+		c.medicationDisplay = false;
+		c.screeningDisplay = false;
+		c.showWidget = false;
+		c.reproDisplay = false;
+		c.breastDisplay = false;
+		c.hormoneDisplay = false;
+
 		c.show_view_index = idx;
+		
 		if(idx != 1){
 			if(idx == 2){
 				c.current_form_idx = 'SectionA';
@@ -93,12 +108,12 @@
 						c.widget_2 = response;
 					})
 				}
-				
+
 			}
 			else if(idx == 3){
 				c.current_form_idx = 'SectionB1';
 				if(!c.widget_3){
-					
+
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
@@ -188,12 +203,12 @@
 				}
 			}
 			else if(idx == 10){
-				c.current_form_idx = 'SectionG1';
+				c.current_form_idx = 'SectionF';
 				if(!c.widget_10){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionG1'
+						"view": 'SectionF'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
 						c.widget_10 = response;
@@ -201,12 +216,12 @@
 				}
 			}
 			else if(idx == 11){
-				c.current_form_idx = 'SectionG2';
+				c.current_form_idx = 'SectionG1';
 				if(!c.widget_11){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionG2'
+						"view": 'SectionG1'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
 						c.widget_11 = response;
@@ -215,38 +230,108 @@
 			}
 			else if(idx == 12){
 				c.current_form_idx = 'SectionG2';
-				if(!c.widget_11){
+				if(!c.widget_12){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionG2'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_11 = response;
+						c.widget_12 = response;
+					})
+				}
+			}
+			else if(idx == 13){
+				c.current_form_idx = 'SectionG3';
+				if(!c.widget_13){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionG3'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_13 = response;
+					})
+				}
+			}
+			else if(idx == 14){
+				c.current_form_idx = 'SectionH';
+				if(!c.widget_14){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionH'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_14 = response;
+					})
+				}
+			}
+			else if(idx == 15){
+				c.current_form_idx = 'SectionH1';
+				if(!c.widget_15){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionH1'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_15 = response;
+					})
+				}
+			}
+			else if(idx == 16){
+				c.current_form_idx = 'SectionH2';
+				if(!c.widget_16){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionH2'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_16 = response;
+					})
+				}
+			}
+			else if(idx == 17){
+				
+				c.current_form_idx = 'SectionH3';
+				if(!c.widget_17){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionH3'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_17 = response;
 					})
 				}
 			}
 			else{
 				c.current_form_idx = 'SignatureAndSubmit';
-				if(!c.widget_10){
+				if(!c.widget_20){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SignatureAndSubmit'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_10 = response;
+						c.widget_20 = response;
 					})
 				}
 			}
-			
-			
+
+
 		}
 	}
-	
+
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		var g_form = null;
-		if(['SectionATwoColumn','SectionB1','SectionB2','SectionB3', 'SectionB4', 'SectionC','SectionD','SectionE', 'SignatureAndSubmit'].indexOf(e.targetScope.formModel.view) !== -1){
+		if(['SectionATwoColumn','SectionB1','SectionB2','SectionB3', 'SectionB4', 
+				'SectionC','SectionD','SectionE','SectionF',
+				'SectionG1','SectionG2','SectionG3',
+				'SectionH','SectionH1','SectionH2','SectionH3',
+				'SignatureAndSubmit'].indexOf(e.targetScope.formModel.view) !== -1){
 			var button_bar = $('.right-side-content #form_widget_'+c.show_view_index+' div.panel-footer');
 			button_bar.html("");
 			var html = '';
@@ -280,7 +365,7 @@
 			else{
 				c.cancerDisplay = false;
 			}
-			
+
 			e.targetScope.$on('field.change.have_biopsy', function(ev, obj) {
 				if(obj.newValue == 'YES'){
 					c.biopsyDisplay = true;
@@ -299,7 +384,7 @@
 			});
 		}
 		else if(e.targetScope.formModel.view == "SectionB2"){
-			
+
 			c.g_forms['SectionB2'] = e.targetScope.getGlideForm();
 			g_form = e.targetScope.getGlideForm();	
 			var have_any_surgery = g_form.getValue('have_any_surgery');
@@ -309,7 +394,7 @@
 			else{
 				c.surgeryDisplay = false;
 			}
-			
+
 			e.targetScope.$on('field.change.have_any_surgery', function(ev, obj) {
 				if(obj.newValue == 'YES'){
 					c.surgeryDisplay = true;
@@ -330,7 +415,7 @@
 			else{
 				c.medicationDisplay = false;
 			}
-			
+
 			e.targetScope.$on('field.change.take_more_than_6_months', function(ev, obj) {
 				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
 				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
@@ -341,7 +426,7 @@
 					c.medicationDisplay = false;
 				}
 			});
-			
+
 			e.targetScope.$on('field.change.taking_any_prescription_medication', function(ev, obj) {
 				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
 				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
@@ -366,7 +451,7 @@
 			else{
 				c.screeningDisplay = false;
 			}
-			
+
 			e.targetScope.$on('field.change.had_screening_for_cancer', function(ev, obj) {
 				var v1 = c.g_forms['SectionC'].getValue('had_screening_for_cancer');
 				if(v1 == 'YES'){
@@ -382,6 +467,87 @@
 		}
 		else if(e.targetScope.formModel.view == "SectionE"){
 			c.g_forms['SectionE'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionF"){
+			c.g_forms['SectionF'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionG1"){
+			c.g_forms['SectionG1'] = e.targetScope.getGlideForm();
+		}
+		else if (e.targetScope.formModel.view == "SectionG2"){
+
+			//Watch the Ever had your ovaries of fallopian tubes field for value changes
+			e.targetScope.$on('field.change.ever_had_your_ovaries_or_fallopian_tubes_removed', function(ev, obj) {
+				var g2 = c.g_forms['SectionG2'].getValue('ever_had_your_ovaries_or_fallopian_tubes_removed');
+				//If yes, display reproductive surgery history table
+				if(g2 == 'yes'){
+					c.reproDisplay = true;
+				}
+				else{
+					c.reproDisplay = false;
+				}
+
+			});
+
+			//Watch have you ever had your breast removal field
+			e.targetScope.$on('field.change.have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer', function(ev, obj) {
+				var g3 = c.g_forms['SectionG2'].getValue('have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer');
+
+				//If yes, display widget to add breast surgery history table
+				if(g3 == 'yes'){
+					c.breastDisplay = true;
+				} else {
+					c.breastDisplay = false;
+				}
+			});
+
+			e.targetScope.$on('field.change.were_you_ever_prescribed_female_hormones_around_the_time_of_menopause', function(ev, obj) {
+				var g4 = c.g_forms['SectionG2'].getValue('were_you_ever_prescribed_female_hormones_around_the_time_of_menopause');
+
+				//If yes, display widget to add breast surgery history table
+				if(g4 == 'yes'){
+					c.hormoneDisplay = true;
+				} else {
+					c.hormoneDisplay = false;
+				}
+			});
+
+
+			c.g_forms['SectionG2'] = e.targetScope.getGlideForm();
+			g_form = e.targetScope.getGlideForm();
+			var reproRemoved = g_form.getValue('ever_had_your_ovaries_or_fallopian_tubes_removed');
+			var breastRemoved = g_form.getValue('have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer');
+			var hormones = g_form.getValue('were_you_ever_prescribed_female_hormones_around_the_time_of_menopause');
+			if(reproRemoved == 'yes'){
+				c.reproDisplay = true;
+			} else {
+				c.reproDisplay = false;
+			}
+			if (breastRemoved == 'yes'){
+				c.breastDisplay = true;
+			}else{
+				c.breastDisplay = false;
+			}
+			if (hormones == 'yes'){
+				c.hormoneDisplay = true;
+			} else {
+				c.hormoneDisplay = false;
+			}
+		}
+		else if(e.targetScope.formModel.view == "SectionG3"){
+			c.g_forms['SectionG3'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionH"){
+			c.g_forms['SectionH'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionH1"){
+			c.g_forms['SectionH1'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionH2"){
+			c.g_forms['SectionH2'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionH3"){
+			c.g_forms['SectionH3'] = e.targetScope.getGlideForm();
 		}
 		else{
 			c.g_forms['SignatureAndSubmit'] = e.targetScope.getGlideForm();
@@ -415,6 +581,8 @@
 	var str = gs.action.getGlideURI();
 	var sys_id = str.get('sys_id');
 	data.sys_id = sys_id;
+	//data.record.sex = '';
+	
 	
 	if(input){
 		if(input.action == 'update'){
@@ -427,6 +595,16 @@
 			}
 			gr1.updateMultiple();
 		}
+		
+		
+			
+			var enrollmentLookUp = new GlideRecord ('x_naci_family_coho_individual_information_questionnaire');
+			if (enrollmentLookUp.get(sys_id)){
+				
+				data.record.sex = enrollmentLookUp.enrollment.biological_sex;
+				
+			
+		}
 	}
 })();]]></script>
         <servicenow>false</servicenow>
@@ -435,15 +613,15 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>421</sys_mod_count>
+        <sys_mod_count>485</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 20:13:44</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-18 20:02:34</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 18px;">
   <div class="left-side-menu col-md-3">
     <ul>
@@ -456,9 +634,15 @@
       <li ng-class="{'active': c.show_view_index == 7}" ng-click="c.showView(7)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Screening Tests</a></li>
       <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Tobacco Use</a></li>
       <li ng-class="{'active': c.show_view_index == 9}" ng-click="c.showView(9)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Alcohol Use</a></li>
-      <li ng-class="{'active': c.show_view_index == 10}" ng-click="c.showView(10)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
-      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
-      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
+      <li ng-class="{'active': c.show_view_index == 10}" ng-click="c.showView(10)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Physical Development</a></li>
+      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
+      <li ng-class="{'active': c.show_view_index == 12}" ng-click="c.showView(12)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
+      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
+      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
+      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
+      <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
+      <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
+      <li ng-class="{'active': c.show_view_index == 20}" ng-click="c.showView(20)"><i class="fa fa-circle-o" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
     </ul>
   </div>
   <div class="right-side-content col-md-9">
@@ -567,6 +751,76 @@
     </div>
     <div style="" id="form_widget_12" ng-show="c.show_view_index == 12">
       <sp-widget widget="c.widget_12">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+    <div ng-show="c.reproDisplay" class="div-inset-list">
+      <widget id="fcsms_iiq_form_reproductive_removal"></widget>
+    </div>
+    <div ng-show="c.breastDisplay" class="div-inset-list">
+      <widget id="fcsms_iiq_breast_removal"></widget>
+    </div>
+    <div ng-show="c.hormoneDisplay" class="div-inset-list">
+      <widget id="fcsms_iiq_female_hormones"></widget>
+    </div>
+    <div style="" id="form_widget_13" ng-show="c.show_view_index == 13">
+      <sp-widget widget="c.widget_13">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+    <div ng-show="c.show_view_index == 14" class="div_shadow">
+      <p style="padding: 10px 15px">
+        Below is a list of problems people sometimes have. Read each one carefully and select the number that best describes how much that problem has distressed or bothered you during the past 7 days, including today.   
+      </p>
+    </div>
+    <div style="" id="form_widget_14" ng-show="c.show_view_index == 14">
+      <sp-widget widget="c.widget_14">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+    <div ng-show="c.show_view_index == 15" class="div_shadow">
+      <p style="padding: 10px 15px">
+        The following questions ask you about your feelings and thoughts during the past month. In each case, please select the choice that best describes how often you felt or thought a certain way.  
+      </p>
+    </div>
+    <div style="" id="form_widget_15" ng-show="c.show_view_index == 15">
+      <sp-widget widget="c.widget_15">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+    <div ng-show="c.show_view_index == 16" class="div_shadow">
+      <p style="padding: 10px 15px">
+        The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
+      </p>
+    </div>
+    <div style="" id="form_widget_16" ng-show="c.show_view_index == 16">
+      <sp-widget widget="c.widget_16">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+		<div ng-show="c.show_view_index == 17" class="div_shadow">
+      <p style="padding: 10px 15px">
+        The following questions are about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please select the response that best describes the support of this person or group.
+      </p>
+    </div>
+    <div ng-show="c.show_view_index == 17" class="div_shadow">
+      <p style="padding: 10px 15px">
+       For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
+      </p>
+    </div>
+    <div style="" id="form_widget_17" ng-show="c.show_view_index == 17">
+      <sp-widget widget="c.widget_17">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
+    </div>
+    <div style="" id="form_widget_20" ng-show="c.show_view_index == 20">
+      <sp-widget widget="c.widget_20">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
