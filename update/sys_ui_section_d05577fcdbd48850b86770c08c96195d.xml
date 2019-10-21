@@ -4,41 +4,27 @@
             <element>name_and_address_diagnosis</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 23:01:25</sys_created_on>
-            <sys_id>ec55b7fcdbd48850b86770c08c9619ea</sys_id>
+            <sys_created_on>2019-10-21 22:43:39</sys_created_on>
+            <sys_id>a577a98bdba40810b86770c08c961905</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">d05577fcdbd48850b86770c08c96195d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 23:01:25</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:43:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>name_and_address_treatment</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 23:01:25</sys_created_on>
-            <sys_id>6455b7fcdbd48850b86770c08c9619eb</sys_id>
+            <sys_created_on>2019-10-21 22:43:39</sys_created_on>
+            <sys_id>2d77a98bdba40810b86770c08c961905</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">d05577fcdbd48850b86770c08c96195d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 23:01:25</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name_and_address_treatment</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 23:01:25</sys_created_on>
-            <sys_id>a055b7fcdbd48850b86770c08c9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">d05577fcdbd48850b86770c08c96195d</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 23:01:25</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:43:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

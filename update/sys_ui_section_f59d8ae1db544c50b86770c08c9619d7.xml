@@ -4,41 +4,27 @@
             <element>time_take_medication</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>ce9dcae1db544c50b86770c08c961934</sys_id>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>cc09254fdba40810b86770c08c9619b8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">f59d8ae1db544c50b86770c08c9619d7</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>how_many_years</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>469dcae1db544c50b86770c08c961935</sys_id>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>4409254fdba40810b86770c08c9619b9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">f59d8ae1db544c50b86770c08c9619d7</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>how_many_years</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>ca9dcae1db544c50b86770c08c961935</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">f59d8ae1db544c50b86770c08c9619d7</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="53b8b40fdbe8081054d8ff621f961943" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="mindstress">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_been_feeling_blue</element>
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:23:32</sys_created_on>
+            <sys_id>8aa9784fdbe8081054d8ff621f961985</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="dbb8388bdbe8081054d8ff621f961976">53b8b40fdbe8081054d8ff621f961943</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:23:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_been_feeling_fearful</element>
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:23:32</sys_created_on>
+            <sys_id>02a9784fdbe8081054d8ff621f961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="dbb8388bdbe8081054d8ff621f961976">53b8b40fdbe8081054d8ff621f961943</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:23:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_lonely</element>
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:23:32</sys_created_on>
+            <sys_id>86a9784fdbe8081054d8ff621f961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="dbb8388bdbe8081054d8ff621f961976">53b8b40fdbe8081054d8ff621f961943</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:23:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things</element>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:23:32</sys_created_on>
+            <sys_id>0ea9784fdbe8081054d8ff621f961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="dbb8388bdbe8081054d8ff621f961976">53b8b40fdbe8081054d8ff621f961943</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:23:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:19:31</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>53b8b40fdbe8081054d8ff621f961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_individual_information_questionnaire</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_53b8b40fdbe8081054d8ff621f961943</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:19:31</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="mindstress" name="mindstress">dbb8388bdbe8081054d8ff621f961976</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

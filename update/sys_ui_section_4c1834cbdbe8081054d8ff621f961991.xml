@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="4c1834cbdbe8081054d8ff621f961991" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="bodystress">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>in_the_past_7_days_how_much_have_you_been_distressed_by_faintness_or_dizziness</element>
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:17:55</sys_created_on>
+            <sys_id>b758bccbdbe8081054d8ff621f9619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="0418748bdbe8081054d8ff621f9619ba">4c1834cbdbe8081054d8ff621f961991</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_felt_numbness_or_tingling_in_body_parts</element>
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:17:55</sys_created_on>
+            <sys_id>3f58bccbdbe8081054d8ff621f9619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="0418748bdbe8081054d8ff621f9619ba">4c1834cbdbe8081054d8ff621f961991</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up</element>
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:17:55</sys_created_on>
+            <sys_id>b358bccbdbe8081054d8ff621f9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="0418748bdbe8081054d8ff621f9619ba">4c1834cbdbe8081054d8ff621f961991</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body</element>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:17:55</sys_created_on>
+            <sys_id>3b58bccbdbe8081054d8ff621f9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="0418748bdbe8081054d8ff621f9619ba">4c1834cbdbe8081054d8ff621f961991</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest</element>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:17:55</sys_created_on>
+            <sys_id>bf58bccbdbe8081054d8ff621f9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="0418748bdbe8081054d8ff621f9619ba">4c1834cbdbe8081054d8ff621f961991</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 19:16:34</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>4c1834cbdbe8081054d8ff621f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_individual_information_questionnaire</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_4c1834cbdbe8081054d8ff621f961991</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 19:16:34</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="bodystress" name="bodystress">0418748bdbe8081054d8ff621f9619ba</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="7020a087dbecc410b86770c08c9619fe" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionA1">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_of_proband</element>
+            <position>0</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 17:32:25</sys_created_on>
+            <sys_id>2e306487dbecc410b86770c08c961974</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="7420a087dbecc410b86770c08c96194c">7020a087dbecc410b86770c08c9619fe</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 17:32:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relationship_to_this_person</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 17:32:25</sys_created_on>
+            <sys_id>6a306487dbecc410b86770c08c961981</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="7420a087dbecc410b86770c08c96194c">7020a087dbecc410b86770c08c9619fe</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 17:32:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 17:32:02</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>7020a087dbecc410b86770c08c9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_individual_information_questionnaire</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_7020a087dbecc410b86770c08c9619fe</sys_update_name>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 17:32:02</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="SectionA1" name="SectionA1">7420a087dbecc410b86770c08c96194c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

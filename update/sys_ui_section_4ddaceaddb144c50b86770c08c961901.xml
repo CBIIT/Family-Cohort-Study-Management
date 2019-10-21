@@ -4,69 +4,55 @@
             <element>name_of_the_medication</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>759dcae1db544c50b86770c08c96190f</sys_id>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>8c09254fdba40810b86770c08c961981</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dose_medication</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>0409254fdba40810b86770c08c961982</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reason_taking_medication</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>f99dcae1db544c50b86770c08c96190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>719dcae1db544c50b86770c08c961910</sys_id>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>8809254fdba40810b86770c08c961982</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>dose_medication</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>f59dcae1db544c50b86770c08c961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reason_please_specify</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 23:23:40</sys_created_on>
-            <sys_id>7d9dcae1db544c50b86770c08c961910</sys_id>
+            <sys_created_on>2019-10-21 22:50:22</sys_created_on>
+            <sys_id>0009254fdba40810b86770c08c961983</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_prescription_medications" sys_domain="global" view="45da8eaddb144c50b86770c08c9619fe">4ddaceaddb144c50b86770c08c961901</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 23:23:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:50:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

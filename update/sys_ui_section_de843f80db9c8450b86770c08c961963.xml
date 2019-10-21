@@ -4,41 +4,27 @@
             <element>diagnosed_with_hypertension</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 22:41:48</sys_created_on>
-            <sys_id>780406a5db144c50b86770c08c9619c1</sys_id>
+            <sys_created_on>2019-10-21 22:34:01</sys_created_on>
+            <sys_id>6045ad87dba40810b86770c08c9619b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d2843f80db9c8450b86770c08c96195f">de843f80db9c8450b86770c08c961963</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 22:41:48</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:34:01</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>hypertension_treated</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 22:41:48</sys_created_on>
-            <sys_id>f00406a5db144c50b86770c08c9619c2</sys_id>
+            <sys_created_on>2019-10-21 22:34:01</sys_created_on>
+            <sys_id>e845ad87dba40810b86770c08c9619b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d2843f80db9c8450b86770c08c96195f">de843f80db9c8450b86770c08c961963</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 22:41:48</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>hypertension_treated</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-04 22:41:48</sys_created_on>
-            <sys_id>780406a5db144c50b86770c08c9619c2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d2843f80db9c8450b86770c08c96195f">de843f80db9c8450b86770c08c961963</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-04 22:41:48</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:34:01</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

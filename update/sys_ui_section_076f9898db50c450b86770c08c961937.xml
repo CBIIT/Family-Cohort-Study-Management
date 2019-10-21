@@ -4,55 +4,41 @@
             <element>household_income</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
-            <sys_id>3cc14b70dbd08850b86770c08c96191f</sys_id>
+            <sys_created_on>2019-10-21 17:23:08</sys_created_on>
+            <sys_id>961e58c3dbecc410b86770c08c9619a6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 17:23:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>income_support_count</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 17:23:08</sys_created_on>
+            <sys_id>1e1e58c3dbecc410b86770c08c9619a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 17:23:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>worked_more_than_a_year</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
-            <sys_id>b0c14b70dbd08850b86770c08c961920</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
-            <sys_id>38c14b70dbd08850b86770c08c961920</sys_id>
+            <sys_created_on>2019-10-21 17:23:08</sys_created_on>
+            <sys_id>921e58c3dbecc410b86770c08c9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>income_support_count</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 19:16:09</sys_created_on>
-            <sys_id>bcc14b70dbd08850b86770c08c961920</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">076f9898db50c450b86770c08c961937</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 19:16:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 17:23:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

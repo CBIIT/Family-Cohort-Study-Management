@@ -113,15 +113,15 @@
         <sys_created_on>2019-09-16 13:31:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>408953e7db7ff30054d8ff621f961920</sys_id>
-        <sys_mod_count>425</sys_mod_count>
+        <sys_mod_count>434</sys_mod_count>
         <sys_name>FCSMS Table List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_408953e7db7ff30054d8ff621f961920</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-18 19:39:24</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-21 17:37:07</sys_updated_on>
         <template><![CDATA[<div id="container" style="height: 400px; font-size:20px;margin-left: 30px;">
   <h2 style="text-align:left;font-weight:bold;">Enrollment Activities</h2>
   <div style="width: 100%;">
@@ -142,20 +142,20 @@
     </div>
     <div class="col-md-6" style="position: relative;">
       <button class="btn btn-primary btn-font" ng-click="c.addEnrollment()" style="padding: 5px 50px;position: absolute;right: 0px;">
-        Create new Enrollment
+        Create new Referral
       </button>
     </div>
   </div>
   
   <div class="container" style="width:100%;display:flex;padding:10px 0px;background-color:#428bca;color:white;">
     <div class="col-md-1">
-      Enrollment ID
+      Referral ID
+    </div>
+    <div class="col-md-1">
+      Family ID
     </div>
     <div class="col-md-2">
       Informant/Proband
-    </div>
-    <div class="col-md-2">
-      Enrollment Status
     </div>
     <div class="col-md-2">
       Eligible Status
@@ -180,11 +180,11 @@
     	<div class="col-md-1">
         {{ record['enrollment_id'] || 'N/A' }}  
       </div>
-      <div class="col-md-2">
-        {{ record['informant'] || 'N/A' }}  
+    	<div class="col-md-1">
+        {{ record['family_id'] || 'N/A' }}  
       </div>
       <div class="col-md-2">
-        {{ record['er_status'] || 'N/A' }}  
+        {{ record['informant'] || 'N/A' }}  
       </div>
       <div class="col-md-2">
         {{ record['es_status'] || 'N/A' }}  

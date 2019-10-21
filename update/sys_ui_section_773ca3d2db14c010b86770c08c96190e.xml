@@ -4,13 +4,13 @@
             <element>other_alternative_therapy_or_treatment</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-07 14:12:43</sys_created_on>
-            <sys_id>7c4ce3d2db14c010b86770c08c961905</sys_id>
+            <sys_created_on>2019-10-21 22:36:18</sys_created_on>
+            <sys_id>f9c5adc7dba40810b86770c08c96192c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190e</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-07 14:12:43</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:36:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,41 +18,27 @@
             <element>other_therapy_or_treatment_specify</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-07 14:12:43</sys_created_on>
-            <sys_id>f04ce3d2db14c010b86770c08c961906</sys_id>
+            <sys_created_on>2019-10-21 22:36:18</sys_created_on>
+            <sys_id>71c5adc7dba40810b86770c08c96192d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190e</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-07 14:12:43</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:36:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>other_alternative_therapy_or_treatment_past_12_months</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-07 14:12:43</sys_created_on>
-            <sys_id>784ce3d2db14c010b86770c08c961906</sys_id>
+            <sys_created_on>2019-10-21 22:36:18</sys_created_on>
+            <sys_id>f5c5adc7dba40810b86770c08c96192d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190e</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-07 14:12:43</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>other_alternative_therapy_or_treatment_past_12_months</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-07 14:12:43</sys_created_on>
-            <sys_id>fc4ce3d2db14c010b86770c08c961906</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="4095b304db9c8450b86770c08c961969">773ca3d2db14c010b86770c08c96190e</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-07 14:12:43</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:36:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

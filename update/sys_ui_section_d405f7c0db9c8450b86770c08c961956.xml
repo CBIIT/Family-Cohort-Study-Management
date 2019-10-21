@@ -4,41 +4,27 @@
             <element>taking_any_prescription_medication</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 15:04:35</sys_created_on>
-            <sys_id>98053bc0db9c8450b86770c08c96193e</sys_id>
+            <sys_created_on>2019-10-21 22:35:27</sys_created_on>
+            <sys_id>999569c7dba40810b86770c08c961930</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">d405f7c0db9c8450b86770c08c961956</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 15:04:35</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:35:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>take_more_than_6_months</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 15:04:35</sys_created_on>
-            <sys_id>10053bc0db9c8450b86770c08c96193f</sys_id>
+            <sys_created_on>2019-10-21 22:35:27</sys_created_on>
+            <sys_id>119569c7dba40810b86770c08c961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">d405f7c0db9c8450b86770c08c961956</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 15:04:35</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>take_more_than_6_months</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 15:04:35</sys_created_on>
-            <sys_id>94053bc0db9c8450b86770c08c96193f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">d405f7c0db9c8450b86770c08c961956</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 15:04:35</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:35:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

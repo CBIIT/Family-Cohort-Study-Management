@@ -162,7 +162,7 @@
         <sys_created_on>2019-10-04 21:31:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1e3f921dbd04c50b86770c08c961984</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>FCSMS IIQ Form Surgery List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -170,7 +170,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_a1e3f921dbd04c50b86770c08c961984</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-10 19:25:25</sys_updated_on>
+        <sys_updated_on>2019-10-21 22:47:05</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
@@ -218,7 +218,7 @@
           Loading...
         </sp-widget>
       </div>
-      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+      <div class="form-section" style="text-align:center; padding: 15px 0px;border-top: 1px solid #e5e5e5;display:block;">
         <button type="button" class="table-button btn btn-primary" ng-click="c.saveForm()">
             Save
           </button>  

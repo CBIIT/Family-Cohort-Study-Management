@@ -4,41 +4,27 @@
             <element>race</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:56</sys_created_on>
-            <sys_id>df6f9898db50c450b86770c08c9619fd</sys_id>
+            <sys_created_on>2019-10-21 17:23:07</sys_created_on>
+            <sys_id>161e58c3dbecc410b86770c08c961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">4b6f9898db50c450b86770c08c961935</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:56</sys_updated_on>
+            <sys_updated_on>2019-10-21 17:23:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>jewish_descent</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:56</sys_created_on>
-            <sys_id>136fd898db50c450b86770c08c96190b</sys_id>
+            <sys_created_on>2019-10-21 17:23:07</sys_created_on>
+            <sys_id>9a1e58c3dbecc410b86770c08c961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">4b6f9898db50c450b86770c08c961935</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:56</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>jewish_descent</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-30 18:09:56</sys_created_on>
-            <sys_id>976fd898db50c450b86770c08c96190b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="69491a5edb8c8c10b86770c08c961909">4b6f9898db50c450b86770c08c961935</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 18:09:56</sys_updated_on>
+            <sys_updated_on>2019-10-21 17:23:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
