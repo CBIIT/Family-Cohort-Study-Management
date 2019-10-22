@@ -4,55 +4,41 @@
             <element>ever_chewed_tobacco_regularly</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:41</sys_created_on>
-            <sys_id>67796109db2ccc1054d8ff621f961947</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>f37a2103dbe40810b86770c08c9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">9f792109db2ccc1054d8ff621f96198d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:41</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>chewed_tobacco_total_amount_of_months</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:41</sys_created_on>
-            <sys_id>eb796109db2ccc1054d8ff621f961947</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>7b7a2103dbe40810b86770c08c9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">9f792109db2ccc1054d8ff621f96198d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:41</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>chewed_tobacco_total_amount_of_months</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:41</sys_created_on>
-            <sys_id>63796109db2ccc1054d8ff621f961948</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">9f792109db2ccc1054d8ff621f96198d</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:41</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>chewed_tobacco_total_amount_of_years</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:41</sys_created_on>
-            <sys_id>e7796109db2ccc1054d8ff621f961948</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>ff7a2103dbe40810b86770c08c9619e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">9f792109db2ccc1054d8ff621f96198d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:41</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

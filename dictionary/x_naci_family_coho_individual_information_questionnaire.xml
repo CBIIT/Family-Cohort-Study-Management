@@ -38,7 +38,6 @@
         </element>
         <element choice="1" label="A cancer survivor" max_length="40" name="a_cancer_survivor" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -222,7 +221,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="4" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="Have you ever had one or both of your ovaries or fallopian tubes removed?" max_length="40" name="ever_had_your_ovaries_or_fallopian_tubes_removed" type="choice">
+        <element choice="3" default="no" label="Have you ever had one or both of your ovaries or fallopian tubes removed?" max_length="40" name="ever_had_your_ovaries_or_fallopian_tubes_removed" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
@@ -316,7 +315,7 @@
                 <element inactive_on_update="false" label="No" sequence="20" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="Have you ever consulted a doctor because of fertility problems?" max_length="40" name="have_you_ever_consulted_a_doctor_because_of_fertility_problems" type="choice">
+        <element choice="3" default="no" label="Have you ever consulted a doctor because of fertility problems?" max_length="40" name="have_you_ever_consulted_a_doctor_because_of_fertility_problems" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
@@ -330,7 +329,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="Have you ever had your breast(s) removed to reduce the risk of breast cancer?" max_length="40" name="have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer" type="choice">
+        <element choice="3" default="no" label="Have you ever had your breast(s) removed to reduce the risk of breast cancer?" max_length="40" name="have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
@@ -379,7 +378,7 @@
         </element>
         <element label="How many live-born children have you had?" max_length="4" name="how_many_live_born_children_have_you_had" type="integer"/>
         <element label="How many times have you been pregnant?" max_length="4" name="how_many_times_have_you_been_pregnant" type="integer"/>
-        <element choice="1" label="How often in the past 7 days have you been feeling lonely?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_lonely" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you been feeling lonely?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_lonely" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -388,7 +387,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you been feeling no interest in things" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you been feeling no interest in things" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -397,7 +396,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you been feeling tense or keyed up?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you been feeling tense or keyed up?" max_length="40" name="how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -406,7 +405,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt nausea or an upset stomach" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nausea_or_an_upset_stomach" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt nausea or an upset stomach" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nausea_or_an_upset_stomach" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -415,7 +414,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt nervouness or shakiness inside" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nervouness_or_shakiness_inside" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt nervouness or shakiness inside" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_nervouness_or_shakiness_inside" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -424,7 +423,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt so restless you couldn't sit still" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_so_restless_you_couldn_t_sit_still" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt so restless you couldn't sit still" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_so_restless_you_couldn_t_sit_still" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -433,7 +432,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt weak in parts of your body" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt weak in parts of your body" max_length="40" name="how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -442,7 +441,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you had pains in the heart or chest" max_length="40" name="how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you had pains in the heart or chest" max_length="40" name="how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -451,7 +450,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you had thoughts of ending your life" max_length="40" name="how_much_in_the_past_7_days_have_you_had_thoughts_of_ending_your_life" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you had thoughts of ending your life" max_length="40" name="how_much_in_the_past_7_days_have_you_had_thoughts_of_ending_your_life" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -592,7 +591,7 @@
                 <element inactive_on_update="false" label="Several times a day" sequence="40" value="several_times_a_day"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you been feeling blue" max_length="40" name="how_often_in_the_past_7_days_have_you_been_feeling_blue" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you been feeling blue" max_length="40" name="how_often_in_the_past_7_days_have_you_been_feeling_blue" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -619,7 +618,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt feelings of worthlessness" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt feelings of worthlessness" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -628,7 +627,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt  hopless about the future?" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_hopless_about_the_future" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt  hopless about the future?" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_hopless_about_the_future" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -637,7 +636,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you felt numbness or tingling in body parts" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_numbness_or_tingling_in_body_parts" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you felt numbness or tingling in body parts" max_length="40" name="how_often_in_the_past_7_days_have_you_felt_numbness_or_tingling_in_body_parts" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -646,7 +645,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you had spells of terror or panic" max_length="40" name="how_often_in_the_past_7_days_have_you_had_spells_of_terror_or_panic" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you had spells of terror or panic" max_length="40" name="how_often_in_the_past_7_days_have_you_had_spells_of_terror_or_panic" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -655,7 +654,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you had trouble getting your breath" max_length="40" name="how_often_in_the_past_7_days_have_you_had_trouble_getting_your_breath" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you had trouble getting your breath" max_length="40" name="how_often_in_the_past_7_days_have_you_had_trouble_getting_your_breath" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -698,7 +697,7 @@
             </choice>
         </element>
         <element label="Internal Comment" max_length="8000" name="internal_comment" type="html"/>
-        <element choice="1" label="In the past 7 days how much have you been distressed by Faintness or dizziness?" max_length="40" name="in_the_past_7_days_how_much_have_you_been_distressed_by_faintness_or_dizziness" type="choice">
+        <element choice="3" default="not_at_all" label="In the past 7 days how much have you been distressed by Faintness or dizziness?" max_length="40" name="in_the_past_7_days_how_much_have_you_been_distressed_by_faintness_or_dizziness" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>
@@ -1000,7 +999,6 @@
         </element>
         <element choice="1" label="My brother(s)" max_length="40" name="my_brothers" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1008,7 +1006,6 @@
         </element>
         <element choice="1" label="My child(ren)" max_length="40" name="my_children" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1016,7 +1013,6 @@
         </element>
         <element choice="1" label="My co-worker(s)" max_length="40" name="my_co_workers" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1024,7 +1020,6 @@
         </element>
         <element choice="1" label="My doctors" max_length="40" name="my_doctors" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1032,7 +1027,6 @@
         </element>
         <element choice="1" label="My friend since childhood" max_length="40" name="my_friend_since_childhood" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1040,7 +1034,6 @@
         </element>
         <element choice="1" label="My grandchild(ren)" max_length="40" name="my_grandchildren" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1048,7 +1041,6 @@
         </element>
         <element choice="1" label="My grandparent(s)" max_length="40" name="my_grandparents" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1056,7 +1048,6 @@
         </element>
         <element choice="1" label="My neighbor(s)" max_length="40" name="my_neighbors" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1064,7 +1055,6 @@
         </element>
         <element choice="1" label="My other blood relative(s)" max_length="40" name="my_other_blood_relatives" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1072,7 +1062,6 @@
         </element>
         <element choice="1" label="My other friends" max_length="40" name="my_other_friends" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1080,7 +1069,6 @@
         </element>
         <element choice="1" label="My parent(s)" max_length="40" name="my_parents" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1088,7 +1076,6 @@
         </element>
         <element choice="1" label="My relative(s) by marriage (for example, in-law(s), ex-spouse)" max_length="40" name="my_relatives_by_marriage_for_example_in_laws_ex_spouse" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1096,7 +1083,6 @@
         </element>
         <element choice="1" label="My religious community" max_length="40" name="my_religious_community" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1104,7 +1090,6 @@
         </element>
         <element choice="1" label="My sister(s)" max_length="40" name="my_sisters" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1112,7 +1097,6 @@
         </element>
         <element choice="1" label="My spiritual advisor (priest, rabbi, minister, imam, etc.)" max_length="40" name="my_spiritual_advisor" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1120,7 +1104,6 @@
         </element>
         <element choice="1" label="My spouse or significant other" max_length="40" name="my_spouse_or_significant_other" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1128,7 +1111,6 @@
         </element>
         <element choice="1" label="My therapist or counselor" max_length="40" name="my_therapist_or_counselor" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1427,6 +1409,7 @@
             </choice>
         </element>
         <element label="Religious group specify" max_length="100" name="religious_group_specify" type="string"/>
+        <element label="Saved Section" max_length="1000" name="saved_section" type="string"/>
         <element choice="1" label="Is this condition (Severe forgetfulness or dementia) currently being treated ?" max_length="40" name="severe_forgetfulness_or_dementia_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1438,7 +1421,6 @@
         <element label="Total amount of Years" max_length="100" name="snuff_total_amount_of_years" type="string"/>
         <element choice="1" label="Someone else who is currently getting treatment for cancer" max_length="40" name="someone_else_who_is_currently_getting_treatment_for_cancer" type="choice">
             <choice>
-                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
                 <element inactive_on_update="false" label="Some" sequence="20" value="some"/>
                 <element inactive_on_update="false" label="A lot" sequence="30" value="a_lot"/>
                 <element inactive_on_update="false" label="There is no such person" sequence="40" value="no_such_person"/>
@@ -1540,7 +1522,7 @@
                 <element inactive_on_update="false" label="Not yet 40 years old" sequence="4" value="Not yet 40 years old"/>
             </choice>
         </element>
-        <element choice="1" label="Were you ever prescribed female hormones around the time of menopause?" max_length="40" name="were_you_ever_prescribed_female_hormones_around_the_time_of_menopause" type="choice">
+        <element choice="3" default="no" label="Were you ever prescribed female hormones around the time of menopause?" max_length="40" name="were_you_ever_prescribed_female_hormones_around_the_time_of_menopause" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="yes"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>

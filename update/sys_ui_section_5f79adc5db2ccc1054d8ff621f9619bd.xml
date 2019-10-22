@@ -4,41 +4,27 @@
             <element>age_start_smoking</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:40</sys_created_on>
-            <sys_id>a7796109db2ccc1054d8ff621f961927</sys_id>
+            <sys_created_on>2019-10-21 22:56:53</sys_created_on>
+            <sys_id>637a2103dbe40810b86770c08c961996</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">5f79adc5db2ccc1054d8ff621f9619bd</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>age_start_smoking_specify</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:40</sys_created_on>
-            <sys_id>2f796109db2ccc1054d8ff621f961927</sys_id>
+            <sys_created_on>2019-10-21 22:56:53</sys_created_on>
+            <sys_id>e77a2103dbe40810b86770c08c961996</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">5f79adc5db2ccc1054d8ff621f9619bd</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:40</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>age_start_smoking_specify</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 17:44:40</sys_created_on>
-            <sys_id>a3796109db2ccc1054d8ff621f961928</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">5f79adc5db2ccc1054d8ff621f9619bd</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 17:44:40</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

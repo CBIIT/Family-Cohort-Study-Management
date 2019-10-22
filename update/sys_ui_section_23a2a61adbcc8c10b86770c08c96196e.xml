@@ -4,13 +4,13 @@
             <element>birthday</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>55d32e5adbcc8c10b86770c08c9619da</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>8f802157db24881054d8ff621f9619c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>born_county</element>
             <position>1</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>d9d32e5adbcc8c10b86770c08c9619da</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>0b802157db24881054d8ff621f9619c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>foreign_country</element>
             <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>51d32e5adbcc8c10b86770c08c9619db</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>8f802157db24881054d8ff621f9619c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,27 +46,27 @@
             <element>sex</element>
             <position>3</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>d5d32e5adbcc8c10b86770c08c9619db</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>07802157db24881054d8ff621f9619c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>national_origin</element>
+            <element>race</element>
             <position>4</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>5dd32e5adbcc8c10b86770c08c9619db</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>8b802157db24881054d8ff621f9619c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>d1d32e5adbcc8c10b86770c08c9619dc</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>03802157db24881054d8ff621f9619c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>born_city</element>
             <position>6</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>59d32e5adbcc8c10b86770c08c9619dc</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>87802157db24881054d8ff621f9619c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>born_state</element>
             <position>7</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>ddd32e5adbcc8c10b86770c08c9619dc</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>0f802157db24881054d8ff621f9619c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,41 +116,55 @@
             <element>year_moved_to_usa</element>
             <position>8</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>55d32e5adbcc8c10b86770c08c9619dd</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>83802157db24881054d8ff621f9619c4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>race</element>
+            <element>ishispanic</element>
             <position>9</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>d9d32e5adbcc8c10b86770c08c9619dd</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>0b802157db24881054d8ff621f9619c4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>national_origin</element>
+            <position>10</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>8f802157db24881054d8ff621f9619c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>other_national_origin</element>
-            <position>10</position>
+            <position>11</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 22:40:35</sys_created_on>
-            <sys_id>51d32e5adbcc8c10b86770c08c9619de</sys_id>
+            <sys_created_on>2019-10-22 16:51:56</sys_created_on>
+            <sys_id>07802157db24881054d8ff621f9619c5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_history_question" sys_domain="global" view="5fa2a61adbcc8c10b86770c08c961906">23a2a61adbcc8c10b86770c08c96196e</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 22:40:35</sys_updated_on>
+            <sys_updated_on>2019-10-22 16:51:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -4,55 +4,41 @@
             <element>ever_used_dipped_snuff_regularly</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>45dcbdcddb64cc10b86770c08c9619fe</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>fb7a2103dbe40810b86770c08c9619f2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">64dcbdcddb64cc10b86770c08c96190f</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>snuff_total_amount_of_months</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>c9dcbdcddb64cc10b86770c08c9619fe</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>737a2103dbe40810b86770c08c9619f3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">64dcbdcddb64cc10b86770c08c96190f</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>snuff_total_amount_of_months</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>41dcbdcddb64cc10b86770c08c9619ff</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">64dcbdcddb64cc10b86770c08c96190f</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>snuff_total_amount_of_years</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>c5dcbdcddb64cc10b86770c08c9619ff</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>f77a2103dbe40810b86770c08c9619f3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">64dcbdcddb64cc10b86770c08c96190f</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

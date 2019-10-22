@@ -4,41 +4,27 @@
             <element>age_most_recently_stop_drinking</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:27</sys_created_on>
-            <sys_id>07a352dddba80010b86770c08c961920</sys_id>
+            <sys_created_on>2019-10-21 22:55:21</sys_created_on>
+            <sys_id>0d2aa5cfdba40810b86770c08c961969</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7aa3de9ddba80010b86770c08c96198c</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:27</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:55:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>age_number_most_recently_stop_drinking</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:27</sys_created_on>
-            <sys_id>8ba352dddba80010b86770c08c961920</sys_id>
+            <sys_created_on>2019-10-21 22:55:21</sys_created_on>
+            <sys_id>812aa5cfdba40810b86770c08c96196a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7aa3de9ddba80010b86770c08c96198c</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:27</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>age_number_most_recently_stop_drinking</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:27</sys_created_on>
-            <sys_id>03a352dddba80010b86770c08c961921</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7aa3de9ddba80010b86770c08c96198c</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:27</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:55:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

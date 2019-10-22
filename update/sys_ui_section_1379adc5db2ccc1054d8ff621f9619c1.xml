@@ -4,55 +4,41 @@
             <element>ever_smoked_pipe_regularly</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>b0dcbdcddb64cc10b86770c08c9619f6</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>eb7a2103dbe40810b86770c08c9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1379adc5db2ccc1054d8ff621f9619c1</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>pipe_total_amount_of_months</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>38dcbdcddb64cc10b86770c08c9619f6</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>637a2103dbe40810b86770c08c9619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1379adc5db2ccc1054d8ff621f9619c1</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>pipe_total_amount_of_months</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>bcdcbdcddb64cc10b86770c08c9619f6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1379adc5db2ccc1054d8ff621f9619c1</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>pipe_total_amount_of_years</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:09:09</sys_created_on>
-            <sys_id>34dcbdcddb64cc10b86770c08c9619f7</sys_id>
+            <sys_created_on>2019-10-21 22:56:54</sys_created_on>
+            <sys_id>e77a2103dbe40810b86770c08c9619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1379adc5db2ccc1054d8ff621f9619c1</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:09:09</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:56:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

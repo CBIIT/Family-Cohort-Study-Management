@@ -4,8 +4,8 @@
         <element label="City" max_length="50" name="city" type="string"/>
         <element label="City" max_length="50" name="city_of_death" type="string"/>
         <element label="County" max_length="50" name="county_of_death" type="string"/>
-        <element label="Date of Birth (Month/Day/Year)" max_length="20" name="date_of_birth_month_day_year" type="string"/>
-        <element label="Date of Death (Month/Day/Year)" max_length="20" name="date_of_death" type="string"/>
+        <element label="Date of Birth" max_length="20" name="date_of_birth_month_day_year" type="glide_date"/>
+        <element label="Date of Death" max_length="20" name="date_of_death" type="glide_date"/>
         <element label="City dea" max_length="50" name="death_hospital_city" type="string"/>
         <element label="County" max_length="100" name="death_hospital_county" type="string"/>
         <element label="State dea" max_length="100" name="death_hospital_state" type="string"/>

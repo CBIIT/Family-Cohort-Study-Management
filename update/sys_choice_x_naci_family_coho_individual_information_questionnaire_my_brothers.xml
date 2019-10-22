@@ -5,25 +5,6 @@
             <element>my_brothers</element>
             <hint/>
             <inactive>false</inactive>
-            <label>None</label>
-            <language>en</language>
-            <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>10</sequence>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 20:21:53</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>557d4a89dbe4cc10b86770c08c961925</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 20:21:56</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>none</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>my_brothers</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Some</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>

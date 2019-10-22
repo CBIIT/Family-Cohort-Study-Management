@@ -4,55 +4,41 @@
             <element>drinks_you_have</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:26</sys_created_on>
-            <sys_id>cfa312dddba80010b86770c08c9619fc</sys_id>
+            <sys_created_on>2019-10-21 22:55:21</sys_created_on>
+            <sys_id>b02aa5cfdba40810b86770c08c96190a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7ea3de9ddba80010b86770c08c961989</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:26</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:55:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_drinks</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-21 22:55:21</sys_created_on>
+            <sys_id>382aa5cfdba40810b86770c08c96190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7ea3de9ddba80010b86770c08c961989</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-21 22:55:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>had_one_or_more_alcoholic_drinks_per_week</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:26</sys_created_on>
-            <sys_id>47a312dddba80010b86770c08c9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7ea3de9ddba80010b86770c08c961989</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:26</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:26</sys_created_on>
-            <sys_id>cba312dddba80010b86770c08c9619fd</sys_id>
+            <sys_created_on>2019-10-21 22:55:21</sys_created_on>
+            <sys_id>bc2aa5cfdba40810b86770c08c96190a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7ea3de9ddba80010b86770c08c961989</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:26</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number_of_drinks</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:26</sys_created_on>
-            <sys_id>43a312dddba80010b86770c08c9619fe</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">7ea3de9ddba80010b86770c08c961989</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:26</sys_updated_on>
+            <sys_updated_on>2019-10-21 22:55:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
