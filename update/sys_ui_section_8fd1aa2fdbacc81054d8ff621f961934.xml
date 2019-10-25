@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Distress in the Past 7 Days" section_id="8fd1aa2fdbacc81054d8ff621f961934" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="internal">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>3c2266efdbacc81054d8ff621f9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_been_feeling_blue</element>
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b02266efdbacc81054d8ff621f9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_been_feeling_fearful</element>
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>382266efdbacc81054d8ff621f9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_lonely</element>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>bc2266efdbacc81054d8ff621f9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_no_interest_in_things</element>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>342266efdbacc81054d8ff621f9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_been_feeling_tense_or_keyed_up</element>
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b82266efdbacc81054d8ff621f9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_been_suddenly_scared_for_no_reason</element>
+            <position>6</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>302266efdbacc81054d8ff621f9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_felt_feelings_of_worthlessness</element>
+            <position>7</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b42266efdbacc81054d8ff621f9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_felt_hopless_about_the_future</element>
+            <position>8</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>3c2266efdbacc81054d8ff621f9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_nausea_or_an_upset_stomach</element>
+            <position>9</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b02266efdbacc81054d8ff621f9619e4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>10</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>382266efdbacc81054d8ff621f9619e4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_nervouness_or_shakiness_inside</element>
+            <position>11</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>bc2266efdbacc81054d8ff621f9619e4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_felt_numbness_or_tingling_in_body_parts</element>
+            <position>12</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>342266efdbacc81054d8ff621f9619e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_so_restless_you_couldn_t_sit_still</element>
+            <position>13</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b82266efdbacc81054d8ff621f9619e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_felt_weak_in_parts_of_your_body</element>
+            <position>14</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>302266efdbacc81054d8ff621f9619e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_had_pains_in_the_heart_or_chest</element>
+            <position>15</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b42266efdbacc81054d8ff621f9619e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_had_spells_of_terror_or_panic</element>
+            <position>16</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>3c2266efdbacc81054d8ff621f9619e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_much_in_the_past_7_days_have_you_had_thoughts_of_ending_your_life</element>
+            <position>17</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>b02266efdbacc81054d8ff621f9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_in_the_past_7_days_have_you_had_trouble_getting_your_breath</element>
+            <position>18</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>382266efdbacc81054d8ff621f9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>19</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:16:59</sys_created_on>
+            <sys_id>bc2266efdbacc81054d8ff621f9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Distress in the Past 7 Days" display_value="Distress in the Past 7 Days" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">8fd1aa2fdbacc81054d8ff621f961934</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:16:59</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Distress in the Past 7 Days</caption>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:15:46</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>8fd1aa2fdbacc81054d8ff621f961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Distress in the Past 7 Days</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_8fd1aa2fdbacc81054d8ff621f961934</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:15:46</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

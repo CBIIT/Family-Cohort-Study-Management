@@ -4,41 +4,41 @@
             <element>person_receiving_care_or_following_up</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 13:57:13</sys_created_on>
-            <sys_id>bcc8b930db5c4850b86770c08c9619eb</sys_id>
+            <sys_created_on>2019-10-25 18:24:25</sys_created_on>
+            <sys_id>4b721514dbb84c10b86770c08c9619c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_intake_cancer_care" sys_domain="global" view="38c8b930db5c4850b86770c08c9619ae">3cc8b930db5c4850b86770c08c9619b1</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 13:57:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:24:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>physician_name</element>
             <position>1</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 13:57:13</sys_created_on>
-            <sys_id>34c8b930db5c4850b86770c08c9619ec</sys_id>
+            <sys_created_on>2019-10-25 18:24:25</sys_created_on>
+            <sys_id>cf721514dbb84c10b86770c08c9619c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_intake_cancer_care" sys_domain="global" view="38c8b930db5c4850b86770c08c9619ae">3cc8b930db5c4850b86770c08c9619b1</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 13:57:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:24:25</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>physician_name</element>
+            <element>institution</element>
             <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 13:57:13</sys_created_on>
-            <sys_id>b8c8b930db5c4850b86770c08c9619ec</sys_id>
+            <sys_created_on>2019-10-25 18:24:25</sys_created_on>
+            <sys_id>47721514dbb84c10b86770c08c9619c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_intake_cancer_care" sys_domain="global" view="38c8b930db5c4850b86770c08c9619ae">3cc8b930db5c4850b86770c08c9619b1</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 13:57:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:24:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

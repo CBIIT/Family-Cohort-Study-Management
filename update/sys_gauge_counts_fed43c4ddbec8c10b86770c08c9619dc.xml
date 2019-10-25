@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_gauge_counts">
     <sys_gauge_counts action="INSERT_OR_UPDATE">
-        <gauge_id display_value="Family Cohort - Eligibility Status">4ef37c0ddbec8c10b86770c08c9619c3</gauge_id>
+        <gauge_id/>
         <image/>
         <name>Not Eligible Patients</name>
         <omit_line>false</omit_line>

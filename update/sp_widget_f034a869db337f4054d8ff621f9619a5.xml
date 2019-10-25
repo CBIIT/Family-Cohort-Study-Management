@@ -6,6 +6,7 @@
 	var c = this;
 	var saved_arr = c.data.saved_section == null ? []: c.data.saved_section.toString().split(' ');
   setProgressBar(saved_arr);
+	console.log($scope);
 	
 	$('#intake_id').val(c.data.id);
 	c.forms = {};
@@ -20,14 +21,17 @@
 			obj.style.display = 'block';
 		}
 	}
-
+	
+	
 	setTimeout(function(){
 		var button_bar = $('#submit_div div.panel-footer');
 		button_bar.children().last().remove();
 		var button = button_bar.children().last();
 		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
 		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
-	}, 0);
+	});
+	
+
 
 	c.goBack = function(){
 		s.id = null;
@@ -162,7 +166,6 @@
 			$timeout(function(){
 				$('input[name="birthday"]').prop('readonly',true);		
 			});
-
 		}
 		if(view == "LFS3"){
 			g_form.showFieldMsg('tested_positive', 'Select all that apply', 'info')
@@ -182,9 +185,6 @@
 			});
 		}
 		if (view == "LFS4"){
-			$timeout(function(){
-				$('[for="sp_formfield_biological_relatives_diagnosed"]')[0].innerText += ' (Please include only biological relatives)';
-			});
 			if(g_form.getValue('biological_relatives_diagnosed') == 'Yes'){
 				window.setShowFamilyCancer(true);
 			}else{
@@ -378,7 +378,7 @@ fieldset label{
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Intake Form</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
 	/* populate the 'data' object */
@@ -437,7 +437,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>718</sys_mod_count>
+        <sys_mod_count>748</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -445,7 +445,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 16:17:14</sys_updated_on>
+        <sys_updated_on>2019-10-25 22:00:36</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
   <div class="left-side-menu col-md-3">
     <ul class="div_shadow margin-0 menu">
@@ -496,7 +496,7 @@ fieldset label{
         <div id="widget_1" class="clearfix">
           <sp-widget widget="c.data.widget_1"></sp-widget>
           <div class="form-section" style="text-align:right; padding-top: 15px">
-            <button class="btn btn-primary" ng-click="saveNext(c.forms.LFS1)">
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS1)">
               SAVE & NEXT
             </button>
           </div>           
@@ -510,10 +510,10 @@ fieldset label{
           Loading...
         </sp-widget>
         <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary" ng-click="back(c.forms.LFS2)" style="width:100px">
+          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS2)" style="width:100px">
             BACK
           </button>
-          <button class="btn btn-primary" ng-click="saveNext(c.forms.LFS2)">
+          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS2)">
             SAVE & NEXT
           </button>
         </div>   
@@ -529,10 +529,10 @@ fieldset label{
           Loading...
         </sp-widget>
         <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary" ng-click="back(c.forms.LFS3)" style="width:100px;">
+          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS3)" style="width:100px;">
             BACK
           </button>
-          <button class="btn btn-primary" ng-click="saveNext(c.forms.LFS3)">
+          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS3)">
             SAVE & NEXT
           </button>
         </div>  
@@ -548,10 +548,10 @@ fieldset label{
           Loading...
         </sp-widget>
         <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary" ng-click="back(c.forms.LFS4)" style="width:100px">
+          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS4)" style="width:100px">
             BACK
           </button> 
-          <button class="btn btn-primary" ng-click="saveNext(c.forms.LFS4)">
+          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS4)">
             SAVE & NEXT
           </button>
         </div>         
@@ -567,10 +567,10 @@ fieldset label{
           Loading...
         </sp-widget>
         <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary" ng-click="back(c.forms.LFS41)" style="width:100px">
+          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS41)" style="width:100px">
             BACK
           </button> 
-          <button class="btn btn-primary" ng-click="saveNext(c.forms.LFS41)">
+          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS41)">
             SAVE & NEXT
           </button>
         </div> 
@@ -586,13 +586,13 @@ fieldset label{
           Loading...
         </sp-widget>
         <div class="text-right">
-          <button class="btn btn-primary" ng-click="back(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
+          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
             BACK
           </button>
-          <button class="btn btn-primary" ng-click="saveForm(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
+          <button class="btn btn-primary btn-font" ng-click="saveForm(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
             SAVE
           </button>
-          <button class="btn btn-success" ng-click="submitForm(c.forms.LFS5)" style="width:100px;">
+          <button class="btn btn-success btn-font" ng-click="submitForm(c.forms.LFS5)" style="width:100px;">
             SUBMIT
           </button>
         </div>

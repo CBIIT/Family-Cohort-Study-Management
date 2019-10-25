@@ -93,7 +93,7 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Cancer Follow Up</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
 	/* populate the 'data' object */
@@ -141,7 +141,7 @@
         <sys_created_on>2019-10-02 17:09:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>69d4ee70db108850b86770c08c961922</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>FCSMS Cancer Follow Up</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -149,7 +149,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_69d4ee70db108850b86770c08c961922</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 16:27:24</sys_updated_on>
+        <sys_updated_on>2019-10-25 20:45:08</sys_updated_on>
         <template><![CDATA[<div id="followup" ng-show='show_followup' style="padding: 10px 10px; border-style: ridge;">
 
   
@@ -176,7 +176,7 @@
   </div>
   <table class="table table-bordered table-hover mt-3">
     <thead class="bg-primary">
-      <tr>
+      <tr class="btn-font">
         <th ng-repeat="col in c.data.columns"
             ng-click="sort(col.name)">
           {{ col.label }}
@@ -227,7 +227,7 @@
           Loading...</sp-widget>  
         </div>
       </div>
-      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block; margin-bottom:15px;">
         <button type="button" class="table-button btn btn-primary btn-font" ng-click="c.saveForm()">
             Save
           </button>  

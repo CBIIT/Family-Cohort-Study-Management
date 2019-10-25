@@ -4,41 +4,111 @@
             <element>cancer_type</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-27 22:34:16</sys_created_on>
-            <sys_id>0e2f7ddbdb44c050b86770c08c961901</sys_id>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>43209150dbb84c10b86770c08c96196c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 22:34:16</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>cancer_specify</element>
             <position>1</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-27 22:34:16</sys_created_on>
-            <sys_id>862f7ddbdb44c050b86770c08c961902</sys_id>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>c7209150dbb84c10b86770c08c96196c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 22:34:16</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cancer_specify</element>
+            <element>relationship</element>
             <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-27 22:34:16</sys_created_on>
-            <sys_id>0e2f7ddbdb44c050b86770c08c961902</sys_id>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>4f209150dbb84c10b86770c08c96196c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 22:34:16</sys_updated_on>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relationship_specify</element>
+            <position>3</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>c3209150dbb84c10b86770c08c96196d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>4</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>4b209150dbb84c10b86770c08c96196d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_at_diagnosis</element>
+            <position>5</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>cf209150dbb84c10b86770c08c96196d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_age</element>
+            <position>6</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>47209150dbb84c10b86770c08c96196e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_at_death</element>
+            <position>7</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:14:19</sys_created_on>
+            <sys_id>cb209150dbb84c10b86770c08c96196e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_family_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">77d4ccfbdbb3370054d8ff621f961958</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:14:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

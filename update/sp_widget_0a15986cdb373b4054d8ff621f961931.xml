@@ -3,32 +3,7 @@
         <category>custom</category>
         <client_script><![CDATA[function($scope,spModal, $rootScope, $location) {
   var c = this;
-  var s = $location.search();
-
-	if (s.user_type && s.user_type == 'e_user') {
-			c.user_type = "e_user";
-			c.xpage = "p_board";
-	}
-	else if(s.user_type && s.user_type == 'i_user'){
-		c.user_type = "i_user";
-		if(s.xpage){
-			c.xpage = s.xpage;
-		}
-		else{
-			c.xpage = 'board';
-		}
-	}
-	else{
-		c.user_type = "home";
-		c.xpage = s.xpage;
-	}
-	
-	c.gotoIntakeForm = function(){
-		s.xpage = 'intake';
-		//console.log(s);
-    $location.search(s).replace();
-	}
-	
+  
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -52,7 +27,7 @@
         <sys_created_on>2019-09-06 15:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a15986cdb373b4054d8ff621f961931</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>FCSMS Home</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -60,53 +35,73 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0a15986cdb373b4054d8ff621f961931</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-09 16:36:38</sys_updated_on>
-        <template><![CDATA[<div class="container" style="width:80%; text-align: center;padding:40px 0px;font-weight: bold;font-size: 20px;" ng-if="c.user_type == 'home' && !c.xpage">
-Welcome to Family Cohort Study Management System!<br><br>
-  <button type="button" class="table-button btn btn-primary" ng-click="c.gotoIntakeForm();">
-          Create LFS Intake Form
-        </button>
+        <sys_updated_on>2019-10-25 21:34:07</sys_updated_on>
+        <template><![CDATA[<div class="main-content">
+	<div class="row">
+    <div class="slot-video">
+      
+    </div>
+    <div class="slot-video">
+      
+    </div>
+    <div class="slot-image">
+      <img src="/sites/g/files/xnrzdm236/files/styles/cgov_featured/public/cgov_image/media_image/2019-10/Cook_Michael-2016_610x762-WEB.jpg?h=09f6defe&amp;itok=nzfdwsbL" width="425" height="318" alt="Dr. Michael Cook">
+    </div>
+  </div>
+  <div class="row">
+    <div class="triangle-down">
+		</div>
+    <div class="fcsms-info-card">
+      <h2>
+        Clinical Genetics Branch
+      </h2>
+      <h3>
+        Saving lives and improving the quality of life for individuals at increased genetic risk of cancer.
+      </h3>
+      <p>
+        Conduct clinical, genomic, epidemiological and behavioral research and translate that knowledge into prevention, screening and management of cancer in families and high-risk populations.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns-title">
+      Current Family Cohort Studies
+    </div>
+    <div class="flex-columns">
+      <div class="slot-item">
+        Li-Fraumeni Syndrome
+        <div class="feature-card">
+          <a href="/news-events/news/2019/cook-tenure">
+            <div class="image-hover">
+              <img src="/sites/g/files/xnrzdm236/files/styles/cgov_featured/public/cgov_image/media_image/2019-10/Cook_Michael-2016_610x762-WEB.jpg?h=09f6defe&amp;itok=nzfdwsbL" width="425" height="318" alt="Dr. Michael Cook">
+            </div>
+            <h3>Cook Awarded Scientific Tenure by the NIH</h3>
+            <p>Dr. Michael B. Cook was awarded scientific tenure by the NIH and promoted to senior investigator in the Metabolic Epidemiology Branch in October 2019.</p>
+          </a>
+        </div>
+      </div>
+      <div class="slot-item">
+        PPB
+      </div>
+      <div class="slot-item">
+        IBMFS
+      </div>
+      <div class="slot-item">
+        Familial Melanoma
+      </div>
+      <div class="slot-item">
+        Rasopothies
+      </div>
+      <div class="slot-item">
+        TBD
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="container" style="width:80%; text-align: center;padding:40px 0px;font-weight: bold;font-size: 20px;" ng-if="c.user_type == 'home' && c.xpage == 'intake'">
-	<widget id="fcsms_patient_intake"></widget>
-</div>
 
-<div style="" ng-if="c.user_type == 'i_user'">
-	<div class="bread-bar">
-    <ul class="nav nav-pills nav-sm container" style="width:80%; padding-left: 20px;"> 
-      <li><a ng-href="fcsms?user_type=i_user&xpage=board" role="link">Home</a></li> 
-      <li><a ng-href="fcsms?user_type=i_user&xpage=referral" class="ng-binding" role="link">Referral</a></li>
-      <li><a ng-href="fcsms?user_type=i_user&xpage=sms" class="ng-binding" role="link">SMS</a></li>
-      <li><a ng-href="fcsms?user_type=i_user&xpage=maids" class="ng-binding" role="link">MAIDS</a></li>  
-      <li><a ng-href="fcsms?user_type=i_user&xpage=best" class="ng-binding" role="link">BEST</a></li>  
-      <li><a ng-href="fcsms?user_type=i_user&xpage=report" class="ng-binding" role="link">Report</a></li>
-    </ul>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'board'">
-    <widget id="fcsms_study_board"></widget>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'referral'">
-    <widget id="fcsms_study_referral"></widget>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'sms'">
-    <widget id="fcsms_study_sms"></widget>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'maids'">
-    <widget id="fcsms_study_maids"></widget>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'best'">
-    <widget id="fcsms_study_best"></widget>
-  </div>
-  <div class="main-content" ng-if="c.xpage == 'report'">
-    <widget id="fcsms_study_report"></widget>
-  </div>
-</div>
-
-<div style="" ng-if="c.user_type == 'e_user'">
-	<div class="main-content" ng-if="c.xpage == 'p_board'">
-    <widget id="fcsms_patient_board"></widget>
-  </div>
+<div>
+  <a href="/fcsms?id=fcsms_home_page">FCSMS Enrollment Board</a>
 </div>
 ]]></template>
     </sp_widget>

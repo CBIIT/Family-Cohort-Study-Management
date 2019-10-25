@@ -609,7 +609,7 @@
                 <element inactive_on_update="false" label="Extremely" sequence="50" value="extremely"/>
             </choice>
         </element>
-        <element choice="1" label="How often in the past 7 days have you been suddenly scared for no reason" max_length="40" name="how_often_in_the_past_7_days_have_you_been_suddenly_scared_for_no_reason" type="choice">
+        <element choice="3" default="not_at_all" label="How often in the past 7 days have you been suddenly scared for no reason" max_length="40" name="how_often_in_the_past_7_days_have_you_been_suddenly_scared_for_no_reason" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Not at all" sequence="10" value="not_at_all"/>
                 <element inactive_on_update="false" label="A little bit" sequence="20" value="a_little_bit"/>

@@ -13,19 +13,6 @@
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-02 13:57:13</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-02 13:57:13</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>b4c8b930db5c4850b86770c08c9619b6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_intake_cancer_care" name="x_naci_family_coho_intake_cancer_care" sys_domain="global" view="38c8b930db5c4850b86770c08c9619ae">b4c8b930db5c4850b86770c08c9619b3</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_intake_cancer_care" sys_domain="global" view="38c8b930db5c4850b86770c08c9619ae">f4c8b930db5c4850b86770c08c9619b2</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-02 13:57:13</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_naci_family_coho_intake_cancer_care</name>
             <roles/>

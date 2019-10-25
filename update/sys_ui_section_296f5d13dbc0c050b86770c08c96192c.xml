@@ -4,41 +4,55 @@
             <element>filled_for</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:02:13</sys_created_on>
-            <sys_id>2f3bfd05dbaccc1054d8ff621f96190a</sys_id>
+            <sys_created_on>2019-10-25 14:51:28</sys_created_on>
+            <sys_id>7bb1a490dbb44c10b86770c08c9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">296f5d13dbc0c050b86770c08c96192c</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:02:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 14:51:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>your_name</element>
             <position>1</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:02:13</sys_created_on>
-            <sys_id>a33bfd05dbaccc1054d8ff621f96190b</sys_id>
+            <sys_created_on>2019-10-25 14:51:28</sys_created_on>
+            <sys_id>ffb1a490dbb44c10b86770c08c9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">296f5d13dbc0c050b86770c08c96192c</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:02:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 14:51:28</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>your_name</element>
+            <element>relationship</element>
             <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 19:02:13</sys_created_on>
-            <sys_id>2b3bfd05dbaccc1054d8ff621f96190b</sys_id>
+            <sys_created_on>2019-10-25 14:51:28</sys_created_on>
+            <sys_id>77b1a490dbb44c10b86770c08c9619e3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">296f5d13dbc0c050b86770c08c96192c</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 19:02:13</sys_updated_on>
+            <sys_updated_on>2019-10-25 14:51:28</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>other_relationship</element>
+            <position>3</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 14:51:28</sys_created_on>
+            <sys_id>fbb1a490dbb44c10b86770c08c9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">296f5d13dbc0c050b86770c08c96192c</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 14:51:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Female Reproductive History" section_id="7d3a9663dbacc81054d8ff621f9619b8" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="internal">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>4cde16abdbacc81054d8ff621f9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <text/>
+            <type display_value="Line Separator">a93fc8e00f530000b12e6903cfe012e6</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>40de16abdbacc81054d8ff621f9619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <text/>
+            <type display_value="Line Separator">a93fc8e00f530000b12e6903cfe012e6</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>44de16abdbacc81054d8ff621f9619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <text/>
+            <type display_value="Line Separator">a93fc8e00f530000b12e6903cfe012e6</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>08de16abdbacc81054d8ff621f9619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>knowledge_first_menstrual_period</element>
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>8cde16abdbacc81054d8ff621f9619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_regular_period</element>
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>04de16abdbacc81054d8ff621f9619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>if_you_have_not_had_a_period_in_6_months_or_more_when_was_your_last_period</element>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>88de16abdbacc81054d8ff621f9619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>00de16abdbacc81054d8ff621f9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_old_when_you_hard_your_first_menstrual_period</element>
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>84de16abdbacc81054d8ff621f9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more</element>
+            <position>6</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c0de16abdbacc81054d8ff621f9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_period_age</element>
+            <position>7</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>48de16abdbacc81054d8ff621f9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_period_date</element>
+            <position>8</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>ccde16abdbacc81054d8ff621f9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>44de16abdbacc81054d8ff621f9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>4cde16abdbacc81054d8ff621f9619ee</element>
+            <position>10</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c8de16abdbacc81054d8ff621f9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>11</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>40de56abdbacc81054d8ff621f961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>have_you_ever_been_pregnant</element>
+            <position>12</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c4de56abdbacc81054d8ff621f961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_many_times_have_you_been_pregnant</element>
+            <position>13</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>4cde56abdbacc81054d8ff621f961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_old_were_you_when_you_first_became_pregnant</element>
+            <position>14</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c0de56abdbacc81054d8ff621f961901</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>15</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>48de56abdbacc81054d8ff621f961901</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_many_live_born_children_have_you_had</element>
+            <position>16</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>ccde56abdbacc81054d8ff621f961901</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>in_what_year_was_your_first_live_born_child_born</element>
+            <position>17</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>44de56abdbacc81054d8ff621f961902</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>have_you_ever_breastfed</element>
+            <position>18</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c8de56abdbacc81054d8ff621f961902</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>19</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>40de56abdbacc81054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>40de16abdbacc81054d8ff621f9619ef</element>
+            <position>20</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c4de56abdbacc81054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>21</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>4cde56abdbacc81054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>have_you_ever_consulted_a_doctor_because_of_fertility_problems</element>
+            <position>22</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c0de56abdbacc81054d8ff621f961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_old_were_you_when_you_first_consulted_a_doctor_for_fertility_problems</element>
+            <position>23</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>48de56abdbacc81054d8ff621f961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>24</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>ccde56abdbacc81054d8ff621f961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>what_was_the_diagnosis_of_the_problem</element>
+            <position>25</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>44de56abdbacc81054d8ff621f961905</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>26</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c8de56abdbacc81054d8ff621f961905</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>44de16abdbacc81054d8ff621f9619ef</element>
+            <position>27</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>40de56abdbacc81054d8ff621f961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>28</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c4de56abdbacc81054d8ff621f961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>taken_birth_control_reasons</element>
+            <position>29</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>4cde56abdbacc81054d8ff621f961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>are_you_currently_taking_birth_control_pills</element>
+            <position>30</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>c0de56abdbacc81054d8ff621f961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>31</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>48de56abdbacc81054d8ff621f961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>birth_control_how_old</element>
+            <position>32</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>ccde56abdbacc81054d8ff621f961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>33</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 16:02:27</sys_created_on>
+            <sys_id>44de56abdbacc81054d8ff621f961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Female Reproductive History" display_value="Female Reproductive History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">7d3a9663dbacc81054d8ff621f9619b8</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:02:27</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Female Reproductive History</caption>
+            <header>false</header>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-23 15:42:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>7d3a9663dbacc81054d8ff621f9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Female Reproductive History</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_7d3a9663dbacc81054d8ff621f9619b8</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-23 15:42:22</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

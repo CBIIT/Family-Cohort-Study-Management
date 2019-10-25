@@ -3,49 +3,19 @@
         <category>custom</category>
         <client_script><![CDATA[function() {
   /* widget controller */
-  var c = this;
+	  var c = this;
+	var topBtn = document.getElementById("topBtn");
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			topBtn.style.display = "block";
+		} else {
+			topBtn.style.display = "none";
+		}
+	};
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.menu_background {&#13;
-  background-color: #609db5;&#13;
-}&#13;
-&#13;
-#crs-kd-nav {&#13;
-  background-color: #609db5;&#13;
-}&#13;
-&#13;
-.dropdown:hover {&#13;
-  background-color: white;&#13;
-  color: black;&#13;
-}&#13;
-&#13;
-.nav &gt; li &gt; a {&#13;
-  color: white;&#13;
-}&#13;
-&#13;
-.nav &gt; li &gt; a:hover {&#13;
-  color: steelblue;&#13;
-}&#13;
-&#13;
-&#13;
-.dropdown:hover {&#13;
-  background-color: #609db5;&#13;
-}&#13;
-&#13;
-.dropdown .dropdown-toggle {&#13;
-  color: white;&#13;
-}&#13;
-&#13;
-.dropdown .dropdown-toggle:hover {&#13;
-  background-color: white;&#13;
-  color: steelblue;&#13;
-}&#13;
-&#13;
-.dropdown-toggle {&#13;
-    border: 1px solid white;&#13;
-    padding: 10px 25px;&#13;
-    border-radius: 40px;&#13;
-}</css>
+        <css/>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -64,7 +34,7 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-gs.getSession().putClientData("login_redirect_url",'/fcsms');
+	//gs.getSession().putClientData("login_redirect_url",'/fcsms');
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_header_footer</sys_class_name>
@@ -72,52 +42,46 @@ gs.getSession().putClientData("login_redirect_url",'/fcsms');
         <sys_created_on>2019-09-06 14:28:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d768ca8dbb33b4054d8ff621f961959</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>fcsms header</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_header_footer_3d768ca8dbb33b4054d8ff621f961959</sys_update_name>
-        <sys_updated_by>sengodanj2@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-21 18:51:43</sys_updated_on>
-        <template><![CDATA[<div id="crs-kd-header">
-	<div id="crs-kd-logo">
-    <div class="container logo" style="width:80%;padding: 10px 0px">
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-25 20:37:42</sys_updated_on>
+        <template><![CDATA[<div class="fcsms-header">
+  <div class="fcsms-logo">
+    <div class="logo">
       <img src="https://dceg.cancer.gov/profiles/custom/cgov_site/themes/custom/cgov/static/images/design-elements/logos/DCEG-logo.svg" alt="Division of Epidemiology &amp; Genetics" width="756px">
     </div>
   </div>
-  <div id="crs-kd-nav">
-    <div class="container details" style="width:80%;padding-left:40px;"> 
-      <!--<nav class="navbar navbar-inverse"> -->
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">&nbsp;</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Resource</a></li>
-            <li><a href="#">Registry</a></li>
-          </ul>
-      <div class="userInfo-block">
-        <div uib-dropdown>
-          <button class="login-menu" id="single-button" uib-dropdown-toggle>
-            Log In <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </button>
-          <ul class="dropdown-menu-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-            <li role="menuitem"><a href="/login_with_sso.do?glide_sso_id=33bf7f51db933b00b86770c08c961994">External User</a></li>
-            <li role="menuitem"><a href="/login_with_sso.do?glide_sso_id=14a8eb8cdb5b320054d8ff621f9619d3">Study Team</a></li>
-          </ul>
-        </div>
+  <div class="fcsms-nav">
+    <div class="fcsms-nav-items">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About CGB</a></li>
+        <li><a href="#">Our Studies</a></li>
+        <li><a href="#">Our Research</a></li>
+        <li><a href="#">Enroll</a></li>
+        <li><a href="#">FAQ/Help</a></li>
+      </ul>
+      <div class="login-block">
+        <button class="login-btn">
+          Login
+        </button>
       </div> 
-        </div>
-      <!--</nav> -->
-
     </div>
-    
   </div>
-</div>]]></template>
+</div>
+
+
+
+<div>
+  <button class="topBtn" onClick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" id="topBtn" title="Go to top">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</div>
+  ]]></template>
     </sp_header_footer>
 </record_update>

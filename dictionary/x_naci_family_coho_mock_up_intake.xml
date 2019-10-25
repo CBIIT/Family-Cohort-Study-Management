@@ -79,6 +79,7 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
+        <element label="First Name" max_length="50" name="first_name" type="string"/>
         <element choice="3" default="No" label="Have you ever had genetic testing for an inherited cancer syndrome?" max_length="40" name="had_genetic_testing" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
@@ -99,14 +100,17 @@
         </element>
         <element label="Please Specify" max_length="500" name="hear_please_specify" type="string"/>
         <element label="Internal Comments" max_length="5000" name="internal_comments" type="html"/>
+        <element label="Last Name" max_length="50" name="last_name" type="string"/>
         <element choice="3" default="No" label="Are you the legal guardian of this person?" max_length="100" name="legal_guardian" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="No"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
+        <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
         <element label="Research Subject Name" max_length="100" name="name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Okta User ID" max_length="30" name="okta_user_id" type="string"/>
         <element label="I am the person's" max_length="100" name="other_relationship" type="string"/>
         <element choice="3" default="No" label="Participated through another institution, university, or government agency?" max_length="40" name="participated_through_another_institution" type="choice">
             <choice>

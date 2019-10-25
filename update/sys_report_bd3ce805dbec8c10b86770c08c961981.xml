@@ -43,8 +43,9 @@
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
         <field/>
-        <field_list>number,name,enrollment_status,eligible_status,communication_type</field_list>
-        <filter/>
+        <field_list>number,family_id,eligible_status,name</field_list>
+        <filter table="x_naci_family_coho_mock_up_intake">^ORDERBYDESCeligible_status<item endquery="false" field="" goto="false" newquery="false" operator="ORDERBYDESC" or="false" value="eligible_status"/>
+        </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
         <gauge_autoscale>true</gauge_autoscale>
@@ -74,7 +75,7 @@
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
         <report_source/>
-        <roles>x_naci_family_coho.intake_cancer_care_us,public</roles>
+        <roles>public</roles>
         <row/>
         <sc_groupby_item_id/>
         <sc_groupby_variable_id/>
@@ -103,7 +104,7 @@
         <sys_created_on>2019-10-15 13:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bd3ce805dbec8c10b86770c08c961981</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Enrollment List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -111,7 +112,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_report_bd3ce805dbec8c10b86770c08c961981</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 17:12:57</sys_updated_on>
+        <sys_updated_on>2019-10-24 13:43:48</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <title>Enrollment List</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>

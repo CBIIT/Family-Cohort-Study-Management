@@ -4,29 +4,15 @@
             <element>filling_for_someone</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-27 20:15:32</sys_created_on>
-            <sys_id>316f9d13dbc0c050b86770c08c96196d</sys_id>
+            <sys_created_on>2019-10-25 14:51:27</sys_created_on>
+            <sys_id>ebb1a490dbb44c10b86770c08c9619d9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">c1aa583ddbb3bf4054d8ff621f961903</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 20:15:32</sys_updated_on>
+            <sys_updated_on>2019-10-25 14:51:27</sys_updated_on>
             <sys_user/>
             <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>1</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-27 20:15:32</sys_created_on>
-            <sys_id>b96f9d13dbc0c050b86770c08c96196d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="cdaa183ddbb3bf4054d8ff621f9619ff">c1aa583ddbb3bf4054d8ff621f961903</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 20:15:32</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>

@@ -42,7 +42,7 @@
         <element label="City" max_length="100" name="hospital_clinic_city" type="string"/>
         <element label="Hospital/Clinic Name" max_length="200" name="hospital_clinic_name" type="string"/>
         <element label="State" max_length="50" name="hospital_clinic_state" type="string"/>
-        <element label="Street Address" max_length="200" name="hospital_clinic_street_address" type="string"/>
+        <element label="Hospital/Clinic Street Address" max_length="200" name="hospital_clinic_street_address" type="string"/>
         <element label="Zipcode" max_length="50" name="hospital_clinic_zipcode" type="string"/>
         <element label="Internal Comments" max_length="5000" name="internal_comments" type="html"/>
         <element choice="1" label="Do you consider yourself to be" max_length="40" name="ishispanic" type="choice">

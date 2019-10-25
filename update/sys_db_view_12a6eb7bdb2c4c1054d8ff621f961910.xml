@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view">
+    <sys_db_view action="INSERT_OR_UPDATE">
+        <description/>
+        <label/>
+        <name>x_naci_family_coho_family_cohort_data_view</name>
+        <plural/>
+        <sys_class_name>sys_db_view</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-10-24 15:55:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>12a6eb7bdb2c4c1054d8ff621f961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_naci_family_coho_family_cohort_data_view</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_db_view_12a6eb7bdb2c4c1054d8ff621f961910</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-10-24 15:55:04</sys_updated_on>
+    </sys_db_view>
+</record_update>

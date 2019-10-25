@@ -3,42 +3,28 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>diagnosed_with_cancer</element>
             <position>0</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 14:35:48</sys_created_on>
-            <sys_id>db9e2cb9db37bf4054d8ff621f961985</sys_id>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 17:57:50</sys_created_on>
+            <sys_id>756c4dd8db784c10b86770c08c9619fc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="65bad83ddbb3bf4054d8ff621f961923">a1bad83ddbb3bf4054d8ff621f961928</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 14:35:48</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 17:57:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 14:35:48</sys_created_on>
-            <sys_id>579e2cb9db37bf4054d8ff621f961986</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="65bad83ddbb3bf4054d8ff621f961923">a1bad83ddbb3bf4054d8ff621f961928</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 14:35:48</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>had_genetic_testing</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 14:35:48</sys_created_on>
-            <sys_id>db9e2cb9db37bf4054d8ff621f961986</sys_id>
+            <position>1</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 17:57:50</sys_created_on>
+            <sys_id>fd6c4dd8db784c10b86770c08c9619fc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="65bad83ddbb3bf4054d8ff621f961923">a1bad83ddbb3bf4054d8ff621f961928</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 14:35:48</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 17:57:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

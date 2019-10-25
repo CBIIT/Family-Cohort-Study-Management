@@ -3,70 +3,56 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>hear_about_this_study</element>
             <position>0</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 13:52:46</sys_created_on>
-            <sys_id>01c4a0f9dbf3bf4054d8ff621f9619b1</sys_id>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:00:23</sys_created_on>
+            <sys_id>43fc851cdb784c10b86770c08c96194d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 13:52:46</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:00:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hear_please_specify</element>
+            <position>1</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:00:23</sys_created_on>
+            <sys_id>c7fc851cdb784c10b86770c08c96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:00:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>participated_through_another_institution</element>
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 13:52:46</sys_created_on>
-            <sys_id>85c4a0f9dbf3bf4054d8ff621f9619b1</sys_id>
+            <position>2</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:00:23</sys_created_on>
+            <sys_id>4ffc851cdb784c10b86770c08c96194d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 13:52:46</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:00:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>received_cancer_care</element>
-            <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 13:52:46</sys_created_on>
-            <sys_id>0dc4a0f9dbf3bf4054d8ff621f9619b1</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 13:52:46</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 13:52:46</sys_created_on>
-            <sys_id>81c4a0f9dbf3bf4054d8ff621f9619b2</sys_id>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-25 18:00:23</sys_created_on>
+            <sys_id>c3fc851cdb784c10b86770c08c96194e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 13:52:46</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>hear_please_specify</element>
-            <position>4</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-10 13:52:46</sys_created_on>
-            <sys_id>09c4a0f9dbf3bf4054d8ff621f9619b2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Page 5 - Final Information" display_value="Page 5 - Final Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="9cda9c3ddbb3bf4054d8ff621f961931">54da9c3ddbb3bf4054d8ff621f961938</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-10 13:52:46</sys_updated_on>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-25 18:00:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

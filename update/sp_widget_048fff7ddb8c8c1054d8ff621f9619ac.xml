@@ -19,11 +19,11 @@
 
 	c.show_view_index = 1;
 	c.show_sub_view_index = 'tab_2_A1';
-	
-	
+
+
 	c.g_forms = {};
-	
-	
+
+	/*
 	var mybutton = document.getElementById("myBtn");
 
 	// When the user scrolls down 20px from the top of the document, show the button
@@ -40,18 +40,19 @@
 		document.body.scrollTop = 0; // For Safari
 		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 	}
-	
+	*/
+
 	c.accordions = {};
 	c.accordions.tab_2_A1 = false;
 	c.accordions.tab_2_A2 = false;
 	c.accordions.tab_2_A3 = false;
 	c.accordions.tab_2_A4 = false;
-	
+
 
 	c.current_form_idx = 'Introduction';
 
 	$scope.data.hideRelatedLists = true;
-	
+
 	c.startForm = function(){
 		c.showView(2);
 	}
@@ -70,8 +71,8 @@
 			else{
 				record[field] = g_form.getValue(field);
 			}
-			
-			
+
+
 			if(field == 'gender'){
 				c.data.sex = g_form.getValue(field);
 			}
@@ -113,7 +114,7 @@
 			//$('#thank_you').show();
 		});
 	}
-	
+
 	c.previousForm = function(){
 		if(c.show_view_index == 2){
 			if(c.show_sub_view_index == 1){
@@ -122,7 +123,7 @@
 			else{
 				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index - 1));
 			}
-			
+
 		}
 		else{
 			c.showView(c.show_view_index - 1);
@@ -145,10 +146,10 @@
 			else{
 				c.showView(c.show_view_index + 1);
 			}
-			
+
 		});
 	};
-	
+
 	c.openAccordion = function(index, acc){
 		//c.showView(c.show_view_index, acc);
 		c.showView(index, acc);
@@ -172,308 +173,455 @@
 			c.current_form_idx = 'Introduction';
 		}
 		else if(idx == 2){
-				if(sub == undefined){
-					sub = 'tab_2_A1';
-				}
-				c.accordions.tab_2_A1 = false;
-				c.accordions.tab_2_A2 = false;
-				c.accordions.tab_2_A3 = false;
-				c.accordions.tab_2_A4 = false;
-				if(sub == 'tab_2_A1'){
-					c.current_form_idx = 'SectionA1';
-					c.accordions.tab_2_A1 = true;
-					c.show_sub_view_index = 1;
-					if(!c.widget_2_A1){
-						spUtil.get("widget-form", {
-							"sys_id": c.data.sys_id,
-							"table": "x_naci_family_coho_individual_information_questionnaire",
-							"view": 'SectionA1'
-						}).then(function(response) {
-							//console.log(response);
-							response.data.hideRelatedLists = true;
-							c.widget_2_A1 = response;
-						})
-					}
-				}
-				else if(sub == 'tab_2_A2'){
-					c.current_form_idx = 'SectionA2';
-					c.accordions.tab_2_A2 = true;
-					c.show_sub_view_index = 2;
-					if(!c.widget_2_A2){
-						spUtil.get("widget-form", {
-							"sys_id": c.data.sys_id,
-							"table": "x_naci_family_coho_individual_information_questionnaire",
-							"view": 'SectionA2'
-						}).then(function(response) {
-							//console.log(response);
-							response.data.hideRelatedLists = true;
-							c.widget_2_A2 = response;
-						})
-					}
-				}
-				else if(sub == 'tab_2_A3'){
-					c.current_form_idx = 'SectionA3';
-					c.accordions.tab_2_A3 = true;
-					c.show_sub_view_index = 3;
-					//console.log(c.accordions);
-					if(!c.widget_2_A3){
-						spUtil.get("widget-form", {
-							"sys_id": c.data.sys_id,
-							"table": "x_naci_family_coho_individual_information_questionnaire",
-							"view": 'SectionA3'
-						}).then(function(response) {
-							//console.log(response);
-							response.data.hideRelatedLists = true;
-							c.widget_2_A3 = response;
-						})
-					}
-				}
-				else if(sub == 'tab_2_A4'){
-					c.current_form_idx = 'SectionA4';
-					c.accordions.tab_2_A4 = true;
-					c.show_sub_view_index = 4;
-					if(!c.widget_2_A4){
-						spUtil.get("widget-form", {
-							"sys_id": c.data.sys_id,
-							"table": "x_naci_family_coho_individual_information_questionnaire",
-							"view": 'SectionA4'
-						}).then(function(response) {
-							//console.log(response);
-							response.data.hideRelatedLists = true;
-							c.widget_2_A4 = response;
-						})
-					}
-				}
-				
+			if(sub == undefined){
+				sub = 'tab_2_A1';
 			}
-			else if(idx == 3){
-				c.current_form_idx = 'SectionB1';
-				if(!c.widget_3){
+			c.accordions.tab_2_A1 = false;
+			c.accordions.tab_2_A2 = false;
+			c.accordions.tab_2_A3 = false;
+			c.accordions.tab_2_A4 = false;
+			if(sub == 'tab_2_A1'){
+				c.current_form_idx = 'SectionA1';
+				c.accordions.tab_2_A1 = true;
+				c.show_sub_view_index = 1;
+				if(!c.widget_2_A1){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionA1'
+					}).then(function(response) {
+						//console.log(response);
+						response.data.hideRelatedLists = true;
+						c.widget_2_A1 = response;
+					})
+				}
+			}
+			else if(sub == 'tab_2_A2'){
+				c.current_form_idx = 'SectionA2';
+				c.accordions.tab_2_A2 = true;
+				c.show_sub_view_index = 2;
+				if(!c.widget_2_A2){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionA2'
+					}).then(function(response) {
+						//console.log(response);
+						response.data.hideRelatedLists = true;
+						c.widget_2_A2 = response;
+					})
+				}
+			}
+			else if(sub == 'tab_2_A3'){
+				c.current_form_idx = 'SectionA3';
+				c.accordions.tab_2_A3 = true;
+				c.show_sub_view_index = 3;
+				//console.log(c.accordions);
+				if(!c.widget_2_A3){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionA3'
+					}).then(function(response) {
+						//console.log(response);
+						response.data.hideRelatedLists = true;
+						c.widget_2_A3 = response;
+					})
+				}
+			}
+			else if(sub == 'tab_2_A4'){
+				c.current_form_idx = 'SectionA4';
+				c.accordions.tab_2_A4 = true;
+				c.show_sub_view_index = 4;
+				if(!c.widget_2_A4){
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionA4'
+					}).then(function(response) {
+						//console.log(response);
+						response.data.hideRelatedLists = true;
+						c.widget_2_A4 = response;
+					})
+				}
+			}
 
+		}
+		else if(idx == 3){
+			c.current_form_idx = 'SectionB1';
+			if(!c.widget_3){
+
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB1'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_3 = response;
+				})
+			}
+		}
+		else if(idx == 4){
+			c.current_form_idx = 'SectionB2';
+			if(!c.widget_4){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB2'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_4 = response;
+				})
+			}
+		}
+		else if(idx == 5){
+			c.current_form_idx = 'SectionB3';
+			if(!c.widget_5){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB3'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_5 = response;
+				})
+			}
+		}
+		else if(idx == 6){
+			c.current_form_idx = 'SectionB4';
+			if(!c.widget_6){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionB4'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_6 = response;
+				})
+			}
+		}
+		else if(idx == 7){
+			c.current_form_idx = 'SectionC';
+			if(!c.widget_7){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionC'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_7 = response;
+				})
+			}
+		}
+		else if(idx == 8){
+			c.current_form_idx = 'SectionD';
+			if(!c.widget_8){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionD'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_8 = response;
+				})
+			}
+		}
+		else if(idx == 9){
+			c.current_form_idx = 'SectionE';
+			if(!c.widget_9){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionE'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_9 = response;
+				})
+			}
+		}
+		else if(idx == 10){
+			c.current_form_idx = 'SectionF';
+			if(!c.widget_10){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionF'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_10 = response;
+				})
+			}
+		}
+		else if(idx == 11){
+			c.accordions.tab_11_G1 = false;
+			c.accordions.tab_11_G2 = false;
+			c.accordions.tab_11_G3 = false;
+			c.accordions.tab_11_G4 = false;
+			if (sub == 'tab_11_G1'){
+				c.accordions.tab_2_G1 = true;
+				c.current_form_idx = 'menstrual';
+				c.show_sub_view_index = 1;
+				if(!c.widget_11_G1){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionB1'
+						"view": 'menstrual'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_3 = response;
+						c.widget_11_G1 = response;
 					})
 				}
-			}
-			else if(idx == 4){
-				c.current_form_idx = 'SectionB2';
-				if(!c.widget_4){
+			} else if (sub == 'tab_11_G2'){
+				c.accordions.tab_11_G2 = true;
+				c.current_form_idx = 'pregnancy';
+				c.show_sub_view_index = 2;
+				if(!c.widget_11_G2){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionB2'
+						"view": 'pregnancy'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_4 = response;
+						c.widget_11_G2 = response;
 					})
 				}
-			}
-			else if(idx == 5){
-				c.current_form_idx = 'SectionB3';
-				if(!c.widget_5){
+			} else if (sub == 'tab_11_G3'){
+				c.accordions.tab_11_G3 = true;
+				c.current_form_idx = 'fertility';
+				c.show_sub_view_index = 2;
+				if(!c.widget_11_G3){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionB3'
+						"view": 'fertility'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_5 = response;
+						c.widget_11_G3 = response;
 					})
 				}
-			}
-			else if(idx == 6){
-				c.current_form_idx = 'SectionB4';
-				if(!c.widget_6){
+			} else if (sub == 'tab_11_G4'){
+				c.accordions.tab_11_G4 = true;
+				c.current_form_idx = 'birthcontrol';
+				c.show_sub_view_index = 2;
+				if(!c.widget_11_G4){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionB4'
+						"view": 'birthcontrol'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_6 = response;
+						c.widget_11_G4 = response;
 					})
 				}
 			}
-			else if(idx == 7){
-				c.current_form_idx = 'SectionC';
-				if(!c.widget_7){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionC'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_7 = response;
-					})
-				}
+
+
+		}
+		else if(idx == 12){
+			c.current_form_idx = 'SectionG2';
+			if(!c.widget_12){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionG2'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_12 = response;
+				})
 			}
-			else if(idx == 8){
-				c.current_form_idx = 'SectionD';
-				if(!c.widget_8){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionD'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_8 = response;
-					})
-				}
-			}
-			else if(idx == 9){
-				c.current_form_idx = 'SectionE';
-				if(!c.widget_9){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionE'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_9 = response;
-					})
-				}
-			}
-			else if(idx == 10){
-				c.current_form_idx = 'SectionF';
-				if(!c.widget_10){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionF'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_10 = response;
-					})
-				}
-			}
-			else if(idx == 11){
-				c.current_form_idx = 'SectionG1';
-				if(!c.widget_11){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionG1'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_11 = response;
-					})
-				}
-			}
-			else if(idx == 12){
-				c.current_form_idx = 'SectionG2';
-				if(!c.widget_12){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionG2'
-					}).then(function(response) {
-						response.data.hideRelatedLists = true;
-						c.widget_12 = response;
-					})
-				}
-			}
-			else if(idx == 13){
+		}
+		else if(idx == 13){
+			c.accordions.tab_11_G1 = false;
+
+			if(sub == 'tab_13_G1')
 				c.current_form_idx = 'SectionG3';
-				if(!c.widget_13){
+			c.show_sub_view_index = 13;
+			c.accordions.tab_13_G1 = true;
+			if(!c.widget_13){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionG3'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_13_G1 = response;
+				})
+			}
+		}
+		else if(idx == 14){
+			c.accordions.tab_14_H1 = false;
+			c.accordions.tab_14_H2 = false;
+			c.accordions.tab_14_H3 = false;
+			c.accordions.tab_14_H4 = false;
+			c.current_form_idx = 'SectionH';
+			if (sub == 'tab_14_H1'){
+				c.current_form_idx = 'SectionH4';
+				c.show_sub_view_index = 14;
+				c.accordions.tab_14_H1 = true;
+				if(!c.widget_14_H1){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionG3'
+						"view": 'SectionH4'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_13 = response;
+						c.widget_14_H1 = response;
 					})
 				}
-			}
-			else if(idx == 14){
-				c.current_form_idx = 'SectionH';
-				if(!c.widget_14){
+			} else if (sub == 'tab_14_H2'){
+				c.current_form_idx = 'SectionH5';
+				c.show_sub_view_index = 14;
+				c.accordions.tab_14_H2 = true;
+				if(!c.widget_14_H2){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionH'
+						"view": 'SectionH5'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_14 = response;
+						c.widget_14_H2 = response;
 					})
 				}
-			}
-			else if(idx == 15){
-				c.current_form_idx = 'SectionH1';
-				if(!c.widget_15){
+			} else if (sub == 'tab_14_H3'){
+				c.current_form_idx = 'bodystress';
+				c.show_sub_view_index = 14;
+				c.accordions.tab_14_H3 = true;
+				if(!c.widget_14_H3){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionH1'
+						"view": 'bodystress'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_15 = response;
+						c.widget_14_H3 = response;
 					})
 				}
-			}
-			else if(idx == 16){
-				c.current_form_idx = 'SectionH2';
-				if(!c.widget_16){
+			} else if (sub == 'tab_14_H4'){
+				c.current_form_idx = 'mindstress';
+				c.show_sub_view_index = 14;
+				c.accordions.tab_14_H4 = true;
+				if(!c.widget_14_H4){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionH2'
+						"view": 'mindstress'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_16 = response;
+						c.widget_14_H4 = response;
 					})
 				}
 			}
-			else if(idx == 17){
-				
-				c.current_form_idx = 'SectionH3';
-				if(!c.widget_17){
+		}
+		else if(idx == 15){
+			c.accordions.tab_15_I1 = false;
+			c.accordions.tab_15_I2 = false;
+			c.accordions.tab_15_I3 = false;
+			c.show_sub_view_index = 15;
+			if (sub == 'tab_15_I1'){
+				c.current_form_idx = 'SectionI';
+				c.show_sub_view_index = 15;
+				c.accordions.tab_15_I1 = true;
+				if(!c.widget_15_I1){
+								
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionH3'
+						"view": 'SectionI'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_17 = response;
+						c.widget_15_I1 = response;
 					})
 				}
-			}
-			else{
-				c.current_form_idx = 'SignatureAndSubmit';
-				if(!c.widget_18){
+			} else if (sub == 'tab_15_I2'){
+				c.current_form_idx = 'SectionI1';
+				c.show_sub_view_index = 15;
+				c.accordions.tab_15_I2 = true;
+				if(!c.widget_15_I2){
+								
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SignatureAndSubmit'
+						"view": 'SectionI1'
 					}).then(function(response) {
 						response.data.hideRelatedLists = true;
-						c.widget_18 = response;
+						c.widget_15_I2 = response;
+					})
+				}
+			} else if (sub == 'tab_15_I3'){
+				c.current_form_idx = 'SectionI2';
+				c.show_sub_view_index = 15;
+				c.accordions.tab_15_I3 = true;
+				if(!c.widget_15_I3){
+								
+					spUtil.get("widget-form", {
+						"sys_id": c.data.sys_id,
+						"table": "x_naci_family_coho_individual_information_questionnaire",
+						"view": 'SectionI2'
+					}).then(function(response) {
+						response.data.hideRelatedLists = true;
+						c.widget_15_I3 = response;
 					})
 				}
 			}
+		}
+		else if(idx == 16){
+			c.current_form_idx = 'SectionH2';
+			if(!c.widget_16){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionH2'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_16 = response;
+				})
+			}
+		}
+		else if(idx == 17){
+
+			c.current_form_idx = 'SectionH3';
+			if(!c.widget_17){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SectionH3'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_17 = response;
+				})
+			}
+		}
+		else{
+			c.current_form_idx = 'SignatureAndSubmit';
+			if(!c.widget_18){
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'SignatureAndSubmit'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_18 = response;
+				})
+			}
+		}
 	}
-	
+
 	c.setActions = function(view, widget_idx){
-			var button_bar = $('.right-side-content #form_widget_'+ widget_idx +' div.panel-footer');
-			button_bar.html("");
-			var html = '';
-			if(view == 'SignatureAndSubmit'){
-				html += '<div><button type="submit" ng-click="c.submitForm()" class="btn btn-primary pull-right action-btn ng-scope" style="background-color:green; padding: 5px 25px;">Submit</button>';
-			}
-			else{
-				html += '<div><button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>';
-			}
-			//html += '<button type="submit" ng-click="c.saveForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Save</button></div>';
-			html += '<button type="submit" ng-click="c.previousForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Back</button></div>';
-			var content = $compile(html)($scope)[0];
-			button_bar.append(content);
+		var button_bar = $('.right-side-content #form_widget_'+ widget_idx +' div.panel-footer');
+		button_bar.html("");
+		var html = '';
+		if(view == 'SignatureAndSubmit'){
+			html += '<div><button type="submit" ng-click="c.submitForm()" class="btn btn-primary pull-right action-btn ng-scope" style="background-color:green; padding: 5px 25px;">Submit</button>';
+		}
+		else{
+			html += '<div><button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>';
+		}
+		//html += '<button type="submit" ng-click="c.saveForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Save</button></div>';
+		html += '<button type="submit" ng-click="c.previousForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Back</button></div>';
+		var content = $compile(html)($scope)[0];
+		button_bar.append(content);
 	};
-	
+
 
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		var g_form = null;
@@ -721,26 +869,7 @@
 .field-actual input{
   font-size: 16px;
 }
-
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #4CAF50; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-}</css>
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -792,7 +921,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>661</sys_mod_count>
+        <sys_mod_count>725</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -800,12 +929,9 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 17:09:00</sys_updated_on>
+        <sys_updated_on>2019-10-23 18:41:37</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="container" style="width:80%;font-size: 18px;">
-  <div>
-    <button ng-click="c.topFunction()" id="myBtn" title="Go to top">Top</button>
-  </div>
   <div class="left-side-menu col-md-3">
     <ul>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
@@ -818,11 +944,11 @@
       <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionD') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionD') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Tobacco Use</a></li>
       <li ng-class="{'active': c.show_view_index == 9}" ng-click="c.showView(9)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionE') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionE') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Alcohol Use</a></li>
       <li ng-class="{'active': c.show_view_index == 10}" ng-click="c.showView(10)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionF') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionF') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Physical Development</a></li>
-      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
+      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11, 'tab_11_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
       <li ng-class="{'active': c.show_view_index == 12}" ng-click="c.showView(12)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
-      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
+      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13, 'tab_13_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
       <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
-      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
+      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
       <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
       <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
       <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
@@ -852,12 +978,12 @@
     </div>
 
     <div style="" id="form_widget_2" ng-show="c.show_view_index == 2">
-      
+
       <uib-accordion close-others="true">
         <div uib-accordion-group id="form_widget_2_A1" class="panel-default" is-open="c.accordions.tab_2_A1">
           <uib-accordion-heading>
             <div ng-click="c.openAccordion(2, 'tab_2_A1')">
-             Section 1 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A1, 'fa fa-plus-square': !c.accordions.tab_2_A1}"></i>
+              Relationship <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A1, 'fa fa-plus-square': !c.accordions.tab_2_A1}"></i>
             </div>
           </uib-accordion-heading>
           <sp-widget widget="c.widget_2_A1">
@@ -869,7 +995,7 @@
           <uib-accordion-heading>
             <!--<div ng-click="c.openAccordion(2, 'tab_2_A2')">-->
             <div ng-click="c.openAccordion(2, 'tab_2_A2')">
-             Section 2 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A2, 'fa fa-plus-square': !c.accordions.tab_2_A2}"></i>
+              Questions 1 - 3 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A2, 'fa fa-plus-square': !c.accordions.tab_2_A2}"></i>
             </div>
           </uib-accordion-heading>
           <sp-widget widget="c.widget_2_A2">
@@ -880,7 +1006,7 @@
         <div uib-accordion-group id="form_widget_2_A3" class="panel-default" is-open="c.accordions.tab_2_A3">
           <uib-accordion-heading >
             <div ng-click="c.openAccordion(2, 'tab_2_A3')">
-							Section 3 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A3, 'fa fa-plus-square': !c.accordions.tab_2_A3}"></i>
+              Questions 4 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A3, 'fa fa-plus-square': !c.accordions.tab_2_A3}"></i>
             </div>
           </uib-accordion-heading>
           <sp-widget widget="c.widget_2_A3">
@@ -888,11 +1014,11 @@
             Loading...
           </sp-widget>
         </div>
-        
+
         <div uib-accordion-group id="form_widget_2_A4" class="panel-default" is-open="c.accordions.tab_2_A4">
           <uib-accordion-heading>
             <div ng-click="c.openAccordion(2, 'tab_2_A4')">
-            	Section 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A4, 'fa fa-plus-square': !c.accordions.tab_2_A4}"></i>
+              Questions 10 - 15 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A4, 'fa fa-plus-square': !c.accordions.tab_2_A4}"></i>
             </div>
           </uib-accordion-heading>
           <sp-widget widget="c.widget_2_A4">
@@ -900,7 +1026,7 @@
             Loading...
           </sp-widget>
         </div>
-        
+
       </uib-accordion>
     </div>
 
@@ -972,12 +1098,75 @@
         Loading...
       </sp-widget>
     </div>
-    <div class="panel-body" id="form_widget_11" ng-show="c.show_view_index == 11">
-      <sp-widget widget="c.widget_11">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
+
+    <div style="" id="form_widget_11" ng-show="c.show_view_index == 11">
+
+      <uib-accordion close-others="true">
+        <div uib-accordion-group id="form_widget_11_G1" class="panel-default" is-open="c.accordions.tab_11_G1">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(11, 'tab_11_G1')">
+              Menstrual <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G1, 'fa fa-plus-square': !c.accordions.tab_11_G1}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_11_G1">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+
+
+
+        <div uib-accordion-group id="form_widget_11_G2" class="panel-default" is-open="c.accordions.tab_11_G2">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(11, 'tab_11_G2')">
+              Pregnancy <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G2, 'fa fa-plus-square': !c.accordions.tab_11_G2}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_11_G2">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+
+
+
+        <div uib-accordion-group id="form_widget_11_G3" class="panel-default" is-open="c.accordions.tab_11_G3">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(11, 'tab_11_G3')">
+              Fertility <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G3, 'fa fa-plus-square': !c.accordions.tab_11_G3}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_11_G3">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+
+
+
+        <div uib-accordion-group id="form_widget_11_G4" class="panel-default" is-open="c.accordions.tab_11_G4">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(11, 'tab_11_G4')">
+              Birth Control <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G4, 'fa fa-plus-square': !c.accordions.tab_11_G4}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_11_G4">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+      </uib-accordion>
+
     </div>
+
+
+    <!-- <div class="panel-body" id="form_widget_11" ng-show="c.show_view_index == 11">
+<sp-widget widget="c.widget_11">
+<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+Loading...
+</sp-widget>
+</div>
+-->
     <div class="panel-body" id="form_widget_12" ng-show="c.show_view_index == 12">
       <sp-widget widget="c.widget_12">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
@@ -993,74 +1182,191 @@
     <div ng-show="c.hormoneDisplay" class="div-inset-list">
       <widget id="fcsms_iiq_female_hormones"></widget>
     </div>
-    <div class="panel-body" id="form_widget_13" ng-show="c.show_view_index == 13">
-      <sp-widget widget="c.widget_13">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
+
+
+    <!-- <div class="panel-body" id="form_widget_13" ng-show="c.show_view_index == 13">
+<sp-widget widget="c.widget_13">
+<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+Loading...
+</sp-widget>
+</div> -->
+
+    <div style="" id="form_widget_13" ng-show="c.show_view_index == 13">
+
+      <uib-accordion close-others="true">
+        <div uib-accordion-group id="form_widget_13_G1" class="panel-default" is-open="c.accordions.tab_13_G1">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(13, 'tab_13_G1')">
+              Section <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_13_G1, 'fa fa-plus-square': !c.accordions.tab_13_G1}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_13_G1">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+      </uib-accordion>
+
     </div>
+
+
+
     <div ng-show="c.show_view_index == 14" class="div_shadow">
       <p style="padding: 10px 15px">
         Below is a list of problems people sometimes have. Read each one carefully and select the number that best describes how much that problem has distressed or bothered you during the past 7 days, including today.   
       </p>
     </div>
-    <div class="panel-body" id="form_widget_14" ng-show="c.show_view_index == 14">
-      <sp-widget widget="c.widget_14">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
+
+    <div style="" id="form_widget_14" ng-show="c.show_view_index == 14">
+
+      <uib-accordion close-others="true">
+        <div uib-accordion-group id="form_widget_14_H1" class="panel-default" is-open="c.accordions.tab_14_H1">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(14, 'tab_14_H1')">
+              Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H1, 'fa fa-plus-square': !c.accordions.tab_14_H1}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_14_H1">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+
+        <div uib-accordion-group id="form_widget_14_H2" class="panel-default" is-open="c.accordions.tab_14_H2">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(14, 'tab_14_H2')">
+              Questions 5 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H2, 'fa fa-plus-square': !c.accordions.tab_14_H2}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_14_H2">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+
+        <div uib-accordion-group id="form_widget_14_H3" class="panel-default" is-open="c.accordions.tab_14_H3">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(14, 'tab_14_H3')">
+              Questions 10 - 14 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H3, 'fa fa-plus-square': !c.accordions.tab_14_H3}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_14_H3">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+
+        <div uib-accordion-group id="form_widget_14_H4" class="panel-default" is-open="c.accordions.tab_14_H4">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(14, 'tab_14_H4')">
+              Questions 15 - 18 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H4, 'fa fa-plus-square': !c.accordions.tab_14_H4}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_14_H4">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+      </uib-accordion>
     </div>
+
     <div ng-show="c.show_view_index == 15" class="div_shadow">
       <p style="padding: 10px 15px">
         The following questions ask you about your feelings and thoughts during the past month. In each case, please select the choice that best describes how often you felt or thought a certain way.  
       </p>
     </div>
-    <div class="panel-body" id="form_widget_15" ng-show="c.show_view_index == 15">
-      <sp-widget widget="c.widget_15">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
-    </div>
-    <div ng-show="c.show_view_index == 16" class="div_shadow">
-      <p style="padding: 10px 15px">
-        The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
-      </p>
-    </div>
-    <div class="panel-body" id="form_widget_16" ng-show="c.show_view_index == 16">
-      <sp-widget widget="c.widget_16">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
-    </div>
-		<div ng-show="c.show_view_index == 17" class="div_shadow">
-      <p style="padding: 10px 15px">
-        The following questions are about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please select the response that best describes the support of this person or group.
-      </p>
-    </div>
-    <div ng-show="c.show_view_index == 17" class="div_shadow">
-      <p style="padding: 10px 15px">
-       For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
-      </p>
-    </div>
-    <div class="panel-body" id="form_widget_17" ng-show="c.show_view_index == 17">
-      <sp-widget widget="c.widget_17">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
-    </div>
-    <div class="panel-body" id="form_widget_18" ng-show="c.show_view_index == 18">
-      <sp-widget widget="c.widget_18">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-        Loading...
-      </sp-widget>
-    </div>
-  </div>
 
-</div>
-<div id="saving-data-modal" style="display: none;">
-  <div class="modal-body text-center" style="font-size: 20px;">
-    <i class="fa fa-cog fa-spin fa-10x fa-fw"></i> Saving...
-  </div>
-</div>]]></template>
+    <div style="" id="form_widget_15" ng-show="c.show_view_index == 15">
+
+      <uib-accordion close-others="true">
+        <div uib-accordion-group id="form_widget_15_I1" class="panel-default" is-open="c.accordions.tab_15_I1">
+          <uib-accordion-heading>
+            <div ng-click="c.openAccordion(15, 'tab_15_I1')">
+              Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I1, 'fa fa-plus-square': !c.accordions.tab_15_I1}"></i>
+            </div>
+          </uib-accordion-heading>
+          <sp-widget widget="c.widget_15_I1">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div> 
+
+        <uib-accordion close-others="true">
+          <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2">
+            <uib-accordion-heading>
+              <div ng-click="c.openAccordion(15, 'tab_15_I2')">
+                Questions 5 - 7 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I2, 'fa fa-plus-square': !c.accordions.tab_15_I2}"></i>
+              </div>
+            </uib-accordion-heading>
+            <sp-widget widget="c.widget_15_I2">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div> 
+
+          <uib-accordion close-others="true">
+            <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3">
+              <uib-accordion-heading>
+                <div ng-click="c.openAccordion(15, 'tab_15_I3')">
+                  Questions 8 - 10 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I3, 'fa fa-plus-square': !c.accordions.tab_15_I3}"></i>
+                </div>
+              </uib-accordion-heading>
+              <sp-widget widget="c.widget_15_I3">
+                <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+                Loading...
+              </sp-widget>
+            </div> 
+
+
+
+          </uib-accordion>
+          </div>
+
+        <!-- <sp-widget widget="c.widget_15">
+<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+Loading...
+</sp-widget> -->
+
+        <div ng-show="c.show_view_index == 16" class="div_shadow">
+          <p style="padding: 10px 15px">
+            The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
+          </p>
+        </div>
+        <div class="panel-body" id="form_widget_16" ng-show="c.show_view_index == 16">
+          <sp-widget widget="c.widget_16">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+        <div ng-show="c.show_view_index == 17" class="div_shadow">
+          <p style="padding: 10px 15px">
+            The following questions are about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please select the response that best describes the support of this person or group.
+          </p>
+        </div>
+        <div ng-show="c.show_view_index == 17" class="div_shadow">
+          <p style="padding: 10px 15px">
+            For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
+          </p>
+        </div>
+        <div class="panel-body" id="form_widget_17" ng-show="c.show_view_index == 17">
+          <sp-widget widget="c.widget_17">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+        <div class="panel-body" id="form_widget_18" ng-show="c.show_view_index == 18">
+          <sp-widget widget="c.widget_18">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+        </div>
+        </div>
+
+    </div>
+    <div id="saving-data-modal" style="display: none;">
+      <div class="modal-body text-center" style="font-size: 20px;">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i> Saving...
+      </div>
+    </div>]]></template>
     </sp_widget>
 </record_update>

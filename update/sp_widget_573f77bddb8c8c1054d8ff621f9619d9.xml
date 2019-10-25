@@ -15,11 +15,6 @@
 		var g_form = event.targetScope.getGlideForm()
 		var view = event.targetScope.formModel.view;
 		c.forms[view] = g_form;
-		$timeout(function(){
-			//renderAnnotation('.annotation.aafddc21db1c0c50b86770c08c961915', '','h3', true);
-			//renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3')
-			//renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '<br/>', 'h3')
-		});
 		if(view == 'FHQ1'){
 			if(g_form.getValue("best_person_fill_out_form") == "No"){
 				$('#proxy_note').show();
@@ -38,6 +33,15 @@
 			$timeout(function(){
 				$('input[name="birthday"]').prop('readonly',true);		
 			});
+		}
+		if(view == 'FHQ3'){
+			console.log(event);
+			$timeout(function(){
+				$('[for="sp_formfield_regular_dotor_last_name"]').prepend('<div style="font-size:18px; margin-top:40px; margin-bottom:-5px;"><b>What is the name, office address, and office phone number of your regular doctor?</b><hr/></div>');	
+				$('#cancer_diagnosis_by_physician').prepend('<div style="margin-top:40px; "></div>')
+				$('#hospital_clinic_name').prepend('<div style="margin-top:40px; "></div>')
+				$('[for="sp_formfield_hospital_clinic_name"]').prepend('<div style="font-size:18px; margin-top:10px; margin-bottom:-5px;"><b>What is the name and address of the hospital or health care facility where the diagnosis was made?</b><hr/></div>')
+			})
 		}
 		if(view == 'FHQ4'){
 			$timeout(function(){
@@ -59,25 +63,6 @@
 			}).then(function(widget) {
 				c.data[widgetName] = widget;
 				console.log(c.data);
-				if(index == 3){
-					$scope.$on('spModel.fields.rendered', function(event) {
-						$timeout(function(){
-							renderAnnotation('.annotation.29e54193db40c050b86770c08c9619d5', 'What is the name, office address, and office phone number of your regualr doctor?', 'h3');
-						});
-					});
-					$scope.$on('spModel.fields.rendered', function(event) {
-						$timeout(function(){
-							renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '', 'h3');
-						});
-					});					
-				}
-				/*				if(index == 4){
-					$scope.$on('spModel.fields.rendered', function(event) {
-						$timeout(function(){
-							renderAnnotation('.annotation.ede54193db40c050b86770c08c9619f8', '555<br/>', 'h3');
-						});
-					});
-				} */
 			})
 		}
 
@@ -228,6 +213,11 @@
 
 div .panel-heading{
   display:none;
+}
+.menu_header{
+	background-color: #193670;
+  color:white;
+  font-size: 15px;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -313,7 +303,7 @@ div .panel-heading{
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>275</sys_mod_count>
+        <sys_mod_count>308</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -321,10 +311,11 @@ div .panel-heading{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 17:06:00</sys_updated_on>
+        <sys_updated_on>2019-10-25 20:18:05</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
   <div class="left-side-menu col-md-3">
     <ul class="div_shadow">
+      <li class="menu_header"><b>Family History Questionaire</b></li>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadForm(1)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="#">Informant/Proband Information</a></li>
       <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadForm(2)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i> <a href="#">Demographic Information</a></li>
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadForm(3)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i> <a href="#">Family Historic Questionaire 1</a></li>

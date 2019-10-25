@@ -5,7 +5,7 @@
   /* widget controller */
   var c = this;
 	var s = $location.search();
-	
+	c.id = '';
 	$scope.pagination = [5, 10, 15, 20, 25];
 	$scope.sortKey = null;
 	$scope.reverse = false;	
@@ -36,6 +36,8 @@
 										{label: "Age (in years) at Diagnosis",name: "age_in_years_at_diagnosis"},{label: "Date at Diagnosis",name: "date_diagnosis"}];
 
 	c.openForm = function(){
+		$('#save').show();
+		$('#update').hide();
 		$('#addFamilyCancerDiv').modal('show');
 		spUtil.get('widget-form', {
 			"sys_id": "-1",
@@ -45,6 +47,21 @@
 			c.data.widget_add = widget;
 		})
 	}
+	
+	c.editForm = function(id){
+		$('#save').hide();
+		$('#update').show();
+		$('#addFamilyCancerDiv').modal('show');
+		c.id = id;
+		spUtil.get('widget-form', {
+			"sys_id": id,
+			"table": "x_naci_family_coho_mock_up_intake_patient_cancer",
+			"view": "Cancer"
+		}).then(function(widget) {
+			c.data.widget_add = widget;
+		})
+	}
+	
 
 	c.cancelForm = function(){
 		$('#addFamilyCancerDiv').modal('hide');
@@ -73,6 +90,30 @@
 		});
 	}
 	
+	c.updateForm = function(){
+		console.log(c.g_form);
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			var f = c.g_form.getField(field);
+			if(f.type == 'glide_date'){
+				var dt_str = c.g_form.getValue(field);
+				var d = new Date(dt_str);
+				record[field] = d;
+			}
+			else{
+				record[field] = c.g_form.getValue(field);
+			}			
+		})
+		$scope.server.get({
+			action: 'update',
+			id: c.id,
+			record: record
+		}).then(function(){
+			c.cancelForm();
+		});
+	}
+		
 	c.deleteCancer = function(sys_id){
 		spModal.confirm("<div style='text-align: center'><center><b>Are you sure you want to delete this record?</b><center></div>").then(function(confirmed){
 			if(confirmed){
@@ -107,7 +148,7 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Intake Form Personal Cancer List</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
@@ -127,8 +168,15 @@
 			}
 			gr1.intake_form = data.id;
 			gr1.insert();
-		}
-		else if(input.action == 'delete'){
+		}else if(input.action == 'update'){
+			var record1 = input.record;
+			var gr3 = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+			gr3.get(input.id);
+			for (var key1 in record1) {
+				gr3.setValue(key1, record1[key1]);
+			}
+			gr3.update();	
+		}else if(input.action == 'delete'){
 			var id = input.id;
 			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
 			gr2.get(id);
@@ -157,7 +205,7 @@
         <sys_created_on>2019-09-16 15:06:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5b3f27efdbfff30054d8ff621f9619f2</sys_id>
-        <sys_mod_count>147</sys_mod_count>
+        <sys_mod_count>171</sys_mod_count>
         <sys_name>FCSMS Intake Form Personal Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -165,7 +213,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_5b3f27efdbfff30054d8ff621f9619f2</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-22 16:30:10</sys_updated_on>
+        <sys_updated_on>2019-10-25 21:01:20</sys_updated_on>
         <template><![CDATA[<div id="container" ng-show='show_person_cancer' style="padding: 10px 10px; border-style: ridge;">
 
   <div style="display:flex;margin-bottom:5px;height:40px;">
@@ -206,6 +254,9 @@
           {{ record[col.name] || 'N/A' }}  
         </td>
         <td>
+           <button class="btn btn-primary btn-font" ng-click="c.editForm(record.sys_id)" style="padding: 5px 20px;">
+            View
+          </button>
           <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 20px;">
             Delete
           </button>
@@ -242,9 +293,12 @@
             Loading...
           </sp-widget>
         </div>
-        <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
-          <button type="button" class="table-button btn btn-primary btn-font" ng-click="c.saveForm()">
+        <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block; margin-bottom:15px;">
+          <button type="button" id="save" class="table-button btn btn-primary btn-font" ng-click="c.saveForm()">
             Save
+          </button>  
+          <button type="button" id="update" class="table-button btn btn-primary btn-font" ng-click="c.updateForm()">
+            Update
           </button>  
           <button type="button" class="table-button btn btn-danger btn-font" ng-click="c.cancelForm()">
             Cancel
