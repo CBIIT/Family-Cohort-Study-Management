@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_naci_family_coho_mock_up_intake</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Family and Family Members</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	//Create family record in the family ID table to track family members related to this initial referral
+	var createFamilyRecord = new GlideRecord ('x_naci_family_coho_family_id');
+	createFamilyRecord.initialize();
+	
+	createFamilyRecord.initial_intake = current.sys_id;
+	//createFamilyRecord.studies += current.study.toString() + ',';
+	createFamilyRecord.study = current.study;
+	createFamilyRecord.state = 100;
+	
+	//Capture the sys ID of the new record so it can be added to the Initial Intake form
+	var id = createFamilyRecord.insert();
+	
+	//Set family value to the newly created family
+	current.family = id.toString();
+	
+	
+	//Create Family Member record for the initial user
+	var createFamilyMember = new GlideRecord ('x_naci_family_coho_family_history_details');
+	createFamilyMember.initialize();
+	
+	createFamilyMember.family_id = id.toString();
+	//createFamilyMember.generation_id = '01';
+	//createFamilyMember.family_member_id = '001';
+	createFamilyMember.first_name = current.first_name;
+	createFamilyMember.last_name = current.last_name;
+	createFamilyMember.email_address = current.email_address;
+	createFamilyMember.date_of_birth_month_day_year = current.birthday;
+	createFamilyMember.has_cancer = current.diagnosed_with_cancer;
+	createFamilyMember.relationship_to_you = 'proband';
+	createFamilyMember.phone = current.phone_number;
+	createFamilyMember.eligibility_status = 'waiting_for_eligibility';
+	createFamilyMember.enrollment_status = 'new_screener_received';
+	createFamilyMember.proband_screener = current.sys_id;
+		
+	
+	if (current.diagnosed_with_cancer == 'Yes'){
+		createFamilyMember.type_or_site = getCancerType();
+	}
+	
+	createFamilyMember.person_alive = 'Yes';
+	
+	var famID = createFamilyMember.insert();
+	
+	current.family_member_record = famID.toString();
+	
+	
+	
+	
+	function getCancerType(){
+		
+		var getCancerTypeRec = new GlideRecord ('x_naci_family_coho_mock_up_intake_patient_cancer');
+		getCancerTypeRec.addQuery('enrollment', current.sys_id);
+		getCancerTypeRec.query();
+		
+		if (getCancerTypeRec.next()){
+			return getCancerTypeRec.cancer_type.getDisplayValue();
+		}
+		
+	}
+	
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-01 19:02:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>e40bdd2adbb0c85054d8ff621f9619e1</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Create Family and Family Members</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_e40bdd2adbb0c85054d8ff621f9619e1</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-06 17:19:34</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+</record_update>

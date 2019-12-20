@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $http, $location) {
+  /* widget controller */
+  var c = this;
+	
+	c.registered = false;
+	c.errorRegister = '';
+	
+	c.firstname_input_status = "";
+	c.lastname_input_status = "";
+	c.email_input_status = "";
+	c.phone_input_status = "";
+	c.enableSignup = false;
+	
+	c.data.signup_firstname = '';
+	c.data.signup_lastname = '';
+	c.data.signup_email = '';
+	c.data.signup_phone = '';
+	
+	c.gotoLogin = function(){
+		$location.url("/login_with_sso.do?glide_sso_id=33bf7f51db933b00b86770c08c961994");
+	};
+	
+	c.checkFirstName = function(){
+		if(c.data.signup_firstname.trim() != ''){
+			c.firstname_input_status = 'ok';
+		}
+		else{
+			c.firstname_input_status = '';
+		}
+		c.validForm();
+	}
+	
+	c.checkLastName = function(){
+		if(c.data.signup_lastname.trim() != ''){
+			c.lastname_input_status = 'ok';
+		}
+		else{
+			c.lastname_input_status = '';
+		}
+		c.validForm();
+	}
+	
+	c.checkEmail = function(){
+		var email = c.data.signup_email.trim();
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+			c.email_input_status = 'ok';
+		}
+		else if(email != ''){
+			c.email_input_status = 'fail';
+		}
+		else{
+			c.email_input_status = '';
+		}
+		c.validForm();
+	}
+	
+	c.checkPhone = function(){
+		if(c.data.signup_phone.trim() != ''){
+			c.phone_input_status = 'ok';
+		}
+		else{
+			c.phone_input_status = '';
+		}
+		c.validForm();
+	}
+	
+	c.validForm = function(){
+		c.enableSignup = c.firstname_input_status == 'ok' && c.lastname_input_status == 'ok' && c.email_input_status == 'ok' && c.phone_input_status == 'ok';
+	};
+	
+	c.register = function(){
+		//user input format validation
+		if(c.enableSignup){
+			var param = {};
+			param.firstname = c.data.signup_firstname;
+			param.lastname = c.data.signup_lastname;
+			param.email = c.data.signup_email;
+			param.phone = c.data.signup_phone;
+			$http({
+					url: '/api/x_naci_family_coho/fcsms_apis/createOKTAUser',
+					 method : "POST",
+					 beforeSend: function(xhr){},
+					 headers: {'Content-Type': 'application/json'},
+					 data: JSON.stringify(param),
+					 processData: false
+				}).then(function(res){
+					var result = res.data.result;
+					if(result.indexOf('User account created') == 0){
+						c.registered = true;
+					}
+					else{
+						c.errorRegister = "Create User failed. This email might already exists in the system.";
+						c.registered = false;
+					}
+				},function(error){
+					console.log(error);
+				});
+		}
+		
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_registration</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Registration</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-26 19:37:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ac06dea6dbddc050b86770c08c961985</sys_id>
+        <sys_mod_count>93</sys_mod_count>
+        <sys_name>FCSMS Registration</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_ac06dea6dbddc050b86770c08c961985</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-17 16:39:45</sys_updated_on>
+        <template><![CDATA[<div class="main-content" ng-if="!c.registered" style="height: 500px;">
+	<div class="row row-title">
+    <h2>
+        Create your account
+    </h2>
+    <div style="margin-bottom:10px;">
+      Already have an account?&nbsp;<a href="javascript:void(0)" class="login-link" ng-href="c.gotoLogin()">Login</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="r-form-error-area" ng-show="c.errorRegister != ''">
+      {{c.errorRegister}}
+    </div>
+    <div class="r-form-area">
+      <div class="r-form-fieldset">
+        <div class="r-form-label">
+          <label for="fcsms-signup-firstname">First Name&nbsp;<i class="fa fa-asterisk asterrisk-mark" aria-hidden="true"></i></label>
+        </div>
+        <div class="r-form-input">
+          <input type="text" class="form-control" placeholder="" name="username" id="signup_firstname" ng-model="c.data.signup_firstname" value="" aria-label="" autocomplete="off" ng-blur="c.checkFirstName()">
+        </div>
+        <div class="form-input-status" ng-show="c.firstname_input_status == 'ok'">
+          <i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="r-form-fieldset">
+          <div class="r-form-label">
+            <label for="fcsms-signup-lastname">Last Name&nbsp;<i class="fa fa-asterisk asterrisk-mark" aria-hidden="true"></i></label>
+          </div>
+          <div class="r-form-input">
+            <input type="text" class="form-control"  placeholder="" name="lastname" id="signup_lastname" ng-model="c.data.signup_lastname" value="" aria-label="" autocomplete="off" ng-blur="c.checkLastName()">
+          </div>
+        	<div class="form-input-status" ng-show="c.lastname_input_status == 'ok'">
+            <i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i>
+        	</div>
+      </div>
+      <div class="r-form-fieldset">
+          <div class="r-form-label">
+            <label for="fcsms-signup-email">Email address&nbsp;<i class="fa fa-asterisk asterrisk-mark" aria-hidden="true"></i></label>
+          </div>
+          <div class="r-form-input">
+            <input type="text" class="form-control"  placeholder="" name="email" id="signup_email" ng-model="c.data.signup_email" value="" aria-label="" autocomplete="off" ng-blur="c.checkEmail()">
+          </div>
+        	<div class="form-input-status" ng-show="c.email_input_status == 'ok'">
+            <i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i>
+        	</div>
+        	<div class="form-input-status" ng-show="c.email_input_status == 'fail'">
+            <i class="fa fa-exclamation-triangle fa-exclamation-triangle-red" aria-hidden="true"></i>
+        	</div>
+        	<div class="r-form-description form-info-red" ng-show="c.email_input_status == 'fail'">
+            Please make sure the email you've provided is valid.
+        	</div>
+      </div>
+      <div class="r-form-fieldset">
+        <div class="r-form-label">
+          <label for="fcsms-signup-phone">Phone&nbsp;<i class="fa fa-asterisk asterrisk-mark" aria-hidden="true"></i></label>
+        </div>
+        <div class="r-form-input">
+          <input type="text" class="form-control" placeholder="" name="phone" id="signup_phone" ng-model="c.data.signup_phone" value="" aria-label="" autocomplete="off" ng-blur="c.checkPhone()">
+        </div>
+        <div class="form-input-status" ng-show="c.phone_input_status == 'ok'">
+          <i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i>
+        </div>
+    	</div>
+      <div class="r-form-fieldset">
+        <button class="signup-btn-inactive" ng-show="!c.enableSignup">
+            Create account
+        </button>
+        <button class="signup-btn" ng-click="c.register()" ng-show="c.enableSignup">
+            Create account
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row row-submit">
+    
+  </div>
+</div>
+<div class="main-content" ng-if="c.registered" style="height: 500px;padding-top: 80px;">
+	<div class="row row-title">
+    <div style="margin: auto;width: 500px;text-align: left;padding-left: 50px;padding-top: 30px;">
+      <h2>
+        <i class="fa fa-check-circle" style="color: green;"></i> Thank you for registering!
+    	</h2>
+      <p>
+        A confirmation email has been sent to: <b style="font-size: 16px;">{{c.data.signup_email}}</b>
+      </p>
+      <p>
+        Please check your email to activate your account.<br>
+        After activating your account, please <a href="javascript:void(0)" class="login-link" ng-href="c.gotoLogin()">Login</a>
+      </p>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

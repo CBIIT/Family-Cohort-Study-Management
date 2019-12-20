@@ -22,7 +22,6 @@
 		}
 	}
 	
-	
 	setTimeout(function(){
 		var button_bar = $('#submit_div div.panel-footer');
 		button_bar.children().last().remove();
@@ -30,8 +29,6 @@
 		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
 		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
 	});
-	
-
 
 	c.goBack = function(){
 		s.id = null;
@@ -118,8 +115,8 @@
 		$scope.loadTab(index);
 	}
 	
-	$scope.submitForm = function(form){
-		$scope.saveForm(form);
+	$scope.submitForm = function(){
+		//validate whole form data
 		$('#thank_you').show();
 	}
 
@@ -127,8 +124,7 @@
 		c.show_view_index = index;
 		var widgetName = 'widget_' + index;
 		var view = 'LFS' + index;
-
-		if (!c.data[widgetName]) {
+		if (!c.data[widgetName] || index == 2) {
 			spUtil.get('widget-form', {
 				sys_id: c.data.id,
 				table: "x_naci_family_coho_mock_up_intake",
@@ -165,6 +161,7 @@
 		if(view == "LFS2"){
 			$timeout(function(){
 				$('input[name="birthday"]').prop('readonly',true);		
+				$('input[name="name"]').prop('readonly',true);		
 			});
 		}
 		if(view == "LFS3"){
@@ -378,8 +375,8 @@ fieldset label{
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Intake Form</name>
         <option_schema/>
-        <public>true</public>
-        <roles/>
+        <public>false</public>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
@@ -395,6 +392,7 @@ fieldset label{
 	if(input){
 		if(input.action == 'update'){
 			var record = input.record;
+			var index = input.index;
 			var gr1 = new GlideRecord('x_naci_family_coho_mock_up_intake');
 			gr1.get(input.sys_id);
 			var saved = gr1.saved_section.toString();
@@ -404,6 +402,13 @@ fieldset label{
 			}
 			for (var key in record) {
 				gr1.setValue(key, record[key]);
+			}
+			if(index == 1){
+				if(record.filling_for_someone == 'No'){
+					gr1.setValue('name', gs.getUserDisplayName());
+				}else{
+					gr1.setValue('name', record.filled_for);
+				}
 			}
 			if(!includeElement(saved_arr, input.index)){
 				gr1.saved_section = saved + " " + input.index;
@@ -419,7 +424,7 @@ fieldset label{
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake');
 	gr.get(sys_id);
 	data.saved_section = gr.getValue('saved_section');
-
+  data.subjectName = gr.getValue('filled_for');
 	function includeElement(item_arr, item){
 		var hasItem = false;
 		item_arr.forEach(function(it){
@@ -437,7 +442,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>748</sys_mod_count>
+        <sys_mod_count>786</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -445,179 +450,181 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 22:00:36</sys_updated_on>
-        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 20px;">
-  <div class="left-side-menu col-md-3">
-    <ul class="div_shadow margin-0 menu">
-      <li class="menu_header"><b>Intake Questionaire</b></li>
-      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="#">Study Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i><a href="#">Personal Information</a></li>
-      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i><a href="#">Personal Cancer History</a></li>
-      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i><a href="#">Family Memebers' Cancer History</a></li>
-      <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress41 == true, 'fa-circle-o': c.data.progress41 == false} " aria-hidden="true"></i><a href="#">Family Members' Genetic Tests</a></li>
-      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress5 == true, 'fa-circle-o': c.data.progress5 == false} " aria-hidden="true"></i><a href="#">Final Information</a></li>
-    </ul>
-  </div>
-  <div class="right-side-content col-md-9">
-    <div ng-show="c.show_view_index == 1" class="div_shadow">
-      <div style="padding: 10px;">
-        <p>
-          Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
-        </p>
-        <p>
-          You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family’s cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
-        </p>
-        <p>
-          Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
-        </p>
-        <ul>
-          <li>
-            Sign a study consent form 
-          </li>
-          <li>
-            Provide information and complete questionnaires about your family history and your personal health history 
-          </li>
-          <li>
-            Grant permission for us to verify their cancer diagnoses 
-          </li>
-          <li>
-            Provide biologic samples (such as a blood sample or saliva sample) 
-          </li>
-          <li>
-            Allow us to contact family members, such as siblings, parents, aunts or uncles, to invite them to participate in the study 
-          </li>
-        </ul>
-        <p>
-          Please note that cancer treatment is not being offered as part of this protocol. 
-        </p>
-        <p>
-          If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Stephanie Steinbart at ###-###-####. 
-        </p>
-        <div id="widget_1" class="clearfix">
-          <sp-widget widget="c.data.widget_1"></sp-widget>
+        <sys_updated_on>2019-12-20 21:58:32</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
+  <div class="row">
+    <div class="left-side-menu col-md-3">
+      <ul class="div_shadow margin-0 menu">
+        <li class="menu_header"><b>Intake Questionaire</b></li>
+        <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Study Introduction</a></li>
+        <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Information</a></li>
+        <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Cancer History</a></li>
+        <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Memebers' Cancer History</a></li>
+        <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress41 == true, 'fa-circle-o': c.data.progress41 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Members' Genetic Tests</a></li>
+        <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress5 == true, 'fa-circle-o': c.data.progress5 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Final Information</a></li>
+      </ul>
+    </div>
+    <div class="right-side-content col-md-9">
+      <div ng-show="c.show_view_index == 1" class="div_shadow">
+        <div style="padding: 10px;">
+          <p>
+            Li-Fraumeni syndrome (LFS) is an inherited cancer predisposition syndrome which is associated with an increased risk of developing cancer in individuals who have the syndrome.  Some of the most common cancers that occur in LFS are brain cancer, breast cancer, sarcomas, adrenal cortical cancer, and blood cancers, though other cancers are possible as well.  The National Cancer Institute is studying individuals with family histories suspicious of LFS in order to better understand how genes or other risk factors cause cancers in these families, what cancers are most common in these families, and what strategies are best for preventing cancer or catching cancer early.  More information about the study can be found at <a target="_blank" href="http://lfs.cancer.gov">http://lfs.cancer.gov</a>. 
+          </p>
+          <p>
+            You can learn about your eligibility for this study by providing the information requested below.  In order to determine whether you are eligible, the information  requested must be provided  and should take approximately 10-15 minutes to complete.  Before beginning, make sure you have as much information as possible available about your family's cancer history, including the types of cancers diagnosed in yourself or your relatives and the approximate ages at diagnosis. 
+          </p>
+          <p>
+            Our study team will review the information provided to determine if you may be eligible to participate.  If you enroll in the study, you may be asked to do some or all of the following: 
+          </p>
+          <ul>
+            <li>
+              Sign a study consent form 
+            </li>
+            <li>
+              Provide information and complete questionnaires about your family history and your personal health history 
+            </li>
+            <li>
+              Grant permission for us to verify their cancer diagnoses 
+            </li>
+            <li>
+              Provide biologic samples (such as a blood sample or saliva sample) 
+            </li>
+            <li>
+              Allow us to contact family members, such as siblings, parents, aunts or uncles, to invite them to participate in the study 
+            </li>
+          </ul>
+          <p>
+            Please note that cancer treatment is not being offered as part of this protocol. 
+          </p>
+          <p>
+            If you are unable to complete the online questionnaire or would prefer to complete it by phone, please contact our study nurse, Stephanie Steinbart at ###-###-####. 
+          </p>
+          <div id="widget_1" class="clearfix">
+            <sp-widget widget="c.data.widget_1"></sp-widget>
+            <div class="form-section" style="text-align:right; padding-top: 15px">
+              <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS1)">
+                SAVE & NEXT
+              </button>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <div ng-show="c.show_view_index == 2" class="div_shadow">
+        <div id="widget_2" style="padding: 10px;" class="clearfix">
+          <sp-widget widget="c.data.widget_2">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
           <div class="form-section" style="text-align:right; padding-top: 15px">
-            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS1)">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS2)" style="width:100px">
+              BACK
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS2)">
               SAVE & NEXT
             </button>
-          </div>           
+          </div>   
         </div>
       </div>
-    </div>
-    <div ng-show="c.show_view_index == 2" class="div_shadow">
-      <div id="widget_2" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_2">
-          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-          Loading...
-        </sp-widget>
-        <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS2)" style="width:100px">
-            BACK
-          </button>
-          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS2)">
-            SAVE & NEXT
-          </button>
-        </div>   
+      <div ng-show="c.show_view_index == 3" class="div_shadow">
+        <p style="padding: 10px 15px">
+          To determine eligibility, we need to collect information about cancer diagnoses and genetic testing.  If you are filling this form out for someone else, please remember that "you" refers to the potential research subject. 
+        </p>
+        <div id="widget_3" style="padding: 10px;" class="clearfix">
+          <sp-widget widget="c.data.widget_3">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+          <div class="form-section" style="text-align:right; padding-top: 15px">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS3)" style="width:100px;">
+              BACK
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS3)">
+              SAVE & NEXT
+            </button>
+          </div>  
+        </div>
+        <div class="margin-nt-10">
+          <widget id="fcsms_intake_form_personal_cancer_list"></widget>
+        </div>     
       </div>
-    </div>
-    <div ng-show="c.show_view_index == 3" class="div_shadow">
-      <p style="padding: 10px 15px">
-        To determine eligibility, we need to collect information about cancer diagnoses and genetic testing.  If you are filling this form out for someone else, please remember that “you” refers to the potential research subject. 
-      </p>
-      <div id="widget_3" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_3">
-          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-          Loading...
-        </sp-widget>
-        <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS3)" style="width:100px;">
-            BACK
-          </button>
-          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS3)">
-            SAVE & NEXT
-          </button>
-        </div>  
-      </div>
-      <div class="margin-nt-10">
-        <widget id="fcsms_intake_form_personal_cancer_list"></widget>
-      </div>     
-    </div>
-    <div ng-show="c.show_view_index == 4" class="div_shadow">
-      <div id="widget_4" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_4">
-          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-          Loading...
-        </sp-widget>
-        <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS4)" style="width:100px">
-            BACK
-          </button> 
-          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS4)">
-            SAVE & NEXT
-          </button>
-        </div>         
-      </div>
-      <div class="margin-nt-10">
-        <widget id="fcsms_intake_form_family_cancer_list"></widget>
+      <div ng-show="c.show_view_index == 4" class="div_shadow">
+        <div id="widget_4" style="padding: 10px;" class="clearfix">
+          <sp-widget widget="c.data.widget_4">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+          <div class="form-section" style="text-align:right; padding-top: 15px">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS4)" style="width:100px">
+              BACK
+            </button> 
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS4)">
+              SAVE & NEXT
+            </button>
+          </div>         
+        </div>
+        <div class="margin-nt-10">
+          <widget id="fcsms_intake_form_family_cancer_list"></widget>
+        </div>    
       </div>    
-    </div>    
-    <div ng-show="c.show_view_index == 41" class="div_shadow">
-      <div id="widget_41" style="padding: 10px;" class="clearfix">
-        <sp-widget widget="c.data.widget_41">
-          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-          Loading...
-        </sp-widget>
-        <div class="form-section" style="text-align:right; padding-top: 15px">
-          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS41)" style="width:100px">
-            BACK
-          </button> 
-          <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS41)">
-            SAVE & NEXT
-          </button>
-        </div> 
-      </div>
-      <div class="margin-nt-10">
-        <widget id="fcsms_intake_test_positive_for_gene"></widget>
-      </div>     
-    </div>    
-    <div ng-show="c.show_view_index == 5" class="div_shadow">
-      <div style="padding: 10px;" id="submit_div" class="clearfix">
-        <sp-widget widget="c.data.widget_5">
-          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-          Loading...
-        </sp-widget>
-        <div class="text-right">
-          <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
-            BACK
-          </button>
-          <button class="btn btn-primary btn-font" ng-click="saveForm(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
-            SAVE
-          </button>
-          <button class="btn btn-success btn-font" ng-click="submitForm(c.forms.LFS5)" style="width:100px;">
-            SUBMIT
-          </button>
+      <div ng-show="c.show_view_index == 41" class="div_shadow">
+        <div id="widget_41" style="padding: 10px;" class="clearfix">
+          <sp-widget widget="c.data.widget_41">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+          <div class="form-section" style="text-align:right; padding-top: 15px">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS41)" style="width:100px">
+              BACK
+            </button> 
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS41)">
+              SAVE & NEXT
+            </button>
+          </div> 
         </div>
+        <div class="margin-nt-10">
+          <widget id="fcsms_intake_test_positive_for_gene"></widget>
+        </div>     
+      </div>    
+      <div ng-show="c.show_view_index == 5" class="div_shadow">
+        <div style="padding: 10px;" id="submit_div" class="clearfix">
+          <sp-widget widget="c.data.widget_5">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+          <div class="text-right">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
+              BACK
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="saveForm(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
+              SAVE
+            </button>
+            <button class="btn btn-success btn-font" ng-click="submitForm()" style="width:100px;">
+              SUBMIT
+            </button>
+          </div>
 
-      </div>
-      <div class="margin-nt-10">
-        <widget id="fcsms_participate_another_org"></widget>
-        <widget id="fcsms_cancer_follow_up"></widget>        
-      </div>
-      <div Style="display:none;padding: 10px;" id="thank_you">
-        <p>
-          Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
-        </p>
-        <p>
-          Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
-        </p>
-      </div>     
-    </div>    
-  </div>
-  <input type="hidden" id="intake_id"/>
-  <div id="saving-data-modal" style="display: none">
-    <div class="modal-body text-center">
-      <h3>Please Wait</h3>
-      <i class="fa fa-cog fa-spin fa-10x fa-fw" style="font-size: 40px"></i>
+        </div>
+        <div class="margin-nt-10">
+          <widget id="fcsms_participate_another_org"></widget>
+          <widget id="fcsms_cancer_follow_up"></widget>        
+        </div>
+        <div Style="display:none;padding: 10px;" id="thank_you">
+          <p>
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p>
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+        </div>     
+      </div>    
     </div>
+    <input type="hidden" id="intake_id"/>
+    <div id="saving-data-modal" style="display: none">
+      <div class="modal-body text-center">
+        <h3>Please Wait</h3>
+        <i class="fa fa-cog fa-spin fa-10x fa-fw" style="font-size: 40px"></i>
+      </div>
+    </div>  
   </div>
 </div>]]></template>
     </sp_widget>

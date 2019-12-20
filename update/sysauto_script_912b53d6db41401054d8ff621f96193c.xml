@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Consent Reminder - 6 week reminder</name>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-11-13 19:10:54</run_start>
+        <run_time>1970-01-01 15:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var intakeConsentCheck = new GlideRecord ('x_naci_family_coho_family_history_details');
+intakeConsentCheck.addEncodedQuery('enrollment_status=awaiting_consent^date_consent_requestedRELATIVEEE@dayofweek@ago@42');
+intakeConsentCheck.query();
+
+while (intakeConsentCheck.next()){
+	
+	gs.eventQueue('x_naci_family_coho.consent.reminder.2', intakeConsentCheck, '2nd Reminder');
+	
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-13 19:45:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>912b53d6db41401054d8ff621f96193c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Consent Reminder - 6 week reminder</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sysauto_script_912b53d6db41401054d8ff621f96193c</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-20 20:53:57</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

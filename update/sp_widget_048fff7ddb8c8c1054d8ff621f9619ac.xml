@@ -23,25 +23,6 @@
 
 	c.g_forms = {};
 
-	/*
-	var mybutton = document.getElementById("myBtn");
-
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = function() {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
-		} else {
-			mybutton.style.display = "none";
-		}
-	};
-
-	// When the user clicks on the button, scroll to the top of the document
-	c.topFunction = function(){
-		document.body.scrollTop = 0; // For Safari
-		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-	}
-	*/
-
 	c.accordions = {};
 	c.accordions.tab_2_A1 = false;
 	c.accordions.tab_2_A2 = false;
@@ -882,7 +863,7 @@
         <name>FCSMS IIQ Form</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
@@ -921,7 +902,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>725</sys_mod_count>
+        <sys_mod_count>731</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -929,10 +910,11 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-23 18:41:37</sys_updated_on>
+        <sys_updated_on>2019-11-20 18:26:28</sys_updated_on>
         <template><![CDATA[
-<div id="table-form" class="container" style="width:80%;font-size: 18px;">
-  <div class="left-side-menu col-md-3">
+<div id="table-form" class="main-content" style="font-size: 18px;">
+  <div class="row">
+   <div class="left-side-menu col-md-3">
     <ul>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
       <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
@@ -954,7 +936,7 @@
       <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
     </ul>
   </div>
-  <div class="right-side-content col-md-9">
+   <div class="right-side-content col-md-9">
     <div ng-show="c.show_view_index == 1">
       <div style="padding: 10px;border: 1px solid #ddd;border-radius: 5px 5px 0px 0px;border-bottom: 0px;" >
         <h3 style="text-align:center;">
@@ -1361,12 +1343,12 @@ Loading...
           </sp-widget>
         </div>
         </div>
-
-    </div>
-    <div id="saving-data-modal" style="display: none;">
-      <div class="modal-body text-center" style="font-size: 20px;">
-        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i> Saving...
-      </div>
-    </div>]]></template>
+  </div>
+</div>
+<div id="saving-data-modal" style="display: none;">
+  <div class="modal-body text-center" style="font-size: 20px;">
+    <i class="fa fa-cog fa-spin fa-10x fa-fw"></i> Saving...
+  </div>
+</div>]]></template>
     </sp_widget>
 </record_update>

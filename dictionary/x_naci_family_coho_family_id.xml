@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sn_customerservice_case" label="Family ID" max_length="40" name="x_naci_family_coho_family_id" sizeclass="12" type="collection">
+        <element label="FHQ" max_length="32" name="family_history_questionnaire" reference="x_naci_family_coho_family_history_question" type="reference"/>
+        <element label="Initial Intake" max_length="32" name="initial_intake" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
+        <element attributes="glide_list" label="Studies" max_length="4000" name="studies" reference="x_naci_family_coho_mock_up_study" type="glide_list"/>
+        <element label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
+        <index name="index">
+            <element name="study"/>
+        </index>
+        <index name="index2">
+            <element name="family_history_questionnaire"/>
+        </index>
+        <index name="index3">
+            <element name="initial_intake"/>
+        </index>
+    </element>
+</database>

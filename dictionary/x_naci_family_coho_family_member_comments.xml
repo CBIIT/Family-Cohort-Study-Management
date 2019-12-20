@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Family Member Comments" max_length="40" name="x_naci_family_coho_family_member_comments" type="collection">
+        <element label="Comments" max_length="4000" name="comments" type="html"/>
+        <element label="Family" max_length="32" name="family_id" read_only="true" reference="x_naci_family_coho_family_id" type="reference"/>
+        <element display="true" label="Family Member" max_length="32" name="family_member" reference="x_naci_family_coho_family_history_details" type="reference"/>
+        <element choice="1" default="medium" label="Importance" max_length="40" name="importance" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="10" value="high"/>
+                <element inactive_on_update="false" label="Medium" sequence="20" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="30" value="low"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="family_id"/>
+        </index>
+        <index name="index2">
+            <element name="family_member"/>
+        </index>
+    </element>
+</database>

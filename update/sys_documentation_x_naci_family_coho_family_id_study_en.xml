@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="study" label="Study" language="en" table="x_naci_family_coho_family_id">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>study</element>
+            <help/>
+            <hint/>
+            <label>Study</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_id</name>
+            <plural>Studies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-22 16:26:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>020441dddbdd4c10b86770c08c9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Study</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_family_id_study_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-22 16:26:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

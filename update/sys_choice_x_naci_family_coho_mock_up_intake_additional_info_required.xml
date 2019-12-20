@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="additional_info_required" table="x_naci_family_coho_mock_up_intake" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>additional_info_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Yes</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-22 14:35:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>009a6491db5d4c10b86770c08c961926</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-22 14:35:28</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>yes</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>additional_info_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-22 14:35:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>f09aec51db5d4c10b86770c08c9619d8</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-22 14:35:35</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>no</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>additional_info_required</element>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-22 14:35:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>789a6411db5d4c10b86770c08c9619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>additional_info_required</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_mock_up_intake_additional_info_required</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-22 14:35:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

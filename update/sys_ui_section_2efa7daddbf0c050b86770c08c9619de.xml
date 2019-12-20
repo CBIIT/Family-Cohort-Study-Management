@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Major Case Information" section_id="2efa7daddbf0c050b86770c08c9619de" sys_domain="global" table="x_naci_family_coho_family_id" version="3" view="workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>major_case_state</element>
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>6afa7daddbf0c050b86770c08c9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>62fa7daddbf0c050b86770c08c9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>recipient_list</element>
+            <position>2</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>eefa7daddbf0c050b86770c08c9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>6efa7daddbf0c050b86770c08c9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>business_impact</element>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>66fa7daddbf0c050b86770c08c9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>probable_cause</element>
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_id>e2fa7daddbf0c050b86770c08c9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="bef61ff9db623300e5b7f50d0f96195c">2efa7daddbf0c050b86770c08c9619de</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Major Case Information</caption>
+            <header>false</header>
+            <name>x_naci_family_coho_family_id</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>2efa7daddbf0c050b86770c08c9619de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Major Case Information</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_section_2efa7daddbf0c050b86770c08c9619de</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace" name="workspace">bef61ff9db623300e5b7f50d0f96195c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

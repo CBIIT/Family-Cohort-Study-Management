@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="x_naci_family_coho_family_id">initial_intake.eligible_status=Eligible^EQ<item endquery="false" field="initial_intake.eligible_status" goto="false" newquery="false" operator="=" or="false" value="Eligible"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <group/>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-06 14:38:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>dcc1de8cdb81c41054d8ff621f961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Eligible Families</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_filter_dcc1de8cdb81c41054d8ff621f961984</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-06 14:38:37</sys_updated_on>
+        <table>x_naci_family_coho_family_id</table>
+        <title>Eligible Families</title>
+        <user/>
+    </sys_filter>
+</record_update>

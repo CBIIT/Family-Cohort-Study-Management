@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_naci_family_coho_family_history_question</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_naci_family_coho_family_history_question">time_to_complete_formVALCHANGES^EQ<item endquery="false" field="time_to_complete_form" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Set Family ID Numbers</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var generation = '';
+	var famID = '';
+	var id = current.sys_id; //Get current family for query
+
+	//Query the family members table for all family members in this family
+	var famMemberLoop = new GlideRecord ('x_naci_family_coho_family_history_details');
+	famMemberLoop.addQuery('family', id);
+	famMemberLoop.query();
+
+	//First check for relationships where the person is not a child, grandchild or sibling and get their generation id and family member id from the properties
+	while (famMemberLoop.next()){
+
+		if (famMemberLoop.relationship_to_you == 'mother'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.parent');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.mother');
+
+		} else if (famMemberLoop.relationship_to_you == 'father'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.parent');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.father');
+
+		} else if (famMemberLoop.relationship_to_you == 'mothers_mother'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.grandparents');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.maternal.grandmother');
+
+		} else if (famMemberLoop.relationship_to_you == 'fathers_mother'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.grandparents');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.paternal.grandmother');
+
+		} else if (famMemberLoop.relationship_to_you == 'mothers_father'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.grandparents');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.maternal.grandfather');
+
+		} else if (famMemberLoop.relationship_to_you == 'fathers_father'){
+
+			famMemberLoop.generation_id = gs.getProperty('x_naci_family_coho.proband.generation.grandparents');
+			famMemberLoop.family_member_id = gs.getProperty('x_naci_family_coho.proband.fam.id.paternal.grandfather');
+
+		} else if (famMemberLoop.relationship_to_you == 'proband'){
+			
+			famMemberLoop.generation_id = '01';
+			famMemberLoop.family_member_id = '001';
+		}
+
+		famMemberLoop.update();
+
+	}
+
+	setSiblingId();
+	setChildId();
+	setGrandChildId();
+
+
+	function setSiblingId(){
+
+		var query = '';
+		var famId = 2;
+
+		query = 'family=' + id + '^relationship_to_youINsister,brother,half_brother_same_mother,half_brother_same_father,half_sister_same_mother,half_sister_same_father';
+
+		var famIdLookUp = new GlideRecord ('x_naci_family_coho_family_history_details');
+		famIdLookUp.addEncodedQuery(query);
+		famIdLookUp.orderBy('date_of_birth_month_day_year');
+		famIdLookUp.query();
+
+		while (famIdLookUp.next()){
+
+			famIdLookUp.generation_id = '01'; //Siblings to the proband are all in the same generation as the proband which is 01
+
+			//If the family ID Number gets higher than 9 for siblings then we only need one leading zero.
+			if (famId < 10){
+				famIdLookUp.family_member_id = '00' + famId;
+			} else {
+				famIdLookUp.family_member_id = '0' + famId;
+			}
+
+			famIdLookUp.update();
+			famId++;
+
+		}
+
+	}
+
+	function setChildId(){
+
+		var query = '';
+		var famId = 1;
+
+		query = 'family=' + id + '^relationship_to_you=child';
+
+		var famIdLookUp = new GlideRecord ('x_naci_family_coho_family_history_details');
+		famIdLookUp.addEncodedQuery(query);
+		famIdLookUp.orderBy('date_of_birth_month_day_year');
+		famIdLookUp.query();
+
+		while (famIdLookUp.next()){
+
+			famIdLookUp.generation_id = '03'; //Children of the proband all get the genration id of 3
+
+			//If the family ID Number gets higher than 9 for children then we only need one leading zero.
+			if (famId < 10){
+				famIdLookUp.family_member_id = '00' + famId;
+			} else {
+				famIdLookUp.family_member_id = '0' + famId;
+			}
+
+			famIdLookUp.update();
+			famId++;
+
+		}
+
+	}
+
+	function setGrandChildId(){
+
+		var query = '';
+		var famId = 1;
+
+		query = 'family=' + id + '^relationship_to_you=grandchild';
+
+		var famIdLookUp = new GlideRecord ('x_naci_family_coho_family_history_details');
+		famIdLookUp.addEncodedQuery(query);
+		famIdLookUp.orderBy('date_of_birth_month_day_year');
+		famIdLookUp.query();
+
+		while (famIdLookUp.next()){
+
+			famIdLookUp.generation_id = '05'; //Grandchildren of the proband all get the generation id of 5
+
+			//If the family ID Number gets higher than 9 for grandchildren then we only need one leading zero.
+			if (famId < 10){
+				famIdLookUp.family_member_id = '00' + famId;
+			} else {
+				famIdLookUp.family_member_id = '0' + famId;
+			}
+
+			famIdLookUp.update();
+			famId++;
+
+		}
+
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-05 21:29:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>79c505eddbad809054d8ff621f96194e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Family ID Numbers</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_79c505eddbad809054d8ff621f96194e</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-06 17:12:44</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+</record_update>

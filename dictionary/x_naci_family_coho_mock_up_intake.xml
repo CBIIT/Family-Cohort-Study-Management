@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" label="FCSMS Intake Form" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element choice="3" default="no" label="Additional Info Required" max_length="40" name="additional_info_required" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="no"/>
+            </choice>
+        </element>
         <element choice="3" default="American Indian/Alaskan Native" label="Biological Father's Ethnicity" max_length="40" name="biological_father_s_ethnicity" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian/Alaskan Native" value="American Indian/Alaskan Native"/>
@@ -49,29 +56,40 @@
             </choice>
         </element>
         <element label="Confirm Contact Email Address" max_length="200" name="confirm_email_address" type="string"/>
+        <element default="0" label="Consent Reminder Count" max_length="40" name="consent_reminder_count" type="integer"/>
+        <element label="Date Consent Requested" max_length="40" name="date_consent_requested" type="glide_date"/>
         <element choice="3" default="No" label="Has Research Subject ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="0" value="Yes"/>
             </choice>
         </element>
-        <element choice="1" label="Eligible Status" max_length="40" name="eligible_status" type="choice">
+        <element active="false" choice="1" default="waiting_for_eligibility" label="Eligible Status" max_length="40" name="eligible_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Waiting for Eligible Review" sequence="1" value="Waiting for Eligible Review"/>
-                <element inactive_on_update="false" label="Eligible" sequence="2" value="Eligible"/>
-                <element inactive_on_update="false" label="Not Eligible" sequence="3" value="Not Eligible"/>
+                <element inactive_on_update="false" label="Waiting for Eligible Review" sequence="1" value="waiting_for_eligibility"/>
+                <element inactive_on_update="false" label="Eligible" sequence="2" value="eligible"/>
+                <element inactive_on_update="false" label="Not Eligible" sequence="3" value="not_eligible"/>
             </choice>
         </element>
         <element label="Contact Email Address" max_length="100" name="email_address" type="string"/>
-        <element choice="1" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
+        <element active="false" choice="1" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Intake Form Submitted" sequence="1" value="Intake Form Submitted"/>
-                <element inactive_on_update="false" label="Study Consent Submitted" sequence="2" value="Study Consent Submitted"/>
-                <element inactive_on_update="false" label="FHQ Submitted" sequence="3" value="FHQ Submitted"/>
-                <element inactive_on_update="false" label="FHQ/IIQ/MRR Submitted" sequence="4" value="FHQ/IIQ/MRR Submitted"/>
+                <element inactive_on_update="false" label="New Screener Received" sequence="10" value="new_screener_received"/>
+                <element inactive_on_update="false" label="More Info Required" sequence="15" value="more_info_required"/>
+                <element inactive_on_update="false" label="Awaiting Eligibility Review" sequence="17" value="awaiting_eligibility_review"/>
+                <element inactive_on_update="false" label="Study Panel Review" sequence="20" value="study_panel_review"/>
+                <element inactive_on_update="false" label="Awaiting Consent" sequence="25" value="awaiting_consent"/>
+                <element inactive_on_update="false" label="Awaiting PI Signature" sequence="30" value="awaiting_pi_signature"/>
+                <element inactive="true" inactive_on_update="true" label="Study Consent Submitted" sequence="30" value="Study Consent Submitted"/>
+                <element inactive_on_update="false" label="Awaiting Enrollment Forms" sequence="40" value="awaiting_enrollment_forms"/>
+                <element inactive_on_update="false" label="Enrollment Packet Received" sequence="50" value="enrollment_packet_received"/>
+                <element inactive_on_update="false" label="Enrollment Complete" sequence="55" value="enrollment_complete"/>
+                <element inactive_on_update="false" label="Direct Decline" sequence="60" value="direct_decline"/>
             </choice>
         </element>
+        <element label="Family" max_length="32" name="family" reference="x_naci_family_coho_family_id" type="reference"/>
         <element label="Family ID" max_length="100" name="family_id" type="string"/>
+        <element label="Family Member Record" max_length="32" name="family_member_record" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="What is the name of the person you are filled this out for" max_length="100" name="filled_for" type="string"/>
         <element choice="3" default="No" label="Are you filling this questionnaire out for someone else?" mandatory="true" max_length="40" name="filling_for_someone" type="choice">
             <choice>
@@ -188,9 +206,17 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
+        <element label="Time to Complete Form" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
+        <element default="javascript: new Date().getFullYear().toString()" label="Year Created" max_length="40" name="year_created" type="string"/>
         <element label="What is your name" max_length="100" name="your_name" type="string"/>
         <index name="index">
+            <element name="family_member_record"/>
+        </index>
+        <index name="index2">
             <element name="study"/>
+        </index>
+        <index name="index3">
+            <element name="family"/>
         </index>
     </element>
 </database>

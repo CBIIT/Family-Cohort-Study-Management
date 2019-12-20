@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
+    <element audit="true" label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
         <element choice="1" label="E8.At what age did you most recently stop drinking one alcoholic drink per week?" max_length="40" name="age_most_recently_stop_drinking" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
@@ -66,6 +66,7 @@
             </choice>
         </element>
         <element label="Comment" max_length="8000" name="comment" type="html"/>
+        <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element choice="1" label="Is this condition (Coronary Artery Disease) currently being treated ?" max_length="40" name="coronary_artery_disease_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -212,7 +213,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element label="Enrollment" max_length="32" name="enrollment" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
+        <element label="Enrollment" max_length="32" name="enrollment" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element choice="1" label="D8.Have you ever chewed tobacco regularly ?" max_length="40" name="ever_chewed_tobacco_regularly" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES, Total amount of months combined" sequence="1" value="YES, Total amount of months combined"/>
@@ -244,6 +245,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="4" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Family" max_length="32" name="family" reference="x_naci_family_coho_family_id" type="reference"/>
         <element label="Feet" max_length="100" name="feet" type="string"/>
         <element label="Blocked fallopian tubes" max_length="40" name="fertility_diagnosis_blocked_fallopian_tubes" type="boolean"/>
         <element label="Female hormone problem" max_length="40" name="fertility_diagnosis_female_hormone_problem" type="boolean"/>
@@ -688,6 +690,7 @@
                 <element inactive_on_update="false" label="IIQ Submitted" sequence="4" value="IIQ Submitted"/>
             </choice>
         </element>
+        <element label="Whose Information is represented here" max_length="32" name="iiq_subject" reference="x_naci_family_coho_family_history_details" reference_qual="javascript: getFamilyMembers();" type="reference" use_reference_qualifier="advanced"/>
         <element label="Inches" max_length="100" name="inches" type="string"/>
         <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
         <element choice="1" label="Individual Type" max_length="40" name="individual_type" type="choice">
@@ -1126,6 +1129,7 @@
             </choice>
         </element>
         <element label="Other" max_length="100" name="non_family_member_other_description" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Number of Drinks" max_length="100" name="number_of_drinks" type="string"/>
         <element label="Number of drinks" max_length="100" name="number_of_drinks_days_drink_alcohol" type="string"/>
         <element choice="1" label="E7.On the days you drink alcohol, how many drinks do you have on average?" max_length="40" name="on_the_days_drinks_have_on_average" type="choice">
@@ -1462,6 +1466,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element label="Time to Complete Form" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
         <element label="Total Amount of Months" max_length="100" name="total_amount_of_months" type="string"/>
         <element label="Total Amount of Years" max_length="100" name="total_amount_of_years" type="string"/>
         <element label="How many months, total for all of your children combined did you breast feed?" max_length="3" name="total_months_breasfed" type="integer"/>
@@ -1572,6 +1577,12 @@
             </choice>
         </element>
         <index name="index">
+            <element name="iiq_subject"/>
+        </index>
+        <index name="index2">
+            <element name="family"/>
+        </index>
+        <index name="index3">
             <element name="enrollment"/>
         </index>
     </element>

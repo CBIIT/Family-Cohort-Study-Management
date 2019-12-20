@@ -16,7 +16,6 @@
 		$scope.reverse = !$scope.reverse; //if true make it false and vice versa
 	}
 		
-	
 	window.setShowCancer = function(showCancer) {
 		$scope.show_person_cancer = showCancer;
 	}
@@ -24,7 +23,6 @@
 	$scope.$on('spModel.fields.rendered', function(e) {
 		if (e.targetScope.formModel.view == 'Cancer')
 			c.g_form = e.targetScope.getGlideForm();	
-		  
 		  $timeout(function() {
 				$('input[name="date_diagnosis"]').prop('readonly', true);
 				$('#addFamilyCancerDiv .panel-footer').hide();
@@ -32,7 +30,7 @@
 	});
 	
 	c.data.label = "Personal Cancer";
-	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},{label:"If Other, Please Specify", name: "please_specify"},
+	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},
 										{label: "Age (in years) at Diagnosis",name: "age_in_years_at_diagnosis"},{label: "Date at Diagnosis",name: "date_diagnosis"}];
 
 	c.openForm = function(){
@@ -148,8 +146,8 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Intake Form Personal Cancer List</name>
         <option_schema/>
-        <public>true</public>
-        <roles/>
+        <public>false</public>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
@@ -183,10 +181,10 @@
 			gr2.deleteRecord();
 		}
 	}
-	
+
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
 	gr.addQuery('intake_form', data.id);
-	gr.orderByDesc('sys_created_on');
+	gr.orderBy('sys_created_on');
 	gr.query();
 	data.records = [];
 	while(gr.next()){
@@ -205,7 +203,7 @@
         <sys_created_on>2019-09-16 15:06:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5b3f27efdbfff30054d8ff621f9619f2</sys_id>
-        <sys_mod_count>171</sys_mod_count>
+        <sys_mod_count>197</sys_mod_count>
         <sys_name>FCSMS Intake Form Personal Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -213,57 +211,59 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_5b3f27efdbfff30054d8ff621f9619f2</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 21:01:20</sys_updated_on>
+        <sys_updated_on>2019-12-20 20:55:59</sys_updated_on>
         <template><![CDATA[<div id="container" ng-show='show_person_cancer' style="padding: 10px 10px; border-style: ridge;">
 
   <div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
-   </div>
-  <div class="d-flex">
-    <div class="col-md-6 d-flex">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
       <label class="pr-3 pt-2">Search:</label> 
       <input type="text" 
-             class="form-control" 
+             class="form-control d-inline-block" 
              placeholder="{{c.data.label}} Records" 
              aria-describedby="search record"
              ng-model="search" 
              style="width: 300px;"/>  
     </div>
-    <div class="col-md-6">
-      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 20px;position: absolute;right: 0px;">
+    <div class="col-md-6 text-right">
+      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 20px;">
         New Personal Cancer Information
       </button>
     </div>
   </div>  
-  <table class="table table-bordered table-hover mt-3">
-    <thead class="bg-primary">
-      <tr>
-        <th ng-repeat="col in c.data.columns"
-            ng-click="sort(col.name)">
-          {{ col.label }}
-          <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-        </th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
-        <td ng-repeat="col in c.data.columns">
-          {{ record[col.name] || 'N/A' }}  
-        </td>
-        <td>
-           <button class="btn btn-primary btn-font" ng-click="c.editForm(record.sys_id)" style="padding: 5px 20px;">
-            View
-          </button>
-          <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 20px;">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+      <thead class="bg-primary">
+        <tr>
+          <th ng-repeat="col in c.data.columns"
+              ng-click="sort(col.name)">
+            {{ col.label }}
+            <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
+          <td ng-repeat="col in c.data.columns">
+            {{ record[col.name] || 'N/A' }}  
+          </td>
+          <td>
+            <button class="btn btn-primary btn-font" ng-click="c.editForm(record.sys_id)" style="padding: 5px 20px;">
+              View
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 20px;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <div style="display:flex;">
     <span style="margin-right:auto">Total: {{ c.data.records.length }}</span>
     <div style="margin-left:auto">

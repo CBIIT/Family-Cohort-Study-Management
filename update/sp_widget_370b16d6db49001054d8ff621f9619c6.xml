@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location, $http) {
+  /* widget controller */
+  var c = this;
+	var s = $location.search();
+	
+	c.disabled = true;
+	c.data.consent_be_contacted_genetic_variants = "yes";
+	c.data.consent_be_contacted_genetic_changes = "yes";
+	
+	c.sign_date = c.data.sign_date;
+	c.sign_user_name = c.data.user_name;
+	
+	document.getElementById('pdf-iframe').src = '/api/naci/attachment_util/attachment/v1/' + c.data.pdf_id ;
+	
+	var containerEl = $("#pdf-content")[0];
+
+	$("#pdf-content").scroll(function () {
+		if (containerEl.scrollTop + containerEl.clientHeight >= containerEl.scrollHeight) {
+			c.disabled = false;
+			$scope.$apply();
+		}
+		else{
+			c.disabled = true;
+			$scope.$apply();
+		}
+	});
+	
+	
+	c.toConsent = function(){
+		c.password = '';
+		$('#consent-modal').modal('show');
+	}
+	
+	c.cancelConsent = function(){
+		$('#consent-modal').modal('hide');
+	}
+	
+	c.consentForm = function(){
+		$http({
+				url: '/api/x_naci_family_coho/fcsms_apis/validateOKTAUser',
+				 method : "POST",
+				 beforeSend: function(xhr){ xhr.setRequestHeader('X-UserToken', c.data.session_id); },
+				 headers: {'Content-Type': 'application/json'},
+				 data: JSON.stringify({}),
+				 processData: false
+			}).then(function(res){
+				var result = res.data.result;
+			  console.log(result);
+			},function(error){
+				console.log(error);
+			});
+	}
+	
+	c.cancelForm = function(){
+		s.id = 'fcsms_patient_home_page';
+		s.sys_id = null;
+		$location.search(s).replace();
+	}
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.btn-font{
+  font-size: 16px;
+}
+.content-title{
+	text-align: center;
+  font-size: 22px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.pdf-content {
+  height: 500px;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 1200px;
+}
+.sign-content{
+  display:block;
+}
+.sign-notice{
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sign-form{
+  padding: 15px 0px;
+  float: left;
+  width: 100%;
+}
+.sign-row{
+  float: left;
+  width: 100%;
+}
+.sign-action{
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_mrr_consent_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS MRR Consent Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles>snc_external</roles>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.session_id = gs.getSession().getSessionToken();
+	data.user_name = gs.getUserDisplayName();
+	data.pdf_id = '';
+	var attachment =  new GlideRecord('sys_attachment');
+	attachment.addQuery('table_sys_id','1731aa16db89001054d8ff621f961914');
+	attachment.query();
+	attachment.next();
+	try {
+		data.pdf_id = attachment.sys_id.toString();
+	}
+	catch(err) {
+		console.log(err);
+	}
+	data.sign_date = '';
+	var months = {
+		0: 'January',
+		1: 'February',
+		2: 'March',
+		3: 'April',
+		4: 'May',
+		5: 'June',
+		6: 'July',
+		7: 'August',
+		8: 'September',
+		9: 'October',
+		10: 'November',
+		11: 'December'
+	}
+	var today = new Date();
+  var year = today.getFullYear();
+	var date = today.getDate();
+	var month = months[today.getMonth()];
+	data.sign_date = month + ' ' + date + ', ' + year;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-13 15:05:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>370b16d6db49001054d8ff621f9619c6</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>FCSMS MRR Consent Form</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_370b16d6db49001054d8ff621f9619c6</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-26 18:30:28</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
+  <div class="row">
+    <div class="body-content">
+      <div class="content-title">
+        Medical Research Record Consent Form
+      </div>
+    	<div id="pdf-content" class="pdf-content">
+        <iframe src="" id="pdf-iframe" class="pdf-iframe">
+        </iframe>
+      </div>
+      <div class="sign-content">
+        <div class="sign-notice">
+          <i class="fa fa-asterisk" aria-hidden="true"></i> Please read through the above content carefully before giving your response.
+        </div>
+        <div class="sign-form">
+          
+        </div>
+        <div class="sign-action">
+          <button class="btn btn-primary btn-font" ng-if="c.disabled" style="background-color: #eeeeee; border: 1px solid #eeeeee; opacity: 1; color: #ccc;" ng-disabled="c.disabled"> Consent </button>
+          <button type="submit" id="toConsentBtn" ng-click="c.toConsent()" class="btn btn-primary btn-font" ng-if="!c.disabled">
+            Consent
+          </button>
+          <button type="submit" id="cancelBtn" ng-click="c.cancelForm()" class="btn btn-primary btn-font" style="margin-left: 15px;" >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="consent-modal" class="modal fade" data-keyborad="false" data-backdrop="static">
+  <div class="modal-dialog modal-lg" style="width:500px;">
+    <div class="modal-content" style="min-height:400px; overflow-y:hidden; overflow-x: hidden;">
+      <div class="modal-header" style="background: #00506f; color: white;">
+        <h4  class="modal-title">Signing</h4>
+      </div>      
+      <div class="modal-body" style="height:270px;">
+        <div>
+           By filling the information below, I am electronically consenting this agreement. I agree to the terms of this agreement, effective as of today's date.
+        </div>
+        <div class="sign-form">
+          <div class="sign-row">
+            <div class="sign-col col-md-12">
+              <label>
+                Date
+              </label>
+              <input name="sign_date" id="sign_date" class="form-control ng-pristine ng-valid ng-scope ng-empty ng-valid-maxlength ng-touched" maxlength="100" ng-model="c.sign_date" type="string" title="" style="" ng-disabled="true">
+            </div> 
+          </div>
+          <div class="sign-row">
+            <div class="sign-col col-md-12">
+              <label>
+                Signer's Name
+              </label>
+              <input name="sign_user_name" id="sign_user_name" class="form-control ng-pristine ng-valid ng-scope ng-empty ng-valid-maxlength ng-touched" maxlength="100" ng-model="c.sign_user_name" type="string" title="" style="" ng-disabled="true">
+            </div>
+          </div>
+          <div class="sign-row">
+            <div class="sign-col col-md-12">
+              <label>
+                Password
+              </label>
+              <input name="signature_password" id="signature_password" class="form-control ng-pristine ng-valid ng-scope ng-empty ng-valid-maxlength ng-touched" maxlength="100" ng-model="c.data.signature_password" type="password" title="" style="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+          <button type="submit" id="consentBtn" ng-click="c.consentForm()" class="btn btn-primary btn-font">
+            Sign
+          </button>
+          <button type="submit" id="cancelDialogBtn" ng-click="c.cancelConsent()" class="btn btn-primary btn-font" style="margin-left: 15px;" >
+            Cancel
+          </button>
+        </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

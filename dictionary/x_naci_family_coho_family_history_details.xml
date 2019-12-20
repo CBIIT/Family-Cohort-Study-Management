@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Family History Details" max_length="40" name="x_naci_family_coho_family_history_details" type="collection">
+    <element audit="true" label="Family History Details" max_length="40" name="x_naci_family_coho_family_history_details" type="collection">
+        <element label="Biological Father" max_length="32" name="biological_father" reference="x_naci_family_coho_family_history_details" type="reference"/>
+        <element label="Biological Mother" max_length="32" name="biological_mother" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="Cause" max_length="200" name="cause_of_death" type="string"/>
         <element label="City" max_length="50" name="city" type="string"/>
         <element label="City" max_length="50" name="city_of_death" type="string"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
         <element label="County" max_length="50" name="county_of_death" type="string"/>
+        <element label="Date Consent Requested" max_length="40" name="date_consent_requested" type="glide_date"/>
         <element label="Date of Birth" max_length="20" name="date_of_birth_month_day_year" type="glide_date"/>
         <element label="Date of Death" max_length="20" name="date_of_death" type="glide_date"/>
         <element label="City dea" max_length="50" name="death_hospital_city" type="string"/>
         <element label="County" max_length="100" name="death_hospital_county" type="string"/>
         <element label="State dea" max_length="100" name="death_hospital_state" type="string"/>
         <element label="Physician" max_length="100" name="death_physician" type="string"/>
+        <element choice="1" default="waiting_for_eligibility" label="Eligibility Status" max_length="40" name="eligibility_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Waiting for Eligibility" sequence="10" value="waiting_for_eligibility"/>
+                <element inactive_on_update="false" label="Eligible" sequence="20" value="eligible"/>
+                <element inactive_on_update="false" label="Not Eligible" sequence="30" value="not_eligible"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Email Address" max_length="40" name="email_address" type="string"/>
+        <element choice="1" choice_field="filling_for_someone" default="awaiting_eligibility_review" label="Enrollment Status" max_length="40" name="enrollment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New Screener Received" sequence="10" value="new_screener_received"/>
+                <element inactive_on_update="false" label="More Information Required" sequence="20" value="more_info_required"/>
+                <element inactive_on_update="false" label="Awaiting Eligibility Review" sequence="30" value="awaiting_eligibility_review"/>
+                <element inactive_on_update="false" label="Study Panel Review" sequence="40" value="study_panel_review"/>
+                <element inactive_on_update="false" label="Awaiting Consent" sequence="50" value="awaiting_consent"/>
+                <element inactive_on_update="false" label="Awaiting PI Signature" sequence="60" value="awaiting_pi_signature"/>
+                <element inactive_on_update="false" label="Awaiting Enrollment Forms" sequence="70" value="awaiting_enrollment_forms"/>
+                <element inactive_on_update="false" label="Enrollment Packet Received" sequence="80" value="enrollment_packet_received"/>
+                <element inactive_on_update="false" label="Enrollment Packet Complete" sequence="90" value="enrollment_complete"/>
+                <element inactive_on_update="false" label="Marked Ineligible" sequence="100" value="mark_ineligible"/>
+                <element inactive_on_update="false" label="Direct Decline" sequence="110" value="declined"/>
+            </choice>
+        </element>
+        <element label="Family" max_length="32" name="family" reference="x_naci_family_coho_family_id" type="reference"/>
         <element label="Family Historic Qustion ID" max_length="50" name="family_historic_qustion_id" reference="x_naci_family_coho_family_history_question" type="reference"/>
         <element label="Family ID" max_length="50" name="family_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Family Member ID" max_length="40" name="family_member_id" type="string"/>
         <element label="First Name" max_length="100" name="first_name" type="string"/>
+        <element label="All Required Forms Completed" max_length="40" name="forms_completed" type="boolean"/>
+        <element label="Subject ID" max_length="40" name="full_family_id" read_only="true" type="string"/>
+        <element label="Full Family ID (no dashes)" max_length="40" name="full_family_id_no_dashes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Generation ID" max_length="40" name="generation_id" type="string"/>
         <element choice="3" default="No" label="Did this person ever have cancer, a tumor or a growth?" max_length="20" name="has_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="10" value="Yes"/>
@@ -23,9 +56,17 @@
         <element label="Hospital where diagnosed" max_length="100" name="hospital_diagnosed" type="string"/>
         <element label="City" max_length="50" name="hospital_diagnosed_city" type="string"/>
         <element label="State" max_length="50" name="hospital_diagnosed_state" type="string"/>
+        <element label="IIQ" max_length="32" name="individual_information" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Last Name" max_length="100" name="last_name" type="string"/>
         <element label="Maiden Name" max_length="50" name="maiden_name" type="string"/>
         <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
+        <element choice="3" default="no" label="Has the person been contacted to obtain more info" max_length="40" name="more_info_requested" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="10" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="yes"/>
+            </choice>
+        </element>
+        <element display="true" label="Name" max_length="80" name="name" read_only="true" type="string"/>
         <element label="Name of Hospital" max_length="100" name="name_of_hospital" type="string"/>
         <element label="How many children did this person have?" max_length="10" name="number_children" type="string"/>
         <element label="Other Relationship" max_length="100" name="other_relationship" type="string"/>
@@ -42,21 +83,40 @@
             </choice>
         </element>
         <element label="Phone" max_length="20" name="phone" type="string"/>
+        <element label="Proband Screener" max_length="32" name="proband_screener" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element choice="1" label="Relationship to You" max_length="100" name="relationship_to_you" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Mother" sequence="10" value="Mother"/>
-                <element inactive_on_update="false" label="Father" sequence="20" value="Father"/>
-                <element inactive_on_update="false" label="Sister" sequence="30" value="Sister"/>
-                <element inactive_on_update="false" label="Brother" sequence="40" value="Brother"/>
-                <element inactive_on_update="false" label="Half-Brother (same mother)" sequence="50" value="Half-Brother (same mother)"/>
-                <element inactive_on_update="false" label="Half-Brother (same father)" sequence="60" value="Half-Brother (same father)"/>
-                <element inactive_on_update="false" label="Half-Sister (same mother)" sequence="70" value="Half-Sister (same mother)"/>
-                <element inactive_on_update="false" label="Half-Sister (same father)" sequence="80" value="Half-Sister (same father)"/>
-                <element inactive_on_update="false" label="Mother's Mother" sequence="90" value="Mother's Mother"/>
-                <element inactive_on_update="false" label="Mother's Father" sequence="100" value="Mother's Father"/>
-                <element inactive_on_update="false" label="Father's Mother" sequence="110" value="Father's Mother"/>
-                <element inactive_on_update="false" label="Father's Father" sequence="120" value="Father's Father"/>
-                <element inactive_on_update="false" label="Other" sequence="130" value="Other"/>
+                <element inactive_on_update="false" label="Proband" sequence="5" value="proband"/>
+                <element inactive_on_update="false" label="Mother" sequence="10" value="mother"/>
+                <element inactive_on_update="false" label="Father" sequence="20" value="father"/>
+                <element inactive_on_update="false" label="Sister" sequence="30" value="sister"/>
+                <element inactive_on_update="false" label="Brother" sequence="40" value="brother"/>
+                <element inactive_on_update="false" label="Half-Brother (same mother)" sequence="50" value="half_brother_same_mother"/>
+                <element inactive_on_update="false" label="Half-Brother (same father)" sequence="60" value="half_brother_same_father"/>
+                <element inactive_on_update="false" label="Half-Sister (same mother)" sequence="70" value="half_sister_same_mother"/>
+                <element inactive_on_update="false" label="Half-Sister (same father)" sequence="80" value="half_sister_same_father"/>
+                <element inactive_on_update="false" label="Mother's Mother" sequence="90" value="mothers_mother"/>
+                <element inactive_on_update="false" label="Mother's Father" sequence="100" value="mothers_father"/>
+                <element inactive_on_update="false" label="Father's Mother" sequence="110" value="fathers_mother"/>
+                <element inactive_on_update="false" label="Father's Father" sequence="120" value="fathers_father"/>
+                <element inactive_on_update="false" label="Child" sequence="125" value="child"/>
+                <element inactive_on_update="false" label="Grandchild" sequence="130" value="grandchild"/>
+                <element inactive_on_update="false" label="Maternal Uncle" sequence="135" value="maternal_uncle"/>
+                <element inactive_on_update="false" label="Paternal Uncle" sequence="140" value="paternal_uncle"/>
+                <element inactive_on_update="false" label="Maternal Aunt" sequence="145" value="maternal_aunt"/>
+                <element inactive_on_update="false" label="Paternal Aunt" sequence="150" value="paternal_aunt"/>
+                <element inactive_on_update="false" label="Cousin" sequence="155" value="cousin"/>
+                <element inactive_on_update="false" label="Niece" sequence="160" value="niece"/>
+                <element inactive_on_update="false" label="Nephew" sequence="165" value="nephew"/>
+                <element inactive_on_update="false" label="Great Nephew" sequence="170" value="great_nephew"/>
+                <element inactive_on_update="false" label="Great Niece" sequence="170" value="great_niece"/>
+                <element inactive_on_update="false" label="Sister In Law" sequence="175" value="sister_in_law"/>
+                <element inactive_on_update="false" label="Brother In Law" sequence="180" value="brother_in_law"/>
+                <element inactive_on_update="false" label="Step Mother" sequence="185" value="step_mother"/>
+                <element inactive_on_update="false" label="Great Aunt" sequence="190" value="great_aunt"/>
+                <element inactive_on_update="false" label="Step Father" sequence="190" value="step_father"/>
+                <element inactive_on_update="false" label="Great Uncle" sequence="195" value="great_uncle"/>
+                <element inactive_on_update="false" label="Other" sequence="1000" value="other"/>
             </choice>
         </element>
         <element label="State" max_length="50" name="state" type="string"/>
@@ -64,5 +124,20 @@
         <element label="Street Address" max_length="200" name="street_address" type="string"/>
         <element label="Cancer Type or site" max_length="100" name="type_or_site" type="string"/>
         <element label="Zipcode" max_length="20" name="zipcode" type="string"/>
+        <index name="index">
+            <element name="individual_information"/>
+        </index>
+        <index name="index2">
+            <element name="family"/>
+        </index>
+        <index name="index3">
+            <element name="proband_screener"/>
+        </index>
+        <index name="index4">
+            <element name="biological_mother"/>
+        </index>
+        <index name="index5">
+            <element name="biological_father"/>
+        </index>
     </element>
 </database>

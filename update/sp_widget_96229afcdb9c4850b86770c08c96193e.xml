@@ -4,7 +4,7 @@
         <client_script><![CDATA[function($scope, $location,$http,spUtil, spModal, $timeout) {
   /* widget controller */
   var c = this;
-	
+	c.id = '';
 	$scope.pagination = [5, 10, 15, 20, 25];
 	$scope.sortKey = null;
 	$scope.reverse = false;	
@@ -32,12 +32,34 @@
 									 {label: "Dates of Participation", name:"dates_of_participation"}];
 
   c.openForm = function(){
+		$('#saveParticipate').show();
+		$('#updateParticipate').hide();
 		$('#addAnotherDiv').modal('show');
 		spUtil.get('widget-form', {
 			"sys_id": "-1",
 			"table": "x_naci_family_coho_intake_participate_another_study",
 			"view": "Another"
 		}).then(function(widget) {
+			widget.data.hideRelatedLists = true;
+			c.data.widget_add = widget;
+		})
+	}
+	
+	c.cancelForm = function(){
+		$('#addAnotherDiv').modal('hide');
+	};
+
+	c.viewCancer = function(id){
+		c.id = id;
+		$('#saveParticipate').hide();
+		$('#updateParticipate').show();
+		$('#addAnotherDiv').modal('show');
+		spUtil.get('widget-form', {
+			"sys_id": id,
+			"table": "x_naci_family_coho_intake_participate_another_study",
+			"view": "Another"
+		}).then(function(widget) {
+			widget.data.hideRelatedLists = true;
 			c.data.widget_add = widget;
 		})
 	}
@@ -63,6 +85,30 @@
 		})
 		$scope.server.get({
 			action: 'add',
+			record: record
+		}).then(function(){
+			 c.cancelForm();
+		});
+	}
+	
+	c.updateForm = function(){
+		console.log(c.g_form);
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			var f = c.g_form.getField(field);
+			if(f.type == 'glide_date'){
+				var dt_str = c.g_form.getValue(field);
+				var d = new Date(dt_str);
+				record[field] = d;
+			}
+			else{
+				record[field] = c.g_form.getValue(field);
+			}			
+		})
+		$scope.server.get({
+			action: 'update',
+			sys_id: c.id,
 			record: record
 		}).then(function(){
 			 c.cancelForm();
@@ -103,8 +149,8 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Participate Another Org</name>
         <option_schema/>
-        <public>true</public>
-        <roles/>
+        <public>false</public>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
@@ -122,6 +168,14 @@
 			}
 			gr1.intake_form_id = data.id;
 			gr1.insert();
+		}else if(input.action == 'update'){
+			var record1 = input.record;
+			var gr3 = new GlideRecord('x_naci_family_coho_intake_participate_another_study');
+			gr3.get(input.sys_id);
+			for (var key1 in record1) {
+				gr3.setValue(key1, record1[key1]);
+			}
+			gr3.updateMultiple();			
 		}
 		else if(input.action == 'delete'){
 			var id = input.id;
@@ -133,7 +187,7 @@
 	
 	var gr = new GlideRecord('x_naci_family_coho_intake_participate_another_study');
 	gr.addQuery('intake_form_id', data.id);
-	gr.orderByDesc('sys_created_on');
+	gr.orderBy('sys_created_on');
 	gr.query();
 	data.records = [];
 	while(gr.next()){
@@ -153,15 +207,15 @@
         <sys_created_on>2019-10-02 15:48:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>96229afcdb9c4850b86770c08c96193e</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>82</sys_mod_count>
         <sys_name>FCSMS Participate Another Org</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_96229afcdb9c4850b86770c08c96193e</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 20:46:14</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-20 19:22:57</sys_updated_on>
         <template><![CDATA[<div id="another" ng-show='show_another' style="padding: 10px 10px; border-style: ridge;">
 
   
@@ -170,46 +224,51 @@
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
   </div>
-  <div class="d-flex">
-    <div class="col-md-6 d-flex">
+  <div class="row">
+    <div class="col-md-6">
       <label class="pr-3 pt-2">Search:</label> 
       <input type="text" 
-             class="form-control" 
+             class="form-control d-inline-block" 
              placeholder="{{c.data.label}} Records" 
              aria-describedby="search record"
              ng-model="search" 
              style="width: 300px;"/>  
     </div>
-    <div class="col-md-6">
-      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 30px;position: absolute;right: 0px;">
+    <div class="col-md-6 text-right">
+      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 30px;">
         New Participation Information
       </button>
     </div>
   </div>
-  <table class="table table-bordered table-hover mt-3">
-    <thead class="bg-primary">
-      <tr class="btn-font">
-        <th ng-repeat="col in c.data.columns"
-            ng-click="sort(col.name)">
-          {{ col.label }}
-          <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-        </th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
-        <td ng-repeat="col in c.data.columns">
-          {{ record[col.name] || 'N/A' }}  
-        </td>
-        <td>
-          <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+      <thead class="bg-primary">
+        <tr class="btn-font">
+          <th ng-repeat="col in c.data.columns"
+              ng-click="sort(col.name)">
+            {{ col.label }}
+            <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
+          <td ng-repeat="col in c.data.columns">
+            {{ record[col.name] || 'N/A' }}  
+          </td>
+          <td>
+            <button class="btn btn-primary btn-font" ng-click="c.viewCancer(record.sys_id)" style="padding: 5px 30px;">
+              View
+            </button>          
+            <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <div style="display:flex;">
     <span style="margin-right:auto">Total: {{ c.data.records.length }}</span>
     <div style="margin-left:auto">
@@ -241,9 +300,12 @@
         </div>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block; margin-bottom:15px;">
-        <button type="button" class="table-button btn btn-primary btn-font" ng-click="c.saveForm()">
+        <button type="button" id="saveParticipate" class="table-button btn btn-primary btn-font" ng-click="c.saveForm()">
             Save
           </button>  
+        <button type="button" id="updateParticipate" class="table-button btn btn-primary btn-font" ng-click="c.updateForm()">
+            Update
+          </button>          
         <button type="button" class="table-button btn btn-danger btn-font" ng-click="c.cancelForm()">
             Cancel
           </button>

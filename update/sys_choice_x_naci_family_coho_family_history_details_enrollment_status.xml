@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="enrollment_status" table="x_naci_family_coho_family_history_details" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New Screener Received</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:31:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b9746801db990c10b86770c08c96197b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:31:14</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>new_screener_received</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>More Information Required</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:31:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1ea42801db990c10b86770c08c9619d6</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-04 17:35:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>more_info_required</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting Eligibility Review</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:31:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>efb46081db990c10b86770c08c961975</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:31:58</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_eligibility_review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Study Panel Review</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>40</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:32:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ddd46c41db990c10b86770c08c961902</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:32:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>study_panel_review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting Consent</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>50</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:32:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>39e46881db990c10b86770c08c961943</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:32:25</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_consent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting PI Signature</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>60</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:32:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>49f4ac41db990c10b86770c08c96199f</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:33:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_pi_signature</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting Enrollment Forms</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>70</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:33:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ac05e081db990c10b86770c08c961946</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:33:32</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_enrollment_forms</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enrollment Packet Received</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>80</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:33:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c1352081db990c10b86770c08c961984</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:33:58</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>enrollment_packet_received</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enrollment Packet Complete</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>90</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:34:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>764520c1db990c10b86770c08c9619a6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:34:14</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>enrollment_complete</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Marked Ineligible</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>100</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:34:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>036520c1db990c10b86770c08c96199e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:34:58</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>mark_ineligible</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Direct Decline</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>110</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:34:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1755a0c1db990c10b86770c08c961934</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-04 17:28:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>declined</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>enrollment_status</element>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-21 19:31:03</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>5ea4e081db990c10b86770c08c96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>enrollment_status</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_family_history_details_enrollment_status</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-21 19:31:03</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

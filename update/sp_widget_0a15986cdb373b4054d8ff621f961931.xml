@@ -3,10 +3,84 @@
         <category>custom</category>
         <client_script><![CDATA[function($scope,spModal, $rootScope, $location) {
   var c = this;
+	var s = $location.search();
+	
+	c.intake_sys_id = 'f46149a8db940850b86770c08c9619ba';
+	c.iiq_sys_id = 'eea231e4db980850b86770c08c961927';
+	
+	c.view_model = "proband";
   
+	c.openLFS = function(){
+		
+	};
+	
+	c.openPPB = function(){
+		
+	};
+	
+	c.openIBMFS = function(){
+		
+	};
+	
+	c.openFM = function(){
+		
+	};
+	
+	c.openRAS = function(){
+		
+	};
+	
+	c.switch2ProbandView = function(){
+		c.view_model = "proband";
+	}
+	
+	c.switch2FamilyMemberView = function(){
+		c.view_model = "family_member";
+	}
+	
+	c.reviewIntakeForm = function(sys_id){
+		s.id = 'fcsms_intake_form';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
+	}
+	
+	c.reviewStudyConsent = function(sys_id){
+		s.id = 'fcsms_consent';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
+	}
+	
+	c.reviewStudyMRRConsent = function(sys_id){
+		s.id = 'fcsms_mrr_consent';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
+	}
+	
+	c.reviewFHQ = function(sys_id){
+		s.id = 'fcsms_fhq';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
+	}
+	
+	c.reviewIIQ = function(sys_id){
+		s.id = 'fcsms_iiq';
+		s.sys_id = sys_id;
+		$location.search(s).replace();
+	}
+	
+
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.image-inactive{
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.page-title a,span{
+  font-size: 18px;
+}
+.page-title a.active{
+  text-decoration: underline;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -19,15 +93,46 @@
         <name>FCSMS Home</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <roles>snc_external</roles>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.username = gs.getUserDisplayName();
+	
+	data.records = [];
+	
+	var tmp = {};
+	tmp.first_name = 'James';
+	tmp.last_name = 'Smith';
+	tmp.sys_id = 'f46149a8db940850b86770c08c9619ba';
+	tmp.fhq = 1;
+	tmp.iiq = 1;
+	tmp.iiq_sys_id = '8d0331e4db980850b86770c08c96193b';
+	data.records.push(tmp);
+	tmp = {};
+	tmp.first_name = 'John';
+	tmp.last_name = 'Smith';
+	tmp.sys_id = '3b218d68db940850b86770c08c9619f2';
+	tmp.fhq = 0;
+	tmp.iiq = 1;
+	tmp.iiq_sys_id = '97901fbfdb684c1054d8ff621f9619aa';
+	data.records.push(tmp);
+	tmp = {};
+	tmp.first_name = 'Jack';
+	tmp.last_name = 'Smith';
+	tmp.sys_id = 'd5aa4963dbb0041054d8ff621f9619b2';
+	tmp.fhq = 1;
+	tmp.iiq = 0;
+	tmp.iiq_sys_id = 'ad5c782fdb30041054d8ff621f961929';
+	data.records.push(tmp);
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-06 15:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a15986cdb373b4054d8ff621f961931</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>251</sys_mod_count>
         <sys_name>FCSMS Home</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -35,73 +140,276 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0a15986cdb373b4054d8ff621f961931</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 21:34:07</sys_updated_on>
+        <sys_updated_on>2019-11-26 18:26:59</sys_updated_on>
         <template><![CDATA[<div class="main-content">
-	<div class="row">
-    <div class="slot-video">
-      
-    </div>
-    <div class="slot-video">
-      
-    </div>
-    <div class="slot-image">
-      <img src="/sites/g/files/xnrzdm236/files/styles/cgov_featured/public/cgov_image/media_image/2019-10/Cook_Michael-2016_610x762-WEB.jpg?h=09f6defe&amp;itok=nzfdwsbL" width="425" height="318" alt="Dr. Michael Cook">
+  <div class="row page-title">
+    Family Cohort Studies for {{c.data.username}} 
+    <div style="float:right;margin-right: -40px;">
+     <a style="float: left; " href="javascript:void(0);" ng-click="c.switch2ProbandView()" ng-class="c.view_model == 'proband' ? 'active' : ''">Proband View</a> <span style="float: left;">&nbsp;|&nbsp;</span> <a style="float: left; " href="javascript:void(0);" ng-click="c.switch2FamilyMemberView()" ng-class="c.view_model == 'family_member' ? 'active' : ''">Family Member View</a>  
     </div>
   </div>
-  <div class="row">
-    <div class="triangle-down">
-		</div>
-    <div class="fcsms-info-card">
-      <h2>
-        Clinical Genetics Branch
-      </h2>
-      <h3>
-        Saving lives and improving the quality of life for individuals at increased genetic risk of cancer.
-      </h3>
-      <p>
-        Conduct clinical, genomic, epidemiological and behavioral research and translate that knowledge into prevention, screening and management of cancer in families and high-risk populations.
-      </p>
+  <div class="row nav-tabs">
+    <div class="tab active" ng-click="c.openLFS();">
+      Li-Fraumeni Syndrome
+    </div>
+    <div class="tab" ng-click="c.openPPB();">
+      PPB
+    </div>
+    <div class="tab" ng-click="c.openIBMFS();">
+      IBMFS
+    </div>
+    <div class="tab" ng-click="c.openFM();">
+      Familial Melanoma
+    </div>
+    <div class="tab" ng-click="c.openRAS();">
+      Rasopothies
     </div>
   </div>
-  <div class="row">
-    <div class="columns-title">
-      Current Family Cohort Studies
-    </div>
-    <div class="flex-columns">
-      <div class="slot-item">
-        Li-Fraumeni Syndrome
-        <div class="feature-card">
-          <a href="/news-events/news/2019/cook-tenure">
-            <div class="image-hover">
-              <img src="/sites/g/files/xnrzdm236/files/styles/cgov_featured/public/cgov_image/media_image/2019-10/Cook_Michael-2016_610x762-WEB.jpg?h=09f6defe&amp;itok=nzfdwsbL" width="425" height="318" alt="Dr. Michael Cook">
+	<div class="row content-body">
+    <div class="content-block">
+      <div class="enrollment-info">
+        <div class="sub-title">
+          Forms
+        </div>
+        <div class="enrollment-content" ng-if="c.view_model == 'proband'">
+          <div class="form-slot">
+            <h5>
+              Intake Form
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewIntakeForm(c.intake_sys_id)">
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-Intake.jpg" width="203"/>
+                </div>
+              </a>
             </div>
-            <h3>Cook Awarded Scientific Tenure by the NIH</h3>
-            <p>Dr. Michael B. Cook was awarded scientific tenure by the NIH and promoted to senior investigator in the Metabolic Epidemiology Branch in October 2019.</p>
-          </a>
+            <!--
+            <div class="status-card">
+              <div class="status-point checked">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+              <div class="status-desc">
+              	Step 1
+              </div>
+            </div>
+						-->
+          </div>
+          <div class="form-slot">
+            <h5>
+              Consent
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewStudyConsent(c.intake_sys_id)">
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-Consent.jpg" width="203"/>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="status-card">
+              <div class="status-point checked">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+              <div class="status-desc">
+              	Step 2
+              </div>
+            </div>
+						-->
+          </div>
+          <div class="form-slot">
+            <h5>
+              MRR Consent
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewStudyMRRConsent(c.intake_sys_id)" >
+                <div class="image-hover">
+                    <img src="FCSMS_HomePage-MRR.jpg" width="203"/>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="status-card">
+              <div class="status-point">
+                3
+              </div>
+              <div class="status-desc">
+              	Step 3
+              </div>
+            </div>
+						-->
+          </div>
+          <div class="form-slot">
+            <h5>
+              Family History Questionnaire
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewFHQ(c.intake_sys_id)" >
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-FHQ.jpg" width="203"/>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="status-card">
+              <div class="status-point">
+                4
+              </div>
+              <div class="status-desc">
+              	Step 4
+              </div>
+            </div>
+						-->
+          </div>
+          <div class="form-slot">
+            <h5>
+              Individual Information Questionnaire
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewIIQ(c.iiq_sys_id)" >
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-IIQ.jpg" width="203"/>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="status-card">
+              <div class="status-point">
+                5
+              </div>
+              <div class="status-desc">
+              	Step 5
+              </div>
+            </div>
+						-->
+          </div>
+          <!--
+          <div class="status-lines">
+            <div class="status-line active">
+              
+            </div>
+            <div class="status-line active">
+              
+            </div>
+            <div class="status-line active">
+              
+            </div>
+            <div class="status-line active">
+              
+            </div>
+          </div>
+					-->
+        </div>
+        
+        <div class="enrollment-content" ng-if="c.view_model == 'family_member'">
+          <div class="form-slot">
+            <h5>
+              Consent
+            </h5>
+            <div class="form-card">
+              <a href="javascript:void(0);" ng-click="c.reviewStudyConsent(c.intake_sys_id)">
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-Consent.jpg" width="203"/>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="status-card">
+              <div class="status-point">
+                1
+              </div>
+              <div class="status-desc">
+              	Step 1
+              </div>
+            </div>
+						-->
+          </div>
+          <!--
+          <div class="form-slot">
+            <h5>
+              MRR Consent
+            </h5>
+            <div class="form-card">
+              <div class="image-inactive">
+                <img src="FCSMS_HomePage-MRR.jpg" width="203" style="filter: grayscale(1);"/>
+              </div>
+            </div>
+            
+            <div class="status-card">
+              <div class="status-point inactive">
+                2
+              </div>
+              <div class="status-desc">
+              	Step 2
+              </div>
+            </div>
+          </div>
+          <div class="form-slot">
+            <h5>
+              Individual Information Questionnaire
+            </h5>
+            <div class="form-card">
+              <div class="image-inactive">
+                <img src="FCSMS-HomePage-IIQ.jpg" width="203" style="filter: grayscale(1);"/>
+              </div>
+            </div>
+            <div class="status-card">
+              <div class="status-point inactive">
+                3
+              </div>
+              <div class="status-desc">
+              	Step 3
+              </div>
+            </div>
+          </div>
+          <div class="status-lines">
+            <div class="status-line">
+              
+            </div>
+            <div class="status-line">
+              
+            </div>
+          </div>
+					-->
         </div>
       </div>
-      <div class="slot-item">
-        PPB
-      </div>
-      <div class="slot-item">
-        IBMFS
-      </div>
-      <div class="slot-item">
-        Familial Melanoma
-      </div>
-      <div class="slot-item">
-        Rasopothies
-      </div>
-      <div class="slot-item">
-        TBD
+      <div class="proxy-info" ng-if="c.view_model == 'proband'">
+				<div class="sub-title">
+          Proxies
+        </div>
+        <div class="proxy-content">
+            <div class="proxy-list-header">
+              <div class="col-md-3">
+                First Name
+              </div>
+              <div class="col-md-3">
+                Last Name
+              </div>
+              <div class="col-md-3">
+                FHQ
+              </div>
+              <div class="col-md-3">
+                IIQ
+              </div>
+            </div>
+            <div id="proxy_{{record.enrollment_id}}" class="proxy-row" ng-repeat="record in c.data.records">
+                <div class="col-md-3">
+                  {{ record['first_name'] || 'N/A' }}  
+                </div>
+                <div class="col-md-3">
+                  {{ record['last_name'] || 'N/A' }}  
+                </div>
+                <div class="col-md-3">
+                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['fhq'] == '1'">View</a>
+                  </div>
+                <div class="col-md-3">
+                    <a ng-click="c.reviewIIQ(record.iiq_sys_id)" ng-show="record['iiq'] == '1'">View</a>  
+                </div>
+            </div>
+  
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-<div>
-  <a href="/fcsms?id=fcsms_home_page">FCSMS Enrollment Board</a>
 </div>
 ]]></template>
     </sp_widget>

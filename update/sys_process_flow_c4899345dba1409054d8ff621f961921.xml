@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_naci_family_coho_family_history_details">enrollment_status=awaiting_eligibility_review^EQ<item endquery="false" field="enrollment_status" goto="false" newquery="false" operator="=" or="false" value="awaiting_eligibility_review"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>Eligibility Review</label>
+        <name>Eligibility Review</name>
+        <order>300</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-04 18:56:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c4899345dba1409054d8ff621f961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Eligibility Review</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_process_flow_c4899345dba1409054d8ff621f961921</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-04 18:56:49</sys_updated_on>
+        <table>x_naci_family_coho_family_history_details</table>
+    </sys_process_flow>
+</record_update>

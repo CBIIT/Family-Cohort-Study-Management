@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
     <sp_header_footer action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function() {
+        <client_script><![CDATA[function($scope, $location, $http) {
   /* widget controller */
-	  var c = this;
-	var topBtn = document.getElementById("topBtn");
+	var c = this;
+	var s = $location.search();
+	
+	//var topBtn = document.getElementById("topBtn");
+	var topDiv = document.getElementById("topDiv");
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function() {
 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			topBtn.style.display = "block";
+			topDiv.style.display = "block";
 		} else {
-			topBtn.style.display = "none";
+			topDiv.style.display = "none";
 		}
 	};
+	
+	c.oktaLogin = function(){
+		//testing Okta integration
+		$location.url("/login_with_sso.do?glide_sso_id=33bf7f51db933b00b86770c08c961994");
+	}
+	
+	c.gotoUserBoard = function(){
+		$location.url("/fcsms?id=fcsms_patient_home_page");
+	};
+	
+	c.openUserLogin = function(){
+		$location.url("/fcsms?id=fcsms_patient_home_page");
+	};
+	
+	c.toRegister = function(){
+		$location.url("/fcsms?id=fcsms_registration_page");
+	};
+	
+	c.openUserSettings = function(){
+		
+	};
+	
+	c.logout = function(){
+		//window.location.href="/logout.do?sysparm_url=/fcsms";
+		
+		//window.location.href = "https://iam-dev.cancer.gov/app/servicenow_ud/exkmz9cdw2W1IN1Sm0h7/slo/saml";
+		
+		$http({
+			url: '/api/x_naci_family_coho/fcsms_apis/logoutOKTAUser',
+			method : "POST",
+			beforeSend: function(xhr){ xhr.setRequestHeader('X-UserToken', c.data.session_id); },
+			headers: {'Content-Type': 'application/json'},
+			data: JSON.stringify({}),
+			processData: false
+		}).then(function(res){
+			var result = res.data.result;
+			console.log(result);
+			//redirect to landing page
+			s.id = null;
+			s.sys_id = null;
+			$location.search(s).replace();
+		},function(error){
+			console.log(error);
+		});
+	}
+	c.testLogout = function(){
+		$location.url("/logout.do?sysparm_goto_url=logout_redirect.do?sysparm_url=/fcsms");
+	}
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -34,7 +85,16 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-	//gs.getSession().putClientData("login_redirect_url",'/fcsms');
+	gs.getSession().putClientData("login_redirect_url",'/fcsms?id=fcsms_patient_home_page');
+	data.user = {};
+	data.user.name = gs.getUserDisplayName();
+	data.user.uid = gs.getUserID();
+	if(data.user.name.trim() == 'Guest'){
+		data.user.logged_in = false;
+	}
+	else{
+		data.user.logged_in = true;
+	}
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_header_footer</sys_class_name>
@@ -42,7 +102,7 @@
         <sys_created_on>2019-09-06 14:28:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d768ca8dbb33b4054d8ff621f961959</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>144</sys_mod_count>
         <sys_name>fcsms header</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -50,37 +110,59 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_header_footer_3d768ca8dbb33b4054d8ff621f961959</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 20:37:42</sys_updated_on>
+        <sys_updated_on>2019-12-05 16:12:21</sys_updated_on>
         <template><![CDATA[<div class="fcsms-header">
   <div class="fcsms-logo">
     <div class="logo">
-      <img src="https://dceg.cancer.gov/profiles/custom/cgov_site/themes/custom/cgov/static/images/design-elements/logos/DCEG-logo.svg" alt="Division of Epidemiology &amp; Genetics" width="756px">
+      	<img width="756px" alt="Division of Epidemiology &amp; Genetics" src="https://dceg.cancer.gov/profiles/custom/cgov_site/themes/custom/cgov/static/images/design-elements/logos/DCEG-logo.svg">
     </div>
   </div>
   <div class="fcsms-nav">
     <div class="fcsms-nav-items">
-      <ul>
-        <li><a href="#">Home</a></li>
+      <ul id="portal-menu">
+        <li><a href="/fcsms">Home</a></li>
         <li><a href="#">About CGB</a></li>
         <li><a href="#">Our Studies</a></li>
         <li><a href="#">Our Research</a></li>
         <li><a href="#">Enroll</a></li>
         <li><a href="#">FAQ/Help</a></li>
       </ul>
-      <div class="login-block">
-        <button class="login-btn">
+      
+      <div uib-dropdown class="logged-in-block" ng-show="c.data.user.logged_in" ng-click="c.openUserSettings()" uib-dropdown-toggle>
+        <i class="fa fa-user user-icon" aria-hidden="true"></i>
+        <button class="user-info">
+           {{c.data.user.name}}
+        </button>
+        <i class="fa fa-chevron-down user-profile-dropdown" aria-hidden="true"></i>
+        <ul class="dropdown-menu-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li role="menuitem"><a ng-click="c.gotoUserBoard()" style="color:#428bca;">My Family Cohort Study</a></li>
+          <li class="divider"></li>
+          <li role="menuitem"><a ng-click="c.gotoUserBoard()" style="color:#428bca;">My Profile</a></li>
+          <li class="divider"></li>
+          <li role="menuitem"><a href="#" ng-click="c.testLogout()" class="userInfo-text">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="login-block" ng-show="!c.data.user.logged_in">
+        <a href="javascript: void(0)" class="signup-link" ng-click="c.toRegister()"> Register </a>
+        <button class="login-btn" ng-click="c.oktaLogin()">
           Login
         </button>
-      </div> 
+      </div>
     </div>
   </div>
 </div>
 
+<!--
+	<iframe id="logout_iframe" src="/logout.do" style="position: absolute;top: 0px;left: 0px;height: auto;border: 0px;"></iframe>
+-->
 
 
-<div>
+<div id="topDiv">
   <button class="topBtn" onClick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" id="topBtn" title="Go to top">
     <i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+  <p>
+    <b>Top</b>
+  </p>
 </div>
   ]]></template>
     </sp_header_footer>

@@ -231,7 +231,7 @@ div .panel-heading{
         <name>FCSMS FHQ Form</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
@@ -303,28 +303,29 @@ div .panel-heading{
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>308</sys_mod_count>
+        <sys_mod_count>310</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 20:18:05</sys_updated_on>
-        <template><![CDATA[<div id="table-form" class="container" style="width:80%;font-size: 22px;">
-  <div class="left-side-menu col-md-3">
-    <ul class="div_shadow">
-      <li class="menu_header"><b>Family History Questionaire</b></li>
-      <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadForm(1)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="#">Informant/Proband Information</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadForm(2)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i> <a href="#">Demographic Information</a></li>
-      <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadForm(3)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i> <a href="#">Family Historic Questionaire 1</a></li>
-      <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadForm(4)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i> <a href="#">Family Historic Questionaire 2</a></li>
-      <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadForm(5)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress5 == true, 'fa-circle-o': c.data.progress5 == false} " aria-hidden="true"></i> <a href="#">Family Member Information</a></li>
-      <li ng-class="{'active': c.show_view_index == 6}" ng-click="loadForm(6)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress6 == true, 'fa-circle-o': c.data.progress6 == false} " aria-hidden="true"></i> <a href="#">Final Information</a></li>
-    </ul>   
-  </div>
-  <div class="right-side-content col-md-9">
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-20 16:52:58</sys_updated_on>
+        <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 22px;">
+  <div class="row">
+    <div class="left-side-menu col-md-3">
+      <ul class="div_shadow">
+        <li class="menu_header"><b>Family History Questionaire</b></li>
+        <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadForm(1)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Informant/Proband Information</a></li>
+        <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadForm(2)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Demographic Information</a></li>
+        <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadForm(3)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Family Historic Questionaire 1</a></li>
+        <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadForm(4)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Family Historic Questionaire 2</a></li>
+        <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadForm(5)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress5 == true, 'fa-circle-o': c.data.progress5 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Family Member Information</a></li>
+        <li ng-class="{'active': c.show_view_index == 6}" ng-click="loadForm(6)"> <i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress6 == true, 'fa-circle-o': c.data.progress6 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Final Information</a></li>
+      </ul>   
+    </div>
+    <div class="right-side-content col-md-9">
     <div ng-show="c.show_view_index == 1" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_1">
@@ -423,6 +424,8 @@ div .panel-heading{
       </div>
     </div>
   </div>
+  </div>
+  
 </div>
 
 <div id="saving-data-modal" style="display: none">

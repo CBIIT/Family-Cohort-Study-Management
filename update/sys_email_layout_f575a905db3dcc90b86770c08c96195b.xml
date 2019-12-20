@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description/>
+        <layout><![CDATA[<p style="text-align: left;"></p>
+<table width="1537" height="17">
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="/sys_attachment.do?sys_id=e5e7ad85db3dcc90b86770c08c9619f0" /></td>
+<td>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Division of Cancer</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Epidemiology and Genetics</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 14pt; color: #0000ff;"><strong>Clinical Genetics Branch</strong></span></p>
+</td>
+<td>
+<p><span style="font-size: 10pt;">9609 Medical Center Dr. Suite # 6E454</span></p>
+<p><span style="font-size: 10pt;"> MSC 9772 Rockville</span></p>
+<p><span style="font-size: 10pt;">MD 20850 </span></p>
+<p><span style="font-size: 10pt;">Phone: 240-276-7241&nbsp; Fax: 240-276-7836</span></p>
+<p><span style="font-size: 10pt;">U.S. Department of</span></p>
+<p><span style="font-size: 10pt;">Health and Human Services</span></p>
+<p><span style="font-size: 10pt;">National Institutes of Health</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>${notification:body}</p>]]></layout>
+        <name>Famiyl Cohort Study</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-16 20:46:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f575a905db3dcc90b86770c08c96195b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Famiyl Cohort Study</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_email_layout_f575a905db3dcc90b86770c08c96195b</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-16 20:58:14</sys_updated_on>
+    </sys_email_layout>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="FCSMS Consent" max_length="40" name="x_naci_family_coho_fcsms_consent" type="collection">
+        <element choice="1" label="Be Contacted Genetic Changes" max_length="40" name="be_contacted_genetic_changes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="No"/>
+            </choice>
+        </element>
+        <element choice="1" label="Be Contacted Genetic Variants" max_length="40" name="be_contacted_genetic_variants" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="No"/>
+            </choice>
+        </element>
+        <element label="Consent By" max_length="32" name="consent_by" reference="sys_user" type="reference"/>
+        <element label="Consent Date" max_length="40" name="consent_date" type="glide_date"/>
+        <index name="index">
+            <element name="consent_by"/>
+        </index>
+    </element>
+</database>

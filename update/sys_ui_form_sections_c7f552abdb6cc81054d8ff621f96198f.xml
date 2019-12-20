@@ -208,6 +208,19 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-23 16:25:20</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>16</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-03 14:53:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ea489df4db25cc5054d8ff621f9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">c7f552abdb6cc81054d8ff621f96198f</sys_ui_form>
+            <sys_ui_section caption="History" display_value="History" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">2a489df4db25cc5054d8ff621f9619ec</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-03 14:53:49</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <roles/>

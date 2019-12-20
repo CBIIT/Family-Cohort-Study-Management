@@ -44,7 +44,7 @@
         <exp_report_attrs>true</exp_report_attrs>
         <field/>
         <field_list>number,caller_id,short_description,category,priority,state,opened_by,assignment_group,assigned_to</field_list>
-        <filter table="x_naci_family_coho_mock_up_intake">eligible_status=Not Eligible<item endquery="false" field="eligible_status" goto="false" newquery="false" operator="=" or="false" value="Not Eligible"/>
+        <filter table="x_naci_family_coho_family_history_details">eligibility_status=not_eligible<item endquery="false" field="eligibility_status" goto="false" newquery="false" operator="=" or="false" value="not_eligible"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
@@ -104,7 +104,7 @@
         <sys_created_on>2019-10-16 19:13:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01578bd5dbec0010b86770c08c961996</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Ineligible Patients</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -112,8 +112,8 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_report_01578bd5dbec0010b86770c08c961996</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 19:13:08</sys_updated_on>
-        <table>x_naci_family_coho_mock_up_intake</table>
+        <sys_updated_on>2019-11-26 17:48:54</sys_updated_on>
+        <table>x_naci_family_coho_family_history_details</table>
         <title>Ineligible Patients</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>

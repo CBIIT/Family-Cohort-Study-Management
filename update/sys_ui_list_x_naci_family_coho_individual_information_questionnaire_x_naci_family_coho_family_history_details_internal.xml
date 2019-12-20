@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_naci_family_coho_family_history_details" relationship="" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="2" view="internal">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>iiq_subject</element>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="x_naci_family_coho_family_history_details" relationship="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4bf51244dbc1c41054d8ff621f961902</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_id>03f51244dbc1c41054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>diagnosed_with_any_cancer</element>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="x_naci_family_coho_family_history_details" relationship="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4bf51244dbc1c41054d8ff621f961902</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_id>83f51244dbc1c41054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>have_biopsy</element>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="x_naci_family_coho_family_history_details" relationship="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4bf51244dbc1c41054d8ff621f961902</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_id>07f51244dbc1c41054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>gender</element>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="x_naci_family_coho_family_history_details" relationship="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4bf51244dbc1c41054d8ff621f961902</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_id>87f51244dbc1c41054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>enrollment</element>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="x_naci_family_coho_family_history_details" relationship="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4bf51244dbc1c41054d8ff621f961902</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_id>0bf51244dbc1c41054d8ff621f961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <parent>x_naci_family_coho_family_history_details</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:56:33</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>4bf51244dbc1c41054d8ff621f961902</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_individual_information_questionnaire</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_list_x_naci_family_coho_individual_information_questionnaire_x_naci_family_coho_family_history_details_internal</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:56:33</sys_updated_on>
+            <sys_user/>
+            <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

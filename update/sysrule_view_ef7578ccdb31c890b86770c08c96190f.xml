@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_view">
+    <sysrule_view action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <advanced>true</advanced>
+        <condition/>
+        <description/>
+        <device_type>browser</device_type>
+        <match_conditions>ALL</match_conditions>
+        <name>Force to Internal View</name>
+        <order>100</order>
+        <overrides_user_preference>true</overrides_user_preference>
+        <script><![CDATA[(function overrideView(view, is_list) {
+
+	// Add your code here
+	//answer = 'internal';  // set the new view to answer
+	
+	//get URL details
+	var url = gs.action.getGlideURI();
+	gs.warn("URL " + url);
+	// parse url for information needed
+	var recSysId = url.get('sys_id');
+	var isPortal = url.get('id');
+		gs.warn(isPortal);
+	if (!url){
+		gs.warn('Inside If');
+		answer = 'internal';
+	}
+
+})(view, is_list);]]></script>
+        <sys_class_name>sysrule_view</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-13 14:43:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ef7578ccdb31c890b86770c08c96190f</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Force to Internal View</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sysrule_view_ef7578ccdb31c890b86770c08c96190f</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-16 15:24:27</sys_updated_on>
+        <table>x_naci_family_coho_mock_up_intake</table>
+        <view>internal</view>
+    </sysrule_view>
+</record_update>

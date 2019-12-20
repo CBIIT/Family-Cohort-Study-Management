@@ -5,6 +5,7 @@
   /* widget controller */
   var c = this;
 	var s = $location.search();
+	c.id = '';
 	
 	$scope.pagination = [5, 10, 15, 20, 25];
 	$scope.sortKey = null;
@@ -42,21 +43,55 @@
 		});
 		console.log(record);
 	}
+
+	c.update = function() {
+		var fields = c.g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			record[field] = c.g_form.getValue(field);
+		})
+		$scope.server.get({
+			action: 'update',
+			sys_id: c.id,
+			record: record
+		}).then(function(){
+			 c.cancelForm();
+		});
+		console.log(record);
+	}
+
+	c.viewCancer = function(id) {
+		$('#saveCancer').hide();
+		$('#updateCancer').show();
+		$('#addFamilyDiv').modal('show');
+		c.id = id;
+		spUtil.get('widget-form', {
+			"sys_id": id,
+			"table": "x_naci_family_coho_mock_up_intake_family_cancer",
+			"view": "Cancer"
+		}).then(function(widget) {
+			widget.data.hideRelatedLists = true;
+			c.data.widget_add = widget;
+		})
+	}
 	
 	c.data.label = "Family Cancer";
 	
-	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},{label:"If Other, Please Specify", name: "cancer_specify"},
+	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},
 										{label: "Age (in years) at Diagnosis",name: "age_at_diagnosis"},{label: "Relationship",name: "relationship"},
-										{label:"If Other, Please Specify", name: "relationship_specify"},{label:"Name", name: "name"},
+										{label:"Name", name: "name"},
 										{label:"Current Age (If living)", name: "current_age"},{label:"Age at Death", name: "age_at_death"}];
 	
 	c.openForm = function(){
+		$('#saveCancer').show();
+		$('#updateCancer').hide();
 		$('#addFamilyDiv').modal('show');
 		spUtil.get('widget-form', {
 			"sys_id": "-1",
 			"table": "x_naci_family_coho_mock_up_intake_family_cancer",
 			"view": "Cancer"
 		}).then(function(widget) {
+			widget.data.hideRelatedLists = true;
 			c.data.widget_add = widget;
 		})
 	}
@@ -101,8 +136,8 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>FCSMS Intake Form Family Cancer List</name>
         <option_schema/>
-        <public>true</public>
-        <roles/>
+        <public>false</public>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
@@ -126,8 +161,16 @@
 			}
 			gr1.intake_form_id = data.id;
 			gr1.insert();
-		}
-		else if (input.action == 'delete') {
+		}else if(input.action == 'update'){
+			var record1 = input.record;
+			var gr3 = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+			gr3.get(input.sys_id);
+			for (var key1 in record1) {
+				gr3.setValue(key1, record1[key1]);
+			}
+			gr3.updateMultiple();
+			
+		}else if (input.action == 'delete') {
 			var id = input.id;
 			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
 			    gr2.get(id);
@@ -138,7 +181,7 @@
 	
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
 	    gr.addQuery('intake_form_id', data.id);
-	    gr.orderByDesc('sys_created_on');
+	    gr.orderBy('sys_created_on');
 	    gr.query();
 	while(gr.next()){
 		item = {};
@@ -162,15 +205,15 @@
         <sys_created_on>2019-09-16 16:43:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d155403fdbb3370054d8ff621f961912</sys_id>
-        <sys_mod_count>136</sys_mod_count>
+        <sys_mod_count>183</sys_mod_count>
         <sys_name>FCSMS Intake Form Family Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_d155403fdbb3370054d8ff621f961912</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-25 20:41:43</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-20 19:19:44</sys_updated_on>
         <template><![CDATA[
 <div id="family_cancer" ng-show="showCancer" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">
@@ -178,47 +221,52 @@
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
   </div>
-  <div class="d-flex">
-    <div class="col-md-6 d-flex">
+  <div class="row">
+    <div class="col-md-6">
       <label class="pr-3 pt-2">Search:</label> 
       <input type="text" 
-             class="form-control" 
+             class="form-control d-inline-block" 
              placeholder="{{c.data.label}} Records" 
              aria-describedby="search record"
              ng-model="search" 
              style="width: 300px;"/>  
     </div>
-    <div class="col-md-6">
-      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 20px;position: absolute;right: 0px;">
+    <div class="col-md-6 text-right">
+      <button class="btn btn-primary btn-font" ng-click="c.openForm()" style="padding: 5px 20px;">
         New Family Cancer Information
       </button>
     </div>
   </div>
-  <table class="table table-bordered table-hover mt-3">
-    <thead class="bg-primary">
-      <tr class="btn-font">
-        <th ng-repeat="col in c.data.columns"
-            ng-click="sort(col.name)">
-          {{ col.label }}
-          <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-        </th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
-        <td ng-repeat="col in c.data.columns">
-          {{ record[col.name] || 'N/A' }}  
-        </td>
-        <td>
-          <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-   <div style="display:flex;">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+      <thead class="bg-primary">
+        <tr class="btn-font">
+          <th ng-repeat="col in c.data.columns"
+              ng-click="sort(col.name)">
+            {{ col.label }}
+            <span class="glyphicon sort-icon" ng-show="sortKey==col.name" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
+          <td ng-repeat="col in c.data.columns">
+            {{ record[col.name] || 'N/A' }}  
+          </td>
+          <td>
+            <button class="btn btn-primary btn-font" ng-click="c.viewCancer(record.sys_id)" style="padding: 5px 30px;">
+              View
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="c.deleteCancer(record.sys_id)" style="padding: 5px 30px;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="display:flex;">
     <span style="margin-right:auto">Total: {{ c.data.records.length }}</span>
     <div style="margin-left:auto">
       <label class="">Results per Page:</label> 
@@ -232,7 +280,7 @@
       <dir-pagination-controls></dir-pagination-controls>
     </div>
   </div> 
-  
+
 </div>
 
 <div id="addFamilyDiv" class="modal fade" data-keyborad="false" data-backdrop="static">
@@ -250,13 +298,16 @@
         </div>
       </div>
       <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block; margin-bottom: 15px;">
-          <button type="button" class="table-button btn btn-primary btn-font m-r" ng-click="c.submit()">
-            Save
-          </button>
-          <button type="button" class="table-button btn btn-danger btn-font" ng-click="c.cancelForm()">
-            Cancel
-          </button>
-        </div>
+        <button type="button" id="saveCancer" class="table-button btn btn-primary btn-font m-r" ng-click="c.submit()">
+          Save
+        </button>
+        <button type="button" id="updateCancer" class="table-button btn btn-primary btn-font m-r" ng-click="c.update()">
+          Update
+        </button>        
+        <button type="button" class="table-button btn btn-danger btn-font" ng-click="c.cancelForm()">
+          Cancel
+        </button>
+      </div>
     </div>
   </div>
 </div>]]></template>

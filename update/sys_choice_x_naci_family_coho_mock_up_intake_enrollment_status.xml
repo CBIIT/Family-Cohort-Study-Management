@@ -5,36 +5,131 @@
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Intake Form Submitted</label>
+            <label>New Screener Received</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence>1</sequence>
+            <sequence>10</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-30 22:42:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>0bdd5914db94c450b86770c08c96197a</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:42:55</sys_updated_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 17:22:23</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Intake Form Submitted</value>
+            <value>new_screener_received</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
+            <label>More Info Required</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>15</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-15 17:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0abd49cfdbc1041054d8ff621f9619ac</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 17:48:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>more_info_required</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting Eligibility Review</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>17</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-19 20:51:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>53d3ea54db594810b86770c08c961958</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-19 20:51:40</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_eligibility_review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Study Panel Review</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-13 14:53:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>bd489ad2db49001054d8ff621f961901</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-13 14:53:07</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>study_panel_review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting Consent</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>25</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-13 16:06:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a5f82612dbc9001054d8ff621f9619b7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:03:39</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_consent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Awaiting PI Signature</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>30</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-13 16:07:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>63392e12dbc9001054d8ff621f961927</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:04:38</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>awaiting_pi_signature</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>true</inactive>
             <label>Study Consent Submitted</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence>2</sequence>
+            <sequence>30</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-30 22:43:11</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>8fedddd0db94c450b86770c08c96193e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:43:11</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:04:35</sys_updated_on>
             <u_dependent_value_2/>
             <value>Study Consent Submitted</value>
         </sys_choice>
@@ -43,38 +138,76 @@
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>FHQ Submitted</label>
+            <label>Awaiting Enrollment Forms</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence>3</sequence>
+            <sequence>40</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-30 22:43:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>eafd5514db94c450b86770c08c9619f3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:43:25</sys_updated_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:05:33</sys_updated_on>
             <u_dependent_value_2/>
-            <value>FHQ Submitted</value>
+            <value>awaiting_enrollment_forms</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>FHQ/IIQ/MRR Submitted</label>
+            <label>Enrollment Packet Received</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence>4</sequence>
+            <sequence>50</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-30 22:43:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>bd0e5514db94c450b86770c08c96192a</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:43:37</sys_updated_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:06:41</sys_updated_on>
             <u_dependent_value_2/>
-            <value>FHQ/IIQ/MRR Submitted</value>
+            <value>enrollment_packet_received</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enrollment Complete</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>55</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-15 19:07:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>eca5654fdb45041054d8ff621f96194a</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-15 19:51:28</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>enrollment_complete</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Direct Decline</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>60</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-13 20:01:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>28ce575edb41401054d8ff621f9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-13 20:01:28</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>direct_decline</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>enrollment_status</element>

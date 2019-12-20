@@ -13,11 +13,11 @@
             <sys_created_on>2019-09-30 22:41:38</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>878d9114db94c450b86770c08c9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:41:38</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-20 18:13:50</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Waiting for Eligible Review</value>
+            <value>waiting_for_eligibility</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -32,11 +32,11 @@
             <sys_created_on>2019-09-30 22:41:52</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>8cad15d0db94c450b86770c08c9619b6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:41:52</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-20 18:13:28</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Eligible</value>
+            <value>eligible</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -51,11 +51,11 @@
             <sys_created_on>2019-09-30 22:42:08</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>b7ad59d0db94c450b86770c08c96197d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-30 22:42:08</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-20 18:13:22</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Not Eligible</value>
+            <value>not_eligible</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>eligible_status</element>

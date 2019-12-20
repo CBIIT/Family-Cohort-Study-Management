@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_naci_family_coho_family_history_details" version="2" view="internal">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Family History Details - internal" name="x_naci_family_coho_family_history_details" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">5ac55604dbc1c41054d8ff621f9619ac</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_naci_family_coho_family_member_comments.family_member</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:55:40</sys_created_on>
+            <sys_id>16c55604dbc1c41054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:55:40</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Family History Details - internal" name="x_naci_family_coho_family_history_details" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">5ac55604dbc1c41054d8ff621f9619ac</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_naci_family_coho_individual_information_questionnaire.iiq_subject</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:55:40</sys_created_on>
+            <sys_id>9ac55604dbc1c41054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:55:40</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Family History Details - internal</calculated_name>
+            <filter/>
+            <name>x_naci_family_coho_family_history_details</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-06 14:55:40</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>5ac55604dbc1c41054d8ff621f9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Family History Details - internal</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_related_x_naci_family_coho_family_history_details_internal</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-06 14:55:40</sys_updated_on>
+            <sys_user/>
+            <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

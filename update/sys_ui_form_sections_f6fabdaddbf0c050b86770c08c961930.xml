@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f6fabdaddbf0c050b86770c08c961930" sys_domain="global" table="x_naci_family_coho_family_id" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>bafabdaddbf0c050b86770c08c96195b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="84dda327dbea7300b86770c08c9619c1">f6fabdaddbf0c050b86770c08c961930</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_id" sys_domain="global" view="84dda327dbea7300b86770c08c9619c1">36fabdaddbf0c050b86770c08c96194c</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_naci_family_coho_family_id</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-29 18:33:44</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>f6fabdaddbf0c050b86770c08c961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_naci_family_coho_family_id</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f6fabdaddbf0c050b86770c08c961930</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="Case" name="case">84dda327dbea7300b86770c08c9619c1</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

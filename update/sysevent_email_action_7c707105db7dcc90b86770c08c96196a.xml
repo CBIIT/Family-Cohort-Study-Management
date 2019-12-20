@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Family Cohort Study" name="Family Cohort Study">a97c90c9dbb5cc90b86770c08c961999</category>
+        <collection>x_naci_family_coho_family_history_details</collection>
+        <condition table="x_naci_family_coho_family_history_details">eligibility_statusCHANGESTOeligible^EQ<item endquery="false" field="eligibility_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="eligible"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>antivirus.infected</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">${sys_created_on}</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Dear ${name},</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Thank you for taking the time to fill out the Li-Fraumeni Syndrome Study (LFSS) screener questionnaire on our CHARMS website.</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">We are writing to inform you that based on the information you provided, you are eligible to participate in the LFSS, pending completion of the Family History Questionnaire (FHQ) and verifications of the cancers reported.&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">The LFS study is being conducted by the Clinical Genetics Branch (CGB), which is a branch within the National Cancer Institute (NCI) at the National Institutes of Health (NIH), part of the U.S. Department of Health and Human Services.&nbsp; The funding for this research comes directly from the Federal Government. CGB studies genetics as the cause of cancer and the relationship between genetic and environmental risk factors in the development of cancer. Our mission is to learn how to improve the care provided to persons at increased genetic cancer risk, and to reduce the chances of developing cancers and other serious illnesses that are directly associated with changes in certain genes known to cause inherited cancer. The LFSS&rsquo;s Principal Investigator is Dr. Payal Khincha, M.D., pediatric hematologist-oncologist.&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">We would like to invite you to participate in this study.&nbsp; If you would like to participate, we ask that you provide written informed consent and complete the additional enrollment forms so we can confirm that you are eligible for this study and proceed with the enrollment process. Now that your profile as been determined as eligible, please log back into the CHARMS website.&nbsp; Once you log in, you will see the LFSS Field Consent Form.&nbsp; Please read through this document carefully and electronically sign if it you would like to participate.&nbsp; Once this signature is applied, the study consent will go to the Principal Investigator for signature as well.&nbsp; After the Principal Investigator&rsquo;s signature is applied, you will have the opportunity to print a copy of the consent for your records.</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">By signing the Field Consent Form, you are formally agreeing to join the study and to fill out the additional questionnaires. You are also giving us permission to collect blood and tissue specimens, if applicable, so that we can investigate the underlying genetic change(s) associated with Li-Fraumeni Syndrome in your family, and other research goals. Please note that this time we are not adding newly enrolled participants to the cancer screening portion of the study.</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">If you have any questions regarding the study that you would like to have answered before you sign the consent form, please contact our Family Studies Referral Nurse or me by phone (1-800-518-8474) or by email (<a style="color: blue; text-decoration: underline;" href="mailto:JanetBracci@westat.com">JanetBracci@westat.com</a>).</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Once the Field Consent Form is completed by you and the Principal Investigator, you will receive an email from us informing you that the next phase of the enrollment process is open.&nbsp; In this second phase, we will ask you for more detailed family and personal health information.&nbsp; Please try to gather as much of this as possible before starting the next phase. &nbsp;</p>
+<p style="margin: 12pt 0in 6pt; font-size: 12pt; font-family: 'Times New Roman', serif;">Please note that we are authorized to collect the information that we are requesting from you, under the legislative authority for the National Cancer Institute, 42 U.S.C. 285. All information obtained is confidential, and we are bound by law to protect your rights to privacy and confidentiality, under the provisions of the Federal Privacy Act of 1974 (5 U.S.C. 552A). Participation in this research study is completely voluntary, and you have the right to decline participation in any or all parts of the study or to withdraw from the study at a later date, if you change your mind.</p>
+<p style="margin: 12pt 0in 6pt; font-size: 12pt; font-family: 'Times New Roman', serif;">Thank you for your interest and participation. We look forward to working with you and your family.&nbsp; By working together, we have the opportunity to learn important new information about the causes, challenges and management of the Li-Fraumeni Syndrome.</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">With best regards,</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Janet Bracci</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>FCSMS - Mark Eligible (Consent Request)</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>email_address</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Marked Eligible</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-16 21:35:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>7c707105db7dcc90b86770c08c96196a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>FCSMS - Mark Eligible (Consent Request)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sysevent_email_action_7c707105db7dcc90b86770c08c96196a</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-19 15:55:21</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Family Cohort (Family Member Details)">fa8ae5c9db3dcc90b86770c08c9619cf</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

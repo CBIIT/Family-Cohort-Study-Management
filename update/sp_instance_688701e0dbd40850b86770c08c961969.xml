@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="2">b36701e0dbd40850b86770c08c961945</sp_column>
-        <sp_widget display_value="FCSMS IIQ List">c4bea93bdb7f370054d8ff621f961930</sp_widget>
+        <sp_widget/>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-10-01 15:43:32</sys_created_on>

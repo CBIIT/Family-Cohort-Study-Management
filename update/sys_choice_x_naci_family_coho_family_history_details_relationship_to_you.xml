@@ -5,6 +5,25 @@
             <element>relationship_to_you</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Proband</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>5</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-11-14 15:01:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>07c32b6edb45801054d8ff621f961958</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-11-14 15:01:32</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>proband</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Mother</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
@@ -13,11 +32,11 @@
             <sys_created_on>2019-09-26 18:37:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>6a4fbfbadbccc05054d8ff621f96193d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:37:19</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:16</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Mother</value>
+            <value>mother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -32,11 +51,11 @@
             <sys_created_on>2019-09-26 18:37:38</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>075f3bbadbccc05054d8ff621f961923</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:37:38</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:18</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Father</value>
+            <value>father</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -51,11 +70,11 @@
             <sys_created_on>2019-09-26 18:37:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>ba6f7fbadbccc05054d8ff621f961943</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:37:56</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:22</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Sister</value>
+            <value>sister</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -70,11 +89,11 @@
             <sys_created_on>2019-09-26 18:38:10</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>437ffbbadbccc05054d8ff621f961960</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:38:10</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:25</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Brother</value>
+            <value>brother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -89,11 +108,11 @@
             <sys_created_on>2019-09-26 18:38:44</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>ee8f37fadbccc05054d8ff621f96196c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:38:44</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:32</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Half-Brother (same mother)</value>
+            <value>half_brother_same_mother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -108,11 +127,11 @@
             <sys_created_on>2019-09-26 18:39:08</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>cfaf77fadbccc05054d8ff621f9619e5</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:39:08</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:39</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Half-Brother (same father)</value>
+            <value>half_brother_same_father</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -127,11 +146,11 @@
             <sys_created_on>2019-09-26 18:39:48</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>48dfb3fadbccc05054d8ff621f961988</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:39:48</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:45</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Half-Sister (same mother)</value>
+            <value>half_sister_same_mother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -146,11 +165,11 @@
             <sys_created_on>2019-09-26 18:40:08</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>a6effbbadbccc05054d8ff621f9619ea</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:40:08</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:51</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Half-Sister (same father)</value>
+            <value>half_sister_same_father</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -165,11 +184,11 @@
             <sys_created_on>2019-09-26 18:40:46</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>600008cbdbccc05054d8ff621f961915</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:40:46</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:40:56</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Mother's Mother</value>
+            <value>mothers_mother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -184,11 +203,11 @@
             <sys_created_on>2019-09-26 18:41:04</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>b82000cbdbccc05054d8ff621f9619ae</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:41:04</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:41:00</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Mother's Father</value>
+            <value>mothers_father</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -203,11 +222,11 @@
             <sys_created_on>2019-09-26 18:41:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>55300ccbdbccc05054d8ff621f961995</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:41:20</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:41:04</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Father's Mother</value>
+            <value>fathers_mother</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -222,11 +241,334 @@
             <sys_created_on>2019-09-26 18:42:03</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>414088cbdbccc05054d8ff621f9619ad</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:42:03</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 14:41:07</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Father's Father</value>
+            <value>fathers_father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Child</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>125</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-02 18:49:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4774c5e8dbed4c5054d8ff621f961994</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 18:49:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>child</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandchild</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>130</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-02 18:49:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>799405e8dbed4c5054d8ff621f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-02 18:49:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>grandchild</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Maternal Uncle</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>135</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:21:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1bb651b9db25049054d8ff621f9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:21:13</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>maternal_uncle</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Paternal Uncle</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>140</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:21:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ded6d1b9db25049054d8ff621f9619ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:21:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>paternal_uncle</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Maternal Aunt</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>145</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:21:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>91e6dd79db25049054d8ff621f9619c8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:21:47</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>maternal_aunt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Paternal Aunt</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>150</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:22:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>62f691f9db25049054d8ff621f961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:22:00</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>paternal_aunt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cousin</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>155</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:22:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9507dd79db25049054d8ff621f9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:22:12</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>cousin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Niece</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>160</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:22:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>111715b9db25049054d8ff621f96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:22:28</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>niece</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Nephew</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>165</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:22:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1a27d979db25049054d8ff621f961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:22:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>nephew</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Great Nephew</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>170</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:23:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d547dd79db25049054d8ff621f961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:23:18</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>great_nephew</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Great Niece</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>170</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:23:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>6e3751b9db25049054d8ff621f961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:23:06</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>great_niece</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sister In Law</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>175</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:23:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>815755f9db25049054d8ff621f9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:23:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>sister_in_law</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Brother In Law</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>180</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:23:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d16799f9db25049054d8ff621f96190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:23:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>brother_in_law</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Step Mother</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>185</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:24:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e87719f9db25049054d8ff621f96192e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:24:03</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>step_mother</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Great Aunt</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>190</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:24:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7a87113ddb25049054d8ff621f961957</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:24:29</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>great_aunt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Step Father</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>190</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:24:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7f7799f9db25049054d8ff621f961924</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:24:17</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>step_father</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relationship_to_you</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Great Uncle</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>195</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-06 17:24:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0397913ddb25049054d8ff621f96190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:24:47</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>great_uncle</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -236,16 +578,16 @@
             <label>Other</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
-            <sequence>130</sequence>
+            <sequence>1000</sequence>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
             <sys_created_on>2019-09-26 18:46:36</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>a951884fdbccc05054d8ff621f96195e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:46:36</sys_updated_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-06 17:25:23</sys_updated_on>
             <u_dependent_value_2/>
-            <value>Other</value>
+            <value>other</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>relationship_to_you</element>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_naci_family_coho_family_id</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Set  Family ID</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	//get the next family ID number for Family IDs
+	var propFamId = gs.getProperty('x_naci_family_coho.famild.id.number');
+	
+	var idSetter = '';
+	
+	//If the id is less than 4 characters, add a 0 to the front
+	if (propFamId.length < 4){
+		idSetter = '0' + propFamId;
+	}
+	
+	current.short_description = idSetter;
+	
+	//Add one to the existing number so that we may set the property for the next insert
+	var nextFamId = parseInt(propFamId) + 1;
+	
+	gs.setProperty('x_naci_family_coho.famild.id.number', nextFamId);
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-21 15:45:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>b1fe2f3cdb150c10b86770c08c96190d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Set  Family ID</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_b1fe2f3cdb150c10b86770c08c96190d</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-21 15:47:13</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+</record_update>
