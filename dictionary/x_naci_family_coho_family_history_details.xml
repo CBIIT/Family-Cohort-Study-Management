@@ -8,6 +8,7 @@
         <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
         <element label="County" max_length="50" name="county_of_death" type="string"/>
         <element label="Date Consent Requested" max_length="40" name="date_consent_requested" type="glide_date"/>
+        <element label="Date Forms Requested" max_length="40" name="date_forms_requested" type="glide_date"/>
         <element label="Date of Birth" max_length="20" name="date_of_birth_month_day_year" type="glide_date"/>
         <element label="Date of Death" max_length="20" name="date_of_death" type="glide_date"/>
         <element label="City dea" max_length="50" name="death_hospital_city" type="string"/>
@@ -34,6 +35,7 @@
                 <element inactive_on_update="false" label="Enrollment Packet Received" sequence="80" value="enrollment_packet_received"/>
                 <element inactive_on_update="false" label="Enrollment Packet Complete" sequence="90" value="enrollment_complete"/>
                 <element inactive_on_update="false" label="Marked Ineligible" sequence="100" value="mark_ineligible"/>
+                <element inactive_on_update="false" label="No Response" sequence="105" value="no_response"/>
                 <element inactive_on_update="false" label="Direct Decline" sequence="110" value="declined"/>
             </choice>
         </element>

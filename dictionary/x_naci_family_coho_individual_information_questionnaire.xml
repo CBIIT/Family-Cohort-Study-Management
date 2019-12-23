@@ -254,6 +254,13 @@
         <element label="Not ovulating" max_length="40" name="fertility_diagnosis_not_ovulating" type="boolean"/>
         <element label="Other" max_length="40" name="fertility_diagnosis_other" type="boolean"/>
         <element label="Other (Specify)" max_length="40" name="fertility_diagnosis_other_specify" type="string"/>
+        <element label="What is the name of the person you are filled this out for" max_length="100" name="filled_for" type="string"/>
+        <element choice="3" default="No" label="Are you filling this questionnaire out for someone else?" max_length="40" name="filling_for_someone" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="No"/>
+                <element inactive_on_update="false" label="Yes" value="Yes"/>
+            </choice>
+        </element>
         <element label="Family Study ID" max_length="20" name="fsid" type="string"/>
         <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
             <choice>
@@ -1397,6 +1404,18 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
+        <element choice="3" default="I am the person's parent" label="What is your relationship to this person?" max_length="40" name="relationship" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="I am the person's parent" sequence="1" value="I am the person's parent"/>
+                <element inactive_on_update="false" label="I am the person's sibling" sequence="2" value="I am the person's sibling"/>
+                <element inactive_on_update="false" label="I am the person's child" sequence="3" value="I am the person's child"/>
+                <element inactive_on_update="false" label="I am the person's cousin" sequence="4" value="I am the person's cousin"/>
+                <element inactive_on_update="false" label="I am the person's aunt/uncle" sequence="5" value="I am the person's aunt/uncle"/>
+                <element inactive_on_update="false" label="I am the person's spouse/long term partner" sequence="6" value="I am the person's spouse/long term partner"/>
+                <element inactive_on_update="false" label="I am this person's grandparent" sequence="7" value="I am this person's grandparent"/>
+                <element inactive_on_update="false" label="Other" sequence="8" value="Other"/>
+            </choice>
+        </element>
         <element label="Your relationship to this person" max_length="100" name="relationship_to_this_person" type="string"/>
         <element choice="1" label="A8. What religious group do you identify with?" max_length="40" name="religious_group" type="choice">
             <choice>
@@ -1569,6 +1588,7 @@
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
             </choice>
         </element>
+        <element label="What is your name" max_length="100" name="your_name" type="string"/>
         <element choice="1" label="F3.What was your weight at birth?" max_length="40" name="your_weight_at_birth" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUND-OUNCES" sequence="1" value="POUND-OUNCES"/>

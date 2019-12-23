@@ -1,44 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="548c4ed6db00405054d8ff621f961975" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="Introduction">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name_of_proband</element>
+            <element>filling_for_someone</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 20:58:40</sys_created_on>
-            <sys_id>188c4ed6db00405054d8ff621f961977</sys_id>
+            <sys_created_on>2019-12-23 16:33:46</sys_created_on>
+            <sys_id>65fea05bdbb9081054d8ff621f961992</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c8c4ed6db00405054d8ff621f961971">548c4ed6db00405054d8ff621f961975</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:58:40</sys_updated_on>
+            <sys_updated_on>2019-12-23 16:33:46</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>filled_for</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 20:58:40</sys_created_on>
-            <sys_id>d08c4ed6db00405054d8ff621f9619cf</sys_id>
+            <sys_created_on>2019-12-23 16:33:46</sys_created_on>
+            <sys_id>edfea05bdbb9081054d8ff621f961992</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c8c4ed6db00405054d8ff621f961971">548c4ed6db00405054d8ff621f961975</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:58:40</sys_updated_on>
+            <sys_updated_on>2019-12-23 16:33:46</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>your_name</element>
+            <position>2</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-23 16:33:46</sys_created_on>
+            <sys_id>65fea05bdbb9081054d8ff621f961993</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c8c4ed6db00405054d8ff621f961971">548c4ed6db00405054d8ff621f961975</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-23 16:33:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relationship</element>
+            <position>3</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-23 16:33:46</sys_created_on>
+            <sys_id>e9fea05bdbb9081054d8ff621f961993</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c8c4ed6db00405054d8ff621f961971">548c4ed6db00405054d8ff621f961975</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-23 16:33:46</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>relationship_to_this_person</element>
-            <position>2</position>
+            <position>4</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 20:58:40</sys_created_on>
-            <sys_id>588c4ed6db00405054d8ff621f9619cf</sys_id>
+            <sys_created_on>2019-12-23 16:33:46</sys_created_on>
+            <sys_id>61fea05bdbb9081054d8ff621f961994</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c8c4ed6db00405054d8ff621f961971">548c4ed6db00405054d8ff621f961975</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:58:40</sys_updated_on>
+            <sys_updated_on>2019-12-23 16:33:46</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

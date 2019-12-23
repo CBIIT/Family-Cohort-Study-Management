@@ -159,7 +159,7 @@
                 <element inactive_on_update="false" label="I am the person's sibling" sequence="20" value="I am the person's sibling"/>
                 <element inactive_on_update="false" label="I am the person's child" sequence="30" value="I am the person's child"/>
                 <element inactive_on_update="false" label="I am the person's cousin" sequence="40" value="I am the person's cousin"/>
-                <element inactive_on_update="false" label="I am the person's aunt/uncl" sequence="50" value="I am the person's aunt/uncl"/>
+                <element inactive_on_update="false" label="I am the person's aunt/uncle" sequence="50" value="I am the person's aunt/uncle"/>
                 <element inactive_on_update="false" label="I am the person's spouse/long term partner" sequence="50" value="I am the person's spouse/long term partner"/>
                 <element inactive_on_update="false" label="I am this person's grandparent" sequence="60" value="I am this person's grandparent"/>
                 <element inactive_on_update="false" label="Other" sequence="70" value="Other"/>

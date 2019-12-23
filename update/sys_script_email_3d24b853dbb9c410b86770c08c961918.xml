@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>get_enrollment_titles</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+
+          // Add your code here
+	var formsLeft = '';
+	var formsNeeded = [];
+	
+			
+		if (!current.family_history_question_id){
+			
+			if (current.relationship_to_you == 'proband')
+				formsNeeded.push('Family History Questionnaire');
+		
+		}
+		
+		if (!current.individual_information){
+			formsNeeded.push('Individual Information Questionnaire');
+		}
+		
+	
+	if (formsNeeded.length > 1){
+		template.print(formsNeeded[0] + ' and ' + formsNeeded[1]);
+	}
+	
+	if (formsNeeded.length == 1){
+		template.print(formsNeeded[0]);
+	}
+	
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-23 17:00:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3d24b853dbb9c410b86770c08c961918</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>get_enrollment_titles</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_email_3d24b853dbb9c410b86770c08c961918</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-23 18:17:43</sys_updated_on>
+    </sys_script_email>
+</record_update>

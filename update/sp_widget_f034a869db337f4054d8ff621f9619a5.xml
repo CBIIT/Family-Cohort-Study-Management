@@ -4,6 +4,7 @@
         <client_script><![CDATA[function($scope,$location, $timeout, $uibModal, spUtil, spModal) {
 	/* widget controller */
 	var c = this;
+	c.errorIntake = [];
 	var saved_arr = c.data.saved_section == null ? []: c.data.saved_section.toString().split(' ');
   setProgressBar(saved_arr);
 	console.log($scope);
@@ -67,7 +68,6 @@
 			template: $('#saving-data-modal')[0].innerHTML,
 			size: 'sm'
 		});
-
 		var record = getFormValues(form);
 		$scope.server.get({
 			action: 'update',
@@ -82,6 +82,9 @@
 				saved_arr.push(index);
 				setProgressBar(saved_arr);
 			} 
+			if(c.errorIntake.length >0){
+				validation();
+			}
 			/*spModal.open({
 				title: "Message",
 				message: "<center><b>Record has been updated successfully</b><center>",
@@ -115,11 +118,42 @@
 		$scope.loadTab(index);
 	}
 	
-	$scope.submitForm = function(){
+	$scope.submitForm = function(form){
 		//validate whole form data
+		var index = getFormIndex(form);
+		var modal = $uibModal.open({
+			template: $('#saving-data-modal')[0].innerHTML,
+			size: 'sm'
+		});
+		var record = getFormValues(form);
+		$scope.server.get({
+			action: 'update',
+			record: record,
+			sys_id: c.data.id,
+			index: index
+		}).then(function(){
+			form.$private.userState.clearModifiedFields();
+			$('#loading').hide();
+			modal.close();
+			if(!includeElement(saved_arr, index)){
+				saved_arr.push(index);
+				setProgressBar(saved_arr);
+			} 
+			validation();
+		});	
+	
 		$('#thank_you').show();
 	}
 
+	function validation(){
+			$scope.server.get({
+				action: 'validate'
+			}).then(function(resp){
+				console.log(resp.data.error);
+				c.errorIntake = resp.data.error;
+			});
+	}
+	
 	$scope.loadTab = function(index) {
 		c.show_view_index = index;
 		var widgetName = 'widget_' + index;
@@ -136,7 +170,6 @@
 		}
 	}
 
-
 	function getFormValues(gForm) {
 		var fields = gForm.getFieldNames();
 		var record = {};
@@ -144,11 +177,19 @@
 			var f = gForm.getField(field);
 			if(f.type == 'glide_date'){
 				var dt_str = gForm.getValue(field);
-				var d = new Date(dt_str);
-				record[field] = d;
+				if(dt_str == null || dt_str.trim().length == 0){
+					record[field] = 'NULL';
+				}else{
+					var d = new Date(dt_str);
+					record[field] = d;
+				}
 			}
 			else{
-				record[field] = gForm.getValue(field);
+				if(gForm.getValue(field) == null || gForm.getValue(field).trim().length == 0 ){
+					record[field] = 'NULL';	
+				}else{
+					record[field] = gForm.getValue(field);
+				}
 			}
 		})
 		return record;		
@@ -363,6 +404,18 @@ fieldset label{
 }
 .btn-font{
   font-size: 16px;
+}
+.r-form-error-area {
+    width: 96%;
+    margin: auto;
+    font-size: 14px;
+    color: red;
+    background: #fbe1e5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.r-form-error-area li.active {
+   font-weight: bold; 
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -388,7 +441,7 @@ fieldset label{
 	if(sys_id == null){
 		sys_id = "-1";
 	}
-
+  data.error = [];
 	if(input){
 		if(input.action == 'update'){
 			var record = input.record;
@@ -414,6 +467,85 @@ fieldset label{
 				gr1.saved_section = saved + " " + input.index;
 			}
 			gr1.updateMultiple();
+		}
+		if(input.action == 'validate'){
+			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake');
+					gr2.get(sys_id);
+			//validate form 1
+			if(gr2.filling_for_someone.toString() == 'Yes'){
+				if(gr2.filled_for == null || gr2.filled_for.toString().trim().length == 0){
+					 var item = {};
+					 item.index = 1;
+					 item.page = "Study Introduction";
+					 item.message = "the name of the person you are filled this out for is required field";		
+					 data.error.push(item);
+				}
+				if(gr2.your_name == null || gr2.your_name.toString().trim().length == 0){
+					 var item = {};
+					 item.index = 1;
+					 item.page = "Study Introduction";
+					 item.message = "Your name is required field";		
+					 data.error.push(item);
+				}
+				if(gr2.relationship == null || gr2.relationship.toString().trim().length == 0){
+					 var item = {};
+					 item.index = 1;
+					 item.page = "Study Introduction";
+					 item.message = "Your Relationship to this person is required field";		
+					 data.error.push(item);
+				}
+				//validate form 2
+				if(gr2.email_address == null || gr2.email_address.toString().trim().length == 0){
+					var item = {};
+					item.index = 2;
+					item.page = "Personal Information";
+					item.message = "Contact Email Address is required field";
+					data.error.push(item);
+				}
+				if(gr2.confirm_email_address == null || gr2.confirm_email_address.toString().trim().length == 0){
+					var item = {};
+					item.index = 2;
+					item.page = "Personal Information";
+					item.message = "Confirm Contact Email Address is required field";
+					data.error.push(item);
+				}
+				if(gr2.phone_number == null || gr2.phone_number.toString().trim().length == 0){
+					var item = {};
+					item.index = 2;
+					item.page = "Personal Information";
+					item.message = "Contact phone_number is required field";
+					data.error.push(item);
+				}
+				//validate form 3
+				if(gr2.diagnosed_with_cancer.toString() == 'Yes'){
+					var pc = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+					    pc.addQuery('intake_form', sys_id);
+					pc.query();
+					var count = pc.getRowCount();
+					if(count == 0){
+						var item = {};
+						item.index = 3;
+						item.page = "Personal Cancer History";
+						item.message = "When the Research Subject has been diagnosed with cancer, at lease one cancer type entry is required";
+						data.error.push(item);
+					}
+				}
+				//validate form 4
+				if(gr2.biological_relatives_diagnosed.toString() == "Yes"){
+					var fc = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+					fc.addQuery('intake_form_id', sys_id);
+					fc.query();
+					var count1 = fc.getRowCount();
+					if(count1 == 0){
+						var item = {};
+						item.index = 4;
+						item.page = "Family Memebers' Cancer History";
+						item.message = "When biological relative has been diagnosed with cancer, at lease one family member entry is required";
+						data.error.push(item);
+					}				
+				}
+			}
+			return data.error;
 		}
 	}
 	data.widget_1 = $sp.getWidget('widget-form', {
@@ -442,7 +574,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>786</sys_mod_count>
+        <sys_mod_count>893</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -450,7 +582,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-20 21:58:32</sys_updated_on>
+        <sys_updated_on>2019-12-23 22:19:03</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
@@ -465,6 +597,11 @@ fieldset label{
       </ul>
     </div>
     <div class="right-side-content col-md-9">
+      <div class="r-form-error-area" style="padding: 10px;" ng-show="c.errorIntake.length > 0">
+        <ul>
+          <li ng-repeat="item in c.errorIntake" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.page}}: &nbsp;&nbsp;{{item.message}}</li>
+        </ul>
+      </div>
       <div ng-show="c.show_view_index == 1" class="div_shadow">
         <div style="padding: 10px;">
           <p>
@@ -598,7 +735,7 @@ fieldset label{
             <button class="btn btn-primary btn-font" ng-click="saveForm(c.forms.LFS5)" style="width:100px; margin-right: 10px;">
               SAVE
             </button>
-            <button class="btn btn-success btn-font" ng-click="submitForm()" style="width:100px;">
+            <button class="btn btn-success btn-font" ng-click="submitForm(c.forms.LFS5)" style="width:100px;">
               SUBMIT
             </button>
           </div>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_naci_family_coho.emailAddressCheck</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>emailAddressCheck</name>
+        <script><![CDATA[var emailAddressCheck = Class.create();
+emailAddressCheck.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	uniqueValueCheck: function(){
+		gs.info('Inside SI');
+		var emailAddress = this.getParameter('sysparm_email');
+		var table = this.getParameter('sysparm_table');
+		var answer = false;
+		
+		var checkForExistingEmail = new GlideRecord (table);
+		checkForExistingEmail.addQuery('email_address', emailAddress);
+		//checkForExistingEmail.addNotNullQuery('');
+		checkForExistingEmail.query();
+		
+		if (checkForExistingEmail.next()){
+			answer = true;
+		}
+		
+		return answer;
+		
+		
+	},
+
+    type: 'emailAddressCheck'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-23 18:22:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f9b7c197dbf9c410b86770c08c961981</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>emailAddressCheck</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_include_f9b7c197dbf9c410b86770c08c961981</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-23 18:31:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

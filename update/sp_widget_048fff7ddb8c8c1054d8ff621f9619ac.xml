@@ -6,6 +6,7 @@
 	var c = this;
 	var s = $location.search();
 
+	c.errors = [];
 
 	c.biopsyDisplay = false;
 	c.cancerDisplay = false;
@@ -18,124 +19,17 @@
 	c.hormoneDisplay = false;
 
 	c.show_view_index = 1;
-	c.show_sub_view_index = 'tab_2_A1';
+	c.show_sub_view_index = 'tab_2_A2';
 
 
 	c.g_forms = {};
 
 	c.accordions = {};
-	c.accordions.tab_2_A1 = false;
+	//c.accordions.tab_2_A1 = false;
 	c.accordions.tab_2_A2 = false;
 	c.accordions.tab_2_A3 = false;
 	c.accordions.tab_2_A4 = false;
-
-
-	c.current_form_idx = 'Introduction';
-
-	$scope.data.hideRelatedLists = true;
-
-	c.startForm = function(){
-		c.showView(2);
-	}
-
-	c.getFormValues = function() {
-		var g_form = c.g_forms[c.current_form_idx];
-		var fields = g_form.getFieldNames();
-		var record = {};
-		fields.forEach(function(field) {
-			var f = g_form.getField(field);
-			if(f.type == 'glide_date'){
-				var dt_str = g_form.getValue(field);
-				var d = new Date(dt_str);
-				record[field] = d;
-			}
-			else{
-				record[field] = g_form.getValue(field);
-			}
-
-
-			if(field == 'gender'){
-				c.data.sex = g_form.getValue(field);
-			}
-
-		})
-		return record;		
-	}
-
-	c.saveForm = function(cb){
-		var record = c.getFormValues();
-		//also update progressing array
-		var section = c.current_form_idx;
-		if(c.data.saved_section.indexOf(section) == -1){
-			c.data.saved_section.push(section);
-		}
-		record.saved_section = c.data.saved_section.length == 0 ? '' : c.data.saved_section.join(',');
-		$scope.server.get({
-			action: 'update',
-			record: record,
-			sys_id: c.data.sys_id
-		}).then(function(){
-			var g_form = c.g_forms[c.current_form_idx];
-			g_form.$private.userState.clearModifiedFields();
-			/*
-			spModal.open({
-				title: "Message",
-				message: "<center>Record has been saved successfully.</center>",
-				buttons: [{label: 'OK', primary: true}]
-			})
-			*/
-			if(cb){
-				cb();
-			}
-		});	
-	}
-
-	c.submitForm = function(){
-		c.saveForm(function(){
-			//$('#thank_you').show();
-		});
-	}
-
-	c.previousForm = function(){
-		if(c.show_view_index == 2){
-			if(c.show_sub_view_index == 1){
-				c.showView(c.show_view_index - 1);
-			}
-			else{
-				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index - 1));
-			}
-
-		}
-		else{
-			c.showView(c.show_view_index - 1);
-		}
-	}
-
-	c.saveAndNextForm = function(){
-		c.saveForm(function(){
-			if((c.show_view_index == 10 || c.show_view_index == 11 || c.show_view_index == 12 ) && c.data.sex == 'MALE'){
-				c.show_view_index = 13;
-			}
-			if(c.show_view_index == 2){
-				if(c.show_sub_view_index == 4){
-					c.showView(c.show_view_index + 1);
-				}
-				else{
-					c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
-				}
-			}
-			else{
-				c.showView(c.show_view_index + 1);
-			}
-
-		});
-	};
-
-	c.openAccordion = function(index, acc){
-		//c.showView(c.show_view_index, acc);
-		c.showView(index, acc);
-	};
-
+	
 	c.showView = function(idx, sub){
 		//console.log("idx: " + idx + ", sub: " + sub);
 		c.biopsyDisplay = false;
@@ -152,12 +46,23 @@
 		if(idx == 1){
 			//show Introduction Page
 			c.current_form_idx = 'Introduction';
+			if(!c.widget_1){
+
+				spUtil.get("widget-form", {
+					"sys_id": c.data.sys_id,
+					"table": "x_naci_family_coho_individual_information_questionnaire",
+					"view": 'Introduction'
+				}).then(function(response) {
+					response.data.hideRelatedLists = true;
+					c.widget_1 = response;
+				})
+			}
 		}
 		else if(idx == 2){
 			if(sub == undefined){
-				sub = 'tab_2_A1';
+				sub = 'tab_2_A2';
 			}
-			c.accordions.tab_2_A1 = false;
+			//c.accordions.tab_2_A1 = false;
 			c.accordions.tab_2_A2 = false;
 			c.accordions.tab_2_A3 = false;
 			c.accordions.tab_2_A4 = false;
@@ -587,26 +492,179 @@
 		}
 	}
 
+
+
+	c.showView(1);
+	
+	$scope.data.hideRelatedLists = true;
+
+	c.startForm = function(){
+		c.showView(2);
+	}
+
+	c.getFormValues = function() {
+		var g_form = c.g_forms[c.current_form_idx];
+		var fields = g_form.getFieldNames();
+		var record = {};
+		fields.forEach(function(field) {
+			var f = g_form.getField(field);
+			if(f.type == 'glide_date'){
+				var dt_str = g_form.getValue(field);
+				var d = new Date(dt_str);
+				record[field] = d;
+			}
+			else{
+				record[field] = g_form.getValue(field);
+			}
+
+
+			if(field == 'gender'){
+				c.data.sex = g_form.getValue(field);
+			}
+
+		})
+		return record;		
+	}
+
+	c.saveForm = function(cb){
+		var record = c.getFormValues();
+		//also update progressing array
+		var section = c.current_form_idx;
+		if(c.data.saved_section.indexOf(section) == -1){
+			c.data.saved_section.push(section);
+		}
+		record.saved_section = c.data.saved_section.length == 0 ? '' : c.data.saved_section.join(',');
+		$scope.server.get({
+			action: 'update',
+			record: record,
+			sys_id: c.data.sys_id
+		}).then(function(){
+			var g_form = c.g_forms[c.current_form_idx];
+			g_form.$private.userState.clearModifiedFields();
+			/*
+			spModal.open({
+				title: "Message",
+				message: "<center>Record has been saved successfully.</center>",
+				buttons: [{label: 'OK', primary: true}]
+			})
+			*/
+			if(cb){
+				cb();
+			}
+		});	
+	};
+	
+	c.validateAndSubmit = function(cb){
+		var param = {};
+		param.sys_id = c.data.sys_id;
+		param.type = "adult";
+		param.section = -1;
+		param.submit = true;
+		$http({
+			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
+			method : "POST",
+			beforeSend: function(xhr){},
+			headers: {'Content-Type': 'application/json'},
+			data: JSON.stringify(param),
+			processData: false
+		}).then(function(res){
+			var result = res.data.result;
+			if(cb){
+				cb(result);
+			}
+			
+		},function(error){
+			console.log(error);
+		});
+	};
+
+	c.submitForm = function(){
+		c.saveForm(function(){
+			c.validateAndSubmit(function(res){
+				if(res.status == '200'){
+					console.log('successful');
+					//$('#thank_you').show();
+				}
+				else{
+					 c.errors = result.content; 
+				}
+				
+			});
+			
+		});
+	}
+
+	c.previousForm = function(){
+		if(c.show_view_index == 2){
+			if(c.show_sub_view_index == 2){
+				c.showView(c.show_view_index - 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index - 1));
+			}
+
+		}
+		else{
+			c.showView(c.show_view_index - 1);
+		}
+	}
+
+	c.saveAndNextForm = function(){
+		c.saveForm(function(){
+			if((c.show_view_index == 10 || c.show_view_index == 11 || c.show_view_index == 12 ) && c.data.sex == 'MALE'){
+				c.show_view_index = 13;
+			}
+			if(c.show_view_index == 2){
+				if(c.show_sub_view_index == 4){
+					c.showView(c.show_view_index + 1);
+				}
+				else{
+					c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
+				}
+			}
+			else{
+				c.showView(c.show_view_index + 1);
+			}
+
+		});
+	};
+
+	c.openAccordion = function(index, acc){
+		//c.showView(c.show_view_index, acc);
+		c.showView(index, acc);
+	};
+
 	c.setActions = function(view, widget_idx){
 		var button_bar = $('.right-side-content #form_widget_'+ widget_idx +' div.panel-footer');
 		button_bar.html("");
 		var html = '';
 		if(view == 'SignatureAndSubmit'){
 			html += '<div><button type="submit" ng-click="c.submitForm()" class="btn btn-primary pull-right action-btn ng-scope" style="background-color:green; padding: 5px 25px;">Submit</button>';
+		  html += '<button type="submit" ng-click="c.saveForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Save</button>';
+			html += '<button type="submit" ng-click="c.previousForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Back</button></div>';
+			var content = $compile(html)($scope)[0];
+			button_bar.append(content);
+		}
+		else if(view != 'Introduction'){
+			html += '<div><button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>';
+			html += '<button type="submit" ng-click="c.previousForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Back</button></div>';
+			var content = $compile(html)($scope)[0];
+			button_bar.append(content);
 		}
 		else{
-			html += '<div><button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>';
+			button_bar.remove();
 		}
-		//html += '<button type="submit" ng-click="c.saveForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Save</button></div>';
-		html += '<button type="submit" ng-click="c.previousForm()" class="btn btn-primary pull-right action-btn ng-scope" style="padding: 5px 25px;">Back</button></div>';
-		var content = $compile(html)($scope)[0];
-		button_bar.append(content);
+		
 	};
 
 
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		var g_form = null;
-		if(e.targetScope.formModel.view == "SectionA1"){
+		if(e.targetScope.formModel.view == "Introduction"){
+			c.setActions("Introduction", "1");
+			c.g_forms['Introduction'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionA1"){
 			c.setActions("SectionA1", "2_A1");
 			c.g_forms['SectionA1'] = e.targetScope.getGlideForm();
 		}
@@ -850,6 +908,9 @@
 .field-actual input{
   font-size: 16px;
 }
+.r-form-error-area li.active{
+  font-weight: bold;
+}
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -902,7 +963,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>731</sys_mod_count>
+        <sys_mod_count>759</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -910,14 +971,14 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 18:26:28</sys_updated_on>
+        <sys_updated_on>2019-12-23 21:58:49</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
    <div class="left-side-menu col-md-3">
     <ul>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A2')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="c.showView(3)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB1') > -1)}"  aria-hidden="true"></i><a href="javascript:void(0);">Biopsy(ies) & Cancer(s)</a></li>
       <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Surgery(ies) & Medical Conditions</a></li>
       <li ng-class="{'active': c.show_view_index == 5}" ng-click="c.showView(5)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Medications & Supplements</a></li>
@@ -937,7 +998,12 @@
     </ul>
   </div>
    <div class="right-side-content col-md-9">
-    <div ng-show="c.show_view_index == 1">
+     <div class="r-form-error-area" style="padding: 10px;" ng-show="c.errors.length > 0">
+       <ul>
+         <li ng-repeat="item in c.errors" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.section}}: {{item.message}}</li>
+       </ul>
+     </div>
+    <div class="panel-body" id="form_widget_1" ng-show="c.show_view_index == 1">
       <div style="padding: 10px;border: 1px solid #ddd;border-radius: 5px 5px 0px 0px;border-bottom: 0px;" >
         <h3 style="text-align:center;">
           NATIONAL CANCER INSTITUTE
@@ -952,16 +1018,21 @@
         <p>
           Completing the questions that follow takes about 45 minutes. Completing this questionnaire is voluntary. Your answers to these questions will help in our research effort. Since answering these questions might involve thinking about how Li-Fraumeni Syndrome has affected yourself and your family, it is possible that it might cause you to feel sad. You will have an opportunity to discuss these feelings with our clinic staff at the time of your visit. If you need to contact us, please call 1-800-518-8474.  
         </p>
-
+        <sp-widget widget="c.widget_1">
+          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+          Loading...
+        </sp-widget>
       </div>
+      
       <div style="background-color: #f5f5f5;border: 1px solid #ddd;border-radius:  0px 0px 5px 5px;height: 60px;padding: 10px 15px;">
-        <button type="submit" ng-click="c.startForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Next</button>
+        <button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>
       </div>
     </div>
 
     <div style="" id="form_widget_2" ng-show="c.show_view_index == 2">
 
       <uib-accordion close-others="true">
+        <!--
         <div uib-accordion-group id="form_widget_2_A1" class="panel-default" is-open="c.accordions.tab_2_A1">
           <uib-accordion-heading>
             <div ng-click="c.openAccordion(2, 'tab_2_A1')">
@@ -973,6 +1044,7 @@
             Loading...
           </sp-widget>
         </div>
+        -->
         <div uib-accordion-group id="form_widget_2_A2" class="panel-default" is-open="c.accordions.tab_2_A2">
           <uib-accordion-heading>
             <!--<div ng-click="c.openAccordion(2, 'tab_2_A2')">-->

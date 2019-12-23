@@ -14,31 +14,34 @@
 	if (newValue === '') {
 		return;
 	}
-	
+
 	var color = '';
 	var study = g_form.getValue('study');
-	
-	
+
+
 	if (study == '5bf67315db3f3f4054d8ff621f961968'){ //If Study is Li-Fraumeni Syndrome
 		color = '#441B8B';
 	} else if (study == '6bd1e198db94c450b86770c08c96198c'){ //If Study is Rasopothy
 		color = '#C30023';
 	}
-	
-	changeButtonColor('sysverb_update', color);
-	changeButtonColor('add_attachment', color);
-	changeButtonColor('sysverb_insert', color);
-	changeButtonColor('sysverb_insert_and_stay', color);
-	changeButtonColor('sysverb_update_and_stay', color);
-	changeButtonColor('sysverb_delete', color);
-	changeButtonColor('mark_eligible', color);
-	changeButtonColor('mark_not_eligible', color);
-	changeButtonColor('study_panel_review', color);
-	changeButtonColor('additional_info_required', color);
-	changeButtonColor('direct_decline', color);
-	changeButtonColor('deactivate_screener', color);
-	changeButtonColor('reactivate_screener', color);
-	
+
+	if (color != ''){
+
+		changeButtonColor('sysverb_update', color);
+		changeButtonColor('add_attachment', color);
+		changeButtonColor('sysverb_insert', color);
+		changeButtonColor('sysverb_insert_and_stay', color);
+		changeButtonColor('sysverb_update_and_stay', color);
+		changeButtonColor('sysverb_delete', color);
+		changeButtonColor('mark_eligible', color);
+		changeButtonColor('mark_not_eligible', color);
+		changeButtonColor('study_panel_review', color);
+		changeButtonColor('additional_info_required', color);
+		changeButtonColor('direct_decline', color);
+		changeButtonColor('deactivate_screener', color);
+		changeButtonColor('reactivate_screener', color);
+
+	}
 }
 
 function changeButtonColor(buttonID, backgroundColor) {
@@ -56,7 +59,7 @@ function changeButtonColor(buttonID, backgroundColor) {
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>9e3a0130dbcd881054d8ff621f9619ca</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Color Code UI Actions</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -65,7 +68,7 @@ function changeButtonColor(buttonID, backgroundColor) {
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_9e3a0130dbcd881054d8ff621f9619ca</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-19 16:00:52</sys_updated_on>
+        <sys_updated_on>2019-12-23 16:22:50</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Validate and Submit IIQ</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var sys_id = request.body.data.sys_id;
+	var type = request.body.data.type;
+	var section = request.body.data.section;
+	var submit = request.body.data.submit;
+	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire');
+	gr.get(sys_id);
+	var errors = [];
+	if(section == '-1' || section == '1'){
+		//IIQ Proxy
+	}
+	if(section == '-1' || section == '2'){
+		//Demographic information
+	}
+	if(section == '-1' || section == '3'){
+		//Biopsy and Cancers
+	}
+	if(section == '-1' || section == '4'){
+		//surgery
+	}
+	if(section == '-1' || section == '5'){
+		//medical conditions
+	}
+	if(section == '-1' || section == '6'){
+		//Screening test
+	}
+	if(errors.length == 0){
+		if(submit == '1'){
+			//submit IIQ form
+		}
+		return {status: '200'};
+	}
+	else{
+		return {status: '412', errors: errors};
+	}
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/ValidateAndSubmitIIQ</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>yuw5@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-23 22:16:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>56f579d7db31481054d8ff621f96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate and Submit IIQ</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ws_operation_56f579d7db31481054d8ff621f96194b</sys_update_name>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-23 22:16:06</sys_updated_on>
+        <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
