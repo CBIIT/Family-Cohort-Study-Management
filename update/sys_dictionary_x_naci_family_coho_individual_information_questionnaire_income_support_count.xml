@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>A11. How many people, including yourself, did this income support?</column_label>
+        <column_label>How many people, including yourself, did this income support?</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-24 20:05:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9d000212dbcc005054d8ff621f96194a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>A11. How many people, including yourself, did this income support?</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>How many people, including yourself, did this income support?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_income_support_count</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-24 20:20:48</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-27 20:54:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

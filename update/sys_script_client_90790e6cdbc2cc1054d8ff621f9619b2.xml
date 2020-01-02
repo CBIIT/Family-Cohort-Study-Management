@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>a_cancer_survivor</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Labels for Demographic Info</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	//Type appropriate comment here, and begin script below
+	var under18 = false;
+
+	if (under18 == true){
+
+		g_form.setLabelOf('hispanic_or_latino', 'Do you consider your child to be Hispanic or Latino?');
+		g_form.setLabelOf('race', 'What is your childs race?');
+		g_form.setLabelOf('jewish_descent', 'Is your child of Ashkenazi (Eastern European) Jewish descent?');
+		g_form.setLabelOf('origin_or_ancestry', "What is your child's national origin or ancestry?");
+
+
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-12-27 20:23:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>90790e6cdbc2cc1054d8ff621f9619b2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update Labels for Demographic Info</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_90790e6cdbc2cc1054d8ff621f9619b2</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-27 20:37:22</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionA3</view>
+    </sys_script_client>
+</record_update>

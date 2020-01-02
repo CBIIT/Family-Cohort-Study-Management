@@ -4,7 +4,7 @@
         <condition/>
         <conditional>false</conditional>
         <name>Consent Reminder - 9 week reminder</name>
-        <run_as display_value="Chris Martin">1e8aa85fdbcc8c50561276708c961972</run_as>
+        <run_as/>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -13,12 +13,15 @@
         <run_time>1970-01-01 15:00:00</run_time>
         <run_type>daily</run_type>
         <script><![CDATA[var intakeConsentCheck = new GlideRecord ('x_naci_family_coho_family_history_details');
-intakeConsentCheck.addEncodedQuery('date_consent_requestedRELATIVEEE@dayofweek@ago@63^enrollment_status=awaiting_consent');
+intakeConsentCheck.addEncodedQuery('date_consent_requestedRELATIVEEE@dayofweek@ago@63^enrollment_status=awaiting_consent^active=true');
 intakeConsentCheck.query();
 
 while (intakeConsentCheck.next()){
 	
 	gs.eventQueue('x_naci_family_coho.consent.reminder.3', intakeConsentCheck, '3rd and Last Reminder');
+	intakeConsentCheck.enrollment_status = 'no_response';
+	intakeConsentCheck.comments = 'Enrollment status being updated to No Response due to the fact that consent has not been provided 9 weeks after being requested';
+	intakeConsentCheck.update();
 		
 }]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
@@ -26,7 +29,7 @@ while (intakeConsentCheck.next()){
         <sys_created_on>2019-11-13 19:47:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73abdfd6db41401054d8ff621f961939</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Consent Reminder - 9 week reminder</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -34,7 +37,7 @@ while (intakeConsentCheck.next()){
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sysauto_script_73abdfd6db41401054d8ff621f961939</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-20 20:58:43</sys_updated_on>
+        <sys_updated_on>2019-12-26 19:26:15</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

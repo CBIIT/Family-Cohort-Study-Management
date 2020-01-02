@@ -82,7 +82,7 @@
             </choice>
         </element>
         <element label="Please indicate the date you completed this questionnaire" max_length="40" name="date_completed_questionnaire" type="glide_date"/>
-        <element label="A2. What is your date of birth?" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
         <element label="Date when you had your first period" max_length="40" name="date_when_you_had_your_first_period" type="glide_date"/>
         <element choice="1" label="Is this condition (diabetes) currently being treated ?" max_length="40" name="diabetes_treated" type="choice">
             <choice>
@@ -98,7 +98,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="B6. Have you ever been diagnosed with any cancer?" max_length="40" name="diagnosed_with_any_cancer" type="choice">
+        <element choice="1" label="Have you ever been diagnosed with any cancer?" max_length="40" name="diagnosed_with_any_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -262,7 +262,7 @@
             </choice>
         </element>
         <element label="Family Study ID" max_length="20" name="fsid" type="string"/>
-        <element choice="1" label="A1. Are you:" max_length="40" name="gender" type="choice">
+        <element choice="1" label="Gender" max_length="40" name="gender" type="choice">
             <choice>
                 <element inactive_on_update="false" label="FEMALE" value="FEMALE"/>
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
@@ -282,14 +282,14 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="B12. Have you ever had any surgery other than for cancer treatment?" max_length="40" name="have_any_surgery" type="choice">
+        <element choice="1" label="Have you ever had any surgery other than for cancer treatment?" max_length="40" name="have_any_surgery" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="B1. Have you ever had a biopsy?" max_length="40" name="have_biopsy" type="choice">
+        <element choice="1" label="Have you ever had a biopsy?" max_length="40" name="have_biopsy" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -345,7 +345,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="A9. What is the highest level of school you have completed?" max_length="40" name="highest_level_of_school" type="choice">
+        <element choice="1" label="What is the highest level of school you have completed?" max_length="40" name="highest_level_of_school" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Currently in grade school" sequence="1" value="Currently in grade school"/>
                 <element inactive_on_update="false" label="Less than high school" sequence="2" value="Less than high school"/>
@@ -365,13 +365,13 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="A4. Do you consider yourself to be Hispanic or Latino?" max_length="40" name="hispanic_or_latino" type="choice">
+        <element choice="1" label="Do you consider yourself to be Hispanic or Latino?" max_length="40" name="hispanic_or_latino" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NO" value="NO"/>
                 <element inactive_on_update="false" label="YES" value="YES"/>
             </choice>
         </element>
-        <element choice="1" label="A10. Which category best represents your total household income?" max_length="40" name="household_income" type="choice">
+        <element choice="1" label="Which category best represents your total household income?" max_length="40" name="household_income" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Less than $10,000" sequence="1" value="Less than $10,000"/>
                 <element inactive_on_update="false" label="$10,000 to $19,999" sequence="2" value="$10,000 to $19,999"/>
@@ -697,9 +697,9 @@
                 <element inactive_on_update="false" label="IIQ Submitted" sequence="4" value="IIQ Submitted"/>
             </choice>
         </element>
-        <element label="Whose Information is represented here" max_length="32" name="iiq_subject" reference="x_naci_family_coho_family_history_details" reference_qual="javascript: getFamilyMembers();" type="reference" use_reference_qualifier="advanced"/>
+        <element label="What is the name of the person you are filling this out for?" max_length="32" name="iiq_subject" reference="x_naci_family_coho_family_history_details" reference_qual="javascript: getFamilyMembers();" type="reference" use_reference_qualifier="advanced"/>
         <element label="Inches" max_length="100" name="inches" type="string"/>
-        <element label="A11. How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
+        <element label="How many people, including yourself, did this income support?" max_length="100" name="income_support_count" type="string"/>
         <element choice="1" label="Individual Type" max_length="40" name="individual_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Proband" sequence="1" value="Proband"/>
@@ -950,7 +950,7 @@
                 <element inactive_on_update="false" label="I have been doing this a lot" sequence="40" value="4"/>
             </choice>
         </element>
-        <element choice="1" label="A6. Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
+        <element choice="1" label=" Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DON'T KNOW" value="DON'T KNOW"/>
                 <element inactive_on_update="false" label="NO" value="NO"/>
@@ -980,7 +980,7 @@
             </choice>
         </element>
         <element label="Last Update" max_length="100" name="last_update" type="string"/>
-        <element choice="1" label="A15. What is your current marital status?" max_length="40" name="marital_status" type="choice">
+        <element choice="1" label="What is your current marital status?" max_length="40" name="marital_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Single, not married" sequence="1" value="Single, not married"/>
                 <element inactive_on_update="false" label="Married" sequence="2" value="Married"/>
@@ -1145,7 +1145,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="A7. What is your national origin or ancestry?" max_length="40" name="origin_or_ancestry" type="choice">
+        <element choice="1" label="What is your national origin or ancestry?" max_length="40" name="origin_or_ancestry" type="choice">
             <choice>
                 <element inactive_on_update="false" label="United Kingdom" sequence="1" value="United Kingdom"/>
                 <element inactive_on_update="false" label="Ireland" sequence="2" value="Ireland"/>
@@ -1205,7 +1205,7 @@
         <element label="Ounces" max_length="100" name="ounces" type="string"/>
         <element label="Total amount of Months" max_length="100" name="pipe_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="pipe_total_amount_of_years" type="string"/>
-        <element label="A3. What is your place of birth (town/city)?" max_length="200" name="place_of_birth" type="string"/>
+        <element label="Place of Birth" max_length="200" name="place_of_birth" type="string"/>
         <element choice="1" label="Please rate what you believe your chance of getting cancer in your lifetime" max_length="40" name="please_rate_what_you_believe_your_chance_of_getting_cancer_in_your_lifetime" type="choice">
             <choice>
                 <element inactive_on_update="false" label="0" sequence="10" value="0"/>
@@ -1385,7 +1385,7 @@
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
-        <element choice="1" label="A5. What is your race?" max_length="40" name="race" type="choice">
+        <element choice="1" label="What is your race?" max_length="40" name="race" type="choice">
             <choice>
                 <element inactive_on_update="false" label="American Indian or Alaska Native" value="American Indian or Alaska Native"/>
                 <element inactive_on_update="false" label="Asian" value="Asian"/>
@@ -1417,7 +1417,7 @@
             </choice>
         </element>
         <element label="Your relationship to this person" max_length="100" name="relationship_to_this_person" type="string"/>
-        <element choice="1" label="A8. What religious group do you identify with?" max_length="40" name="religious_group" type="choice">
+        <element choice="1" label="What religious group do you identify with?" max_length="40" name="religious_group" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Catholic" sequence="1" value="Catholic"/>
                 <element inactive_on_update="false" label="Protestant" sequence="2" value="Protestant"/>
@@ -1471,14 +1471,14 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="B20b. Have you taken any prescription medications for more than 6 months?" max_length="40" name="take_more_than_6_months" type="choice">
+        <element choice="1" label="Have you taken any prescription medications for more than 6 months?" max_length="40" name="take_more_than_6_months" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="B20a. Are you currently taking or have you taken any prescription medication ?" max_length="40" name="taking_any_prescription_medication" type="choice">
+        <element choice="1" label="Are you currently taking or have you taken any prescription medication ?" max_length="40" name="taking_any_prescription_medication" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -1569,7 +1569,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="A12. Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">
+        <element choice="1" label="Have you ever worked for more than a year?" max_length="40" name="worked_more_than_a_year" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>

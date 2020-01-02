@@ -4,22 +4,22 @@
         <element label="Years" max_length="100" name="how_many_years" type="string"/>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="What is the name of the medication?" max_length="200" name="name_of_the_medication" type="string"/>
-        <element label="Number" max_length="100" name="number_of_medication" type="string"/>
+        <element label="Amount of medication taken" max_length="100" name="number_of_medication" type="string"/>
         <element label="Please Specify" max_length="200" name="reason_please_specify" type="string"/>
-        <element choice="1" label="What is the reason you are taking this medication?" max_length="500" name="reason_taking_medication" type="choice">
+        <element choice="1" label="Reason for taking this medication" max_length="500" name="reason_taking_medication" type="choice">
             <choice>
                 <element inactive_on_update="false" label="REASON" sequence="1" value="REASON"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="How many did/do you take per day? " max_length="40" name="take_per_day" type="choice">
+        <element choice="1" label="How is this medication taken? " max_length="40" name="take_per_day" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Pills or capsules" sequence="1" value="Pills or capsules"/>
                 <element inactive_on_update="false" label="Teaspoons" sequence="2" value="Teaspoons"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="How long altogether did you take this medication?" max_length="40" name="time_take_medication" type="choice">
+        <element choice="1" label="How long altogether has this medication been taken?" max_length="40" name="time_take_medication" type="choice">
             <choice>
                 <element inactive_on_update="false" label="More than 1 year" sequence="1" value="More than 1 year"/>
                 <element inactive_on_update="false" label="Less than 1 year" sequence="2" value="Less than 1 year"/>

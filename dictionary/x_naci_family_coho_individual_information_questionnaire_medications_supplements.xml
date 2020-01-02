@@ -3,16 +3,16 @@
         <element label="Dose" max_length="200" name="dose_of_medications_or_supplements" type="string"/>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Name of this Medications or Supplements" max_length="200" name="name_of_medications_or_supplements" type="string"/>
-        <element label="Number" max_length="200" name="number_of_months_or_years" type="string"/>
-        <element label="Number" max_length="100" name="number_of_supplements" type="string"/>
-        <element choice="1" label="How many did/do you usually take per week?" max_length="40" name="take_per_week" type="choice">
+        <element label="Months/Years" max_length="200" name="number_of_months_or_years" type="string"/>
+        <element label="Amount Taken per Week" max_length="100" name="number_of_supplements" type="string"/>
+        <element choice="1" label="How many is usually taken per week?" max_length="40" name="take_per_week" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Pills or capsules" sequence="1" value="Pills or capsules"/>
                 <element inactive_on_update="false" label="Teaspoons" sequence="2" value="Teaspoons"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="how long altogether did you take this product?" max_length="40" name="take_this_product" type="choice">
+        <element choice="1" label="How long altogether has this product been taken?" max_length="40" name="take_this_product" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Months" sequence="1" value="Months"/>
                 <element inactive_on_update="false" label="Years" sequence="2" value="Years"/>

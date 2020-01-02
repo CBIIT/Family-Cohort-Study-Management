@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire Surgery" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_surgery" type="collection">
-        <element label="Age when you had this surgery" max_length="100" name="age_surgery" type="string"/>
-        <element label="Date when you had this surgery" max_length="40" name="date_surgery" type="glide_date"/>
+        <element label="Age when this surgery occurred" max_length="100" name="age_surgery" type="string"/>
+        <element label="Date when this surgery occurred" max_length="40" name="date_surgery" type="glide_date"/>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Name and address of the facility where the surgery was performed" max_length="500" name="name_address_surgery" type="string"/>
-        <element label="What was the reason you had this surgery?" max_length="500" name="reason_surgery" type="string"/>
-        <element label="What type of surgery (name) did you have?" max_length="200" name="type_of_surgery" type="string"/>
-        <element choice="1" label="Do you know when you had this surgery ?" max_length="40" name="type_when_surgery" type="choice">
+        <element label="Reason for the surgery?" max_length="500" name="reason_surgery" type="string"/>
+        <element label="What type of surgery (name)?" max_length="200" name="type_of_surgery" type="string"/>
+        <element choice="1" label="Do you know when you this surgery occurred?" max_length="40" name="type_when_surgery" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DATE" sequence="1" value="DATE"/>
                 <element inactive_on_update="false" label="AGE" sequence="2" value="AGE"/>

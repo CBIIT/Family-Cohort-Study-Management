@@ -23,7 +23,7 @@
         <omit_filters>false</omit_filters>
         <omit_if_empty>false</omit_if_empty>
         <omit_links>false</omit_links>
-        <omit_new_button>false</omit_new_button>
+        <omit_new_button>true</omit_new_button>
         <related_list>x_naci_family_coho_family_history_details.family</related_list>
         <sys_class_name>sys_ui_list_control</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
@@ -31,7 +31,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>b2b91b54db01481054d8ff621f961995</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>x_naci_family_coho_family_id</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -40,6 +40,6 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_list_control_b2b91b54db01481054d8ff621f961995</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-07 14:31:09</sys_updated_on>
+        <sys_updated_on>2019-12-27 19:21:51</sys_updated_on>
     </sys_ui_list_control>
 </record_update>

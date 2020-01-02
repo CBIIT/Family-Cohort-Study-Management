@@ -14,7 +14,7 @@
         <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>A4. Do you consider yourself to be Hispanic or Latino?</column_label>
+        <column_label>Do you consider yourself to be Hispanic or Latino?</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-24 16:57:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8925d996dbc8005054d8ff621f9619ef</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>A4. Do you consider yourself to be Hispanic or Latino?</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Do you consider yourself to be Hispanic or Latino?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_hispanic_or_latino</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-24 19:30:19</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-27 20:20:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

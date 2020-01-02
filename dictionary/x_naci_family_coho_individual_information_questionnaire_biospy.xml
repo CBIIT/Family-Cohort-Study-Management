@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire Biospy" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_biospy" type="collection">
-        <element label="Age when you had this biopsy ?" max_length="200" name="age_had_this_biopsy" type="string"/>
-        <element label="Date when you had this biopsy ?" max_length="40" name="date_had_this_biopsy" type="glide_date"/>
-        <element choice="1" label="Do you know when you had this biopsy ?" max_length="40" name="date_or_age_had_this_biopsy" type="choice">
+        <element label="Age when this biopsy occurred?" max_length="200" name="age_had_this_biopsy" type="string"/>
+        <element label="Date when this biopsy occurred?" max_length="40" name="date_had_this_biopsy" type="glide_date"/>
+        <element choice="1" label="Do you know when this biopsy occurred?" max_length="40" name="date_or_age_had_this_biopsy" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DATE" sequence="1" value="DATE"/>
                 <element inactive_on_update="false" label="AGE" sequence="2" value="AGE"/>
@@ -11,8 +11,8 @@
         </element>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Please provide name and address of the facility where the biopsy was performed" max_length="500" name="name_and_address_of_the_facility_biopsy_was_performed" type="string"/>
-        <element label="What was the reason or symptom for which you had this biopsy ?" max_length="500" name="reason_or_symptom_had_this_biopsy" type="string"/>
-        <element label="Where on your body or in what organ was the biopsy performed ? " max_length="200" name="where_biopsy_performed" type="string"/>
+        <element label="What was the reason or symptom for which this biopsy occurred?" max_length="500" name="reason_or_symptom_had_this_biopsy" type="string"/>
+        <element label="Where on the body or in what organ was the biopsy performed ? " max_length="200" name="where_biopsy_performed" type="string"/>
         <index name="index">
             <element name="iiq_form"/>
         </index>

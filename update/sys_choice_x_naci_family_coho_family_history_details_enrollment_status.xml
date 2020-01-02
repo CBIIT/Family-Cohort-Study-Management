@@ -5,6 +5,25 @@
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
+            <label>New</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>5</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2019-12-30 14:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>adb89ce9dbc6c05054d8ff621f9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-30 14:43:01</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>new</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>enrollment_status</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>New Screener Received</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
@@ -42,7 +61,7 @@
             <dependent_value/>
             <element>enrollment_status</element>
             <hint/>
-            <inactive>false</inactive>
+            <inactive>true</inactive>
             <label>Awaiting Eligibility Review</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
@@ -51,9 +70,9 @@
             <sys_created_on>2019-11-21 19:31:47</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>efb46081db990c10b86770c08c961975</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-21 19:31:58</sys_updated_on>
+            <sys_updated_on>2019-12-30 14:43:27</sys_updated_on>
             <u_dependent_value_2/>
             <value>awaiting_eligibility_review</value>
         </sys_choice>
@@ -176,7 +195,7 @@
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Marked Ineligible</label>
+            <label>Ineligible</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
             <sequence>100</sequence>
@@ -184,9 +203,9 @@
             <sys_created_on>2019-11-21 19:34:48</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>036520c1db990c10b86770c08c96199e</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-21 19:34:58</sys_updated_on>
+            <sys_updated_on>2019-12-30 14:47:22</sys_updated_on>
             <u_dependent_value_2/>
             <value>mark_ineligible</value>
         </sys_choice>

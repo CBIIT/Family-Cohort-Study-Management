@@ -13,13 +13,14 @@
         <run_time>1970-01-01 15:00:00</run_time>
         <run_type>daily</run_type>
         <script><![CDATA[var enrollmentReminder = new GlideRecord ('x_naci_family_coho_family_history_details');
-enrollmentReminder.addEncodedQuery('enrollment_status=awaiting_enrollment_forms^ORenrollment_status=more_info_required^date_forms_requestedRELATIVEEE@dayofweek@ago@63^date_forms_requestedISNOTEMPTY');
+enrollmentReminder.addEncodedQuery('enrollment_status=awaiting_enrollment_forms^ORenrollment_status=more_info_required^date_forms_requestedRELATIVEEE@dayofweek@ago@63^date_forms_requestedISNOTEMPTY^forms_completed=false');
 enrollmentReminder.query();
 
 while (enrollmentReminder.next()){
 
 	enrollmentReminder.enrollment_status = 'no_response';
 	enrollmentReminder.comments = 'Setting the enrollment status to No Response due to incomplete enrollment forms after 9 weeks.';
+	enrollmentReminder.active = false;
 	enrollmentReminder.update();
 
 }]]></script>
@@ -28,7 +29,7 @@ while (enrollmentReminder.next()){
         <sys_created_on>2019-12-23 16:29:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8afd28d7dbb9081054d8ff621f96190a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Enrollment Set to No Response - 9 weeks</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -36,7 +37,7 @@ while (enrollmentReminder.next()){
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sysauto_script_8afd28d7dbb9081054d8ff621f96190a</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-23 18:44:14</sys_updated_on>
+        <sys_updated_on>2019-12-26 15:30:51</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

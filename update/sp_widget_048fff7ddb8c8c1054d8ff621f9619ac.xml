@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$location, $timeout, spModal, spUtil, $uibModal) {
+        <client_script><![CDATA[function($scope,$location, $http, spModal, spUtil, $uibModal) {
 	/* widget controller */
 	var c = this;
 	var s = $location.search();
@@ -558,8 +558,8 @@
 		var param = {};
 		param.sys_id = c.data.sys_id;
 		param.type = "adult";
-		param.section = -1;
-		param.submit = true;
+		param.section = "-1";
+		param.submit = '1';
 		$http({
 			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
 			method : "POST",
@@ -582,6 +582,7 @@
 		c.saveForm(function(){
 			c.validateAndSubmit(function(res){
 				if(res.status == '200'){
+					c.errors.push({index: '1', section: 'Introduction', message: 'Please fill in this field.'});
 					console.log('successful');
 					//$('#thank_you').show();
 				}
@@ -908,7 +909,15 @@
 .field-actual input{
   font-size: 16px;
 }
-.r-form-error-area li.active{
+.IIQ-form-error-area{
+    margin: 0px 15px;
+    font-size: 14px;
+    color: red;
+    background: #fbe1e5;
+    border-radius: 5px;
+  	padding: 10px;
+}
+.IIQ-form-error-area li.active{
   font-weight: bold;
 }
 </css>
@@ -963,7 +972,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>759</sys_mod_count>
+        <sys_mod_count>770</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -971,7 +980,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-23 21:58:49</sys_updated_on>
+        <sys_updated_on>2020-01-02 22:10:04</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
@@ -998,13 +1007,13 @@
     </ul>
   </div>
    <div class="right-side-content col-md-9">
-     <div class="r-form-error-area" style="padding: 10px;" ng-show="c.errors.length > 0">
+     <div class="panel-body IIQ-form-error-area" ng-show="c.errors.length > 0">
        <ul>
          <li ng-repeat="item in c.errors" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.section}}: {{item.message}}</li>
        </ul>
      </div>
-    <div class="panel-body" id="form_widget_1" ng-show="c.show_view_index == 1">
-      <div style="padding: 10px;border: 1px solid #ddd;border-radius: 5px 5px 0px 0px;border-bottom: 0px;" >
+    <div id="form_widget_1" ng-show="c.show_view_index == 1">
+      <div style="padding:10px;border: 1px solid #ddd;border-radius: 5px 5px 0px 0px;border-bottom: 0px;" >
         <h3 style="text-align:center;">
           NATIONAL CANCER INSTITUTE
           <br>
@@ -1084,7 +1093,7 @@
       </uib-accordion>
     </div>
 
-    <div class="panel-body" id="form_widget_3" ng-show="c.show_view_index == 3">
+    <div id="form_widget_3" ng-show="c.show_view_index == 3">
       <sp-widget widget="c.widget_3">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1096,7 +1105,7 @@
         <widget id="fcsms_iiq_form_cancer_list"></widget>
       </div>
     </div>
-    <div class="panel-body" id="form_widget_4" ng-show="c.show_view_index == 4">
+    <div id="form_widget_4" ng-show="c.show_view_index == 4">
       <sp-widget widget="c.widget_4">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1105,7 +1114,7 @@
         <widget id="fcsms_iiq_form_surgery_list"></widget>
       </div>
     </div>
-    <div class="panel-body" id="form_widget_5" ng-show="c.show_view_index == 5">
+    <div id="form_widget_5" ng-show="c.show_view_index == 5">
       <sp-widget widget="c.widget_5">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1118,14 +1127,14 @@
       </div>
     </div>
 
-    <div class="panel-body" id="form_widget_6" ng-show="c.show_view_index == 6">
+    <div id="form_widget_6" ng-show="c.show_view_index == 6">
       <sp-widget widget="c.widget_6">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
 
-    <div class="panel-body" id="form_widget_7" ng-show="c.show_view_index == 7">
+    <div id="form_widget_7" ng-show="c.show_view_index == 7">
       <sp-widget widget="c.widget_7">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1134,19 +1143,19 @@
         <widget id="fcsms_iiq_form_screening_test_list"></widget>
       </div>
     </div>
-    <div class="panel-body" id="form_widget_8" ng-show="c.show_view_index == 8">
+    <div id="form_widget_8" ng-show="c.show_view_index == 8">
       <sp-widget widget="c.widget_8">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
-    <div class="panel-body" id="form_widget_9" ng-show="c.show_view_index == 9">
+    <div id="form_widget_9" ng-show="c.show_view_index == 9">
       <sp-widget widget="c.widget_9">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
-    <div class="panel-body" id="form_widget_10" ng-show="c.show_view_index == 10">
+    <div id="form_widget_10" ng-show="c.show_view_index == 10">
       <sp-widget widget="c.widget_10">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1221,7 +1230,7 @@ Loading...
 </sp-widget>
 </div>
 -->
-    <div class="panel-body" id="form_widget_12" ng-show="c.show_view_index == 12">
+    <div id="form_widget_12" ng-show="c.show_view_index == 12">
       <sp-widget widget="c.widget_12">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1375,12 +1384,6 @@ Loading...
 
           </uib-accordion>
           </div>
-
-        <!-- <sp-widget widget="c.widget_15">
-<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-Loading...
-</sp-widget> -->
-
         <div ng-show="c.show_view_index == 16" class="div_shadow">
           <p style="padding: 10px 15px">
             The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
@@ -1402,13 +1405,13 @@ Loading...
             For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
           </p>
         </div>
-        <div class="panel-body" id="form_widget_17" ng-show="c.show_view_index == 17">
+        <div id="form_widget_17" ng-show="c.show_view_index == 17">
           <sp-widget widget="c.widget_17">
             <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
             Loading...
           </sp-widget>
         </div>
-        <div class="panel-body" id="form_widget_18" ng-show="c.show_view_index == 18">
+        <div id="form_widget_18" ng-show="c.show_view_index == 18">
           <sp-widget widget="c.widget_18">
             <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
             Loading...

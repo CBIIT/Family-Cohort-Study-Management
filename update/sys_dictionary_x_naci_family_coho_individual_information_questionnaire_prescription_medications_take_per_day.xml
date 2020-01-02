@@ -14,7 +14,7 @@
         <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>How many did/do you take per day? </column_label>
+        <column_label>How is this medication taken? </column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-27 15:59:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>10b46c1bdb8c8050b86770c08c961905</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>How many did/do you take per day? </sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>How is this medication taken? </sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_prescription_medications_take_per_day</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-04 23:15:36</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-30 16:34:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

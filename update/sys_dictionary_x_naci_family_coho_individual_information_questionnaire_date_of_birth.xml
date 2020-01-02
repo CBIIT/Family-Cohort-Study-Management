@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>A2. What is your date of birth?</column_label>
+        <column_label>Date of Birth</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-09-24 16:49:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a17355d2dbc8005054d8ff621f9619af</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>A2. What is your date of birth?</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Date of Birth</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_date_of_birth</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-24 19:29:54</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-12-27 20:19:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

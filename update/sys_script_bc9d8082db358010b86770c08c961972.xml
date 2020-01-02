@@ -9,7 +9,7 @@
         <action_query>false</action_query>
         <action_run_at>server</action_run_at>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>false</advanced>
         <application/>
@@ -50,7 +50,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>bc9d8082db358010b86770c08c961972</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Enroll Status to Packet Recieved proband</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -59,7 +59,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_bc9d8082db358010b86770c08c961972</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-19 16:55:29</sys_updated_on>
+        <sys_updated_on>2019-12-31 20:02:13</sys_updated_on>
         <template>enrollment_status=enrollment_packet_received^EQ</template>
         <when>before</when>
     </sys_script>

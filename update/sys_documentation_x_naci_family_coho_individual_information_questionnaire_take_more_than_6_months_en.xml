@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="take_more_than_6_months" label="B20b. Have you taken any prescription medications for more than 6 months?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+    <sys_documentation element="take_more_than_6_months" label="Have you taken any prescription medications for more than 6 months?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>take_more_than_6_months</element>
             <help/>
             <hint/>
-            <label>B20b. Have you taken any prescription medications for more than 6 months?</label>
+            <label>Have you taken any prescription medications for more than 6 months?</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <plural>B20b. Have you taken any prescription medications for more than 6 months?s</plural>
+            <plural>Have you taken any prescription medications for more than 6 months?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-27 18:48:37</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>648b8d5bdb40c050b86770c08c96191d</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_name>B20b. Have you taken any prescription medications for more than 6 months?</sys_name>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Have you taken any prescription medications for more than 6 months?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_take_more_than_6_months_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 18:50:28</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-30 16:19:21</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

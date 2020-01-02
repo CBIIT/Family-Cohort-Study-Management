@@ -2,12 +2,12 @@
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>study_panel_review</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.family_member_record.enrollment_status == 'new_screener_received' || current.family_member_record.enrollment_status == 'more_info_required' &amp;&amp; current.family_member_record.eligibility_status =='waiting_for_eligibility' </condition>
+        <condition>current.family_member_record.enrollment_status == 'new_screener_received' || current.family_member_record.enrollment_status == 'more_info_required' &amp;&amp; current.family_member_record.eligibility_status =='waiting_for_eligibility'</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -25,17 +25,42 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Submit for Study Panel Review</name>
-        <onclick/>
+        <name>Submit for Eligibility Review</name>
+        <onclick>submitForReview()</onclick>
         <order>-300</order>
-        <script><![CDATA[var updateFamRecord = new GlideRecord ('x_naci_family_coho_family_history_details');
-if (updateFamRecord.get(current.family_member_record.toString())){
-	
-	updateFamRecord.enrollment_status = 'study_panel_review';
-	updateFamRecord.update();	
+        <script><![CDATA[function submitForReview(){
+
+	g_form.getReference('family_member_record', function(gr){
+			
+		if (gr.more_info_requested.toString() == 'no'){
+			
+			alert('Because this is in the state of "More Information Required" you must contact the proband before submitting this to the study panel. You may submit to the study panel once the field "Has the person been contacted to obtain more info" is set to Yes.');
+			
+		} else {
+
+			gsftSubmit(null, g_form.getFormElement(), 'study_panel_review');
+		}
+
+	});
+
 }
 
-action.setRedirectURL(current);]]></script>
+
+if (typeof window == 'undefined')
+	reviewPhase();
+
+function reviewPhase(){
+
+	var updateFamRecord = new GlideRecord ('x_naci_family_coho_family_history_details');
+	if (updateFamRecord.get(current.family_member_record.toString())){
+
+		updateFamRecord.enrollment_status = 'study_panel_review';
+		updateFamRecord.update();	
+	}
+
+	action.setRedirectURL(current);
+
+}]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -46,8 +71,8 @@ action.setRedirectURL(current);]]></script>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>1c7a5a56db49001054d8ff621f961944</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>Submit for Study Panel Review</sys_name>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Submit for Eligibility Review</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -55,9 +80,9 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_action_1c7a5a56db49001054d8ff621f961944</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-20 14:43:57</sys_updated_on>
+        <sys_updated_on>2019-12-30 20:50:28</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
-        <ui11_compatible>true</ui11_compatible>
+        <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
 </record_update>

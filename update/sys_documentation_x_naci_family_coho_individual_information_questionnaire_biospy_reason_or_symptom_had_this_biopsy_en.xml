@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="reason_or_symptom_had_this_biopsy" label="What was the reason or symptom for which you had this biopsy ?" language="en" table="x_naci_family_coho_individual_information_questionnaire_biospy">
+    <sys_documentation element="reason_or_symptom_had_this_biopsy" label="What was the reason or symptom for which this biopsy occurred?" language="en" table="x_naci_family_coho_individual_information_questionnaire_biospy">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>reason_or_symptom_had_this_biopsy</element>
             <help/>
             <hint/>
-            <label>What was the reason or symptom for which you had this biopsy ?</label>
+            <label>What was the reason or symptom for which this biopsy occurred?</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire_biospy</name>
-            <plural>What was the reason or symptom for which you had this biopsy ?s</plural>
+            <plural>What was the reason or symptom for which this biopsy occurred?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-26 18:41:11</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>c230400fdbccc05054d8ff621f961921</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>What was the reason or symptom for which you had this biopsy ?</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>What was the reason or symptom for which this biopsy occurred?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_biospy_reason_or_symptom_had_this_biopsy_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 18:41:11</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-12-30 15:49:41</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>
