@@ -30,6 +30,54 @@
 	c.accordions.tab_2_A3 = false;
 	c.accordions.tab_2_A4 = false;
 	
+	c.validate = function(section, cb){
+		var param = {};
+		param.sys_id = c.data.sys_id;
+		param.type = "adult";
+		param.section = section;
+		param.submit = '0';
+		$http({
+			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
+			method : "POST",
+			beforeSend: function(xhr){},
+			headers: {'Content-Type': 'application/json'},
+			data: JSON.stringify(param),
+			processData: false
+		}).then(function(res){
+			var result = res.data.result;
+			if(cb){
+				cb(result);
+			}
+			
+		},function(error){
+			console.log(error);
+		});
+	};
+	
+	c.ValidateAndSubmit = function(cb){
+		var param = {};
+		param.sys_id = c.data.sys_id;
+		param.type = "adult";
+		param.section = "-1";
+		param.submit = '1';
+		$http({
+			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
+			method : "POST",
+			beforeSend: function(xhr){},
+			headers: {'Content-Type': 'application/json'},
+			data: JSON.stringify(param),
+			processData: false
+		}).then(function(res){
+			var result = res.data.result;
+			if(cb){
+				cb(result);
+			}
+			
+		},function(error){
+			console.log(error);
+		});
+	};
+	
 	c.showView = function(idx, sub){
 		//console.log("idx: " + idx + ", sub: " + sub);
 		c.biopsyDisplay = false;
@@ -46,6 +94,7 @@
 		if(idx == 1){
 			//show Introduction Page
 			c.current_form_idx = 'Introduction';
+			/*
 			if(!c.widget_1){
 
 				spUtil.get("widget-form", {
@@ -57,6 +106,7 @@
 					c.widget_1 = response;
 				})
 			}
+			*/
 		}
 		else if(idx == 2){
 			if(sub == undefined){
@@ -146,6 +196,23 @@
 					c.widget_3 = response;
 				})
 			}
+			else{
+				var have_biopsy = c.g_forms['SectionB1'].getValue('have_biopsy');
+				if(have_biopsy == 'YES'){
+					c.biopsyDisplay = true;
+				}
+				else{
+					c.biopsyDisplay = false;
+				}
+				var diagnosed_with_any_cancer = c.g_forms['SectionB1'].getValue('diagnosed_with_any_cancer');
+				if(diagnosed_with_any_cancer == 'YES'){
+					c.cancerDisplay = true;
+				}
+				else{
+					c.cancerDisplay = false;
+				}
+				
+			}
 		}
 		else if(idx == 4){
 			c.current_form_idx = 'SectionB2';
@@ -159,6 +226,15 @@
 					c.widget_4 = response;
 				})
 			}
+			else{
+				var have_any_surgery = c.g_forms['SectionB2'].getValue('have_any_surgery');
+				if(have_any_surgery == 'YES'){
+					c.surgeryDisplay = true;
+				}
+				else{
+					c.surgeryDisplay = false;
+				}
+			}
 		}
 		else if(idx == 5){
 			c.current_form_idx = 'SectionB3';
@@ -171,6 +247,16 @@
 					response.data.hideRelatedLists = true;
 					c.widget_5 = response;
 				})
+			}
+			else{
+				var take_more_than_6_months = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
+				var taking_any_prescription_medication = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
+				if(take_more_than_6_months == 'YES' || taking_any_prescription_medication == 'YES'){
+					c.medicationDisplay = true;
+				}
+				else{
+					c.medicationDisplay = false;
+				}
 			}
 		}
 		else if(idx == 6){
@@ -197,6 +283,15 @@
 					response.data.hideRelatedLists = true;
 					c.widget_7 = response;
 				})
+			}
+			else{
+				var had_screening_for_cancer = c.g_forms['SectionC'].getValue('had_screening_for_cancer');
+				if(had_screening_for_cancer == 'YES'){
+					c.screeningDisplay = true;
+				}
+				else{
+					c.screeningDisplay = false;
+				}
 			}
 		}
 		else if(idx == 8){
@@ -239,12 +334,15 @@
 			}
 		}
 		else if(idx == 11){
+			if(sub == undefined){
+				sub = 'tab_11_G1';
+			}
 			c.accordions.tab_11_G1 = false;
 			c.accordions.tab_11_G2 = false;
 			c.accordions.tab_11_G3 = false;
 			c.accordions.tab_11_G4 = false;
 			if (sub == 'tab_11_G1'){
-				c.accordions.tab_2_G1 = true;
+				c.accordions.tab_11_G1 = true;
 				c.current_form_idx = 'menstrual';
 				c.show_sub_view_index = 1;
 				if(!c.widget_11_G1){
@@ -274,7 +372,7 @@
 			} else if (sub == 'tab_11_G3'){
 				c.accordions.tab_11_G3 = true;
 				c.current_form_idx = 'fertility';
-				c.show_sub_view_index = 2;
+				c.show_sub_view_index = 3;
 				if(!c.widget_11_G3){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
@@ -288,7 +386,7 @@
 			} else if (sub == 'tab_11_G4'){
 				c.accordions.tab_11_G4 = true;
 				c.current_form_idx = 'birthcontrol';
-				c.show_sub_view_index = 2;
+				c.show_sub_view_index = 4;
 				if(!c.widget_11_G4){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
@@ -315,14 +413,32 @@
 					c.widget_12 = response;
 				})
 			}
+			else{
+				var reproRemoved = c.g_forms['SectionG2'].getValue('ever_had_your_ovaries_or_fallopian_tubes_removed');
+				var breastRemoved = c.g_forms['SectionG2'].getValue('have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer');
+				var hormones = c.g_forms['SectionG2'].getValue('were_you_ever_prescribed_female_hormones_around_the_time_of_menopause');
+				if(reproRemoved == 'yes'){
+					c.reproDisplay = true;
+				}
+				else{
+					c.reproDisplay = false;
+				}
+				if (breastRemoved == 'yes'){
+					c.breastDisplay = true;
+				}
+				else{
+					c.breastDisplay = false;
+				}
+				if (hormones == 'yes'){
+					c.hormoneDisplay = true;
+				}
+				else{
+					c.hormoneDisplay = false;
+				}
+			}
 		}
 		else if(idx == 13){
-			c.accordions.tab_11_G1 = false;
-
-			if(sub == 'tab_13_G1')
-				c.current_form_idx = 'SectionG3';
-			c.show_sub_view_index = 13;
-			c.accordions.tab_13_G1 = true;
+			c.current_form_idx = 'SectionG3';
 			if(!c.widget_13){
 				spUtil.get("widget-form", {
 					"sys_id": c.data.sys_id,
@@ -330,11 +446,14 @@
 					"view": 'SectionG3'
 				}).then(function(response) {
 					response.data.hideRelatedLists = true;
-					c.widget_13_G1 = response;
+					c.widget_13 = response;
 				})
 			}
 		}
 		else if(idx == 14){
+			if(sub == undefined){
+				sub = 'tab_14_H1';
+			}
 			c.accordions.tab_14_H1 = false;
 			c.accordions.tab_14_H2 = false;
 			c.accordions.tab_14_H3 = false;
@@ -342,7 +461,7 @@
 			c.current_form_idx = 'SectionH';
 			if (sub == 'tab_14_H1'){
 				c.current_form_idx = 'SectionH4';
-				c.show_sub_view_index = 14;
+				c.show_sub_view_index = 1;
 				c.accordions.tab_14_H1 = true;
 				if(!c.widget_14_H1){
 					spUtil.get("widget-form", {
@@ -356,7 +475,7 @@
 				}
 			} else if (sub == 'tab_14_H2'){
 				c.current_form_idx = 'SectionH5';
-				c.show_sub_view_index = 14;
+				c.show_sub_view_index = 1;
 				c.accordions.tab_14_H2 = true;
 				if(!c.widget_14_H2){
 					spUtil.get("widget-form", {
@@ -370,7 +489,7 @@
 				}
 			} else if (sub == 'tab_14_H3'){
 				c.current_form_idx = 'bodystress';
-				c.show_sub_view_index = 14;
+				c.show_sub_view_index = 3;
 				c.accordions.tab_14_H3 = true;
 				if(!c.widget_14_H3){
 					spUtil.get("widget-form", {
@@ -384,7 +503,7 @@
 				}
 			} else if (sub == 'tab_14_H4'){
 				c.current_form_idx = 'mindstress';
-				c.show_sub_view_index = 14;
+				c.show_sub_view_index = 4;
 				c.accordions.tab_14_H4 = true;
 				if(!c.widget_14_H4){
 					spUtil.get("widget-form", {
@@ -399,13 +518,16 @@
 			}
 		}
 		else if(idx == 15){
+			if(sub == undefined){
+				sub = 'tab_15_I1';
+			}
 			c.accordions.tab_15_I1 = false;
 			c.accordions.tab_15_I2 = false;
 			c.accordions.tab_15_I3 = false;
 			c.show_sub_view_index = 15;
 			if (sub == 'tab_15_I1'){
 				c.current_form_idx = 'SectionI';
-				c.show_sub_view_index = 15;
+				c.show_sub_view_index = 1;
 				c.accordions.tab_15_I1 = true;
 				if(!c.widget_15_I1){
 								
@@ -420,7 +542,7 @@
 				}
 			} else if (sub == 'tab_15_I2'){
 				c.current_form_idx = 'SectionI1';
-				c.show_sub_view_index = 15;
+				c.show_sub_view_index = 2;
 				c.accordions.tab_15_I2 = true;
 				if(!c.widget_15_I2){
 								
@@ -435,7 +557,7 @@
 				}
 			} else if (sub == 'tab_15_I3'){
 				c.current_form_idx = 'SectionI2';
-				c.show_sub_view_index = 15;
+				c.show_sub_view_index = 3;
 				c.accordions.tab_15_I3 = true;
 				if(!c.widget_15_I3){
 								
@@ -554,29 +676,7 @@
 		});	
 	};
 	
-	c.validateAndSubmit = function(cb){
-		var param = {};
-		param.sys_id = c.data.sys_id;
-		param.type = "adult";
-		param.section = "-1";
-		param.submit = '1';
-		$http({
-			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
-			method : "POST",
-			beforeSend: function(xhr){},
-			headers: {'Content-Type': 'application/json'},
-			data: JSON.stringify(param),
-			processData: false
-		}).then(function(res){
-			var result = res.data.result;
-			if(cb){
-				cb(result);
-			}
-			
-		},function(error){
-			console.log(error);
-		});
-	};
+	
 
 	c.submitForm = function(){
 		c.saveForm(function(){
@@ -621,6 +721,30 @@
 				}
 				else{
 					c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
+				}
+			}
+			else if(c.show_view_index == 11){
+				if(c.show_sub_view_index == 4){
+					c.showView(c.show_view_index + 1);
+				}
+				else{
+					c.showView(c.show_view_index, 'tab_11_G' + (c.show_sub_view_index + 1 ));
+				}
+			}
+			else if(c.show_view_index == 14){
+				if(c.show_sub_view_index == 4){
+					c.showView(c.show_view_index + 1);
+				}
+				else{
+					c.showView(c.show_view_index, 'tab_14_H' + (c.show_sub_view_index + 1 ));
+				}
+			}
+			else if(c.show_view_index == 15){
+				if(c.show_sub_view_index == 3){
+					c.showView(c.show_view_index + 1);
+				}
+				else{
+					c.showView(c.show_view_index, 'tab_15_I' + (c.show_sub_view_index + 1 ));
 				}
 			}
 			else{
@@ -811,9 +935,22 @@
 			c.setActions("SectionF", "10");
 			c.g_forms['SectionF'] = e.targetScope.getGlideForm();
 		}
-		else if(e.targetScope.formModel.view == "SectionG1"){
-			c.setActions("SectionG1", "11");
-			c.g_forms['SectionG1'] = e.targetScope.getGlideForm();
+		//G1: 'menstrual','pregnancy','fertility','birthcontrol'
+		else if(e.targetScope.formModel.view == "menstrual"){
+			c.setActions("menstrual", "11_G1");
+			c.g_forms['menstrual'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "pregnancy"){
+			c.setActions("pregnancy", "11_G2");
+			c.g_forms['pregnancy'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "fertility"){
+			c.setActions("fertility", "11_G3");
+			c.g_forms['fertility'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "birthcontrol"){
+			c.setActions("birthcontrol", "11_G4");
+			c.g_forms['birthcontrol'] = e.targetScope.getGlideForm();
 		}
 		else if (e.targetScope.formModel.view == "SectionG2"){
 			c.setActions("SectionG2", "12");
@@ -879,13 +1016,35 @@
 			c.setActions("SectionG3", "13");
 			c.g_forms['SectionG3'] = e.targetScope.getGlideForm();
 		}
-		else if(e.targetScope.formModel.view == "SectionH"){
-			c.setActions("SectionH", "14");
-			c.g_forms['SectionH'] = e.targetScope.getGlideForm();
+		//H: 'SectionH4''SectionH5''bodystress''mindstress'
+		else if(e.targetScope.formModel.view == "SectionH4"){
+			c.setActions("SectionH4", "14_H1");
+			c.g_forms['SectionH4'] = e.targetScope.getGlideForm();
 		}
-		else if(e.targetScope.formModel.view == "SectionH1"){
-			c.setActions("SectionH1", "15");
-			c.g_forms['SectionH1'] = e.targetScope.getGlideForm();
+		else if(e.targetScope.formModel.view == "SectionH5"){
+			c.setActions("SectionH5", "14_H2");
+			c.g_forms['SectionH5'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "bodystress"){
+			c.setActions("bodystress", "14_H3");
+			c.g_forms['bodystress'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "mindstress"){
+			c.setActions("mindstress", "14_H4");
+			c.g_forms['mindstress'] = e.targetScope.getGlideForm();
+		}
+		//I: 'SectionI''SectionI1''SectionI2'
+		else if(e.targetScope.formModel.view == "SectionI"){
+			c.setActions("SectionI", "15_I1");
+			c.g_forms['SectionI'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionI1"){
+			c.setActions("SectionI1", "15_I2");
+			c.g_forms['SectionI1'] = e.targetScope.getGlideForm();
+		}
+		else if(e.targetScope.formModel.view == "SectionI2"){
+			c.setActions("SectionI2", "15_I3");
+			c.g_forms['SectionI2'] = e.targetScope.getGlideForm();
 		}
 		else if(e.targetScope.formModel.view == "SectionH2"){
 			c.setActions("SectionH2", "16");
@@ -906,11 +1065,17 @@
   pointer-events:none;
   background-color: lightgray;
 }
+.right-side-content{
+  margin-bottom: 15px;
+}
 .field-actual input{
   font-size: 16px;
 }
+.widget_area .panel-heading{
+  display: none;
+}
 .IIQ-form-error-area{
-    margin: 0px 15px;
+    margin-bottom:15px;
     font-size: 14px;
     color: red;
     background: #fbe1e5;
@@ -972,7 +1137,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>770</sys_mod_count>
+        <sys_mod_count>842</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -980,7 +1145,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-02 22:10:04</sys_updated_on>
+        <sys_updated_on>2020-01-03 20:40:10</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
@@ -996,13 +1161,13 @@
       <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionD') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionD') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Tobacco Use</a></li>
       <li ng-class="{'active': c.show_view_index == 9}" ng-click="c.showView(9)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionE') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionE') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Alcohol Use</a></li>
       <li ng-class="{'active': c.show_view_index == 10}" ng-click="c.showView(10)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionF') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionF') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Physical Development</a></li>
-      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11, 'tab_11_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
+      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11, 'tab_11_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
       <li ng-class="{'active': c.show_view_index == 12}" ng-click="c.showView(12)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
-      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13, 'tab_13_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
-      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
-      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH1') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
+      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
+      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14, 'tab_14_H1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
+      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
       <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
-      <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
+      <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
       <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
     </ul>
   </div>
@@ -1012,7 +1177,7 @@
          <li ng-repeat="item in c.errors" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.section}}: {{item.message}}</li>
        </ul>
      </div>
-    <div id="form_widget_1" ng-show="c.show_view_index == 1">
+    <div class="widget_area" id="form_widget_1" ng-show="c.show_view_index == 1">
       <div style="padding:10px;border: 1px solid #ddd;border-radius: 5px 5px 0px 0px;border-bottom: 0px;" >
         <h3 style="text-align:center;">
           NATIONAL CANCER INSTITUTE
@@ -1027,33 +1192,26 @@
         <p>
           Completing the questions that follow takes about 45 minutes. Completing this questionnaire is voluntary. Your answers to these questions will help in our research effort. Since answering these questions might involve thinking about how Li-Fraumeni Syndrome has affected yourself and your family, it is possible that it might cause you to feel sad. You will have an opportunity to discuss these feelings with our clinic staff at the time of your visit. If you need to contact us, please call 1-800-518-8474.  
         </p>
+        <h3 style="text-align:center;">** You are filling this form for yourself.</h3>
+        <!--
         <sp-widget widget="c.widget_1">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
+				-->
       </div>
       
       <div style="background-color: #f5f5f5;border: 1px solid #ddd;border-radius:  0px 0px 5px 5px;height: 60px;padding: 10px 15px;">
+        <!--
         <button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>
+				-->
+        <button type="submit" ng-click="c.showView(2)" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Next</button>
       </div>
     </div>
 
-    <div style="" id="form_widget_2" ng-show="c.show_view_index == 2">
+    <div id="form_widget_2" ng-show="c.show_view_index == 2">
 
       <uib-accordion close-others="true">
-        <!--
-        <div uib-accordion-group id="form_widget_2_A1" class="panel-default" is-open="c.accordions.tab_2_A1">
-          <uib-accordion-heading>
-            <div ng-click="c.openAccordion(2, 'tab_2_A1')">
-              Relationship <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A1, 'fa fa-plus-square': !c.accordions.tab_2_A1}"></i>
-            </div>
-          </uib-accordion-heading>
-          <sp-widget widget="c.widget_2_A1">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-        -->
         <div uib-accordion-group id="form_widget_2_A2" class="panel-default" is-open="c.accordions.tab_2_A2">
           <uib-accordion-heading>
             <!--<div ng-click="c.openAccordion(2, 'tab_2_A2')">-->
@@ -1061,10 +1219,12 @@
               Questions 1 - 3 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A2, 'fa fa-plus-square': !c.accordions.tab_2_A2}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_2_A2">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area" >
+            <sp-widget widget="c.widget_2_A2" >
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
         <div uib-accordion-group id="form_widget_2_A3" class="panel-default" is-open="c.accordions.tab_2_A3">
           <uib-accordion-heading >
@@ -1072,10 +1232,12 @@
               Questions 4 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A3, 'fa fa-plus-square': !c.accordions.tab_2_A3}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_2_A3">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_2_A3">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
 
         <div uib-accordion-group id="form_widget_2_A4" class="panel-default" is-open="c.accordions.tab_2_A4">
@@ -1084,16 +1246,18 @@
               Questions 10 - 15 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A4, 'fa fa-plus-square': !c.accordions.tab_2_A4}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_2_A4">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_2_A4">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
 
       </uib-accordion>
     </div>
 
-    <div id="form_widget_3" ng-show="c.show_view_index == 3">
+    <div class="widget_area" id="form_widget_3" ng-show="c.show_view_index == 3">
       <sp-widget widget="c.widget_3">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1105,7 +1269,7 @@
         <widget id="fcsms_iiq_form_cancer_list"></widget>
       </div>
     </div>
-    <div id="form_widget_4" ng-show="c.show_view_index == 4">
+    <div class="widget_area" id="form_widget_4" ng-show="c.show_view_index == 4">
       <sp-widget widget="c.widget_4">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1114,7 +1278,7 @@
         <widget id="fcsms_iiq_form_surgery_list"></widget>
       </div>
     </div>
-    <div id="form_widget_5" ng-show="c.show_view_index == 5">
+    <div class="widget_area" id="form_widget_5" ng-show="c.show_view_index == 5">
       <sp-widget widget="c.widget_5">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1127,14 +1291,14 @@
       </div>
     </div>
 
-    <div id="form_widget_6" ng-show="c.show_view_index == 6">
+    <div class="widget_area" id="form_widget_6" ng-show="c.show_view_index == 6">
       <sp-widget widget="c.widget_6">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
 
-    <div id="form_widget_7" ng-show="c.show_view_index == 7">
+    <div class="widget_area" id="form_widget_7" ng-show="c.show_view_index == 7">
       <sp-widget widget="c.widget_7">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
@@ -1143,26 +1307,26 @@
         <widget id="fcsms_iiq_form_screening_test_list"></widget>
       </div>
     </div>
-    <div id="form_widget_8" ng-show="c.show_view_index == 8">
+    <div class="widget_area" id="form_widget_8" ng-show="c.show_view_index == 8">
       <sp-widget widget="c.widget_8">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
-    <div id="form_widget_9" ng-show="c.show_view_index == 9">
+    <div class="widget_area" id="form_widget_9" ng-show="c.show_view_index == 9">
       <sp-widget widget="c.widget_9">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
-    <div id="form_widget_10" ng-show="c.show_view_index == 10">
+    <div class="widget_area" id="form_widget_10" ng-show="c.show_view_index == 10">
       <sp-widget widget="c.widget_10">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
     </div>
 
-    <div style="" id="form_widget_11" ng-show="c.show_view_index == 11">
+    <div id="form_widget_11" ng-show="c.show_view_index == 11">
 
       <uib-accordion close-others="true">
         <div uib-accordion-group id="form_widget_11_G1" class="panel-default" is-open="c.accordions.tab_11_G1">
@@ -1171,13 +1335,13 @@
               Menstrual <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G1, 'fa fa-plus-square': !c.accordions.tab_11_G1}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_11_G1">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_11_G1">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
-
-
 
         <div uib-accordion-group id="form_widget_11_G2" class="panel-default" is-open="c.accordions.tab_11_G2">
           <uib-accordion-heading>
@@ -1185,13 +1349,13 @@
               Pregnancy <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G2, 'fa fa-plus-square': !c.accordions.tab_11_G2}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_11_G2">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_11_G2">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
-
-
 
         <div uib-accordion-group id="form_widget_11_G3" class="panel-default" is-open="c.accordions.tab_11_G3">
           <uib-accordion-heading>
@@ -1199,13 +1363,13 @@
               Fertility <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G3, 'fa fa-plus-square': !c.accordions.tab_11_G3}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_11_G3">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_11_G3">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
-
-
 
         <div uib-accordion-group id="form_widget_11_G4" class="panel-default" is-open="c.accordions.tab_11_G4">
           <uib-accordion-heading>
@@ -1213,65 +1377,39 @@
               Birth Control <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G4, 'fa fa-plus-square': !c.accordions.tab_11_G4}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_11_G4">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_11_G4">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
       </uib-accordion>
 
     </div>
 
-
-    <!-- <div class="panel-body" id="form_widget_11" ng-show="c.show_view_index == 11">
-<sp-widget widget="c.widget_11">
-<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-Loading...
-</sp-widget>
-</div>
--->
-    <div id="form_widget_12" ng-show="c.show_view_index == 12">
+    <div class="widget_area" id="form_widget_12" ng-show="c.show_view_index == 12">
       <sp-widget widget="c.widget_12">
         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
         Loading...
       </sp-widget>
+      <div ng-show="c.reproDisplay" class="div-inset-list">
+        <widget id="fcsms_iiq_form_reproductive_removal"></widget>
+      </div>
+      <div ng-show="c.breastDisplay" class="div-inset-list">
+        <widget id="fcsms_iiq_breast_removal"></widget>
+      </div>
+      <div ng-show="c.hormoneDisplay" class="div-inset-list">
+        <widget id="fcsms_iiq_female_hormones"></widget>
+      </div>
     </div>
-    <div ng-show="c.reproDisplay" class="div-inset-list">
-      <widget id="fcsms_iiq_form_reproductive_removal"></widget>
+    
+    <div class="widget_area" id="form_widget_13" ng-show="c.show_view_index == 13">
+      <sp-widget widget="c.widget_13">
+        <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+        Loading...
+      </sp-widget>
     </div>
-    <div ng-show="c.breastDisplay" class="div-inset-list">
-      <widget id="fcsms_iiq_breast_removal"></widget>
-    </div>
-    <div ng-show="c.hormoneDisplay" class="div-inset-list">
-      <widget id="fcsms_iiq_female_hormones"></widget>
-    </div>
-
-
-    <!-- <div class="panel-body" id="form_widget_13" ng-show="c.show_view_index == 13">
-<sp-widget widget="c.widget_13">
-<i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-Loading...
-</sp-widget>
-</div> -->
-
-    <div style="" id="form_widget_13" ng-show="c.show_view_index == 13">
-
-      <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_13_G1" class="panel-default" is-open="c.accordions.tab_13_G1">
-          <uib-accordion-heading>
-            <div ng-click="c.openAccordion(13, 'tab_13_G1')">
-              Section <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_13_G1, 'fa fa-plus-square': !c.accordions.tab_13_G1}"></i>
-            </div>
-          </uib-accordion-heading>
-          <sp-widget widget="c.widget_13_G1">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div> 
-      </uib-accordion>
-
-    </div>
-
 
 
     <div ng-show="c.show_view_index == 14" class="div_shadow">
@@ -1280,7 +1418,7 @@ Loading...
       </p>
     </div>
 
-    <div style="" id="form_widget_14" ng-show="c.show_view_index == 14">
+    <div id="form_widget_14" ng-show="c.show_view_index == 14">
 
       <uib-accordion close-others="true">
         <div uib-accordion-group id="form_widget_14_H1" class="panel-default" is-open="c.accordions.tab_14_H1">
@@ -1289,10 +1427,12 @@ Loading...
               Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H1, 'fa fa-plus-square': !c.accordions.tab_14_H1}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_14_H1">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_14_H1">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
 
         <div uib-accordion-group id="form_widget_14_H2" class="panel-default" is-open="c.accordions.tab_14_H2">
@@ -1301,10 +1441,12 @@ Loading...
               Questions 5 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H2, 'fa fa-plus-square': !c.accordions.tab_14_H2}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_14_H2">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_14_H2">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
 
         <div uib-accordion-group id="form_widget_14_H3" class="panel-default" is-open="c.accordions.tab_14_H3">
@@ -1313,10 +1455,12 @@ Loading...
               Questions 10 - 14 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H3, 'fa fa-plus-square': !c.accordions.tab_14_H3}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_14_H3">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_14_H3">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
 
         <div uib-accordion-group id="form_widget_14_H4" class="panel-default" is-open="c.accordions.tab_14_H4">
@@ -1325,10 +1469,12 @@ Loading...
               Questions 15 - 18 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H4, 'fa fa-plus-square': !c.accordions.tab_14_H4}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_14_H4">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_14_H4">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div>
       </uib-accordion>
     </div>
@@ -1339,7 +1485,7 @@ Loading...
       </p>
     </div>
 
-    <div style="" id="form_widget_15" ng-show="c.show_view_index == 15">
+    <div id="form_widget_15" ng-show="c.show_view_index == 15">
 
       <uib-accordion close-others="true">
         <div uib-accordion-group id="form_widget_15_I1" class="panel-default" is-open="c.accordions.tab_15_I1">
@@ -1348,76 +1494,77 @@ Loading...
               Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I1, 'fa fa-plus-square': !c.accordions.tab_15_I1}"></i>
             </div>
           </uib-accordion-heading>
-          <sp-widget widget="c.widget_15_I1">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
+          <div class="widget_area">
+            <sp-widget widget="c.widget_15_I1">
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
         </div> 
 
-        <uib-accordion close-others="true">
-          <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2">
+        <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2">
             <uib-accordion-heading>
               <div ng-click="c.openAccordion(15, 'tab_15_I2')">
                 Questions 5 - 7 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I2, 'fa fa-plus-square': !c.accordions.tab_15_I2}"></i>
               </div>
             </uib-accordion-heading>
-            <sp-widget widget="c.widget_15_I2">
-              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-              Loading...
-            </sp-widget>
+            <div class="widget_area">
+              <sp-widget widget="c.widget_15_I2">
+                <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+                Loading...
+              </sp-widget>
+            </div>
           </div> 
-
-          <uib-accordion close-others="true">
-            <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3">
+				
+        <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3">
               <uib-accordion-heading>
                 <div ng-click="c.openAccordion(15, 'tab_15_I3')">
                   Questions 8 - 10 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I3, 'fa fa-plus-square': !c.accordions.tab_15_I3}"></i>
                 </div>
               </uib-accordion-heading>
-              <sp-widget widget="c.widget_15_I3">
-                <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-                Loading...
-              </sp-widget>
-            </div> 
-
-
-
-          </uib-accordion>
-          </div>
-        <div ng-show="c.show_view_index == 16" class="div_shadow">
-          <p style="padding: 10px 15px">
-            The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
-          </p>
-        </div>
-        <div class="panel-body" id="form_widget_16" ng-show="c.show_view_index == 16">
-          <sp-widget widget="c.widget_16">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-        <div ng-show="c.show_view_index == 17" class="div_shadow">
-          <p style="padding: 10px 15px">
-            The following questions are about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please select the response that best describes the support of this person or group.
-          </p>
-        </div>
-        <div ng-show="c.show_view_index == 17" class="div_shadow">
-          <p style="padding: 10px 15px">
-            For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
-          </p>
-        </div>
-        <div id="form_widget_17" ng-show="c.show_view_index == 17">
-          <sp-widget widget="c.widget_17">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-        <div id="form_widget_18" ng-show="c.show_view_index == 18">
-          <sp-widget widget="c.widget_18">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-        </div>
+              <div class="widget_area">
+                <sp-widget widget="c.widget_15_I3">
+                  <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+                  Loading...
+                </sp-widget>
+              </div>
+            </div>
+      </uib-accordion>
+     </div>
+     <div ng-show="c.show_view_index == 16" class="div_shadow">
+       <p style="padding: 10px 15px">
+         The following questions ask about ways you've been coping with the stress in your life since you found out that you or a family member had cancer, or may be at increased risk of having cancer. There are many ways to try to deal with problems. These items ask what you've been doing to cope with this one. Each item says something about a particular way of coping. We want to know to what extent you've been doing what the item says. Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it. Please select response that best describes how often you have been doing a certain thing to cope.  
+       </p>
+     </div>
+     <div class="widget_area" id="form_widget_16" ng-show="c.show_view_index == 16">
+       <sp-widget widget="c.widget_16">
+         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+         Loading...
+       </sp-widget>
+     </div>
+     <div ng-show="c.show_view_index == 17" class="div_shadow">
+       <p style="padding: 10px 15px">
+         The following questions are about people who give you personal support. Please read the following list and decide how much each person (or group of persons) is providing support for you at this time in your life. Please select the response that best describes the support of this person or group.
+       </p>
+     </div>
+     <div ng-show="c.show_view_index == 17" class="div_shadow">
+       <p style="padding: 10px 15px">
+         For the purposes of these questions, a supportive person is defined as one who will listen to you, will back you up when you are in trouble, or is helpful (for example, they may remind you to make an appointment with a doctor or they may take care of your children while you’re at the doctor’s office). 
+       </p>
+     </div>
+     <div class="widget_area" id="form_widget_17" ng-show="c.show_view_index == 17">
+       <sp-widget widget="c.widget_17">
+         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+         Loading...
+       </sp-widget>
+     </div>
+     <div class="widget_area" id="form_widget_18" ng-show="c.show_view_index == 18">
+       <sp-widget widget="c.widget_18">
+         <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+         Loading...
+       </sp-widget>
+     </div>
+    </div>
   </div>
 </div>
 <div id="saving-data-modal" style="display: none;">

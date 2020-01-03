@@ -10,7 +10,7 @@
 	c.show_view_index = 1;
 	var saved_arr = c.data.saved_section == null ? []: c.data.saved_section.toString().split(' ');
 	setProgressBar(saved_arr);
-	
+
 	$scope.$on('spModel.fields.rendered', function(event) {
 		var g_form = event.targetScope.getGlideForm()
 		var view = event.targetScope.formModel.view;
@@ -141,6 +141,21 @@
 
 	$scope.submitForm = function(form){
 		$scope.saveForm(form);
+		validation();
+	}
+	
+	function validation(){
+		$scope.server.get({
+			action: 'validate'
+		}).then(function(resp){
+			console.log(resp.data.error);
+			c.errorFhq = resp.data.error;
+			if(c.errorFhq == null || c.errorFhq == 0){
+				//submit intake form
+				spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
+				});
+			}
+		});
 	}
 
 	function setProgressBar(saved_arr){
@@ -218,6 +233,18 @@ div .panel-heading{
 	background-color: #193670;
   color:white;
   font-size: 15px;
+}
+.r-form-error-area {
+    width: 96%;
+    margin: auto;
+    font-size: 14px;
+    color: red;
+    background: #fbe1e5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.r-form-error-area li.active {
+   font-weight: bold; 
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -243,6 +270,7 @@ div .panel-heading{
 	gr.next();
 	var sys_id = gr.sys_id.toString();
 	data.id = sys_id;
+	data.error = [];
 	
 	if(input){
 		if(input.action == 'update'){
@@ -275,6 +303,61 @@ div .panel-heading{
 			}
 			gr2.update();
 		}
+		if(input.action == 'validate'){
+			var gr3 = new GlideRecord('x_naci_family_coho_family_history_question');
+					gr3.get(sys_id);
+			//validate form 2
+			if(gr3.birthday == null || gr3.birthday.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Demographic Information";
+				item.message = "Date of Birth is required field";
+				data.error.push(item);
+			}
+			if(gr3.sex == null || gr3.sex.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Demographic Information";
+				item.message = "Research Subject's biological gendar is required field";
+				data.error.push(item);
+			}
+			//validate form 3
+			if(gr3.raised_by_parent != null && gr3.raised_by_parent.toString() == 'Yes'){
+				if((gr3.raised_by1 == null ||  gr3.raised_by1.toString().trim().length == 0) && (gr3.raised_by2 == null ||  gr3.raised_by2.toString().trim().length == 0)){
+					var item = {};
+					item.index = 3;
+					item.page = "Family Historic Questionaire 1";
+					item.message = "If you are raised by someone other than your parents, at lease one name is required";
+					data.error.push(item);
+				}
+				if((gr3.raised_by1_relationship == null ||  gr3.raised_by1_relationship.toString().trim().length == 0) && (gr3.raised_by2_relationship == null ||  gr3.raised_by2_relationship.toString().trim().length == 0)){
+					var item = {};
+					item.index = 3;
+					item.page = "Family Historic Questionaire 1";
+					item.message = "If you are raised by someone other than your parents, at lease one relationship is required";
+					data.error.push(item);
+				}
+			}
+			//validate form 3 continue
+			if(gr3.cancer_diagnosis_by_physician != null && gr3.cancer_diagnosis_by_physician.toString() == 'Yes'){
+				if(gr3.cancer_type == null || gr3.cancer_type.toString().trim().length == 0){
+					var item = {};
+					item.index = 3;
+					item.page = "Family Historic Questionaire 1";
+					item.message = "If the Physician has stated you have/had cancer, at least one cancer type is required";
+					data.error.push(item);
+				}
+			}
+			//validate form 4 
+			if(gr3.marital_status == null || gr3.marital_status.toString().trim().length == 0 ){
+				var item = {};
+				item.index = 4;
+				item.page = "Family Historic Questionaire 2";
+				item.message = "The marital status is required field";
+				data.error.push(item);
+			}
+			return data.error;
+		}
 	}
 	
 	data.widget_1 = $sp.getWidget('widget-form', {
@@ -303,15 +386,15 @@ div .panel-heading{
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>310</sys_mod_count>
+        <sys_mod_count>348</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 16:52:58</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-03 20:20:40</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 22px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
@@ -326,6 +409,11 @@ div .panel-heading{
       </ul>   
     </div>
     <div class="right-side-content col-md-9">
+      <div class="r-form-error-area" style="padding: 10px;" ng-show="c.errorFhq.length > 0">
+        <ul>
+          <li ng-repeat="item in c.errorFhq" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.page}}: &nbsp;&nbsp;{{item.message}}</li>
+        </ul>
+      </div>
     <div ng-show="c.show_view_index == 1" class="div_shadow">
       <div style="padding: 10px;" class="clearfix">
         <sp-widget widget="c.data.widget_1">

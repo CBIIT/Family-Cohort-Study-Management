@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="ive_been_taking_action_to_try_to_make_the_situation_better" table="x_naci_family_coho_individual_information_questionnaire">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="proxy_phone_number" table="x_naci_family_coho_family_history_details">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice>1</choice>
+        <calculation/>
+        <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>I've been taking action to try to make the situation better</column_label>
+        <column_label>Proxy Phone Number</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,15 +22,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>ive_been_taking_action_to_try_to_make_the_situation_better</element>
+        <element>proxy_phone_number</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Choice">choice</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_naci_family_coho_individual_information_questionnaire</name>
+        <name>x_naci_family_coho_family_history_details</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -52,18 +47,18 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
-        <sys_created_on>2019-10-15 19:30:20</sys_created_on>
+        <sys_created_on>2020-01-03 16:52:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ed714285dba4cc10b86770c08c961959</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>I've been taking action to try to make the situation better</sys_name>
+        <sys_id>fcbcd1b6db4a0810b86770c08c961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Proxy Phone Number</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_ive_been_taking_action_to_try_to_make_the_situation_better</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-03 20:06:53</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_naci_family_coho_family_history_details_proxy_phone_number</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-03 16:52:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

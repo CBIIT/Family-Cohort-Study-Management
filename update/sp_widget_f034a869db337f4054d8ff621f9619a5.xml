@@ -151,12 +151,10 @@
 			}).then(function(resp){
 				console.log(resp.data.error);
 				c.errorIntake = resp.data.error;
-				c.errorIntake = [];
 				if(c.errorIntake == null || c.errorIntake == 0){
 					//submit intake form
 					spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
-            alert('submitted');
-						$('#thank_you').show();
+            			$('#thank_you').show();
 					});
 				}
 			});
@@ -596,7 +594,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>908</sys_mod_count>
+        <sys_mod_count>909</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -604,7 +602,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-02 21:38:03</sys_updated_on>
+        <sys_updated_on>2020-01-03 14:30:04</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">

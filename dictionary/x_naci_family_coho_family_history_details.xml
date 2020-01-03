@@ -92,6 +92,16 @@
         </element>
         <element label="Phone" max_length="20" name="phone" type="string"/>
         <element label="Proband Screener" max_length="32" name="proband_screener" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
+        <element label="Proxy Email Address" max_length="80" name="proxy_email_address" type="string"/>
+        <element label="Proxy First Name" max_length="80" name="proxy_first_name" type="string"/>
+        <element label="Proxy Last Name" max_length="80" name="proxy_last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Proxy Phone Number" max_length="40" name="proxy_phone_number" type="string"/>
+        <element choice="3" default="no" label="Does this person need a proxy" max_length="40" name="proxy_required" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="10" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="20" value="no"/>
+            </choice>
+        </element>
         <element choice="1" label="Relationship to You" max_length="100" name="relationship_to_you" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Proband" sequence="5" value="proband"/>

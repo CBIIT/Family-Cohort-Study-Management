@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="proxy_required" table="x_naci_family_coho_family_history_details" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proxy_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Yes</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>10</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-03 16:11:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4963d57adb0a0810b86770c08c9619f3</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-03 16:11:50</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>yes</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proxy_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No</label>
+            <language>en</language>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sequence>20</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-03 16:11:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0f6311badb0a0810b86770c08c96198d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-03 16:12:08</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>no</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>proxy_required</element>
+            <name>x_naci_family_coho_family_history_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-03 16:11:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>f6639d7adb0a0810b86770c08c961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>proxy_required</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_choice_x_naci_family_coho_family_history_details_proxy_required</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-03 16:11:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -750,7 +750,7 @@
                 <element inactive_on_update="false" label="I have been doing this a lot" sequence="40" value="4"/>
             </choice>
         </element>
-        <element choice="1" label="Ive been criticizing myself" max_length="40" name="ive_been_criticizing_myself" type="choice">
+        <element choice="1" label="I've been criticizing myself" max_length="40" name="ive_been_criticizing_myself" type="choice">
             <choice>
                 <element inactive_on_update="false" label="I haven't been doing it at all" sequence="10" value="1"/>
                 <element inactive_on_update="false" label="I have been doing it a little bit" sequence="20" value="2"/>
@@ -854,7 +854,7 @@
                 <element inactive_on_update="false" label="I have been doing this a lot" sequence="40" value="4"/>
             </choice>
         </element>
-        <element choice="1" label="Ive been taking action to try to make the situation better" max_length="40" name="ive_been_taking_action_to_try_to_make_the_situation_better" type="choice">
+        <element choice="1" label="I've been taking action to try to make the situation better" max_length="40" name="ive_been_taking_action_to_try_to_make_the_situation_better" type="choice">
             <choice>
                 <element inactive_on_update="false" label="I haven't been doing it at all" sequence="10" value="1"/>
                 <element inactive_on_update="false" label="I have been doing it a little bit" sequence="20" value="2"/>
@@ -902,7 +902,7 @@
                 <element inactive_on_update="false" label="I have been doing this a lot" sequence="40" value="4"/>
             </choice>
         </element>
-        <element choice="1" label="Ive been turning to work or other activities to take my mind off things" max_length="40" name="ive_been_turning_to_work_or_other_activities_to_take_my_mind_off_things" type="choice">
+        <element choice="1" label="I've been turning to work or other activities to take my mind off things" max_length="40" name="ive_been_turning_to_work_or_other_activities_to_take_my_mind_off_things" type="choice">
             <choice>
                 <element inactive_on_update="false" label="I haven't been doing it at all" sequence="10" value="1"/>
                 <element inactive_on_update="false" label="I have been doing it a little bit" sequence="20" value="2"/>
