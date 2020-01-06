@@ -7,12 +7,11 @@
 	
 	var s = $location.search();
 	var start_interval = true;
-	c.oldVersion = false;
 	
-	console.log(s.type);
+	console.log(c.data.type);
 	
-	if(s.type == 'video'){
-		c.oldVersion = true;
+	if(c.data.type == 'video'){
+		$("#image_area").hide();
 		$("#slideshow_video > div:gt(0)").hide();
 	
 		setInterval(function() {
@@ -27,6 +26,7 @@
 		},  5000);
 	}
 	else{
+		$("#video_area").hide();
 		$("#slideshow > div:gt(0)").hide();
 	
 		setInterval(function() {
@@ -40,6 +40,7 @@
 			}
 		},  5000);
 	}
+	
 	
 	
 	
@@ -129,14 +130,19 @@
         <option_schema/>
         <public>true</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var str = gs.action.getGlideURI();
+	data.type = str.get('type') ? str.get('type') : 'image';
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-10-28 13:40:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4c4e6385dbf44050b86770c08c9619ee</sys_id>
-        <sys_mod_count>120</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>FCSMS Landing</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -144,23 +150,10 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_4c4e6385dbf44050b86770c08c9619ee</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 18:30:06</sys_updated_on>
+        <sys_updated_on>2020-01-06 20:25:40</sys_updated_on>
         <template><![CDATA[<div class="main-content">
-  <div style="display:none;">
-    <div class="row slideshow_video" id="slideshow_video">
-      <div class="slot-image">
-        <img src="FCSMS-Landing-image-3.jpg" width="1170" />
-      </div>
-      <div id="video-1" class="slot-video">
-        <video alt="Three generation family walk in meadow at sunset - Royalty-free Family Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/three-generation-family-walk-in-meadow-at-sunset-video-id680068768"></video>
-      </div>
-      <div id="video-2">
-        <video alt="The construction of particles in the rotating DNA of a luminous molecule on a orange background - Royalty-free DNA Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/the-construction-of-particles-in-the-rotating-dna-of-a-luminous-on-a-video-id975217100"></video>
-      </div>
-      
-    </div>
-  </div>
-  <div  style="display:block;">
+  
+  <div id="image_area">
     <div class="row slideshow" id="slideshow">
       <div  id="image-1" class="slot-video">
           <img src="FCSMS-Landing-image-1.jpg" width="1170" />
@@ -200,7 +193,19 @@
       </div>
     </div>
   </div>
-	
+	<div id="video_area">
+    <div class="row slideshow" id="slideshow_video" style="height: 670px;">
+      <div id="video-1" class="slot-video">
+        <video alt="Three generation family walk in meadow at sunset - Royalty-free Family Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/three-generation-family-walk-in-meadow-at-sunset-video-id680068768"></video>
+      </div>
+      <div id="video-2">
+        <video alt="The construction of particles in the rotating DNA of a luminous molecule on a orange background - Royalty-free DNA Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/the-construction-of-particles-in-the-rotating-dna-of-a-luminous-on-a-video-id975217100"></video>
+      </div>
+      <div class="slot-image">
+         <img src="FCSMS-Landing-image-3-video.jpg" width="1170" />
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="triangle-down">
 		</div>

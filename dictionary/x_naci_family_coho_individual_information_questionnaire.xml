@@ -971,7 +971,7 @@
         </element>
         <element label="Age" max_length="3" name="last_period_age" type="string"/>
         <element label="Date" max_length="40" name="last_period_date" type="glide_date"/>
-        <element choice="1" label="Last regular menstrual period (Please do not include occastional spotting)?" max_length="40" name="last_regular_period" type="choice">
+        <element choice="1" label="Last regular menstrual period (Please do not include occasional spotting)?" max_length="40" name="last_regular_period" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Within the past 6 months" sequence="10" value="past_6_months"/>
                 <element inactive_on_update="false" label="Between 6 months and one year ago" sequence="20" value="six_months_to_one_year"/>
