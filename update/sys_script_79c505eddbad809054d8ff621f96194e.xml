@@ -43,7 +43,7 @@
 
 	//Query the family members table for all family members in this family
 	var famMemberLoop = new GlideRecord ('x_naci_family_coho_family_history_details');
-	famMemberLoop.addQuery('family', id);
+	famMemberLoop.addQuery('family_historic_qustion_id', id);
 	famMemberLoop.query();
 
 	//First check for relationships where the person is not a child, grandchild or sibling and get their generation id and family member id from the properties
@@ -191,7 +191,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>79c505eddbad809054d8ff621f96194e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Set Family ID Numbers</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -200,7 +200,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_79c505eddbad809054d8ff621f96194e</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-26 19:53:52</sys_updated_on>
+        <sys_updated_on>2020-01-06 18:49:44</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

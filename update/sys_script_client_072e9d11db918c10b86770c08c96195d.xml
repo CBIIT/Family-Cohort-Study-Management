@@ -39,7 +39,8 @@
 		changeButtonColor('more_info_required', color);
 		changeButtonColor('direct_decline', color);
 		changeButtonColor('enrollment_complete', color);
-
+		changeButtonColor('revert_to_new', color);
+		changeButtonColor('consent_received', color);
 
 	});
 
@@ -60,7 +61,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>072e9d11db918c10b86770c08c96195d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Set UI Action Colors</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -69,7 +70,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_072e9d11db918c10b86770c08c96195d</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-20 15:26:14</sys_updated_on>
+        <sys_updated_on>2020-01-06 17:41:12</sys_updated_on>
         <table>x_naci_family_coho_family_history_details</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

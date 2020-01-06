@@ -74,6 +74,7 @@
 			action: 'add',
 			record: record
 		}).then(function(){
+			c.g_form.$private.userState.clearModifiedFields();
 			 c.cancelForm();
 		});
 	}
@@ -90,6 +91,7 @@
 			sys_id: c.id,
 			record: record
 		}).then(function(){
+			c.g_form.$private.userState.clearModifiedFields();
 			 c.cancelForm();
 		});
 	}
@@ -184,15 +186,15 @@
         <sys_created_on>2019-10-02 17:09:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>69d4ee70db108850b86770c08c961922</sys_id>
-        <sys_mod_count>77</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>FCSMS Cancer Follow Up</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_69d4ee70db108850b86770c08c961922</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 16:29:22</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-06 18:46:01</sys_updated_on>
         <template><![CDATA[<div id="followup" ng-show='show_followup' style="padding: 10px 10px; border-style: ridge;">
 
 

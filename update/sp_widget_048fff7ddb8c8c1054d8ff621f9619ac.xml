@@ -34,7 +34,7 @@
 		var param = {};
 		param.sys_id = c.data.sys_id;
 		param.type = "adult";
-		param.section = section;
+		param.section = '-1';
 		param.submit = '0';
 		$http({
 			url: '/api/x_naci_family_coho/fcsms_apis/ValidateAndSubmitIIQ',
@@ -54,7 +54,7 @@
 		});
 	};
 	
-	c.ValidateAndSubmit = function(cb){
+	c.validateAndSubmit = function(cb){
 		var param = {};
 		param.sys_id = c.data.sys_id;
 		param.type = "adult";
@@ -94,7 +94,6 @@
 		if(idx == 1){
 			//show Introduction Page
 			c.current_form_idx = 'Introduction';
-			/*
 			if(!c.widget_1){
 
 				spUtil.get("widget-form", {
@@ -106,7 +105,6 @@
 					c.widget_1 = response;
 				})
 			}
-			*/
 		}
 		else if(idx == 2){
 			if(sub == undefined){
@@ -250,8 +248,7 @@
 			}
 			else{
 				var take_more_than_6_months = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
-				var taking_any_prescription_medication = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
-				if(take_more_than_6_months == 'YES' || taking_any_prescription_medication == 'YES'){
+				if(take_more_than_6_months == 'YES'){
 					c.medicationDisplay = true;
 				}
 				else{
@@ -620,10 +617,6 @@
 	
 	$scope.data.hideRelatedLists = true;
 
-	c.startForm = function(){
-		c.showView(2);
-	}
-
 	c.getFormValues = function() {
 		var g_form = c.g_forms[c.current_form_idx];
 		var fields = g_form.getFieldNames();
@@ -670,27 +663,37 @@
 				buttons: [{label: 'OK', primary: true}]
 			})
 			*/
+				
 			if(cb){
 				cb();
 			}
 		});	
 	};
 	
+	c.showSuccessfulPage = function(){
+		//$('#thank_you').show();
+		s.id ="fcsms_submission_acknowledge_page";
+		s.form = "iiq";
+		$location.search(s).replace();
+	};
 	
-
 	c.submitForm = function(){
 		c.saveForm(function(){
-			c.validateAndSubmit(function(res){
-				if(res.status == '200'){
-					c.errors.push({index: '1', section: 'Introduction', message: 'Please fill in this field.'});
-					console.log('successful');
-					//$('#thank_you').show();
-				}
-				else{
-					 c.errors = result.content; 
-				}
-				
-			});
+			spModal.confirm("<center>Are you ready to submit this form?</center>")
+				.then(function(confirmed) {
+						if(confirmed){
+							c.validateAndSubmit(function(res){
+								if(res.status == '200'){
+									c.showSuccessfulPage();
+								}
+								else{
+									 c.errors = res.errors; 
+								}
+
+							});
+						}
+					});
+			
 			
 		});
 	}
@@ -709,48 +712,86 @@
 			c.showView(c.show_view_index - 1);
 		}
 	}
+	
+	c.nextForm = function(){
+		if((c.show_view_index == 10 || c.show_view_index == 11 || c.show_view_index == 12 ) && c.data.sex == 'MALE'){
+			c.show_view_index = 13;
+		}
+		if(c.show_view_index == 2){
+			if(c.show_sub_view_index == 4){
+				c.showView(c.show_view_index + 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else if(c.show_view_index == 11){
+			if(c.show_sub_view_index == 4){
+				c.showView(c.show_view_index + 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_11_G' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else if(c.show_view_index == 14){
+			if(c.show_sub_view_index == 4){
+				c.showView(c.show_view_index + 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_14_H' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else if(c.show_view_index == 15){
+			if(c.show_sub_view_index == 3){
+				c.showView(c.show_view_index + 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_15_I' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else{
+			c.showView(c.show_view_index + 1);
+		}
+	};
 
 	c.saveAndNextForm = function(){
 		c.saveForm(function(){
-			if((c.show_view_index == 10 || c.show_view_index == 11 || c.show_view_index == 12 ) && c.data.sex == 'MALE'){
-				c.show_view_index = 13;
-			}
-			if(c.show_view_index == 2){
-				if(c.show_sub_view_index == 4){
-					c.showView(c.show_view_index + 1);
-				}
-				else{
-					c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
-				}
-			}
-			else if(c.show_view_index == 11){
-				if(c.show_sub_view_index == 4){
-					c.showView(c.show_view_index + 1);
-				}
-				else{
-					c.showView(c.show_view_index, 'tab_11_G' + (c.show_sub_view_index + 1 ));
-				}
-			}
-			else if(c.show_view_index == 14){
-				if(c.show_sub_view_index == 4){
-					c.showView(c.show_view_index + 1);
-				}
-				else{
-					c.showView(c.show_view_index, 'tab_14_H' + (c.show_sub_view_index + 1 ));
-				}
-			}
-			else if(c.show_view_index == 15){
-				if(c.show_sub_view_index == 3){
-					c.showView(c.show_view_index + 1);
-				}
-				else{
-					c.showView(c.show_view_index, 'tab_15_I' + (c.show_sub_view_index + 1 ));
-				}
+			if(c.errors.length > 0){
+				c.validate(c.current_form_idx, function(res){
+					/*
+					var idx = 0;
+					var found = false;
+					for( var i = 0; i < c.errors.length; i++){ 
+						if ( c.errors[i].index === c.show_view_index) {
+							 c.errors.splice(i, 1);
+							 i--;
+								if(!found){
+									found = true;
+									idx = i;
+								}
+						 }
+					}
+					console.info(c.errors);
+					*/
+					if(res.status !== '200'){
+						//update the error information
+						/*
+						res.errors.forEach(function(item){
+							c.errors.splice(idx++, 0, item);
+						});
+						*/
+						c.errors = res.errors;
+					}
+					else{
+						c.errors = [];
+					}
+					c.nextForm();
+				});
 			}
 			else{
-				c.showView(c.show_view_index + 1);
+				c.nextForm();
 			}
-
+			
 		});
 	};
 
@@ -867,8 +908,7 @@
 			c.g_forms['SectionB3'] = e.targetScope.getGlideForm();
 			g_form = e.targetScope.getGlideForm();	
 			var take_more_than_6_months = g_form.getValue('take_more_than_6_months');
-			var taking_any_prescription_medication = g_form.getValue('taking_any_prescription_medication');
-			if(take_more_than_6_months == 'YES' || taking_any_prescription_medication == 'YES'){
+			if(take_more_than_6_months == 'YES'){
 				c.medicationDisplay = true;
 			}
 			else{
@@ -877,19 +917,7 @@
 
 			e.targetScope.$on('field.change.take_more_than_6_months', function(ev, obj) {
 				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
-				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
-				if(v1 == 'YES' || v2 == 'YES'){
-					c.medicationDisplay = true;
-				}
-				else{
-					c.medicationDisplay = false;
-				}
-			});
-
-			e.targetScope.$on('field.change.taking_any_prescription_medication', function(ev, obj) {
-				var v1 = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
-				var v2 = c.g_forms['SectionB3'].getValue('taking_any_prescription_medication');
-				if(v1 == 'YES' || v2 == 'YES'){
+				if(v1 == 'YES'){
 					c.medicationDisplay = true;
 				}
 				else{
@@ -1137,7 +1165,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>842</sys_mod_count>
+        <sys_mod_count>873</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -1145,7 +1173,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-03 20:40:10</sys_updated_on>
+        <sys_updated_on>2020-01-06 18:32:35</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
@@ -1174,7 +1202,7 @@
    <div class="right-side-content col-md-9">
      <div class="panel-body IIQ-form-error-area" ng-show="c.errors.length > 0">
        <ul>
-         <li ng-repeat="item in c.errors" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.section}}: {{item.message}}</li>
+         <li ng-repeat="item in c.errors" ng-class="c.show_view_index == item.index ? 'active' : ''">{{item.page}}: {{item.message}}</li>
        </ul>
      </div>
     <div class="widget_area" id="form_widget_1" ng-show="c.show_view_index == 1">
@@ -1192,20 +1220,22 @@
         <p>
           Completing the questions that follow takes about 45 minutes. Completing this questionnaire is voluntary. Your answers to these questions will help in our research effort. Since answering these questions might involve thinking about how Li-Fraumeni Syndrome has affected yourself and your family, it is possible that it might cause you to feel sad. You will have an opportunity to discuss these feelings with our clinic staff at the time of your visit. If you need to contact us, please call 1-800-518-8474.  
         </p>
-        <h3 style="text-align:center;">** You are filling this form for yourself.</h3>
         <!--
+        <h3 style="text-align:center;">** You are filling this form for yourself.</h3>
+				-->
         <sp-widget widget="c.widget_1">
           <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
           Loading...
         </sp-widget>
-				-->
       </div>
       
       <div style="background-color: #f5f5f5;border: 1px solid #ddd;border-radius:  0px 0px 5px 5px;height: 60px;padding: 10px 15px;">
-        <!--
+        
         <button type="submit" ng-click="c.saveAndNextForm()" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Save & Next</button>
+				
+        <!--
+				<button type="submit" ng-click="c.showView(2)" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Next</button>
 				-->
-        <button type="submit" ng-click="c.showView(2)" class="btn btn-primary pull-right action-btn ng-scope" style=" padding: 5px 25px;">Next</button>
       </div>
     </div>
 
@@ -1563,6 +1593,14 @@
          <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
          Loading...
        </sp-widget>
+       <div Style="display:none;padding: 10px;" id="thank_you">
+         <p>
+           Thank you very much. The information you have provided will be reviewed by our study team. 
+         </p>
+         <p>
+           Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+         </p>
+       </div>
      </div>
     </div>
   </div>

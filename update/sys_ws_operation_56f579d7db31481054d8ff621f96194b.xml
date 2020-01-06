@@ -16,23 +16,99 @@
 	var gr = new GlideRecord('x_naci_family_coho_individual_information_questionnaire');
 	gr.get(sys_id);
 	var errors = [];
-	if(section == '-1' || section == '1'){
-		//IIQ Proxy
-	}
-	if(section == '-1' || section == '2'){
+	if(section == '-1' || section == 'SectionA1'){
 		//Demographic information
+		if(gr.gender == null || gr.gender.toString().trim().length == 0){
+			var item = {};
+			item.index = 2;
+			item.page = "Introduction";
+			item.message = "[Gender] is a required field";		
+			errors.push(item);
+		}
+		if(gr.date_of_birth == null || gr.date_of_birth.toString().trim().length == 0){
+			var item = {};
+			item.index = 2;
+			item.page = "Introduction";
+			item.message = "[Date of Birth] is a required field";		
+			errors.push(item);
+		}
 	}
-	if(section == '-1' || section == '3'){
+	if(section == '-1' || section == 'SectionB1'){
 		//Biopsy and Cancers
+		if(gr.diagnosed_with_any_cancer.toString() == 'YES'){
+			var cancer = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_cancer');
+			cancer.addQuery('iiq_form', sys_id);
+			cancer.query();
+			var count = cancer.getRowCount();
+			if(count == 0){
+				var item = {};
+				item.index = 3;
+				item.page = "Biopsy(ies) & Cancer(s)";
+				item.message = "If you indicate that the Research Subject has been diagnosed with any cancer, at lease one cancer type entry is required.";
+				errors.push(item);
+			}
+		}
+		if(gr.have_biopsy.toString() == 'YES'){
+			var biospy = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_biospy');
+			biospy.addQuery('iiq_form', sys_id);
+			biospy.query();
+			var count = biospy.getRowCount();
+			if(count == 0){
+				var item = {};
+				item.index = 3;
+				item.page = "Biopsy(ies) & Cancer(s)";
+				item.message = "If you indicate that the Research Subject has had a biopsy, at least one biopsy entry is required.";
+				errors.push(item);
+			}
+		}
 	}
-	if(section == '-1' || section == '4'){
+	if(section == '-1' || section == 'SectionB2'){
 		//surgery
+		if(gr.have_any_surgery.toString() == 'YES'){
+			var surgery = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_surgery');
+			surgery.addQuery('iiq_form', sys_id);
+			surgery.query();
+			var count = surgery.getRowCount();
+			if(count == 0){
+				var item = {};
+				item.index = 4;
+				item.page = "Surgery(ies) & Medical Conditions";
+				item.message = "If you indicate that the Research Subject has had a surgery other than for cancer treatment, at least one surgery entry is required.";
+				errors.push(item);
+			}
+		}
 	}
-	if(section == '-1' || section == '5'){
+	if(section == '-1' || section == 'SectionB3'){
 		//medical conditions
+		if(gr.taking_any_prescription_medication.toString() == 'YES' && gr.take_more_than_6_months.toString() == 'YES'){
+			var prescription = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_medications_supplements');
+			prescription.addQuery('iiq_form', sys_id);
+			prescription.query();
+			var count = prescription.getRowCount();
+			if(count == 0){
+				var item = {};
+				item.index = 5;
+				item.page = "Medications & Supplements";
+				item.message = "If you indicate that the Research Subject has taken a prescription medication for more than 6 months, at least one prescription medication entry is required.";
+				errors.push(item);
+			}
+		}
 	}
-	if(section == '-1' || section == '6'){
+	if(section == '-1' || section == 'SectionC'){
 		//Screening test
+		if(gr.had_screening_for_cancer.toString() == 'YES'){
+			var screening = new GlideRecord('x_naci_family_coho_individual_information_questionnaire_screening_test');
+			screening.addQuery('iiq_form', sys_id);
+			screening.query();
+			var count = screening.getRowCount();
+			if(count == 0){
+				var item = {};
+				item.index = 7;
+				item.page = "Screening Tests";
+				item.message = "If you indicate that the Research Subject has had a screening test, when submitting the form, at least one screening test entry is required.";
+				errors.push(item);
+			}
+		}
 	}
 	if(errors.length == 0){
 		if(submit == '1'){
@@ -58,7 +134,7 @@
         <sys_created_on>2019-12-23 22:16:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>56f579d7db31481054d8ff621f96194b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Validate and Submit IIQ</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -66,7 +142,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_56f579d7db31481054d8ff621f96194b</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-23 22:16:06</sys_updated_on>
+        <sys_updated_on>2020-01-03 23:43:31</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

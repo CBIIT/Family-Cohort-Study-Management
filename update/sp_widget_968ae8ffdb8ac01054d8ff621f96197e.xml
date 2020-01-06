@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($location) {
+  /* widget controller */
+  var c = this;
+	
+	var s = $location.search();
+	
+	c.goHome = function(){
+		s.id = "fcsms_patient_home_page";
+		s.sys_id = null;
+		s.form = null;
+		$location.search(s).replace();
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcsms_submission_acknowledge_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCSMS Submission Acknowledge Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var str = gs.action.getGlideURI();
+	data.form = str.get('form');
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-06 15:47:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>968ae8ffdb8ac01054d8ff621f96197e</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>FCSMS Submission Acknowledge Widget</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sp_widget_968ae8ffdb8ac01054d8ff621f96197e</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-06 19:19:40</sys_updated_on>
+        <template><![CDATA[<div class="main-content" style="height: 500px;padding-top: 50px;">
+  <div class="row row-title">
+    <div style="margin: auto;width: 800px;text-align: left;">
+      <div id="screener" ng-show="c.data.form == 'screener'">
+        	<p style="font-size: 30px; color: green;">
+          	Your Screener Form has been submitted successfully !  
+        	</p>
+          <p style="font-size: 20px;">
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p style="font-size: 20px;">
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+      </div>
+      <div id="fhq" ng-show="c.data.form == 'fhq'">
+          <p style="font-size: 30px; color: green;">
+          	Your Family Historic Questionaire Form has been submitted successfully !  
+        	</p>
+          <p style="font-size: 20px;">
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p style="font-size: 20px;">
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+      </div>
+      <div id="iiq" ng-show="c.data.form == 'iiq'">
+          <p style="font-size: 30px; color: green;">
+          	Your Individual Information Questionaire Form has been submitted successfully !  
+        	</p>
+          <p style="font-size: 20px;">
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p style="font-size: 20px;">
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+      </div>
+      <div style="text-align:center;  padding-top: 30px;">
+       <button class="btn btn-primary"  style="padding: 5px 25px;" ng-click="c.goHome()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

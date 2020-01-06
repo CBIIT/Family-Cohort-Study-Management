@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.enrollment_status == 'new_screener_received' || current.enrollment_status == 'more_info_required' &amp;&amp; current.eligibility_status=='waiting_for_eligibility' </condition>
+        <condition>current.enrollment_status == 'new_screener_received' || current.enrollment_status == 'new'  || current.enrollment_status == 'more_info_required' &amp;&amp; current.eligibility_status=='waiting_for_eligibility' </condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -30,31 +30,32 @@
         <order>-300</order>
         <script><![CDATA[function submitForReview(){
 
-	var status = g_form.getValue('enrollment_status ');
+	var status = g_form.getValue('enrollment_status');
 	var contactedYet = g_form.getValue('more_info_requested');
-
+	
 	if (status == 'more_info_required' && contactedYet == 'no'){
 
 		alert('Because this is in the state of "More Information Required" you must contact the proband before submitting this to the study panel. You may submit to the study panel once the field "Has the person been contacted to obtain more info" is set to Yes.');
+		return false;
 
 	} else {
 
 		g_form.setValue('enrollment_status', 'study_panel_review');
-		gsftSubmit(null, g_form.getFormElement(), 'study_panel_review');
+		g_form.save();
+		//gsftSubmit(null, g_form.getFormElement(), 'study_panel_review');
 
 	}
 
 }
 
-if (typeof window == 'undefined')
-	doSomething();
 
-function doSomething(){
+function updateRecord(){
+	//gs.info('test logging');
 	current.more_info_requested = 'no';
 	current.update();
 	action.setRedirectURL(current);
 }]]></script>
-        <show_insert>false</show_insert>
+        <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
@@ -64,7 +65,7 @@ function doSomething(){
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>ea5e9eacdb998810b86770c08c96196e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Submit for Eligibility Review</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -73,7 +74,7 @@ function doSomething(){
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_action_ea5e9eacdb998810b86770c08c96196e</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-31 19:39:47</sys_updated_on>
+        <sys_updated_on>2020-01-06 18:38:34</sys_updated_on>
         <table>x_naci_family_coho_family_history_details</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

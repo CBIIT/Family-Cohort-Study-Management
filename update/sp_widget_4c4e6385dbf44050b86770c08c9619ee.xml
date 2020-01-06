@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function() {
+        <client_script><![CDATA[function($location) {
   /* widget controller */
   var c = this;
-	var start_interval = true;
-	$("#slideshow > div:gt(0)").hide();
 	
-	setInterval(function() {
-		if(start_interval){
-			$('#slideshow > div:first')
-			.fadeOut(1500)
-			.next()
-			.fadeIn(1500)
-			.end()
-			.appendTo('#slideshow');
-		}
-	},  5000);
+	var s = $location.search();
+	var start_interval = true;
+	c.oldVersion = false;
+	
+	console.log(s.type);
+	
+	if(s.type == 'video'){
+		c.oldVersion = true;
+		$("#slideshow_video > div:gt(0)").hide();
+	
+		setInterval(function() {
+			if(start_interval){
+				$('#slideshow_video > div:first')
+				.fadeOut(1500)
+				.next()
+				.fadeIn(1500)
+				.end()
+				.appendTo('#slideshow_video');
+			}
+		},  5000);
+	}
+	else{
+		$("#slideshow > div:gt(0)").hide();
+	
+		setInterval(function() {
+			if(start_interval){
+				$('#slideshow > div:first')
+				.fadeOut(1500)
+				.next()
+				.fadeIn(1500)
+				.end()
+				.appendTo('#slideshow');
+			}
+		},  5000);
+	}
+	
+	
 	
 	c.gotoSlide = function(idx){
 		start_interval = false;
@@ -111,7 +136,7 @@
         <sys_created_on>2019-10-28 13:40:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4c4e6385dbf44050b86770c08c9619ee</sys_id>
-        <sys_mod_count>107</sys_mod_count>
+        <sys_mod_count>120</sys_mod_count>
         <sys_name>FCSMS Landing</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -119,63 +144,63 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_4c4e6385dbf44050b86770c08c9619ee</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-19 16:38:40</sys_updated_on>
+        <sys_updated_on>2020-01-06 18:30:06</sys_updated_on>
         <template><![CDATA[<div class="main-content">
-	<div class="row slideshow" id="slideshow">
-    <!--
-    <div >
+  <div style="display:none;">
+    <div class="row slideshow_video" id="slideshow_video">
+      <div class="slot-image">
+        <img src="FCSMS-Landing-image-3.jpg" width="1170" />
+      </div>
+      <div id="video-1" class="slot-video">
+        <video alt="Three generation family walk in meadow at sunset - Royalty-free Family Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/three-generation-family-walk-in-meadow-at-sunset-video-id680068768"></video>
+      </div>
+      <div id="video-2">
+        <video alt="The construction of particles in the rotating DNA of a luminous molecule on a orange background - Royalty-free DNA Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/the-construction-of-particles-in-the-rotating-dna-of-a-luminous-on-a-video-id975217100"></video>
+      </div>
       
     </div>
-    <div class="slot-video">
-    </div>
-    <div class="slot-image">
-      
-    </div>
-    
-    <div id="video-1" class="slot-video">
-      <video alt="Three generation family walk in meadow at sunset - Royalty-free Family Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/three-generation-family-walk-in-meadow-at-sunset-video-id680068768"></video>
-    </div>
-    <div id="video-2">
-      <video alt="The construction of particles in the rotating DNA of a luminous molecule on a orange background - Royalty-free DNA Stock Footage Video" autoplay="false" controls="controls" muted="muted" loop="false" width="1170" src="https://media.istockphoto.com/videos/the-construction-of-particles-in-the-rotating-dna-of-a-luminous-on-a-video-id975217100"></video>
-    </div>
-		-->
-    <div  id="image-1" class="slot-video">
-      <img src="FCSMS-Landing-image-1.jpg" width="1170" />
-      <div class="slide-dots">
-        <ul style="padding-left: 0px;">
-          <li class="nav-dots">
-            <label for="img-1" class="nav-dot active" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
-            <label for="img-2" class="nav-dot" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
-            <label for="img-3" class="nav-dot" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
-          </li>
-        </ul>
+  </div>
+  <div  style="display:block;">
+    <div class="row slideshow" id="slideshow">
+      <div  id="image-1" class="slot-video">
+          <img src="FCSMS-Landing-image-1.jpg" width="1170" />
+          <div class="slide-dots">
+            <ul style="padding-left: 0px;">
+              <li class="nav-dots">
+                <label for="img-1" class="nav-dot active" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div id="image-2">
+        <img src="FCSMS-Landing-image-2.jpg" width="1170" />
+        <div class="slide-dots">
+          <ul style="padding-left: 0px;">
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
+              <label for="img-2" class="nav-dot active" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
+              <label for="img-3" class="nav-dot" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div id="image-2">
-      <img src="FCSMS-Landing-image-2.jpg" width="1170" />
-      <div class="slide-dots">
-        <ul style="padding-left: 0px;">
-          <li class="nav-dots">
-            <label for="img-1" class="nav-dot" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
-            <label for="img-2" class="nav-dot active" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
-            <label for="img-3" class="nav-dot" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="image-3">
-      <img src="FCSMS-Landing-image-3.jpg" width="1170" />
-      <div class="slide-dots">
-        <ul style="padding-left: 0px;">
-          <li class="nav-dots">
-            <label for="img-1" class="nav-dot" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
-            <label for="img-2" class="nav-dot" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
-            <label for="img-3" class="nav-dot active" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
-          </li>
-        </ul>
+      <div id="image-3">
+        <img src="FCSMS-Landing-image-3.jpg" width="1170" />
+        <div class="slide-dots">
+          <ul style="padding-left: 0px;">
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1" ng-click="c.gotoSlide(1);"></label>
+              <label for="img-2" class="nav-dot" id="img-dot-2" ng-click="c.gotoSlide(2);"></label>
+              <label for="img-3" class="nav-dot active" id="img-dot-3" ng-click="c.gotoSlide(3);"></label>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+	
   <div class="row">
     <div class="triangle-down">
 		</div>
