@@ -9,7 +9,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">5005f7c0db9c8450b86770c08c961958</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">d405f7c0db9c8450b86770c08c961956</sys_ui_section>
+            <sys_ui_section caption="SectionB3" display_value="SectionB3" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="d005f7c0db9c8450b86770c08c961953">d405f7c0db9c8450b86770c08c961956</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
             <sys_updated_on>2019-09-30 15:04:35</sys_updated_on>
         </sys_ui_form_section>

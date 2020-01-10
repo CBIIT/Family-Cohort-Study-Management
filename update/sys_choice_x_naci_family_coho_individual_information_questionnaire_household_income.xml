@@ -8,14 +8,14 @@
             <label>Less than $10,000</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>1</sequence>
+            <sequence>10</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:00:38</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>8c2ff5dedb8c005054d8ff621f96192c</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:02:57</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:40</sys_updated_on>
             <u_dependent_value_2/>
             <value>Less than $10,000</value>
         </sys_choice>
@@ -27,35 +27,16 @@
             <label>$10,000 to $19,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>2</sequence>
+            <sequence>20</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:01:08</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>785ff55edb8c005054d8ff621f9619d5</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:03</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:43</sys_updated_on>
             <u_dependent_value_2/>
             <value>$10,000 to $19,999</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>household_income</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>$100,000 or more</label>
-            <language>en</language>
-            <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>3</sequence>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-24 20:02:13</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>e38ffddedb8c005054d8ff621f961944</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:05</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>$100,000 or more</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -65,14 +46,14 @@
             <label>$20,000 to $29,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>4</sequence>
+            <sequence>40</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:01:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>d25fb55edb8c005054d8ff621f9619f8</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:06</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:47</sys_updated_on>
             <u_dependent_value_2/>
             <value>$20,000 to $29,999</value>
         </sys_choice>
@@ -84,14 +65,14 @@
             <label>$30,000 to $39,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>5</sequence>
+            <sequence>50</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:01:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>c96f359edb8c005054d8ff621f961945</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:08</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:49</sys_updated_on>
             <u_dependent_value_2/>
             <value>$30,000 to $39,999</value>
         </sys_choice>
@@ -103,14 +84,14 @@
             <label>$40,000 to $49,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>6</sequence>
+            <sequence>60</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:01:42</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>ff6f7ddedb8c005054d8ff621f961982</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:10</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:51</sys_updated_on>
             <u_dependent_value_2/>
             <value>$40,000 to $49,999</value>
         </sys_choice>
@@ -122,14 +103,14 @@
             <label>$50,000 to $69,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>7</sequence>
+            <sequence>70</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:01:52</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>6e7f7ddedb8c005054d8ff621f9619f5</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:13</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:53</sys_updated_on>
             <u_dependent_value_2/>
             <value>$50,000 to $69,999</value>
         </sys_choice>
@@ -141,16 +122,35 @@
             <label>$70,000 to $99,999</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>8</sequence>
+            <sequence>80</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:02:02</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>0d8f7ddedb8c005054d8ff621f961985</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:15</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:55</sys_updated_on>
             <u_dependent_value_2/>
             <value>$70,000 to $99,999</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>household_income</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>$100,000 or more</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>85</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-24 20:02:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>e38ffddedb8c005054d8ff621f961944</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:56:09</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>$100,000 or more</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -160,14 +160,14 @@
             <label>Decline</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>9</sequence>
+            <sequence>90</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:02:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>ce9f3112dbcc005054d8ff621f961947</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:18</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:57</sys_updated_on>
             <u_dependent_value_2/>
             <value>Decline</value>
         </sys_choice>
@@ -179,14 +179,14 @@
             <label>DON'T KNOW</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <sequence>10</sequence>
+            <sequence>100</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-24 20:02:39</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>c5aff5dedb8c005054d8ff621f961930</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 20:03:21</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-09 19:55:59</sys_updated_on>
             <u_dependent_value_2/>
             <value>DON'T KNOW</value>
         </sys_choice>

@@ -13,19 +13,6 @@
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-05 00:04:27</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-05 00:04:27</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>9be65261db944c50b86770c08c96193c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire_medications_supplements" name="x_naci_family_coho_individual_information_questionnaire_medications_supplements" sys_domain="global" view="61d31a2ddb544c50b86770c08c9619c1">1be61261db944c50b86770c08c9619c9</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire_medications_supplements" sys_domain="global" view="61d31a2ddb544c50b86770c08c9619c1">5be61261db944c50b86770c08c9619c8</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-05 00:04:27</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_naci_family_coho_individual_information_questionnaire_medications_supplements</name>
             <roles/>

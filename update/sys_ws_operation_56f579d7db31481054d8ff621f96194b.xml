@@ -113,6 +113,10 @@
 	if(errors.length == 0){
 		if(submit == '1'){
 			//submit IIQ form
+			var gr4 = new GlideRecord('x_naci_family_coho_individual_information_questionnaire');
+			gr4.get(sys_id.toString());
+			gr4.time_to_complete_form = new GlideDateTime();
+			gr4.update();
 		}
 		return {status: '200'};
 	}
@@ -134,15 +138,15 @@
         <sys_created_on>2019-12-23 22:16:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>56f579d7db31481054d8ff621f96194b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Validate and Submit IIQ</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_56f579d7db31481054d8ff621f96194b</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-03 23:43:31</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-10 22:46:19</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

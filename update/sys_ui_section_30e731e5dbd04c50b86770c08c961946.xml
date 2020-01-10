@@ -4,13 +4,13 @@
             <element>type_of_surgery</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 22:46:30</sys_created_on>
-            <sys_id>5718e10fdba40810b86770c08c961900</sys_id>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>d84216b3db86041054d8ff621f9619b2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 22:46:30</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>type_when_surgery</element>
             <position>1</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 22:46:30</sys_created_on>
-            <sys_id>5318e10fdba40810b86770c08c96197d</sys_id>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>504216b3db86041054d8ff621f9619b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 22:46:30</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>age_surgery</element>
             <position>2</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 22:46:30</sys_created_on>
-            <sys_id>d718e10fdba40810b86770c08c96197d</sys_id>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>d44216b3db86041054d8ff621f9619b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 22:46:30</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,41 @@
             <element>date_surgery</element>
             <position>3</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 22:46:30</sys_created_on>
-            <sys_id>5f18e10fdba40810b86770c08c96197d</sys_id>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>5c4216b3db86041054d8ff621f9619b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 22:46:30</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reason_surgery</element>
+            <position>4</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>d04216b3db86041054d8ff621f9619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_address_surgery</element>
+            <position>5</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:20:15</sys_created_on>
+            <sys_id>584216b3db86041054d8ff621f9619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_individual_information_questionnaire_surgery" sys_domain="global" view="b4473d65dbd04c50b86770c08c961940">30e731e5dbd04c50b86770c08c961946</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:20:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -68,6 +68,7 @@
 		
 		insertIIQ.iiq_subject = current.sys_id;
 		insertIIQ.family = current.family;
+		insertIIQ.date_of_birth = current.date_of_birth_month_day_year;
 		
 		var iiqID = insertIIQ.insert();
 		
@@ -82,7 +83,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>c4a8409cdb464c1054d8ff621f961969</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Create FHQ and IIQ</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -91,7 +92,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_c4a8409cdb464c1054d8ff621f961969</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-31 21:20:03</sys_updated_on>
+        <sys_updated_on>2020-01-07 20:23:36</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

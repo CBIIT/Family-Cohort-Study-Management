@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="FCSMS MRR Consent" max_length="40" name="x_naci_family_coho_fcsms_mrr_consent" type="collection">
+        <element label="Consent By" max_length="32" name="consent_by" reference="sys_user" type="reference"/>
+        <element label="Consent Date" max_length="40" name="consent_date" type="glide_date"/>
+        <element label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
+        <index name="index">
+            <element name="consent_by"/>
+        </index>
+        <index name="index2">
+            <element name="study"/>
+        </index>
+    </element>
+</database>

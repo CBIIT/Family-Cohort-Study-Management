@@ -1,21 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="New Section" section_id="1770acfbdb18481054d8ff621f9619e4" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionD">
+    <sys_ui_section caption="Tobacco Use" section_id="1770acfbdb18481054d8ff621f9619e4" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionD">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>have_smoked_cigarettes</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 22:56:53</sys_created_on>
-            <sys_id>637aedcfdba40810b86770c08c9619f9</sys_id>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>66cd8677db46041054d8ff621f961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 22:56:53</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_start_smoking</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>eacd8677db46041054d8ff621f961919</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_start_smoking_specify</element>
+            <position>2</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>62cd8677db46041054d8ff621f96191a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cigarettes_smoke</element>
+            <position>3</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>e6cd8677db46041054d8ff621f96191a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cigarettes_nubmer</element>
+            <position>4</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>6ecd8677db46041054d8ff621f96191a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>still_smoke_cigarettes_regularly</element>
+            <position>5</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>e2cd8677db46041054d8ff621f96191b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_most_recently_stop_smoking</element>
+            <position>6</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>6acd8677db46041054d8ff621f96191b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_most_recently_stop_smoking_specify</element>
+            <position>7</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>eecd8677db46041054d8ff621f96191b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>have_smoked_cigars</element>
+            <position>8</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>66cd8677db46041054d8ff621f96191c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_amount_of_months</element>
+            <position>9</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>eacd8677db46041054d8ff621f96191c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_amount_of_years</element>
+            <position>10</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>62cd8677db46041054d8ff621f96191d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ever_smoked_pipe_regularly</element>
+            <position>11</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>e6cd8677db46041054d8ff621f96191d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pipe_total_amount_of_months</element>
+            <position>12</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>6ecd8677db46041054d8ff621f96191d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pipe_total_amount_of_years</element>
+            <position>13</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>e2cd8677db46041054d8ff621f96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ever_chewed_tobacco_regularly</element>
+            <position>14</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>6acd8677db46041054d8ff621f96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>chewed_tobacco_total_amount_of_months</element>
+            <position>15</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>eecd8677db46041054d8ff621f96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>chewed_tobacco_total_amount_of_years</element>
+            <position>16</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>66cd8677db46041054d8ff621f96191f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ever_used_dipped_snuff_regularly</element>
+            <position>17</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>eacd8677db46041054d8ff621f96191f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>snuff_total_amount_of_months</element>
+            <position>18</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>62cd8677db46041054d8ff621f961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>snuff_total_amount_of_years</element>
+            <position>19</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:00:44</sys_created_on>
+            <sys_id>e6cd8677db46041054d8ff621f961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Tobacco Use" display_value="Tobacco Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5b70acfbdb18481054d8ff621f9619e0">1770acfbdb18481054d8ff621f9619e4</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:00:44</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
-            <caption>New Section</caption>
+            <caption>Tobacco Use</caption>
             <header>false</header>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <roles/>
@@ -25,8 +291,8 @@
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_id>1770acfbdb18481054d8ff621f9619e4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>New Section</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Tobacco Use</sys_name>
             <sys_overrides/>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
@@ -34,7 +300,7 @@
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_ui_section_1770acfbdb18481054d8ff621f9619e4</sys_update_name>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-11 15:13:19</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:00:43</sys_updated_on>
             <sys_user/>
             <title>false</title>
             <view display_value="SectionD" name="SectionD">5b70acfbdb18481054d8ff621f9619e0</view>

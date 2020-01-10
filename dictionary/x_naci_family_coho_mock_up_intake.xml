@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="FCSMS Intake Form" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
+    <element audit="true" label="FCSMS Screener" max_length="40" name="x_naci_family_coho_mock_up_intake" type="collection">
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element choice="3" default="no" label="Additional Info Required" max_length="40" name="additional_info_required" type="choice">
             <choice>
@@ -206,7 +206,7 @@
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>
-        <element label="Time to Complete Form" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
+        <element label="Screener Submitted" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
         <element default="javascript: new Date().getFullYear().toString()" label="Year Created" max_length="40" name="year_created" type="string"/>
         <element label="What is your name" max_length="100" name="your_name" type="string"/>
         <index name="index">

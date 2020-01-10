@@ -80,7 +80,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>PI Signature Received SECOND REMINDER</subject>
+        <subject>SECOND REMINDER - CHARMS New Information Requested</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
@@ -88,7 +88,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5609ac5fdb79081054d8ff621f9619fb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>FCSMS - 2nd Enrollment Reminder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -97,7 +97,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sysevent_email_action_5609ac5fdb79081054d8ff621f9619fb</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-23 16:53:22</sys_updated_on>
+        <sys_updated_on>2020-01-10 15:31:53</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Family Cohort (Family Member Details)">fa8ae5c9db3dcc90b86770c08c9619cf</template>
         <type>email</type>

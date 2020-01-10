@@ -1,21 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="New Section" section_id="02521a5ddba80010b86770c08c96193b" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionE">
+    <sys_ui_section caption="Alcohol Use" section_id="02521a5ddba80010b86770c08c96193b" sys_domain="global" table="x_naci_family_coho_individual_information_questionnaire" version="3" view="SectionE">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_alcoholic_drink</element>
             <position>0</position>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 15:27:26</sys_created_on>
-            <sys_id>cba312dddba80010b86770c08c9619f7</sys_id>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>2bfd8a77db46041054d8ff621f96198e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:27:26</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>drinks_you_have</element>
+            <position>1</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>affd8a77db46041054d8ff621f96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_drinks</element>
+            <position>2</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>27fd8a77db46041054d8ff621f96198f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>had_one_or_more_alcoholic_drinks_per_week</element>
+            <position>3</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>abfd8a77db46041054d8ff621f96198f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>what_age_start_drink</element>
+            <position>4</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>23fd8a77db46041054d8ff621f961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_start_drink_specify</element>
+            <position>5</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>a7fd8a77db46041054d8ff621f961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>currently_drink_at_least_one_alcoholic_drink</element>
+            <position>6</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>2ffd8a77db46041054d8ff621f961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_often_have_at_least_one_alcoholic_drink</element>
+            <position>7</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>a3fd8a77db46041054d8ff621f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>on_the_days_drinks_have_on_average</element>
+            <position>8</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>2bfd8a77db46041054d8ff621f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_drinks_days_drink_alcohol</element>
+            <position>9</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>affd8a77db46041054d8ff621f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_most_recently_stop_drinking</element>
+            <position>10</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>27fd8a77db46041054d8ff621f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_number_most_recently_stop_drinking</element>
+            <position>11</position>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-06 23:01:38</sys_created_on>
+            <sys_id>abfd8a77db46041054d8ff621f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="06521a5ddba80010b86770c08c961937">02521a5ddba80010b86770c08c96193b</sys_ui_section>
+            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-06 23:01:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
-            <caption>New Section</caption>
+            <caption>Alcohol Use</caption>
             <header>false</header>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <roles/>
@@ -25,8 +179,8 @@
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_id>02521a5ddba80010b86770c08c96193b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>New Section</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Alcohol Use</sys_name>
             <sys_overrides/>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
@@ -34,7 +188,7 @@
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_ui_section_02521a5ddba80010b86770c08c96193b</sys_update_name>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 15:21:39</sys_updated_on>
+            <sys_updated_on>2020-01-06 23:01:37</sys_updated_on>
             <sys_user/>
             <title>false</title>
             <view display_value="SectionE" name="SectionE">06521a5ddba80010b86770c08c961937</view>

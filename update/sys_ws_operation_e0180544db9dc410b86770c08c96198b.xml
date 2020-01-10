@@ -14,13 +14,19 @@
 	var signature_password = request.body.data.signature_password;
 	
 	var okta = new global.OktaInterface();
-	var result = okta.authnUser('ywwei85@gmail.com', 'Test6554321');
+	var result = okta.authnUser('ywtest0@gmail.com', 'Test654321');
 	if(result == 'SUCCESS'){
-		//save signature information
-		return "good";
+		var gr = new GlideRecord('x_naci_family_coho_fcsms_consent');
+		gr.initialize();
+		gr.be_contacted_genetic_changes = 'Yes';
+		gr.be_contacted_genetic_variants = 'Yes';
+		gr.consent_by = gs.getUserID();
+		gr.consent_date = new Date();
+		var sys_id = gr.insert();
+		return {status: result, sys_id: sys_id};
 	}
 	else{
-		return result;
+		return {status: result};
 	}
 	
 })(request, response);]]></operation_script>
@@ -38,7 +44,7 @@
         <sys_created_on>2019-11-18 19:45:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e0180544db9dc410b86770c08c96198b</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Validate OKTA User</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -46,7 +52,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_e0180544db9dc410b86770c08c96198b</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-04 20:09:52</sys_updated_on>
+        <sys_updated_on>2020-01-08 21:35:42</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

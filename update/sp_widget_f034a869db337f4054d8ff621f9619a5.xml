@@ -7,8 +7,6 @@
 	c.errorIntake = [];
 	var saved_arr = c.data.saved_section == null ? []: c.data.saved_section.toString().split(' ');
   setProgressBar(saved_arr);
-	console.log($scope);
-	
 	$('#intake_id').val(c.data.id);
 	c.forms = {};
 	c.show_view_index = 1;
@@ -22,7 +20,7 @@
 			obj.style.display = 'block';
 		}
 	}
-	
+
 	setTimeout(function(){
 		var button_bar = $('#submit_div div.panel-footer');
 		button_bar.children().last().remove();
@@ -83,7 +81,7 @@
 				setProgressBar(saved_arr);
 			} 
 			if(c.errorIntake.length >0){
-				validation();
+				validation(false);
 			}
 			/*spModal.open({
 				title: "Message",
@@ -139,27 +137,35 @@
 				saved_arr.push(index);
 				setProgressBar(saved_arr);
 			} 
-			validation();
+			validation(true);
 		});	
-	
-		
 	}
 
-	function validation(){
-			$scope.server.get({
-				action: 'validate'
-			}).then(function(resp){
-				console.log(resp.data.error);
-				c.errorIntake = resp.data.error;
-				if(c.errorIntake == null || c.errorIntake == 0){
-					//submit intake form
+	function validation(isSubmit){
+		$scope.server.get({
+			action: 'validate'
+		}).then(function(resp){
+			console.log(resp.data.error);
+			c.errorIntake = resp.data.error;
+			if(isSubmit){
+				if(c.errorIntake == null || c.errorIntake.length == 0){
+					//submit intake form 
 					spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
-           s.id = "fcsms_submission_acknowledge_page";
-					 s.form = "screener";
-					 $location.search(s).replace();	
+						$scope.server.get({
+							action: 'submit',
+							sys_id: c.data.id
+						}).then(function(){
+							s.id = "fcsms_submission_acknowledge_page";
+							s.form = "screener";
+							$location.search(s).replace();	
+						});
 					});
+				}else{
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
 				}
-			});
+			}
+		});
 	}
 	
 	$scope.loadTab = function(index) {
@@ -449,7 +455,8 @@ fieldset label{
 	if(sys_id == null){
 		sys_id = "-1";
 	}
-  data.error = [];
+	data.info = "begin";
+	data.error = [];
 	if(input){
 		if(input.action == 'update'){
 			var record = input.record;
@@ -476,96 +483,114 @@ fieldset label{
 			}
 			gr1.updateMultiple();
 		}
+		if(input.action == 'submit'){
+			//set complete time
+			var gr3 = new GlideRecord('x_naci_family_coho_mock_up_intake');
+			    gr3.get(input.sys_id.toString());
+			gr3.time_to_complete_form = new GlideDateTime();
+			gr3.update();	
+		}
 		if(input.action == 'validate'){
 			var gr2 = new GlideRecord('x_naci_family_coho_mock_up_intake');
-					gr2.get(sys_id);
+			gr2.get(sys_id);
 			//validate form 1
+			data.info = "validate";
 			if(gr2.filling_for_someone.toString() == 'Yes'){
 				if(gr2.filled_for == null || gr2.filled_for.toString().trim().length == 0){
-					 var item = {};
-					 item.index = 1;
-					 item.page = "Study Introduction";
-					 item.message = "the name of the person you are filled this out for is required field";		
-					 data.error.push(item);
+					var item = {};
+					item.index = 1;
+					item.page = "Study Introduction";
+					item.message = "the name of the person you are filled this out for is required field";		
+					data.error.push(item);
 				}
 				if(gr2.your_name == null || gr2.your_name.toString().trim().length == 0){
-					 var item = {};
-					 item.index = 1;
-					 item.page = "Study Introduction";
-					 item.message = "Your name is required field";		
-					 data.error.push(item);
+					var item = {};
+					item.index = 1;
+					item.page = "Study Introduction";
+					item.message = "Your name is required field";		
+					data.error.push(item);
 				}
 				if(gr2.relationship == null || gr2.relationship.toString().trim().length == 0){
-					 var item = {};
-					 item.index = 1;
-					 item.page = "Study Introduction";
-					 item.message = "Your Relationship to this person is required field";		
-					 data.error.push(item);
-				}
-				//validate form 2
-				if(gr2.email_address == null || gr2.email_address.toString().trim().length == 0){
 					var item = {};
-					item.index = 2;
-					item.page = "Personal Information";
-					item.message = "Contact Email Address is required field";
+					item.index = 1;
+					item.page = "Study Introduction";
+					item.message = "Your Relationship to this person is required field";		
 					data.error.push(item);
 				}
-				if(gr2.confirm_email_address == null || gr2.confirm_email_address.toString().trim().length == 0){
+			}
+			//validate form 2
+			if(gr2.biological_sex == null || gr2.biological_sex.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Personal Information";
+				item.message = "Biological Sex is required field";
+				data.error.push(item);
+			}
+			if(gr2.email_address == null || gr2.email_address.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Personal Information";
+				item.message = "Contact Email Address is required field";
+				data.error.push(item);
+			}
+			if(gr2.confirm_email_address == null || gr2.confirm_email_address.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Personal Information";
+				item.message = "Confirm Contact Email Address is required field";
+				data.error.push(item);
+			}
+			if(gr2.phone_number == null || gr2.phone_number.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = "Personal Information";
+				item.message = "Contact phone_number is required field";
+				data.error.push(item);
+			}
+			//validate form 3
+			if(gr2.diagnosed_with_cancer.toString() == 'Yes'){
+				var pc = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
+				pc.addQuery('intake_form', sys_id);
+				pc.query();
+				var count = pc.getRowCount();
+				if(count == 0){
 					var item = {};
-					item.index = 2;
-					item.page = "Personal Information";
-					item.message = "Confirm Contact Email Address is required field";
+					item.index = 3;
+					item.page = "Personal Cancer History";
+					item.message = "When the Research Subject has been diagnosed with cancer, at lease one cancer type entry is required";
 					data.error.push(item);
 				}
-				if(gr2.phone_number == null || gr2.phone_number.toString().trim().length == 0){
+			}
+			//validate form 4
+			if(gr2.biological_relatives_diagnosed.toString() == "Yes"){
+				var fc = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
+				fc.addQuery('intake_form_id', sys_id);
+				fc.query();
+				var count1 = fc.getRowCount();
+				if(count1 == 0){
 					var item = {};
-					item.index = 2;
-					item.page = "Personal Information";
-					item.message = "Contact phone_number is required field";
+					item.index = 4;
+					item.page = "Family Memebers' Cancer History";
+					item.message = "When biological relative has been diagnosed with cancer, at lease one family member entry is required";
+					data.error.push(item);
+				}				
+			}
+			//validate form 5
+			if(gr2.relatives_test_positive.toString() == 'Yes'){
+				var fm = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
+				fm.addQuery('intake_form_id', sys_id);
+				fm.query();
+				var count2 = fm.getRowCount();
+				if(count2 == null || count2 == 0){
+					var item = {};
+					item.index = 41;
+					item.page = "Family Memebers' Genetic Tests";
+					item.message = "When biological relative has been diagnosed with an inherited cancer syndrome, at lease one family member entry is required";
 					data.error.push(item);
 				}
-				//validate form 3
-				if(gr2.diagnosed_with_cancer.toString() == 'Yes'){
-					var pc = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
-					    pc.addQuery('intake_form', sys_id);
-					pc.query();
-					var count = pc.getRowCount();
-					if(count == 0){
-						var item = {};
-						item.index = 3;
-						item.page = "Personal Cancer History";
-						item.message = "When the Research Subject has been diagnosed with cancer, at lease one cancer type entry is required";
-						data.error.push(item);
-					}
-				}
-				//validate form 4
-				if(gr2.biological_relatives_diagnosed.toString() == "Yes"){
-					var fc = new GlideRecord('x_naci_family_coho_mock_up_intake_family_cancer');
-					fc.addQuery('intake_form_id', sys_id);
-					fc.query();
-					var count1 = fc.getRowCount();
-					if(count1 == 0){
-						var item = {};
-						item.index = 4;
-						item.page = "Family Memebers' Cancer History";
-						item.message = "When biological relative has been diagnosed with cancer, at lease one family member entry is required";
-						data.error.push(item);
-					}				
-				}
-				//validate form 5
-				if(gr2.relatives_test_positive.toString() == 'Yes'){
-					var fm = new GlideRecord('x_naci_family_coho_fcsms_intake_form_gene_test');
-							fm.addQuery('intake_form_id', sys_id);
-							fm.query();
-							var count2 = fm.getRowCount();
-							if(count2 == null || count2 == 0){
-								var item = {};
-								item.index = 41;
-								item.page = "Family Memebers' Genetic Tests";
-								item.message = "When biological relative has been diagnosed with an inherited cancer syndrome, at lease one family member entry is required";
-								data.error.push(item);
-							}
-				}
+			}
+			if(data.error != null && data.error.length > 0){
+				input.action = '';
 			}
 			return data.error;
 		}
@@ -578,7 +603,7 @@ fieldset label{
 	var gr = new GlideRecord('x_naci_family_coho_mock_up_intake');
 	gr.get(sys_id);
 	data.saved_section = gr.getValue('saved_section');
-  data.subjectName = gr.getValue('filled_for');
+	data.subjectName = gr.getValue('filled_for');
 	function includeElement(item_arr, item){
 		var hasItem = false;
 		item_arr.forEach(function(it){
@@ -586,7 +611,7 @@ fieldset label{
 				hasItem = true;
 			}
 		});
-		
+
 		return hasItem;
 	}
 })();]]></script>
@@ -596,7 +621,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>912</sys_mod_count>
+        <sys_mod_count>949</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -604,7 +629,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 19:18:42</sys_updated_on>
+        <sys_updated_on>2020-01-10 20:41:29</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
@@ -613,7 +638,7 @@ fieldset label{
         <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Study Introduction</a></li>
         <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Information</a></li>
         <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Cancer History</a></li>
-        <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Memebers' Cancer History</a></li>
+        <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Members' Cancer History</a></li>
         <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress41 == true, 'fa-circle-o': c.data.progress41 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Members' Genetic Tests</a></li>
         <li ng-class="{'active': c.show_view_index == 5}" ng-click="loadTab(5)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress5 == true, 'fa-circle-o': c.data.progress5 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Final Information</a></li>
       </ul>

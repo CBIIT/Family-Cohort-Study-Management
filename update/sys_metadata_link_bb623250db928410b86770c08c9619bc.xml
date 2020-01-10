@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>613e3588db1a441054d8ff621f9619ff</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="had_one_or_more_alcoholic_drinks_per_week" table="x_naci_family_coho_individual_information_questionnaire" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>had_one_or_more_alcoholic_drinks_per_week</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>YES</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>10</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-07 16:30:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>961e7948db1a441054d8ff621f9619a0</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-08 14:56:59</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>YES</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>had_one_or_more_alcoholic_drinks_per_week</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>NO</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>20</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-07 16:31:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>be2e7188db1a441054d8ff621f9619f0</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-08 14:56:59</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>NO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>had_one_or_more_alcoholic_drinks_per_week</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>DON'T KNOW</label>
+            <language>en</language>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sequence>30</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-07 16:31:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>613e3588db1a441054d8ff621f9619ff</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-08 14:56:59</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>DON'T KNOW</value>
+        </sys_choice>
+        <sys_choice_set action="DELETE">
+            <element>had_one_or_more_alcoholic_drinks_per_wee</element>
+            <name>x_naci_family_coho_individual_information_questionnaire</name>
+            <sys_class_name/>
+            <sys_created_by/>
+            <sys_created_on/>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id/>
+            <sys_mod_count/>
+            <sys_name/>
+            <sys_package/>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope/>
+            <sys_update_name/>
+            <sys_updated_by/>
+            <sys_updated_on>2020-01-08 14:57:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-08 14:57:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bb623250db928410b86770c08c9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DON'T KNOW</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_metadata_link_bb623250db928410b86770c08c9619bc</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-08 14:57:47</sys_updated_on>
+        <tablename>sys_choice</tablename>
+    </sys_metadata_link>
+</record_update>

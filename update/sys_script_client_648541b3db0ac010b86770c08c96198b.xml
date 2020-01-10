@@ -11,17 +11,22 @@
         <name>Set Family</name>
         <order/>
         <script><![CDATA[function onLoad() {
-	
-	var fhq = g_form.getValue('family_historic_qustion_id');
-		
-	var getFam = new GlideAjax ('getFamilyId');
-	getFam.addParam('sysparm_name', 'returnFamilyId');
-	getFam.addParam('sysparm_fhq', fhq);
-	getFam.getXML(setFamily);
 
-	function setFamily(response){
-		var answer = response.responseXML.documentElement.getAttribute("answer");
-		g_form.setValue('family', answer);
+	var fhq = g_form.getValue('family_historic_qustion_id');
+	var fam = g_form.getValue('family');
+
+	if (fam == ''){
+		
+		var getFam = new GlideAjax ('getFamilyId');
+		getFam.addParam('sysparm_name', 'returnFamilyId');
+		getFam.addParam('sysparm_fhq', fhq);
+		getFam.getXML(setFamily);
+
+		function setFamily(response){
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue('family', answer);
+		}
+		
 	}
 
 }]]></script>
@@ -31,7 +36,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>648541b3db0ac010b86770c08c96198b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Set Family</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -40,7 +45,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_648541b3db0ac010b86770c08c96198b</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 17:52:43</sys_updated_on>
+        <sys_updated_on>2020-01-07 17:26:51</sys_updated_on>
         <table>x_naci_family_coho_family_history_details</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

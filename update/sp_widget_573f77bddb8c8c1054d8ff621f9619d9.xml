@@ -11,7 +11,7 @@
 	c.show_view_index = 1;
 	var saved_arr = c.data.saved_section == null ? []: c.data.saved_section.toString().split(' ');
 	setProgressBar(saved_arr);
-
+  alert(c.data.id);
 	$scope.$on('spModel.fields.rendered', function(event) {
 		var g_form = event.targetScope.getGlideForm()
 		var view = event.targetScope.formModel.view;
@@ -99,7 +99,7 @@
 		$scope.loadForm(index);
 	}
 
-	$scope.saveForm = function(form){
+	$scope.saveForm = function(form, isSubmit){
 		var modal = $uibModal.open({
 			template: $('#saving-data-modal')[0].innerHTML,
 			size: 'sm'
@@ -123,6 +123,12 @@
 				index = index + 1;
 				$scope.loadForm(index);
 			}
+			if(isSubmit){
+				validation(true);
+			}
+			if(c.errorFhq != null || c.errorFhq > 0){
+					validation(false);
+			}
 		});			
 	}
 
@@ -142,23 +148,31 @@
 	}
 
 	$scope.submitForm = function(form){
-		$scope.saveForm(form);
-		validation();
+		$scope.saveForm(form, true);
 	}
 	
-	function validation(){
+	function validation(isSubmit){
 		$scope.server.get({
 			action: 'validate'
 		}).then(function(resp){
-			console.log(resp.data.error);
 			c.errorFhq = resp.data.error;
-			if(c.errorFhq == null || c.errorFhq == 0){
-				//submit intake form
-				spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
-				   s.id = "fcsms_submission_acknowledge_page";
-					 s.form = "fhq";
-					 $location.search(s).replace();	
-				});
+			if(isSubmit){
+				if(c.errorFhq == null || c.errorFhq == 0){
+					//submit intake form
+					spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
+						$scope.server.get({
+							action: 'submit',
+							sys_id: c.data.id
+						}).then(function(){
+							s.id = "fcsms_submission_acknowledge_page";
+							s.form = "fhq";
+							$location.search(s).replace();	
+						});
+					});
+				}else{
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
 			}
 		});
 	}
@@ -181,7 +195,7 @@
 		});
 		return hasItem;
 	}
-	
+
 	function getFormValues(gForm) {
 		var fields = gForm.getFieldNames();
 		var record = {};
@@ -193,7 +207,11 @@
 				record[field] = d;
 			}
 			else{
-				record[field] = gForm.getValue(field);
+				if(gForm.getValue(field) == null || gForm.getValue(field).trim().length == 0){
+					record[field] = 'NULL';
+				}else{
+					record[field] = gForm.getValue(field);
+				}
 			}
 		})
 		return record;		
@@ -308,6 +326,13 @@ div .panel-heading{
 			}
 			gr2.update();
 		}
+		if(input.action == 'submit'){
+			//set complete time
+			var gr4 = new GlideRecord('x_naci_family_coho_family_history_question');
+			    gr4.get(input.sys_id.toString());
+			gr4.time_to_complete_form = new GlideDateTime();
+			gr4.update();
+		}
 		if(input.action == 'validate'){
 			var gr3 = new GlideRecord('x_naci_family_coho_family_history_question');
 					gr3.get(sys_id);
@@ -391,7 +416,7 @@ div .panel-heading{
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>355</sys_mod_count>
+        <sys_mod_count>395</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -399,7 +424,7 @@ div .panel-heading{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 20:22:44</sys_updated_on>
+        <sys_updated_on>2020-01-10 22:24:29</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 22px;">
   <div class="row">
     <div class="left-side-menu col-md-3">

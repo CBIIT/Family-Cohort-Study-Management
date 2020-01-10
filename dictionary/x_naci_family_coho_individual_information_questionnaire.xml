@@ -268,11 +268,11 @@
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
             </choice>
         </element>
-        <element choice="3" default="YES" label="E3.Have you ever had one or more alcoholic drinks per week for 6 months or more?" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
+        <element choice="3" default="YES" label="E3. Have you ever had one or more alcoholic drinks per week for 6 months or more" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
             <choice>
-                <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
-                <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
-                <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="YES" sequence="10" value="YES"/>
+                <element inactive_on_update="false" label="NO" sequence="20" value="NO"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="DON'T KNOW"/>
             </choice>
         </element>
         <element choice="1" label="C. Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
@@ -282,7 +282,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="Have you ever had any surgery other than for cancer treatment?" max_length="40" name="have_any_surgery" type="choice">
+        <element choice="1" label="Have you ever had any surgery other than for cancer treatment ?" max_length="40" name="have_any_surgery" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -373,16 +373,16 @@
         </element>
         <element choice="1" label="Which category best represents your total household income?" max_length="40" name="household_income" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Less than $10,000" sequence="1" value="Less than $10,000"/>
-                <element inactive_on_update="false" label="$10,000 to $19,999" sequence="2" value="$10,000 to $19,999"/>
-                <element inactive_on_update="false" label="$100,000 or more" sequence="3" value="$100,000 or more"/>
-                <element inactive_on_update="false" label="$20,000 to $29,999" sequence="4" value="$20,000 to $29,999"/>
-                <element inactive_on_update="false" label="$30,000 to $39,999" sequence="5" value="$30,000 to $39,999"/>
-                <element inactive_on_update="false" label="$40,000 to $49,999" sequence="6" value="$40,000 to $49,999"/>
-                <element inactive_on_update="false" label="$50,000 to $69,999" sequence="7" value="$50,000 to $69,999"/>
-                <element inactive_on_update="false" label="$70,000 to $99,999" sequence="8" value="$70,000 to $99,999"/>
-                <element inactive_on_update="false" label="Decline" sequence="9" value="Decline"/>
-                <element inactive_on_update="false" label="DON'T KNOW" sequence="10" value="DON'T KNOW"/>
+                <element inactive_on_update="false" label="Less than $10,000" sequence="10" value="Less than $10,000"/>
+                <element inactive_on_update="false" label="$10,000 to $19,999" sequence="20" value="$10,000 to $19,999"/>
+                <element inactive_on_update="false" label="$20,000 to $29,999" sequence="40" value="$20,000 to $29,999"/>
+                <element inactive_on_update="false" label="$30,000 to $39,999" sequence="50" value="$30,000 to $39,999"/>
+                <element inactive_on_update="false" label="$40,000 to $49,999" sequence="60" value="$40,000 to $49,999"/>
+                <element inactive_on_update="false" label="$50,000 to $69,999" sequence="70" value="$50,000 to $69,999"/>
+                <element inactive_on_update="false" label="$70,000 to $99,999" sequence="80" value="$70,000 to $99,999"/>
+                <element inactive_on_update="false" label="$100,000 or more" sequence="85" value="$100,000 or more"/>
+                <element inactive_on_update="false" label="Decline" sequence="90" value="Decline"/>
+                <element inactive_on_update="false" label="DON'T KNOW" sequence="100" value="DON'T KNOW"/>
             </choice>
         </element>
         <element label="How many live-born children have you had?" max_length="4" name="how_many_live_born_children_have_you_had" type="integer"/>
@@ -992,6 +992,7 @@
                 <element inactive_on_update="false" label="Decline" sequence="8" value="Decline"/>
             </choice>
         </element>
+        <element label="Minor" max_length="40" name="minor" type="boolean"/>
         <element label="A13. What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
         <element label="And at what age ?" max_length="100" name="most_weighed_at_what_age" type="string"/>
         <element choice="1" label="F7.What is the most you have ever weighed (excluding pregnancy(ies))?" max_length="40" name="most_you_have_ever_weighed" type="choice">
@@ -1203,6 +1204,7 @@
         <element attributes="edge_encryption_enabled=true" label="Other (Specify)" max_length="40" name="other_specify" type="string"/>
         <element label="Please specify this therapy or treatment" max_length="200" name="other_therapy_or_treatment_specify" type="string"/>
         <element label="Ounces" max_length="100" name="ounces" type="string"/>
+        <element label="Pediatric" max_length="40" name="pediatric" type="boolean"/>
         <element label="Total amount of Months" max_length="100" name="pipe_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="pipe_total_amount_of_years" type="string"/>
         <element label="Place of Birth" max_length="200" name="place_of_birth" type="string"/>

@@ -39,7 +39,7 @@
         <message/>
         <message_html><![CDATA[<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Dear&nbsp;${name}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Date ${sys_created_on}</p>
 <p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
-<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Thank you for taking the time to complete the STUDY screener on our CHARMS website.&nbsp;&nbsp; Your screener has been sent to our STUDY team we have reviewed your information.&nbsp; The STUDY team has determined that we need more information from you about : INSERT ISSUE.</p>
+<p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">Thank you for taking the time to complete the STUDY information on our CHARMS website.&nbsp;&nbsp; Your forms have been sent to our STUDY team and we have reviewed your information.&nbsp; The STUDY team has determined that we need more information from you.</p>
 <p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
 <p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">We will attempt to contact you in the next 1-2 weeks.&nbsp; Alternatively, you can contact our Family Studies Referral Nurse by phone (1-800-518-8474) or by email (<a style="color: blue; text-decoration: underline;" href="mailto:JanetBracci@westat.com">JanetBracci@westat.com</a>) from 9am &ndash; 4pm EST.</p>
 <p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
@@ -58,7 +58,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Additional Information Required</subject>
+        <subject>ATTENTION REQUIRED: CHARMS Update Needed</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
@@ -66,7 +66,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>0559e909db3dcc90b86770c08c9619a3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>FCSMS - Additional Information Required</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -75,7 +75,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sysevent_email_action_0559e909db3dcc90b86770c08c9619a3</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-16 21:08:34</sys_updated_on>
+        <sys_updated_on>2020-01-10 16:16:10</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Family Cohort (Family Member Details)">fa8ae5c9db3dcc90b86770c08c9619cf</template>
         <type>email</type>

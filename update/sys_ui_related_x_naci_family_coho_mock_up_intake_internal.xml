@@ -2,76 +2,62 @@
     <sys_ui_related sys_domain="global" table="x_naci_family_coho_mock_up_intake" version="2" view="internal">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="FCSMS Intake Form - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">134fc7e3db240c1054d8ff621f96198c</list_id>
+            <list_id display_value="FCSMS Screener - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4272d18ddbde0810b86770c08c96196e</list_id>
             <order_by/>
             <position>0</position>
             <related_list>x_naci_family_coho_mock_up_intake_patient_cancer.intake_form</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
-            <sys_id>af4fc7e3db240c1054d8ff621f96198c</sys_id>
+            <sys_created_on>2020-01-10 15:53:58</sys_created_on>
+            <sys_id>4272d18ddbde0810b86770c08c96196f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+            <sys_updated_on>2020-01-10 15:53:58</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="FCSMS Intake Form - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">134fc7e3db240c1054d8ff621f96198c</list_id>
+            <list_id display_value="FCSMS Screener - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4272d18ddbde0810b86770c08c96196e</list_id>
             <order_by/>
             <position>1</position>
             <related_list>x_naci_family_coho_mock_up_intake_family_cancer.intake_form_id</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
-            <sys_id>2b4fc7e3db240c1054d8ff621f96198d</sys_id>
+            <sys_created_on>2020-01-10 15:53:58</sys_created_on>
+            <sys_id>0e72d18ddbde0810b86770c08c96196f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+            <sys_updated_on>2020-01-10 15:53:58</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="FCSMS Intake Form - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">134fc7e3db240c1054d8ff621f96198c</list_id>
+            <list_id display_value="FCSMS Screener - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4272d18ddbde0810b86770c08c96196e</list_id>
             <order_by/>
             <position>2</position>
             <related_list>x_naci_family_coho_fcsms_intake_form_gene_test.intake_form_id</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
-            <sys_id>af4fc7e3db240c1054d8ff621f96198d</sys_id>
+            <sys_created_on>2020-01-10 15:53:58</sys_created_on>
+            <sys_id>8272d18ddbde0810b86770c08c961970</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+            <sys_updated_on>2020-01-10 15:53:58</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="FCSMS Intake Form - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">134fc7e3db240c1054d8ff621f96198c</list_id>
+            <list_id display_value="FCSMS Screener - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">4272d18ddbde0810b86770c08c96196e</list_id>
             <order_by/>
             <position>3</position>
-            <related_list>x_naci_family_coho_individual_information_questionnaire.enrollment</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
-            <sys_id>274fc7e3db240c1054d8ff621f96198e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="FCSMS Intake Form - internal" name="x_naci_family_coho_mock_up_intake" related_list="NULL" sys_domain="global" view="384580fddb648010b86770c08c961913">134fc7e3db240c1054d8ff621f96198c</list_id>
-            <order_by/>
-            <position>4</position>
             <related_list>x_naci_family_coho_family_history_question.enrollment</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
-            <sys_id>ab4fc7e3db240c1054d8ff621f96198e</sys_id>
+            <sys_created_on>2020-01-10 15:53:58</sys_created_on>
+            <sys_id>0a72d18ddbde0810b86770c08c961970</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+            <sys_updated_on>2020-01-10 15:53:58</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
-            <calculated_name>FCSMS Intake Form - internal</calculated_name>
+            <calculated_name>FCSMS Screener - internal</calculated_name>
             <filter/>
             <name>x_naci_family_coho_mock_up_intake</name>
             <order_by/>
@@ -79,19 +65,19 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 19:34:19</sys_created_on>
+            <sys_created_on>2020-01-10 15:53:58</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
-            <sys_id>134fc7e3db240c1054d8ff621f96198c</sys_id>
+            <sys_id>4272d18ddbde0810b86770c08c96196e</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>FCSMS Intake Form - internal</sys_name>
+            <sys_name>FCSMS Screener - internal</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_ui_related_x_naci_family_coho_mock_up_intake_internal</sys_update_name>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+            <sys_updated_on>2020-01-10 15:53:58</sys_updated_on>
             <sys_user/>
             <view display_value="internal" name="internal">384580fddb648010b86770c08c961913</view>
             <view_name/>

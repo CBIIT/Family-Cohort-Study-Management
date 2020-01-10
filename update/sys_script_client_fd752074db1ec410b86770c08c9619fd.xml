@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>age_at_diagnosis</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Confirm Numeric Values Diagnosis Age</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	var regex = /^\d+$/;
+
+	var nbrwn = g_form.getValue('age_at_diagnosis');
+
+	if (nbrwn.search(regex) == -1) {
+
+		g_form.setValue('age_at_diagnosis', '');
+		g_form.showFieldMsg('age_at_diagnosis', 'This field accepts numeric values only', 'error');
+
+	}
+
+	var diagnosisIntVal = g_form.getIntValue('age_at_diagnosis');
+	var ageIntVal = g_form.getIntValue('current_age');
+
+	if (diagnosisIntVal > ageIntVal && ageIntVal != 0){
+		g_form.setValue('age_at_diagnosis', '');
+		g_form.showFieldMsg('age_at_diagnosis', 'Current age cannot be younger than the age of diagnosis', 'error');
+	}
+
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-09 18:01:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>fd752074db1ec410b86770c08c9619fd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Confirm Numeric Values Diagnosis Age</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_fd752074db1ec410b86770c08c9619fd</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-09 19:01:08</sys_updated_on>
+        <table>x_naci_family_coho_mock_up_intake_family_cancer</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

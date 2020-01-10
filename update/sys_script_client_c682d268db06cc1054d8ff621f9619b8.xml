@@ -12,15 +12,21 @@
         <order/>
         <script><![CDATA[function onLoad() {
 	//Type appropriate comment here, and begin script below
-	var pediatric = false;
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
 
-	if (pediatric == true){
+	function ageCheck(response){
 
-		g_form.setLabelOf('have_biopsy', 'Has your child ever had a biopsy?');
-		g_form.setLabelOf('diagnosed_with_any_cancer', 'Has your child ever been diagnosed with any cancer??');
-		
+		var answer = response.responseXML.documentElement.getAttribute("answer");
 
+		if (answer == 'pediatric'){
 
+			g_form.setLabelOf('have_biopsy', 'Has your child ever had a biopsy?');
+			g_form.setLabelOf('diagnosed_with_any_cancer', 'Has your child ever been diagnosed with any cancer??');
+
+		}
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -29,7 +35,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>c682d268db06cc1054d8ff621f9619b8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Update Labels for Biopsies and Cancers</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -38,7 +44,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_c682d268db06cc1054d8ff621f9619b8</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-30 16:24:10</sys_updated_on>
+        <sys_updated_on>2020-01-09 21:34:53</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>1</ui_type>

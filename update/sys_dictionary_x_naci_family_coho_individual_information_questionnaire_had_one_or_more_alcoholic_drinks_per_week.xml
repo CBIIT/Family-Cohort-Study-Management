@@ -14,7 +14,7 @@
         <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>E3.Have you ever had one or more alcoholic drinks per week for 6 months or more?</column_label>
+        <column_label>E3. Have you ever had one or more alcoholic drinks per week for 6 months or more</column_label>
         <comments/>
         <create_roles/>
         <default_value>YES</default_value>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-10-16 15:07:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8bbe0a19dba80010b86770c08c961922</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>E3.Have you ever had one or more alcoholic drinks per week for 6 months or more?</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>E3. Have you ever had one or more alcoholic drinks per week for 6 months or more</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_had_one_or_more_alcoholic_drinks_per_week</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 16:53:02</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-07 17:25:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

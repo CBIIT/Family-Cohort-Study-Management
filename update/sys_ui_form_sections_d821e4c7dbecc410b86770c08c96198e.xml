@@ -9,20 +9,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c21e4c7dbecc410b86770c08c961989">d821e4c7dbecc410b86770c08c96198e</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c21e4c7dbecc410b86770c08c961989">5021e4c7dbecc410b86770c08c96198d</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-21 17:36:22</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-21 17:36:22</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>d421e4c7dbecc410b86770c08c961991</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_individual_information_questionnaire" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c21e4c7dbecc410b86770c08c961989">d821e4c7dbecc410b86770c08c96198e</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c21e4c7dbecc410b86770c08c961989">1c21e4c7dbecc410b86770c08c96198d</sys_ui_section>
+            <sys_ui_section caption="SectionA4" display_value="SectionA4" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="5c21e4c7dbecc410b86770c08c961989">5021e4c7dbecc410b86770c08c96198d</sys_ui_section>
             <sys_updated_by>yuw5@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-21 17:36:22</sys_updated_on>
         </sys_ui_form_section>
