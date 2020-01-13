@@ -23,6 +23,7 @@
 	var validRegExp = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
 
 	if (contactEmail.search(validRegExp) == -1){
+		g_form.clearValue('email_address');
 		g_form.showFieldMsg('email_address', "invalid email address. " , 'error');
 	}
 
@@ -40,7 +41,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>85461470dbdac410b86770c08c9619ce</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Confirm Email Addresses Match</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -49,7 +50,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_85461470dbdac410b86770c08c9619ce</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-09 17:27:59</sys_updated_on>
+        <sys_updated_on>2020-01-13 16:04:49</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <type>onChange</type>
         <ui_type>1</ui_type>

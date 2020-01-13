@@ -4,15 +4,17 @@
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
-        <field>a_cancer_survivor</field>
+        <field>jewish_descent</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Identify Study by Color</name>
+        <name>Set UI Action Color</name>
         <order/>
         <script><![CDATA[function onLoad() {
-   	
+
 	var color = '';
+
+
 	var study = g_form.getValue('iiq_subject.family.study');
 
 
@@ -22,32 +24,47 @@
 		color = '#C30023';
 	}
 
-	try{
+	changeButtonColor('sysverb_update', color);
+	changeButtonColor('add_attachment', color);
+	changeButtonColor('sysverb_insert', color);
+	changeButtonColor('sysverb_insert_and_stay', color);
+	changeButtonColor('sysverb_update_and_stay', color);
+	changeButtonColor('sysverb_delete', color);
+	changeButtonColor('enrollment_complete', color);
+	changeButtonColor('submit_iiq', color);
+	changeButtonColor('	additional_info_required_iiq', color);
+	
 
-		var myField = 'iiq_subject.family.study';
-		var ctrl = $('sys_display.' + g_form.getControl(myField).id);
-		ctrl.setStyle({color: "white"});
-		ctrl.style.backgroundColor = color;
 
-	} catch (err){}
-   
+	function changeButtonColor(buttonID, backgroundColor) {
+		try{
+			//Find the button(s) by ID and change the background color
+			$$('button[id=' + buttonID + ']').each(function(elmt) {
+				elmt.style.backgroundColor = backgroundColor;
+				elmt.style.color = '#ffffff'; //make the button text white
+			});
+		}catch(e){}
+
+
+	}
+
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
-        <sys_created_on>2019-11-15 17:13:00</sys_created_on>
+        <sys_created_on>2020-01-13 17:52:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>521bc10fdbc1041054d8ff621f96190c</sys_id>
+        <sys_id>e32a858edb9e8c1054d8ff621f9619c7</sys_id>
         <sys_mod_count>6</sys_mod_count>
-        <sys_name>Identify Study by Color</sys_name>
+        <sys_name>Set UI Action Color</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sys_script_client_521bc10fdbc1041054d8ff621f96190c</sys_update_name>
+        <sys_update_name>sys_script_client_e32a858edb9e8c1054d8ff621f9619c7</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-13 18:05:52</sys_updated_on>
+        <sys_updated_on>2020-01-13 17:57:45</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

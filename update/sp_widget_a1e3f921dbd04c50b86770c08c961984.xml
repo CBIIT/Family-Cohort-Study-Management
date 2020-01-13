@@ -8,10 +8,10 @@
 	
 	c.data.label = "Surgery";
 	
-	c.data.columns = [{label:"What type of surgery (name) did you have?", name: "type_of_surgery", width:'20%'},
-										{label:"Date or age when you had this surgery?", name: "type_when_surgery", width:'20%'},
-										{label: "What was the reason you had this surgery?",name: "reason_surgery", width:'20%'},
-										{label:"Provide the name and address of the facility where the surgery was performed.", name: "name_address_surgery", width:'20%'}];
+	c.data.columns = [{label:"Surgery Type (Name)", name: "type_of_surgery", width:'20%'},
+										{label:"Date surgery occurred", name: "type_when_surgery", width:'20%'},
+										{label: "Reason for surgery",name: "reason_surgery", width:'20%'},
+										{label:"Name and address of the facility where the surgery was performed.", name: "name_address_surgery", width:'20%'}];
 
 
 	c.openForm = function(){
@@ -162,15 +162,15 @@
         <sys_created_on>2019-10-04 21:31:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1e3f921dbd04c50b86770c08c961984</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>FCSMS IIQ Form Surgery List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_a1e3f921dbd04c50b86770c08c961984</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 19:24:44</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-13 19:52:33</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">

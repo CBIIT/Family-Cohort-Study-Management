@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>diagnosed_with_severe_forgetfulness_or_dementia</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-13 19:03:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>318a5186db12cc1054d8ff621f96193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>diagnosed_with_severe_forgetfulness_or_dementia</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_ui_policy_action_318a5186db12cc1054d8ff621f96193a</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-13 19:03:06</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <ui_policy display_value="Hide Surgery &amp; Medical Condition Fields for Minors">95491146db12cc1054d8ff621f9619ac</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

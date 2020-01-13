@@ -41,7 +41,7 @@
         <sys_created_on>2020-01-06 15:47:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>968ae8ffdb8ac01054d8ff621f96197e</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>FCSMS Submission Acknowledge Widget</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -49,7 +49,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_968ae8ffdb8ac01054d8ff621f96197e</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 19:19:40</sys_updated_on>
+        <sys_updated_on>2020-01-13 17:44:44</sys_updated_on>
         <template><![CDATA[<div class="main-content" style="height: 500px;padding-top: 50px;">
   <div class="row row-title">
     <div style="margin: auto;width: 800px;text-align: left;">
@@ -86,6 +86,28 @@
             Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
           </p>
       </div>
+      <div id="general_consent" ng-show="c.data.form == 'general_consent'">
+          <p style="font-size: 30px; color: green;">
+          	Your Consent Form has been submitted successfully !  
+        	</p>
+          <p style="font-size: 20px;">
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p style="font-size: 20px;">
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+      </div>
+      <div id="mrr_consent" ng-show="c.data.form == 'mrr_consent'">
+          <p style="font-size: 30px; color: green;">
+          	Your Medical Research Record Consent Form has been submitted successfully !  
+        	</p>
+          <p style="font-size: 20px;">
+            Thank you very much. The information you have provided will be reviewed by our study team.  If they agree that you are eligible to participate in the study of Li-Fraumeni or Li-Fraumeni like syndromes, you will receive an email with further instructions, including instructions to log in to a secure study portal. If the team decides that you are not eligible, you will receive an email explaining why.  In the meantime, you should receive an email confirming this submission. 
+          </p>
+          <p style="font-size: 20px;">
+            Please feel free to call at any time if you have any questions regarding this protocol.  Ask to speak with Janet Bracci, who is the Study Nurse.  Our toll-free phone number is 1-800-518-8474. Thank you for your willingness to consider joining our research effort.  We could not do vital studies like this without the help of dedicated people like you. 
+          </p>
+      </div>      
       <div style="text-align:center;  padding-top: 30px;">
        <button class="btn btn-primary"  style="padding: 5px 25px;" ng-click="c.goHome()">OK</button>
       </div>

@@ -5,52 +5,49 @@
         <condition/>
         <description/>
         <field>a_cancer_survivor</field>
-        <global>true</global>
+        <global>false</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Identify Study by Color</name>
+        <name>Update Labels for Surgeries</name>
         <order/>
         <script><![CDATA[function onLoad() {
-   	
-	var color = '';
-	var study = g_form.getValue('iiq_subject.family.study');
+	//Type appropriate comment here, and begin script below
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
 
+	function ageCheck(response){
 
-	if (study == '5bf67315db3f3f4054d8ff621f961968'){ //If Study is Li-Fraumeni Syndrome
-		color = '#441B8B';
-	} else if (study == '6bd1e198db94c450b86770c08c96198c'){ //If Study is Rasopothy
-		color = '#C30023';
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		if (answer == 'pediatric'){
+
+			g_form.setLabelOf('have_any_surgery', 'Has your child ever had any surgery other than for cancer treatment?');
+			
+
+		}
 	}
-
-	try{
-
-		var myField = 'iiq_subject.family.study';
-		var ctrl = $('sys_display.' + g_form.getControl(myField).id);
-		ctrl.setStyle({color: "white"});
-		ctrl.style.backgroundColor = color;
-
-	} catch (err){}
-   
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
-        <sys_created_on>2019-11-15 17:13:00</sys_created_on>
+        <sys_created_on>2020-01-13 19:34:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>521bc10fdbc1041054d8ff621f96190c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Identify Study by Color</sys_name>
+        <sys_id>68c16142db52cc1054d8ff621f9619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Labels for Surgeries</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sys_script_client_521bc10fdbc1041054d8ff621f96190c</sys_update_name>
+        <sys_update_name>sys_script_client_68c16142db52cc1054d8ff621f9619cb</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-13 18:05:52</sys_updated_on>
+        <sys_updated_on>2020-01-13 19:34:41</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
-        <ui_type>0</ui_type>
-        <view/>
+        <ui_type>1</ui_type>
+        <view>SectionB2</view>
     </sys_script_client>
 </record_update>

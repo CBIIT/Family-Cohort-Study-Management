@@ -8,10 +8,10 @@
 	
 	c.data.label = "Biospy";
 	
-	c.data.columns = [{label:"Where on your body or in what organ was the biopsy performed ? ", name: "where_biopsy_performed", width:'20%'},
-										{label:"Do you know when you had this biopsy ?", name: "date_or_age_had_this_biopsy", width:'20%'},
-										{label: "What was the reason or symptom for which you had this biopsy ?",name: "reason_or_symptom_had_this_biopsy", width:'20%'},
-										{label: "Please provide name and address of the facility where the biopsy was performed",name: "name_and_address_of_the_facility_biopsy_was_performed", width:'25%'}];
+	c.data.columns = [{label:"Where on the body or in what organ was the biopsy performed?", name: "where_biopsy_performed", width:'20%'},
+										{label:"Do you know when this biopsy occurred?", name: "date_or_age_had_this_biopsy", width:'20%'},
+										{label: "What was the reason or symptom for which this biopsy occurred?",name: "reason_or_symptom_had_this_biopsy", width:'20%'},
+										{label: "name and address of the facility where the biopsy was performed",name: "name_and_address_of_the_facility_biopsy_was_performed", width:'25%'}];
 	
 	c.openForm = function(){
 		spUtil.get("widget-form", {
@@ -165,15 +165,15 @@
         <sys_created_on>2019-09-27 22:41:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>abd046dbdb44c050b86770c08c961950</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name>FCSMS IIQ Form Biopsy List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_abd046dbdb44c050b86770c08c961950</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 18:27:58</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-13 19:48:12</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">

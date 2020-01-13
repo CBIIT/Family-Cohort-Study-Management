@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>a_cancer_survivor</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Labels for Meds/Supplements</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	//Type appropriate comment here, and begin script below
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
+
+	function ageCheck(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		if (answer == 'pediatric'){
+
+			g_form.setLabelOf('taking_any_prescription_medication', 'Is your child currently taking, or has he/she taken any prescription medication?');
+			g_form.setLabelOf('take_more_than_6_months', 'Is your child currently taking, or has he/she taken for more than 6 months, any prescription medication?');
+
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-13 19:37:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>f2626182db52cc1054d8ff621f96197c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update Labels for Meds/Supplements</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_f2626182db52cc1054d8ff621f96197c</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-13 19:39:04</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionB3</view>
+    </sys_script_client>
+</record_update>
