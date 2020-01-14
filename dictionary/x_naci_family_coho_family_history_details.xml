@@ -7,6 +7,7 @@
         <element label="City" max_length="50" name="city" type="string"/>
         <element label="City" max_length="50" name="city_of_death" type="string"/>
         <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
+        <element label="Consent Signed" max_length="40" name="consent_signed" type="boolean"/>
         <element label="County" max_length="50" name="county_of_death" type="string"/>
         <element label="Date Consent Requested" max_length="40" name="date_consent_requested" type="glide_date"/>
         <element label="Date Forms Requested" max_length="40" name="date_forms_requested" type="glide_date"/>
