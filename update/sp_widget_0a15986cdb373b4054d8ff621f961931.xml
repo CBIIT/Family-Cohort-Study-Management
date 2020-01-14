@@ -7,7 +7,8 @@
 	
 	//c.intake_sys_id = 'f46149a8db940850b86770c08c9619ba';
 	c.intake_sys_id = c.data.intake_sys_id;
-	c.iiq_sys_id = 'eea231e4db980850b86770c08c961927';
+	c.fhq_sys_id = c.data.fhq_sys_id;
+	c.iiq_sys_id = c.data.iiq_sys_id;
 	c.view_model = "proband";
 	c.openLFS = function(){
 		
@@ -124,8 +125,6 @@
 	tmp.iiq = 0;
 	tmp.iiq_sys_id = 'ad5c782fdb30041054d8ff621f961929';
 	data.records.push(tmp);
-	data.showConsent = true;
-	data.showMRR = true;
 	
 	//determine if we need to display consent form or not	
 	//this id should be set when the user select LI-F study
@@ -135,9 +134,9 @@
 	gr.addQuery('consent_by', user_id);
 	gr.query();
 	if(gr.getRowCount() > 0){
-		data.showConsent = false;
-	}else{
 		data.showConsent = true;
+	}else{
+		data.showConsent = false;
 	} 
 	
 	//determine if we need to display MRR consent or not
@@ -146,15 +145,71 @@
 	gr1.addQuery('consent_by', user_id);
 	gr1.query();
 	if(gr1.getRowCount() > 0){
-		data.showMRR = false;
-	}else{
 		data.showMRR = true;
+	}else{
+		data.showMRR = false;
 	} 
+
+	//link IIQ
+	var gr3 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+      gr3.addNullQuery('user');
+	    gr3.addNotNullQuery('form_id');
+	    gr3.addNotNullQuery('email');
+	    gr3.addQuery('form_type', 'iiq');
+	gr3.query();
+	while(gr3.next()){
+		  var gr4 = new GlideRecord('sys_user');
+		      gr4.get(user_id);
+		  var email = gr4.email.toString();
+			if(gr3.email.toString() == email){
+				gr3.user = user_id;
+				gr3.update();
+			}	
+	}
 	
-	//deterime which screener form should be displayed for logged in user.
-	data.intake_sys_id = 'f46149a8db940850b86770c08c9619ba';
+	//set instake, FHQ and IIQ record ID
+	data.intake_sys_id = '';
+	data.fhq_sys_id = '';
+	data.iiq_sys_id = '';
+	var gr2 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+	    gr2.addQuery('user', user_id);
+	gr2.query();
+	//deterime which screener form should be displayed or create an new one for logged in user.
+	if(gr2.getRowCount() <= 0){
+		createScreenerForm();
+	}
+	else{
+		while(gr2.next()){
+			//ignore proxy, only consider proband
+			if(gr2.proxy.toString() == 'no'){
+				if(gr2.form_type == 'screener' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+					data.intake_sys_id = gr2.form_id.toString();
+				}
+				//deterime which FHQ form should be displayed for logged in user.
+				if(gr2.form_type == 'fhq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+					data.fhq_sys_id = gr2.form_id.toString();
+				}
+				//deterime which IIQ form should be displayed for logged in user.		
+				if(gr2.form_type == 'iiq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+					data.iiq_sys_id = gr2.form_id.toString();
+				}
+			}
+		}
+	}
 	
-	
+	function createScreenerForm() {
+		var gr5 = new GlideRecord('x_naci_family_coho_mock_up_intake');
+		gr5.initialize();
+		data.intake_sys_id = gr5.insert();
+		var gr6 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+		gr6.initialize();
+		gr6.form_id = data.intake_sys_id;
+		gr6.form_type = 'screener';
+		gr6.proxy = 'no';
+		gr6.user = user_id;
+		gr6.insert();
+	}
+ 
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -162,7 +217,7 @@
         <sys_created_on>2019-09-06 15:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a15986cdb373b4054d8ff621f961931</sys_id>
-        <sys_mod_count>284</sys_mod_count>
+        <sys_mod_count>312</sys_mod_count>
         <sys_name>FCSMS Home</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -170,7 +225,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0a15986cdb373b4054d8ff621f961931</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-13 22:30:51</sys_updated_on>
+        <sys_updated_on>2020-01-14 19:59:12</sys_updated_on>
         <template><![CDATA[<div class="main-content">
   <div class="row page-title">
     Family Cohort Studies for {{c.data.username}} 
@@ -268,12 +323,12 @@
             </div>
 						-->
           </div>
-          <div class="form-slot">
+          <div class="form-slot" ng-show='c.data.fhq_sys_id.length > 0'>
             <h5>
               Family History Questionnaire
             </h5>
             <div class="form-card">
-              <a href="javascript:void(0);" ng-click="c.reviewFHQ(c.intake_sys_id)" >
+              <a href="javascript:void(0);" ng-click="c.reviewFHQ(c.fhq_sys_id)" >
                 <div class="image-hover">
                     <img src="FCSMS-HomePage-FHQ.jpg" width="203"/>
                 </div>
@@ -290,7 +345,7 @@
             </div>
 						-->
           </div>
-          <div class="form-slot">
+          <div class="form-slot" ng-show='c.data.iiq_sys_id.length > 0'>
             <h5>
               Individual Information Questionnaire
             </h5>
