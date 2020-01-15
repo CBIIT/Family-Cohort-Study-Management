@@ -288,7 +288,7 @@ div .panel-heading{
 	var str = gs.action.getGlideURI();
 	var enrollment_sys_id = str.get('sys_id');
 	var gr = new GlideRecord('x_naci_family_coho_family_history_question');
-	gr.addQuery('enrollment',enrollment_sys_id);
+	gr.addQuery('sys_id',enrollment_sys_id);
 	gr.query();
 	gr.next();
 	var sys_id = gr.sys_id.toString();
@@ -416,7 +416,7 @@ div .panel-heading{
         <sys_created_on>2019-09-23 16:02:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>573f77bddb8c8c1054d8ff621f9619d9</sys_id>
-        <sys_mod_count>396</sys_mod_count>
+        <sys_mod_count>397</sys_mod_count>
         <sys_name>FCSMS FHQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -424,7 +424,7 @@ div .panel-heading{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_573f77bddb8c8c1054d8ff621f9619d9</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-13 22:29:13</sys_updated_on>
+        <sys_updated_on>2020-01-15 17:08:27</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 22px;">
   <div class="row">
     <div class="left-side-menu col-md-3">

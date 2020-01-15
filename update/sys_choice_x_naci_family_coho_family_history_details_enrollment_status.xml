@@ -81,7 +81,7 @@
             <element>enrollment_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Study Panel Review</label>
+            <label>Eligibility Review</label>
             <language>en</language>
             <name>x_naci_family_coho_family_history_details</name>
             <sequence>40</sequence>
@@ -89,9 +89,9 @@
             <sys_created_on>2019-11-21 19:32:06</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>ddd46c41db990c10b86770c08c961902</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-21 19:32:12</sys_updated_on>
+            <sys_updated_on>2020-01-15 20:54:05</sys_updated_on>
             <u_dependent_value_2/>
             <value>study_panel_review</value>
         </sys_choice>

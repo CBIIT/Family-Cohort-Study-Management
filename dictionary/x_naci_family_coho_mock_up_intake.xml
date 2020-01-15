@@ -89,7 +89,7 @@
         </element>
         <element label="Family" max_length="32" name="family" read_only="true" reference="x_naci_family_coho_family_id" type="reference"/>
         <element label="Family ID" max_length="100" name="family_id" type="string"/>
-        <element label="Family Member Record" max_length="32" name="family_member_record" reference="x_naci_family_coho_family_history_details" type="reference"/>
+        <element label="Family Member Record" max_length="32" name="family_member_record" read_only="true" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="What is the name of the person you are filled this out for" max_length="100" name="filled_for" type="string"/>
         <element choice="3" default="No" label="Are you filling this questionnaire out for someone else?" mandatory="true" max_length="40" name="filling_for_someone" type="choice">
             <choice>

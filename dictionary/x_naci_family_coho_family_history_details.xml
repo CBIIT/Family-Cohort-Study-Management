@@ -31,7 +31,7 @@
                 <element inactive_on_update="false" label="New Screener Received" sequence="10" value="new_screener_received"/>
                 <element inactive_on_update="false" label="More Information Required" sequence="20" value="more_info_required"/>
                 <element inactive="true" inactive_on_update="true" label="Awaiting Eligibility Review" sequence="30" value="awaiting_eligibility_review"/>
-                <element inactive_on_update="false" label="Study Panel Review" sequence="40" value="study_panel_review"/>
+                <element inactive_on_update="false" label="Eligibility Review" sequence="40" value="study_panel_review"/>
                 <element inactive_on_update="false" label="Awaiting Consent" sequence="50" value="awaiting_consent"/>
                 <element inactive_on_update="false" label="Awaiting PI Signature" sequence="60" value="awaiting_pi_signature"/>
                 <element inactive_on_update="false" label="Awaiting Enrollment Forms" sequence="70" value="awaiting_enrollment_forms"/>
@@ -43,7 +43,7 @@
             </choice>
         </element>
         <element label="Family" max_length="32" name="family" reference="x_naci_family_coho_family_id" type="reference"/>
-        <element label="FHQ" max_length="50" name="family_historic_qustion_id" reference="x_naci_family_coho_family_history_question" type="reference"/>
+        <element label="FHQ" max_length="50" name="family_historic_qustion_id" read_only="true" reference="x_naci_family_coho_family_history_question" type="reference"/>
         <element label="Family ID" max_length="50" name="family_id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Family Member ID" max_length="40" name="family_member_id" type="string"/>
         <element label="FHQ Complete" max_length="40" name="fhq_complete" type="boolean"/>
@@ -63,7 +63,7 @@
         <element label="City" max_length="50" name="hospital_diagnosed_city" type="string"/>
         <element label="State" max_length="50" name="hospital_diagnosed_state" type="string"/>
         <element label="IIQ Complete" max_length="40" name="iiq_complete" type="boolean"/>
-        <element label="IIQ" max_length="32" name="individual_information" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
+        <element label="IIQ" max_length="32" name="individual_information" read_only="true" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Last Name" max_length="100" name="last_name" type="string"/>
         <element label="Maiden Name" max_length="50" name="maiden_name" type="string"/>
         <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
