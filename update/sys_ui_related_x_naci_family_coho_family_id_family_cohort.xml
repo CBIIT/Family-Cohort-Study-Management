@@ -2,59 +2,45 @@
     <sys_ui_related sys_domain="global" table="x_naci_family_coho_family_id" version="2" view="family_cohort">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">a1b5d604dbc1c41054d8ff621f961980</list_id>
+            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">77121587db1e801054d8ff621f9619db</list_id>
             <order_by/>
             <position>0</position>
             <related_list>x_naci_family_coho_family_history_details.family</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-11-06 14:55:20</sys_created_on>
-            <sys_id>a1b5d604dbc1c41054d8ff621f961981</sys_id>
+            <sys_created_on>2020-01-16 21:00:18</sys_created_on>
+            <sys_id>b7121587db1e801054d8ff621f9619dc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-06 14:55:20</sys_updated_on>
+            <sys_updated_on>2020-01-16 21:00:18</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">a1b5d604dbc1c41054d8ff621f961980</list_id>
+            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">77121587db1e801054d8ff621f9619db</list_id>
             <order_by/>
             <position>1</position>
-            <related_list>REL:8df78631dbb40450b86770c08c961922</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-11-06 14:55:20</sys_created_on>
-            <sys_id>6db5d604dbc1c41054d8ff621f961981</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-06 14:55:20</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">a1b5d604dbc1c41054d8ff621f961980</list_id>
-            <order_by/>
-            <position>2</position>
             <related_list>REL:fe3902b1dbb40450b86770c08c9619c3</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-11-06 14:55:20</sys_created_on>
-            <sys_id>e1b5d604dbc1c41054d8ff621f961982</sys_id>
+            <sys_created_on>2020-01-16 21:00:18</sys_created_on>
+            <sys_id>3b121987db1e801054d8ff621f9619cc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-06 14:55:20</sys_updated_on>
+            <sys_updated_on>2020-01-16 21:00:18</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">a1b5d604dbc1c41054d8ff621f961980</list_id>
+            <list_id display_value="Family ID - Family Cohort" name="x_naci_family_coho_family_id" related_list="NULL" sys_domain="global" view="7c8bf1eddbf0c050b86770c08c961937">77121587db1e801054d8ff621f9619db</list_id>
             <order_by/>
-            <position>3</position>
+            <position>2</position>
             <related_list>x_naci_family_coho_family_member_comments.family_id</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-11-06 14:55:20</sys_created_on>
-            <sys_id>69b5d604dbc1c41054d8ff621f961982</sys_id>
+            <sys_created_on>2020-01-16 21:00:18</sys_created_on>
+            <sys_id>bf121987db1e801054d8ff621f9619cc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-06 14:55:20</sys_updated_on>
+            <sys_updated_on>2020-01-16 21:00:18</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Family ID - Family Cohort</calculated_name>
@@ -65,10 +51,10 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-11-06 14:55:20</sys_created_on>
+            <sys_created_on>2020-01-16 21:00:18</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
-            <sys_id>a1b5d604dbc1c41054d8ff621f961980</sys_id>
+            <sys_id>77121587db1e801054d8ff621f9619db</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Family ID - Family Cohort</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -77,7 +63,7 @@
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_ui_related_x_naci_family_coho_family_id_family_cohort</sys_update_name>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-11-06 14:55:20</sys_updated_on>
+            <sys_updated_on>2020-01-16 21:00:18</sys_updated_on>
             <sys_user/>
             <view display_value="Family Cohort" name="family_cohort">7c8bf1eddbf0c050b86770c08c961937</view>
             <view_name/>

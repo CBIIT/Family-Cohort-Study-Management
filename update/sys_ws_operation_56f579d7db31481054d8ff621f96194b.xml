@@ -21,15 +21,17 @@
 		if(gr.gender == null || gr.gender.toString().trim().length == 0){
 			var item = {};
 			item.index = 2;
-			item.page = "Introduction";
+			item.page = "Demographic Information";
 			item.message = "[Gender] is a required field";		
+			item.field = 'gender';
 			errors.push(item);
 		}
 		if(gr.date_of_birth == null || gr.date_of_birth.toString().trim().length == 0){
 			var item = {};
 			item.index = 2;
-			item.page = "Introduction";
+			item.page = "Demographic Information";
 			item.message = "[Date of Birth] is a required field";		
+			item.field = 'date_of_birth';
 			errors.push(item);
 		}
 	}
@@ -138,7 +140,7 @@
         <sys_created_on>2019-12-23 22:16:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>56f579d7db31481054d8ff621f96194b</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Validate and Submit IIQ</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -146,7 +148,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_56f579d7db31481054d8ff621f96194b</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-10 22:46:19</sys_updated_on>
+        <sys_updated_on>2020-01-16 22:14:57</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

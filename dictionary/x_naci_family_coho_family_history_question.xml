@@ -138,7 +138,7 @@
         <element label="Most Recent Spouse's Last Name" max_length="100" name="spouse_last_name" type="string"/>
         <element label="Most Recent Spouse's Maiden Name" max_length="50" name="spouse_maiden_name" type="string"/>
         <element label="Most Recent Spouse's Middle Name" max_length="50" name="spouse_middle_name" type="string"/>
-        <element label="Time to Complete Form" max_length="50" name="time_to_complete_form" type="glide_date_time"/>
+        <element label="FHQ Submitted Date/Time" max_length="50" name="time_to_complete_form" read_only="true" type="glide_date_time"/>
         <element label="Year moved to U.S.A" max_length="10" name="year_moved_to_usa" type="string"/>
         <index name="index">
             <element name="initial_proband"/>

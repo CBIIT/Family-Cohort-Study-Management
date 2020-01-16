@@ -180,7 +180,7 @@
             </choice>
         </element>
         <element label="Saved Section" max_length="20" name="saved_section" type="string"/>
-        <element label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
+        <element default="5bf67315db3f3f4054d8ff621f961968" label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
         <element choice="1" label="For which of the following genes or syndromes do you believe you have had testin" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>

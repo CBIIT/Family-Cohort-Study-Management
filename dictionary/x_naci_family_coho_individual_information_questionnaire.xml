@@ -1487,7 +1487,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element label="Time to Complete Form" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
+        <element label="IIQ Submit Date/Time" max_length="40" name="time_to_complete_form" read_only="true" type="glide_date_time"/>
         <element label="Total Amount of Months" max_length="100" name="total_amount_of_months" type="string"/>
         <element label="Total Amount of Years" max_length="100" name="total_amount_of_years" type="string"/>
         <element label="How many months, total for all of your children combined did you breast feed?" max_length="3" name="total_months_breasfed" type="integer"/>

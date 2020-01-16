@@ -163,6 +163,10 @@
 				}else{
 					document.body.scrollTop = 0;
 					document.documentElement.scrollTop = 0;
+					c.errorIntake.forEach(function(item){
+						console.log('#sp_formfield_' + item.field)
+						$('#sp_formfield_' + item.field).css('background-color', 'yellow');
+					});
 				}
 			}
 		});
@@ -217,6 +221,7 @@
 			$timeout(function(){
 				$('input[name="birthday"]').prop('readonly',true);		
 				$('input[name="name"]').prop('readonly',true);		
+				setErrorColor();
 			});
 		}
 		if(view == "LFS3"){
@@ -316,6 +321,16 @@
 			});			
 		}
 	});
+
+	function setErrorColor(){
+			c.errorIntake.forEach(function(item){
+			if(item.field == 'biological_sex'){
+				$('#s2id_sp_formfield_'+item.field).css('background-color', 'yellow');
+			}else{
+				$('#sp_formfield_' + item.field).css('background-color', 'yellow');
+			}
+		});
+	}
 	
 	function setProgressBar(saved_arr){
 		c.data.progress1 = includeElement(saved_arr, "1");
@@ -501,6 +516,7 @@ fieldset label{
 					item.index = 1;
 					item.page = "Study Introduction";
 					item.message = "the name of the person you are filled this out for is required field";		
+					item.field = 'filled_for';
 					data.error.push(item);
 				}
 				if(gr2.your_name == null || gr2.your_name.toString().trim().length == 0){
@@ -508,6 +524,7 @@ fieldset label{
 					item.index = 1;
 					item.page = "Study Introduction";
 					item.message = "Your name is required field";		
+					item.field = 'your_name';
 					data.error.push(item);
 				}
 				if(gr2.relationship == null || gr2.relationship.toString().trim().length == 0){
@@ -515,6 +532,7 @@ fieldset label{
 					item.index = 1;
 					item.page = "Study Introduction";
 					item.message = "Your Relationship to this person is required field";		
+					item.field = 'relationship';
 					data.error.push(item);
 				}
 			}
@@ -524,6 +542,7 @@ fieldset label{
 				item.index = 2;
 				item.page = "Personal Information";
 				item.message = "Biological Sex is required field";
+				item.field = 'biological_sex';
 				data.error.push(item);
 			}
 			if(gr2.email_address == null || gr2.email_address.toString().trim().length == 0){
@@ -531,6 +550,7 @@ fieldset label{
 				item.index = 2;
 				item.page = "Personal Information";
 				item.message = "Contact Email Address is required field";
+				item.field = 'email_address';
 				data.error.push(item);
 			}
 			if(gr2.confirm_email_address == null || gr2.confirm_email_address.toString().trim().length == 0){
@@ -538,6 +558,7 @@ fieldset label{
 				item.index = 2;
 				item.page = "Personal Information";
 				item.message = "Confirm Contact Email Address is required field";
+				item.field = 'confirm_email_address';
 				data.error.push(item);
 			}
 			if(gr2.phone_number == null || gr2.phone_number.toString().trim().length == 0){
@@ -545,6 +566,7 @@ fieldset label{
 				item.index = 2;
 				item.page = "Personal Information";
 				item.message = "Contact phone_number is required field";
+				item.field = 'phone_number';
 				data.error.push(item);
 			}
 			//validate form 3
@@ -621,7 +643,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>949</sys_mod_count>
+        <sys_mod_count>974</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -629,7 +651,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-10 20:41:29</sys_updated_on>
+        <sys_updated_on>2020-01-16 19:46:18</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
