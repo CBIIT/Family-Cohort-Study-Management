@@ -11,12 +11,21 @@
 
     var fileContents = request.body.data.fileContents;
 	var sys_id = request.body.data.sys_id;
+	var type = request.body.data.type;
 	
-    var attachement = new GlideSysAttachment();
-	var gr = new GlideRecord('x_naci_family_coho_fcsms_consent');
-	var record = gr.get(sys_id);
-	var attachment_sys_id = attachement.writeBase64(gr, 'Family Cohort Study Consent.pdf' , 'application/pdf', fileContents);
-	
+	var attachment_sys_id = '';
+	if(type == 'consent'){
+		var attachement = new GlideSysAttachment();
+		var gr = new GlideRecord('x_naci_family_coho_fcsms_consent');
+		var record = gr.get(sys_id);
+		attachment_sys_id = attachement.writeBase64(gr, 'Family Cohort Study Consent.pdf' , 'application/pdf', fileContents);
+	}
+	if(type == 'mrr'){
+		var attachement1 = new GlideSysAttachment();
+		var gr1 = new GlideRecord('x_naci_family_coho_fcsms_mrr_consent');
+		var record1 = gr1.get(sys_id);
+		attachment_sys_id = attachement1.writeBase64(gr1, 'Family Cohort Study MRR.pdf' , 'application/pdf', fileContents);
+	}
 	return attachment_sys_id;
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_naci_family_coho/fcsms_apis/attachSignedPDF</operation_uri>
@@ -33,15 +42,15 @@
         <sys_created_on>2020-01-08 21:17:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>84c7cc2cdb96c41054d8ff621f9619a6</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Attach Signed PDF</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_84c7cc2cdb96c41054d8ff621f9619a6</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-08 22:01:39</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-16 14:44:20</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

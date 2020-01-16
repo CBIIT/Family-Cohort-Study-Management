@@ -77,6 +77,7 @@
         <u_linux_os>false</u_linux_os>
         <u_mac_os>false</u_mac_os>
         <u_non_standard_delivery_date>false</u_non_standard_delivery_date>
+        <u_send_survey>false</u_send_survey>
         <u_solaris_os>false</u_solaris_os>
         <u_training>false</u_training>
         <u_trp_item>false</u_trp_item>
