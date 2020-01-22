@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$location, $http, spModal, spUtil, $uibModal) {
+        <client_script><![CDATA[function($scope,$location, $http, spModal, $timeout, spUtil, $uibModal) {
 	/* widget controller */
 	var c = this;
 	var s = $location.search();
@@ -29,6 +29,72 @@
 	c.accordions.tab_2_A2 = false;
 	c.accordions.tab_2_A3 = false;
 	c.accordions.tab_2_A4 = false;
+	
+	c.setErrorColor = function(section){
+		var error_idxs = [];
+		c.errors.forEach(function(err){
+			if(err.section == section){
+				error_idxs.push(err.field);
+			}
+		});
+		if(section == 'SectionA2'){
+			//Demographic information
+			if(error_idxs.indexOf('gender') > -1){
+				$('#s2id_sp_formfield_gender').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_gender').css('background-color', '#fff');
+			}
+			if(error_idxs.indexOf('date_of_birth') > -1){
+				$('#sp_formfield_date_of_birth').css('background-color', 'yellow');
+			}
+			else{
+				$('#sp_formfield_date_of_birth').css('background-color', 'lightgray');
+			}
+		}
+		else if(section == 'SectionB1'){
+			//Biopsy and Cancers
+			if(error_idxs.indexOf('diagnosed_with_any_cancer') > -1){
+				$('#s2id_sp_formfield_diagnosed_with_any_cancer').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_diagnosed_with_any_cancer').css('background-color', '#fff');
+			}
+			if(error_idxs.indexOf('have_biopsy') > -1){
+				$('#s2id_sp_formfield_have_biopsy').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_have_biopsy').css('background-color', '#fff');
+			}
+		}
+		else if(section == 'SectionB2'){
+			//surgery
+			if(error_idxs.indexOf('have_any_surgery') > -1){
+				$('#s2id_sp_formfield_have_any_surgery').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_have_any_surgery').css('background-color', '#fff');
+			}
+		}
+		else if(section == 'SectionB3'){
+			//medical conditions
+			if(error_idxs.indexOf('taking_any_prescription_medication') > -1){
+				$('#s2id_sp_formfield_taking_any_prescription_medication').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_taking_any_prescription_medication').css('background-color', '#fff');
+			}
+		}
+		else if(section == 'SectionC'){
+			//Screening test
+			if(error_idxs.indexOf('had_screening_for_cancer') > -1){
+				$('#s2id_sp_formfield_had_screening_for_cancer').css('background-color', 'yellow');
+			}
+			else{
+				$('#s2id_sp_formfield_had_screening_for_cancer').css('background-color', '#fff');
+			}
+		}
+	}
 	
 	c.validate = function(section, cb){
 		var param = {};
@@ -145,6 +211,11 @@
 						c.widget_2_A2 = response;
 					})
 				}
+				else{
+					if(c.errors.length > 0){
+						c.setErrorColor("SectionA2");
+					}
+				}
 			}
 			else if(sub == 'tab_2_A3'){
 				c.current_form_idx = 'SectionA3';
@@ -195,6 +266,9 @@
 				})
 			}
 			else{
+				if(c.errors.length > 0){
+					c.setErrorColor("SectionB1");
+				}
 				var have_biopsy = c.g_forms['SectionB1'].getValue('have_biopsy');
 				if(have_biopsy == 'YES'){
 					c.biopsyDisplay = true;
@@ -225,6 +299,9 @@
 				})
 			}
 			else{
+				if(c.errors.length > 0){
+					c.setErrorColor("SectionB2");
+				}
 				var have_any_surgery = c.g_forms['SectionB2'].getValue('have_any_surgery');
 				if(have_any_surgery == 'YES'){
 					c.surgeryDisplay = true;
@@ -247,6 +324,9 @@
 				})
 			}
 			else{
+				if(c.errors.length > 0){
+					c.setErrorColor("SectionB3");
+				}
 				var take_more_than_6_months = c.g_forms['SectionB3'].getValue('take_more_than_6_months');
 				if(take_more_than_6_months == 'YES'){
 					c.medicationDisplay = true;
@@ -282,6 +362,9 @@
 				})
 			}
 			else{
+				if(c.errors.length > 0){
+					c.setErrorColor("SectionC");
+				}
 				var had_screening_for_cancer = c.g_forms['SectionC'].getValue('had_screening_for_cancer');
 				if(had_screening_for_cancer == 'YES'){
 					c.screeningDisplay = true;
@@ -630,6 +713,9 @@
 			}
 			else{
 				record[field] = g_form.getValue(field);
+				if(record[field] == ''){
+					record[field] = 'NULL';
+				}
 			}
 
 
@@ -687,7 +773,9 @@
 									c.showSuccessfulPage();
 								}
 								else{
-									 c.errors = res.errors; 
+									 c.errors = res.errors;
+										document.body.scrollTop = 0;
+										document.documentElement.scrollTop = 0;
 								}
 
 							});
@@ -822,7 +910,8 @@
 		}
 		
 	};
-
+	
+	
 	$scope.$on('spModel.fields.rendered', function(e, gFormInstance) {
 		var g_form = null;
 		if(e.targetScope.formModel.view == "Introduction"){
@@ -836,6 +925,11 @@
 		else if(e.targetScope.formModel.view == "SectionA2"){
 			c.setActions("SectionA2", "2_A2");
 			c.g_forms['SectionA2'] = e.targetScope.getGlideForm();
+			if(c.errors.length > 0){
+				$timeout(function(){
+					c.setErrorColor("SectionA2");
+				});
+			}
 		}
 		else if(e.targetScope.formModel.view == "SectionA3"){
 			c.setActions("SectionA3", "2_A3");
@@ -848,7 +942,12 @@
 		else if(e.targetScope.formModel.view == "SectionB1"){
 			c.setActions("SectionB1", "3");
 			c.g_forms['SectionB1'] = e.targetScope.getGlideForm();
-			g_form = e.targetScope.getGlideForm();	
+			g_form = e.targetScope.getGlideForm();
+			if(c.errors.length > 0){
+				$timeout(function(){
+					c.setErrorColor("SectionB1");
+				});
+			}
 			var have_biopsy = g_form.getValue('have_biopsy');
 			if(have_biopsy == 'YES'){
 				c.biopsyDisplay = true;
@@ -884,7 +983,12 @@
 		else if(e.targetScope.formModel.view == "SectionB2"){
 			c.setActions("SectionB2", "4");
 			c.g_forms['SectionB2'] = e.targetScope.getGlideForm();
-			g_form = e.targetScope.getGlideForm();	
+			g_form = e.targetScope.getGlideForm();
+			if(c.errors.length > 0){
+				$timeout(function(){
+					c.setErrorColor("SectionB2");
+				});
+			}
 			var have_any_surgery = g_form.getValue('have_any_surgery');
 			if(have_any_surgery == 'YES'){
 				c.surgeryDisplay = true;
@@ -905,7 +1009,12 @@
 		else if(e.targetScope.formModel.view == "SectionB3"){
 			c.setActions("SectionB3", "5");
 			c.g_forms['SectionB3'] = e.targetScope.getGlideForm();
-			g_form = e.targetScope.getGlideForm();	
+			g_form = e.targetScope.getGlideForm();
+			if(c.errors.length > 0){
+				$timeout(function(){
+					c.setErrorColor("SectionB3");
+				});
+			}
 			var take_more_than_6_months = g_form.getValue('take_more_than_6_months');
 			if(take_more_than_6_months == 'YES'){
 				c.medicationDisplay = true;
@@ -932,6 +1041,11 @@
 			c.setActions("SectionC", "7");
 			c.g_forms['SectionC'] = e.targetScope.getGlideForm();
 			g_form = e.targetScope.getGlideForm();
+			if(c.errors.length > 0){
+				$timeout(function(){
+					c.setErrorColor("SectionC");
+				});
+			}
 			var had_screening_for_cancer = g_form.getValue('had_screening_for_cancer');
 			if(had_screening_for_cancer == 'YES'){
 				c.screeningDisplay = true;
@@ -1163,15 +1277,15 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>894</sys_mod_count>
+        <sys_mod_count>944</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-16 22:40:27</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-22 20:48:48</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">

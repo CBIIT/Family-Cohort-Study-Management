@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description/>
+        <layout><![CDATA[<table style="margin-left: auto; margin-right: auto;" width="1419" height="27">
+<tbody>
+<tr>
+<td><img src="Pasted%20image%20(1)%20(1).pngx" vspace="" hspace="" border="" align="baseline" alt="" title="" width="168" height="110" style="align: baseline;" /></td>
+<td style="text-align: center;"><strong><span style="font-size: 18pt;">Division of Cancer</span></strong><br /><strong><span style="font-size: 18pt;">Epidemiology and Genetics</span></strong><br /><span style="color: #0000ff;"><strong><span style="font-size: 18pt;">Clinical Genetics Branch</span></strong></span></td>
+<td><span style="font-size: 10pt;">9609 Medical Center Dr. Suite #6E454</span><br /><span style="font-size: 10pt;">MSC 9772 Rockville MD 20850</span><br /><span style="font-size: 10pt;">Phone: 240-276-7241 | Fax: 240-276-7836</span><br /><span style="font-size: 10pt;">U.S Department of Health and Human Services</span><br /><span style="font-size: 10pt;">National Institute of Health</span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>${notification:body}</p>]]></layout>
+        <name>FCSMS 2.0</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-21 20:23:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2d687ee8dbae4810b86770c08c961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCSMS 2.0</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_email_layout_2d687ee8dbae4810b86770c08c961958</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-21 20:23:01</sys_updated_on>
+    </sys_email_layout>
+</record_update>

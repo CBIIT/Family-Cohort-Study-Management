@@ -21,14 +21,6 @@
 		}
 	}
 
-	setTimeout(function(){
-		var button_bar = $('#submit_div div.panel-footer');
-		button_bar.children().last().remove();
-		var button = button_bar.children().last();
-		button_bar.append('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope" style="background-color:green;">Submit</button>');
-		//$('<button type="submit" onClick="displayThankYou()" class="btn btn-primary action-btn ng-scope">Submit</button>').insertBefore(button);
-	});
-
 	c.goBack = function(){
 		s.id = null;
 		$location.search(s).replace();
@@ -232,6 +224,12 @@
 			}else{
 				window.setShowCancer(false);
 			}
+			
+			if(c.errorIntake != null || c.errorIntake.length > 0){
+				$timeout(function(){
+					setErrorColor();
+				});
+			}
 
 			e.targetScope.$on('field.change.diagnosed_with_cancer', function(ev, obj) {
 				if(obj.newValue == 'Yes'){
@@ -246,6 +244,11 @@
 				window.setShowFamilyCancer(true);
 			}else{
 				window.setShowFamilyCancer(false);
+			}
+			if(c.errorIntake != null || c.errorIntake.length > 0){
+				$timeout(function(){
+					setErrorColor();
+				});
 			}
 			e.targetScope.$on('field.change.biological_relatives_diagnosed', function(ev, obj) {
 				if(obj.newValue == 'Yes'){
@@ -264,6 +267,11 @@
 				}else{
 					window.setShowTest(false);
 				}
+			}
+			if(c.errorIntake != null || c.errorIntake.length > 0){
+				$timeout(function(){
+					setErrorColor();
+				});
 			}
 			e.targetScope.$on('field.change.relatives_had_genetic_testing', function(ev, obj) {
 				if(obj.newValue == 'No'){
@@ -318,13 +326,15 @@
 				}else{
 					window.setShowFollowUp(false);
 				}
-			});			
+			});	
+			
+			//add submit
 		}
 	});
 
 	function setErrorColor(){
 			c.errorIntake.forEach(function(item){
-			if(item.field == 'biological_sex'){
+			if(item.field == 'biological_sex' || item.field == 'diagnosed_with_cancer' || item.field == 'biological_relatives_diagnosed' || item.field == 'relatives_test_positive'){
 				$('#s2id_sp_formfield_'+item.field).css('background-color', 'yellow');
 			}else{
 				$('#sp_formfield_' + item.field).css('background-color', 'yellow');
@@ -569,6 +579,14 @@ fieldset label{
 				item.field = 'phone_number';
 				data.error.push(item);
 			}
+			if(gr2.birthday == null || gr2.birthday.toString().trim().length == 0){
+				var item = {};
+				item.index = 2;
+				item.page = 'Personal Information';
+				item.message = 'Birthday is required field';
+				item.field = 'birthday';
+				data.error.push(item);
+			}
 			//validate form 3
 			if(gr2.diagnosed_with_cancer.toString() == 'Yes'){
 				var pc = new GlideRecord('x_naci_family_coho_mock_up_intake_patient_cancer');
@@ -580,6 +598,7 @@ fieldset label{
 					item.index = 3;
 					item.page = "Personal Cancer History";
 					item.message = "When the Research Subject has been diagnosed with cancer, at lease one cancer type entry is required";
+					item.field = 'diagnosed_with_cancer';
 					data.error.push(item);
 				}
 			}
@@ -594,6 +613,7 @@ fieldset label{
 					item.index = 4;
 					item.page = "Family Memebers' Cancer History";
 					item.message = "When biological relative has been diagnosed with cancer, at lease one family member entry is required";
+					item.field = 'biological_relatives_diagnosed';
 					data.error.push(item);
 				}				
 			}
@@ -608,6 +628,7 @@ fieldset label{
 					item.index = 41;
 					item.page = "Family Memebers' Genetic Tests";
 					item.message = "When biological relative has been diagnosed with an inherited cancer syndrome, at lease one family member entry is required";
+					item.field = 'relatives_test_positive';
 					data.error.push(item);
 				}
 			}
@@ -643,7 +664,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>974</sys_mod_count>
+        <sys_mod_count>990</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -651,12 +672,12 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-16 19:46:18</sys_updated_on>
+        <sys_updated_on>2020-01-22 22:37:21</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
       <ul class="div_shadow margin-0 menu">
-        <li class="menu_header"><b>Intake Questionaire</b></li>
+        <li class="menu_header"><b>Screener Questionnaire</b></li>
         <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Study Introduction</a></li>
         <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Information</a></li>
         <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Cancer History</a></li>

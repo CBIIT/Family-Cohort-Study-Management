@@ -56,7 +56,7 @@
 				var lastPage = pages[pages.length - 1];
 				//this is for adult signature, the guardian's signature is on the different location of PDF 
 				//we need to determine if the signer is proband or guardian.
-				/*lastPage.drawText(c.data.user_name, {
+				lastPage.drawText(c.data.user_name, {
 					x: 200,
 					y: 300,
 					size: 12
@@ -79,7 +79,7 @@
 					x: 420,
 					y: 260,
 					size: 12
-				});*/
+				});
 				
 				return doc.save();
 			}).then(function(pdfBytes){
@@ -274,7 +274,7 @@
         <sys_created_on>2019-11-13 15:05:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>370b16d6db49001054d8ff621f9619c6</sys_id>
-        <sys_mod_count>74</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name>FCSMS MRR Consent Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -282,7 +282,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_370b16d6db49001054d8ff621f9619c6</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-16 17:43:17</sys_updated_on>
+        <sys_updated_on>2020-01-22 16:31:07</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <div class="body-content">

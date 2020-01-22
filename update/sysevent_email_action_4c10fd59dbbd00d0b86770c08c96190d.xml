@@ -47,7 +47,7 @@
 <p style="margin: 6pt 0in; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;The STUDY Team.</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>FCSMS - Consent Not Received</name>
+        <name>FCSMS - No Response</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -58,7 +58,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Account Deactivated due to not receiving consent</subject>
+        <subject>Account Deactivated due to not receiving enough information</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
@@ -66,8 +66,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>4c10fd59dbbd00d0b86770c08c96190d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>FCSMS - Consent Not Received</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FCSMS - No Response</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -75,7 +75,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sysevent_email_action_4c10fd59dbbd00d0b86770c08c96190d</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-15 18:26:10</sys_updated_on>
+        <sys_updated_on>2020-01-17 18:27:00</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Family Cohort (Family Member Details)">fa8ae5c9db3dcc90b86770c08c9619cf</template>
         <type>email</type>

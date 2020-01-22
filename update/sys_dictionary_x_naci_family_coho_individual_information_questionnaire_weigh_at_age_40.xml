@@ -14,7 +14,7 @@
         <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>F6.About how much did you weigh at age 40?</column_label>
+        <column_label>About how much did you weigh at age 40?</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-10-17 18:14:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5643c8f9db648010b86770c08c961990</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>F6.About how much did you weigh at age 40?</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>About how much did you weigh at age 40?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_weigh_at_age_40</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-17 18:14:00</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-21 19:23:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

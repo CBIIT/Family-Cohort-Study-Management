@@ -12,7 +12,7 @@
         <no_tabs>false</no_tabs>
         <order/>
         <owner display_value="Chris Martin">1e8aa85fdbcc8c50561276708c961972</owner>
-        <restrict_to_roles>x_naci_family_coho._lookup_genes_syndrom,x_naci_family_coho._lookup_national_ance,x_naci_family_coho.family_history_detail,x_naci_family_coho.family_history_questi,x_naci_family_coho.fcsms_intake_form_gen,x_naci_family_coho.individual_informatio,x_naci_family_coho.intake_cancer_care_us,x_naci_family_coho.intake_participate_an,x_naci_family_coho.mock_up_intake_family,x_naci_family_coho.mock_up_intake_patien,x_naci_family_coho.mock_up_intake_user,x_naci_family_coho.mock_up_referral_user,x_naci_family_coho.mock_up_study_user</restrict_to_roles>
+        <restrict_to_roles>x_naci_family_coho._lookup_genes_syndrom,x_naci_family_coho._lookup_national_ance,x_naci_family_coho.family_history_detail,x_naci_family_coho.family_history_questi,x_naci_family_coho.fcsms_intake_form_gen,x_naci_family_coho.individual_informatio,x_naci_family_coho.intake_cancer_care_us,x_naci_family_coho.intake_participate_an,x_naci_family_coho.mock_up_intake_family,x_naci_family_coho.mock_up_intake_patien,x_naci_family_coho.mock_up_intake_user,x_naci_family_coho.mock_up_referral_user,x_naci_family_coho.mock_up_study_user,x_naci_family_coho.read.write.all</restrict_to_roles>
         <role_override>true</role_override>
         <roles/>
         <should_migrate_permissions>false</should_migrate_permissions>
@@ -22,7 +22,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>95da2081dbec8c10b86770c08c96195e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Family Cohort</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -31,7 +31,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>pa_dashboards_95da2081dbec8c10b86770c08c96195e</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-15 13:11:39</sys_updated_on>
+        <sys_updated_on>2020-01-21 16:21:01</sys_updated_on>
         <users/>
         <visible_to>2</visible_to>
     </pa_dashboards>

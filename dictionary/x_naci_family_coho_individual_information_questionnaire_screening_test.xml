@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Individual Information Questionnaire Screening Test" max_length="40" name="x_naci_family_coho_individual_information_questionnaire_screening_test" type="collection">
         <element label="Age" max_length="100" name="age" type="string"/>
-        <element choice="1" label="How old were you when you first had this screening test?" max_length="40" name="age_had_screening_test" type="choice">
+        <element choice="1" label="Age (in years) when this screening test was first had" max_length="40" name="age_had_screening_test" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -10,7 +10,7 @@
         <element label="Age" max_length="100" name="age_last_screening_test" type="string"/>
         <element label="Date" max_length="40" name="date_last_screening_test" type="glide_date"/>
         <element label="Number" max_length="100" name="estimated_number" type="string"/>
-        <element choice="1" label="Estimated total number of this screening test you have had ?" max_length="40" name="estimated_total_screening_test" type="choice">
+        <element choice="1" label="Estimated total number of this screening test had" max_length="40" name="estimated_total_screening_test" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NUMBER" sequence="1" value="NUMBER"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -24,7 +24,7 @@
             </choice>
         </element>
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
-        <element choice="1" label="When  did you last have this screening test?" max_length="40" name="last_have_this_screening_test" type="choice">
+        <element choice="1" label="Age (in years) when this screening test was last had" max_length="40" name="last_have_this_screening_test" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DATE" sequence="1" value="DATE"/>
                 <element inactive_on_update="false" label="AGE" sequence="2" value="AGE"/>

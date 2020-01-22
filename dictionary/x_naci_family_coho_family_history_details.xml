@@ -43,7 +43,7 @@
             </choice>
         </element>
         <element label="Family" max_length="32" name="family" reference="x_naci_family_coho_family_id" type="reference"/>
-        <element label="FHQ" max_length="50" name="family_historic_qustion_id" read_only="true" reference="x_naci_family_coho_family_history_question" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="FHQ" max_length="50" name="family_historic_qustion_id" read_only="true" reference="x_naci_family_coho_family_history_question" type="reference"/>
         <element label="Family ID" max_length="50" name="family_id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Family Member ID" max_length="40" name="family_member_id" type="string"/>
         <element label="FHQ Complete" max_length="40" name="fhq_complete" type="boolean"/>
@@ -63,7 +63,7 @@
         <element label="City" max_length="50" name="hospital_diagnosed_city" type="string"/>
         <element label="State" max_length="50" name="hospital_diagnosed_state" type="string"/>
         <element label="IIQ Complete" max_length="40" name="iiq_complete" type="boolean"/>
-        <element label="IIQ" max_length="32" name="individual_information" read_only="true" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="IIQ" max_length="32" name="individual_information" read_only="true" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Last Name" max_length="100" name="last_name" type="string"/>
         <element label="Maiden Name" max_length="50" name="maiden_name" type="string"/>
         <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
@@ -93,7 +93,7 @@
             </choice>
         </element>
         <element label="Phone" max_length="20" name="phone" type="string"/>
-        <element label="Proband Screener" max_length="32" name="proband_screener" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="Proband Screener" max_length="32" name="proband_screener" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
         <element label="Proxy Email Address" max_length="80" name="proxy_email_address" type="string"/>
         <element label="Proxy First Name" max_length="80" name="proxy_first_name" type="string"/>
         <element label="Proxy Last Name" max_length="80" name="proxy_last_name" type="string"/>

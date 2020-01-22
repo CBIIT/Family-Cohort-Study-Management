@@ -139,6 +139,9 @@
 }
 .btn-font{
   font-size: 16px;
+}
+.pl-0{
+  padding-left: 0px;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -209,7 +212,7 @@
         <sys_created_on>2019-10-02 15:48:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>96229afcdb9c4850b86770c08c96193e</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>89</sys_mod_count>
         <sys_name>FCSMS Participate Another Org</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -217,7 +220,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_96229afcdb9c4850b86770c08c96193e</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 18:50:28</sys_updated_on>
+        <sys_updated_on>2020-01-22 16:28:17</sys_updated_on>
         <template><![CDATA[<div id="another" ng-show='show_another' style="padding: 10px 10px; border-style: ridge;">
 
   
@@ -226,12 +229,12 @@
       <label style="text-align:left;font-weight:bold;">{{ c.data.label }}</label>
     </div>
   </div>
-  <div class="row">
+  <div class="row pl-0">
     <div class="col-md-6">
-      <label class="pr-3 pt-2">Search:</label> 
+      <label class="pr-3 pt-2 sr-only">Search:</label> 
       <input type="text" 
              class="form-control d-inline-block" 
-             placeholder="{{c.data.label}} Records" 
+             placeholder="Search Records" 
              aria-describedby="search record"
              ng-model="search" 
              style="width: 300px;"/>  
@@ -254,7 +257,7 @@
           <th>Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody ng-if="c.data.records && c.data.records.length > 0">
         <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
           <td ng-repeat="col in c.data.columns">
             {{ record[col.name] || 'N/A' }}  

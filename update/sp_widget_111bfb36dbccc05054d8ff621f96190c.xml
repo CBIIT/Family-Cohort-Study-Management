@@ -136,6 +136,9 @@
 }
 .btn-font{
   font-size: 16px;
+}
+.pl-0 {
+  padding-left:0px;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -156,7 +159,7 @@
 	var str = gs.action.getGlideURI();
 	var enrollment_sys_id = str.get('sys_id');
 	var gr = new GlideRecord('x_naci_family_coho_family_history_question');
-	gr.addQuery('enrollment',enrollment_sys_id);
+	gr.addQuery('sys_id',enrollment_sys_id);
 	gr.query();
 	gr.next();
 	var sys_id = gr.sys_id.toString();
@@ -211,7 +214,7 @@
         <sys_created_on>2019-09-26 18:18:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>111bfb36dbccc05054d8ff621f96190c</sys_id>
-        <sys_mod_count>146</sys_mod_count>
+        <sys_mod_count>150</sys_mod_count>
         <sys_name>Family Members</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -219,14 +222,14 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_111bfb36dbccc05054d8ff621f96190c</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-06 18:45:20</sys_updated_on>
+        <sys_updated_on>2020-01-22 16:22:36</sys_updated_on>
         <template><![CDATA[<div id="family_member">
-    <div class="row">
+    <div class="row pl-0">
     <div class="col-md-6">
-      <label class="pr-3 pt-2">Search:</label> 
+      <label class="pr-3 pt-2 sr-only">Search:</label> 
       <input type="text" 
              class="form-control d-inline-block" 
-             placeholder="{{c.data.label}} Records" 
+             placeholder="Search Records" 
              aria-describedby="search record"
              ng-model="search" 
              style="width: 300px;"/>  

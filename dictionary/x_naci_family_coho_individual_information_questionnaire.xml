@@ -995,7 +995,7 @@
         <element label="Minor" max_length="40" name="minor" type="boolean"/>
         <element label="A13. What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
         <element label="And at what age ?" max_length="100" name="most_weighed_at_what_age" type="string"/>
-        <element choice="1" label="F7.What is the most you have ever weighed (excluding pregnancy(ies))?" max_length="40" name="most_you_have_ever_weighed" type="choice">
+        <element choice="1" label="What is the most you have ever weighed (excluding pregnancy(ies))?" max_length="40" name="most_you_have_ever_weighed" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
@@ -1524,7 +1524,7 @@
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="F4. About how much did you weigh at age 18?" max_length="40" name="weigh_at_age_18" type="choice">
+        <element choice="1" label="About how much did you weigh at age 18?" max_length="40" name="weigh_at_age_18" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
@@ -1532,7 +1532,7 @@
                 <element inactive_on_update="false" label="Not yet 18 years old" sequence="4" value="Not yet 18 years old"/>
             </choice>
         </element>
-        <element choice="1" label="F5.About how much did you weigh at age 30?" max_length="40" name="weigh_at_age_30" type="choice">
+        <element choice="1" label="About how much did you weigh at age 30?" max_length="40" name="weigh_at_age_30" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
@@ -1540,7 +1540,7 @@
                 <element inactive_on_update="false" label="Not yet 30 years old" sequence="4" value="Not yet 30 years old"/>
             </choice>
         </element>
-        <element choice="1" label="F6.About how much did you weigh at age 40?" max_length="40" name="weigh_at_age_40" type="choice">
+        <element choice="1" label="About how much did you weigh at age 40?" max_length="40" name="weigh_at_age_40" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
@@ -1578,20 +1578,20 @@
             </choice>
         </element>
         <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
-        <element choice="3" default="FEETINCHES" label="F1.What is your current height?" max_length="40" name="your_current_height" type="choice">
+        <element choice="3" default="FEETINCHES" label="What is your current height?" max_length="40" name="your_current_height" type="choice">
             <choice>
                 <element inactive_on_update="false" label="FEETINCHES" sequence="1" value="FEETINCHES"/>
                 <element inactive_on_update="false" label="CENTIMETERS" sequence="2" value="CENTIMETERS"/>
             </choice>
         </element>
-        <element choice="1" label="F2.What is your current weight?" max_length="40" name="your_current_weight" type="choice">
+        <element choice="1" label="What is your current weight?" max_length="40" name="your_current_weight" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
                 <element inactive_on_update="false" label="KILOGRAMS" sequence="2" value="KILOGRAMS"/>
             </choice>
         </element>
         <element label="What is your name" max_length="100" name="your_name" type="string"/>
-        <element choice="1" label="F3.What was your weight at birth?" max_length="40" name="your_weight_at_birth" type="choice">
+        <element choice="1" label="What was your weight at birth?" max_length="40" name="your_weight_at_birth" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUND-OUNCES" sequence="1" value="POUND-OUNCES"/>
                 <element inactive_on_update="false" label="GRAMS" sequence="2" value="GRAMS"/>
