@@ -214,7 +214,7 @@
         <sys_created_on>2019-09-26 18:18:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>111bfb36dbccc05054d8ff621f96190c</sys_id>
-        <sys_mod_count>150</sys_mod_count>
+        <sys_mod_count>151</sys_mod_count>
         <sys_name>Family Members</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -222,7 +222,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_111bfb36dbccc05054d8ff621f96190c</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 16:22:36</sys_updated_on>
+        <sys_updated_on>2020-01-22 23:17:46</sys_updated_on>
         <template><![CDATA[<div id="family_member">
     <div class="row pl-0">
     <div class="col-md-6">
@@ -251,7 +251,7 @@
           <th style="vertical-align: middle;text-align: center;">Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody ng-if='c.data.records != null && c.data.records.length > 0'>
         <tr dir-paginate="record in c.data.records | filter:search | orderBy:sortKey:!reverse | itemsPerPage:pageSize">
           <td ng-repeat="col in c.data.columns">
             {{ record[col.name] || 'N/A' }}  
