@@ -124,7 +124,7 @@
         <sys_created_on>2019-11-26 19:37:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ac06dea6dbddc050b86770c08c961985</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>FCSMS Registration</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -132,7 +132,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_ac06dea6dbddc050b86770c08c961985</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-17 16:39:45</sys_updated_on>
+        <sys_updated_on>2020-01-23 16:27:29</sys_updated_on>
         <template><![CDATA[<div class="main-content" ng-if="!c.registered" style="height: 500px;">
 	<div class="row row-title">
     <h2>
@@ -191,7 +191,7 @@
           <label for="fcsms-signup-phone">Phone&nbsp;<i class="fa fa-asterisk asterrisk-mark" aria-hidden="true"></i></label>
         </div>
         <div class="r-form-input">
-          <input type="text" class="form-control" placeholder="" name="phone" id="signup_phone" ng-model="c.data.signup_phone" value="" aria-label="" autocomplete="off" ng-blur="c.checkPhone()">
+          <input type="text" class="form-control" placeholder="" name="phone" id="signup_phone" ng-model="c.data.signup_phone" ng-change="c.checkPhone()" value="" aria-label="" autocomplete="off" ng-blur="c.checkPhone()">
         </div>
         <div class="form-input-status" ng-show="c.phone_input_status == 'ok'">
           <i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i>

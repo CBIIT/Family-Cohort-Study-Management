@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="have_smoked_cigarettes" label="D1. Have you ever smoked cigarettes regularly?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+    <sys_documentation element="have_smoked_cigarettes" label="Have you ever smoked cigarettes regularly?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>have_smoked_cigarettes</element>
             <help/>
             <hint/>
-            <label>D1. Have you ever smoked cigarettes regularly?</label>
+            <label>Have you ever smoked cigarettes regularly?</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <plural>D1. Have you ever smoked cigarettes regularly?s</plural>
+            <plural>Have you ever smoked cigarettes regularly?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-10-11 15:14:35</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>8ac0243fdb18481054d8ff621f96199b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>D1. Have you ever smoked cigarettes regularly?</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Have you ever smoked cigarettes regularly?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_have_smoked_cigarettes_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-11 15:14:35</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-23 15:32:38</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

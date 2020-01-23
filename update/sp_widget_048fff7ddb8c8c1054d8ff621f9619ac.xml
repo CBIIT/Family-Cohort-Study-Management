@@ -555,7 +555,7 @@
 				}
 			} else if (sub == 'tab_14_H2'){
 				c.current_form_idx = 'SectionH5';
-				c.show_sub_view_index = 1;
+				c.show_sub_view_index = 2;
 				c.accordions.tab_14_H2 = true;
 				if(!c.widget_14_H2){
 					spUtil.get("widget-form", {
@@ -1277,7 +1277,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>944</sys_mod_count>
+        <sys_mod_count>946</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -1285,14 +1285,14 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 20:48:48</sys_updated_on>
+        <sys_updated_on>2020-01-23 15:33:47</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
    <div class="left-side-menu col-md-3">
     <ul>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A2')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA1') > -1 && c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A2')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="c.showView(3)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB1') > -1)}"  aria-hidden="true"></i><a href="javascript:void(0);">Biopsy(ies) & Cancer(s)</a></li>
       <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Surgery(ies) & Medical Conditions</a></li>
       <li ng-class="{'active': c.show_view_index == 5}" ng-click="c.showView(5)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Medications & Supplements</a></li>

@@ -157,7 +157,7 @@
             <element>origin_or_ancestry</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Spain, Portuga</label>
+            <label>Spain, Portugal</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <sequence>9</sequence>
@@ -165,9 +165,9 @@
             <sys_created_on>2019-09-24 19:20:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>61f57516db8c005054d8ff621f961923</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-24 19:26:41</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-23 14:56:21</sys_updated_on>
             <u_dependent_value_2/>
             <value>Spain, Portuga</value>
         </sys_choice>

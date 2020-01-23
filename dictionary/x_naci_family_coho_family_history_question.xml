@@ -17,7 +17,7 @@
             </choice>
         </element>
         <element label="Type" max_length="100" name="cancer_type" type="string"/>
-        <element label="Comments" max_length="5000" name="comments" type="html"/>
+        <element label="Comments" max_length="5000" name="comments" type="string"/>
         <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element label="Physician Street Address" max_length="300" name="diagnosed_doctor_address" type="string"/>
         <element label="City" max_length="100" name="diagnosed_doctor_city" type="string"/>

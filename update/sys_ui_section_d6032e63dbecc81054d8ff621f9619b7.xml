@@ -4,223 +4,181 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b433a2a3dbecc81054d8ff621f96191f</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>90365819db224c10b86770c08c961985</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>how_often_do_thoughts_about_cancer_affect_your_ability_to_perform_daily_activity</element>
+            <element>how_often_have_you_been_able_to_control_irritations_in_your_life</element>
             <position>1</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3c33a2a3dbecc81054d8ff621f96191f</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>1c365819db224c10b86770c08c961985</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>how_often_have_thoughts_about_your_chances_of_getting_cancer_affected_your_mood</element>
-            <position>2</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b033a2a3dbecc81054d8ff621f961920</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>how_often_have_you_been_able_to_control_irritations_in_your_life</element>
-            <position>3</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3833a2a3dbecc81054d8ff621f961920</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_been_angry_because_of_things_outside_of_your_control</element>
-            <position>4</position>
+            <position>2</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>bc33a2a3dbecc81054d8ff621f961920</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>90365819db224c10b86770c08c961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_been_upset_because_of_something_that_happened_unexpectedly</element>
-            <position>5</position>
+            <position>3</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3433a2a3dbecc81054d8ff621f961921</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>18365819db224c10b86770c08c961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_fel_that_things_were_going_your_way</element>
-            <position>6</position>
+            <position>4</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b833a2a3dbecc81054d8ff621f961921</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>9c365819db224c10b86770c08c961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_felt_confident_about_your_ability_to_handle_personal_problems</element>
-            <position>7</position>
+            <position>5</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3033a2a3dbecc81054d8ff621f961922</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>14365819db224c10b86770c08c961987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>8</position>
+            <position>6</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b433a2a3dbecc81054d8ff621f961922</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>98365819db224c10b86770c08c961987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_felt_difficulties_were_so_high_that_you_cant_overcome_them</element>
-            <position>9</position>
+            <position>7</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3c33a2a3dbecc81054d8ff621f961922</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>10365819db224c10b86770c08c961988</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_felt_nervous_and_stressed</element>
-            <position>10</position>
+            <position>8</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b033a2a3dbecc81054d8ff621f961923</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>94365819db224c10b86770c08c961988</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_felt_that_you_were_on_top_of_things</element>
-            <position>11</position>
+            <position>9</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3833a2a3dbecc81054d8ff621f961923</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>1c365819db224c10b86770c08c961988</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_felt_unable_to_control_important_things_in_your_life</element>
-            <position>12</position>
+            <position>10</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>bc33a2a3dbecc81054d8ff621f961923</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>90365819db224c10b86770c08c961989</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_you_found_that_you_can_t_cope_with_all_things_that_you_had_to_do</element>
-            <position>13</position>
+            <position>11</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3433a2a3dbecc81054d8ff621f961924</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>18365819db224c10b86770c08c961989</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>how_often_have_you_thought_about_your_own_chances_of_getting_cancer</element>
-            <position>14</position>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>b833a2a3dbecc81054d8ff621f961924</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>15</position>
+            <position>12</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 16:21:37</sys_created_on>
-            <sys_id>3033a2a3dbecc81054d8ff621f961925</sys_id>
+            <sys_created_on>2020-01-23 16:24:48</sys_created_on>
+            <sys_id>9c365819db224c10b86770c08c961989</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Feelings and Thoughts During the Last Mo" display_value="Feelings and Thoughts During the Last Mo" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">d6032e63dbecc81054d8ff621f9619b7</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 16:21:37</sys_updated_on>
+            <sys_updated_on>2020-01-23 16:24:48</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

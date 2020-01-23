@@ -16,7 +16,7 @@
         <name>FCSMS 404</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_external</roles>
         <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -24,7 +24,7 @@
         <sys_created_on>2019-12-05 20:22:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3cb6b4e9db6d809054d8ff621f9619bc</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>FCSMS 404</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -32,7 +32,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_3cb6b4e9db6d809054d8ff621f9619bc</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-05 20:26:48</sys_updated_on>
+        <sys_updated_on>2020-01-23 16:43:38</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <h1 class="serif">Page Not Found</h1>

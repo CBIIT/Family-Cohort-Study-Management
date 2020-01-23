@@ -4,13 +4,13 @@
             <element>how_often_have_alcoholic_drink</element>
             <position>0</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>30591aafdb6cc81054d8ff621f96199b</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>e07e4c59dbee0c10b86770c08c961973</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>drinks_you_have</element>
             <position>1</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>f4591aafdb6cc81054d8ff621f96199b</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>6c7e4c59dbee0c10b86770c08c961973</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>had_one_or_more_alcoholic_drinks_per_week</element>
             <position>2</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>7c591aafdb6cc81054d8ff621f96199b</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>e07e4c59dbee0c10b86770c08c961974</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,69 +46,83 @@
             <element>what_age_start_drink</element>
             <position>3</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>f0591aafdb6cc81054d8ff621f96199c</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>687e4c59dbee0c10b86770c08c961974</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>age_start_drink_specify</element>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>ec7e4c59dbee0c10b86770c08c961974</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>currently_drink_at_least_one_alcoholic_drink</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>78591aafdb6cc81054d8ff621f96199c</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>647e4c59dbee0c10b86770c08c961975</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>how_often_have_at_least_one_alcoholic_drink</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>fc591aafdb6cc81054d8ff621f96199c</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>e87e4c59dbee0c10b86770c08c961975</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>on_the_days_drinks_have_on_average</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>74591aafdb6cc81054d8ff621f96199d</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>607e4c59dbee0c10b86770c08c961976</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>age_most_recently_stop_drinking</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-23 15:38:29</sys_created_on>
-            <sys_id>f8591aafdb6cc81054d8ff621f96199d</sys_id>
+            <sys_created_on>2020-01-23 15:50:57</sys_created_on>
+            <sys_id>e47e4c59dbee0c10b86770c08c961976</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Alcohol Use" display_value="Alcohol Use" name="x_naci_family_coho_individual_information_questionnaire" sys_domain="global" view="384580fddb648010b86770c08c961913">f9491aefdb6cc81054d8ff621f961935</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-23 15:38:29</sys_updated_on>
+            <sys_updated_on>2020-01-23 15:50:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

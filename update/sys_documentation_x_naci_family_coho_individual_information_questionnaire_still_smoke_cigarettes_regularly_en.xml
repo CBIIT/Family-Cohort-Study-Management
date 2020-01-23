@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="still_smoke_cigarettes_regularly" label="D4.Do you still smoke cigarettes regularly ?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
+    <sys_documentation element="still_smoke_cigarettes_regularly" label="Do you still smoke cigarettes regularly ?" language="en" table="x_naci_family_coho_individual_information_questionnaire">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>still_smoke_cigarettes_regularly</element>
             <help/>
             <hint/>
-            <label>D4.Do you still smoke cigarettes regularly ?</label>
+            <label>Do you still smoke cigarettes regularly ?</label>
             <language>en</language>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
-            <plural>D4.Do you still smoke cigarettes regularly ?s</plural>
+            <plural>Do you still smoke cigarettes regularly ?s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-10-15 15:48:11</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>41decd0ddb68cc1054d8ff621f961932</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>D4.Do you still smoke cigarettes regularly ?</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Do you still smoke cigarettes regularly ?</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_documentation_x_naci_family_coho_individual_information_questionnaire_still_smoke_cigarettes_regularly_en</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 15:48:11</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-23 15:34:03</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

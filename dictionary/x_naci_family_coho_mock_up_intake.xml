@@ -46,7 +46,7 @@
         <element choice="1" label="Cancer Type" max_length="100" name="cancer_type" type="string">
             <choice/>
         </element>
-        <element label="Comments" max_length="5000" name="comments" type="html"/>
+        <element label="Comments" max_length="5000" name="comments" type="string"/>
         <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element choice="1" label="Communication Type" max_length="40" name="communication_type" type="choice">
             <choice>

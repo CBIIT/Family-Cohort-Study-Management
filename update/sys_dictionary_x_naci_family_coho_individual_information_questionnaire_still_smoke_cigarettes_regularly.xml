@@ -14,7 +14,7 @@
         <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>D4.Do you still smoke cigarettes regularly ?</column_label>
+        <column_label>Do you still smoke cigarettes regularly ?</column_label>
         <comments/>
         <create_roles/>
         <default_value>YES</default_value>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-10-15 15:48:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d6be8989db68cc1054d8ff621f9619a8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>D4.Do you still smoke cigarettes regularly ?</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Do you still smoke cigarettes regularly ?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_still_smoke_cigarettes_regularly</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-15 21:01:03</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-23 15:34:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

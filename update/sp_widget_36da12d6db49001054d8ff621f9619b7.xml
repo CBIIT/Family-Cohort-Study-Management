@@ -14,6 +14,9 @@
 	c.sign_date = c.data.sign_date;
 	c.sign_user_name = c.data.user_name;
 	
+	c.data.signature_password = '';
+	c.errorConsent = '';
+	
 	
 	c.sayswho= function(){
 			var ua= navigator.userAgent, tem, 
@@ -49,29 +52,15 @@
 	
 	
 	c.toConsent = function(){
-		c.password = '';
+		c.data.signature_password = '';
+		c.errorConsent = '';
 		$('#consent-modal').modal('show');
 	}
 	
 	c.cancelConsent = function(){
 		$('#consent-modal').modal('hide');
 	}
-	
-/*	function readFile(blob, callback) {
 		
-		var fileReader = new FileReader();
-		fileReader.onload = function() {
-			//var result = fileReader.result.replace('data:application/pdf;base64,', '');
-			var encoded = fileReader.result.replace(/^data:(.*;base64,)?/, '');
-      if ((encoded.length % 4) > 0) {
-        encoded += '='.repeat(4 - (encoded.length % 4));
-      }
-			callback(encoded);
-		}
-		fileReader.readAsDataURL(blob); //file must be base64
-		
-	}
-*/	
 	c.generatePDF = function(){
 		  var documentId = 'd1172e1edb89001054d8ff621f961972';
 		  var url = '/sys_attachment.do?sys_id=' + documentId;
@@ -149,7 +138,7 @@
 			}).then(function(res){
 				var result = res.data.result;
 			  if(result.status != 'SUCCESS'){
-					console.log(result);
+					c.errorConsent = "Please enter the correct password to sign.";
 				}
 			  else{
 					//generate PDF and attach to record
@@ -297,15 +286,15 @@
         <sys_created_on>2019-11-13 15:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36da12d6db49001054d8ff621f9619b7</sys_id>
-        <sys_mod_count>236</sys_mod_count>
+        <sys_mod_count>247</sys_mod_count>
         <sys_name>FCSMS Consent Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_36da12d6db49001054d8ff621f9619b7</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 16:30:35</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-23 16:24:55</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <div class="body-content">
@@ -406,11 +395,14 @@
       <div class="modal-header" style="background: #00506f; color: white;">
         <h4  class="modal-title">Signing</h4>
       </div>      
-      <div class="modal-body" style="height:270px;">
+      <div class="modal-body" style="">
         <div>
            By filling the information below, I am electronically consenting this agreement. I agree to the terms of this agreement, effective as of today's date.
         </div>
         <div class="sign-form">
+          <div class="consent-form-error" ng-show="c.errorConsent != ''">
+            {{c.errorConsent}}
+          </div>
           <div class="sign-row">
             <div class="sign-col col-md-12">
               <label>
@@ -437,7 +429,7 @@
           </div>
         </div>
       </div>
-      <div class="form-section" style="text-align:center; padding-top: 15px;border-top: 1px solid #e5e5e5;display:block;">
+      <div class="form-section" style="text-align:center; padding: 15px 0px;border-top: 1px solid #e5e5e5;display:block;float:left; width:100%;">
           <button type="submit" id="consentBtn" ng-click="c.consentForm()" class="btn btn-primary btn-font">
             Sign
           </button>

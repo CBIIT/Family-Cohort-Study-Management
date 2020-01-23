@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" label="Individual Information Questionnaire" max_length="40" name="x_naci_family_coho_individual_information_questionnaire" type="collection">
-        <element choice="1" label="E8.At what age did you most recently stop drinking one alcoholic drink per week?" max_length="40" name="age_most_recently_stop_drinking" type="choice">
+        <element choice="1" label="At what age did you most recently stop drinking one alcoholic drink per week?" max_length="40" name="age_most_recently_stop_drinking" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -15,7 +15,7 @@
         <element label="Age_Specify" max_length="100" name="age_most_recently_stop_smoking_specify" type="string"/>
         <element label="Age" max_length="100" name="age_number_most_recently_stop_drinking" type="string"/>
         <element label="Age" max_length="100" name="age_start_drink_specify" type="string"/>
-        <element choice="1" label="D2.At what age did you first start smoking regularly?" max_length="40" name="age_start_smoking" type="choice">
+        <element choice="1" label="At what age did you first start smoking regularly?" max_length="40" name="age_start_smoking" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -46,7 +46,7 @@
         <element label="How old were you when you started taking birth control pills?" max_length="2" name="birth_control_how_old" type="integer"/>
         <element label="Birth control or medications" max_length="40" name="birth_control_or_medications" type="boolean"/>
         <element label="Grams" max_length="100" name="birth_grams" type="string"/>
-        <element label="Pounds" max_length="100" name="birth_pounds" type="string"/>
+        <element label="Pounds - Ounces" max_length="100" name="birth_pounds" type="string"/>
         <element choice="1" label="Is this condition (Bone Fracture) currently being treated ?" max_length="40" name="bone_fracture_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -59,13 +59,13 @@
         <element label="Total amount of Months" max_length="100" name="chewed_tobacco_total_amount_of_months" type="string"/>
         <element label="Total amount of Years" max_length="100" name="chewed_tobacco_total_amount_of_years" type="string"/>
         <element label="Cigarettes Nubmer" max_length="100" name="cigarettes_nubmer" type="string"/>
-        <element choice="1" label="D3. When you smoked cigarettes regularly, how many cigarettes did you smoke?" max_length="40" name="cigarettes_smoke" type="choice">
+        <element choice="1" label="When you smoked cigarettes regularly, how many cigarettes did you smoke?" max_length="40" name="cigarettes_smoke" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Average NUMBER per day" sequence="1" value="Average NUMBER per day"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element label="Comment" max_length="8000" name="comment" type="html"/>
+        <element label="Comment" max_length="5000" name="comment" type="string"/>
         <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element choice="1" label="Is this condition (Coronary Artery Disease) currently being treated ?" max_length="40" name="coronary_artery_disease_treated" type="choice">
             <choice>
@@ -75,7 +75,7 @@
             </choice>
         </element>
         <element label="Country" max_length="100" name="country" type="string"/>
-        <element choice="3" default="NO" label="E5.Do you currently drink at least one alcoholic drink once a week?" max_length="40" name="currently_drink_at_least_one_alcoholic_drink" type="choice">
+        <element choice="3" default="NO" label="Do you currently drink at least one alcoholic drink once a week?" max_length="40" name="currently_drink_at_least_one_alcoholic_drink" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -207,14 +207,14 @@
                 <element inactive_on_update="false" label="No" sequence="20" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="E2. on the days you drank alcohol, how many drinks did you have? " max_length="40" name="drinks_you_have" type="choice">
+        <element choice="1" label="On the days you drank alcohol, how many drinks did you have? " max_length="40" name="drinks_you_have" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Average Number of drinks per day" sequence="1" value="Average Number of drinks per day"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
         <element label="Enrollment" max_length="32" name="enrollment" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
-        <element choice="1" label="D8.Have you ever chewed tobacco regularly ?" max_length="40" name="ever_chewed_tobacco_regularly" type="choice">
+        <element choice="1" label="Have you ever chewed tobacco regularly ?" max_length="40" name="ever_chewed_tobacco_regularly" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES, Total amount of months combined" sequence="1" value="YES, Total amount of months combined"/>
                 <element inactive_on_update="false" label="YES, Total amount of years combined" sequence="2" value="YES, Total amount of years combined"/>
@@ -229,7 +229,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="D7.Have you ever smoked a pipe regularly ?" max_length="40" name="ever_smoked_pipe_regularly" type="choice">
+        <element choice="1" label="Have you ever smoked a pipe regularly ?" max_length="40" name="ever_smoked_pipe_regularly" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES, Total amount of months combined" sequence="1" value="YES, Total amount of months combined"/>
                 <element inactive_on_update="false" label="YES, Total amount of years combined" sequence="2" value="YES, Total amount of years combined"/>
@@ -237,7 +237,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="4" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="D9.Have you ever used (dipped) snuff regularly ?" max_length="40" name="ever_used_dipped_snuff_regularly" type="choice">
+        <element choice="1" label="Have you ever used (dipped) snuff regularly ?" max_length="40" name="ever_used_dipped_snuff_regularly" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES, Total amount of months combined" sequence="1" value="YES, Total amount of months combined"/>
                 <element inactive_on_update="false" label="YES, Total amount of years combined" sequence="2" value="YES, Total amount of years combined"/>
@@ -268,7 +268,7 @@
                 <element inactive_on_update="false" label="MALE" value="MALE"/>
             </choice>
         </element>
-        <element choice="3" default="YES" label="E3. Have you ever had one or more alcoholic drinks per week for 6 months or more" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
+        <element choice="3" default="YES" label="Have you ever had one or more alcoholic drinks per week for 6 months or more" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="10" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="20" value="NO"/>
@@ -296,14 +296,14 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="D1. Have you ever smoked cigarettes regularly?" max_length="40" name="have_smoked_cigarettes" type="choice">
+        <element choice="1" label="Have you ever smoked cigarettes regularly?" max_length="40" name="have_smoked_cigarettes" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="3" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="D6.Have you ever smoked cigars regularly ?" max_length="40" name="have_smoked_cigars" type="choice">
+        <element choice="1" label="Have you ever smoked cigars regularly ?" max_length="40" name="have_smoked_cigars" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES, Total amount of months combined" sequence="1" value="YES, Total amount of months combined"/>
                 <element inactive_on_update="false" label="YES, Total amount of years combined" sequence="2" value="YES, Total amount of years combined"/>
@@ -476,7 +476,7 @@
                 <element inactive_on_update="false" label="Several times a day" sequence="40" value="several_times_a_day"/>
             </choice>
         </element>
-        <element choice="1" label="E1. how often did you have at least one alcoholic drink? " max_length="40" name="how_often_have_alcoholic_drink" type="choice">
+        <element choice="1" label="How often did you have at least one alcoholic drink? " max_length="40" name="how_often_have_alcoholic_drink" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Never" sequence="1" value="Never"/>
                 <element inactive_on_update="false" label="Less than 4 times a month" sequence="2" value="Less than 4 times a month"/>
@@ -486,7 +486,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="6" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="E6.How often do you have at least one alcoholic drink since you started drinking" max_length="40" name="how_often_have_at_least_one_alcoholic_drink" type="choice">
+        <element choice="1" label="How often do you have at least one alcoholic drink since you started drinking" max_length="40" name="how_often_have_at_least_one_alcoholic_drink" type="choice">
             <choice>
                 <element inactive_on_update="false" label="About once a week" sequence="1" value="About once a week"/>
                 <element inactive_on_update="false" label="2-3 days per week" sequence="2" value="2-3 days per week"/>
@@ -574,7 +574,7 @@
                 <element inactive_on_update="false" label="Very often" sequence="50" value="very_often"/>
             </choice>
         </element>
-        <element choice="1" label="How often have you fel that things were going your way" max_length="40" name="how_often_have_you_fel_that_things_were_going_your_way" type="choice">
+        <element choice="1" label="How often have you felt that things were going your way" max_length="40" name="how_often_have_you_fel_that_things_were_going_your_way" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Never" sequence="10" value="never"/>
                 <element inactive_on_update="false" label="Almost never" sequence="20" value="almost_never"/>
@@ -993,7 +993,7 @@
             </choice>
         </element>
         <element label="Minor" max_length="40" name="minor" type="boolean"/>
-        <element label="A13. What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
+        <element label="What is your current (or most recent) occupation?" max_length="200" name="most_recent_occupation" type="string"/>
         <element label="And at what age ?" max_length="100" name="most_weighed_at_what_age" type="string"/>
         <element choice="1" label="What is the most you have ever weighed (excluding pregnancy(ies))?" max_length="40" name="most_you_have_ever_weighed" type="choice">
             <choice>
@@ -1140,7 +1140,7 @@
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Number of Drinks" max_length="100" name="number_of_drinks" type="string"/>
         <element label="Number of drinks" max_length="100" name="number_of_drinks_days_drink_alcohol" type="string"/>
-        <element choice="1" label="E7.On the days you drink alcohol, how many drinks do you have on average?" max_length="40" name="on_the_days_drinks_have_on_average" type="choice">
+        <element choice="1" label="On the days you drink alcohol, how many drinks do you have on average?" max_length="40" name="on_the_days_drinks_have_on_average" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NUMBER" sequence="1" value="NUMBER"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -1156,7 +1156,7 @@
                 <element inactive_on_update="false" label="Greece" sequence="6" value="Greece"/>
                 <element inactive_on_update="false" label="Eastern Europe (e.g., Poland, Russia, Hungary, Former Czechoslovakia)￼" sequence="7" value="Eastern Europe"/>
                 <element inactive_on_update="false" label="Scandinavia (e.g., Norway, Sweden, Denmark, Finland)￼" sequence="8" value="Scandinavia"/>
-                <element inactive_on_update="false" label="Spain, Portuga" sequence="9" value="Spain, Portuga"/>
+                <element inactive_on_update="false" label="Spain, Portugal" sequence="9" value="Spain, Portuga"/>
                 <element inactive_on_update="false" label="Other European Countries" sequence="10" value="Other European Countries"/>
                 <element inactive_on_update="false" label="Africa" sequence="11" value="Africa"/>
                 <element inactive_on_update="false" label="Middle East" sequence="12" value="Middle East"/>
@@ -1452,7 +1452,7 @@
             </choice>
         </element>
         <element label="State or Province" max_length="200" name="state_or_province" type="string"/>
-        <element choice="3" default="YES" label="D4.Do you still smoke cigarettes regularly ?" max_length="40" name="still_smoke_cigarettes_regularly" type="choice">
+        <element choice="3" default="YES" label="Do you still smoke cigarettes regularly ?" max_length="40" name="still_smoke_cigarettes_regularly" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
@@ -1555,7 +1555,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="dont_know"/>
             </choice>
         </element>
-        <element choice="1" label="E4.At what age did this start?" max_length="40" name="what_age_start_drink" type="choice">
+        <element choice="1" label="At what age did this start?" max_length="40" name="what_age_start_drink" type="choice">
             <choice>
                 <element inactive_on_update="false" label="AGE" sequence="1" value="AGE"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -1577,10 +1577,10 @@
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
             </choice>
         </element>
-        <element label="A14. For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
-        <element choice="3" default="FEETINCHES" label="What is your current height?" max_length="40" name="your_current_height" type="choice">
+        <element label="For how many years has this been (was this) your occupation?" max_length="100" name="years_of_this_occupation" type="string"/>
+        <element choice="3" default="FEET INCHES" label="What is your current height?" max_length="40" name="your_current_height" type="choice">
             <choice>
-                <element inactive_on_update="false" label="FEETINCHES" sequence="1" value="FEETINCHES"/>
+                <element inactive_on_update="false" label="FEET-INCHES" sequence="1" value="FEETINCHES"/>
                 <element inactive_on_update="false" label="CENTIMETERS" sequence="2" value="CENTIMETERS"/>
             </choice>
         </element>
