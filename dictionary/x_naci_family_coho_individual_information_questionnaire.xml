@@ -275,7 +275,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="C. Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
+        <element choice="1" label="Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>
