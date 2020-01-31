@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>a_cancer_survivor</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Labels - Belief about Cancer Risk</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	//Type appropriate comment here, and begin script below
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
+
+	function ageCheck(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		if (answer == 'minor'){
+			
+			g_form.setLabelOf('in_your_opinion_what_are_your_chances_of_getting_cancer_or_another_cancer', "In your child's opinion, what are their chances of getting cancer (or another cancer) compared with other people their age?");
+			g_form.setLabelOf('please_rate_what_you_believe_your_chance_of_getting_cancer_in_your_lifetime', "In your child's opinion, what is their chance of getting cancer in their lifetime?");
+			g_form.setLabelOf('how_often_have_you_thought_about_your_own_chances_of_getting_cancer', "How often has your child thought about their own chances of getting cancer?");
+			g_form.setLabelOf('how_often_do_thoughts_about_cancer_affect_your_ability_to_perform_daily_activity', "How often do thoughts about cancer affect your child's ability to perform daily activity?");
+			g_form.setLabelOf('how_often_have_thoughts_about_your_chances_of_getting_cancer_affected_your_mood', "How often have thoughts about your child's chances of getting cancer affected your child's mood?");
+			
+		}
+	}
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-30 16:15:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>de279c2fdb26c450b86770c08c961909</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update Labels - Belief about Cancer Risk</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_de279c2fdb26c450b86770c08c961909</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-30 16:20:47</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionG3</view>
+    </sys_script_client>
+</record_update>

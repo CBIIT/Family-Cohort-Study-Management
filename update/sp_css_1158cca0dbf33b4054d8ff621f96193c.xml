@@ -561,9 +561,6 @@ button:focus {&#13;
   position: relative;&#13;
 }&#13;
 &#13;
-.form-slot:nth-child(5n + 1) {&#13;
-    margin-left: 0;&#13;
-}&#13;
 &#13;
 .form-slot {&#13;
     width: 18%;&#13;
@@ -1571,6 +1568,9 @@ hr{&#13;
   margin-bottom: 20px;&#13;
   border: 0;&#13;
   border-top: 1px solid #eeeeee;&#13;
+}&#13;
+.bootstrap-datetimepicker-widget {&#13;
+    /* position: absolute !important; */&#13;
 }</css>
         <name>fcsms css</name>
         <sys_class_name>sp_css</sys_class_name>
@@ -1578,14 +1578,14 @@ hr{&#13;
         <sys_created_on>2019-09-06 14:37:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1158cca0dbf33b4054d8ff621f96193c</sys_id>
-        <sys_mod_count>256</sys_mod_count>
+        <sys_mod_count>260</sys_mod_count>
         <sys_name>fcsms css</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_css_1158cca0dbf33b4054d8ff621f96193c</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-23 15:49:56</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-31 17:12:47</sys_updated_on>
     </sp_css>
 </record_update>

@@ -17,7 +17,7 @@ Rate your chances of getting cancer again</description>
         <script><![CDATA[function onLoad() {
 	//Type appropriate comment here, and begin script below
 	g_form.showFieldMsg('what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more', 'Please select all that apply', 'info');
-	g_form.showFieldMsg('what_was_the_diagnosis_of_the_problem', 'Please select all that apply', 'info');
+	//g_form.showFieldMsg('what_was_the_diagnosis_of_the_problem', 'Please select all that apply', 'info');
 	g_form.showFieldMsg('please_rate_what_you_believe_your_chance_of_getting_cancer_in_your_lifetime', '0 indicates no chance of getting cancer; 5 indicates equal chances of getting and not getting cancer; 10 indicates that you will definitely get cancer', 'info');
 
 
@@ -28,7 +28,7 @@ Rate your chances of getting cancer again</description>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>c93c0baddb208010b86770c08c96197d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Help text for fields</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -37,7 +37,7 @@ Rate your chances of getting cancer again</description>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_c93c0baddb208010b86770c08c96197d</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-24 18:27:14</sys_updated_on>
+        <sys_updated_on>2020-01-30 18:51:07</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

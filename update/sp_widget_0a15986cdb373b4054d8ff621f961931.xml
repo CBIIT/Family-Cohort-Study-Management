@@ -4,12 +4,12 @@
         <client_script><![CDATA[function($scope,spModal, $rootScope, $location) {
   var c = this;
 	var s = $location.search();
-	
-	//c.intake_sys_id = 'f46149a8db940850b86770c08c9619ba';
+
 	c.intake_sys_id = c.data.intake_sys_id;
 	c.fhq_sys_id = c.data.fhq_sys_id;
 	c.iiq_sys_id = c.data.iiq_sys_id;
 	c.view_model = "proband";
+
 	c.openLFS = function(){
 		
 	};
@@ -68,7 +68,9 @@
 		$location.search(s).replace();
 	}
 	
-
+  c.uploadAttachment = function(){
+		alert('Upload File');
+	}
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>.image-inactive{
@@ -105,6 +107,9 @@
 	tmp.first_name = 'James';
 	tmp.last_name = 'Smith';
 	tmp.sys_id = 'f46149a8db940850b86770c08c9619ba';
+	tmp.screener = 1;
+	tmp.consent = 1;
+	tmp.mrr = 1;
 	tmp.fhq = 1;
 	tmp.iiq = 1;
 	tmp.iiq_sys_id = '8d0331e4db980850b86770c08c96193b';
@@ -113,7 +118,10 @@
 	tmp.first_name = 'John';
 	tmp.last_name = 'Smith';
 	tmp.sys_id = '3b218d68db940850b86770c08c9619f2';
-	tmp.fhq = 0;
+	tmp.screener = 1;
+	tmp.consent = 1;
+	tmp.mrr = 1;
+	tmp.fhq = 1;
 	tmp.iiq = 1;
 	tmp.iiq_sys_id = '97901fbfdb684c1054d8ff621f9619aa';
 	data.records.push(tmp);
@@ -121,14 +129,19 @@
 	tmp.first_name = 'Jack';
 	tmp.last_name = 'Smith';
 	tmp.sys_id = 'd5aa4963dbb0041054d8ff621f9619b2';
+	tmp.screener = 1;
+	tmp.consent = 1;
+	tmp.mrr = 1;
 	tmp.fhq = 1;
-	tmp.iiq = 0;
+	tmp.iiq = 1;
 	tmp.iiq_sys_id = 'ad5c782fdb30041054d8ff621f961929';
 	data.records.push(tmp);
 	
 	//determine if we need to display consent form or not	
 	//this id should be set when the user select LI-F study
 	//var study_id = '5bf67315db3f3f4054d8ff621f961968';
+	data.downloadConsent = false;
+	data.downloadMrr = false;
 	var user = new GlideRecord('sys_user');
 	    user.get(user_id);
 	var email_address = user.email.toString();
@@ -150,8 +163,45 @@
 		}else{
 			data.showMRR = false;
 		}
+		if(gr.screener_complete == true){
+			data.screener_completed = true;
+		}else{
+			data.screener_completed = false;
+		}
+		if(gr.fhq_complete == true){
+			data.fhq_completed = true;
+		}else{
+			data.fhq_completed = false;
+		}
+		if(gr.iiq_complete == true){
+			data.iiq_completed = true;
+		}else{
+			data.iiq_completed = false;
+		}
+		if(gr.consent_signed == true){
+			 data.downloadConsent = true;
+			 var attach1 =  new GlideRecord('sys_attachment');
+			 attach1.addQuery('table_sys_id','24dabebedbea0450b86770c08c961984');   
+			 attach1.addQuery('file_name', 'Family Cohort Study Consent.pdf');
+			 attach1.query();
+			 attach1.next();
+			 data.consent_id = attach1.sys_id.toString();
+		}else{
+			data.downloadConsent = false;
+		}
+		if(gr.mrr_complete == true){
+			 data.downloadMrr = true;
+			 var attach2 =  new GlideRecord('sys_attachment');
+			 attach2.addQuery('table_sys_id','24dabebedbea0450b86770c08c961984');   
+			 attach2.addQuery('file_name', 'Family Cohort Study MRR.pdf');
+			 attach2.query();
+			 attach2.next();
+			 data.mrr_id = attach2.sys_id.toString();
+		}else{
+			data.downloadMrr = false;
+		}
 	}
-
+  
 	//link IIQ
 	var gr3 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
       gr3.addNullQuery('user');
@@ -219,15 +269,15 @@
         <sys_created_on>2019-09-06 15:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a15986cdb373b4054d8ff621f961931</sys_id>
-        <sys_mod_count>325</sys_mod_count>
+        <sys_mod_count>415</sys_mod_count>
         <sys_name>FCSMS Home</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0a15986cdb373b4054d8ff621f961931</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-23 19:21:08</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-31 17:31:46</sys_updated_on>
         <template><![CDATA[<div class="main-content">
   <div class="row page-title">
     Family Cohort Studies for {{c.data.username}} 
@@ -258,51 +308,49 @@
         <div class="sub-title">
           Forms
         </div>
-        <div class="enrollment-content" ng-if="c.view_model == 'proband'">
-          <div class="form-slot">
+        <div class="enrollment-content">
+          <div class="form-slot" ng-if="c.data.screener_completed == false">
             <h5>
-              Intake Form
+              Screener
             </h5>
             <div class="form-card">
               <a href="javascript:void(0);" ng-click="c.reviewIntakeForm(c.intake_sys_id)">
                 <div class="image-hover">
-                    <img src="FCSMS-HomePage-Intake.jpg" width="203"/>
+                    <img src="FCSMS-HomePage-Intake.jpg" width="160"/>
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point checked">
-                <i class="fa fa-check" aria-hidden="true"></i>
-              </div>
-              <div class="status-desc">
-              	Step 1
-              </div>
-            </div>
-						-->
           </div>
-          <div class="form-slot" ng-show="c.data.showConsent == true">
+          <div class="form-slot" ng-if="c.data.screener_completed == true">
+            <h5>
+              Screener
+            </h5>
+            <div class="form-card">
+                <div>
+                   <img src="Complete-Screener.jpg" width="160"/>
+                </div>
+            </div>
+          </div>          
+          <div class="form-slot" ng-if="c.data.showConsent == true">
             <h5>
               Consent
             </h5>
             <div class="form-card">
               <a href="javascript:void(0);" ng-click="c.reviewStudyConsent(c.intake_sys_id)">
                 <div class="image-hover">
-                    <img src="FCSMS-HomePage-Consent.jpg" width="203"/>
+                    <img src="FCSMS-HomePage-Consent.jpg" width="160"/>
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point checked">
-                <i class="fa fa-check" aria-hidden="true"></i>
-              </div>
-              <div class="status-desc">
-              	Step 2
-              </div>
-            </div>
-						-->
           </div>
+          <div class="form-slot" ng-if="c.data.downloadConsent == true">
+            <h5>
+              <a href='/api/naci/attachment_util/attachment/v1/{{c.data.consent_id}}' target='_BLANK'>Download Consent</a>
+            </h5>
+            <div>
+              <img src="Complete-Consent.jpg" width="160"/>
+            </div>
+          </div>          
           <div class="form-slot" ng-show='c.data.showMRR == true'>
             <h5>
               MRR Consent
@@ -310,65 +358,63 @@
             <div class="form-card">
               <a href="javascript:void(0);" ng-click="c.reviewStudyMRRConsent(c.intake_sys_id)" >
                 <div class="image-hover">
-                    <img src="FCSMS_HomePage-MRR.jpg" width="203"/>
+                  <img src="FCSMS_HomePage-MRR.jpg" width="160"/>
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point">
-                3
-              </div>
-              <div class="status-desc">
-              	Step 3
-              </div>
+          </div>
+          <div class="form-slot" ng-show='c.data.downloadMrr == true'>
+						<h5>
+              <a href='/api/naci/attachment_util/attachment/v1/{{c.data.mrr_id}}' target='_BLANK'>Download MRR</a>  
+            </h5>
+            <div>
+              <img src="Complete-mrr.jpg" width="160"/>
             </div>
-						-->
+            
           </div>
           <div class="form-slot" ng-show='c.data.fhq_sys_id.length > 0'>
-            <h5>
-              Family History Questionnaire
-            </h5>
-            <div class="form-card">
+            <h5><label uib-tooltip="Family Historic Questionaire">FHQ</label></h5>
+            <div class="form-card" ng-if="c.data.fhq_completed == false">
               <a href="javascript:void(0);" ng-click="c.reviewFHQ(c.fhq_sys_id)" >
                 <div class="image-hover">
-                    <img src="FCSMS-HomePage-FHQ.jpg" width="203"/>
+                    <img src="FCSMS-HomePage-FHQ.jpg" width="160"/>
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point">
-                4
-              </div>
-              <div class="status-desc">
-              	Step 4
-              </div>
+            <div class="form-card" ng-if="c.data.fhq_completed == true">
+                <div>
+                  <img src="Complete-FHQ.jpg" width="160"/>
+                </div>
             </div>
-						-->
+					</div>
+          <div class="form-slot" ng-show='c.data.iiq_sys_id.length > 0'>
+            <h5><label uib-tooltip="Individual Information Questionaire">IIQ</label></h5>
+            <div class="form-card" ng-if="c.data.iiq_completed == false">
+              <a href="javascript:void(0);" ng-click="c.reviewIIQ(c.iiq_sys_id)" >
+                <div class="image-hover">
+                    <img src="FCSMS-HomePage-IIQ.jpg" width="160"/>
+                </div>
+              </a>
+            </div>
+            <div class="form-card" ng-if="c.data.iiq_completed == true">
+                <div>
+                  <img src="Complete-IIQ.jpg" width="160"/>
+                </div>
+            </div>            
           </div>
           <div class="form-slot" ng-show='c.data.iiq_sys_id.length > 0'>
             <h5>
-              Individual Information Questionnaire
+              Upload Attachment
             </h5>
             <div class="form-card">
-              <a href="javascript:void(0);" ng-click="c.reviewIIQ(c.iiq_sys_id)" >
+              <a href="javascript:void(0);" ng-click="c.uploadAttachment()" >
                 <div class="image-hover">
-                    <img src="FCSMS-HomePage-IIQ.jpg" width="203"/>
+                  <img src="Upload%20File.jpg" width="160"/>
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point">
-                5
-              </div>
-              <div class="status-desc">
-              	Step 5
-              </div>
-            </div>
-						-->
           </div>
+          
           <!--
           <div class="status-lines">
             <div class="status-line active">
@@ -459,36 +505,54 @@
 					-->
         </div>
       </div>
-      <div class="proxy-info" ng-if="c.view_model == 'proband'" style="display:none;">
+      <div class="proxy-info" ng-if="c.view_model == 'proband'" style="display:block;">
 				<div class="sub-title">
           Proxies
         </div>
         <div class="proxy-content">
             <div class="proxy-list-header">
-              <div class="col-md-3">
+              <div class="col-md-4">
                 First Name
               </div>
               <div class="col-md-3">
                 Last Name
               </div>
-              <div class="col-md-3">
+              <div class="col-md-1">
+                Screener
+              </div>
+              <div class="col-md-1">
+                Consent
+              </div>
+              <div class="col-md-1">
+                MRR
+              </div>
+              <div class="col-md-1">
                 FHQ
               </div>
-              <div class="col-md-3">
+              <div class="col-md-1">
                 IIQ
               </div>
             </div>
             <div id="proxy_{{record.enrollment_id}}" class="proxy-row" ng-repeat="record in c.data.records">
-                <div class="col-md-3">
+                <div class="col-md-4">
                   {{ record['first_name'] || 'N/A' }}  
                 </div>
                 <div class="col-md-3">
                   {{ record['last_name'] || 'N/A' }}  
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-1">
+                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['screener'] == '1'">View</a>
+                  </div>
+                <div class="col-md-1">
+                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['consent'] == '1'">View</a>
+                  </div>
+                <div class="col-md-1">
+                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['mrr'] == '1'">View</a>
+                  </div>
+              <div class="col-md-1">
                   <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['fhq'] == '1'">View</a>
                   </div>
-                <div class="col-md-3">
+                <div class="col-md-1">
                     <a ng-click="c.reviewIIQ(record.iiq_sys_id)" ng-show="record['iiq'] == '1'">View</a>  
                 </div>
             </div>

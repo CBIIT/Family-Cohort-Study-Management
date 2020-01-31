@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format>JPEG</format>
+        <height>113</height>
+        <image>aa796973db6e0850b86770c08c96199e</image>
+        <name>Upload File.jpg</name>
+        <size_bytes>7236</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-31 16:53:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6d692973db6e0850b86770c08c9619d9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Upload File.jpg</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>db_image_6d692973db6e0850b86770c08c9619d9</sys_update_name>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-31 16:53:29</sys_updated_on>
+        <thumbnail/>
+        <width>170</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#ff3c2a</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>113</image_height>
+        <image_width>170</image_width>
+        <size_bytes>7236</size_bytes>
+        <size_compressed>6549</size_compressed>
+        <state>available</state>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-31 16:53:29</sys_created_on>
+        <sys_id>aa796973db6e0850b86770c08c96199e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2020-01-31 16:53:30</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>6d692973db6e0850b86770c08c9619d9</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="aa796973db6e0850b86770c08c96199e">aa796973db6e0850b86770c08c96199e</sys_attachment>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-31 16:53:29</sys_created_on>
+        <sys_id>ea796973db6e0850b86770c08c96199e</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>8720</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="aa796973db6e0850b86770c08c96199e">aa796973db6e0850b86770c08c96199e</sys_attachment>
+        <sys_created_by>zhoujim@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-31 16:53:29</sys_created_on>
+        <sys_id>6e796973db6e0850b86770c08c96199e</sys_id>
+    </sys_attachment_doc>
+</record_update>

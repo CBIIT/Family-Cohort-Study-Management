@@ -3,168 +3,154 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>f204e494dbb44c10b86770c08c96198b</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>bc3b02b6db2a0450b86770c08c961962</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_sex</element>
             <position>1</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7a04e494dbb44c10b86770c08c96198b</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>343b02b6db2a0450b86770c08c961963</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>email_address</element>
             <position>2</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>fe04e494dbb44c10b86770c08c96198b</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>b83b02b6db2a0450b86770c08c961963</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>confirm_email_address</element>
-            <position>3</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7604e494dbb44c10b86770c08c96198c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>phone_number</element>
-            <position>4</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>fa04e494dbb44c10b86770c08c96198c</sys_id>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>303b02b6db2a0450b86770c08c961964</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>birthday</element>
-            <position>5</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7204e494dbb44c10b86770c08c96198d</sys_id>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>b43b02b6db2a0450b86770c08c961964</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>race_ethnicity</element>
-            <position>6</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>f604e494dbb44c10b86770c08c96198d</sys_id>
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>3c3b02b6db2a0450b86770c08c961964</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>participate_race</element>
-            <position>7</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7e04e494dbb44c10b86770c08c96198d</sys_id>
+            <position>6</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>b03b02b6db2a0450b86770c08c961965</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_mother_s_ethnicity</element>
-            <position>8</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>f204e494dbb44c10b86770c08c96198e</sys_id>
+            <position>7</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>383b02b6db2a0450b86770c08c961965</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_mother_s_race</element>
-            <position>9</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7a04e494dbb44c10b86770c08c96198e</sys_id>
+            <position>8</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>bc3b02b6db2a0450b86770c08c961965</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_father_s_ethnicity</element>
-            <position>10</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>fe04e494dbb44c10b86770c08c96198e</sys_id>
+            <position>9</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>343b02b6db2a0450b86770c08c961966</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_father_s_race</element>
-            <position>11</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 15:01:30</sys_created_on>
-            <sys_id>7604e494dbb44c10b86770c08c96198f</sys_id>
+            <position>10</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:54</sys_created_on>
+            <sys_id>b83b02b6db2a0450b86770c08c961966</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f28a943ddbb3bf4054d8ff621f96193b">328a943ddbb3bf4054d8ff621f961940</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 15:01:30</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

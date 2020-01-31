@@ -3,126 +3,112 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>fa604de1dbf37f4054d8ff621f961935</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>091b4e76db2a0450b86770c08c961971</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_sex</element>
             <position>1</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>72604de1dbf37f4054d8ff621f961936</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>811b4e76db2a0450b86770c08c961972</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>email_address</element>
             <position>2</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>f6604de1dbf37f4054d8ff621f961936</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>091b4e76db2a0450b86770c08c961972</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>confirm_email_address</element>
-            <position>3</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>7e604de1dbf37f4054d8ff621f961936</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>phone_number</element>
-            <position>4</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>f2604de1dbf37f4054d8ff621f961937</sys_id>
+            <position>3</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>8d1b4e76db2a0450b86770c08c961972</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>birthday</element>
-            <position>5</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>7a604de1dbf37f4054d8ff621f961937</sys_id>
+            <position>4</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>051b4e76db2a0450b86770c08c961973</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>race_ethnicity</element>
-            <position>6</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>fe604de1dbf37f4054d8ff621f961937</sys_id>
+            <position>5</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>891b4e76db2a0450b86770c08c961973</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_mother_s_ethnicity</element>
-            <position>7</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>76604de1dbf37f4054d8ff621f961938</sys_id>
+            <position>6</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>011b4e76db2a0450b86770c08c961974</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>biological_father_s_ethnicity</element>
-            <position>8</position>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:15:06</sys_created_on>
-            <sys_id>fa604de1dbf37f4054d8ff621f961938</sys_id>
+            <position>7</position>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-01-28 16:46:22</sys_created_on>
+            <sys_id>851b4e76db2a0450b86770c08c961974</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Page 2 - Personal Information" display_value="Page 2 - Personal Information" name="x_naci_family_coho_mock_up_intake" sys_domain="global" view="f71a8ceddb7f3f4054d8ff621f9619f4">331acceddb7f3f4054d8ff621f96199b</sys_ui_section>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:15:06</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-01-28 16:46:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

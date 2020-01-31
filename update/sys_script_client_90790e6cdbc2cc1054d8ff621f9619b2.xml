@@ -11,7 +11,7 @@
         <name>Update Labels for Demographic Info</name>
         <order/>
         <script><![CDATA[function onLoad() {
-	
+
 	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
 	minorOrPediatric.addParam('sysparm_name', 'checkAge');
 	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
@@ -20,7 +20,7 @@
 	function ageCheck(response){
 
 		var answer = response.responseXML.documentElement.getAttribute("answer");
-
+		
 		if (answer == 'pediatric' || answer == 'minor'){
 
 			g_form.setLabelOf('hispanic_or_latino', 'Do you consider your child to be Hispanic or Latino?');
@@ -29,7 +29,7 @@
 			g_form.setLabelOf('origin_or_ancestry', "What is your child's national origin or ancestry?");
 
 		}
-	//alert(answer);
+
 		if (answer == 'minor'){
 			
 			g_form.setLabelOf('highest_level_of_school', "What is the highest level of schooling your child has completed?");
@@ -49,7 +49,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>90790e6cdbc2cc1054d8ff621f9619b2</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Update Labels for Demographic Info</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_90790e6cdbc2cc1054d8ff621f9619b2</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 21:00:25</sys_updated_on>
+        <sys_updated_on>2020-01-27 18:15:12</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>1</ui_type>

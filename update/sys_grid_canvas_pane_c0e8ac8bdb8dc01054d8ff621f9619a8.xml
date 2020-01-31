@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
         <grid_canvas display_value="PA New Tab 3">a21e051cdbb8cc1054d8ff621f9619a2</grid_canvas>
-        <height>10</height>
+        <height>11</height>
         <portal_widget display_value="Created Nov 15, 2019 09:41:36">4ce8ac8bdb8dc01054d8ff621f9619a6</portal_widget>
         <posx>0</posx>
         <posy>20</posy>
@@ -10,15 +10,15 @@
         <sys_created_on>2019-11-15 14:41:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c0e8ac8bdb8dc01054d8ff621f9619a8</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>a21e051cdbb8cc1054d8ff621f9619a2</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_grid_canvas_pane_c0e8ac8bdb8dc01054d8ff621f9619a8</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 20:15:46</sys_updated_on>
+        <sys_updated_by>gubinas2@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-29 15:18:56</sys_updated_on>
         <width>6</width>
     </sys_grid_canvas_pane>
 </record_update>

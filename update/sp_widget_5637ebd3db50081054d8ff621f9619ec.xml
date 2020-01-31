@@ -9,10 +9,9 @@
 	c.data.label = "Screening Test";
 	
 	c.data.columns = [{label:"Screening Test", name: "screening_test", width:'15%'},
-										{label:"Have you ever had this screening test?", name: "had_this_screening_test", width:'10%'},
-										{label: "If “YES”, estimated total number of this screening test you have had",name: "estimated_total_screening_test", width:'20%'},
-										{label:"If “YES”, about how old were you when you first had this screening test?", name: "age_had_screening_test", width:'20%'},
-									 {label:"If “YES”, approximately when did you last have this screening test?", name: "last_have_this_screening_test", width:'20%'}];
+										{label: "Estimated total number of this screening test you have had",name: "estimated_total_screening_test", width:'23%'},
+										{label: "How old were you when you first had this screening test?", name: "age_had_screening_test", width:'23%'},
+									 {label: "Approximately when did you last have this screening test?", name: "last_have_this_screening_test", width:'24%'}];
 
 
 	c.openForm = function(){
@@ -173,7 +172,7 @@
         <sys_created_on>2019-10-10 16:24:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5637ebd3db50081054d8ff621f9619ec</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>FCSMS IIQ Form Screening Test List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -181,7 +180,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_5637ebd3db50081054d8ff621f9619ec</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-11-20 19:25:26</sys_updated_on>
+        <sys_updated_on>2020-01-31 17:27:35</sys_updated_on>
         <template><![CDATA[<div id="container" style="font-size:18px;">
 	<div style="display:flex;margin-bottom:5px;height:40px;">
     <div class="col-md-6" style="display: flex;">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>relatives_test_positive</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Mandatory Fields -  Fam Genetic test</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue === '') {
+      return;
+   }
+
+   if (g_form.getValue('relatives_test_positive') == 'Yes'){
+	   g_form.showFieldMsg('relatives_test_positive', 'Because you have chosen Yes you must enter an entry below for Genetic Test Information', 'error');
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-29 15:29:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>d7130747db6e4450b86770c08c961941</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Mandatory Fields -  Fam Genetic test</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_d7130747db6e4450b86770c08c961941</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-29 15:35:14</sys_updated_on>
+        <table>x_naci_family_coho_mock_up_intake</table>
+        <type>onChange</type>
+        <ui_type>1</ui_type>
+        <view>LFS41</view>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>a_cancer_survivor</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Labels for Tobacco Use (D)</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
+
+	function ageCheck(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		
+		if (answer == 'minor'){
+
+			g_form.setLabelOf('have_smoked_cigarettes', "Has your child ever smoked cigarettes regularly?");
+			g_form.setLabelOf('have_smoked_cigars', "Has your child ever smoked cigars regularly?");
+			g_form.setLabelOf('ever_smoked_pipe_regularly', "Has your child ever smoked a pipe regularly?");
+			g_form.setLabelOf('ever_chewed_tobacco_regularly', "Has your child ever chewed tobacco regularly?");
+			g_form.setLabelOf('ever_used_dipped_snuff_regularly', "Has your child ever used (dipped) snuff regularly?");
+			
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-29 16:53:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>2e56938fdbae4450b86770c08c961968</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update Labels for Tobacco Use (D)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_2e56938fdbae4450b86770c08c961968</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-29 16:56:59</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionD</view>
+    </sys_script_client>
+</record_update>

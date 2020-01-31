@@ -14,7 +14,7 @@
         <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Estimated total number of this screening test had</column_label>
+        <column_label>Estimated total number of this screening test has occurred</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2019-10-10 14:26:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>26fb07d3dbdcc41054d8ff621f961979</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Estimated total number of this screening test had</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Estimated total number of this screening test has occurred</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_screening_test_estimated_total_screening_test</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-21 18:46:31</sys_updated_on>
+        <sys_updated_on>2020-01-29 20:05:38</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

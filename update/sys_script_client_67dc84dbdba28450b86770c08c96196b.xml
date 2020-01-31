@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>jewish_descent</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Fem Rep Labels (menstrual)</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
+
+	function ageCheck(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+	
+		if (answer == 'minor'){
+
+			g_form.setLabelOf('knowledge_first_menstrual_period', "How old was your child when they had their first menstrual period?");
+			g_form.setLabelOf('what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more', "What is the reason your child has not had a menstrual period for 6 months or more?");
+			g_form.setLabelOf('if_you_have_not_had_a_period_in_6_months_or_more_when_was_your_last_period', "If your child has not had a period in 6 months or more, when was their last period?");
+		
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-29 20:51:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>67dc84dbdba28450b86770c08c96196b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Update Fem Rep Labels (menstrual)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_67dc84dbdba28450b86770c08c96196b</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-30 15:45:42</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>menstrual</view>
+    </sys_script_client>
+</record_update>

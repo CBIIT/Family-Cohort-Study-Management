@@ -25,9 +25,27 @@
 
 			g_form.setLabelOf('have_any_surgery', 'Has your child ever had any surgery other than for cancer treatment?');
 			
-
+		}
+		
+		if (answer == 'minor'){
+			
+			g_form.setLabelOf('have_any_surgery', 'Has your child ever had any surgery other than for cancer treatment?');
+			g_form.setLabelOf('diagnosed_with_bone_fracture', 'Has your child ever been diagnosed with Bone Fracture?');
+			g_form.setLabelOf('diagnosed_with_chronic_or_recurrent_infection', 'Has your child ever been diagnosed with Chronic or Recurrent Infection?');
+			g_form.setLabelOf('diagnosed_with_coronary_artery_disease', 'Has your child ever been diagnosed with Coronary Artery Disease?');
+			g_form.setLabelOf('diagnosed_with_myocardial_infarction', 'Has your child ever been diagnosed with Heart Attack (myocardial infarction)?');
+			g_form.setLabelOf('diagnosed_with_hypertension', 'Has your child ever been diagnosed with High Blood Pressure (hypertension)?');
+			g_form.setLabelOf('diagnosed_with_diabetes', 'Has your child ever been diagnosed with High Blood Sugar (diabetes)?');
+			g_form.setLabelOf('diagnosed_with_high_cholesterol', 'Has your child ever been diagnosed with High Cholesterol?');
+			g_form.setLabelOf('diagnosed_with_osteopenia', 'Has your child ever been diagnosed with Mild bone thinning (osteopenia)?');
+			g_form.setLabelOf('diagnosed_with_transient_ischemic_attack', 'Has your child ever been diagnosed with Mini-stroke (transient ischemic attack)?');
+			g_form.setLabelOf('diagnosed_with_osteoporosis', 'Has your child ever been diagnosed with Severe bone thinning (osteoporosis)?');
+			g_form.setLabelOf('diagnosed_with_severe_forgetfulness_or_dementia', 'Has your child ever been diagnosed with Severe forgetfulness or dementia?');
+			g_form.setLabelOf('diagnosed_with_angina_pectoris', 'Has your child ever been diagnosed with Severe Heart Pain (angina pectoris)?');
+			g_form.setLabelOf('diagnosed_with_stroke', 'Has your child ever been diagnosed with Stroke?');
 		}
 	}
+	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
@@ -35,7 +53,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>68c16142db52cc1054d8ff621f9619cb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Update Labels for Surgeries</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -44,7 +62,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_68c16142db52cc1054d8ff621f9619cb</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-13 19:34:41</sys_updated_on>
+        <sys_updated_on>2020-01-29 18:17:10</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>1</ui_type>

@@ -42,7 +42,7 @@
                 <element inactive_on_update="false" label="Other" value="Other"/>
             </choice>
         </element>
-        <element label="Birthday" max_length="40" name="birthday" type="glide_date"/>
+        <element label="Date of Birth" max_length="40" name="birthday" type="glide_date"/>
         <element choice="1" label="Cancer Type" max_length="100" name="cancer_type" type="string">
             <choice/>
         </element>
@@ -209,7 +209,7 @@
         </element>
         <element label="Screener Submitted" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
         <element default="javascript: new Date().getFullYear().toString()" label="Year Created" max_length="40" name="year_created" type="string"/>
-        <element label="What is your name" max_length="100" name="your_name" type="string"/>
+        <element label="Proxy Name" max_length="100" name="your_name" type="string"/>
         <index name="index">
             <element name="family_member_record"/>
         </index>

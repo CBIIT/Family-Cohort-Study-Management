@@ -35,13 +35,23 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
+	var accessEmail = '';
+	
 	var createFormAccessRec = new GlideRecord ('x_naci_family_coho_fcsms_form_access');
 	createFormAccessRec.initialize();
 	
 	createFormAccessRec.form_id = current.sys_id;
 	createFormAccessRec.form_type = 'fhq';
-	createFormAccessRec.email = current.initial_proband.email_address;
-	createFormAccessRec.user = getUserID(current.initial_proband.email_address);
+	
+	if (current.initial_proband.proxy_required == 'yes'){
+		accessEmail = current.initial_proband.proxy_email_address;
+	} else {
+		accessEmail = current.initial_proband.email_address;
+	}
+	
+	createFormAccessRec.email = accessEmail;
+	createFormAccessRec.user = getUserID(accessEmail);
+	createFormAccessRec.proxy = current.initial_proband.proxy_required;
 	
 	createFormAccessRec.insert();
 	
@@ -64,7 +74,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>3f3787aadbda001054d8ff621f961940</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Create Form Access Record</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -73,7 +83,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_3f3787aadbda001054d8ff621f961940</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-15 16:37:52</sys_updated_on>
+        <sys_updated_on>2020-01-30 18:41:05</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

@@ -62,8 +62,8 @@
 	}
 		
 	c.generatePDF = function(){
-		  var documentId = 'd1172e1edb89001054d8ff621f961972';
-		  var url = '/sys_attachment.do?sys_id=' + documentId;
+		  //var documentId = 'd1172e1edb89001054d8ff621f961972';
+		  var url = '/api/naci/attachment_util/attachment/v1/' + c.data.pdf_id;
 			var doc;
 			return fetch(url).then(function(response) {
 				return response.arrayBuffer();
@@ -158,21 +158,26 @@
 								 processData: false
 							}).then(function(res){
 								var result = res.data.result;
-								$('#consent-modal').modal('hide');
+								c.closeModal();
 							  s.id = "fcsms_submission_acknowledge_page";
 								s.form = "general_consent";
 							  $location.search(s).replace();
 								console.log(result);
 							},function(error){
-							 $('#consent-modal').modal('hide');
+							 c.closeModal();
 								console.log(error);
 							});
 					});
 				}
 			},function(error){
-				$('#consent-modal').modal('hide');
+				c.closeModal();
 				console.log(error);
 			});
+	}
+	
+	c.closeModal = function(){
+		$('#consent-modal').modal('hide');
+		$(".modal-backdrop.in").hide();
 	}
 	
 	c.cancelForm = function(){
@@ -286,15 +291,15 @@
         <sys_created_on>2019-11-13 15:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36da12d6db49001054d8ff621f9619b7</sys_id>
-        <sys_mod_count>247</sys_mod_count>
+        <sys_mod_count>257</sys_mod_count>
         <sys_name>FCSMS Consent Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_36da12d6db49001054d8ff621f9619b7</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-23 16:24:55</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-28 20:42:03</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <div class="body-content">

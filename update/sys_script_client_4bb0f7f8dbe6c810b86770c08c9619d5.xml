@@ -11,7 +11,7 @@
         <name>Update Labels for Demographic Info (A4)</name>
         <order/>
         <script><![CDATA[function onLoad() {
-	
+
 	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
 	minorOrPediatric.addParam('sysparm_name', 'checkAge');
 	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
@@ -20,7 +20,7 @@
 	function ageCheck(response){
 
 		var answer = response.responseXML.documentElement.getAttribute("answer");
-
+		
 		if (answer == 'pediatric' || answer == 'minor'){
 
 			g_form.setLabelOf('hispanic_or_latino', 'Do you consider your child to be Hispanic or Latino?');
@@ -29,9 +29,9 @@
 			g_form.setLabelOf('origin_or_ancestry', "What is your child's national origin or ancestry?");
 
 		}
-	//alert(answer);
+
 		if (answer == 'minor'){
-			
+
 			g_form.setLabelOf('highest_level_of_school', "What is the highest level of schooling your child has completed?");
 			g_form.setLabelOf('religious_group', "What religious group does your child identify with?");
 			g_form.setLabelOf('household_income', "Which category best represents your child's total household income?");
@@ -39,7 +39,8 @@
 			g_form.setLabelOf('most_recent_occupation', "What is your child's current (or most recent) occupation?");
 			g_form.setLabelOf('years_of_this_occupation', "For how many years has this been (was this) your child's occupation?");
 			g_form.setLabelOf('marital_status', "What is your child's current marital status?");
-			
+			g_form.setVisible('income_support_count', false);
+
 		}
 	}
 }]]></script>
@@ -49,7 +50,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>4bb0f7f8dbe6c810b86770c08c9619d5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Update Labels for Demographic Info (A4)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -58,7 +59,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_client_4bb0f7f8dbe6c810b86770c08c9619d5</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 21:00:02</sys_updated_on>
+        <sys_updated_on>2020-01-29 16:49:24</sys_updated_on>
         <table>x_naci_family_coho_individual_information_questionnaire</table>
         <type>onLoad</type>
         <ui_type>1</ui_type>

@@ -674,7 +674,7 @@
         </element>
         <element label="How old were you when you first became pregnant?" max_length="4" name="how_old_were_you_when_you_first_became_pregnant" type="integer"/>
         <element label="How old were you when you first consulted a doctor for fertility problems?" max_length="2" name="how_old_were_you_when_you_first_consulted_a_doctor_for_fertility_problems" type="string"/>
-        <element attributes="edge_encryption_enabled=true;max_length=3" label="How old when you had your first menstrual period" max_length="40" name="how_old_when_you_hard_your_first_menstrual_period" type="integer"/>
+        <element attributes="edge_encryption_enabled=true;max_length=3" label="Age when first menstrual period occurred" max_length="40" name="how_old_when_you_hard_your_first_menstrual_period" type="integer"/>
         <element choice="1" label="Is this condition (hypertension) currently being treated ?" max_length="40" name="hypertension_treated" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
@@ -1524,6 +1524,7 @@
                 <element inactive_on_update="false" label="NO" sequence="20" value="no"/>
             </choice>
         </element>
+        <element label="Under 18" max_length="40" name="under_18" type="boolean"/>
         <element choice="1" label="About how much did you weigh at age 18?" max_length="40" name="weigh_at_age_18" type="choice">
             <choice>
                 <element inactive_on_update="false" label="POUNDS" sequence="1" value="POUNDS"/>
@@ -1562,7 +1563,7 @@
             </choice>
         </element>
         <element attributes="glide_list" label="What is the reason you have not had a menstrual period for 6 months or more?" max_length="4000" name="what_is_the_reason_you_have_not_had_a_menstrual_period_for_6_months_or_more" reference="x_naci_family_coho_individual_information_questionnaire_reason_for_no_period" type="glide_list"/>
-        <element attributes="glide_list" label="What was the diagnosis of the problem?" max_length="4000" name="what_was_the_diagnosis_of_the_problem" reference="x_naci_family_coho_individual_information_questionnaire_reasons_for_infertility" type="glide_list"/>
+        <element attributes="glide_list" label="What was the diagnosis of the problem? (Please select all that apply)" max_length="4000" name="what_was_the_diagnosis_of_the_problem" reference="x_naci_family_coho_individual_information_questionnaire_reasons_for_infertility" type="glide_list"/>
         <element label="What was your age when you had a hysterectomy?" max_length="2" name="what_was_your_age_when_you_had_a_hysterectomy" type="integer"/>
         <element choice="1" label="When was your last period?" max_length="40" name="when_was_your_last_period" type="choice">
             <choice>

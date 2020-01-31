@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>jewish_descent</field>
+        <global>false</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Update Fem Surgery Labels </name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+	var minorOrPediatric = new GlideAjax ('x_naci_family_coho.pediatricOrMinor');
+	minorOrPediatric.addParam('sysparm_name', 'checkAge');
+	minorOrPediatric.addParam('sysparm_id', g_form.getUniqueValue());
+	minorOrPediatric.getXML(ageCheck);
+
+	function ageCheck(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		if (answer == 'minor'){
+
+			g_form.setLabelOf('tubal_ligation', "Did your child ever have a tubal ligation (have their tubes tied)?");
+			g_form.setLabelOf('tubal_ligation_age', "How old was your child when they had the tubal ligation?");
+			g_form.setLabelOf('have_you_ever_had_a_hysterectomy', "Has your child ever had a hysterectomy (had their uterus or womb removed)?");
+			g_form.setLabelOf('what_was_your_age_when_you_had_a_hysterectomy', "What was your child's age when they had a hysterectomy?");
+			g_form.setLabelOf('ever_had_your_ovaries_or_fallopian_tubes_removed', "Has your child ever had one or both of their ovaries or fallopian tubes removed?");
+			g_form.setLabelOf('have_you_ever_had_your_breast_s_removed_to_reduce_the_risk_of_breast_cancer', "Has your child ever had their breast(s) removed to reduce the risk of breast cancer?");
+			g_form.setLabelOf('were_you_ever_prescribed_female_hormones_around_the_time_of_menopause', "Has your child ever been prescribed female hormones around the time of menopause?");
+			
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-01-30 15:29:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>b69cc4e7dbe2c450b86770c08c961985</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Update Fem Surgery Labels </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_b69cc4e7dbe2c450b86770c08c961985</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-01-30 15:35:33</sys_updated_on>
+        <table>x_naci_family_coho_individual_information_questionnaire</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view>SectionG2</view>
+    </sys_script_client>
+</record_update>

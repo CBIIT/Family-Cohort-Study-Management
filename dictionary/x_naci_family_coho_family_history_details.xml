@@ -139,6 +139,7 @@
                 <element inactive_on_update="false" label="Other" sequence="1000" value="other"/>
             </choice>
         </element>
+        <element label="Screener_Complete" max_length="40" name="screener_complete" type="boolean"/>
         <element label="State" max_length="50" name="state" type="string"/>
         <element label="State" max_length="50" name="state_of_death" type="string"/>
         <element label="Street Address" max_length="200" name="street_address" type="string"/>

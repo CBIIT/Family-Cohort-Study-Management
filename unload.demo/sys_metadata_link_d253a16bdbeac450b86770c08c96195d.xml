@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>d5aa4963dbb0041054d8ff621f9619b2</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_naci_family_coho_mock_up_intake">
+    <x_naci_family_coho_mock_up_intake action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_info_required/>
+        <biological_father_s_ethnicity>Hispanic/Latino</biological_father_s_ethnicity>
+        <biological_father_s_race/>
+        <biological_mother_s_ethnicity>Unknown</biological_mother_s_ethnicity>
+        <biological_mother_s_race/>
+        <biological_relatives_diagnosed>Yes</biological_relatives_diagnosed>
+        <biological_sex>Male</biological_sex>
+        <birthday>1775-10-28</birthday>
+        <cancer_type/>
+        <comments/>
+        <comments_journal/>
+        <communication_type/>
+        <confirm_email_address/>
+        <consent_reminder_count/>
+        <date_consent_requested>2019-11-19</date_consent_requested>
+        <diagnosed_with_cancer>Yes</diagnosed_with_cancer>
+        <eligible_status>eligible</eligible_status>
+        <email_address>Dan@espn.com</email_address>
+        <enrollment_status>awaiting_consent</enrollment_status>
+        <family display_value="">103b4527dbb0041054d8ff621f9619ae</family>
+        <family_id/>
+        <family_member_record/>
+        <filled_for/>
+        <filling_for_someone>No</filling_for_someone>
+        <first_name>Dan</first_name>
+        <had_genetic_testing>No</had_genetic_testing>
+        <hear_about_this_study/>
+        <hear_please_specify/>
+        <internal_comments/>
+        <last_name>LeBatard</last_name>
+        <legal_guardian>No</legal_guardian>
+        <middle_name/>
+        <name>Dan LeBatard</name>
+        <number>FCS0001020</number>
+        <okta_user_id>00uoaerypaqemsR0Q0h7</okta_user_id>
+        <other_relationship/>
+        <participate_race>195ada0ddb20005054d8ff621f96199f</participate_race>
+        <participated_through_another_institution>No</participated_through_another_institution>
+        <phone_number/>
+        <race_ethnicity>Hispanic/Latino</race_ethnicity>
+        <received_cancer_care>No</received_cancer_care>
+        <relationship>I am the person's parent</relationship>
+        <relatives_had_genetic_testing>No</relatives_had_genetic_testing>
+        <relatives_test_positive>No</relatives_test_positive>
+        <saved_section/>
+        <study display_value="LFS (Li-Fraumeni Syndrome)">5bf67315db3f3f4054d8ff621f961968</study>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2019-11-04 20:12:48</sys_created_on>
+        <sys_id>d5aa4963dbb0041054d8ff621f9619b2</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2019-11-20 18:18:09</sys_updated_on>
+        <test_positive>No</test_positive>
+        <tested/>
+        <tested_positive>BRCA1,BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)</tested_positive>
+        <time_to_complete_form/>
+        <year_created>2019</year_created>
+        <your_name/>
+    </x_naci_family_coho_mock_up_intake>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>scott.glass@itgfirm.com</sys_created_by>
+        <sys_created_on>2020-01-30 21:48:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d253a16bdbeac450b86770c08c96195d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCS0001020</sys_name>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_metadata_link_d253a16bdbeac450b86770c08c96195d</sys_update_name>
+        <sys_updated_by>scott.glass@itgfirm.com</sys_updated_by>
+        <sys_updated_on>2020-01-30 21:48:13</sys_updated_on>
+        <tablename>x_naci_family_coho_mock_up_intake</tablename>
+    </sys_metadata_link>
+</record_update>

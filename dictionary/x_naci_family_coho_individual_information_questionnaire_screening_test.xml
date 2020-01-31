@@ -10,7 +10,7 @@
         <element label="Age" max_length="100" name="age_last_screening_test" type="string"/>
         <element label="Date" max_length="40" name="date_last_screening_test" type="glide_date"/>
         <element label="Number" max_length="100" name="estimated_number" type="string"/>
-        <element choice="1" label="Estimated total number of this screening test had" max_length="40" name="estimated_total_screening_test" type="choice">
+        <element choice="1" label="Estimated total number of this screening test has occurred" max_length="40" name="estimated_total_screening_test" type="choice">
             <choice>
                 <element inactive_on_update="false" label="NUMBER" sequence="1" value="NUMBER"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>

@@ -16,9 +16,9 @@
 	var type = request.body.data.type;
 	
 	var okta = new global.OktaInterface();
-	var email = gs.getUserID();
-	//var result = okta.authnUser(email, signature_password);
-	var result = "SUCCESS";
+	var email = gs.getUser().getEmail();
+	var result = okta.authnUser(email, signature_password);
+	//var result = "SUCCESS";
 	var sys_id = '';
 	if(result == 'SUCCESS'){
 		if(type != null && type == 'GENERAL'){
@@ -60,7 +60,7 @@
         <sys_created_on>2019-11-18 19:45:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e0180544db9dc410b86770c08c96198b</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Validate OKTA User</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -68,7 +68,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_e0180544db9dc410b86770c08c96198b</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-23 17:51:01</sys_updated_on>
+        <sys_updated_on>2020-01-24 16:53:32</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

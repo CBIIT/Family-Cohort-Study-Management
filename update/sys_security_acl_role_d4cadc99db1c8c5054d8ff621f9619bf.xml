@@ -5,8 +5,8 @@
         <sys_created_on>2019-10-03 20:23:49</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d4cadc99db1c8c5054d8ff621f9619bf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_naci_family_coho_fcsms_intake_form_gene_test.snc_internal</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_naci_family_coho_fcsms_intake_form_gene_test.snc_external</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -14,8 +14,8 @@
         <sys_security_acl display_value="x_naci_family_coho_fcsms_intake_form_gene_test">1cd710d1db1c8c5054d8ff621f9619f8</sys_security_acl>
         <sys_update_name>sys_security_acl_role_d4cadc99db1c8c5054d8ff621f9619bf</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-03 20:23:49</sys_updated_on>
-        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <sys_updated_on>2020-01-27 19:38:03</sys_updated_on>
+        <sys_user_role display_value="snc_external" name="snc_external">940ba702933002009c8579b4f47ffbe2</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

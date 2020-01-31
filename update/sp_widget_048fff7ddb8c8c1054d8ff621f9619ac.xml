@@ -1225,6 +1225,9 @@
 .IIQ-form-error-area li.active{
   font-weight: bold;
 }
+.bootstrap-datetimepicker-widget{
+  position: absolute !important;
+}
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -1277,7 +1280,7 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>946</sys_mod_count>
+        <sys_mod_count>950</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -1285,7 +1288,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-23 15:33:47</sys_updated_on>
+        <sys_updated_on>2020-01-29 17:07:45</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
@@ -1308,7 +1311,7 @@
       <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
       <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
       <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
-      <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Signature & Submit</a></li>
+      <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Final Information</a></li>
     </ul>
   </div>
    <div class="right-side-content col-md-9">
