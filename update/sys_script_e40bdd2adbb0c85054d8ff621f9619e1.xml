@@ -72,6 +72,7 @@
 	createFamilyMember.enrollment_status = 'new';
 	createFamilyMember.proband_screener = current.sys_id;
 	createFamilyMember.proxy_required = current.filling_for_someone.toLowerCase();
+	createFamilyMember.screener_complete = true;
 		
 	
 	if (current.diagnosed_with_cancer == 'Yes'){
@@ -105,7 +106,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e40bdd2adbb0c85054d8ff621f9619e1</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Create Family and Family Members</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -114,7 +115,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_e40bdd2adbb0c85054d8ff621f9619e1</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-30 18:40:41</sys_updated_on>
+        <sys_updated_on>2020-02-03 21:15:53</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

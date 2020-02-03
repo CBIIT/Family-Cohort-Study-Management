@@ -16,7 +16,7 @@
         <number_ref display_value="">e74e4595dba64c10b86770c08c9619fd</number_ref>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Case" name="sn_customerservice_case">3719272fdb2a7300b86770c08c961910</super_class>
+        <super_class display_value="Case" name="sn_customerservice_case">7d8994bcdb72001054d8ff621f9619bd</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>

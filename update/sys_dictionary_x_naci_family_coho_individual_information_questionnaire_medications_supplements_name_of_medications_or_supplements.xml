@@ -54,7 +54,7 @@
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-27 16:38:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>fb7d68d3dbcc8050b86770c08c9619de</sys_id>
+        <sys_id>f0dc60f0db76001054d8ff621f961975</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Name of this Medications or Supplements</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_medications_supplements_name_of_medications_or_supplements</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-27 16:38:00</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:08:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

@@ -137,7 +137,7 @@
         <sys_created_on>2019-11-26 19:37:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ac06dea6dbddc050b86770c08c961985</sys_id>
-        <sys_mod_count>104</sys_mod_count>
+        <sys_mod_count>105</sys_mod_count>
         <sys_name>FCSMS Registration</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -145,7 +145,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_ac06dea6dbddc050b86770c08c961985</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-31 20:28:47</sys_updated_on>
+        <sys_updated_on>2020-02-03 21:53:08</sys_updated_on>
         <template><![CDATA[<div class="main-content" ng-if="!c.registered" style="height: 500px;">
 	<div class="row row-title">
     <h2>
@@ -212,7 +212,7 @@
     	</div>
       <div class="r-form-fieldset">
         <div class="r-form-warning">
-          <input type="checkbox" ng-model="c.data.over18" ng-click="c.checkAge()"> Are you over the age of 18? You must be 18 or over to create new account for family cohort study. 
+          <input type="checkbox" ng-model="c.data.over18" ng-click="c.checkAge()"> Are you over the age of 18? You must be 18 years of age or older to create a new account for the Family Cohort Study. 
         </div>
     	</div>
       <div class="r-form-fieldset">

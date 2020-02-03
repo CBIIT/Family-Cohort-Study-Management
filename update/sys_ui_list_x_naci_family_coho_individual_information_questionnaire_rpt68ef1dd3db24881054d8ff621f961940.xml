@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name_of_proband</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>gender</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>date_of_birth</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>place_of_birth</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hispanic_or_latino</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -78,7 +78,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>race</element>
-            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="2cef1dd3db24881054d8ff621f961946">389aefb3db6c4c1054d8ff621f961900</list_id>
+            <list_id display_value="x_naci_family_coho_individual_information_questionnaire" element="NULL" name="x_naci_family_coho_individual_information_questionnaire" parent="NULL" relationship="NULL" sys_domain="global" view="ff6fe0fcdb76001054d8ff621f9619e8">389aefb3db6c4c1054d8ff621f961900</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
@@ -116,7 +116,7 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-24 16:11:56</sys_updated_on>
             <sys_user/>
-            <view display_value="Rpt68ef1dd3db24881054d8ff621f961940" name="RPT68ef1dd3db24881054d8ff621f961940">2cef1dd3db24881054d8ff621f961946</view>
+            <view display_value="Rpt68ef1dd3db24881054d8ff621f961940" name="RPT68ef1dd3db24881054d8ff621f961940">ff6fe0fcdb76001054d8ff621f9619e8</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

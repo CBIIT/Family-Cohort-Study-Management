@@ -54,16 +54,16 @@
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-09 21:46:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>0c77816ddbf37f4054d8ff621f961902</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>b6dce0f0db76001054d8ff621f961924</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Are you or any of your relatives currently receiving cancer care or follow-up?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_mock_up_intake_received_cancer_care</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-10 13:52:45</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:10:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

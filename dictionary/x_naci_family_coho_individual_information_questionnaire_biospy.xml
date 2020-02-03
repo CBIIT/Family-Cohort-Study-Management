@@ -12,7 +12,7 @@
         <element label="IIQ Form" max_length="32" name="iiq_form" reference="x_naci_family_coho_individual_information_questionnaire" type="reference"/>
         <element label="Please provide name and address of the facility where the biopsy was performed" max_length="500" name="name_and_address_of_the_facility_biopsy_was_performed" type="string"/>
         <element label="What was the reason or symptom for which this biopsy occurred?" max_length="500" name="reason_or_symptom_had_this_biopsy" type="string"/>
-        <element label="Where on the body or in what organ was the biopsy performed ? " max_length="200" name="where_biopsy_performed" type="string"/>
+        <element label="Where on the body or in what organ was the biopsy performed ?" max_length="200" name="where_biopsy_performed" type="string"/>
         <index name="index">
             <element name="iiq_form"/>
         </index>

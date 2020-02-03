@@ -54,7 +54,7 @@
         <sys_created_by>martincp@nih.gov</sys_created_by>
         <sys_created_on>2019-10-15 19:56:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>30a74201dbe4cc10b86770c08c9619b7</sys_id>
+        <sys_id>05bc68b0db76001054d8ff621f9619b3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>I've been trying to find comfort in my religion of spiritual beliefs</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_ive_been_trying_to_find_comfort_in_my_religion_of_spiritual_beliefs</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-15 19:56:48</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:08:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

@@ -8,8 +8,8 @@
             <sys_id>bafabdaddbf0c050b86770c08c96195b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="84dda327dbea7300b86770c08c9619c1">f6fabdaddbf0c050b86770c08c961930</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_id" sys_domain="global" view="84dda327dbea7300b86770c08c9619c1">36fabdaddbf0c050b86770c08c96194c</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="2d6fa0fcdb76001054d8ff621f96191b">f6fabdaddbf0c050b86770c08c961930</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_id" sys_domain="global" view="2d6fa0fcdb76001054d8ff621f96191b">36fabdaddbf0c050b86770c08c96194c</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
         </sys_ui_form_section>
@@ -33,7 +33,7 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:44</sys_updated_on>
             <sys_user/>
-            <view display_value="Case" name="case">84dda327dbea7300b86770c08c9619c1</view>
+            <view display_value="Case" name="case">2d6fa0fcdb76001054d8ff621f96191b</view>
             <view_name/>
         </sys_ui_form>
     </sys_ui_form_sections>

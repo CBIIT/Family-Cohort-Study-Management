@@ -8,8 +8,8 @@
             <sys_id>cbfabdaddbf0c050b86770c08c9619bc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">c7fabdaddbf0c050b86770c08c9619b1</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">c7fabdaddbf0c050b86770c08c9619b1</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
         </sys_ui_form_section>
@@ -21,8 +21,8 @@
             <sys_id>03fabdaddbf0c050b86770c08c961999</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
-            <sys_ui_section caption="Notes" display_value="Notes" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">8bfabdaddbf0c050b86770c08c961992</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">8bfabdaddbf0c050b86770c08c961992</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
         </sys_ui_form_section>
@@ -34,8 +34,8 @@
             <sys_id>c7fabdaddbf0c050b86770c08c9619c4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">c3fabdaddbf0c050b86770c08c9619bd</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">c3fabdaddbf0c050b86770c08c9619bd</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
         </sys_ui_form_section>
@@ -47,8 +47,8 @@
             <sys_id>cffabdaddbf0c050b86770c08c9619b0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
         </sys_ui_form_section>
@@ -60,8 +60,8 @@
             <sys_id>0ffabdaddbf0c050b86770c08c96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
-            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">0bfabdaddbf0c050b86770c08c961999</sys_ui_section>
+            <sys_ui_form display_value="x_naci_family_coho_family_id" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">cffabdaddbf0c050b86770c08c961990</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">0bfabdaddbf0c050b86770c08c961999</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
         </sys_ui_form_section>
@@ -85,7 +85,7 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
             <sys_user/>
-            <view display_value="Major Case" name="major_case">f596b3413bb30300b5c42479b3efc486</view>
+            <view display_value="Major Case" name="major_case">556f60fcdb76001054d8ff621f9619da</view>
             <view_name/>
         </sys_ui_form>
     </sys_ui_form_sections>

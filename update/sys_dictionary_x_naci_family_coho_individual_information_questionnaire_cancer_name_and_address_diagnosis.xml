@@ -54,16 +54,16 @@
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-26 19:37:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>a5ec004fdb00045054d8ff621f961955</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>b8cc6cb0db76001054d8ff621f9619c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Name and address of the facility where diagnosis was made</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_cancer_name_and_address_diagnosis</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-02 23:02:54</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:06:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

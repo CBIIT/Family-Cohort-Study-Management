@@ -8,8 +8,8 @@
 	var s = $location.search();
 	
 	c.disabled = true;
-	c.data.consent_be_contacted_genetic_variants = "yes";
-	c.data.consent_be_contacted_genetic_changes = "yes";
+	c.data.consent_be_contacted_genetic_variants = "";
+	c.data.consent_be_contacted_genetic_changes = "";
 	
 	c.sign_date = c.data.sign_date;
 	c.sign_user_name = c.data.user_name;
@@ -126,6 +126,8 @@
 		param.sign_date = c.sign_date;
 		param.sign_user_name = c.sign_user_name;
 		param.signature_password = c.data.signature_password;
+		param.genetic_changes = c.data.consent_be_contacted_genetic_changes;
+		param.genetic_variants = c.data.consent_be_contacted_genetic_variants;
 		param.study_id = study_id;
 		param.type = 'GENERAL';
 		$http({
@@ -291,15 +293,15 @@
         <sys_created_on>2019-11-13 15:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36da12d6db49001054d8ff621f9619b7</sys_id>
-        <sys_mod_count>257</sys_mod_count>
+        <sys_mod_count>262</sys_mod_count>
         <sys_name>FCSMS Consent Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_36da12d6db49001054d8ff621f9619b7</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-28 20:42:03</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-03 22:43:15</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <div class="body-content">
@@ -381,8 +383,8 @@
           -->
         </div>
         <div class="sign-action">
-          <button class="btn btn-primary btn-font" ng-if="c.disabled" style="background-color: #eeeeee; border: 1px solid #eeeeee; opacity: 1; color: #ccc;" ng-disabled="c.disabled"> Consent </button>
-          <button type="submit" id="toConsentBtn" ng-click="c.toConsent()" class="btn btn-primary btn-font" ng-if="!c.disabled">
+          <button class="btn btn-primary btn-font" ng-if="c.disabled || c.data.consent_be_contacted_genetic_variants == '' || c.data.consent_be_contacted_genetic_changes == ''" style="background-color: #eeeeee; border: 1px solid #eeeeee; opacity: 1; color: #ccc;" ng-disabled="true"> Consent </button>
+          <button type="submit" id="toConsentBtn" ng-click="c.toConsent()" class="btn btn-primary btn-font" ng-if="!c.disabled && c.data.consent_be_contacted_genetic_variants != '' && c.data.consent_be_contacted_genetic_changes != ''">
             Consent
           </button>
           <button type="submit" id="cancelBtn" ng-click="c.cancelForm()" class="btn btn-primary btn-font" style="margin-left: 15px;" >

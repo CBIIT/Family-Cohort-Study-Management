@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="423ce805dbec8c10b86770c08c961988">76a8cf33db684c1054d8ff621f9619f7</list_id>
+            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="147f24fcdb76001054d8ff621f961997">76a8cf33db684c1054d8ff621f9619f7</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>family_id</element>
-            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="423ce805dbec8c10b86770c08c961988">76a8cf33db684c1054d8ff621f9619f7</list_id>
+            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="147f24fcdb76001054d8ff621f961997">76a8cf33db684c1054d8ff621f9619f7</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>eligible_status</element>
-            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="423ce805dbec8c10b86770c08c961988">76a8cf33db684c1054d8ff621f9619f7</list_id>
+            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="147f24fcdb76001054d8ff621f961997">76a8cf33db684c1054d8ff621f9619f7</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="423ce805dbec8c10b86770c08c961988">76a8cf33db684c1054d8ff621f9619f7</list_id>
+            <list_id display_value="x_naci_family_coho_mock_up_intake" element="NULL" name="x_naci_family_coho_mock_up_intake" parent="NULL" relationship="NULL" sys_domain="global" view="147f24fcdb76001054d8ff621f961997">76a8cf33db684c1054d8ff621f9619f7</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -86,7 +86,7 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-24 13:43:48</sys_updated_on>
             <sys_user/>
-            <view display_value="Rptbd3ce805dbec8c10b86770c08c961981" name="RPTbd3ce805dbec8c10b86770c08c961981">423ce805dbec8c10b86770c08c961988</view>
+            <view display_value="Rptbd3ce805dbec8c10b86770c08c961981" name="RPTbd3ce805dbec8c10b86770c08c961981">147f24fcdb76001054d8ff621f961997</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

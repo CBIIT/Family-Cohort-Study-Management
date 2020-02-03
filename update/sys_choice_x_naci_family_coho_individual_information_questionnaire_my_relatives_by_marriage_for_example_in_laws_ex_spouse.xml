@@ -4,10 +4,10 @@
             <element>my_relatives_by_marriage_for_example_in_</element>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <sys_class_name>sys_choice_set</sys_class_name>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-15 20:24:43</sys_created_on>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2020-02-03 15:02:04</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>ff1e8ec9dbe4cc10b86770c08c96199a</sys_id>
+            <sys_id>fbbc2cb0db76001054d8ff621f9619e3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>my_relatives_by_marriage_for_example_in_laws_ex_spouse</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -15,8 +15,8 @@
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_my_relatives_by_marriage_for_example_in_laws_ex_spouse</sys_update_name>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 20:24:43</sys_updated_on>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2020-02-03 15:02:04</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

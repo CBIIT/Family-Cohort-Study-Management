@@ -10,7 +10,7 @@
         <element label="City" max_length="200" name="born_city" type="string"/>
         <element label="County" max_length="100" name="born_county" type="string"/>
         <element label="State" max_length="50" name="born_state" type="string"/>
-        <element choice="1" default="No" label="Did a physician ever state that you had cancer? " max_length="10" name="cancer_diagnosis_by_physician" type="choice">
+        <element choice="1" default="No" label="Did a physician ever state that you had cancer?" max_length="10" name="cancer_diagnosis_by_physician" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="10" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
@@ -28,7 +28,7 @@
         <element label="Zipcode" max_length="50" name="diagnosed_doctor_zipcode" type="string"/>
         <element label="When did the physician diagnose this cancer? (Year)" max_length="10" name="diagnose_cancer_year" type="string"/>
         <element label="Enrollment" max_length="32" name="enrollment" read_only="true" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
-        <element label="First Spouse's Date of Birth " max_length="20" name="first_spouse_date_of_birth" type="glide_date"/>
+        <element label="First Spouse's Date of Birth" max_length="20" name="first_spouse_date_of_birth" type="glide_date"/>
         <element label="First Spouse's First Name" max_length="100" name="first_spouse_first_name" type="string"/>
         <element label="First Spouse's Last Name" max_length="100" name="first_spouse_last_name" type="string"/>
         <element label="First Spouse's Maiden Name" max_length="50" name="first_spouse_maiden_name" type="string"/>
@@ -72,9 +72,9 @@
         <element label="What is your national origin or ancestry ? (Check no more than 4)" max_length="500" name="national_origin" reference="x_naci_family_coho_lookup_national_ancestry" type="glide_list"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Of those born with you, how many are of an identical relation with you?" max_length="10" name="number_identical_twin" type="string"/>
-        <element label="Of those born with you, how many are of a faternal relation with you? " max_length="10" name="number_of_fraternal" type="string"/>
+        <element label="Of those born with you, how many are of a faternal relation with you?" max_length="10" name="number_of_fraternal" type="string"/>
         <element label="How many other infants were born with you?" max_length="10" name="number_of_infants_born_with" type="string"/>
-        <element label="Other national origin or ancestry " max_length="100" name="other_national_origin" type="string"/>
+        <element label="Other national origin or ancestry" max_length="100" name="other_national_origin" type="string"/>
         <element label="If other, please specify" max_length="100" name="other_religion" type="string"/>
         <element choice="1" label="With this spouse did you parent any children, including stillbirth and children?" max_length="10" name="parent_child" type="choice">
             <choice>
@@ -114,7 +114,7 @@
         <element label="State" max_length="50" name="regular_doctor_state" type="string"/>
         <element label="Zipcode" max_length="20" name="regular_doctor_zipcode" type="string"/>
         <element label="Last Name" max_length="100" name="regular_dotor_last_name" type="string"/>
-        <element choice="3" default="None" label="In what religion were you raised? " max_length="50" name="religion" type="choice">
+        <element choice="3" default="None" label="In what religion were you raised?" max_length="50" name="religion" type="choice">
             <choice>
                 <element inactive_on_update="false" label="None" sequence="10" value="None"/>
                 <element inactive_on_update="false" label="Catholic" sequence="20" value="Catholic"/>

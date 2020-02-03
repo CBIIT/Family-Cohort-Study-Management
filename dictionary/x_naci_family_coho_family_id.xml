@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sn_customerservice_case" label="Family ID" max_length="40" name="x_naci_family_coho_family_id" sizeclass="71" type="collection">
+    <element extends="sn_customerservice_case" label="Family ID" max_length="40" name="x_naci_family_coho_family_id" type="collection">
         <element label="FHQ" max_length="32" name="family_history_questionnaire" reference="x_naci_family_coho_family_history_question" type="reference"/>
         <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Family ID" max_length="40" name="family_id" type="string" use_dynamic_default="true"/>
         <element label="Initial Screener" max_length="32" name="initial_intake" reference="x_naci_family_coho_mock_up_intake" type="reference"/>

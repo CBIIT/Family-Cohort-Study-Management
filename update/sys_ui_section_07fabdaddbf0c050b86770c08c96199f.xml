@@ -8,7 +8,7 @@
             <sys_id>87fabdaddbf0c050b86770c08c9619ad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>83fabdaddbf0c050b86770c08c9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>8bfabdaddbf0c050b86770c08c9619ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -50,7 +50,7 @@
             <sys_id>03fabdaddbf0c050b86770c08c9619ad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -64,7 +64,7 @@
             <sys_id>0ffabdaddbf0c050b86770c08c9619ad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -78,7 +78,7 @@
             <sys_id>0bfabdaddbf0c050b86770c08c9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="f596b3413bb30300b5c42479b3efc486">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
+            <sys_ui_section caption="Major Case Information" display_value="Major Case Information" name="x_naci_family_coho_family_id" sys_domain="global" view="556f60fcdb76001054d8ff621f9619da">07fabdaddbf0c050b86770c08c96199f</sys_ui_section>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-29 18:33:46</sys_updated_on>
             <sys_user/>
@@ -107,7 +107,7 @@
             <sys_updated_on>2019-10-29 18:33:45</sys_updated_on>
             <sys_user/>
             <title>false</title>
-            <view display_value="Major Case" name="major_case">f596b3413bb30300b5c42479b3efc486</view>
+            <view display_value="Major Case" name="major_case">556f60fcdb76001054d8ff621f9619da</view>
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>

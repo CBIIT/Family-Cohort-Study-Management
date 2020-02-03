@@ -146,18 +146,21 @@
         <element label="Cancer Type or site" max_length="100" name="type_or_site" type="string"/>
         <element label="Zipcode" max_length="20" name="zipcode" type="string"/>
         <index name="index">
-            <element name="individual_information"/>
+            <element name="family_historic_qustion_id"/>
         </index>
         <index name="index2">
-            <element name="family"/>
+            <element name="individual_information"/>
         </index>
         <index name="index3">
-            <element name="proband_screener"/>
+            <element name="family"/>
         </index>
         <index name="index4">
-            <element name="biological_mother"/>
+            <element name="proband_screener"/>
         </index>
         <index name="index5">
+            <element name="biological_mother"/>
+        </index>
+        <index name="index6">
             <element name="biological_father"/>
         </index>
     </element>

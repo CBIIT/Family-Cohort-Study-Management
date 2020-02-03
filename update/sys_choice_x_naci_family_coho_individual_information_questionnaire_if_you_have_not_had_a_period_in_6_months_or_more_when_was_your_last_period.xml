@@ -4,10 +4,10 @@
             <element>if_you_have_not_had_a_period_in_6_months</element>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <sys_class_name>sys_choice_set</sys_class_name>
-            <sys_created_by>martincp@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-16 16:02:48</sys_created_on>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2020-02-03 15:02:00</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>f4cbdad9dbe80010b86770c08c96191f</sys_id>
+            <sys_id>87bc2cb0db76001054d8ff621f961912</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>if_you_have_not_had_a_period_in_6_months_or_more_when_was_your_last_period</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -15,8 +15,8 @@
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_if_you_have_not_had_a_period_in_6_months_or_more_when_was_your_last_period</sys_update_name>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-16 16:02:48</sys_updated_on>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2020-02-03 15:02:00</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

@@ -207,7 +207,7 @@
                 <element inactive_on_update="false" label="No" sequence="20" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="On the days you drank alcohol, how many drinks did you have? " max_length="40" name="drinks_you_have" type="choice">
+        <element choice="1" label="On the days you drank alcohol, how many drinks did you have?" max_length="40" name="drinks_you_have" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Average Number of drinks per day" sequence="1" value="Average Number of drinks per day"/>
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
@@ -270,9 +270,9 @@
         </element>
         <element choice="3" default="YES" label="Have you ever had one or more alcoholic drinks per week for 6 months or more" max_length="40" name="had_one_or_more_alcoholic_drinks_per_week" type="choice">
             <choice>
-                <element inactive_on_update="false" label="YES" sequence="10" value="YES"/>
-                <element inactive_on_update="false" label="NO" sequence="20" value="NO"/>
-                <element inactive_on_update="false" label="DON'T KNOW" sequence="30" value="DON'T KNOW"/>
+                <element inactive="true" inactive_on_update="true" label="YES" sequence="10" value="YES"/>
+                <element inactive="true" inactive_on_update="true" label="NO" sequence="20" value="NO"/>
+                <element inactive="true" inactive_on_update="true" label="DON'T KNOW" sequence="30" value="DON'T KNOW"/>
             </choice>
         </element>
         <element choice="1" label="Have you ever had screening for a cancer?" max_length="40" name="had_screening_for_cancer" type="choice">
@@ -476,7 +476,7 @@
                 <element inactive_on_update="false" label="Several times a day" sequence="40" value="several_times_a_day"/>
             </choice>
         </element>
-        <element choice="1" label="How often did you have at least one alcoholic drink? " max_length="40" name="how_often_have_alcoholic_drink" type="choice">
+        <element choice="1" label="How often did you have at least one alcoholic drink?" max_length="40" name="how_often_have_alcoholic_drink" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Never" sequence="1" value="Never"/>
                 <element inactive_on_update="false" label="Less than 4 times a month" sequence="2" value="Less than 4 times a month"/>
@@ -950,7 +950,7 @@
                 <element inactive_on_update="false" label="I have been doing this a lot" sequence="40" value="4"/>
             </choice>
         </element>
-        <element choice="1" label=" Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
+        <element choice="1" label="Are you of Ashkenazi (Eastern European) Jewish descent?" max_length="40" name="jewish_descent" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DON'T KNOW" value="DON'T KNOW"/>
                 <element inactive_on_update="false" label="NO" value="NO"/>
@@ -1189,7 +1189,7 @@
             </choice>
         </element>
         <element label="Other" max_length="40" name="other" type="boolean"/>
-        <element choice="1" label="Have you ever used other alternative therapy or treatment ? " max_length="40" name="other_alternative_therapy_or_treatment" type="choice">
+        <element choice="1" label="Have you ever used other alternative therapy or treatment ?" max_length="40" name="other_alternative_therapy_or_treatment" type="choice">
             <choice>
                 <element inactive_on_update="false" label="YES" sequence="1" value="YES"/>
                 <element inactive_on_update="false" label="NO" sequence="2" value="NO"/>

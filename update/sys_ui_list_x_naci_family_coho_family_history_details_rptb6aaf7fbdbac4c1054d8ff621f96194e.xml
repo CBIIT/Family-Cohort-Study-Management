@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>relationship_to_you</element>
-            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="3aaaf7fbdbac4c1054d8ff621f961953">53f50c40db308c1054d8ff621f9619d3</list_id>
+            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="4a6fa0fcdb76001054d8ff621f96199c">53f50c40db308c1054d8ff621f9619d3</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>has_cancer</element>
-            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="3aaaf7fbdbac4c1054d8ff621f961953">53f50c40db308c1054d8ff621f9619d3</list_id>
+            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="4a6fa0fcdb76001054d8ff621f96199c">53f50c40db308c1054d8ff621f9619d3</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>permission_to_contact</element>
-            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="3aaaf7fbdbac4c1054d8ff621f961953">53f50c40db308c1054d8ff621f9619d3</list_id>
+            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="4a6fa0fcdb76001054d8ff621f96199c">53f50c40db308c1054d8ff621f9619d3</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>phone</element>
-            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="3aaaf7fbdbac4c1054d8ff621f961953">53f50c40db308c1054d8ff621f9619d3</list_id>
+            <list_id display_value="x_naci_family_coho_family_history_details" element="NULL" name="x_naci_family_coho_family_history_details" parent="NULL" relationship="NULL" sys_domain="global" view="4a6fa0fcdb76001054d8ff621f96199c">53f50c40db308c1054d8ff621f9619d3</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -86,7 +86,7 @@
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
             <sys_updated_on>2019-10-24 18:11:43</sys_updated_on>
             <sys_user/>
-            <view display_value="Rptb6aaf7fbdbac4c1054d8ff621f96194e" name="RPTb6aaf7fbdbac4c1054d8ff621f96194e">3aaaf7fbdbac4c1054d8ff621f961953</view>
+            <view display_value="Rptb6aaf7fbdbac4c1054d8ff621f96194e" name="RPTb6aaf7fbdbac4c1054d8ff621f96194e">4a6fa0fcdb76001054d8ff621f96199c</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

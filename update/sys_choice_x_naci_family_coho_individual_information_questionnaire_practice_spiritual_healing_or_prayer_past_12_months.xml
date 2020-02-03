@@ -4,10 +4,10 @@
             <element>practice_spiritual_healing_or_prayer_pas</element>
             <name>x_naci_family_coho_individual_information_questionnaire</name>
             <sys_class_name>sys_choice_set</sys_class_name>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 17:54:50</sys_created_on>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2020-02-03 15:02:06</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>8b953ffadb8cc05054d8ff621f9619b7</sys_id>
+            <sys_id>54cc6cb0db76001054d8ff621f96194e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>practice_spiritual_healing_or_prayer_past_12_months</sys_name>
             <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -15,8 +15,8 @@
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
             <sys_update_name>sys_choice_x_naci_family_coho_individual_information_questionnaire_practice_spiritual_healing_or_prayer_past_12_months</sys_update_name>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 17:54:50</sys_updated_on>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2020-02-03 15:02:06</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

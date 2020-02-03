@@ -12,7 +12,7 @@
                 <element inactive_on_update="false" label="DON'T KNOW" sequence="2" value="DON'T KNOW"/>
             </choice>
         </element>
-        <element choice="1" label="How is this medication taken? " max_length="40" name="take_per_day" type="choice">
+        <element choice="1" label="How is this medication taken?" max_length="40" name="take_per_day" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Pills or capsules" sequence="1" value="Pills or capsules"/>
                 <element inactive_on_update="false" label="Teaspoons" sequence="2" value="Teaspoons"/>

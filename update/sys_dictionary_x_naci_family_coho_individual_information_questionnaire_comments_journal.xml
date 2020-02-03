@@ -54,16 +54,16 @@
         <sys_created_by>martincp@nih.gov</sys_created_by>
         <sys_created_on>2019-12-03 14:51:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b2a75178db25cc5054d8ff621f9619d5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>eface4b0db76001054d8ff621f9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Comments</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_comments_journal</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-26 20:33:48</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:07:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

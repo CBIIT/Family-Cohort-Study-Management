@@ -54,7 +54,7 @@
         <sys_created_by>martincp@nih.gov</sys_created_by>
         <sys_created_on>2019-10-16 16:04:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>befbdad9dbe80010b86770c08c961955</sys_id>
+        <sys_id>05bc68b0db76001054d8ff621f9619c4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Age</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_last_period_age</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-16 16:04:02</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:08:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

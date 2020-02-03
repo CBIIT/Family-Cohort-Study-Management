@@ -58,7 +58,7 @@
 	
 	c.reviewFHQ = function(sys_id){
 		s.id = 'fcsms_fhq';
-		s.sys_id = sys_id;
+		s.sys_id = sys_id; 
 		$location.search(s).replace();
 	}
 	
@@ -82,6 +82,13 @@
 }
 .page-title a.active{
   text-decoration: underline;
+}
+.form-slot1 {
+    /* width: 18%; */
+    border: 0px;
+    float: left;
+    margin-left: 2%;
+    text-align: left;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -97,13 +104,13 @@
         <public>false</public>
         <roles>snc_external</roles>
         <script><![CDATA[(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 	data.username = gs.getUserDisplayName();
 	var user_id = gs.getUserID();
 	data.records = [];
-	
-	var tmp = {};
+
+	/*var tmp = {};
 	tmp.first_name = 'James';
 	tmp.last_name = 'Smith';
 	tmp.sys_id = 'f46149a8db940850b86770c08c9619ba';
@@ -136,117 +143,155 @@
 	tmp.iiq = 1;
 	tmp.iiq_sys_id = 'ad5c782fdb30041054d8ff621f961929';
 	data.records.push(tmp);
-	
+  */
 	//determine if we need to display consent form or not	
 	//this id should be set when the user select LI-F study
 	//var study_id = '5bf67315db3f3f4054d8ff621f961968';
 	data.downloadConsent = false;
 	data.downloadMrr = false;
 	var user = new GlideRecord('sys_user');
-	    user.get(user_id);
+	user.get(user_id);
 	var email_address = user.email.toString();
-	var gr = new GlideRecord('x_naci_family_coho_family_history_details');
-	gr.addQuery('email_address', email_address);
-	gr.query();
-	if(gr.getRowCount() <= 0){
-		data.showConsent = false;
-		data.showMRR = false;
+	var isProxy = false;
+  var fc = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+	    var or = fc.addQuery('email', email_address);
+	    or.addOrCondition('user', user_id);
+	    fc.addQuery('proxy','no');
+	fc.query();
+	if(fc.getRowCount() > 0){
+		isProxy = false;
 	}else{
-		gr.next();
-		if(gr.consent_signed == false && gr.enrollment_status == 'awaiting_consent'){
-			data.showConsent = true;
-		}else{
-			data.showConsent = false;
-		}
-		if(gr.mrr_complete == false && gr.enrollment_status == 'awaiting_enrollment_forms'){
-			data.showMRR = true;
-		}else{
-			data.showMRR = false;
-		}
-		if(gr.screener_complete == true){
-			data.screener_completed = true;
-		}else{
-			data.screener_completed = false;
-		}
-		if(gr.fhq_complete == true){
-			data.fhq_completed = true;
-		}else{
-			data.fhq_completed = false;
-		}
-		if(gr.iiq_complete == true){
-			data.iiq_completed = true;
-		}else{
-			data.iiq_completed = false;
-		}
-		if(gr.consent_signed == true){
-			 data.downloadConsent = true;
-			 var attach1 =  new GlideRecord('sys_attachment');
-			 attach1.addQuery('table_sys_id', gr.sys_id.toString());   
-			 attach1.addQuery('file_name', 'Family Cohort Study Consent.pdf');
-			 attach1.query();
-			 attach1.next();
-			 data.consent_id = attach1.sys_id.toString();
-		}else{
-			data.downloadConsent = false;
-		}
-		if(gr.mrr_complete == true){
-			 data.downloadMrr = true;
-			 var attach2 =  new GlideRecord('sys_attachment');
-			 attach2.addQuery('table_sys_id',gr.sys_id.toString());   
-			 attach2.addQuery('file_name', 'Family Cohort Study MRR.pdf');
-			 attach2.query();
-			 attach2.next();
-			 data.mrr_id = attach2.sys_id.toString();
-		}else{
-			data.downloadMrr = false;
-		}
+		isProxy = true;
+		createScreenerForm();
 	}
-  
-	//link IIQ
-	var gr3 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
-      gr3.addNullQuery('user');
-	    gr3.addNotNullQuery('form_id');
-	    gr3.addNotNullQuery('email');
-	    gr3.addQuery('form_type', 'iiq');
-	gr3.query();
-	while(gr3.next()){
-		  var gr4 = new GlideRecord('sys_user');
-		      gr4.get(user_id);
-		  var email = gr4.email.toString();
+	if(!isProxy){
+		data.test = 'in';
+		var gr = new GlideRecord('x_naci_family_coho_family_history_details');
+		gr.addQuery('email_address', email_address);
+		gr.query();
+		if(gr.getRowCount() <= 0){
+			data.showConsent = false;
+			data.showMRR = false;
+			data.screener_completed = false;
+		}else{
+			gr.next();
+			if(gr.consent_signed == false && gr.enrollment_status == 'awaiting_consent'){
+				data.showConsent = true;
+			}else{
+				data.showConsent = false;
+			}
+			if(gr.mrr_complete == false && gr.enrollment_status == 'awaiting_enrollment_forms'){
+				data.showMRR = true;
+			}else{
+				data.showMRR = false;
+			}
+			if(gr.screener_complete == true){
+				data.screener_completed = true;
+			}else{
+				data.screener_completed = false;
+			}
+			if(gr.fhq_complete == true){
+				data.fhq_completed = true;
+			}else{
+				data.fhq_completed = false;
+			}
+			if(gr.iiq_complete == true){
+				data.iiq_completed = true;
+			}else{
+				data.iiq_completed = false;
+			}
+			if(gr.consent_signed == true){
+				data.downloadConsent = true;
+				var attach1 =  new GlideRecord('sys_attachment');
+				attach1.addQuery('table_sys_id', gr.sys_id.toString());   
+				attach1.addQuery('file_name', 'Family Cohort Study Consent.pdf');
+				attach1.query();
+				attach1.next();
+				data.consent_id = attach1.sys_id.toString();
+			}else{
+				data.downloadConsent = false;
+			}
+			if(gr.mrr_complete == true){
+				data.downloadMrr = true;
+				var attach2 =  new GlideRecord('sys_attachment');
+				attach2.addQuery('table_sys_id',gr.sys_id.toString());   
+				attach2.addQuery('file_name', 'Family Cohort Study MRR.pdf');
+				attach2.query();
+				attach2.next();
+				data.mrr_id = attach2.sys_id.toString();
+			}else{
+				data.downloadMrr = false;
+			}
+		}
+
+		//link IIQ
+		var gr3 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+		gr3.addNullQuery('user');
+		gr3.addNotNullQuery('form_id');
+		gr3.addNotNullQuery('email');
+		gr3.addQuery('form_type', 'iiq');
+		gr3.query();
+		while(gr3.next()){
+			var gr4 = new GlideRecord('sys_user');
+			gr4.get(user_id);
+			var email = gr4.email.toString();
 			if(gr3.email.toString() == email){
 				gr3.user = user_id;
 				gr3.update();
 			}	
+		}
+
+		//set instake, FHQ and IIQ record ID
+		data.intake_sys_id = '';
+		data.fhq_sys_id = '';
+		data.iiq_sys_id = '';
+		var gr2 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+		gr2.addQuery('user', user_id);
+		gr2.query();
+			while(gr2.next()){
+				//ignore proxy, only consider proband
+				if(gr2.proxy.toString() == 'no'){
+					if(gr2.form_type == 'screener' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+						data.intake_sys_id = gr2.form_id.toString();
+					}
+					//deterime which FHQ form should be displayed for logged in user.
+					if(gr2.form_type == 'fhq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+						data.fhq_sys_id = gr2.form_id.toString();
+					}
+					//deterime which IIQ form should be displayed for logged in user.		
+					if(gr2.form_type == 'iiq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
+						data.iiq_sys_id = gr2.form_id.toString();
+					}
+				}
+		}
 	}
 	
-	//set instake, FHQ and IIQ record ID
-	data.intake_sys_id = '';
-	data.fhq_sys_id = '';
-	data.iiq_sys_id = '';
-	var gr2 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
-	    gr2.addQuery('user', user_id);
-	gr2.query();
-	//deterime which screener form should be displayed or create an new one for logged in user.
-	if(gr2.getRowCount() <= 0){
-		createScreenerForm();
-	}
-	else{
-		while(gr2.next()){
-			//ignore proxy, only consider proband
-			if(gr2.proxy.toString() == 'no'){
-				if(gr2.form_type == 'screener' && gr2.form_id != null && gr2.form_id.trim().length > 0){
-					data.intake_sys_id = gr2.form_id.toString();
-				}
-				//deterime which FHQ form should be displayed for logged in user.
-				if(gr2.form_type == 'fhq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
-					data.fhq_sys_id = gr2.form_id.toString();
-				}
-				//deterime which IIQ form should be displayed for logged in user.		
-				if(gr2.form_type == 'iiq' && gr2.form_id != null && gr2.form_id.trim().length > 0){
-					data.iiq_sys_id = gr2.form_id.toString();
-				}
-			}
+	//populate proxy table based on proxy = 'yes' in form access table
+	var fc1 = new GlideRecord('x_naci_family_coho_fcsms_form_access');
+	    var or1 = fc1.addQuery('email', email_address);
+	    or1.addOrCondition('user', user_id);
+	    fc1.addQuery('proxy','yes');
+	while(fc1.next()){
+		var tmp1 = {};
+		tmp.screener = 0;
+		tmp.fhq = 0;
+		tmp.iiq = 0;
+		tmp1.first_name = fc1.user.first_name.toString();
+		tmp1.last_name = fc1.user.last_name.toString();
+		if(fc1.form_type == 'screener'){
+			tmp.screener = 1;
+			tmp.screener_sys_id = fc1.form_id.toString();
+		}else if(fc1.form_type == 'fhq'){
+			tmp.fhq = 1;
+			tmp.fhq_sys_id = fc1.form_id.toString();
+		}else if(fc1.form_type == 'iiq'){
+			tmp.iiq = 1;
+			tmp.iiq_sys_id = fc1.form_id.toString();
 		}
+		//tmp.consent = 1;
+		//tmp.mrr = 1;
+		//how to, need to discuss with Chris
+		data.records.push(tmp);
 	}
 	
 	function createScreenerForm() {
@@ -259,9 +304,10 @@
 		gr6.form_type = 'screener';
 		gr6.proxy = 'no';
 		gr6.user = user_id;
+		gr6.email = email_address;
 		gr6.insert();
 	}
- 
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -269,7 +315,7 @@
         <sys_created_on>2019-09-06 15:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0a15986cdb373b4054d8ff621f961931</sys_id>
-        <sys_mod_count>416</sys_mod_count>
+        <sys_mod_count>465</sys_mod_count>
         <sys_name>FCSMS Home</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -277,7 +323,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_0a15986cdb373b4054d8ff621f961931</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-31 20:51:14</sys_updated_on>
+        <sys_updated_on>2020-02-03 22:43:38</sys_updated_on>
         <template><![CDATA[<div class="main-content">
   <div class="row page-title">
     Family Cohort Studies for {{c.data.username}} 
@@ -309,7 +355,7 @@
           Forms
         </div>
         <div class="enrollment-content">
-          <div class="form-slot" ng-if="c.data.screener_completed == false">
+          <div class="form-slot1" ng-if="c.data.screener_completed == false">
             <h5>
               Screener
             </h5>
@@ -321,7 +367,7 @@
               </a>
             </div>
           </div>
-          <div class="form-slot" ng-if="c.data.screener_completed == true">
+          <div class="form-slot1" ng-if="c.data.screener_completed == true">
             <h5>
               Screener
             </h5>
@@ -331,7 +377,7 @@
                 </div>
             </div>
           </div>          
-          <div class="form-slot" ng-if="c.data.showConsent == true">
+          <div class="form-slot1" ng-if="c.data.showConsent == true">
             <h5>
               Consent
             </h5>
@@ -343,7 +389,7 @@
               </a>
             </div>
           </div>
-          <div class="form-slot" ng-if="c.data.downloadConsent == true">
+          <div class="form-slot1" ng-if="c.data.downloadConsent == true">
             <h5>
               <a href='/api/naci/attachment_util/attachment/v1/{{c.data.consent_id}}' target='_BLANK'>Download Consent</a>
             </h5>
@@ -351,7 +397,7 @@
               <img src="Complete-Consent.jpg" width="160"/>
             </div>
           </div>          
-          <div class="form-slot" ng-show='c.data.showMRR == true'>
+          <div class="form-slot1" ng-show='c.data.showMRR == true'>
             <h5>
               MRR Consent
             </h5>
@@ -363,7 +409,7 @@
               </a>
             </div>
           </div>
-          <div class="form-slot" ng-show='c.data.downloadMrr == true'>
+          <div class="form-slot1" ng-show='c.data.downloadMrr == true'>
 						<h5>
               <a href='/api/naci/attachment_util/attachment/v1/{{c.data.mrr_id}}' target='_BLANK'>Download MRR</a>  
             </h5>
@@ -372,7 +418,7 @@
             </div>
             
           </div>
-          <div class="form-slot" ng-show='c.data.fhq_sys_id.length > 0'>
+          <div class="form-slot1" ng-show='c.data.fhq_sys_id.length > 0'>
             <h5><label uib-tooltip="Family Historic Questionaire">FHQ</label></h5>
             <div class="form-card" ng-if="c.data.fhq_completed == false">
               <a href="javascript:void(0);" ng-click="c.reviewFHQ(c.fhq_sys_id)" >
@@ -387,7 +433,7 @@
                 </div>
             </div>
 					</div>
-          <div class="form-slot" ng-show='c.data.iiq_sys_id.length > 0'>
+          <div class="form-slot1" ng-show='c.data.iiq_sys_id.length > 0'>
             <h5><label uib-tooltip="Individual Information Questionaire">IIQ</label></h5>
             <div class="form-card" ng-if="c.data.iiq_completed == false">
               <a href="javascript:void(0);" ng-click="c.reviewIIQ(c.iiq_sys_id)" >
@@ -402,7 +448,7 @@
                 </div>
             </div>            
           </div>
-          <div class="form-slot" ng-show='c.data.iiq_sys_id.length > 0'>
+          <div class="form-slot1" ng-show='c.data.iiq_sys_id.length > 0'>
             <h5>
               Upload Attachment
             </h5>
@@ -414,27 +460,10 @@
               </a>
             </div>
           </div>
-          
-          <!--
-          <div class="status-lines">
-            <div class="status-line active">
-              
-            </div>
-            <div class="status-line active">
-              
-            </div>
-            <div class="status-line active">
-              
-            </div>
-            <div class="status-line active">
-              
-            </div>
-          </div>
-					-->
         </div>
         
         <div class="enrollment-content" ng-if="c.view_model == 'family_member'">
-          <div class="form-slot">
+          <div class="form-slot1">
             <h5>
               Consent
             </h5>
@@ -445,67 +474,9 @@
                 </div>
               </a>
             </div>
-            <!--
-            <div class="status-card">
-              <div class="status-point">
-                1
-              </div>
-              <div class="status-desc">
-              	Step 1
-              </div>
-            </div>
-						-->
-          </div>
-          <!--
-          <div class="form-slot">
-            <h5>
-              MRR Consent
-            </h5>
-            <div class="form-card">
-              <div class="image-inactive">
-                <img src="FCSMS_HomePage-MRR.jpg" width="203" style="filter: grayscale(1);"/>
-              </div>
-            </div>
-            
-            <div class="status-card">
-              <div class="status-point inactive">
-                2
-              </div>
-              <div class="status-desc">
-              	Step 2
-              </div>
-            </div>
-          </div>
-          <div class="form-slot">
-            <h5>
-              Individual Information Questionnaire
-            </h5>
-            <div class="form-card">
-              <div class="image-inactive">
-                <img src="FCSMS-HomePage-IIQ.jpg" width="203" style="filter: grayscale(1);"/>
-              </div>
-            </div>
-            <div class="status-card">
-              <div class="status-point inactive">
-                3
-              </div>
-              <div class="status-desc">
-              	Step 3
-              </div>
-            </div>
-          </div>
-          <div class="status-lines">
-            <div class="status-line">
-              
-            </div>
-            <div class="status-line">
-              
-            </div>
-          </div>
-					-->
         </div>
       </div>
-      <div class="proxy-info" ng-if="c.view_model == 'proband'" style="display:block;">
+      <div class="proxy-info" ng-if="c.data.records.length > 0">
 				<div class="sub-title">
           Proxies
         </div>
@@ -541,16 +512,16 @@
                   {{ record['last_name'] || 'N/A' }}  
                 </div>
                 <div class="col-md-1">
-                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['screener'] == '1'">View</a>
+                  <a ng-click="c.reviewFHQ(record.screener_sys_id)" ng-show="record['screener'] == '1'">View</a>
                   </div>
                 <div class="col-md-1">
-                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['consent'] == '1'">View</a>
+                  <a ng-click="c.reviewFHQ(record.consent_sys_id)" ng-show="record['consent'] == '1'">View</a>
                   </div>
                 <div class="col-md-1">
-                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['mrr'] == '1'">View</a>
+                  <a ng-click="c.reviewFHQ(record.mrr_sys_id)" ng-show="record['mrr'] == '1'">View</a>
                   </div>
               <div class="col-md-1">
-                  <a ng-click="c.reviewFHQ(record.sys_id)" ng-show="record['fhq'] == '1'">View</a>
+                  <a ng-click="c.reviewFHQ(record.fhq_sys_id)" ng-show="record['fhq'] == '1'">View</a>
                   </div>
                 <div class="col-md-1">
                     <a ng-click="c.reviewIIQ(record.iiq_sys_id)" ng-show="record['iiq'] == '1'">View</a>  

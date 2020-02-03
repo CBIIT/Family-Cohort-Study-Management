@@ -54,7 +54,7 @@
         <sys_created_by>martincp@nih.gov</sys_created_by>
         <sys_created_on>2019-10-15 19:24:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>3b200a05dba4cc10b86770c08c961989</sys_id>
+        <sys_id>49bc68b0db76001054d8ff621f9619b8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>I've been using alcohol or other drugs to make myself feel better</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_ive_been_using_alcohol_or_other_drugs_to_make_myself_feel_better</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-15 19:24:27</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:08:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

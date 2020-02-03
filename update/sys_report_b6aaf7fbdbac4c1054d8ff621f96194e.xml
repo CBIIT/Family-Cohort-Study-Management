@@ -74,7 +74,7 @@
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
         <report_source/>
-        <roles/>
+        <roles>snc_internal</roles>
         <row/>
         <sc_groupby_item_id/>
         <sc_groupby_variable_id/>
@@ -103,15 +103,15 @@
         <sys_created_on>2019-10-24 17:22:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b6aaf7fbdbac4c1054d8ff621f96194e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Family History by Family ID</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_report_b6aaf7fbdbac4c1054d8ff621f96194e</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-10-24 18:11:41</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 16:57:44</sys_updated_on>
         <table>x_naci_family_coho_family_history_details</table>
         <title>Family History by Family ID</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>

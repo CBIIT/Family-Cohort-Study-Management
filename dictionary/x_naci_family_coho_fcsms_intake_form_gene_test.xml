@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="FCSMS Intake Form Gene Test" max_length="40" name="x_naci_family_coho_fcsms_intake_form_gene_test" type="collection">
-        <element choice="1" label="Genes/ Hereditary Cancer syndromes " max_length="500" name="genes_hereditary_cancer_syndromes" type="choice">
+        <element choice="1" label="Genes/ Hereditary Cancer syndromes" max_length="500" name="genes_hereditary_cancer_syndromes" type="choice">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" sequence="10" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>
                 <element inactive_on_update="false" label="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)" sequence="20" value="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)"/>

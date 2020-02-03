@@ -54,7 +54,7 @@
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-26 17:21:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>7edde772db8cc05054d8ff621f96192f</sys_id>
+        <sys_id>29bca8b0db76001054d8ff621f96195d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Have you ever used this practice: Spiritual healing or prayer ?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_practice_spiritual_healing_or_prayer</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-09-26 17:21:21</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:09:08</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>

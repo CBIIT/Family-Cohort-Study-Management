@@ -12,17 +12,17 @@
         <sys_created_on>2019-11-21 15:34:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>776eabf8db150c10b86770c08c961949</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>x_naci_family_coho.famild.id.number</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_properties_776eabf8db150c10b86770c08c961949</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-29 19:13:42</sys_updated_on>
+        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-03 22:11:34</sys_updated_on>
         <type>integer</type>
-        <value>544</value>
+        <value>546</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=776eabf8db150c10b86770c08c961949"/>

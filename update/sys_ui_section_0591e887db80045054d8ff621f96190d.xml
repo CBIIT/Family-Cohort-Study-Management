@@ -1,44 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="New Section" section_id="0591e887db80045054d8ff621f96190d" sys_domain="global" table="x_naci_family_coho_family_history_details" version="3" view="FHD">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number_children</element>
+            <element>type_or_site</element>
             <position>0</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 21:06:59</sys_created_on>
-            <sys_id>3591e887db80045054d8ff621f9619fe</sys_id>
+            <sys_created_on>2019-10-18 20:44:57</sys_created_on>
+            <sys_id>a58f258adbecc010b86770c08c961954</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_details" sys_domain="global" view="0bf8dccbdb40045054d8ff621f96196c">0591e887db80045054d8ff621f96190d</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 21:06:59</sys_updated_on>
+            <sys_updated_on>2019-10-18 20:44:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital_diagnosed_city</element>
+            <position>1</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 20:44:57</sys_created_on>
+            <sys_id>2d8f258adbecc010b86770c08c961954</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_details" sys_domain="global" view="0bf8dccbdb40045054d8ff621f96196c">0591e887db80045054d8ff621f96190d</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 20:44:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 21:06:59</sys_created_on>
-            <sys_id>b991e887db80045054d8ff621f9619fe</sys_id>
+            <sys_created_on>2019-10-18 20:44:57</sys_created_on>
+            <sys_id>a18f258adbecc010b86770c08c961955</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_details" sys_domain="global" view="0bf8dccbdb40045054d8ff621f96196c">0591e887db80045054d8ff621f96190d</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 21:06:59</sys_updated_on>
+            <sys_updated_on>2019-10-18 20:44:57</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>permission_to_contact</element>
-            <position>2</position>
+            <element>hospital_diagnosed</element>
+            <position>3</position>
             <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-26 21:06:59</sys_created_on>
-            <sys_id>3191e887db80045054d8ff621f9619ff</sys_id>
+            <sys_created_on>2019-10-18 20:44:57</sys_created_on>
+            <sys_id>298f258adbecc010b86770c08c961955</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_details" sys_domain="global" view="0bf8dccbdb40045054d8ff621f96196c">0591e887db80045054d8ff621f96190d</sys_ui_section>
             <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-26 21:06:59</sys_updated_on>
+            <sys_updated_on>2019-10-18 20:44:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital_diagnosed_state</element>
+            <position>4</position>
+            <sys_created_by>zhoujim@nih.gov</sys_created_by>
+            <sys_created_on>2019-10-18 20:44:57</sys_created_on>
+            <sys_id>ad8f258adbecc010b86770c08c961955</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_naci_family_coho_family_history_details" sys_domain="global" view="0bf8dccbdb40045054d8ff621f96196c">0591e887db80045054d8ff621f96190d</sys_ui_section>
+            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+            <sys_updated_on>2019-10-18 20:44:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

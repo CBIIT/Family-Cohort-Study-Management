@@ -54,16 +54,16 @@
         <sys_created_by>yuw5@nih.gov</sys_created_by>
         <sys_created_on>2019-09-24 20:06:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>5d504612dbcc005054d8ff621f9619b2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>f9bca8b0db76001054d8ff621f9619ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Have you ever worked for more than a year?</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_dictionary_x_naci_family_coho_individual_information_questionnaire_worked_more_than_a_year</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-27 20:55:01</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:09:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_model_id/>
