@@ -13,10 +13,10 @@
                 <element inactive="true" inactive_on_update="true" label="American Indian/Alaskan Native" value="American Indian/Alaskan Native"/>
                 <element inactive="true" inactive_on_update="true" label="Asian" value="Asian"/>
                 <element inactive="true" inactive_on_update="true" label="Black/African American" value="Black/African American"/>
-                <element inactive_on_update="false" label="Hispanic/Latino" value="Hispanic/Latino"/>
                 <element inactive="true" inactive_on_update="true" label="Native Hawaiian/Other Pacific Islander" value="Native Hawaiian/Other Pacific Islander"/>
-                <element inactive_on_update="false" label="Not Hispanic/Latino" value="Not Hispanic/Latino"/>
-                <element inactive_on_update="false" label="Unknown" value="Unknown"/>
+                <element inactive_on_update="false" label="Hispanic/Latino" sequence="100" value="Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="200" value="Not Hispanic/Latino"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="300" value="Unknown"/>
             </choice>
         </element>
         <element label="Biological Father's Race" max_length="100" name="biological_father_s_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
@@ -24,15 +24,15 @@
             <choice>
                 <element inactive_on_update="false" label="Hispanic/Latino" sequence="10" value="Hispanic/Latino"/>
                 <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="20" value="Not Hispanic/Latino"/>
-                <element inactive_on_update="false" label="Unknown" sequence="30" value="Unknown"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="Unknown"/>
             </choice>
         </element>
         <element label="Biological Mother's Race" max_length="100" name="biological_mother_s_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
-        <element choice="3" default="Yes" label="Have any of your biological relatives been diagnosed with cancer?" max_length="100" name="biological_relatives_diagnosed" type="choice">
+        <element choice="3" default="No" label="Have any of your biological relatives been diagnosed with cancer?" max_length="100" name="biological_relatives_diagnosed" type="choice">
             <choice>
-                <element inactive_on_update="false" label="I have no information on my biological relatives" value="I have no information on my biological relatives"/>
-                <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Yes" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
             </choice>
         </element>
         <element choice="3" label="Biological Sex" max_length="100" name="biological_sex" type="choice">
@@ -59,7 +59,7 @@
         <element label="Confirm Contact Email Address" max_length="200" name="confirm_email_address" type="string"/>
         <element default="0" label="Consent Reminder Count" max_length="40" name="consent_reminder_count" type="integer"/>
         <element label="Date Consent Requested" max_length="40" name="date_consent_requested" type="glide_date"/>
-        <element choice="3" default="No" label="Has Research Subject ever been diagnosed with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
+        <element choice="3" default="No" label="Has a physician ever diagnosed you with cancer?" max_length="10" name="diagnosed_with_cancer" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="No"/>
                 <element inactive_on_update="false" label="Yes" sequence="0" value="Yes"/>
@@ -101,9 +101,9 @@
         <element label="First Name" max_length="50" name="first_name" type="string"/>
         <element choice="3" default="No" label="Have you ever had genetic testing for an inherited cancer syndrome?" max_length="40" name="had_genetic_testing" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
-                <element inactive_on_update="false" label="Yes" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
             </choice>
         </element>
         <element choice="1" label="How did you hear about this study?" max_length="100" name="hear_about_this_study" type="choice">
@@ -127,15 +127,15 @@
             </choice>
         </element>
         <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
-        <element label="Research Subject Name" max_length="100" name="name" type="string"/>
+        <element label="Research Participant's Name" max_length="100" name="name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
         <element label="Okta User ID" max_length="30" name="okta_user_id" type="string"/>
         <element label="I am the person's" max_length="100" name="other_relationship" type="string"/>
         <element choice="3" default="No" label="Participated through another institution, university, or government agency?" max_length="40" name="participated_through_another_institution" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
-                <element inactive_on_update="false" label="Yes" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
             </choice>
         </element>
         <element label="Participant Race" max_length="100" name="participate_race" reference="x_naci_family_coho_look_up_race" type="glide_list"/>
@@ -144,14 +144,14 @@
             <choice>
                 <element inactive_on_update="false" label="Hispanic/Latino" sequence="10" value="Hispanic/Latino"/>
                 <element inactive_on_update="false" label="Not Hispanic/Latino" sequence="20" value="Not Hispanic/Latino"/>
-                <element inactive_on_update="false" label="unknown" sequence="30" value="unknown"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="unknown"/>
             </choice>
         </element>
         <element choice="3" default="No" label="Are you or any of your relatives currently receiving cancer care or follow-up?" max_length="40" name="received_cancer_care" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
-                <element inactive_on_update="false" label="Yes" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="Not Sure"/>
             </choice>
         </element>
         <element choice="3" default="I am the person's parent" label="What is your relationship to this person?" max_length="200" name="relationship" type="choice">
@@ -168,9 +168,9 @@
         </element>
         <element choice="3" default="No" label="Have your relatives been genetically tested for inherited cancer syndromes?" max_length="40" name="relatives_had_genetic_testing" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
-                <element inactive_on_update="false" label="Yes" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="10" value="No"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="Yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
             </choice>
         </element>
         <element choice="3" default="No" label="Did any of your biological relatives test positive for those genes/syndromes?" max_length="40" name="relatives_test_positive" type="choice">
@@ -182,7 +182,7 @@
         </element>
         <element label="Saved Section" max_length="20" name="saved_section" type="string"/>
         <element default="5bf67315db3f3f4054d8ff621f961968" label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
-        <element choice="1" label="For which of the following genes or syndromes do you believe you have had testin" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
+        <element choice="1" label="Which of the following genes or syndromes do you believe you have had testing?" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)" value="BRCA1, BRCA2 (Hereditary Breast and Ovarian Cancer syndrome)"/>
                 <element inactive_on_update="false" label="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)" value="MLH1, MSH2, MSH6, PMS2, EPCAM (Lynch syndrome)"/>
@@ -202,8 +202,8 @@
         </element>
         <element choice="3" default="No" label="Did you test positive for one of those genes/syndromes?" max_length="40" name="test_positive" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Don't Know" value="dont_know"/>
                 <element inactive_on_update="false" label="No" value="No"/>
-                <element inactive_on_update="false" label="Not Sure" value="Not Sure"/>
                 <element inactive_on_update="false" label="Yes" value="Yes"/>
             </choice>
         </element>

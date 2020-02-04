@@ -20,7 +20,7 @@
                 <element inactive_on_update="false" label="Sarcoma" sequence="130" value="Sarcoma"/>
                 <element inactive_on_update="false" label="Stomach" sequence="140" value="Stomach"/>
                 <element inactive_on_update="false" label="Uterine/Endometrial" sequence="150" value="Uterine/Endometrial"/>
-                <element inactive_on_update="false" label="UNKNOWN" sequence="160" value="UNKNOWN"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="160" value="dont_know"/>
                 <element inactive_on_update="false" label="Other" sequence="170" value="Other"/>
             </choice>
         </element>

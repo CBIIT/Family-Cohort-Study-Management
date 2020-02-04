@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="FCSMS Intake Form Patient Cancer" max_length="40" name="x_naci_family_coho_mock_up_intake_patient_cancer" type="collection">
         <element label="Age (in years) at Diagnosis" max_length="40" name="age_in_years_at_diagnosis" type="integer"/>
-        <element choice="1" display="true" label="Cancer Type" max_length="40" name="cancer_type" type="choice">
+        <element choice="1" display="true" label="Cancer Type or Site" max_length="40" name="cancer_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Adrenocortical Carcinoma" value="Adrenocortical Carcinoma"/>
-                <element inactive_on_update="false" label="Brain" value="Brain"/>
-                <element inactive_on_update="false" label="Breast" value="Breast"/>
-                <element inactive_on_update="false" label="Choroid Plexus Carcinoma" value="Choroid Plexus Carcinoma"/>
-                <element inactive_on_update="false" label="Colon" value="Colon"/>
-                <element inactive_on_update="false" label="Leukemia" value="Leukemia"/>
-                <element inactive_on_update="false" label="Lung" value="Lung"/>
-                <element inactive_on_update="false" label="Lymphoma" value="Lymphoma"/>
-                <element inactive_on_update="false" label="Melanoma" value="Melanoma"/>
-                <element inactive_on_update="false" label="Osteosarcoma (bone)" value="Osteosarcoma (bone)"/>
-                <element inactive_on_update="false" label="Other" value="Other"/>
-                <element inactive_on_update="false" label="Ovarian" value="Ovarian"/>
-                <element inactive_on_update="false" label="Prostate" value="Prostate"/>
-                <element inactive_on_update="false" label="Sarcoma" value="Sarcoma"/>
-                <element inactive_on_update="false" label="Stomach" value="Stomach"/>
-                <element inactive_on_update="false" label="Unknown" value="Unknown"/>
-                <element inactive_on_update="false" label="Uterine/Endometrial" value="Uterine/Endometrial"/>
+                <element inactive_on_update="false" label="Adrenocortical Carcinoma" sequence="10" value="Adrenocortical Carcinoma"/>
+                <element inactive_on_update="false" label="Brain" sequence="20" value="Brain"/>
+                <element inactive_on_update="false" label="Breast" sequence="30" value="Breast"/>
+                <element inactive_on_update="false" label="Choroid Plexus Carcinoma" sequence="40" value="Choroid Plexus Carcinoma"/>
+                <element inactive_on_update="false" label="Colon" sequence="50" value="Colon"/>
+                <element inactive_on_update="false" label="Leukemia" sequence="70" value="Leukemia"/>
+                <element inactive_on_update="false" label="Lung" sequence="80" value="Lung"/>
+                <element inactive_on_update="false" label="Lymphoma" sequence="90" value="Lymphoma"/>
+                <element inactive_on_update="false" label="Melanoma" sequence="100" value="Melanoma"/>
+                <element inactive_on_update="false" label="Osteosarcoma (bone)" sequence="110" value="Osteosarcoma (bone)"/>
+                <element inactive_on_update="false" label="Other" sequence="120" value="Other"/>
+                <element inactive_on_update="false" label="Ovarian" sequence="130" value="Ovarian"/>
+                <element inactive_on_update="false" label="Prostate" sequence="140" value="Prostate"/>
+                <element inactive_on_update="false" label="Sarcoma" sequence="150" value="Sarcoma"/>
+                <element inactive_on_update="false" label="Stomach" sequence="160" value="Stomach"/>
+                <element inactive_on_update="false" label="Uterine/Endometrial" sequence="170" value="Uterine/Endometrial"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="180" value="dont_know"/>
             </choice>
         </element>
         <element label="Date at Diagnosis" max_length="50" name="date_diagnosis" type="glide_date"/>

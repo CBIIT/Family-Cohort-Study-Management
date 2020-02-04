@@ -5,6 +5,25 @@
             <element>test_positive</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Don't Know</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence/>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 21:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8ad18965dbf37f4054d8ff621f961924</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:45:48</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>dont_know</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>test_positive</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>No</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
@@ -18,25 +37,6 @@
             <sys_updated_on>2019-09-09 21:21:17</sys_updated_on>
             <u_dependent_value_2/>
             <value>No</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>test_positive</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Not Sure</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:21:29</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>8ad18965dbf37f4054d8ff621f961924</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:21:29</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Not Sure</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

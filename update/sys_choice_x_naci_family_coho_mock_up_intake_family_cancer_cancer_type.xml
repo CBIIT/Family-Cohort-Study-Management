@@ -290,7 +290,7 @@
             <element>cancer_type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>UNKNOWN</label>
+            <label>Don't Know</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake_family_cancer</name>
             <sequence>160</sequence>
@@ -298,11 +298,11 @@
             <sys_created_on>2019-09-27 22:03:42</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>4f183d13db44c050b86770c08c9619e9</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-27 22:03:47</sys_updated_on>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:56:33</sys_updated_on>
             <u_dependent_value_2/>
-            <value>UNKNOWN</value>
+            <value>dont_know</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

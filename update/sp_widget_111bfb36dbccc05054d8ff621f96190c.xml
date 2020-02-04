@@ -4,7 +4,6 @@
         <client_script><![CDATA[function($rootScope, $scope, $timeout, spModal, spUtil) {
   /* widget controller */
   var c = this;
-	
 	$scope.pagination = [5, 10, 15, 20, 25];
 	$scope.sortKey = null;
 	$scope.reverse = false;	
@@ -21,14 +20,14 @@
 		var formLabel = event.targetScope.formModel.label
 		if (!/Family History Details/.test(formLabel))
 				return;
-	  if (event.targetScope.formModel.view == 'FHD')
+	  if (event.targetScope.formModel.view == 'PortalView')
 			c.g_form = event.targetScope.getGlideForm();
-		
 		$timeout(function(){
 			$('input[name="date_of_birth_month_day_year"]').prop('readonly',true);	
 			$('input[name="date_of_death"]').prop('readonly',true);
 		});
 	});
+	
 	c.id = '';
 	c.openForm = function(){
 		$('#addFamilyMemberDiv').modal('show');
@@ -51,7 +50,7 @@
 		spUtil.get('widget-form', {
 			"sys_id": id,
 			"table": "x_naci_family_coho_family_history_details",
-			"view": "FHD"
+			"view": "PortalView"
 		}).then(function(widget) {
 			c.data.widget_add = widget;
 		})
@@ -214,15 +213,15 @@
         <sys_created_on>2019-09-26 18:18:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>111bfb36dbccc05054d8ff621f96190c</sys_id>
-        <sys_mod_count>152</sys_mod_count>
+        <sys_mod_count>159</sys_mod_count>
         <sys_name>Family Members</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_111bfb36dbccc05054d8ff621f96190c</sys_update_name>
-        <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-28 21:18:33</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-04 19:11:24</sys_updated_on>
         <template><![CDATA[<div id="family_member">
     <div class="row pl-0">
     <div class="col-md-6">

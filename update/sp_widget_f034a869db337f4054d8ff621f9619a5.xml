@@ -15,8 +15,8 @@
 	window.show_cancer = null;
 	window.displayThankYou = function(){
 
-		var obj = document.getElementById('thank_you');
-		if(obj.style.display == 'none'){
+	var obj = document.getElementById('thank_you');
+	if(obj.style.display == 'none'){
 			obj.style.display = 'block';
 		}
 	}
@@ -143,6 +143,7 @@
 				if(c.errorIntake == null || c.errorIntake.length == 0){
 					//submit intake form 
 					spModal.confirm("<center><b>Are you sure you want to submit this form?</b></center>").then(function(confirmed) {
+						window.openModal();
 						$scope.server.get({
 							action: 'submit',
 							sys_id: c.data.id
@@ -258,8 +259,8 @@
 				}
 			});
 		}
-		if(view == "LFS41"){
-			if(g_form.getValue('relatives_had_genetic_testing') == 'No'){
+		if(view == "LFS41"){ //relatives_had_genetic_testing
+			if(g_form.getValue('relatives_had_genetic_testing') == 'No' || g_form.getValue('relatives_had_genetic_testing') == 'dont_know'){
 				window.setShowTest(false);
 			}else{
 				if(g_form.getValue('relatives_test_positive') == 'Yes'){
@@ -274,7 +275,7 @@
 				});
 			}
 			e.targetScope.$on('field.change.relatives_had_genetic_testing', function(ev, obj) {
-				if(obj.newValue == 'No'){
+				if(obj.newValue == 'No' || obj.newValue == 'dont_know'){
 					window.setShowTest(false);
 				}else{
 					if(g_form.getValue('relatives_test_positive') == 'Yes'){
@@ -327,9 +328,8 @@
 					window.setShowFollowUp(false);
 				}
 			});	
-			
-			//add submit
 		}
+		window.closeModal();
 	});
 
 	function setErrorColor(){
@@ -664,7 +664,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>991</sys_mod_count>
+        <sys_mod_count>1004</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -672,7 +672,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-28 17:07:04</sys_updated_on>
+        <sys_updated_on>2020-02-04 23:16:21</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
@@ -846,13 +846,8 @@ fieldset label{
       </div>    
     </div>
     <input type="hidden" id="intake_id"/>
-    <div id="saving-data-modal" style="display: none">
-      <div class="modal-body text-center">
-        <h3>Please Wait</h3>
-        <i class="fa fa-cog fa-spin fa-10x fa-fw" style="font-size: 40px"></i>
-      </div>
-    </div>  
   </div>
-</div>]]></template>
+</div>
+]]></template>
     </sp_widget>
 </record_update>

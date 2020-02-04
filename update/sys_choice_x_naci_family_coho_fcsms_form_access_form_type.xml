@@ -57,6 +57,44 @@
             <u_dependent_value_2/>
             <value>iiq</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>form_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Consent</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_form_access</name>
+            <sequence>400</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-04 15:42:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ba8fbd01dbf6801054d8ff621f96194a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 15:42:26</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>consent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>form_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MRR</label>
+            <language>en</language>
+            <name>x_naci_family_coho_fcsms_form_access</name>
+            <sequence>500</sequence>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-04 15:42:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c09fbd85dbf6801054d8ff621f96192b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 15:42:35</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>mrr</value>
+        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>form_type</element>
             <name>x_naci_family_coho_fcsms_form_access</name>

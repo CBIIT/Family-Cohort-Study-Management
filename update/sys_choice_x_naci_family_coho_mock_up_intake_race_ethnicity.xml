@@ -43,7 +43,7 @@
             <element>race_ethnicity</element>
             <hint/>
             <inactive>false</inactive>
-            <label>unknown</label>
+            <label>Don't Know</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
             <sequence>30</sequence>
@@ -51,9 +51,9 @@
             <sys_created_on>2019-10-15 21:13:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>c049d289db20005054d8ff621f9619e0</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-15 21:13:30</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:42:31</sys_updated_on>
             <u_dependent_value_2/>
             <value>unknown</value>
         </sys_choice>

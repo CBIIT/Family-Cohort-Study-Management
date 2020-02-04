@@ -3,26 +3,28 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_label/>
         <action_name/>
         <action_query>false</action_query>
         <action_run_at>server</action_run_at>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <application/>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_naci_family_coho_individual_information_questionnaire</collection>
+        <collection>x_naci_family_coho_family_history_details</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition/>
+        <filter_condition table="x_naci_family_coho_family_history_details">enrollment_statusCHANGESTOawaiting_enrollment_forms^EQ<item endquery="false" field="enrollment_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="awaiting_enrollment_forms"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Create Form Access Record</name>
+        <name>Create Form Access Record for MRR</name>
         <onclick/>
         <order>100</order>
         <priority>100</priority>
@@ -40,18 +42,18 @@
 	var createAccessRec = new GlideRecord ('x_naci_family_coho_fcsms_form_access');
 	createAccessRec.initialize();
 	
-	if (current.iiq_subject.proxy_required == 'yes'){
-		accessEmail = current.iiq_subject.proxy_email_address;
+	if (current.proxy_required == 'yes'){
+		accessEmail = current.proxy_email_address;
 	} else {
-		accessEmail = current.iiq_subject.email_address;
+		accessEmail = current.email_address;
 	}
 	
 	createAccessRec.form_id = current.sys_id;
-	createAccessRec.form_type = 'iiq';
+	createAccessRec.form_type = 'mrr';
 	createAccessRec.email = accessEmail;
 	createAccessRec.user = getUserID((accessEmail));
-	createAccessRec.proxy = current.iiq_subject.proxy_required;
-	createAccessRec.family_member = current.iiq_subject.toString();
+	createAccessRec.proxy = current.proxy_required;
+	createAccessRec.family_member = current.sys_id;
 	
 	createAccessRec.insert();
 	
@@ -70,21 +72,21 @@
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>martincp@nih.gov</sys_created_by>
-        <sys_created_on>2020-01-15 16:12:00</sys_created_on>
+        <sys_created_on>2020-02-04 16:05:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>02d443e6dbda001054d8ff621f9619e0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Create Form Access Record</sys_name>
+        <sys_id>74d406c9dbf6801054d8ff621f96191b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Form Access Record for MRR</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
-        <sys_update_name>sys_script_02d443e6dbda001054d8ff621f9619e0</sys_update_name>
+        <sys_update_name>sys_script_74d406c9dbf6801054d8ff621f96191b</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-04 15:45:26</sys_updated_on>
+        <sys_updated_on>2020-02-04 16:16:37</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
 </record_update>

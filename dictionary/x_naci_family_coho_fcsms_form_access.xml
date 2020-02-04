@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="FCSMS Form Access" max_length="40" name="x_naci_family_coho_fcsms_form_access" type="collection">
         <element label="Email Address" max_length="80" name="email" type="string"/>
+        <element label="Family Member" max_length="32" name="family_member" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="Form ID" max_length="100" name="form_id" type="string"/>
         <element choice="1" label="Form Type" max_length="40" name="form_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Screener" sequence="100" value="screener"/>
                 <element inactive_on_update="false" label="FHQ" sequence="200" value="fhq"/>
                 <element inactive_on_update="false" label="IIQ" sequence="300" value="iiq"/>
+                <element inactive_on_update="false" label="Consent" sequence="400" value="consent"/>
+                <element inactive_on_update="false" label="MRR" sequence="500" value="mrr"/>
             </choice>
         </element>
         <element choice="1" default="no" label="Proxy" max_length="40" name="proxy" type="choice">
@@ -16,5 +19,8 @@
             </choice>
         </element>
         <element label="User ID" max_length="40" name="user" reference="sys_user" type="string"/>
+        <index name="index">
+            <element name="family_member"/>
+        </index>
     </element>
 </database>

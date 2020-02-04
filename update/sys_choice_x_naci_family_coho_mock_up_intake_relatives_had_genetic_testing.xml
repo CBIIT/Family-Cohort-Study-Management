@@ -8,35 +8,16 @@
             <label>No</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
+            <sequence>10</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 21:32:36</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>b9644929dbf37f4054d8ff621f961997</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:32:36</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:46:20</sys_updated_on>
             <u_dependent_value_2/>
             <value>No</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>relatives_had_genetic_testing</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Not Sure</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 21:32:54</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>4874c929dbf37f4054d8ff621f9619b3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:32:54</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Not Sure</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -46,16 +27,35 @@
             <label>Yes</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
+            <sequence>20</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 21:32:28</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>27548929dbf37f4054d8ff621f961924</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-09-09 21:32:28</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:46:22</sys_updated_on>
             <u_dependent_value_2/>
             <value>Yes</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>relatives_had_genetic_testing</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Don't Know</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>30</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 21:32:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4874c929dbf37f4054d8ff621f9619b3</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:46:33</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>dont_know</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>relatives_had_genetic_testing</element>

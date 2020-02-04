@@ -7,6 +7,9 @@
 	var s = $location.search();
 
 	c.errors = [];
+	
+	c.form_type = ""; // adult or minor or pediatric
+	c.need_to_reload_widget = false;
 
 	c.biopsyDisplay = false;
 	c.cancerDisplay = false;
@@ -29,6 +32,37 @@
 	c.accordions.tab_2_A2 = false;
 	c.accordions.tab_2_A3 = false;
 	c.accordions.tab_2_A4 = false;
+	
+	c.calculateAge = function(dob){
+		var ageDifMs = Date.now() - dob;
+		var ageDate = new Date(ageDifMs);
+		return Math.abs(ageDate.getUTCFullYear() - 1970);
+	};
+	
+	c.renderForm = function(gender, dob){
+		if(gender){
+			c.data.sex = gender;
+		}
+		if(dob){
+			c.data.dob = dob;
+		}
+		var age = c.calculateAge(c.data.dob);
+		var form_type_new = "";
+		if(age >= 18){
+			form_type_new = "adult";
+		}
+		else if(age <= 12){
+			form_type_new = "pediatric";
+		}
+		else{
+			form_type_new = "minor";
+		}
+		
+		if(c.form_type !== "" && form_type_new != c.form_type){
+			c.need_to_reload_widget = true;
+		}
+		c.form_type = form_type_new;
+	};
 	
 	c.setErrorColor = function(section){
 		var error_idxs = [];
@@ -145,7 +179,7 @@
 	};
 	
 	c.showView = function(idx, sub){
-		//console.log("idx: " + idx + ", sub: " + sub);
+		console.log("idx: " + idx + ", sub: " + sub);
 		c.biopsyDisplay = false;
 		c.cancerDisplay = false;
 		c.surgeryDisplay = false;
@@ -159,6 +193,7 @@
 		c.show_view_index = idx;
 		if(idx == 1){
 			//show Introduction Page
+			console.log("at");
 			c.current_form_idx = 'Introduction';
 			if(!c.widget_1){
 
@@ -176,29 +211,11 @@
 			if(sub == undefined){
 				sub = 'tab_2_A2';
 			}
-			//c.accordions.tab_2_A1 = false;
-			c.accordions.tab_2_A2 = false;
-			c.accordions.tab_2_A3 = false;
-			c.accordions.tab_2_A4 = false;
-			if(sub == 'tab_2_A1'){
-				c.current_form_idx = 'SectionA1';
-				c.accordions.tab_2_A1 = true;
-				c.show_sub_view_index = 1;
-				if(!c.widget_2_A1){
-					spUtil.get("widget-form", {
-						"sys_id": c.data.sys_id,
-						"table": "x_naci_family_coho_individual_information_questionnaire",
-						"view": 'SectionA1'
-					}).then(function(response) {
-						//console.log(response);
-						response.data.hideRelatedLists = true;
-						c.widget_2_A1 = response;
-					})
-				}
-			}
-			else if(sub == 'tab_2_A2'){
+			if(sub == 'tab_2_A2'){
 				c.current_form_idx = 'SectionA2';
 				c.accordions.tab_2_A2 = true;
+				c.accordions.tab_2_A3 = false;
+				c.accordions.tab_2_A4 = false;
 				c.show_sub_view_index = 2;
 				if(!c.widget_2_A2){
 					spUtil.get("widget-form", {
@@ -219,7 +236,9 @@
 			}
 			else if(sub == 'tab_2_A3'){
 				c.current_form_idx = 'SectionA3';
+				c.accordions.tab_2_A2 = false;
 				c.accordions.tab_2_A3 = true;
+				c.accordions.tab_2_A4 = false;
 				c.show_sub_view_index = 3;
 				//console.log(c.accordions);
 				if(!c.widget_2_A3){
@@ -233,9 +252,24 @@
 						c.widget_2_A3 = response;
 					})
 				}
+				else{
+					if(c.need_to_reload_widget){
+						spUtil.get("widget-form", {
+							"sys_id": c.data.sys_id,
+							"table": "x_naci_family_coho_individual_information_questionnaire",
+							"view": 'SectionA3'
+						}).then(function(response) {
+							//console.log(response);
+							response.data.hideRelatedLists = true;
+							c.widget_2_A3 = response;
+						})
+					}
+				}
 			}
 			else if(sub == 'tab_2_A4'){
 				c.current_form_idx = 'SectionA4';
+				c.accordions.tab_2_A2 = false;
+				c.accordions.tab_2_A3 = false;
 				c.accordions.tab_2_A4 = true;
 				c.show_sub_view_index = 4;
 				if(!c.widget_2_A4){
@@ -299,16 +333,29 @@
 				})
 			}
 			else{
-				if(c.errors.length > 0){
-					c.setErrorColor("SectionB2");
-				}
-				var have_any_surgery = c.g_forms['SectionB2'].getValue('have_any_surgery');
-				if(have_any_surgery == 'YES'){
-					c.surgeryDisplay = true;
-				}
+				if(c.need_to_reload_widget){
+						spUtil.get("widget-form", {
+							"sys_id": c.data.sys_id,
+							"table": "x_naci_family_coho_individual_information_questionnaire",
+							"view": 'SectionB2'
+						}).then(function(response) {
+							response.data.hideRelatedLists = true;
+							c.widget_4 = response;
+						})
+					}
 				else{
-					c.surgeryDisplay = false;
+					if(c.errors.length > 0){
+						c.setErrorColor("SectionB2");
+					}
+					var have_any_surgery = c.g_forms['SectionB2'].getValue('have_any_surgery');
+					if(have_any_surgery == 'YES'){
+						c.surgeryDisplay = true;
+					}
+					else{
+						c.surgeryDisplay = false;
+					}
 				}
+				
 			}
 		}
 		else if(idx == 5){
@@ -692,13 +739,7 @@
 				})
 			}
 		}
-	}
-
-
-
-	c.showView(1);
-	
-	$scope.data.hideRelatedLists = true;
+	};
 
 	c.getFormValues = function() {
 		var g_form = c.g_forms[c.current_form_idx];
@@ -742,6 +783,10 @@
 		}).then(function(){
 			var g_form = c.g_forms[c.current_form_idx];
 			g_form.$private.userState.clearModifiedFields();
+			if(c.current_form_idx == 'SectionA2'){
+				//update gender and Date of Birth
+				c.renderForm(record.gender, record.date_of_birth);
+			}
 			/*
 			spModal.open({
 				title: "Message",
@@ -794,23 +839,99 @@
 			else{
 				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index - 1));
 			}
-
+		}
+		else if(c.show_view_index == 7){
+			if(c.form_type == 'pediatric'){
+				c.showView(5);
+			}
+			else{
+				c.showView(6);
+			}
+		}
+		else if(c.show_view_index == 10){
+			if(c.form_type == 'pediatric'){
+				c.showView(7);
+			}
+			else{
+				c.showView(9);
+			}
+		}
+		else if(c.show_view_index == 13){
+			if(c.data.sex == 'MALE'){
+				c.showView(10);
+			}
+			else{
+				c.showView(12);
+			}
+		}
+		else if(c.show_view_index == 14){
+			if(c.show_sub_view_index == 1){
+				c.showView(c.show_view_index - 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_14_H' + (c.show_sub_view_index - 1 ));
+			}
+		}
+		else if(c.show_view_index == 15){
+			if(c.show_sub_view_index == 1){
+				c.showView(c.show_view_index - 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_15_I' + (c.show_sub_view_index - 1 ));
+			}
+		}
+		else if(c.show_view_index == 18){
+			if(c.form_type == 'pediatric'){
+				c.showView(10);
+			}
+			else if(c.form_type == 'minor'){
+				c.showView(13);
+			}
+			else{
+				c.showView(17);
+			}
 		}
 		else{
 			c.showView(c.show_view_index - 1);
 		}
-	}
+	};
 	
 	c.nextForm = function(){
-		if((c.show_view_index == 10 || c.show_view_index == 11 || c.show_view_index == 12 ) && c.data.sex == 'MALE'){
-			c.show_view_index = 13;
-		}
 		if(c.show_view_index == 2){
-			if(c.show_sub_view_index == 4){
+			if(c.show_sub_view_index == 4 || (c.show_sub_view_index == 3 && c.form_type == 'pediatric')){
 				c.showView(c.show_view_index + 1);
 			}
 			else{
 				c.showView(c.show_view_index, 'tab_2_A' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else if(c.show_view_index == 5){
+			if(c.form_type == 'pediatric'){
+				c.showView(7);
+			}
+			else{
+				c.showView(6);
+			}
+		}
+		else if(c.show_view_index == 7){
+			if(c.form_type == 'pediatric'){
+				c.showView(10);
+			}
+			else{
+				c.showView(8);
+			}
+		}
+		else if(c.show_view_index == 10){
+			if(c.form_type == 'pediatric'){
+				c.showView(18);
+			}
+			else{
+				if(c.data.sex == 'MALE'){
+					c.showView(13);
+				}
+				else{
+					c.showView(11);
+				}
 			}
 		}
 		else if(c.show_view_index == 11){
@@ -819,6 +940,14 @@
 			}
 			else{
 				c.showView(c.show_view_index, 'tab_11_G' + (c.show_sub_view_index + 1 ));
+			}
+		}
+		else if(c.show_view_index == 13){
+			if(c.form_type == 'adult'){
+				c.showView(14);
+			}
+			else{
+				c.showView(18);
 			}
 		}
 		else if(c.show_view_index == 14){
@@ -846,28 +975,7 @@
 		c.saveForm(function(){
 			if(c.errors.length > 0){
 				c.validate(c.current_form_idx, function(res){
-					/*
-					var idx = 0;
-					var found = false;
-					for( var i = 0; i < c.errors.length; i++){ 
-						if ( c.errors[i].index === c.show_view_index) {
-							 c.errors.splice(i, 1);
-							 i--;
-								if(!found){
-									found = true;
-									idx = i;
-								}
-						 }
-					}
-					console.info(c.errors);
-					*/
 					if(res.status !== '200'){
-						//update the error information
-						/*
-						res.errors.forEach(function(item){
-							c.errors.splice(idx++, 0, item);
-						});
-						*/
 						c.errors = res.errors;
 					}
 					else{
@@ -885,6 +993,7 @@
 
 	c.openAccordion = function(index, acc){
 		//c.showView(c.show_view_index, acc);
+		console.log("heading..");
 		c.showView(index, acc);
 	};
 
@@ -1198,7 +1307,14 @@
 			c.setActions("SignatureAndSubmit", "18");
 			c.g_forms['SignatureAndSubmit'] = e.targetScope.getGlideForm();
 		}
+		window.closeModal();
 	});
+	
+	c.showView(1);
+	
+	$scope.data.hideRelatedLists = true;
+	
+	c.renderForm();
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>#sp_formfield_date_of_birth,#sp_formfield_date_had_this_biopsy,#sp_formfield_date,#sp_formfield_date_surgery,#sp_formfield_date_completed_questionnaire,#sp_formfield_date_last_screening_test{
@@ -1270,6 +1386,7 @@
 	var enrollmentLookUp = new GlideRecord ('x_naci_family_coho_individual_information_questionnaire');
 	if (enrollmentLookUp.get(sys_id)){
 		data.sex = enrollmentLookUp.gender.toString();
+		data.dob = Date.parse(enrollmentLookUp.getDisplayValue('date_of_birth'));
 		var tmp = enrollmentLookUp.saved_section.toString();
 		data.saved_section = tmp == '' ? [] : tmp.split(',');
 	}
@@ -1280,37 +1397,37 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>950</sys_mod_count>
+        <sys_mod_count>1034</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-29 17:07:45</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-04 23:33:31</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
    <div class="left-side-menu col-md-3">
     <ul>
       <li ng-class="{'active': c.show_view_index == 1}" ng-click="c.showView(1)"><i class="fa fa-check-circle fa-check-circle-green" aria-hidden="true"></i><a href="javascript:void(0);">Introduction</a></li>
-      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A2')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && c.data.saved_section.indexOf('SectionA4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
+      <li ng-class="{'active': c.show_view_index == 2}" ng-click="c.showView(2, 'tab_2_A2')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && (c.form_type == 'pediatric' || c.data.saved_section.indexOf('SectionA4') > -1)), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionA2') > -1 && c.data.saved_section.indexOf('SectionA3') > -1 && (c.form_type == 'pediatric' || c.data.saved_section.indexOf('SectionA4') > -1))}" aria-hidden="true"></i><a href="javascript:void(0);">Demographic Information</a></li>
       <li ng-class="{'active': c.show_view_index == 3}" ng-click="c.showView(3)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB1') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB1') > -1)}"  aria-hidden="true"></i><a href="javascript:void(0);">Biopsy(ies) & Cancer(s)</a></li>
-      <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Surgery(ies) & Medical Conditions</a></li>
+      <li ng-class="{'active': c.show_view_index == 4}" ng-click="c.showView(4)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">{{c.form_type == "pediatric" ? "Surgery(ies)" : "Surgery(ies) & Medical Conditions"}}</a></li>
       <li ng-class="{'active': c.show_view_index == 5}" ng-click="c.showView(5)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Medications & Supplements</a></li>
-      <li ng-class="{'active': c.show_view_index == 6}" ng-click="c.showView(6)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Health Practices</a></li>
+      <li ng-class="{'active': c.show_view_index == 6}" ng-click="c.showView(6)" ng-show="c.form_type != 'pediatric'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionB4') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionB4') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Health Practices</a></li>
       <li ng-class="{'active': c.show_view_index == 7}" ng-click="c.showView(7)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionC') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionC') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Screening Tests</a></li>
-      <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionD') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionD') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Tobacco Use</a></li>
-      <li ng-class="{'active': c.show_view_index == 9}" ng-click="c.showView(9)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionE') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionE') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Alcohol Use</a></li>
+      <li ng-class="{'active': c.show_view_index == 8}" ng-click="c.showView(8)" ng-show="c.form_type != 'pediatric'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionD') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionD') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Tobacco Use</a></li>
+      <li ng-class="{'active': c.show_view_index == 9}" ng-click="c.showView(9)" ng-show="c.form_type != 'pediatric'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionE') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionE') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Alcohol Use</a></li>
       <li ng-class="{'active': c.show_view_index == 10}" ng-click="c.showView(10)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionF') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionF') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Physical Development</a></li>
-      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11, 'tab_11_G1')" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
-      <li ng-class="{'active': c.show_view_index == 12}" ng-click="c.showView(12)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
-      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13)" ng-show="c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
-      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14, 'tab_14_H1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
-      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
-      <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
-      <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
+      <li ng-class="{'active': c.show_view_index == 11}" ng-click="c.showView(11, 'tab_11_G1')"  ng-show="c.form_type != 'pediatric' && c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('menstrual') > -1 && c.data.saved_section.indexOf('pregnancy') > -1 && c.data.saved_section.indexOf('fertility') > -1 && c.data.saved_section.indexOf('birthcontrol') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive History</a></li>
+      <li ng-class="{'active': c.show_view_index == 12}" ng-click="c.showView(12)" ng-show="c.form_type != 'pediatric' && c.data.sex == 'FEMALE'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Female Reproductive Surgery History</a></li>
+      <li ng-class="{'active': c.show_view_index == 13}" ng-click="c.showView(13)" ng-show="c.form_type != 'pediatric'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionG3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionG3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Beliefs about Cancer Risk</a></li>
+      <li ng-class="{'active': c.show_view_index == 14}" ng-click="c.showView(14, 'tab_14_H1')" ng-show="c.form_type == 'adult'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH4') > -1 && c.data.saved_section.indexOf('SectionH5') > -1 && c.data.saved_section.indexOf('bodystress') > -1 && c.data.saved_section.indexOf('mindstress') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Distress in the Past 7 Days</a></li>
+      <li ng-class="{'active': c.show_view_index == 15}" ng-click="c.showView(15, 'tab_15_I1')" ng-show="c.form_type == 'adult'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionI') > -1 && c.data.saved_section.indexOf('SectionI1') > -1 && c.data.saved_section.indexOf('SectionI2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Feelings and Thoughts During the Last Month</a></li>
+      <li ng-class="{'active': c.show_view_index == 16}" ng-click="c.showView(16)" ng-show="c.form_type == 'adult'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH2') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH2') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Coping Mechanisms</a></li>
+      <li ng-class="{'active': c.show_view_index == 17}" ng-click="c.showView(17)" ng-show="c.form_type == 'adult'"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SectionH3') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SectionH3') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Personal Support</a></li>
       <li ng-class="{'active': c.show_view_index == 18}" ng-click="c.showView(18)"><i ng-class="{'fa fa-check-circle fa-check-circle-green': (c.data.saved_section.indexOf('SignatureAndSubmit') > -1), 'fa fa-circle-o': !(c.data.saved_section.indexOf('SignatureAndSubmit') > -1)}" aria-hidden="true"></i><a href="javascript:void(0);">Final Information</a></li>
     </ul>
   </div>
@@ -1356,12 +1473,11 @@
 
     <div id="form_widget_2" ng-show="c.show_view_index == 2">
 
-      <uib-accordion close-others="true">
+      <uib-accordion close-others="false">
         <div uib-accordion-group id="form_widget_2_A2" class="panel-default" is-open="c.accordions.tab_2_A2">
-          <uib-accordion-heading>
-            <!--<div ng-click="c.openAccordion(2, 'tab_2_A2')">-->
+          <uib-accordion-heading >
             <div ng-click="c.openAccordion(2, 'tab_2_A2')">
-              Questions 1 - 3 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A2, 'fa fa-plus-square': !c.accordions.tab_2_A2}"></i>
+              Questions 1 - 3
             </div>
           </uib-accordion-heading>
           <div class="widget_area" >
@@ -1374,7 +1490,7 @@
         <div uib-accordion-group id="form_widget_2_A3" class="panel-default" is-open="c.accordions.tab_2_A3">
           <uib-accordion-heading >
             <div ng-click="c.openAccordion(2, 'tab_2_A3')">
-              Questions 4 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A3, 'fa fa-plus-square': !c.accordions.tab_2_A3}"></i>
+              Questions 4 - 9
             </div>
           </uib-accordion-heading>
           <div class="widget_area">
@@ -1385,10 +1501,10 @@
           </div>
         </div>
 
-        <div uib-accordion-group id="form_widget_2_A4" class="panel-default" is-open="c.accordions.tab_2_A4">
-          <uib-accordion-heading>
+        <div uib-accordion-group id="form_widget_2_A4" class="panel-default" is-open="c.accordions.tab_2_A4" ng-if="c.form_type != 'pediatric'" >
+          <uib-accordion-heading >
             <div ng-click="c.openAccordion(2, 'tab_2_A4')">
-              Questions 10 - 15 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_2_A4, 'fa fa-plus-square': !c.accordions.tab_2_A4}"></i>
+              Questions 10 - 15
             </div>
           </uib-accordion-heading>
           <div class="widget_area">
@@ -1474,9 +1590,9 @@
     <div id="form_widget_11" ng-show="c.show_view_index == 11">
 
       <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_11_G1" class="panel-default" is-open="c.accordions.tab_11_G1">
+        <div uib-accordion-group id="form_widget_11_G1" class="panel-default" is-open="c.accordions.tab_11_G1" ng-click="c.openAccordion(11, 'tab_11_G1')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(11, 'tab_11_G1')">
+            <div>
               Menstrual <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G1, 'fa fa-plus-square': !c.accordions.tab_11_G1}"></i>
             </div>
           </uib-accordion-heading>
@@ -1488,9 +1604,9 @@
           </div>
         </div> 
 
-        <div uib-accordion-group id="form_widget_11_G2" class="panel-default" is-open="c.accordions.tab_11_G2">
+        <div uib-accordion-group id="form_widget_11_G2" class="panel-default" is-open="c.accordions.tab_11_G2" ng-click="c.openAccordion(11, 'tab_11_G2')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(11, 'tab_11_G2')">
+            <div>
               Pregnancy <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G2, 'fa fa-plus-square': !c.accordions.tab_11_G2}"></i>
             </div>
           </uib-accordion-heading>
@@ -1502,9 +1618,9 @@
           </div>
         </div> 
 
-        <div uib-accordion-group id="form_widget_11_G3" class="panel-default" is-open="c.accordions.tab_11_G3">
+        <div uib-accordion-group id="form_widget_11_G3" class="panel-default" is-open="c.accordions.tab_11_G3" ng-click="c.openAccordion(11, 'tab_11_G3')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(11, 'tab_11_G3')">
+            <div>
               Fertility <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G3, 'fa fa-plus-square': !c.accordions.tab_11_G3}"></i>
             </div>
           </uib-accordion-heading>
@@ -1516,9 +1632,9 @@
           </div>
         </div> 
 
-        <div uib-accordion-group id="form_widget_11_G4" class="panel-default" is-open="c.accordions.tab_11_G4">
+        <div uib-accordion-group id="form_widget_11_G4" class="panel-default" is-open="c.accordions.tab_11_G4" ng-click="c.openAccordion(11, 'tab_11_G4')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(11, 'tab_11_G4')">
+            <div>
               Birth Control <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G4, 'fa fa-plus-square': !c.accordions.tab_11_G4}"></i>
             </div>
           </uib-accordion-heading>
@@ -1566,9 +1682,9 @@
     <div id="form_widget_14" ng-show="c.show_view_index == 14">
 
       <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_14_H1" class="panel-default" is-open="c.accordions.tab_14_H1">
+        <div uib-accordion-group id="form_widget_14_H1" class="panel-default" is-open="c.accordions.tab_14_H1" ng-click="c.openAccordion(14, 'tab_14_H1')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(14, 'tab_14_H1')">
+            <div>
               Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H1, 'fa fa-plus-square': !c.accordions.tab_14_H1}"></i>
             </div>
           </uib-accordion-heading>
@@ -1580,9 +1696,9 @@
           </div>
         </div> 
 
-        <div uib-accordion-group id="form_widget_14_H2" class="panel-default" is-open="c.accordions.tab_14_H2">
+        <div uib-accordion-group id="form_widget_14_H2" class="panel-default" is-open="c.accordions.tab_14_H2" ng-click="c.openAccordion(14, 'tab_14_H2')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(14, 'tab_14_H2')">
+            <div>
               Questions 5 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H2, 'fa fa-plus-square': !c.accordions.tab_14_H2}"></i>
             </div>
           </uib-accordion-heading>
@@ -1594,9 +1710,9 @@
           </div>
         </div>
 
-        <div uib-accordion-group id="form_widget_14_H3" class="panel-default" is-open="c.accordions.tab_14_H3">
+        <div uib-accordion-group id="form_widget_14_H3" class="panel-default" is-open="c.accordions.tab_14_H3" ng-click="c.openAccordion(14, 'tab_14_H3')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(14, 'tab_14_H3')">
+            <div>
               Questions 10 - 14 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H3, 'fa fa-plus-square': !c.accordions.tab_14_H3}"></i>
             </div>
           </uib-accordion-heading>
@@ -1608,9 +1724,9 @@
           </div>
         </div>
 
-        <div uib-accordion-group id="form_widget_14_H4" class="panel-default" is-open="c.accordions.tab_14_H4">
+        <div uib-accordion-group id="form_widget_14_H4" class="panel-default" is-open="c.accordions.tab_14_H4" ng-click="c.openAccordion(14, 'tab_14_H4')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(14, 'tab_14_H4')">
+            <div>
               Questions 15 - 18 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H4, 'fa fa-plus-square': !c.accordions.tab_14_H4}"></i>
             </div>
           </uib-accordion-heading>
@@ -1633,9 +1749,9 @@
     <div id="form_widget_15" ng-show="c.show_view_index == 15">
 
       <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_15_I1" class="panel-default" is-open="c.accordions.tab_15_I1">
+        <div uib-accordion-group id="form_widget_15_I1" class="panel-default" is-open="c.accordions.tab_15_I1" ng-click="c.openAccordion(15, 'tab_15_I1')">
           <uib-accordion-heading>
-            <div ng-click="c.openAccordion(15, 'tab_15_I1')">
+            <div>
               Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I1, 'fa fa-plus-square': !c.accordions.tab_15_I1}"></i>
             </div>
           </uib-accordion-heading>
@@ -1647,9 +1763,9 @@
           </div>
         </div> 
 
-        <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2">
+        <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2" ng-click="c.openAccordion(15, 'tab_15_I2')">
             <uib-accordion-heading>
-              <div ng-click="c.openAccordion(15, 'tab_15_I2')">
+              <div>
                 Questions 5 - 7 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I2, 'fa fa-plus-square': !c.accordions.tab_15_I2}"></i>
               </div>
             </uib-accordion-heading>
@@ -1661,9 +1777,9 @@
             </div>
           </div> 
 				
-        <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3">
+        <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3" ng-click="c.openAccordion(15, 'tab_15_I3')">
               <uib-accordion-heading>
-                <div ng-click="c.openAccordion(15, 'tab_15_I3')">
+                <div>
                   Questions 8 - 10 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I3, 'fa fa-plus-square': !c.accordions.tab_15_I3}"></i>
                 </div>
               </uib-accordion-heading>

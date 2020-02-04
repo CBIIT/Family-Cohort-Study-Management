@@ -80,25 +80,6 @@
             <dependent_value/>
             <element>biological_father_s_ethnicity</element>
             <hint/>
-            <inactive>false</inactive>
-            <label>Hispanic/Latino</label>
-            <language>en</language>
-            <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
-            <sys_created_by>yuw5@nih.gov</sys_created_by>
-            <sys_created_on>2019-09-09 20:19:09</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>95933825dbb37f4054d8ff621f96199c</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2020-01-22 20:52:08</sys_updated_on>
-            <u_dependent_value_2/>
-            <value>Hispanic/Latino</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>biological_father_s_ethnicity</element>
-            <hint/>
             <inactive>true</inactive>
             <label>Native Hawaiian/Other Pacific Islander</label>
             <language>en</language>
@@ -119,17 +100,36 @@
             <element>biological_father_s_ethnicity</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Hispanic/Latino</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake</name>
+            <sequence>100</sequence>
+            <sys_created_by>yuw5@nih.gov</sys_created_by>
+            <sys_created_on>2019-09-09 20:19:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>95933825dbb37f4054d8ff621f96199c</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-04 16:43:16</sys_updated_on>
+            <u_dependent_value_2/>
+            <value>Hispanic/Latino</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>biological_father_s_ethnicity</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Not Hispanic/Latino</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
+            <sequence>200</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 20:19:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>0ca3b065dbb37f4054d8ff621f961970</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2020-01-22 20:47:37</sys_updated_on>
+            <sys_updated_on>2020-02-04 16:43:18</sys_updated_on>
             <u_dependent_value_2/>
             <value>Not Hispanic/Latino</value>
         </sys_choice>
@@ -138,17 +138,17 @@
             <element>biological_father_s_ethnicity</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Unknown</label>
+            <label>Don't Know</label>
             <language>en</language>
             <name>x_naci_family_coho_mock_up_intake</name>
-            <sequence/>
+            <sequence>300</sequence>
             <sys_created_by>yuw5@nih.gov</sys_created_by>
             <sys_created_on>2019-09-09 21:59:09</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>f57a4da1db377f4054d8ff621f961923</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>martincp@nih.gov</sys_updated_by>
-            <sys_updated_on>2020-01-22 20:47:37</sys_updated_on>
+            <sys_updated_on>2020-02-04 16:43:13</sys_updated_on>
             <u_dependent_value_2/>
             <value>Unknown</value>
         </sys_choice>

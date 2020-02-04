@@ -17,7 +17,7 @@
 	c.data.signature_password = '';
 	c.errorConsent = '';
 	
-	
+	window.closeModal();
 	c.sayswho= function(){
 			var ua= navigator.userAgent, tem, 
 			M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
@@ -293,15 +293,15 @@
         <sys_created_on>2019-11-13 15:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36da12d6db49001054d8ff621f9619b7</sys_id>
-        <sys_mod_count>262</sys_mod_count>
+        <sys_mod_count>266</sys_mod_count>
         <sys_name>FCSMS Consent Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_36da12d6db49001054d8ff621f9619b7</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-03 22:43:15</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-04 22:51:09</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
     <div class="body-content">
@@ -313,7 +313,7 @@
         </iframe>
       </div>
       <div class="sign-content">
-        <div class="sign-notice">
+        <div class="sign-notice" style="color:red;">
           <i class="fa fa-asterisk" aria-hidden="true"></i> Please read through the above content carefully before giving your response.
         </div>
         <div class="sign-form">

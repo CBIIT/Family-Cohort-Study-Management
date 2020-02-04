@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
     <sp_header_footer action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, $location, $http) {
+        <client_script><![CDATA[function($scope, $location, $http, $uibModal) {
   /* widget controller */
 	var c = this;
 	var s = $location.search();
@@ -67,6 +67,18 @@
 	c.testLogout = function(){
 		$location.url("/logout.do?sysparm_goto_url=logout_redirect.do?sysparm_url=/fcsms");
 	}
+	var modal;
+	window.openModal = function(){
+		modal = $uibModal.open({
+			template: $('#saving-data-modal')[0].innerHTML,
+			size: 'sm'
+		});
+	}
+	window.closeModal = function() {
+		if(modal){
+			modal.close();
+		}
+	}
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -107,15 +119,15 @@
         <sys_created_on>2019-09-06 14:28:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d768ca8dbb33b4054d8ff621f961959</sys_id>
-        <sys_mod_count>163</sys_mod_count>
+        <sys_mod_count>166</sys_mod_count>
         <sys_name>fcsms header</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_header_footer_3d768ca8dbb33b4054d8ff621f961959</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-29 17:04:38</sys_updated_on>
+        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-04 23:18:10</sys_updated_on>
         <template><![CDATA[<div class="fcsms-header">
   <div class="fcsms-logo">
     <div class="logo">
@@ -169,6 +181,13 @@
     <b>Top</b>
   </p>
 </div>
+
+<div id="saving-data-modal" style="display: none">
+  <div class="modal-body text-center">
+    <h3>Please Wait</h3>
+    <i class="fa fa-cog fa-spin fa-10x fa-fw" style="font-size: 40px"></i>
+  </div>
+</div>  
   ]]></template>
     </sp_header_footer>
 </record_update>
