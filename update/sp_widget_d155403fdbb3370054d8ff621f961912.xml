@@ -81,10 +81,12 @@
 	
 	c.data.label = "Family Cancer";
 	
-	c.data.columns = [{label:"Cancer Type", name: "cancer_type"},
-										{label: "Age (in years) at Diagnosis",name: "age_at_diagnosis"},{label: "Relationship",name: "relationship"},
+	c.data.columns = [{label:"Cancer Type or Site", name: "cancer_type"},
+										{label: "Relationship",name: "relationship"},
 										{label:"Name", name: "name"},
-										{label:"Current Age (If living)", name: "current_age"},{label:"Age at Death", name: "age_at_death"}];
+										{label:"Date of Birth", name: "dob"},
+										{label: "Age (in years) at Diagnosis",name: "age_at_diagnosis"},
+										{label:"Age at Death", name: "age_at_death"}];
 	
 	c.openForm = function(){
 		$('#saveCancer').show();
@@ -195,13 +197,14 @@
 		item = {};
 		item.sys_id = gr.sys_id.toString();
 		item.cancer_type = gr.getDisplayValue('cancer_type');
-		item.cancer_specify = gr.getDisplayValue('cancer_specify');
-		item.age_at_diagnosis = gr.getDisplayValue('age_at_diagnosis');
-		item.relationship = gr.getDisplayValue('relationship');
 		item.relationship_specify = gr.getDisplayValue('relationship_specify');
 		item.name = gr.getDisplayValue('name');
-		item.current_age = gr.getDisplayValue('current_age');
+		item.dob = gr.getDisplayValue('date_of_birth');
+		item.age_at_diagnosis = gr.getDisplayValue('age_at_diagnosis');
 		item.age_at_death = gr.getDisplayValue('age_at_death');
+		item.cancer_specify = gr.getDisplayValue('cancer_specify');
+		item.relationship = gr.getDisplayValue('relationship');
+		item.current_age = gr.getDisplayValue('current_age');		
 		data.records.push(item);
 	}
 	
@@ -213,15 +216,15 @@
         <sys_created_on>2019-09-16 16:43:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d155403fdbb3370054d8ff621f961912</sys_id>
-        <sys_mod_count>200</sys_mod_count>
+        <sys_mod_count>201</sys_mod_count>
         <sys_name>FCSMS Intake Form Family Cancer List</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_d155403fdbb3370054d8ff621f961912</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-27 20:18:57</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-05 19:47:25</sys_updated_on>
         <template><![CDATA[
 <div id="family_cancer" ng-show="showCancer" style="padding: 10px 10px; border-style: ridge;">
   <div style="display:flex;margin-bottom:5px;height:40px;">

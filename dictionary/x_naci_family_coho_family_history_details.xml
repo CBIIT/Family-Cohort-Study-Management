@@ -4,6 +4,7 @@
         <element label="Biological Father" max_length="32" name="biological_father" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="Biological Mother" max_length="32" name="biological_mother" reference="x_naci_family_coho_family_history_details" type="reference"/>
         <element label="Cause" max_length="200" name="cause_of_death" type="string"/>
+        <element label="Check here if you are the proxy" max_length="40" name="check_here_if_you_are_the_proxy" type="boolean"/>
         <element label="City" max_length="50" name="city" type="string"/>
         <element label="City" max_length="50" name="city_of_death" type="string"/>
         <element label="Comments" max_length="4000" name="comments" type="journal_input"/>

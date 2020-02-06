@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="is_this_relative_alive" label="Is this relative alive?" language="en" table="x_naci_family_coho_mock_up_intake_family_cancer">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>is_this_relative_alive</element>
+            <help/>
+            <hint/>
+            <label>Is this relative alive?</label>
+            <language>en</language>
+            <name>x_naci_family_coho_mock_up_intake_family_cancer</name>
+            <plural>Is this relative alive?s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-05 19:35:41</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>2b8ef799db76041054d8ff621f9619da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Is this relative alive?</sys_name>
+            <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+            <sys_update_name>sys_documentation_x_naci_family_coho_mock_up_intake_family_cancer_is_this_relative_alive_en</sys_update_name>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-05 19:35:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -35,6 +35,9 @@
 			case c.forms.LFS2:
 				index = 2;
 				break;
+			case c.forms.LFS21:
+				index = 21; 
+				break;
 			case c.forms.LFS3:
 				index = 3;
 				break;
@@ -86,7 +89,11 @@
 	$scope.saveNext = function(form){
 	   $scope.saveForm(form);
 		 var index = getFormIndex(form);
-		 if(index == 4){
+		 if(index == 2){
+			 index = 21;
+		 }else if(index == 21){
+				index = 3;
+		 }else if(index == 4){
 			 index = 41;
 		 }else if(index == 41){
 			 index = 5;
@@ -345,6 +352,7 @@
 	function setProgressBar(saved_arr){
 		c.data.progress1 = includeElement(saved_arr, "1");
 		c.data.progress2 = includeElement(saved_arr, "2");
+		c.data.progress21 = includeElement(saved_arr, "21");
 		c.data.progress3 = includeElement(saved_arr, "3");
 		c.data.progress4 = includeElement(saved_arr, "4");
 		c.data.progress41 = includeElement(saved_arr, "41");
@@ -396,6 +404,9 @@ fieldset label{
 }
 
 #widget_1 div .panel-footer{
+  display:none;
+}
+#widget_21 div .panel-footer{
   display:none;
 }
 #widget_2 div .panel-footer{
@@ -557,24 +568,48 @@ fieldset label{
 			}
 			if(gr2.email_address == null || gr2.email_address.toString().trim().length == 0){
 				var item = {};
-				item.index = 2;
-				item.page = "Personal Information";
+				item.index = 21;
+				item.page = "Contact Information";
 				item.message = "Contact Email Address is required field";
 				item.field = 'email_address';
 				data.error.push(item);
 			}
-			/*if(gr2.confirm_email_address == null || gr2.confirm_email_address.toString().trim().length == 0){
+		  if(gr2.state == null || gr2.state.toString().trim().length == 0){
 				var item = {};
-				item.index = 2;
-				item.page = "Personal Information";
-				item.message = "Confirm Contact Email Address is required field";
-				item.field = 'confirm_email_address';
+				item.index = 21;
+				item.page = "Contact Information";
+				item.message = "State is required field";
+				item.field = 'state';
 				data.error.push(item);
-			}*/
+			}
+		  if(gr2.city == null || gr2.city.toString().trim().length == 0){
+				var item = {};
+				item.index = 21;
+				item.page = "Contact Information";
+				item.message = "City is required field";
+				item.field = 'city';
+				data.error.push(item);
+			}
+		  if(gr2.street_address == null || gr2.street_address.toString().trim().length == 0){
+				var item = {};
+				item.index = 21;
+				item.page = "Contact Information";
+				item.message = "Street Address is required field";
+				item.field = 'street_address';
+				data.error.push(item);
+			}
+		  if(gr2.zip_code == null || gr2.zip_code.toString().trim().length == 0){
+				var item = {};
+				item.index = 21;
+				item.page = "Contact Information";
+				item.message = "Zip Code is required field";
+				item.field = 'zip_code';
+				data.error.push(item);
+			}
 			if(gr2.phone_number == null || gr2.phone_number.toString().trim().length == 0){
 				var item = {};
 				item.index = 2;
-				item.page = "Personal Information";
+				item.page = "Contact Information";
 				item.message = "Contact phone_number is required field";
 				item.field = 'phone_number';
 				data.error.push(item);
@@ -664,7 +699,7 @@ fieldset label{
         <sys_created_on>2019-09-09 19:11:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f034a869db337f4054d8ff621f9619a5</sys_id>
-        <sys_mod_count>1004</sys_mod_count>
+        <sys_mod_count>1028</sys_mod_count>
         <sys_name>FCSMS Intake Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -672,7 +707,7 @@ fieldset label{
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_f034a869db337f4054d8ff621f9619a5</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-04 23:16:21</sys_updated_on>
+        <sys_updated_on>2020-02-06 19:18:11</sys_updated_on>
         <template><![CDATA[<div id="table-form" class="main-content" style="font-size: 20px;">
   <div class="row">
     <div class="left-side-menu col-md-3">
@@ -680,6 +715,7 @@ fieldset label{
         <li class="menu_header"><b>Screener Questionnaire</b></li>
         <li ng-class="{'active': c.show_view_index == 1}" ng-click="loadTab(1)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress1 == true, 'fa-circle-o': c.data.progress1 == false} " aria-hidden="true"></i> <a href="javascript:void(0);">Study Introduction</a></li>
         <li ng-class="{'active': c.show_view_index == 2}" ng-click="loadTab(2)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress2 == true, 'fa-circle-o': c.data.progress2 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Information</a></li>
+        <li ng-class="{'active': c.show_view_index == 21}" ng-click="loadTab(21)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress21 == true, 'fa-circle-o': c.data.progress21 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Contact Information</a></li>
         <li ng-class="{'active': c.show_view_index == 3}" ng-click="loadTab(3)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress3 == true, 'fa-circle-o': c.data.progress3 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Personal Cancer History</a></li>
         <li ng-class="{'active': c.show_view_index == 4}" ng-click="loadTab(4)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress4 == true, 'fa-circle-o': c.data.progress4 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Members' Cancer History</a></li>
         <li ng-class="{'active': c.show_view_index == 41}" ng-click="loadTab(41)"><i class="fa" ng-class="{'fa-check-circle fa-check-circle-green': c.data.progress41 == true, 'fa-circle-o': c.data.progress41 == false} " aria-hidden="true"></i><a href="javascript:void(0);">Family Members' Genetic Tests</a></li>
@@ -752,6 +788,22 @@ fieldset label{
           </div>   
         </div>
       </div>
+      <div ng-show="c.show_view_index == 21" class="div_shadow">
+        <div id="widget_21" style="padding: 10px;" class="clearfix">
+          <sp-widget widget="c.data.widget_21">
+            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+            Loading...
+          </sp-widget>
+          <div class="form-section" style="text-align:right; padding-top: 15px">
+            <button class="btn btn-primary btn-font" ng-click="back(c.forms.contact)" style="width:100px">
+              BACK
+            </button>
+            <button class="btn btn-primary btn-font" ng-click="saveNext(c.forms.LFS21)">
+              SAVE & NEXT
+            </button>
+          </div>   
+        </div>
+      </div>      
       <div ng-show="c.show_view_index == 3" class="div_shadow">
         <p style="padding: 10px 15px">
           To determine eligibility, we need to collect information about cancer diagnoses and genetic testing.  If you are filling this form out for someone else, please remember that "you" refers to the potential research subject. 

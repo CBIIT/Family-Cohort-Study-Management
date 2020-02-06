@@ -15,14 +15,15 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-	var fields = ['test_positive','tested_positive','tested'];
+	var fields = ['tested'];
 	
 	fields.forEach(function(field){
+	   g_form.clearValue('tested');	
 	   g_form.setDisplay(field, false);
 	});
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-	var fields = ['test_positive'];
+	/*var fields = ['test_positive'];
 	
 	fields.forEach(function(field){
 	   g_form.setDisplay(field, true);
@@ -33,7 +34,8 @@
 	}else{
 		g_form.setDisplay('tested', true);
 		g_form.setDisplay('tested_positive', false);
-	}
+	}*/
+	 g_form.setDisplay('tested', true);
 }]]></script_true>
         <set_values/>
         <short_description>Intake  control  'genetic testing' field    </short_description>
@@ -43,7 +45,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>7e877831dbf33f40b86770c08c961921</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Intake  control  'genetic testing' field    </sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -52,7 +54,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_policy_7e877831dbf33f40b86770c08c961921</sys_update_name>
         <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-04 19:26:52</sys_updated_on>
+        <sys_updated_on>2020-02-05 17:28:29</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <ui_type>10</ui_type>
         <view/>

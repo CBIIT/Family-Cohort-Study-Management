@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>consent_received</action_name>
+        <action_name>consent_received_screener</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
@@ -28,18 +28,44 @@
         <name>Hard Copy of Consent Received</name>
         <onclick>consentReceived()</onclick>
         <order>-600</order>
-        <script><![CDATA[var updateFamRecord = new GlideRecord ('x_naci_family_coho_family_history_details');
+        <script><![CDATA[function consentReceived(){
 
-if (updateFamRecord.get(current.family_member_record.toString())){
+	var attachmentCheck = new GlideAjax ('consentCheck');
+	attachmentCheck.addParam('sysparm_name', 'consentAttachedCheck');
+	attachmentCheck.addParam('sysparm_id', g_form.getValue('family_member_record'));
+	attachmentCheck.getXML(attachmentFound);
 
-	updateFamRecord.enrollment_status = 'awaiting_pi_signature';
-	updateFamRecord.consent_signed = true;
-	updateFamRecord.update();	
+	function attachmentFound(response){
 
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		if (answer == 'not_found'){
+			alert('The Family Cohort Study Consent.pdf must be attached prior to moving to the next step. The file attached MUST be named Family Cohort Study Consent');
+			return false;
+		} else {
+			gsftSubmit(null, g_form.getFormElement(), 'consent_received_screener');
+		}
+
+	}
 }
 
-action.setRedirectURL(current);
-]]></script>
+if (typeof window == 'undefined')
+	updateStatus();
+
+function updateStatus(){
+
+	var updateFamRecord = new GlideRecord ('x_naci_family_coho_family_history_details');
+
+	if (updateFamRecord.get(current.family_member_record.toString())){
+
+		updateFamRecord.enrollment_status = 'awaiting_pi_signature';
+		updateFamRecord.consent_signed = true;
+		updateFamRecord.update();	
+
+	}
+
+	action.setRedirectURL(current);
+}]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -50,7 +76,7 @@ action.setRedirectURL(current);
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>29986143db85041054d8ff621f9619ed</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Hard Copy of Consent Received</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -59,7 +85,7 @@ action.setRedirectURL(current);
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ui_action_29986143db85041054d8ff621f9619ed</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-17 15:33:59</sys_updated_on>
+        <sys_updated_on>2020-02-06 14:52:11</sys_updated_on>
         <table>x_naci_family_coho_mock_up_intake</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

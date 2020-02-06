@@ -3,56 +3,42 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>cancer_type</element>
             <position>0</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 18:10:49</sys_created_on>
-            <sys_id>4c6f4110dbb84c10b86770c08c9619b6</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-05 19:26:10</sys_created_on>
+            <sys_id>806c37d5db76041054d8ff621f9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">6848517ddb773f40b86770c08c961981</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 18:10:49</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-05 19:26:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>please_specify</element>
             <position>1</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 18:10:49</sys_created_on>
-            <sys_id>c06f4110dbb84c10b86770c08c9619b7</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-05 19:26:10</sys_created_on>
+            <sys_id>0c6c37d5db76041054d8ff621f9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">6848517ddb773f40b86770c08c961981</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 18:10:49</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-05 19:26:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>age_in_years_at_diagnosis</element>
             <position>2</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 18:10:49</sys_created_on>
-            <sys_id>486f4110dbb84c10b86770c08c9619b7</sys_id>
+            <sys_created_by>martincp@nih.gov</sys_created_by>
+            <sys_created_on>2020-02-05 19:26:10</sys_created_on>
+            <sys_id>806c37d5db76041054d8ff621f9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">6848517ddb773f40b86770c08c961981</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 18:10:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>date_diagnosis</element>
-            <position>3</position>
-            <sys_created_by>zhoujim@nih.gov</sys_created_by>
-            <sys_created_on>2019-10-25 18:10:49</sys_created_on>
-            <sys_id>cc6f4110dbb84c10b86770c08c9619b7</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_naci_family_coho_mock_up_intake_patient_cancer" sys_domain="global" view="2c48517ddb773f40b86770c08c96197d">6848517ddb773f40b86770c08c961981</sys_ui_section>
-            <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-            <sys_updated_on>2019-10-25 18:10:49</sys_updated_on>
+            <sys_updated_by>martincp@nih.gov</sys_updated_by>
+            <sys_updated_on>2020-02-05 19:26:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

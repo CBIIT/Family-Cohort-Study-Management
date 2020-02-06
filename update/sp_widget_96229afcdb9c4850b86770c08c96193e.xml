@@ -27,9 +27,9 @@
 	});
 	
 	c.data.label = "Research Participation";
-	c.data.columns = [{label:"Study Name", name: "study_name"},{label:"Relative Involved", name: "relative_involved"},
+	c.data.columns = [{label:"Study Name", name: "study_name"},{label:"Relative(s) Involved", name: "relative_involved"},
 										{label: "Study Contact Person",name: "study_contact_person"},{label: "Study Phone Number",name: "study_phone_number"},
-									 {label: "Dates of Participation", name:"dates_of_participation"}];
+									 {label: "Date of Participation", name:"dates_of_participation"}];
 
   c.openForm = function(){
 		$('#saveParticipate').show();
@@ -212,15 +212,15 @@
         <sys_created_on>2019-10-02 15:48:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>96229afcdb9c4850b86770c08c96193e</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>FCSMS Participate Another Org</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_96229afcdb9c4850b86770c08c96193e</sys_update_name>
-        <sys_updated_by>zhoujim@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-01-22 16:28:17</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-05 20:17:52</sys_updated_on>
         <template><![CDATA[<div id="another" ng-show='show_another' style="padding: 10px 10px; border-style: ridge;">
 
   

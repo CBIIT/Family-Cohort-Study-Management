@@ -19,7 +19,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_naci_family_coho_family_history_details">family_idISNOTEMPTY^EQ<item endquery="false" field="family_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        <filter_condition table="x_naci_family_coho_family_history_details">familyISEMPTY^relationship_to_you!=proband^EQ<item endquery="false" field="family" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="false" field="relationship_to_you" goto="false" newquery="false" operator="!=" or="false" value="proband"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -36,11 +37,8 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	var getFamilyRecord = new GlideRecord ('x_naci_family_coho_family_id');
-	if (getFamilyRecord.get(current.family_id)){
-		current.family = getFamilyRecord.sys_id;
-	}
+	
+	current.family = current.family_historic_qustion_id.initial_proband.family.toString();
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -49,7 +47,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>a8b6f8e3db30041054d8ff621f96191a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Set Initial Fam Member Relationship</sys_name>
         <sys_overrides/>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
@@ -58,7 +56,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_script_a8b6f8e3db30041054d8ff621f96191a</sys_update_name>
         <sys_updated_by>martincp@nih.gov</sys_updated_by>
-        <sys_updated_on>2019-12-02 20:48:53</sys_updated_on>
+        <sys_updated_on>2020-02-05 16:42:44</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

@@ -16,6 +16,7 @@
 	var genetic_changes = request.body.data.genetic_changes;
 	var genetic_variants = request.body.data.genetic_variants;
 	var type = request.body.data.type;
+	var family_member_id = request.body.data.family_member_id;
 	
 	var okta = new global.OktaInterface();
 	var email = gs.getUser().getEmail();
@@ -31,6 +32,7 @@
 			gr.consent_by = gs.getUserID();
 			gr.consent_date = new GlideDateTime();
 			gr.study = study_id;
+			gr.family_member = family_member_id;
 			sys_id = gr.insert();
 		}else if(type != null && type == 'MRR'){
 			var gr1 = new GlideRecord('x_naci_family_coho_fcsms_mrr_consent');
@@ -38,6 +40,7 @@
 			gr1.consent_by = gs.getUserID();
 			gr1.consent_date = new GlideDateTime();
 			gr1.study = study_id;
+			gr1.family_member = family_member_id;
 			sys_id = gr1.insert();
 		}
 		
@@ -62,7 +65,7 @@
         <sys_created_on>2019-11-18 19:45:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e0180544db9dc410b86770c08c96198b</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Validate OKTA User</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
@@ -70,7 +73,7 @@
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sys_ws_operation_e0180544db9dc410b86770c08c96198b</sys_update_name>
         <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-03 23:18:40</sys_updated_on>
+        <sys_updated_on>2020-02-06 20:11:52</sys_updated_on>
         <web_service_definition display_value="FCSMS APIs">22acb537db7c441054d8ff621f96194d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

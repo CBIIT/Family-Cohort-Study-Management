@@ -5,7 +5,8 @@
 	/* widget controller */
 	var c = this;
 	var s = $location.search();
-
+	
+	window.closeModal();
 	c.errors = [];
 	
 	c.form_type = ""; // adult or minor or pediatric
@@ -27,7 +28,6 @@
 
 	c.g_forms = {};
 
-	c.accordions = {};
 	
 	c.calculateAge = function(dob){
 		var ageDifMs = Date.now() - dob;
@@ -175,7 +175,6 @@
 	};
 	
 	c.showView = function(idx, sub){
-		console.log(idx + ","+ sub);
 		c.biopsyDisplay = false;
 		c.cancerDisplay = false;
 		c.surgeryDisplay = false;
@@ -189,7 +188,6 @@
 		c.show_view_index = idx;
 		if(idx == 1){
 			//show Introduction Page
-			console.log("at");
 			c.current_form_idx = 'Introduction';
 			if(!c.widget_1){
 
@@ -209,9 +207,9 @@
 			}
 			if(sub == 'tab_2_A2'){
 				c.current_form_idx = 'SectionA2';
-				c.accordions.tab_2_A2 = true;
-				c.accordions.tab_2_A3 = false;
-				c.accordions.tab_2_A4 = false;
+				document.getElementById("form_widget_2_A2").style.height = "100px";
+				document.getElementById("form_widget_2_A3").style.height = "51px";
+				document.getElementById("form_widget_2_A4").style.height = "51px";
 				c.show_sub_view_index = 2;
 				if(!c.widget_2_A2){
 					spUtil.get("widget-form", {
@@ -220,11 +218,13 @@
 						"view": 'SectionA2'
 					}).then(function(response) {
 						//console.log(response);
+						document.getElementById("form_widget_2_A2").style.height = "590px";
 						response.data.hideRelatedLists = true;
 						c.widget_2_A2 = response;
 					})
 				}
 				else{
+					document.getElementById("form_widget_2_A2").style.height = "590px";
 					if(c.errors.length > 0){
 						c.setErrorColor("SectionA2");
 					}
@@ -232,10 +232,10 @@
 			}
 			else if(sub == 'tab_2_A3'){
 				c.current_form_idx = 'SectionA3';
-				c.accordions.tab_2_A2 = false;
-				c.accordions.tab_2_A3 = true;
-				c.accordions.tab_2_A4 = false;
-				c.show_sub_view_index = 3;
+				document.getElementById("form_widget_2_A2").style.height = "51px";
+				document.getElementById("form_widget_2_A4").style.height = "51px";
+				document.getElementById("form_widget_2_A3").style.height = "100px";
+					c.show_sub_view_index = 3;
 				if(!c.widget_2_A3){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
@@ -243,6 +243,7 @@
 						"view": 'SectionA3'
 					}).then(function(response) {
 						//console.log(response);
+						document.getElementById("form_widget_2_A3").style.height = "624px";
 						response.data.hideRelatedLists = true;
 						c.widget_2_A3 = response;
 					})
@@ -259,13 +260,15 @@
 							c.widget_2_A3 = response;
 						})
 					}
+					document.getElementById("form_widget_2_A3").style.height = "624px";
+						
 				}
 			}
 			else if(sub == 'tab_2_A4'){
 				c.current_form_idx = 'SectionA4';
-				c.accordions.tab_2_A2 = false;
-				c.accordions.tab_2_A3 = false;
-				c.accordions.tab_2_A4 = true;
+				document.getElementById("form_widget_2_A2").style.height = "51px";
+				document.getElementById("form_widget_2_A3").style.height = "51px";
+				document.getElementById("form_widget_2_A4").style.height = "100px";
 				c.show_sub_view_index = 4;
 				if(!c.widget_2_A4){
 					spUtil.get("widget-form", {
@@ -274,9 +277,14 @@
 						"view": 'SectionA4'
 					}).then(function(response) {
 						//console.log(response);
+						document.getElementById("form_widget_2_A4").style.height = "624px";
 						response.data.hideRelatedLists = true;
 						c.widget_2_A4 = response;
 					})
+				}
+				else{
+					document.getElementById("form_widget_2_A4").style.height = "624px";
+						
 				}
 			}
 		}
@@ -458,12 +466,11 @@
 			if(sub == undefined){
 				sub = 'tab_11_G1';
 			}
-			c.accordions.tab_11_G1 = false;
-			c.accordions.tab_11_G2 = false;
-			c.accordions.tab_11_G3 = false;
-			c.accordions.tab_11_G4 = false;
 			if (sub == 'tab_11_G1'){
-				c.accordions.tab_11_G1 = true;
+				document.getElementById("form_widget_11_G1").style.height = "100px";
+				document.getElementById("form_widget_11_G2").style.height = "51px";
+				document.getElementById("form_widget_11_G3").style.height = "51px";
+				document.getElementById("form_widget_11_G4").style.height = "51px";
 				c.current_form_idx = 'menstrual';
 				c.show_sub_view_index = 1;
 				if(!c.widget_11_G1){
@@ -472,12 +479,20 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'menstrual'
 					}).then(function(response) {
+						document.getElementById("form_widget_11_G1").style.height = "660px";
 						response.data.hideRelatedLists = true;
 						c.widget_11_G1 = response;
 					})
 				}
-			} else if (sub == 'tab_11_G2'){
-				c.accordions.tab_11_G2 = true;
+				else{
+					document.getElementById("form_widget_11_G1").style.height = "660px";	
+				}
+			} 
+			else if (sub == 'tab_11_G2'){
+				document.getElementById("form_widget_11_G1").style.height = "51px";
+				document.getElementById("form_widget_11_G2").style.height = "100px";
+				document.getElementById("form_widget_11_G3").style.height = "51px";
+				document.getElementById("form_widget_11_G4").style.height = "51px";
 				c.current_form_idx = 'pregnancy';
 				c.show_sub_view_index = 2;
 				if(!c.widget_11_G2){
@@ -486,12 +501,20 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'pregnancy'
 					}).then(function(response) {
+						document.getElementById("form_widget_11_G2").style.height = "690px";
 						response.data.hideRelatedLists = true;
 						c.widget_11_G2 = response;
 					})
 				}
-			} else if (sub == 'tab_11_G3'){
-				c.accordions.tab_11_G3 = true;
+				else{
+					document.getElementById("form_widget_11_G2").style.height = "690px";
+				}
+			} 
+			else if (sub == 'tab_11_G3'){
+				document.getElementById("form_widget_11_G1").style.height = "51px";
+				document.getElementById("form_widget_11_G2").style.height = "51px";
+				document.getElementById("form_widget_11_G3").style.height = "100px";
+				document.getElementById("form_widget_11_G4").style.height = "51px";
 				c.current_form_idx = 'fertility';
 				c.show_sub_view_index = 3;
 				if(!c.widget_11_G3){
@@ -500,12 +523,20 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'fertility'
 					}).then(function(response) {
+						document.getElementById("form_widget_11_G3").style.height = "400px";
 						response.data.hideRelatedLists = true;
 						c.widget_11_G3 = response;
 					})
 				}
-			} else if (sub == 'tab_11_G4'){
-				c.accordions.tab_11_G4 = true;
+				else{
+					document.getElementById("form_widget_11_G3").style.height = "400px";
+				}
+			} 
+			else if (sub == 'tab_11_G4'){
+				document.getElementById("form_widget_11_G1").style.height = "51px";
+				document.getElementById("form_widget_11_G2").style.height = "51px";
+				document.getElementById("form_widget_11_G3").style.height = "51px";
+				document.getElementById("form_widget_11_G4").style.height = "100px";
 				c.current_form_idx = 'birthcontrol';
 				c.show_sub_view_index = 4;
 				if(!c.widget_11_G4){
@@ -514,9 +545,13 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'birthcontrol'
 					}).then(function(response) {
+						document.getElementById("form_widget_11_G4").style.height = "400px";
 						response.data.hideRelatedLists = true;
 						c.widget_11_G4 = response;
 					})
+				}
+				else{
+					document.getElementById("form_widget_11_G4").style.height = "400px";
 				}
 			}
 
@@ -575,66 +610,90 @@
 			if(sub == undefined){
 				sub = 'tab_14_H1';
 			}
-			c.accordions.tab_14_H1 = false;
-			c.accordions.tab_14_H2 = false;
-			c.accordions.tab_14_H3 = false;
-			c.accordions.tab_14_H4 = false;
 			c.current_form_idx = 'SectionH';
 			if (sub == 'tab_14_H1'){
 				c.current_form_idx = 'SectionH4';
 				c.show_sub_view_index = 1;
-				c.accordions.tab_14_H1 = true;
+				document.getElementById("form_widget_14_H1").style.height = "100px";
+				document.getElementById("form_widget_14_H2").style.height = "51px";
+				document.getElementById("form_widget_14_H3").style.height = "51px";
+				document.getElementById("form_widget_14_H4").style.height = "51px";
 				if(!c.widget_14_H1){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionH4'
 					}).then(function(response) {
+						document.getElementById("form_widget_14_H1").style.height = "480px";
 						response.data.hideRelatedLists = true;
 						c.widget_14_H1 = response;
 					})
 				}
+				else{
+					document.getElementById("form_widget_14_H1").style.height = "480px";
+				}
 			} else if (sub == 'tab_14_H2'){
 				c.current_form_idx = 'SectionH5';
 				c.show_sub_view_index = 2;
-				c.accordions.tab_14_H2 = true;
+				document.getElementById("form_widget_14_H1").style.height = "51px";
+				document.getElementById("form_widget_14_H2").style.height = "100px";
+				document.getElementById("form_widget_14_H3").style.height = "51px";
+				document.getElementById("form_widget_14_H4").style.height = "51px";
 				if(!c.widget_14_H2){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionH5'
 					}).then(function(response) {
+						document.getElementById("form_widget_14_H2").style.height = "550px";
 						response.data.hideRelatedLists = true;
 						c.widget_14_H2 = response;
 					})
 				}
+				else{
+					document.getElementById("form_widget_14_H2").style.height = "550px";
+				}
 			} else if (sub == 'tab_14_H3'){
 				c.current_form_idx = 'bodystress';
 				c.show_sub_view_index = 3;
-				c.accordions.tab_14_H3 = true;
+				document.getElementById("form_widget_14_H1").style.height = "51px";
+				document.getElementById("form_widget_14_H2").style.height = "51px";
+				document.getElementById("form_widget_14_H3").style.height = "100px";
+				document.getElementById("form_widget_14_H4").style.height = "51px";
 				if(!c.widget_14_H3){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'bodystress'
 					}).then(function(response) {
+						document.getElementById("form_widget_14_H3").style.height = "550px";
 						response.data.hideRelatedLists = true;
 						c.widget_14_H3 = response;
 					})
 				}
+				else{
+					document.getElementById("form_widget_14_H3").style.height = "550px";
+				}
 			} else if (sub == 'tab_14_H4'){
 				c.current_form_idx = 'mindstress';
 				c.show_sub_view_index = 4;
-				c.accordions.tab_14_H4 = true;
+				document.getElementById("form_widget_14_H1").style.height = "51px";
+				document.getElementById("form_widget_14_H2").style.height = "51px";
+				document.getElementById("form_widget_14_H3").style.height = "51px";
+				document.getElementById("form_widget_14_H4").style.height = "100px";
 				if(!c.widget_14_H4){
 					spUtil.get("widget-form", {
 						"sys_id": c.data.sys_id,
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'mindstress'
 					}).then(function(response) {
+						document.getElementById("form_widget_14_H4").style.height = "480px";
 						response.data.hideRelatedLists = true;
 						c.widget_14_H4 = response;
 					})
+				}
+				else{
+					document.getElementById("form_widget_14_H4").style.height = "480px";
 				}
 			}
 		}
@@ -642,14 +701,13 @@
 			if(sub == undefined){
 				sub = 'tab_15_I1';
 			}
-			c.accordions.tab_15_I1 = false;
-			c.accordions.tab_15_I2 = false;
-			c.accordions.tab_15_I3 = false;
 			c.show_sub_view_index = 15;
 			if (sub == 'tab_15_I1'){
 				c.current_form_idx = 'SectionI';
 				c.show_sub_view_index = 1;
-				c.accordions.tab_15_I1 = true;
+				document.getElementById("form_widget_15_I1").style.height = "100px";
+				document.getElementById("form_widget_15_I2").style.height = "51px";
+				document.getElementById("form_widget_15_I3").style.height = "51px";
 				if(!c.widget_15_I1){
 								
 					spUtil.get("widget-form", {
@@ -657,14 +715,20 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionI'
 					}).then(function(response) {
+						document.getElementById("form_widget_15_I1").style.height = "480px";
 						response.data.hideRelatedLists = true;
 						c.widget_15_I1 = response;
 					})
 				}
+				else{
+					document.getElementById("form_widget_15_I1").style.height = "480px";
+				}
 			} else if (sub == 'tab_15_I2'){
 				c.current_form_idx = 'SectionI1';
 				c.show_sub_view_index = 2;
-				c.accordions.tab_15_I2 = true;
+				document.getElementById("form_widget_15_I1").style.height = "51px";
+				document.getElementById("form_widget_15_I2").style.height = "100px";
+				document.getElementById("form_widget_15_I3").style.height = "51px";
 				if(!c.widget_15_I2){
 								
 					spUtil.get("widget-form", {
@@ -672,14 +736,20 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionI1'
 					}).then(function(response) {
+						document.getElementById("form_widget_15_I2").style.height = "400px";
 						response.data.hideRelatedLists = true;
 						c.widget_15_I2 = response;
 					})
 				}
+				else{
+					document.getElementById("form_widget_15_I2").style.height = "400px";
+				}
 			} else if (sub == 'tab_15_I3'){
 				c.current_form_idx = 'SectionI2';
 				c.show_sub_view_index = 3;
-				c.accordions.tab_15_I3 = true;
+				document.getElementById("form_widget_15_I1").style.height = "51px";
+				document.getElementById("form_widget_15_I2").style.height = "51px";
+				document.getElementById("form_widget_15_I3").style.height = "100px";
 				if(!c.widget_15_I3){
 								
 					spUtil.get("widget-form", {
@@ -687,9 +757,13 @@
 						"table": "x_naci_family_coho_individual_information_questionnaire",
 						"view": 'SectionI2'
 					}).then(function(response) {
+						document.getElementById("form_widget_15_I3").style.height = "400px";
 						response.data.hideRelatedLists = true;
 						c.widget_15_I3 = response;
 					})
+				}
+				else{
+					document.getElementById("form_widget_15_I3").style.height = "400px";
 				}
 			}
 		}
@@ -850,6 +924,14 @@
 				c.showView(9);
 			}
 		}
+		else if(c.show_view_index == 11){
+			if(c.show_sub_view_index == 1){
+				c.showView(c.show_view_index - 1);
+			}
+			else{
+				c.showView(c.show_view_index, 'tab_11_G' + (c.show_sub_view_index - 1 ));
+			}
+		}
 		else if(c.show_view_index == 13){
 			if(c.data.sex == 'MALE'){
 				c.showView(10);
@@ -985,12 +1067,14 @@
 		});
 	};
 	
-	c.toggleOpen = function(isOpen){
-		console.log("happen!");
-		isOpen = !isOpen;
-	};
 
 	c.openAccordion = function(index, acc){
+		/*
+		var obj = event.currentTarget;
+		$(obj).parents().siblings("section").addClass("ac_hidden");
+    $(obj).parents("section").removeClass("ac_hidden");
+		event.preventDefault();
+		*/
 		c.showView(index, acc);
 	};
 
@@ -1031,6 +1115,8 @@
 		else if(e.targetScope.formModel.view == "SectionA2"){
 			c.setActions("SectionA2", "2_A2");
 			c.g_forms['SectionA2'] = e.targetScope.getGlideForm();
+			//document.getElementById("form_widget_2_A2").style.height = "590px";
+				
 			if(c.errors.length > 0){
 				$timeout(function(){
 					c.setErrorColor("SectionA2");
@@ -1040,10 +1126,12 @@
 		else if(e.targetScope.formModel.view == "SectionA3"){
 			c.setActions("SectionA3", "2_A3");
 			c.g_forms['SectionA3'] = e.targetScope.getGlideForm();
+			
 		}
 		else if(e.targetScope.formModel.view == "SectionA4"){
 			c.setActions("SectionA4", "2_A4");
 			c.g_forms['SectionA4'] = e.targetScope.getGlideForm();
+			
 		}
 		else if(e.targetScope.formModel.view == "SectionB1"){
 			c.setActions("SectionB1", "3");
@@ -1313,7 +1401,7 @@
 	c.renderForm();
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>#sp_formfield_date_of_birth,#sp_formfield_date_had_this_biopsy,#sp_formfield_date,#sp_formfield_date_surgery,#sp_formfield_date_completed_questionnaire,#sp_formfield_date_last_screening_test{
+        <css>#sp_formfield_date_of_birth,#sp_formfield_date_had_this_biopsy,#sp_formfield_date,#sp_formfield_date_surgery,#sp_formfield_date_completed_questionnaire,#sp_formfield_date_last_screening_test,#sp_formfield_last_period_date,#sp_formfield_date_started,#sp_formfield_date_stopped{
   pointer-events:none;
   background-color: lightgray;
 }
@@ -1323,23 +1411,66 @@
 .field-actual input{
   font-size: 16px;
 }
+.widget_area{
+  margin:15px;
+}
 .widget_area .panel-heading{
   display: none;
 }
+
 .IIQ-form-error-area{
-    margin-bottom:15px;
-    font-size: 14px;
-    color: red;
-    background: #fbe1e5;
-    border-radius: 5px;
-  	padding: 10px;
+  margin-bottom:15px;
+  font-size: 14px;
+  color: red;
+  background: #fbe1e5;
+  border-radius: 5px;
+  padding: 10px;
 }
 .IIQ-form-error-area li.active{
   font-weight: bold;
 }
-.bootstrap-datetimepicker-widget{
-  position: absolute !important;
+
+.accordion section, .accordion h1, .accordion.widget_area {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
+.accordion h1 {
+  line-height:1.2;
+  font-size:18px;
+  background-color:#f5f5f5;
+  border-bottom: 1px solid #ddd;
+  margin:0;
+  padding: 15px 10px 15px 15px;
+}
+
+.accordion h1 a {
+  color:#3a3f51;
+}
+.accordion section {
+  overflow:hidden;
+  height:51px;
+  border:1px #ddd solid;
+  margin-bottom: 10px;
+}
+.accordion.widget_area {
+  padding:0 10px;
+}
+
+.add-on &gt; button.lookup {
+
+  display:none;
+
+}
+
+
+.field-has-reference .reference {
+
+  display: block;
+
+}
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -1393,15 +1524,15 @@
         <sys_created_on>2019-09-23 16:04:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>048fff7ddb8c8c1054d8ff621f9619ac</sys_id>
-        <sys_mod_count>1076</sys_mod_count>
+        <sys_mod_count>1214</sys_mod_count>
         <sys_name>FCSMS IIQ Form</sys_name>
         <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
         <sys_update_name>sp_widget_048fff7ddb8c8c1054d8ff621f9619ac</sys_update_name>
-        <sys_updated_by>yuw5@nih.gov</sys_updated_by>
-        <sys_updated_on>2020-02-05 15:24:06</sys_updated_on>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-06 19:03:30</sys_updated_on>
         <template><![CDATA[
 <div id="table-form" class="main-content" style="font-size: 18px;">
   <div class="row">
@@ -1468,87 +1599,36 @@
     </div>
 
     <div id="form_widget_2" ng-show="c.show_view_index == 2">
-
-      <div id="form_widget_2_A2" class="panel-default panel">
-        <div class="accordion-heading" ng-click="c.openAccordion(2, 'tab_2_A2')" style="padding: 15px;border-top-left-radius: 3px;border-top-right-radius: 3px;color: #3a3f51;background-color: #f5f5f5;border-bottom: 1px solid #ddd;">
-          Questions 1 - 3
-        </div>
-        <div class="widget_area" style="padding:15px;" ng-show="c.accordions.tab_2_A2">
-          <sp-widget widget="c.widget_2_A2" >
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-      </div>
-      
-      <div id="form_widget_2_A3" class="panel-default panel">
-        <div class="accordion-heading" ng-click="c.openAccordion(2, 'tab_2_A3')" style="padding: 15px;border-top-left-radius: 3px;border-top-right-radius: 3px;color: #3a3f51;background-color: #f5f5f5;border-bottom: 1px solid #ddd;">
-          Questions 4 - 9
-        </div>
-        <div class="widget_area" style="padding: 15px;" ng-show="c.accordions.tab_2_A3">
-          <sp-widget widget="c.widget_2_A3">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-      </div>
-      
-      <div id="form_widget_2_A4" class="panel-default panel" ng-if="c.form_type != 'pediatric'">
-        <div class="accordion-heading" ng-click="c.openAccordion(2, 'tab_2_A4')" style="padding: 15px;border-top-left-radius: 3px;border-top-right-radius: 3px;color: #3a3f51;background-color: #f5f5f5;border-bottom: 1px solid #ddd;">
-          Questions 10 - 15
-        </div>
-        <div class="widget_area" style="padding: 15px;" ng-show="c.accordions.tab_2_A4">
-          <sp-widget widget="c.widget_2_A4">
-            <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-            Loading...
-          </sp-widget>
-        </div>
-      </div>
-      <!--
-      <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_2_A2" class="panel-default" is-open="c.accordions.tab_2_A2">
-          <uib-accordion-heading >
-            <div ng-click="c.openAccordion(2, 'tab_2_A2')">
-              Questions 1 - 3
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area" >
+      <div class="accordion">
+        <section id="form_widget_2_A2">
+          <h1 ng-click="c.openAccordion(2, 'tab_2_A2')"><a href="#">Questions 1 - 3</a></h1>
+          <div id="widget_tab_2_A2" class="widget_area">
             <sp-widget widget="c.widget_2_A2" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-        <div uib-accordion-group id="form_widget_2_A3" class="panel-default" is-open="c.accordions.tab_2_A3">
-          <uib-accordion-heading >
-            <div ng-click="c.openAccordion(2, 'tab_2_A3')">
-              Questions 4 - 9
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_2_A3">
+        </section>
+        <section id="form_widget_2_A3">
+          <h1 ng-click="c.openAccordion(2, 'tab_2_A3')"><a href="#">Questions 4 - 9</a></h1>
+          <div id="widget_tab_2_A3" class="widget_area">
+            <sp-widget widget="c.widget_2_A3" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-
-        <div uib-accordion-group id="form_widget_2_A4" class="panel-default" is-open="c.accordions.tab_2_A4" ng-if="c.form_type != 'pediatric'">
-          <uib-accordion-heading >
-            <div ng-click="c.openAccordion(2, 'tab_2_A4')">
-              Questions 10 - 15
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_2_A4">
+        </section>
+        <section id="form_widget_2_A4" ng-show="c.form_type != 'pediatric'">
+          <h1 ng-click="c.openAccordion(2, 'tab_2_A4')"><a href="#">Questions 10 - 15</a></h1>
+          <div id="widget_tab_2_A4" class="widget_area">
+            <sp-widget widget="c.widget_2_A4" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-
-      </uib-accordion>
-			-->
+        </section>
+      </div>
+      
     </div>
 
     <div class="widget_area" id="form_widget_3" ng-show="c.show_view_index == 3">
@@ -1621,65 +1701,47 @@
     </div>
 
     <div id="form_widget_11" ng-show="c.show_view_index == 11">
-
-      <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_11_G1" class="panel-default" is-open="c.accordions.tab_11_G1" ng-click="c.openAccordion(11, 'tab_11_G1')">
-          <uib-accordion-heading>
-            <div>
-              Menstrual <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G1, 'fa fa-plus-square': !c.accordions.tab_11_G1}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
+      
+      
+      <div class="accordion">
+        <section id="form_widget_11_G1">
+          <h1 ng-click="c.openAccordion(11, 'tab_11_G1')"><a href="#">Menstrual</a></h1>
+          <div id="widget_tab_11_G1" class="widget_area">
             <sp-widget widget="c.widget_11_G1">
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-
-        <div uib-accordion-group id="form_widget_11_G2" class="panel-default" is-open="c.accordions.tab_11_G2" ng-click="c.openAccordion(11, 'tab_11_G2')">
-          <uib-accordion-heading>
-            <div>
-              Pregnancy <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G2, 'fa fa-plus-square': !c.accordions.tab_11_G2}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_11_G2">
+        </section>
+        <section id="form_widget_11_G2">
+          <h1 ng-click="c.openAccordion(11, 'tab_11_G2')"><a href="#">Pregnancy</a></h1>
+          <div id="widget_tab_11_G2" class="widget_area">
+            <sp-widget widget="c.widget_11_G2" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-
-        <div uib-accordion-group id="form_widget_11_G3" class="panel-default" is-open="c.accordions.tab_11_G3" ng-click="c.openAccordion(11, 'tab_11_G3')">
-          <uib-accordion-heading>
-            <div>
-              Fertility <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G3, 'fa fa-plus-square': !c.accordions.tab_11_G3}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_11_G3">
+        </section>
+        <section id="form_widget_11_G3">
+          <h1 ng-click="c.openAccordion(11, 'tab_11_G3')"><a href="#">Fertility</a></h1>
+          <div id="widget_tab_11_G3" class="widget_area">
+            <sp-widget widget="c.widget_11_G3" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-
-        <div uib-accordion-group id="form_widget_11_G4" class="panel-default" is-open="c.accordions.tab_11_G4" ng-click="c.openAccordion(11, 'tab_11_G4')">
-          <uib-accordion-heading>
-            <div>
-              Birth Control <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_11_G4, 'fa fa-plus-square': !c.accordions.tab_11_G4}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_11_G4">
+        </section>
+        <section id="form_widget_11_G4">
+          <h1 ng-click="c.openAccordion(11, 'tab_11_G4')"><a href="#">Birth Control</a></h1>
+          <div id="widget_tab_11_G4" class="widget_area">
+            <sp-widget widget="c.widget_11_G4" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-      </uib-accordion>
-
+        </section>
+      </div>
+     
     </div>
 
     <div class="widget_area" id="form_widget_12" ng-show="c.show_view_index == 12">
@@ -1713,64 +1775,47 @@
     </div>
 
     <div id="form_widget_14" ng-show="c.show_view_index == 14">
-
-      <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_14_H1" class="panel-default" is-open="c.accordions.tab_14_H1" ng-click="c.openAccordion(14, 'tab_14_H1')">
-          <uib-accordion-heading>
-            <div>
-              Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H1, 'fa fa-plus-square': !c.accordions.tab_14_H1}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
+      
+      
+       <div class="accordion">
+        <section id="form_widget_14_H1">
+          <h1 ng-click="c.openAccordion(14, 'tab_14_H1')"><a href="#">Questions 1 - 4</a></h1>
+          <div id="widget_tab_14_H1" class="widget_area">
             <sp-widget widget="c.widget_14_H1">
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-
-        <div uib-accordion-group id="form_widget_14_H2" class="panel-default" is-open="c.accordions.tab_14_H2" ng-click="c.openAccordion(14, 'tab_14_H2')">
-          <uib-accordion-heading>
-            <div>
-              Questions 5 - 9 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H2, 'fa fa-plus-square': !c.accordions.tab_14_H2}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_14_H2">
+        </section>
+        <section id="form_widget_14_H2">
+          <h1 ng-click="c.openAccordion(14, 'tab_14_H2')"><a href="#">Questions 5 - 9</a></h1>
+          <div id="widget_tab_14_H2" class="widget_area">
+            <sp-widget widget="c.widget_14_H2" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-
-        <div uib-accordion-group id="form_widget_14_H3" class="panel-default" is-open="c.accordions.tab_14_H3" ng-click="c.openAccordion(14, 'tab_14_H3')">
-          <uib-accordion-heading>
-            <div>
-              Questions 10 - 14 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H3, 'fa fa-plus-square': !c.accordions.tab_14_H3}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_14_H3">
+        </section>
+        <section id="form_widget_14_H3">
+          <h1 ng-click="c.openAccordion(14, 'tab_14_H3')"><a href="#">Questions 10 - 14</a></h1>
+          <div id="widget_tab_14_H3" class="widget_area">
+            <sp-widget widget="c.widget_14_H3" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-
-        <div uib-accordion-group id="form_widget_14_H4" class="panel-default" is-open="c.accordions.tab_14_H4" ng-click="c.openAccordion(14, 'tab_14_H4')">
-          <uib-accordion-heading>
-            <div>
-              Questions 15 - 18 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_14_H4, 'fa fa-plus-square': !c.accordions.tab_14_H4}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_14_H4">
+        </section>
+        <section id="form_widget_14_H4">
+          <h1 ng-click="c.openAccordion(14, 'tab_14_H4')"><a href="#">Questions 15 - 18</a></h1>
+          <div id="widget_tab_14_H4" class="widget_area">
+            <sp-widget widget="c.widget_14_H4" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div>
-      </uib-accordion>
+        </section>
+      </div>
+      
     </div>
 
     <div ng-show="c.show_view_index == 15" class="div_shadow">
@@ -1781,49 +1826,35 @@
 
     <div id="form_widget_15" ng-show="c.show_view_index == 15">
 
-      <uib-accordion close-others="true">
-        <div uib-accordion-group id="form_widget_15_I1" class="panel-default" is-open="c.accordions.tab_15_I1" ng-click="c.openAccordion(15, 'tab_15_I1')">
-          <uib-accordion-heading>
-            <div>
-              Questions 1 - 4 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I1, 'fa fa-plus-square': !c.accordions.tab_15_I1}"></i>
-            </div>
-          </uib-accordion-heading>
-          <div class="widget_area">
-            <sp-widget widget="c.widget_15_I1">
+      <div class="accordion">
+        <section id="form_widget_15_I1">
+          <h1 ng-click="c.openAccordion(15, 'tab_15_I1')"><a href="#">Questions 1 - 4</a></h1>
+          <div id="widget_tab_15_I1" class="widget_area">
+            <sp-widget widget="c.widget_15_I1" >
               <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
               Loading...
             </sp-widget>
           </div>
-        </div> 
-
-        <div uib-accordion-group id="form_widget_15_I2" class="panel-default" is-open="c.accordions.tab_15_I2" ng-click="c.openAccordion(15, 'tab_15_I2')">
-            <uib-accordion-heading>
-              <div>
-                Questions 5 - 7 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I2, 'fa fa-plus-square': !c.accordions.tab_15_I2}"></i>
-              </div>
-            </uib-accordion-heading>
-            <div class="widget_area">
-              <sp-widget widget="c.widget_15_I2">
-                <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-                Loading...
-              </sp-widget>
-            </div>
-          </div> 
-				
-        <div uib-accordion-group id="form_widget_15_I3" class="panel-default" is-open="c.accordions.tab_15_I3" ng-click="c.openAccordion(15, 'tab_15_I3')">
-              <uib-accordion-heading>
-                <div>
-                  Questions 8 - 10 <i class="pull-right" ng-class="{'fa fa-minus-square': c.accordions.tab_15_I3, 'fa fa-plus-square': !c.accordions.tab_15_I3}"></i>
-                </div>
-              </uib-accordion-heading>
-              <div class="widget_area">
-                <sp-widget widget="c.widget_15_I3">
-                  <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
-                  Loading...
-                </sp-widget>
-              </div>
-            </div>
-      </uib-accordion>
+        </section>
+        <section id="form_widget_15_I2">
+          <h1 ng-click="c.openAccordion(15, 'tab_15_I2')"><a href="#">Questions 5 - 7</a></h1>
+          <div id="widget_tab_15_I2" class="widget_area">
+            <sp-widget widget="c.widget_15_I2" >
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
+        </section>
+        <section id="form_widget_15_I3">
+          <h1 ng-click="c.openAccordion(15, 'tab_15_I3')"><a href="#">Questions 8 - 15</a></h1>
+          <div id="widget_tab_15_I3" class="widget_area">
+            <sp-widget widget="c.widget_15_I3" >
+              <i class="fa fa-cog fa-spin fa-10x fa-fw"></i>
+              Loading...
+            </sp-widget>
+          </div>
+        </section>
+      </div>
      </div>
      <div ng-show="c.show_view_index == 16" class="div_shadow">
        <p style="padding: 10px 15px">

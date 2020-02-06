@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>check_here_if_you_are_the_proxy</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Get Logged in User Info</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	var proxy = g_form.getValue('check_here_if_you_are_the_proxy'); 
+	
+	if (proxy == 'true'){ //If the user checks the box then do the following
+		
+		g_form.setValue('proxy_first_name', g_user.firstName); //Sets the first name
+		g_form.setValue('proxy_last_name', g_user.lastName); //Sets the last name
+		
+		//Ajax call to get the logged in users email address
+		var setEmail = new GlideAjax ('x_naci_family_coho.getEmail');
+		setEmail.addParam('sysparm_name', 'getUserEmail');
+		setEmail.addParam('sysparm_id', g_user.userID);
+		setEmail.getXML(setEmailField);
+
+	}
+
+	function setEmailField(response){
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+		g_form.setValue('proxy_email_address', answer); //Set email address with email returned from server
+
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>martincp@nih.gov</sys_created_by>
+        <sys_created_on>2020-02-05 20:32:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>0c6a80e1dbf6041054d8ff621f961995</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Get Logged in User Info</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Family Cohort Study" source="x_naci_family_coho">090e9eb7dba7774054d8ff621f9619eb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Family Cohort Study">090e9eb7dba7774054d8ff621f9619eb</sys_scope>
+        <sys_update_name>sys_script_client_0c6a80e1dbf6041054d8ff621f961995</sys_update_name>
+        <sys_updated_by>martincp@nih.gov</sys_updated_by>
+        <sys_updated_on>2020-02-05 21:02:49</sys_updated_on>
+        <table>x_naci_family_coho_family_history_details</table>
+        <type>onChange</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

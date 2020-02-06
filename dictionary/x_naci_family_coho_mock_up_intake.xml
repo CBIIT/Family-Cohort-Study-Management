@@ -46,6 +46,7 @@
         <element choice="1" label="Cancer Type" max_length="100" name="cancer_type" type="string">
             <choice/>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="city" type="string"/>
         <element label="Comments" max_length="5000" name="comments" type="string"/>
         <element label="Comments" max_length="4000" name="comments_journal" type="journal_input"/>
         <element choice="1" label="Communication Type" max_length="40" name="communication_type" type="choice">
@@ -181,6 +182,8 @@
             </choice>
         </element>
         <element label="Saved Section" max_length="20" name="saved_section" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="state" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Street Address" max_length="100" name="street_address" type="string"/>
         <element default="5bf67315db3f3f4054d8ff621f961968" label="Study" max_length="32" name="study" reference="x_naci_family_coho_mock_up_study" type="reference"/>
         <element choice="1" label="Which of the following genes or syndromes do you believe you have had testing?" max_length="40" name="tested" reference="x_naci_family_coho_lookup_genes_syndromes" type="glide_list">
             <choice>
@@ -210,6 +213,7 @@
         <element label="Screener Submitted" max_length="40" name="time_to_complete_form" type="glide_date_time"/>
         <element default="javascript: new Date().getFullYear().toString()" label="Year Created" max_length="40" name="year_created" type="string"/>
         <element label="Proxy Name" max_length="100" name="your_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zip Code" max_length="40" name="zip_code" type="string"/>
         <index name="index">
             <element name="family_member_record"/>
         </index>

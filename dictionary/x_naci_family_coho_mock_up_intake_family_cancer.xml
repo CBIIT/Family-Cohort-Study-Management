@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="FCSMS Intake Form Family Cancer" max_length="40" name="x_naci_family_coho_mock_up_intake_family_cancer" type="collection">
-        <element label="How old was this person when they died (if deceased)?" max_length="100" name="age_at_death" type="string"/>
-        <element label="How old was this person when they were diagnosed?" max_length="100" name="age_at_diagnosis" type="string"/>
+        <element label="Relative's age (in Years) when they died" max_length="100" name="age_at_death" type="string"/>
+        <element label="Relative's age (in Years) when they were diagnosed" max_length="100" name="age_at_diagnosis" type="string"/>
         <element label="Cancer Specify" max_length="100" name="cancer_specify" type="string"/>
-        <element choice="1" label="Cancer Type" max_length="40" name="cancer_type" type="choice">
+        <element choice="1" label="Cancer Type or Site" max_length="40" name="cancer_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Adrenocortical Carcinoma" sequence="10" value="Adrenocortical Carcinoma"/>
                 <element inactive_on_update="false" label="Brain" sequence="20" value="Brain"/>
@@ -25,9 +25,17 @@
             </choice>
         </element>
         <element label="How old is this person now (if living)?" max_length="100" name="current_age" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
         <element label="Intake Form ID" max_length="32" name="intake_form_id" reference="x_naci_family_coho_mock_up_intake" type="reference"/>
-        <element label="What is the person's name?" max_length="100" name="name" type="string"/>
-        <element choice="1" label="How is this person related to you?" max_length="500" name="relationship" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Is this relative alive?" max_length="40" name="is_this_relative_alive" type="string">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="10" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="20" value="yes"/>
+                <element inactive_on_update="false" label="Don't Know" sequence="30" value="dont_know"/>
+            </choice>
+        </element>
+        <element label="Relatives name" max_length="100" name="name" type="string"/>
+        <element choice="1" label="Relationship to you" max_length="500" name="relationship" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Aunt (mom's sister)" sequence="10" value="Aunt (mom's sister)"/>
                 <element inactive_on_update="false" label="Aunt (dad's sister)" sequence="20" value="Aunt (dad's sister)"/>
